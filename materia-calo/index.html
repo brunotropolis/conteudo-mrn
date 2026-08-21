@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Matéria Calo — Criativos</title>
+<style>
+  :root{--bg:#0e1116;--card:#161b22;--line:#242b34;--ink:#eaeef3;--mut:#9aa4b0;--red:#c4170c}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Arial,sans-serif;line-height:1.5}
+  header{padding:22px 20px 14px;text-align:center;border-bottom:1px solid var(--line)}
+  header .back{display:inline-block;color:#7aa6ff;text-decoration:none;font-size:.82rem;font-weight:700;margin-bottom:10px}
+  header h1{font-size:1.3rem;font-weight:800;letter-spacing:-.01em}
+  header p{color:var(--mut);font-size:.88rem;margin-top:6px}
+  .wrap{max-width:1240px;margin:0 auto;padding:22px 16px 60px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .card video{width:100%;display:block;background:#000;aspect-ratio:9/16;object-fit:cover}
+  .meta{padding:12px 14px}
+  .tag{display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--red);padding:3px 9px;border-radius:5px;margin-bottom:8px}
+  .meta .t{font-weight:700;font-size:.95rem}
+  .meta .s{color:var(--mut);font-size:.8rem;margin-top:2px}
+  .row{display:flex;gap:10px;margin-top:10px}
+  .row a{flex:1;text-align:center;font-size:.78rem;font-weight:700;text-decoration:none;color:var(--ink);background:#20262f;border:1px solid var(--line);padding:8px;border-radius:8px}
+  .row a:hover{background:#2a313b}
+  footer{color:var(--mut);text-align:center;font-size:.8rem;padding:0 20px 40px}
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="../">← Conteúdo</a>
+  <h1>Matéria Calo</h1>
+  <p>Criativos "canal de notícia" — tema <b>calo no lábio do bebê</b> · loops 1080×1920</p>
+</header>
+<div class="wrap"><div class="grid" id="grid"></div></div>
+<footer>Uso interno · material para teste de campanha</footer>
+<script>
+  var items=[
+    ["02-A-calo","Modelo A · NOTÍCIA"],
+    ["04-B-calo","Modelo B · Manchete branca"],
+    ["06-C-calo","Modelo C · Fofoca (ATENÇÃO)"],
+    ["08-D-calo","Modelo D · Lower-third (URGENTE)"],
+    ["10-E-calo","Modelo E · Split 3 faixas"],
+    ["14-Ev-calo","Modelo E · Split vertical"],
+    ["12-F-calo","Modelo F · Moldura branca (nativo)"]
+  ];
+  var g=document.getElementById('grid');
+  items.forEach(function(it){var id=it[0];var c=document.createElement('div');c.className='card';
+    c.innerHTML='<video src="'+id+'.mp4" muted loop playsinline preload="metadata" controls></video>'+
+      '<div class="meta"><span class="tag">'+it[1]+'</span><div class="t">Calo no lábio do bebê</div>'+
+      '<div class="s">'+id+'.mp4</div><div class="row"><a href="'+id+'.mp4" target="_blank">Abrir</a>'+
+      '<a href="'+id+'.mp4" download>Baixar</a></div></div>';g.appendChild(c);});
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){var v=e.target;if(e.isIntersecting){v.play().catch(function(){});}else{v.pause();}})},{threshold:.4});
+  document.querySelectorAll('video').forEach(function(v){io.observe(v);});
+</script>
+</body>
+</html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Funil Matéria Amamentação — Criativos</title>
+<title>Matéria Amamentação — Criativos</title>
 <style>
   :root{--bg:#0e1116;--card:#161b22;--line:#242b34;--ink:#eaeef3;--mut:#9aa4b0;--red:#c4170c}
   *{margin:0;padding:0;box-sizing:border-box}
@@ -30,38 +30,27 @@
 <body>
 <header>
   <a class="back" href="../">← Conteúdo</a>
-  <h1>Funil Matéria Amamentação</h1>
-  <p>8 loops curtos (1080×1920) · 4 modelos "notícia/fofoca" × temas dor e calo · Pexels (licença comercial livre)</p>
+  <h1>Matéria Amamentação</h1>
+  <p>Criativos "canal de notícia" — tema <b>dor para amamentar</b> · loops 1080×1920</p>
 </header>
-<div class="wrap">
-  <div class="grid" id="grid"></div>
-</div>
+<div class="wrap"><div class="grid" id="grid"></div></div>
 <footer>Uso interno · material para teste de campanha</footer>
 <script>
   var items=[
-    ["01-A-dor","Modelo A · NOTÍCIA","Dor para amamentar"],
-    ["02-A-calo","Modelo A · NOTÍCIA","Calo no lábio do bebê"],
-    ["03-B-dor","Modelo B · Manchete branca","Dor para amamentar"],
-    ["04-B-calo","Modelo B · Manchete branca","Calo no lábio do bebê"],
-    ["05-C-dor","Modelo C · Fofoca (URGENTE)","Dor para amamentar"],
-    ["06-C-calo","Modelo C · Fofoca (URGENTE)","Calo no lábio do bebê"],
-    ["07-D-dor","Modelo D · Lower-third (PLANTÃO)","Dor para amamentar"],
-    ["08-D-calo","Modelo D · Lower-third (URGENTE)","Calo no lábio do bebê"],
-    ["09-E-dor","Modelo E · Split (foto + vídeo)","Dor para amamentar"],
-    ["10-E-calo","Modelo E · Split (foto + vídeo)","Calo no lábio do bebê"],
-    ["11-F-dor","Modelo F · Moldura branca","Dor para amamentar"],
-    ["12-F-calo","Modelo F · Moldura branca","Calo no lábio do bebê"]
+    ["01-A-dor","Modelo A · NOTÍCIA"],
+    ["03-B-dor","Modelo B · Manchete branca"],
+    ["05-C-dor","Modelo C · Fofoca (URGENTE)"],
+    ["07-D-dor","Modelo D · Lower-third (PLANTÃO)"],
+    ["09-E-dor","Modelo E · Split 3 faixas"],
+    ["13-Ev-dor","Modelo E · Split vertical"],
+    ["11-F-dor","Modelo F · Moldura branca (nativo)"]
   ];
   var g=document.getElementById('grid');
-  items.forEach(function(it){
-    var id=it[0];
-    var c=document.createElement('div');c.className='card';
+  items.forEach(function(it){var id=it[0];var c=document.createElement('div');c.className='card';
     c.innerHTML='<video src="'+id+'.mp4" muted loop playsinline preload="metadata" controls></video>'+
-      '<div class="meta"><span class="tag">'+it[1]+'</span>'+
-      '<div class="t">'+it[2]+'</div><div class="s">'+id+'.mp4</div>'+
-      '<div class="row"><a href="'+id+'.mp4" target="_blank">Abrir</a><a href="'+id+'.mp4" download>Baixar</a></div></div>';
-    g.appendChild(c);
-  });
+      '<div class="meta"><span class="tag">'+it[1]+'</span><div class="t">Dor para amamentar</div>'+
+      '<div class="s">'+id+'.mp4</div><div class="row"><a href="'+id+'.mp4" target="_blank">Abrir</a>'+
+      '<a href="'+id+'.mp4" download>Baixar</a></div></div>';g.appendChild(c);});
   var io=new IntersectionObserver(function(en){en.forEach(function(e){var v=e.target;if(e.isIntersecting){v.play().catch(function(){});}else{v.pause();}})},{threshold:.4});
   document.querySelectorAll('video').forEach(function(v){io.observe(v);});
 </script>
