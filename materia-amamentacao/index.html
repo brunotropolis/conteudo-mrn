@@ -1,12 +1,7 @@
-<!doctype html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
-<title>Matéria Amamentação — Criativos</title>
-<style>
-  :root{--bg:#0e1116;--card:#161b22;--line:#242b34;--ink:#eaeef3;--mut:#9aa4b0;--red:#c4170c}
+<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex, nofollow">
+<title>Matéria Amamentação — Criativos</title><style>
+  :root{--bg:#0e1116;--card:#161b22;--line:#242b34;--ink:#eaeef3;--mut:#9aa4b0;--red:#c4170c;--teal:#17A2A0;--gold:#E3A31B}
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Arial,sans-serif;line-height:1.5}
   header{padding:22px 20px 14px;text-align:center;border-bottom:1px solid var(--line)}
@@ -14,64 +9,31 @@
   header h1{font-size:1.3rem;font-weight:800;letter-spacing:-.01em}
   header p{color:var(--mut);font-size:.88rem;margin-top:6px}
   .wrap{max-width:1240px;margin:0 auto;padding:22px 16px 60px}
+  .sech{font-size:1rem;font-weight:800;margin:8px 4px 16px;padding-top:8px}
+  .sech:not(:first-child){margin-top:34px;border-top:1px solid var(--line);padding-top:26px}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-  .card video{width:100%;display:block;background:#000;aspect-ratio:9/16;object-fit:cover}
+  .card video,.card img{width:100%;display:block;background:#000;aspect-ratio:9/16;object-fit:cover}
   .meta{padding:12px 14px}
-  .tag{display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--red);padding:3px 9px;border-radius:5px;margin-bottom:8px}
+  .idrow{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .idb{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.74rem;font-weight:700;color:#0b0e12;background:var(--gold);padding:3px 9px;border-radius:6px;cursor:pointer;user-select:all}
+  .idb:hover{filter:brightness(1.08)}
+  .tag{display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#fff;background:var(--red);padding:3px 9px;border-radius:5px}
   .meta .t{font-weight:700;font-size:.95rem}
-  .meta .s{color:var(--mut);font-size:.8rem;margin-top:2px}
+  .meta .s{color:var(--mut);font-size:.78rem;margin-top:2px}
   .row{display:flex;gap:10px;margin-top:10px}
   .row a{flex:1;text-align:center;font-size:.78rem;font-weight:700;text-decoration:none;color:var(--ink);background:#20262f;border:1px solid var(--line);padding:8px;border-radius:8px}
   .row a:hover{background:#2a313b}
-  .sech{font-size:1rem;font-weight:800;color:var(--ink);margin:8px 4px 16px;padding-top:8px}
-  .sech:not(:first-child){margin-top:34px;border-top:1px solid var(--line);padding-top:26px}
-  .card img{width:100%;display:block;background:#000;aspect-ratio:9/16;object-fit:cover}
+  .desc{color:var(--mut);font-size:.78rem;margin-top:6px}
   footer{color:var(--mut);text-align:center;font-size:.8rem;padding:0 20px 40px}
-</style>
-</head>
-<body>
-<header>
-  <a class="back" href="../">← Conteúdo</a>
-  <h1>Matéria Amamentação</h1>
-  <p>Criativos "canal de notícia" — tema <b>dor para amamentar</b> · loops 1080×1920</p>
-</header>
+</style></head><body>
+<header><a class="back" href="../anuncios.html">← Anúncios</a><h1>Matéria Amamentação</h1><p>Criativos "canal de notícia" · tema dor para amamentar · cada um com ID pra puxar pela ferramenta</p></header>
 <div class="wrap">
-  <h2 class="sech">Vídeos (loops)</h2><div class="grid" id="grid"></div>
-  <h2 class="sech">Estáticos (imagem)</h2><div class="grid" id="gridS"></div>
+  <h2 class="sech">Vídeos (loops 10s)</h2><div class="grid"><div class="card"><video src="01-A-dor.mp4" muted loop playsinline preload="metadata" controls></video><div class="meta"><div class="idrow"><span class="idb" onclick="cp(this)">AMA-V-A1</span><span class="tag">video</span></div><div class="t">Mãe amamentando</div><div class="s">Modelo A · Notícia</div><div class="s" style="opacity:.7">01-A-dor.mp4</div><div class="row"><a href="01-A-dor.mp4" target="_blank">Abrir</a><a href="01-A-dor.mp4" download>Baixar</a></div></div></div><div class="card"><video src="03-B-dor.mp4" muted loop playsinline preload="metadata" controls></video><div class="meta"><div class="idrow"><span class="idb" onclick="cp(this)">AMA-V-B1</span><span class="tag">video</span></div><div class="t">Amamentação</div><div class="s">Modelo B · Manchete branca</div><div class="s" style="opacity:.7">03-B-dor.mp4</div><div class="row"><a href="03-B-dor.mp4" target="_blank">Abrir</a><a href="03-B-dor.mp4" download>Baixar</a></div></div></div><div class="card"><video src="05-C-dor.mp4" muted loop playsinline preload="metadata" controls></video><div class="meta"><div class="idrow"><span class="idb" onclick="cp(this)">AMA-V-C1</span><span class="tag">video</span></div><div class="t">Dor ao amamentar</div><div class="s">Modelo C · Fofoca</div><div class="s" style="opacity:.7">05-C-dor.mp4</div><div class="row"><a href="05-C-dor.mp4" target="_blank">Abrir</a><a href="05-C-dor.mp4" download>Baixar</a></div></div></div><div class="card"><video src="07-D-dor.mp4" muted loop playsinline preload="metadata" controls></video><div class="meta"><div class="idrow"><span class="idb" onclick="cp(this)">AMA-V-D1</span><span class="tag">video</span></div><div class="t">Mãe amamentando o bebê</div><div class="s">Modelo D · Lower-third</div><div class="s" style="opacity:.7">07-D-dor.mp4</div><div class="row"><a href="07-D-dor.mp4" target="_blank">Abrir</a><a href="07-D-dor.mp4" download>Baixar</a></div></div></div><div class="card"><video src="09-E-dor.mp4" muted loop playsinline preload="metadata" controls></video><div class="meta"><div class="idrow"><span class="idb" onclick="cp(this)">AMA-V-E1</span><span class="tag">video</span></div><div class="t">Mãe ninando (foto + vídeo)</div><div class="s">Modelo E · Split 3 faixas</div><div class="s" style="opacity:.7">09-E-dor.mp4</div><div class="row"><a href="09-E-dor.mp4" target="_blank">Abrir</a><a href="09-E-dor.mp4" download>Baixar</a></div></div></div><div class="card"><video src="13-Ev-dor.mp4" muted loop playsinline preload="metadata" controls></video><div class="meta"><div class="idrow"><span class="idb" onclick="cp(this)">AMA-V-E2</span><span class="tag">video</span></div><div class="t">Mãe ninando (esquerda|direita)</div><div class="s">Modelo E · Split vertical</div><div class="s" style="opacity:.7">13-Ev-dor.mp4</div><div class="row"><a href="13-Ev-dor.mp4" target="_blank">Abrir</a><a href="13-Ev-dor.mp4" download>Baixar</a></div></div></div><div class="card"><video src="11-F-dor.mp4" muted loop playsinline preload="metadata" controls></video><div class="meta"><div class="idrow"><span class="idb" onclick="cp(this)">AMA-V-F1</span><span class="tag">video</span></div><div class="t">Amamentação (moldura branca)</div><div class="s">Modelo F · Nativo</div><div class="s" style="opacity:.7">11-F-dor.mp4</div><div class="row"><a href="11-F-dor.mp4" target="_blank">Abrir</a><a href="11-F-dor.mp4" download>Baixar</a></div></div></div></div>
+  <h2 class="sech">Estáticos (imagem)</h2><div class="grid"><div class="card"><img src="01-A-dor-static.jpg" loading="lazy" alt=""><div class="meta"><div class="idrow"><span class="idb" onclick="cp(this)">AMA-S-A1</span><span class="tag">estatico</span></div><div class="t">Mãe amamentando (estático)</div><div class="s">Modelo A · Notícia</div><div class="s" style="opacity:.7">01-A-dor-static.jpg</div><div class="row"><a href="01-A-dor-static.jpg" target="_blank">Abrir</a><a href="01-A-dor-static.jpg" download>Baixar</a></div></div></div><div class="card"><img src="03-B-dor-static.jpg" loading="lazy" alt=""><div class="meta"><div class="idrow"><span class="idb" onclick="cp(this)">AMA-S-B1</span><span class="tag">estatico</span></div><div class="t">Amamentação (estático)</div><div class="s">Modelo B · Manchete branca</div><div class="s" style="opacity:.7">03-B-dor-static.jpg</div><div class="row"><a href="03-B-dor-static.jpg" target="_blank">Abrir</a><a href="03-B-dor-static.jpg" download>Baixar</a></div></div></div><div class="card"><img src="05-C-dor-static.jpg" loading="lazy" alt=""><div class="meta"><div class="idrow"><span class="idb" onclick="cp(this)">AMA-S-C1</span><span class="tag">estatico</span></div><div class="t">Dor ao amamentar (estático)</div><div class="s">Modelo C · Fofoca</div><div class="s" style="opacity:.7">05-C-dor-static.jpg</div><div class="row"><a href="05-C-dor-static.jpg" target="_blank">Abrir</a><a href="05-C-dor-static.jpg" download>Baixar</a></div></div></div><div class="card"><img src="07-D-dor-static.jpg" loading="lazy" alt=""><div class="meta"><div class="idrow"><span class="idb" onclick="cp(this)">AMA-S-D1</span><span class="tag">estatico</span></div><div class="t">Mãe amamentando (estático)</div><div class="s">Modelo D · Lower-third</div><div class="s" style="opacity:.7">07-D-dor-static.jpg</div><div class="row"><a href="07-D-dor-static.jpg" target="_blank">Abrir</a><a href="07-D-dor-static.jpg" download>Baixar</a></div></div></div><div class="card"><img src="11-F-dor-static.jpg" loading="lazy" alt=""><div class="meta"><div class="idrow"><span class="idb" onclick="cp(this)">AMA-S-F1</span><span class="tag">estatico</span></div><div class="t">Amamentação (estático nativo)</div><div class="s">Modelo F · Nativo</div><div class="s" style="opacity:.7">11-F-dor-static.jpg</div><div class="row"><a href="11-F-dor-static.jpg" target="_blank">Abrir</a><a href="11-F-dor-static.jpg" download>Baixar</a></div></div></div></div>
 </div>
-<footer>Uso interno · material para teste de campanha</footer>
-<script>
-  var items=[
-    ["01-A-dor","Modelo A · NOTÍCIA"],
-    ["03-B-dor","Modelo B · Manchete branca"],
-    ["05-C-dor","Modelo C · Fofoca (URGENTE)"],
-    ["07-D-dor","Modelo D · Lower-third (PLANTÃO)"],
-    ["09-E-dor","Modelo E · Split 3 faixas"],
-    ["13-Ev-dor","Modelo E · Split vertical"],
-    ["11-F-dor","Modelo F · Moldura branca (nativo)"]
-  ];
-  var g=document.getElementById('grid');
-  items.forEach(function(it){var id=it[0];var c=document.createElement('div');c.className='card';
-    c.innerHTML='<video src="'+id+'.mp4" muted loop playsinline preload="metadata" controls></video>'+
-      '<div class="meta"><span class="tag">'+it[1]+'</span><div class="t">Dor para amamentar</div>'+
-      '<div class="s">'+id+'.mp4</div><div class="row"><a href="'+id+'.mp4" target="_blank">Abrir</a>'+
-      '<a href="'+id+'.mp4" download>Baixar</a></div></div>';g.appendChild(c);});
+<footer>Uso interno · clique no <b>ID</b> pra copiar · use o ID pra pedir o criativo pela ferramenta</footer>
+<script>function cp(e){navigator.clipboard&&navigator.clipboard.writeText(e.textContent);var o=e.style.background;e.style.background='#17A2A0';setTimeout(function(){e.style.background=o},400);}
   var io=new IntersectionObserver(function(en){en.forEach(function(e){var v=e.target;if(e.isIntersecting){v.play().catch(function(){});}else{v.pause();}})},{threshold:.4});
   document.querySelectorAll('video').forEach(function(v){io.observe(v);});
-  var statics=[
-    ["01-A-dor","Modelo A · NOTÍCIA"],
-    ["03-B-dor","Modelo B · Manchete branca"],
-    ["05-C-dor","Modelo C · Fofoca (URGENTE)"],
-    ["07-D-dor","Modelo D · Lower-third (PLANTÃO)"],
-    ["11-F-dor","Modelo F · Moldura branca (nativo)"]
-  ];
-  var gS=document.getElementById('gridS');
-  statics.forEach(function(it){var id=it[0];var f=id+'-static.jpg';var c=document.createElement('div');c.className='card';
-    c.innerHTML='<img src="'+f+'" loading="lazy" alt="">'+
-      '<div class="meta"><span class="tag">'+it[1]+'</span><div class="t">Dor para amamentar</div>'+
-      '<div class="s">'+f+'</div><div class="row"><a href="'+f+'" target="_blank">Abrir</a>'+
-      '<a href="'+f+'" download>Baixar</a></div></div>';gS.appendChild(c);});
-</script>
-</body>
-</html>
+</script></body></html>

@@ -1,0 +1,102 @@
+{
+  "tema": "mat_ama",
+  "tema_label": "Matéria Amamentação",
+  "criativos": [
+    {
+      "id": "AMA-V-A1",
+      "nome": "Mãe amamentando",
+      "modelo": "Modelo A · Notícia",
+      "tema": "mat_ama",
+      "tipo": "video",
+      "arquivo": "01-A-dor.mp4"
+    },
+    {
+      "id": "AMA-V-B1",
+      "nome": "Amamentação",
+      "modelo": "Modelo B · Manchete branca",
+      "tema": "mat_ama",
+      "tipo": "video",
+      "arquivo": "03-B-dor.mp4"
+    },
+    {
+      "id": "AMA-V-C1",
+      "nome": "Dor ao amamentar",
+      "modelo": "Modelo C · Fofoca",
+      "tema": "mat_ama",
+      "tipo": "video",
+      "arquivo": "05-C-dor.mp4"
+    },
+    {
+      "id": "AMA-V-D1",
+      "nome": "Mãe amamentando o bebê",
+      "modelo": "Modelo D · Lower-third",
+      "tema": "mat_ama",
+      "tipo": "video",
+      "arquivo": "07-D-dor.mp4"
+    },
+    {
+      "id": "AMA-V-E1",
+      "nome": "Mãe ninando (foto + vídeo)",
+      "modelo": "Modelo E · Split 3 faixas",
+      "tema": "mat_ama",
+      "tipo": "video",
+      "arquivo": "09-E-dor.mp4"
+    },
+    {
+      "id": "AMA-V-E2",
+      "nome": "Mãe ninando (esquerda|direita)",
+      "modelo": "Modelo E · Split vertical",
+      "tema": "mat_ama",
+      "tipo": "video",
+      "arquivo": "13-Ev-dor.mp4"
+    },
+    {
+      "id": "AMA-V-F1",
+      "nome": "Amamentação (moldura branca)",
+      "modelo": "Modelo F · Nativo",
+      "tema": "mat_ama",
+      "tipo": "video",
+      "arquivo": "11-F-dor.mp4"
+    },
+    {
+      "id": "AMA-S-A1",
+      "nome": "Mãe amamentando (estático)",
+      "modelo": "Modelo A · Notícia",
+      "tema": "mat_ama",
+      "tipo": "estatico",
+      "arquivo": "01-A-dor-static.jpg"
+    },
+    {
+      "id": "AMA-S-B1",
+      "nome": "Amamentação (estático)",
+      "modelo": "Modelo B · Manchete branca",
+      "tema": "mat_ama",
+      "tipo": "estatico",
+      "arquivo": "03-B-dor-static.jpg"
+    },
+    {
+      "id": "AMA-S-C1",
+      "nome": "Dor ao amamentar (estático)",
+      "modelo": "Modelo C · Fofoca",
+      "tema": "mat_ama",
+      "tipo": "estatico",
+      "arquivo": "05-C-dor-static.jpg"
+    },
+    {
+      "id": "AMA-S-D1",
+      "nome": "Mãe amamentando (estático)",
+      "modelo": "Modelo D · Lower-third",
+      "tema": "mat_ama",
+      "tipo": "estatico",
+      "arquivo": "07-D-dor-static.jpg"
+    },
+    {
+      "id": "AMA-S-F1",
+      "nome": "Amamentação (estático nativo)",
+      "modelo": "Modelo F · Nativo",
+      "tema": "mat_ama",
+      "tipo": "estatico",
+      "arquivo": "11-F-dor-static.jpg"
+    }
+  ]
+}

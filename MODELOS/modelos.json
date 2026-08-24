@@ -1,0 +1,54 @@
+{
+  "descricao": "Biblioteca de modelos (base) — 1 exemplo de cada estilo, pra orientar futuras produções. Exemplos usam os criativos da Matéria Calo.",
+  "modelos": [
+    {
+      "id": "MOD-A",
+      "modelo": "Modelo A · Notícia",
+      "codigo": "A",
+      "arquivo": "modelo-A-noticia.mp4",
+      "descricao": "Notícia — tarja no topo (SAÚDE/AGORA) + badge NOTÍCIA + manchete branca centralizada sobre a mídia cheia."
+    },
+    {
+      "id": "MOD-B",
+      "modelo": "Modelo B · Manchete branca",
+      "codigo": "B",
+      "arquivo": "modelo-B-manchete.mp4",
+      "descricao": "Manchete branca — faixa branca no topo com kicker (NOTÍCIAS/SAÚDE) + manchete preta, mídia embaixo."
+    },
+    {
+      "id": "MOD-C",
+      "modelo": "Modelo C · Fofoca (URGENTE)",
+      "codigo": "C",
+      "arquivo": "modelo-C-fofoca.mp4",
+      "descricao": "Fofoca — \"!\" vermelho + tag URGENTE/ATENÇÃO, manchete em CAIXA ALTA com realce."
+    },
+    {
+      "id": "MOD-D",
+      "modelo": "Modelo D · Lower-third (Plantão)",
+      "codigo": "D",
+      "arquivo": "modelo-D-lowerthird.mp4",
+      "descricao": "Lower-third (telejornal) — barra inferior colorida + ícone circular + kicker + manchete + faixa amarela de CTA."
+    },
+    {
+      "id": "MOD-E1",
+      "modelo": "Modelo E · Split 3 faixas",
+      "codigo": "E1",
+      "arquivo": "modelo-E1-split3.mp4",
+      "descricao": "Split 3 faixas — foto (frame do vídeo) em cima, vídeo no meio, tarja com texto embaixo."
+    },
+    {
+      "id": "MOD-E2",
+      "modelo": "Modelo E · Split vertical",
+      "codigo": "E2",
+      "arquivo": "modelo-E2-split-vertical.mp4",
+      "descricao": "Split vertical — painel esquerdo (foto) | painel direito (vídeo) + overlay estilo notícia."
+    },
+    {
+      "id": "MOD-F",
+      "modelo": "Modelo F · Moldura branca (nativo)",
+      "codigo": "F",
+      "arquivo": "modelo-F-nativo.mp4",
+      "descricao": "Moldura branca (nativo) — fundo branco, vídeo emoldurado no centro, CTA \"nativo/feio\", sem tag de notícia."
+    }
+  ]
+}

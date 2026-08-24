@@ -1,0 +1,134 @@
+{
+  "tema": "mat_calo",
+  "tema_label": "Matéria Calo",
+  "criativos": [
+    {
+      "id": "CALO-V-A1",
+      "nome": "Bebê dormindo de lado",
+      "modelo": "Modelo A · Notícia",
+      "tema": "mat_calo",
+      "tipo": "video",
+      "arquivo": "02-A-calo.mp4"
+    },
+    {
+      "id": "CALO-V-A2",
+      "nome": "Bebê dormindo (variação)",
+      "modelo": "Modelo A · Notícia",
+      "tema": "mat_calo",
+      "tipo": "video",
+      "arquivo": "18-A-calo.mp4"
+    },
+    {
+      "id": "CALO-V-B1",
+      "nome": "Bebê acordado, calo no lábio à mostra",
+      "modelo": "Modelo B · Manchete branca",
+      "tema": "mat_calo",
+      "tipo": "video",
+      "arquivo": "04-B-calo.mp4"
+    },
+    {
+      "id": "CALO-V-B2",
+      "nome": "Bebê dormindo, lábio marcado",
+      "modelo": "Modelo B · Manchete branca",
+      "tema": "mat_calo",
+      "tipo": "video",
+      "arquivo": "19-B-calo.mp4"
+    },
+    {
+      "id": "CALO-V-C1",
+      "nome": "Bebê na consultoria, boca aberta",
+      "modelo": "Modelo C · Fofoca",
+      "tema": "mat_calo",
+      "tipo": "video",
+      "arquivo": "06-C-calo.mp4"
+    },
+    {
+      "id": "CALO-V-D1",
+      "nome": "Close no lábio com o calo",
+      "modelo": "Modelo D · Lower-third",
+      "tema": "mat_calo",
+      "tipo": "video",
+      "arquivo": "08-D-calo.mp4"
+    },
+    {
+      "id": "CALO-V-E1",
+      "nome": "Bebê chorando (foto + vídeo)",
+      "modelo": "Modelo E · Split 3 faixas",
+      "tema": "mat_calo",
+      "tipo": "video",
+      "arquivo": "10-E-calo.mp4"
+    },
+    {
+      "id": "CALO-V-E2",
+      "nome": "Lábio + bebê (esquerda|direita)",
+      "modelo": "Modelo E · Split vertical",
+      "tema": "mat_calo",
+      "tipo": "video",
+      "arquivo": "14-Ev-calo.mp4"
+    },
+    {
+      "id": "CALO-V-F1",
+      "nome": "Bebê dormindo (moldura branca)",
+      "modelo": "Modelo F · Nativo",
+      "tema": "mat_calo",
+      "tipo": "video",
+      "arquivo": "12-F-calo.mp4"
+    },
+    {
+      "id": "CALO-S-A1",
+      "nome": "Close no lábio (estático)",
+      "modelo": "Modelo A · Notícia",
+      "tema": "mat_calo",
+      "tipo": "estatico",
+      "arquivo": "02-A-calo-static.jpg"
+    },
+    {
+      "id": "CALO-S-B1",
+      "nome": "Bebê com calo (estático)",
+      "modelo": "Modelo B · Manchete branca",
+      "tema": "mat_calo",
+      "tipo": "estatico",
+      "arquivo": "04-B-calo-static.jpg"
+    },
+    {
+      "id": "CALO-S-C1",
+      "nome": "Bebê dormindo (estático)",
+      "modelo": "Modelo C · Fofoca",
+      "tema": "mat_calo",
+      "tipo": "estatico",
+      "arquivo": "06-C-calo-static.jpg"
+    },
+    {
+      "id": "CALO-S-D1",
+      "nome": "Bebê dormindo (estático)",
+      "modelo": "Modelo D · Lower-third",
+      "tema": "mat_calo",
+      "tipo": "estatico",
+      "arquivo": "08-D-calo-static.jpg"
+    },
+    {
+      "id": "CALO-S-F1",
+      "nome": "Bebê dormindo (estático nativo)",
+      "modelo": "Modelo F · Nativo",
+      "tema": "mat_calo",
+      "tipo": "estatico",
+      "arquivo": "12-F-calo-static.jpg"
+    },
+    {
+      "id": "CALO-S-A2",
+      "nome": "Bebê acordado, boca aberta (estático)",
+      "modelo": "Modelo A · Notícia",
+      "tema": "mat_calo",
+      "tipo": "estatico",
+      "arquivo": "16-A-calo-static.jpg"
+    },
+    {
+      "id": "CALO-S-B2",
+      "nome": "Bebê dormindo, lábio (estático)",
+      "modelo": "Modelo B · Manchete branca",
+      "tema": "mat_calo",
+      "tipo": "estatico",
+      "arquivo": "17-B-calo-static.jpg"
+    }
+  ]
+}
