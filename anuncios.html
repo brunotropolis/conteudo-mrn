@@ -4,43 +4,61 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Anúncios — Conteúdo MRN</title>
+<title>Anúncios · HUB Conteúdo do Manual</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#3A5049">
 <style>
-  :root{--bg:#0e1116;--card:#161b22;--line:#242b34;--ink:#eaeef3;--mut:#9aa4b0;--drive:#f6c344;--serv:#2f6df6}
+  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--hover:#E9F3F1;--line:#DCE8E6;--ink:#23332F;--mute:#6E827D;--dim:#93A5A1;--gold:#E3A31B;--gold2:#C88C10;--goldbg:#FDF1D6;--teal:#17A2A0;--menu:#3A5049;--menuTxt:#E7EEEC;--menuMute:#9DB3AD}
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Arial,sans-serif;line-height:1.5}
-  header{padding:30px 20px 20px;border-bottom:1px solid var(--line)}
-  .bk{display:inline-flex;align-items:center;gap:6px;color:var(--mut);text-decoration:none;font-size:.82rem;font-weight:600;margin-bottom:14px}
-  .bk:hover{color:var(--ink)}
-  header h1{font-size:1.4rem;font-weight:800;letter-spacing:-.01em}
-  header p{color:var(--mut);font-size:.9rem;margin-top:6px}
-  .wrap{max-width:1000px;margin:0 auto;padding:26px 18px 70px}
-  .sec{display:flex;align-items:center;gap:9px;font-size:.82rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin:26px 4px 15px}
+  body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.5}
+  .top{background:var(--menu);color:var(--menuTxt);padding:18px 22px}
+  .bk{display:inline-flex;align-items:center;gap:6px;color:var(--menuMute);text-decoration:none;font-size:.82rem;font-weight:700;margin-bottom:10px}
+  .bk:hover{color:var(--menuTxt)}
+  .top h1{font-size:1.24rem;font-weight:800;letter-spacing:-.01em}
+  .top p{color:var(--menuMute);font-size:.85rem;margin-top:3px}
+  .wrap{max-width:1000px;margin:0 auto;padding:24px 18px 70px}
+  .sec{display:flex;align-items:center;gap:9px;font-size:.8rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin:26px 4px 14px}
   .sec .dot{width:9px;height:9px;border-radius:50%}
-  .sub{color:var(--mut);font-weight:500;text-transform:none;letter-spacing:0;font-size:.8rem}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
-  a.item{display:flex;align-items:center;gap:13px;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 16px;transition:border-color .15s,transform .12s}
-  a.item:hover{transform:translateY(-2px)}
-  a.item.d:hover{border-color:var(--drive)}
-  a.item.s:hover{border-color:var(--serv)}
-  .item .ic{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;flex:0 0 auto}
-  .item.d .ic{background:rgba(246,195,68,.14);color:var(--drive)}
-  .item.s .ic{background:rgba(47,109,246,.14);color:#7aa6ff}
+  .sub{color:var(--mute);font-weight:600;text-transform:none;letter-spacing:0;font-size:.79rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:13px}
+  a.item{display:flex;align-items:center;gap:13px;text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px 16px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 5px 14px rgba(35,51,47,.05);transition:transform .12s,box-shadow .12s,border-color .12s}
+  a.item:hover{transform:translateY(-2px);box-shadow:0 3px 8px rgba(35,51,47,.08),0 10px 22px rgba(35,51,47,.09)}
+  a.item.d:hover{border-color:var(--gold)}
+  a.item.s:hover{border-color:var(--teal)}
+  .item .ic{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto}
+  .item.d .ic{background:var(--goldbg);color:var(--gold2)}
+  .item.s .ic{background:#DDF3F2;color:#0E7F7D}
   .item .ic svg{width:22px;height:22px;fill:currentColor}
   .item h3{font-size:.98rem;font-weight:700}
-  .item span{display:block;color:var(--mut);font-size:.76rem;margin-top:2px}
-  footer{color:var(--mut);text-align:center;font-size:.8rem;padding:10px 20px 40px}
+  .item span{display:block;color:var(--mute);font-size:.76rem;margin-top:2px}
+  a.regras{display:flex;align-items:center;gap:16px;text-decoration:none;color:inherit;background:linear-gradient(100deg,#fff,#FBF3DE);border:1px solid #EBD9A6;border-radius:18px;padding:20px 22px;box-shadow:0 2px 6px rgba(35,51,47,.05),0 10px 24px rgba(227,163,27,.10);transition:transform .14s,box-shadow .14s}
+  a.regras:hover{transform:translateY(-2px);box-shadow:0 4px 10px rgba(35,51,47,.08),0 16px 30px rgba(227,163,27,.16)}
+  a.regras .ic{width:50px;height:50px;border-radius:14px;background:var(--gold);color:#fff;display:grid;place-items:center;flex:0 0 auto}
+  a.regras .ic svg{width:27px;height:27px;fill:currentColor}
+  a.regras h3{font-size:1.08rem;font-weight:800}
+  a.regras p{color:var(--mute);font-size:.85rem;margin-top:3px}
+  a.regras .go{margin-left:auto;color:var(--gold2);font-weight:800;font-size:.82rem;white-space:nowrap}
+  footer{color:var(--dim);text-align:center;font-size:.78rem;padding:12px 20px 40px}
 </style>
 </head>
 <body>
-<header>
-  <a class="bk" href="index.html">← voltar</a>
+<div class="top">
+  <a class="bk" href="index.html">← HUB</a>
   <h1>Anúncios</h1>
-  <p>Criativos pras campanhas. Manuais = pastas no Drive (você joga o arquivo). Digitais = gerados pela IA no servidor.</p>
-</header>
+  <p>Criativos pras campanhas + as regras que orientam copy e criativo de cada funil.</p>
+</div>
 <div class="wrap">
 
-  <div class="sec"><span class="dot" style="background:var(--drive)"></span> Anúncios manuais <span class="sub">— pastas no Google Drive, por funil</span></div>
+  <a class="regras" href="regras.html">
+    <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 3h11l3 3v15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm2 6v2h10V9H7zm0 4v2h10v-2H7zm0 4v2h7v-2H7z"/></svg></div>
+    <div>
+      <h3>Regras por funil (copy + criativo)</h3>
+      <p>Cadastre as orientações de cada funil, como um prompt. O Austin usa pra escrever as legendas.</p>
+    </div>
+    <span class="go">abrir →</span>
+  </a>
+
+  <div class="sec"><span class="dot" style="background:var(--gold)"></span> Anúncios manuais <span class="sub">— pastas no Google Drive, por funil</span></div>
   <div class="grid">
     <a class="item d" href="https://drive.google.com/drive/folders/1TkfbZdPG4tVciJar3zRi9UVWq2qg9eTR" target="_blank" rel="noopener">
       <div class="ic"><svg viewBox="0 0 24 24"><path d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2z"/></svg></div>
@@ -64,7 +82,7 @@
     </a>
   </div>
 
-  <div class="sec"><span class="dot" style="background:var(--serv)"></span> Anúncios digitais <span class="sub">— gerados pela IA, no servidor (URL pública)</span></div>
+  <div class="sec"><span class="dot" style="background:var(--teal)"></span> Anúncios digitais <span class="sub">— gerados pela IA, no servidor (URL pública)</span></div>
   <div class="grid">
     <a class="item s" href="materia-amamentacao/">
       <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v3H4V4zm0 5h10v2H4V9zm0 4h16v2H4v-2zm0 4h10v2H4v-2zm12-8h4v9h-4V9z"/></svg></div>
