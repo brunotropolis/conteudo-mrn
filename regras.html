@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Regras por funil · HUB Conteúdo do Manual</title>
+<title>Agente de Copy · HUB Conteúdo do Manual</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta name="theme-color" content="#3A5049">
 <style>
@@ -15,7 +15,7 @@
   .bk{display:inline-flex;align-items:center;gap:6px;color:var(--menuMute);text-decoration:none;font-size:.82rem;font-weight:700;margin-bottom:10px}
   .bk:hover{color:var(--menuTxt)}
   .top h1{font-size:1.24rem;font-weight:800;letter-spacing:-.01em}
-  .top p{color:var(--menuMute);font-size:.85rem;margin-top:3px;max-width:640px}
+  .top p{color:var(--menuMute);font-size:.85rem;margin-top:3px;max-width:660px}
   .wrap{max-width:820px;margin:0 auto;padding:22px 18px 70px}
   .who{display:flex;align-items:center;gap:10px;margin:4px 2px 18px;flex-wrap:wrap}
   .who label{font-size:.8rem;color:var(--mute);font-weight:700}
@@ -34,7 +34,7 @@
   .chip.copy{background:var(--goldbg);color:var(--gold2)}
   .chip.cri{background:#DDF3F2;color:#0E7F7D}
   .fld p{color:var(--mute);font-size:.8rem;margin:3px 0 9px}
-  textarea{width:100%;min-height:180px;resize:vertical;border:1px solid var(--line);background:var(--card);border-radius:13px;padding:13px 14px;font-size:.9rem;line-height:1.55;color:var(--ink);font-family:inherit}
+  textarea{width:100%;min-height:170px;resize:vertical;border:1px solid var(--line);background:var(--card);border-radius:13px;padding:13px 14px;font-size:.9rem;line-height:1.55;color:var(--ink);font-family:inherit}
   textarea:focus{outline:none;border-color:var(--gold);background:#fff}
   .bar{display:flex;align-items:center;gap:14px;margin-top:6px}
   .save{background:var(--gold);color:#fff;border:none;border-radius:12px;padding:12px 24px;font-size:.92rem;font-weight:800;cursor:pointer;transition:background .12s}
@@ -48,28 +48,26 @@
 </head>
 <body>
 <div class="top">
-  <a class="bk" href="anuncios.html">← Anúncios</a>
-  <h1>Regras por funil</h1>
-  <p>Cadastre aqui as orientações de cada funil, como um prompt. O Austin lê isso e escreve as legendas dos anúncios seguindo o que você definir, sem inventar fora.</p>
+  <a class="bk" href="agente-copy.html">← Agente de Copy</a>
+  <h1 id="titulo">Agente de Copy</h1>
+  <p id="desc"></p>
 </div>
 <div class="wrap">
   <div class="who">
     <label>Seu nome:</label>
     <input id="who" placeholder="ex: Day" autocomplete="off">
   </div>
-
   <div class="pills" id="pills"></div>
-
   <div class="panel">
     <div class="fld">
-      <h3><span class="chip copy">Copy</span> Regras de legenda / texto</h3>
-      <p>Tom de voz, ganchos que funcionam, oferta (preço + o que inclui), CTA, e o que EVITAR (claims, palavras).</p>
-      <textarea id="copy" placeholder="Ex: Tom acolhedor e próximo, voz da Day. Gancho pela dor real (o bebê não dorme / não sacia no seio). Oferta: Dream Baby Pocket R$67, plano de sono pronto em ~30 min. CTA: 'quero meu plano'. EVITAR: promessa de cura, termos médicos, tom alarmista."></textarea>
+      <h3><span class="chip copy">Copy</span> <span id="copyLabel">Regras de legenda</span></h3>
+      <p id="copyHint"></p>
+      <textarea id="copy"></textarea>
     </div>
     <div class="fld">
-      <h3><span class="chip cri">Criativo</span> Regras de vídeo / imagem</h3>
-      <p>O que o criativo deve ter: formato, primeiros 3s (gancho), o que mostrar, legendas na tela, duração, o que NÃO fazer.</p>
-      <textarea id="criativo" placeholder="Ex: Vertical 9:16. Primeiros 3s com a dor na tela (texto grande). Mostrar a Day falando + b-roll do bebê. Legenda queimada sempre. Até 40s. EVITAR: introdução longa, música alta, stock genérico."></textarea>
+      <h3><span class="chip cri">Criativo</span> <span id="criLabel">Regras de vídeo / imagem</span></h3>
+      <p id="criHint"></p>
+      <textarea id="criativo"></textarea>
     </div>
     <div class="bar">
       <button class="save" id="save">Salvar regra</button>
@@ -80,70 +78,95 @@
 <footer>Uso interno · Manual do Recém-Nascido</footer>
 
 <script>
-  var FUNIS = [
-    {k:'pocket', nome:'Dream Pocket'},
-    {k:'quiz', nome:'Quiz Pocket'},
-    {k:'guia', nome:'Guia da Pega'},
-    {k:'mat_calo', nome:'Matéria Calo'},
-    {k:'mat_ama', nome:'Matéria Amamentação'}
-  ];
-  var DATA = {}, cur = 'pocket';
-  var elPills = document.getElementById('pills'), elCopy = document.getElementById('copy'),
-      elCri = document.getElementById('criativo'), elWho = document.getElementById('who'),
-      elSave = document.getElementById('save'), elStatus = document.getElementById('status');
+  var CTX = {
+    anuncios: {
+      titulo: 'Agente de Copy · Anúncios',
+      desc: 'Regras dos anúncios pagos (projetos de curso). O Austin usa pra escrever a copy dos anúncios que sobe, seguindo o que você definir aqui.',
+      slots: [{k:'pocket',n:'Dream Pocket'},{k:'quiz',n:'Quiz Pocket'},{k:'guia',n:'Guia da Pega'},{k:'mat_calo',n:'Matéria Calo'},{k:'mat_ama',n:'Matéria Amamentação'}],
+      copyLabel:'Regras de legenda / texto do anúncio', copyHint:'Tom de voz, ganchos que funcionam, oferta (preço + o que inclui), CTA, o que EVITAR.',
+      copyPh:'Ex: Tom acolhedor da Day. Gancho pela dor real (bebê não dorme / não sacia). Oferta: Dream Baby Pocket R$67, plano pronto em ~30 min. CTA: "quero meu plano". EVITAR: promessa de cura, tom alarmista.',
+      criLabel:'Regras de vídeo / imagem', criHint:'Formato, primeiros 3s (gancho), o que mostrar, legenda na tela, duração, o que NÃO fazer.',
+      criPh:'Ex: Vertical 9:16. Dor na tela nos 3 primeiros segundos. Day falando + b-roll do bebê. Legenda queimada. Até 40s.'
+    },
+    organico: {
+      titulo: 'Agente de Copy · Orgânico',
+      desc: 'Regras pra ajudar a Day na criação de conteúdo orgânico (posts e reels do perfil). Por tema.',
+      slots: [{k:'amamentacao',n:'Amamentação'},{k:'sono',n:'Sono'},{k:'cuidados',n:'Cuidados com o bebê'},{k:'gestante',n:'Gestante'}],
+      copyLabel:'Regras de legenda do post', copyHint:'Tom da Day, formato da legenda, ganchos, como abrir e fechar, CTA (salvar/compartilhar/seguir), hashtags, o que evitar.',
+      copyPh:'Ex: Voz da Day, acolhedora e sem julgamento. Abre com a dúvida real da mãe. 1 ideia por post. Fecha convidando a salvar. EVITAR: tom professoral, promessa, mamadeira.',
+      criLabel:'Regras do post / reel', criHint:'Formato, o que mostrar, capa, ritmo, legenda na tela, duração.',
+      criPh:'Ex: Reel vertical, capa com a dúvida em texto grande. Day em plano médio. Corte a cada ~4s. Legenda queimada sempre.'
+    },
+    ofertas: {
+      titulo: 'Agente de Copy · Ofertas',
+      desc: 'Regras pra produção de legendas com chamada (CTA) das ofertas dos nossos afiliados — a base pra automação de postagem.',
+      slots: [{k:'geek',n:'Ofertas Geek'},{k:'materno',n:'Ofertas Materno'},{k:'geral',n:'Geral'}],
+      copyLabel:'Regras da legenda + CTA da oferta', copyHint:'Estrutura da legenda (preço, desconto, urgência), o CTA e o link, tom, emojis, o que evitar.',
+      copyPh:'Ex: Abre com o produto + preço em destaque. Escassez ("por tempo limitado"). CTA claro: "corre no link". Emojis pontuais. EVITAR: exagero, caps lock na frase toda.',
+      criLabel:'Regras da imagem / arte da oferta', criHint:'O que a arte deve ter: foto do produto, selo de desconto, formato.',
+      criPh:'Ex: Foto real do produto, selo de % OFF no canto, fundo limpo. Formato quadrado pro feed.'
+    }
+  };
+  var ctx = (new URLSearchParams(location.search).get('ctx') || 'anuncios').toLowerCase();
+  if(!CTX[ctx]) ctx = 'anuncios';
+  var C = CTX[ctx];
+  var DATA = {}, cur = C.slots[0].k;
+  var elPills=document.getElementById('pills'), elCopy=document.getElementById('copy'), elCri=document.getElementById('criativo'),
+      elWho=document.getElementById('who'), elSave=document.getElementById('save'), elStatus=document.getElementById('status');
+
+  document.getElementById('titulo').textContent = C.titulo;
+  document.getElementById('desc').textContent = C.desc;
+  document.title = C.titulo;
+  document.getElementById('copyLabel').textContent = C.copyLabel;
+  document.getElementById('copyHint').textContent = C.copyHint;
+  document.getElementById('criLabel').textContent = C.criLabel;
+  document.getElementById('criHint').textContent = C.criHint;
+  elCopy.placeholder = C.copyPh; elCri.placeholder = C.criPh;
 
   elWho.value = localStorage.getItem('hub-who') || '';
   elWho.addEventListener('input', function(){ localStorage.setItem('hub-who', elWho.value.trim()); });
 
   function renderPills(){
-    elPills.innerHTML = '';
-    FUNIS.forEach(function(f){
-      var d = DATA[f.k] || {};
-      var filled = (d.copy && d.copy.trim()) || (d.criativo && d.criativo.trim());
-      var b = document.createElement('button');
-      b.className = 'pill' + (f.k===cur?' active':'') + (filled?' filled':'');
-      b.innerHTML = '<span class="d"></span>' + f.nome;
-      b.onclick = function(){ selectFunil(f.k); };
+    elPills.innerHTML='';
+    C.slots.forEach(function(f){
+      var d=DATA[f.k]||{}; var filled=(d.copy&&d.copy.trim())||(d.criativo&&d.criativo.trim());
+      var b=document.createElement('button');
+      b.className='pill'+(f.k===cur?' active':'')+(filled?' filled':'');
+      b.innerHTML='<span class="d"></span>'+f.n;
+      b.onclick=function(){ selectSlot(f.k); };
       elPills.appendChild(b);
     });
   }
-  function selectFunil(k){
-    // guarda edicao atual em memoria antes de trocar
-    DATA[cur] = DATA[cur] || {};
-    DATA[cur].copy = elCopy.value; DATA[cur].criativo = elCri.value;
-    cur = k;
-    var d = DATA[k] || {};
-    elCopy.value = d.copy || ''; elCri.value = d.criativo || '';
-    elStatus.className = 'status';
-    elStatus.textContent = d.by ? ('última edição por ' + d.by + (d.at ? ' · ' + fmt(d.at) : '')) : 'ainda sem regra cadastrada';
+  function selectSlot(k){
+    DATA[cur]=DATA[cur]||{}; DATA[cur].copy=elCopy.value; DATA[cur].criativo=elCri.value;
+    cur=k; var d=DATA[k]||{};
+    elCopy.value=d.copy||''; elCri.value=d.criativo||'';
+    elStatus.className='status';
+    elStatus.textContent = d.by ? ('última edição por '+d.by+(d.at?' · '+fmt(d.at):'')) : 'ainda sem regra cadastrada';
     renderPills();
   }
-  function fmt(iso){ try{ var dt=new Date(iso); return dt.toLocaleDateString('pt-BR')+' '+dt.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}); }catch(e){ return ''; } }
+  function fmt(iso){ try{var dt=new Date(iso);return dt.toLocaleDateString('pt-BR')+' '+dt.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});}catch(e){return '';} }
 
   function load(){
     fetch('/api/copy').then(function(r){return r.json();}).then(function(j){
-      DATA = (j && j.copy) || {};
-      selectFunil(cur);
+      var rg=(j&&j.regras)||{}; DATA=rg[ctx]||{}; selectSlot(cur);
     }).catch(function(){ elStatus.className='status err'; elStatus.textContent='não consegui carregar. recarrega a página.'; });
   }
-
   elSave.addEventListener('click', function(){
-    var who = elWho.value.trim();
+    var who=elWho.value.trim();
     if(!who){ elStatus.className='status err'; elStatus.textContent='põe seu nome antes de salvar 🙂'; elWho.focus(); return; }
-    elSave.disabled = true; elStatus.className='status'; elStatus.textContent='salvando...';
-    var body = { funil: cur, copy: elCopy.value, criativo: elCri.value, by: who };
-    fetch('/api/copy', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body) })
+    elSave.disabled=true; elStatus.className='status'; elStatus.textContent='salvando...';
+    var body={contexto:ctx, slot:cur, copy:elCopy.value, criativo:elCri.value, by:who};
+    fetch('/api/copy',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
       .then(function(r){return r.json();}).then(function(j){
-        elSave.disabled = false;
-        if(j && j.ok){
-          DATA[cur] = { copy: elCopy.value, criativo: elCri.value, by: who, at: (j.salvo && j.salvo.at) || new Date().toISOString() };
-          elStatus.className='status ok'; elStatus.textContent='salvo ✓ · o Austin já usa essa regra';
+        elSave.disabled=false;
+        if(j&&j.ok){ DATA[cur]={copy:elCopy.value,criativo:elCri.value,by:who,at:(j.salvo&&j.salvo.at)||new Date().toISOString()};
+          elStatus.className='status ok'; elStatus.textContent = ctx==='anuncios' ? 'salvo ✓ · o Austin já usa essa regra' : 'salvo ✓';
           renderPills();
-        } else { elStatus.className='status err'; elStatus.textContent='erro ao salvar: ' + ((j&&j.erro)||'tenta de novo'); }
+        } else { elStatus.className='status err'; elStatus.textContent='erro ao salvar: '+((j&&j.erro)||'tenta de novo'); }
       }).catch(function(){ elSave.disabled=false; elStatus.className='status err'; elStatus.textContent='falha de rede, tenta de novo'; });
   });
-
-  load();
+  renderPills(); load();
 </script>
 </body>
 </html>

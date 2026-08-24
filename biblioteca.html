@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Biblioteca · HUB Conteúdo do Manual</title>
+<title>Biblioteca de mídia · HUB Conteúdo do Manual</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta name="theme-color" content="#3A5049">
 <style>
@@ -15,42 +15,72 @@
   .bk{display:inline-flex;align-items:center;gap:6px;color:var(--menuMute);text-decoration:none;font-size:.82rem;font-weight:700;margin-bottom:10px}
   .bk:hover{color:var(--menuTxt)}
   .top h1{font-size:1.24rem;font-weight:800;letter-spacing:-.01em}
-  .top p{color:var(--menuMute);font-size:.85rem;margin-top:3px}
-  .wrap{max-width:1000px;margin:0 auto;padding:26px 18px 70px}
-  .sec{color:var(--mute);font-size:.76rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;margin:6px 4px 16px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-  a.card{display:block;text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px 20px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 18px rgba(35,51,47,.05);transition:transform .14s,box-shadow .14s,border-color .14s}
-  a.card:hover{transform:translateY(-3px);box-shadow:0 4px 10px rgba(35,51,47,.08),0 14px 28px rgba(35,51,47,.10);border-color:var(--teal)}
-  .card .ic{width:46px;height:46px;border-radius:13px;background:#DDF3F2;color:#0E7F7D;display:grid;place-items:center;margin-bottom:14px}
-  .card .ic svg{width:25px;height:25px;fill:currentColor}
-  .card h2{font-size:1.1rem;font-weight:800;letter-spacing:-.01em}
-  .card p{color:var(--mute);font-size:.85rem;margin-top:6px}
-  .card .n{display:inline-block;margin-top:14px;font-size:.78rem;font-weight:800;color:#0E7F7D}
+  .top p{color:var(--menuMute);font-size:.85rem;margin-top:3px;max-width:640px}
+  .wrap{max-width:1000px;margin:0 auto;padding:24px 18px 70px}
+  .sec{display:flex;align-items:center;gap:9px;font-size:.8rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin:26px 4px 14px}
+  .sec .dot{width:9px;height:9px;border-radius:50%}
+  .sub{color:var(--mute);font-weight:600;text-transform:none;letter-spacing:0;font-size:.79rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:13px}
+  a.item{display:flex;align-items:center;gap:13px;text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px 16px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 5px 14px rgba(35,51,47,.05);transition:transform .12s,box-shadow .12s,border-color .12s}
+  a.item:hover{transform:translateY(-2px);box-shadow:0 3px 8px rgba(35,51,47,.08),0 10px 22px rgba(35,51,47,.09)}
+  a.item.d:hover{border-color:var(--gold)}
+  a.item.s:hover{border-color:var(--teal)}
+  .item .ic{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto}
+  .item.d .ic{background:var(--goldbg);color:var(--gold2)}
+  .item.s .ic{background:#DDF3F2;color:#0E7F7D}
+  .item .ic svg{width:22px;height:22px;fill:currentColor}
+  .item h3{font-size:.98rem;font-weight:700}
+  .item span{display:block;color:var(--mute);font-size:.76rem;margin-top:2px}
+  .allbtn{display:inline-flex;align-items:center;gap:7px;margin:2px 4px 4px;color:var(--gold2);text-decoration:none;font-weight:800;font-size:.82rem}
+  .allbtn:hover{text-decoration:underline}
   footer{color:var(--dim);text-align:center;font-size:.78rem;padding:12px 20px 40px}
 </style>
 </head>
 <body>
 <div class="top">
   <a class="bk" href="index.html">← HUB</a>
-  <h1>Biblioteca de arquivos</h1>
-  <p>Criativos gerados pela IA, no servidor. Cada URL é pública — o Austin puxa direto pra subir anúncio.</p>
+  <h1>Biblioteca de mídia</h1>
+  <p>Nosso banco de fotos e vídeos, por tema. Quando pegamos ou geramos mídia nova, salva na pasta do tema — vira nosso repositório.</p>
 </div>
 <div class="wrap">
-  <div class="sec">Temas</div>
-  <div class="grid">
-    <a class="card" href="materia-amamentacao/">
-      <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v3H4V4zm0 5h10v2H4V9zm0 4h16v2H4v-2zm0 4h10v2H4v-2zm12-8h4v9h-4V9z"/></svg></div>
-      <h2>MATÉRIA AMAMENTAÇÃO</h2>
-      <p>Criativos "canal de notícia" — tema dor para amamentar.</p>
-      <span class="n">7 vídeos + 5 estáticos →</span>
+
+  <div class="sec"><span class="dot" style="background:var(--gold)"></span> Banco de mídia do Manual <span class="sub">— pastas no Google Drive, por tema</span></div>
+  <a class="allbtn" href="https://drive.google.com/drive/folders/1-3MeQ3Z2N-2Dg96GuK_071Us1YVV2Wzu" target="_blank" rel="noopener">📁 abrir a biblioteca inteira no Drive →</a>
+  <div class="grid" style="margin-top:10px">
+    <a class="item d" href="https://drive.google.com/drive/folders/1gOCWgNZWm2a_I3fipM-IPvRob_Zq-U3E" target="_blank" rel="noopener">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2z"/></svg></div>
+      <div><h3>Amamentação</h3><span>+ Bebês mamando</span></div>
     </a>
-    <a class="card" href="materia-calo/">
-      <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v3H4V4zm0 5h10v2H4V9zm0 4h16v2H4v-2zm0 4h10v2H4v-2zm12-8h4v9h-4V9z"/></svg></div>
-      <h2>MATÉRIA CALO</h2>
-      <p>Criativos "canal de notícia" — tema calo no lábio do bebê (footage real da Day).</p>
-      <span class="n">9 vídeos + 7 estáticos →</span>
+    <a class="item d" href="https://drive.google.com/drive/folders/1KAMY8Ado28mJH3ShFiaRF1SKAjmgpSzx" target="_blank" rel="noopener">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2z"/></svg></div>
+      <div><h3>Sono</h3><span>+ Bebês dormindo</span></div>
+    </a>
+    <a class="item d" href="https://drive.google.com/drive/folders/1Sgy4F4s3g4vddH9YUWOL9JvBSh3WQtI-" target="_blank" rel="noopener">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2z"/></svg></div>
+      <div><h3>Cuidados com o bebê</h3><span>+ Bebês chorando</span></div>
+    </a>
+    <a class="item d" href="https://drive.google.com/drive/folders/1FoBFMG0XtmM2WvQDxwgv_b-vPkiK4TnP" target="_blank" rel="noopener">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2z"/></svg></div>
+      <div><h3>Gestantes e casais</h3><span>fotos gestante/casal</span></div>
+    </a>
+    <a class="item d" href="https://drive.google.com/drive/folders/1c1o1AvV9caufn9kpYeMsG1xL-vuMdN9o" target="_blank" rel="noopener">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2z"/></svg></div>
+      <div><h3>Fotos da Day</h3><span>banco de fotos da Day</span></div>
     </a>
   </div>
+
+  <div class="sec"><span class="dot" style="background:var(--teal)"></span> Conteúdo gerado pela IA <span class="sub">— no servidor, usado como base pra criar</span></div>
+  <div class="grid">
+    <a class="item s" href="materia-amamentacao/">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v3H4V4zm0 5h10v2H4V9zm0 4h16v2H4v-2zm0 4h10v2H4v-2zm12-8h4v9h-4V9z"/></svg></div>
+      <div><h3>Matéria Amamentação</h3><span>7 vídeos + 5 estáticos</span></div>
+    </a>
+    <a class="item s" href="materia-calo/">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v3H4V4zm0 5h10v2H4V9zm0 4h16v2H4v-2zm0 4h10v2H4v-2zm12-8h4v9h-4V9z"/></svg></div>
+      <div><h3>Matéria Calo</h3><span>9 vídeos + 7 estáticos</span></div>
+    </a>
+  </div>
+
 </div>
 <footer>Uso interno · Manual do Recém-Nascido</footer>
 </body>
