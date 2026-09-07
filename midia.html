@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Biblioteca de Mídia · HUB Manual</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#3A5049">
+<style>
+  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--hover:#E9F3F1;--line:#DCE8E6;--ink:#23332F;--mute:#6E827D;--dim:#93A5A1;--gold:#E3A31B;--gold2:#C88C10;--goldink:#8A5E0A;--goldbg:#FDF1D6;--teal:#17A2A0;--menu:#3A5049;--menuTxt:#E7EEEC;--menuMute:#9DB3AD}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.5;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .top{background:var(--menu);color:var(--menuTxt);padding:18px 22px;display:flex;align-items:center;gap:14px}
+  .top .logo{width:42px;height:42px;border-radius:12px;flex:0 0 auto;overflow:hidden}
+  .top .logo img{width:100%;height:100%;display:block}
+  .top .tt{min-width:0;flex:1}
+  .top h1{font-size:1.18rem;font-weight:800;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .top p{color:var(--menuMute);font-size:.82rem;margin-top:2px}
+  .top .back{flex:0 0 auto;color:var(--menuTxt);font-size:.82rem;font-weight:700;background:rgba(255,255,255,.10);padding:8px 13px;border-radius:10px}
+  .top .back:hover{background:rgba(255,255,255,.18)}
+  .wrap{max-width:1000px;margin:0 auto;padding:24px 18px 70px}
+
+  .drop{border:2px dashed var(--line);border-radius:18px;background:var(--panel);padding:26px 20px;text-align:center;cursor:pointer;transition:.15s;box-shadow:0 1px 2px rgba(35,51,47,.04)}
+  .drop:hover,.drop.over{border-color:var(--gold);background:var(--goldbg)}
+  .drop .ic{width:48px;height:48px;margin:0 auto 10px;border-radius:14px;background:var(--goldbg);color:var(--gold2);display:grid;place-items:center}
+  .drop .ic svg{width:26px;height:26px;fill:currentColor}
+  .drop h2{font-size:1rem;font-weight:800}
+  .drop p{color:var(--mute);font-size:.85rem;margin-top:4px}
+  .drop input{display:none}
+
+  .status{margin:14px 2px 0;font-size:.85rem;color:var(--mute);min-height:20px}
+  .status b{color:var(--goldink)}
+
+  .head{display:flex;justify-content:space-between;align-items:baseline;margin:26px 4px 12px}
+  .head h3{font-size:.82rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+  .head .n{font-size:12.5px;color:var(--mute)}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+  .item{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 16px rgba(35,51,47,.05)}
+  .item .media{aspect-ratio:1;background:var(--hover);display:block;position:relative}
+  .item .media img{width:100%;height:100%;object-fit:cover;display:block}
+  .item .media .vid{width:100%;height:100%;display:grid;place-items:center;font-size:34px;color:var(--menu)}
+  .item .meta{padding:9px 11px}
+  .item .fn{font-size:11.5px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+  .item .sz{font-size:10.5px;color:var(--dim);margin-top:1px}
+  .item .acts{display:flex;gap:6px;padding:0 11px 11px}
+  .item button{flex:1;font-size:11px;font-weight:700;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:5px;cursor:pointer;font-family:inherit}
+  .item button:hover{border-color:var(--gold);color:var(--goldink)}
+  .item button.del:hover{border-color:#c0442e;color:#c0442e}
+  .empty{grid-column:1/-1;text-align:center;color:var(--mute);padding:40px 20px;background:var(--panel);border:1px solid var(--line);border-radius:16px}
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--menu);color:#fff;padding:10px 18px;border-radius:999px;font-size:13px;font-weight:600;opacity:0;transition:.2s;pointer-events:none}
+  .toast.show{opacity:1}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="logo"><img src="favicon.svg" alt=""></div>
+  <div class="tt"><h1>Biblioteca de Mídia</h1><p>Fotos e vídeos do Manual — o Publicador usa daqui</p></div>
+  <a class="back" href="index.html">← HUB</a>
+</div>
+<div class="wrap">
+  <label class="drop" id="drop">
+    <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l4 4h-3v6h-2V7H8l4-4zM5 15h14v4a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4z"/></svg></div>
+    <h2>Arraste ou clique pra subir</h2>
+    <p>JPG, PNG, WEBP ou MP4 — vai pro banco de mídia do Manual</p>
+    <input type="file" id="file" accept="image/jpeg,image/png,image/webp,video/mp4,video/quicktime" multiple>
+  </label>
+  <div class="status" id="status"></div>
+
+  <div class="head"><h3>Na biblioteca</h3><span class="n" id="count"></span></div>
+  <div class="grid" id="grid"><div class="empty">carregando…</div></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const API='https://n8n-n8n.xktssy.easypanel.host/webhook/motor-midia';
+const grid=document.getElementById('grid'), statusEl=document.getElementById('status');
+const isVid=t=>/video/.test(t||'');
+const fmtSz=n=>n>=1048576?(n/1048576).toFixed(1)+' MB':n>=1024?Math.round(n/1024)+' KB':'<1 KB';
+
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800);}
+
+async function carregar(){
+  try{
+    const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'list'})}).then(r=>r.json());
+    const arr=r.arquivos||[];
+    document.getElementById('count').textContent=arr.length+(arr.length===1?' arquivo':' arquivos');
+    grid.innerHTML=arr.map(a=>`
+      <div class="item">
+        <div class="media">${isVid(a.tipo)?`<div class="vid">🎬</div>`:`<img src="${a.url}" loading="lazy" alt="">`}</div>
+        <div class="meta"><div class="fn" title="${a.nome}">${a.nome}</div><div class="sz">${fmtSz(a.tamanho)}</div></div>
+        <div class="acts">
+          <button onclick="copiar('${a.url}')">Copiar URL</button>
+          <button class="del" onclick="apagar('${a.nome.replace(/'/g,"")}')">Apagar</button>
+        </div>
+      </div>`).join('') || `<div class="empty">Nada ainda — suba a primeira mídia acima.</div>`;
+  }catch(e){ grid.innerHTML=`<div class="empty">erro ao carregar</div>`; }
+}
+function copiar(u){ navigator.clipboard.writeText(u); toast('URL copiada'); }
+async function apagar(nome){
+  if(!confirm('Apagar '+nome+'?'))return;
+  await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'delete',nome})});
+  toast('apagado'); carregar();
+}
+
+async function subir(files){
+  for(const f of files){
+    statusEl.innerHTML=`enviando <b>${f.name}</b>…`;
+    const b64=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result.split(',')[1]);r.onerror=rej;r.readAsDataURL(f);});
+    try{
+      const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({acao:'upload',mime:f.type||'image/jpeg',nome_base:f.name.replace(/\.[^.]+$/,''),base64:b64})}).then(r=>r.json());
+      if(!r.ok) throw 0;
+    }catch(e){ statusEl.innerHTML=`falhou em <b>${f.name}</b>`; }
+  }
+  statusEl.textContent='pronto ✓'; setTimeout(()=>statusEl.textContent='',2500);
+  carregar();
+}
+
+const drop=document.getElementById('drop'), file=document.getElementById('file');
+file.onchange=e=>{ if(e.target.files.length) subir(e.target.files); file.value=''; };
+['dragover','dragenter'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('over');}));
+['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove('over');}));
+drop.addEventListener('drop',e=>{ if(e.dataTransfer.files.length) subir(e.dataTransfer.files); });
+carregar();
+</script>
+</body>
+</html>

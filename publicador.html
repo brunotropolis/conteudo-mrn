@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Publicador · HUB Manual</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#3A5049">
+<style>
+  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--hover:#E9F3F1;--line:#DCE8E6;--ink:#23332F;--mute:#6E827D;--dim:#93A5A1;--gold:#E3A31B;--gold2:#C88C10;--goldink:#8A5E0A;--goldbg:#FDF1D6;--teal:#17A2A0;--menu:#3A5049;--menuTxt:#E7EEEC;--menuMute:#9DB3AD;--live:#1E874B;--dev:#B4791A}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.5;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .top{background:var(--menu);color:var(--menuTxt);padding:18px 22px;display:flex;align-items:center;gap:14px}
+  .top .logo{width:42px;height:42px;border-radius:12px;flex:0 0 auto;overflow:hidden}
+  .top .logo img{width:100%;height:100%;display:block}
+  .top .tt{min-width:0;flex:1}
+  .top h1{font-size:1.18rem;font-weight:800;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .top p{color:var(--menuMute);font-size:.82rem;margin-top:2px}
+  .top .back{flex:0 0 auto;color:var(--menuTxt);font-size:.82rem;font-weight:700;background:rgba(255,255,255,.10);padding:8px 13px;border-radius:10px}
+  .wrap{max-width:1060px;margin:0 auto;padding:22px 18px 70px}
+
+  .banner{background:var(--goldbg);border:1px solid #EAD9A6;border-left:4px solid var(--gold);border-radius:14px;padding:13px 16px;font-size:13.5px;color:var(--ink);margin-bottom:18px}
+  .banner b{color:var(--goldink)}
+
+  .cols{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:start}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 18px rgba(35,51,47,.05)}
+  .panel h2{font-size:.82rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin-bottom:14px}
+  label.f{display:block;font-size:12.5px;font-weight:700;color:var(--mute);text-transform:uppercase;letter-spacing:.04em;margin:16px 0 7px}
+  label.f:first-of-type{margin-top:0}
+
+  .chips{display:flex;gap:6px;flex-wrap:wrap}
+  .chip{font-size:13px;font-weight:600;color:#3f4e48;padding:7px 14px;border-radius:10px;cursor:pointer;border:1px solid var(--line);background:var(--card);font-family:inherit}
+  .chip.on{background:var(--menu);color:#fff;border-color:var(--menu)}
+
+  .drop{border:2px dashed var(--line);border-radius:14px;background:var(--card);padding:16px;text-align:center;cursor:pointer;font-size:13px;color:var(--mute)}
+  .drop:hover{border-color:var(--gold);background:var(--goldbg)}
+  .drop input{display:none}
+  .row-btns{display:flex;gap:8px;margin-top:8px}
+  .row-btns button{flex:1;font-size:12.5px;font-weight:700;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:9px;cursor:pointer;font-family:inherit}
+  .row-btns button:hover{border-color:var(--gold);color:var(--goldink)}
+
+  .sel{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .sel .t{width:64px;height:64px;border-radius:10px;overflow:hidden;position:relative;background:var(--hover);border:1px solid var(--line)}
+  .sel .t img{width:100%;height:100%;object-fit:cover}
+  .sel .t .v{width:100%;height:100%;display:grid;place-items:center;font-size:24px}
+  .sel .t .x{position:absolute;top:2px;right:2px;background:rgba(0,0,0,.55);color:#fff;border:none;width:18px;height:18px;border-radius:50%;font-size:12px;cursor:pointer;line-height:1}
+
+  textarea,input[type=datetime-local],select{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:14px;color:var(--ink);background:var(--card)}
+  textarea{min-height:96px;resize:vertical}
+  textarea:focus,input:focus,select:focus{outline:2px solid var(--goldbg);border-color:var(--gold)}
+  .hint{font-size:11.5px;color:#52615A;margin-top:5px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+  .submit{width:100%;margin-top:20px;background:var(--menu);color:#fff;border:none;border-radius:12px;padding:13px;font-size:15px;font-weight:800;cursor:pointer;font-family:inherit;transition:background .15s}
+  .submit:hover:not(:disabled){background:#2f423c}
+  .submit:disabled{opacity:.5;cursor:default}
+  .msg{text-align:center;font-size:13px;margin-top:10px;min-height:18px;color:var(--goldink);font-weight:600}
+
+  /* fila */
+  .fila{display:flex;flex-direction:column;gap:10px}
+  .post{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+  .post .th{width:52px;height:52px;border-radius:10px;overflow:hidden;background:var(--hover)}
+  .post .th img{width:100%;height:100%;object-fit:cover}
+  .post .th .v{width:100%;height:100%;display:grid;place-items:center;font-size:22px}
+  .post .info{min-width:0}
+  .post .cap{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .post .when{font-size:11.5px;color:var(--mute);margin-top:2px}
+  .st{font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px;text-transform:uppercase;letter-spacing:.03em}
+  .st.agendado{background:var(--goldbg);color:var(--goldink)} .st.rascunho{background:var(--hover);color:var(--mute)}
+  .st.publicado{background:#E4F3EA;color:var(--live)} .st.erro{background:#F8E5E0;color:#B2432C} .st.cancelado{background:var(--hover);color:var(--dim)}
+  .post .del{background:none;border:none;color:var(--dim);cursor:pointer;font-size:16px}
+  .post .del:hover{color:#B2432C}
+  .empty{text-align:center;color:var(--mute);padding:26px}
+
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--menu);color:#fff;padding:10px 18px;border-radius:999px;font-size:13px;font-weight:600;opacity:0;transition:.2s;pointer-events:none}
+  .toast.show{opacity:1}
+  /* picker modal */
+  .modal{position:fixed;inset:0;background:rgba(20,30,27,.5);display:none;place-items:center;padding:20px;z-index:9}
+  .modal.show{display:grid}
+  .modal .box{background:var(--panel);border-radius:18px;max-width:640px;width:100%;max-height:80vh;overflow:auto;padding:18px}
+  .modal h3{font-size:15px;font-weight:800;margin-bottom:12px}
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px}
+  .pgrid .pit{aspect-ratio:1;border-radius:10px;overflow:hidden;border:2px solid transparent;cursor:pointer;background:var(--hover)}
+  .pgrid .pit.on{border-color:var(--gold)}
+  .pgrid .pit img{width:100%;height:100%;object-fit:cover}
+  .pgrid .pit .v{width:100%;height:100%;display:grid;place-items:center;font-size:26px}
+  .modal .mbtn{margin-top:14px;display:flex;gap:8px;justify-content:flex-end}
+  .modal .mbtn button{font-size:13px;font-weight:700;border-radius:10px;padding:8px 16px;cursor:pointer;border:1px solid var(--line);background:var(--card);font-family:inherit}
+  .modal .mbtn button.ok{background:var(--menu);color:#fff;border-color:var(--menu)}
+
+  @media(max-width:820px){.cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="logo"><img src="favicon.svg" alt=""></div>
+  <div class="tt"><h1>Publicador</h1><p>Compor, agendar e replicar posts no Instagram do Manual</p></div>
+  <a class="back" href="index.html">← HUB</a>
+</div>
+<div class="wrap">
+  <div class="banner">⏸️ <b>Modo seguro:</b> o envio automático ainda está <b>desligado</b>. Os posts ficam agendados e prontos, mas nada vai pro ar até você ligar o disparo (a gente confirma o 1º post junto).</div>
+
+  <div class="cols">
+    <!-- COMPOR -->
+    <div class="panel">
+      <h2>Novo post</h2>
+      <label class="f">Formato</label>
+      <div class="chips" id="fTipo">
+        <button class="chip on" data-t="foto">Foto</button>
+        <button class="chip" data-t="carrossel">Carrossel</button>
+        <button class="chip" data-t="reels">Reels</button>
+        <button class="chip" data-t="story">Story</button>
+      </div>
+
+      <label class="f">Mídia</label>
+      <label class="drop" id="drop"><b>Subir arquivo</b> — arraste ou clique (JPG/PNG/MP4)
+        <input type="file" id="file" accept="image/jpeg,image/png,image/webp,video/mp4,video/quicktime" multiple></label>
+      <div class="row-btns"><button type="button" id="fromLib">Escolher da biblioteca</button></div>
+      <div class="sel" id="sel"></div>
+
+      <label class="f">Legenda</label>
+      <textarea id="legenda" placeholder="Escreva a legenda… use *negrito* e emojis 💛"></textarea>
+      <div class="hint">Dica: comece com um gancho forte. "Comente PALAVRA" puxa ativação de ManyChat.</div>
+
+      <div class="two">
+        <div><label class="f">Agendar para</label><input type="datetime-local" id="quando"></div>
+        <div><label class="f">Replicar</label>
+          <select id="rep"><option value="">Não repetir</option><option value="semanal">Toda semana</option><option value="mensal">Todo mês</option></select>
+        </div>
+      </div>
+      <div class="hint" id="repHint">Sem data = salva como rascunho.</div>
+
+      <button class="submit" id="salvar">Agendar post</button>
+      <div class="msg" id="msg"></div>
+    </div>
+
+    <!-- FILA -->
+    <div class="panel">
+      <h2>Agendados &amp; rascunhos</h2>
+      <div class="fila" id="fila"><div class="empty">carregando…</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal"><div class="box">
+  <h3>Escolher da biblioteca</h3>
+  <div class="pgrid" id="pgrid">carregando…</div>
+  <div class="mbtn"><button onclick="fecharPicker()">Cancelar</button><button class="ok" onclick="usarPicker()">Usar selecionadas</button></div>
+</div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const MIDIA='https://n8n-n8n.xktssy.easypanel.host/webhook/motor-midia';
+const AGENDAR='https://n8n-n8n.xktssy.easypanel.host/webhook/motor-agendar';
+let tipo='foto', midias=[]; // {url,tipo,ordem}
+const isVid=t=>/video/.test(t||'');
+const $=s=>document.querySelector(s);
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800);}
+
+// tipo
+document.querySelectorAll('#fTipo .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('#fTipo .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');tipo=b.dataset.t;});
+
+// selecionadas
+function renderSel(){
+  $('#sel').innerHTML=midias.map((m,i)=>`<div class="t">${isVid(m.tipo)?`<div class="v">🎬</div>`:`<img src="${m.url}">`}<button class="x" onclick="tira(${i})">×</button></div>`).join('');
+}
+window.tira=i=>{midias.splice(i,1);renderSel();};
+function add(url,t){ if(tipo!=='carrossel') midias=[]; midias.push({url,tipo:t,ordem:midias.length}); renderSel(); }
+
+// upload
+async function subir(files){
+  for(const f of files){
+    toast('enviando '+f.name+'…');
+    const b64=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result.split(',')[1]);r.onerror=rej;r.readAsDataURL(f);});
+    const r=await fetch(MIDIA,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'upload',mime:f.type||'image/jpeg',nome_base:f.name.replace(/\.[^.]+$/,''),base64:b64})}).then(r=>r.json());
+    if(r.ok) add(r.url,r.tipo);
+  }
+  toast('mídia pronta ✓');
+}
+$('#file').onchange=e=>{if(e.target.files.length)subir(e.target.files);e.target.value='';};
+const drop=$('#drop');
+['dragover','dragenter'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.style.borderColor='var(--gold)';}));
+['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.style.borderColor='';}));
+drop.addEventListener('drop',e=>{if(e.dataTransfer.files.length)subir(e.dataTransfer.files);});
+
+// picker da biblioteca
+let pickSel=[];
+$('#fromLib').onclick=async()=>{
+  $('#modal').classList.add('show'); pickSel=[];
+  const r=await fetch(MIDIA,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'list'})}).then(r=>r.json());
+  $('#pgrid').innerHTML=(r.arquivos||[]).map(a=>`<div class="pit" data-url="${a.url}" data-tipo="${a.tipo}" onclick="this.classList.toggle('on')">${isVid(a.tipo)?`<div class="v">🎬</div>`:`<img src="${a.url}">`}</div>`).join('')||'Biblioteca vazia.';
+};
+window.fecharPicker=()=>$('#modal').classList.remove('show');
+window.usarPicker=()=>{ document.querySelectorAll('#pgrid .pit.on').forEach(el=>add(el.dataset.url,el.dataset.tipo)); fecharPicker(); };
+
+// salvar
+$('#salvar').onclick=async()=>{
+  if(!midias.length && tipo!=='story'){ $('#msg').textContent='Escolha ao menos uma mídia.'; return; }
+  const quando=$('#quando').value; const rep=$('#rep').value;
+  const payload={ acao:'agendar', tipo, legenda:$('#legenda').value,
+    midia:midias, agendado_para: quando?new Date(quando).toISOString():null,
+    recorrencia: rep?{tipo:rep}:null };
+  $('#salvar').disabled=true; $('#msg').textContent='salvando…';
+  try{
+    const r=await fetch(AGENDAR,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).then(r=>r.json());
+    if(!r.ok) throw 0;
+    $('#msg').textContent = quando? 'agendado ✓' : 'salvo como rascunho ✓';
+    midias=[]; renderSel(); $('#legenda').value=''; $('#quando').value=''; $('#rep').value='';
+    carregarFila();
+  }catch(e){ $('#msg').textContent='erro ao salvar'; }
+  $('#salvar').disabled=false;
+};
+
+// fila
+async function carregarFila(){
+  try{
+    const r=await fetch(AGENDAR,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'listar'})}).then(r=>r.json());
+    const arr=r.dados||[];
+    $('#fila').innerHTML=arr.map(p=>{
+      const m=(p.midia&&p.midia[0])||{};
+      const th=m.url?(isVid(m.tipo)?`<div class="v">🎬</div>`:`<img src="${m.url}">`):`<div class="v">📄</div>`;
+      return `<div class="post">
+        <div class="th">${th}</div>
+        <div class="info"><div class="cap">${(p.legenda||'—').replace(/</g,'&lt;')}</div>
+          <div class="when">${p.tipo} · ${p.agendado_fmt||'sem data (rascunho)'}</div></div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
+          <span class="st ${p.status}">${p.status}</span>
+          <button class="del" onclick="apagarPost('${p.id}')">🗑</button></div>
+      </div>`;
+    }).join('') || `<div class="empty">Nada agendado ainda.</div>`;
+  }catch(e){ $('#fila').innerHTML=`<div class="empty">erro ao carregar</div>`; }
+}
+window.apagarPost=async id=>{ if(!confirm('Apagar esse post?'))return; await fetch(AGENDAR,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'deletar',id})}); toast('apagado'); carregarFila(); };
+carregarFila();
+</script>
+</body>
+</html>
