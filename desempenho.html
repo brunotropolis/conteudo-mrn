@@ -26,7 +26,7 @@
   .meta{color:var(--mute);font-size:.85rem;margin:0 4px 18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   .meta b{color:var(--ink)}
 
-  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:18px}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:12px;margin-bottom:18px}
   .kpi{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:15px 16px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 18px rgba(35,51,47,.05)}
   .kpi .lab{font-size:11px;color:#52615A;text-transform:uppercase;letter-spacing:.07em;font-weight:700}
   .kpi .val{font-size:25px;font-weight:800;margin-top:6px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
@@ -49,6 +49,26 @@
 
   .insight{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:18px;padding:18px 20px;font-size:.92rem;line-height:1.62;color:var(--ink);box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 18px rgba(35,51,47,.05)}
   .insight b{color:var(--goldink);font-weight:800}
+
+  .pordia{margin-bottom:20px}
+  #pordia{max-height:328px;overflow-y:auto}
+  #pordia::-webkit-scrollbar{width:8px}
+  #pordia::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
+  .drow{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:10px;padding:9px 2px;border-bottom:1px solid var(--line);align-items:center}
+  .drow.dhead{position:sticky;top:0;background:var(--panel)}
+  .drow:last-child{border-bottom:none}
+  .drow.dhead{padding-top:0;border-bottom:2px solid var(--line)}
+  .drow.dhead span{font-size:10.5px;font-weight:800;color:#52615A;text-transform:uppercase;letter-spacing:.05em}
+  .drow .dday{font-weight:700;font-size:13.5px;text-transform:capitalize}
+  .drow .dval{font-variant-numeric:tabular-nums;font-weight:700;font-size:13.5px}
+  .drow .dseg{font-variant-numeric:tabular-nums;font-weight:800;font-size:13.5px;color:var(--goldink)}
+  .ta{text-align:right}
+
+  .listhead{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin:24px 4px 12px}
+  .listhead h2{font-size:.82rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+  .lhright{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .listhead .count{font-size:12.5px;color:var(--mute)}
+  .pseg{font-size:11px;font-weight:800;color:var(--goldink);background:var(--goldbg);padding:2px 8px;border-radius:999px;white-space:nowrap}
 
   .filters{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 14px;align-items:center}
   .filters .flabel{font-size:11px;font-weight:800;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
@@ -78,7 +98,7 @@
 
   footer{color:var(--dim);text-align:center;font-size:.78rem;padding:10px 20px 40px}
 
-  @media(max-width:820px){ .kpis{grid-template-columns:repeat(2,1fr)} .row2{grid-template-columns:1fr} }
+  @media(max-width:820px){ .row2{grid-template-columns:1fr} }
   @media(max-width:520px){
     .post{grid-template-columns:24px 50px 1fr;gap:10px}
     .thumb{width:50px;height:50px}
@@ -99,6 +119,16 @@
 <div class="wrap">
   <div class="meta" id="meta"></div>
 
+  <div class="filters">
+    <span class="flabel">Período</span>
+    <div class="grp" id="fPer">
+      <button class="chip" data-p="7">7 dias</button>
+      <button class="chip" data-p="14">14 dias</button>
+      <button class="chip" data-p="30">30 dias</button>
+      <button class="chip on" data-p="all">Tudo</button>
+    </div>
+  </div>
+
   <div class="kpis" id="kpis"></div>
 
   <div class="row2">
@@ -106,52 +136,100 @@
     <div class="insight" id="insight"></div>
   </div>
 
-  <div class="filters">
-    <span class="flabel">Formato</span>
-    <div class="grp" id="fTipo">
-      <button class="chip on" data-t="todos">Todos</button>
-      <button class="chip" data-t="reels">Reels</button>
-      <button class="chip" data-t="carrossel">Carrossel</button>
-      <button class="chip" data-t="foto">Foto</button>
-    </div>
-    <span class="flabel">Período</span>
-    <div class="grp" id="fPer">
-      <button class="chip" data-p="7">7 dias</button>
-      <button class="chip" data-p="30">30 dias</button>
-      <button class="chip on" data-p="all">Tudo</button>
-    </div>
-    <div class="spacer"></div>
-    <span class="count" id="count"></span>
-  </div>
+  <div class="panel pordia"><h2>Performance por dia</h2><div id="pordia"></div></div>
 
+  <div class="listhead">
+    <h2>Ranking de posts</h2>
+    <div class="lhright">
+      <div class="grp" id="fTipo">
+        <button class="chip on" data-t="todos">Todos</button>
+        <button class="chip" data-t="reels">Reels</button>
+        <button class="chip" data-t="carrossel">Carrossel</button>
+        <button class="chip" data-t="foto">Foto</button>
+      </div>
+      <span class="count" id="count"></span>
+    </div>
+  </div>
   <div class="list" id="list"></div>
 </div>
 <footer>Uso interno · Manual do Recém-Nascido · dados do Instagram (Graph API)</footer>
 
 <script>
+const DAYMS=864e5;
 const fmt = n => n==null ? '—'
   : n>=1e6 ? (n/1e6).toFixed(1).replace('.',',')+'M'
   : n>=1000 ? (n/1000).toFixed(n>=1e4?0:1).replace('.',',')+'k'
   : String(n);
 const ICON = {reels:'🎬', carrossel:'🖼️', foto:'📷'};
+const sum=(a,k)=>a.reduce((s,x)=>s+(x[k]||0),0);
 let DADOS=null, fTipo='todos', fPer='all';
 
-function render(){
-  let posts = DADOS.posts.slice();
-  if(fTipo!=='todos') posts = posts.filter(p=>p.tipo===fTipo);
-  if(fPer!=='all'){ const lim=Date.now()-fPer*864e5; posts = posts.filter(p=>new Date(p.publicado_em).getTime()>=lim); }
-  posts.sort((a,b)=>(b.engajamento||0)-(a.engajamento||0));
-  document.getElementById('count').textContent = posts.length+' posts';
-  document.getElementById('list').innerHTML = posts.map((p,i)=>{
-    const dia = new Date(p.publicado_em).toLocaleDateString('pt-BR',{day:'2-digit',month:'short'});
-    const thumb = p.thumb
+const limDate = () => new Date(Date.now()-fPer*DAYMS).toISOString().slice(0,10);
+function postsPeriodo(){ return fPer==='all' ? DADOS.posts.slice() : DADOS.posts.filter(p=>new Date(p.publicado_em).getTime()>=Date.now()-fPer*DAYMS); }
+function diasPeriodo(){ return fPer==='all' ? DADOS.por_dia : DADOS.por_dia.filter(x=>x.data>=limDate()); }
+function seguidoresPeriodo(){
+  const map=DADOS.seguidores_por_dia||{};
+  if(fPer==='all') return DADOS.resumo.seguidores_total||0;
+  return Object.entries(map).reduce((s,[d,v])=>d>=limDate()?s+(v||0):s,0);
+}
+
+function apply(){
+  const pp = postsPeriodo();
+  const eng_medio = pp.length ? Math.round(sum(pp,'engajamento')/pp.length) : 0;
+
+  document.getElementById('kpis').innerHTML = [
+    ['Publicações', pp.length, ''],
+    ['Alcance', fmt(sum(pp,'alcance')), ''],
+    ['Engaj. médio/post', fmt(eng_medio), ''],
+    ['Salvamentos', fmt(sum(pp,'salvamentos')), ''],
+    ['Compartilham.', fmt(sum(pp,'compartilhamentos')), ''],
+    ['Seguidores ganhos', '+'+fmt(seguidoresPeriodo()), 'hi'],
+  ].map(([l,v,c])=>`<div class="kpi ${c}"><div class="lab">${l}</div><div class="val">${v}</div></div>`).join('');
+
+  const porTipo={};
+  for(const t of ['reels','carrossel','foto']){ const g=pp.filter(p=>p.tipo===t); porTipo[t]={n:g.length, eng:g.length?Math.round(sum(g,'engajamento')/g.length):0}; }
+  const maxEng=Math.max(...Object.values(porTipo).map(t=>t.eng),1);
+  document.getElementById('tipos').innerHTML = Object.entries(porTipo).map(([t,v])=>`
+    <div class="tipo">
+      <span class="tag ${t}">${t}</span>
+      <div class="bar"><i style="width:${Math.round(v.eng/maxEng*100)}%;background:var(--${t==='reels'?'menu':t==='carrossel'?'mute':'goldink'})"></i></div>
+      <span class="num"><b>${fmt(v.eng)}</b> eng · ${v.n} posts</span>
+    </div>`).join('');
+
+  const best=[...pp].sort((a,b)=>(b.engajamento||0)-(a.engajamento||0))[0];
+  const bestDia=best?new Date(best.publicado_em).toLocaleDateString('pt-BR',{day:'2-digit',month:'short'}):'';
+  const reelsPct=pp.length?Math.round(porTipo.reels.n/pp.length*100):0;
+  document.getElementById('insight').innerHTML = best
+    ? `<b>Leitura rápida.</b> No período, o melhor post (${bestDia}) fez <b>${fmt(best.engajamento)}</b> de engajamento e
+       <b>${fmt(best.alcance)}</b> de alcance. A conta ganhou <b>+${fmt(seguidoresPeriodo())}</b> seguidores.
+       Reels são <b>${reelsPct}%</b> das publicações e puxam quase todo o alcance — o gancho <b>"comente PALAVRA"</b>
+       lidera compartilhamentos (ativação de ManyChat). Replicar o formato dos primeiros é a aposta mais segura.`
+    : `<b>Leitura rápida.</b> Sem publicações nesse período.`;
+
+  // performance por dia
+  const dias=diasPeriodo();
+  document.getElementById('pordia').innerHTML =
+    `<div class="drow dhead"><span>Dia</span><span class="ta">Alcance</span><span class="ta">Engaj.</span><span class="ta">Seguidores</span></div>`+
+    (dias.map(x=>{
+      const dt=new Date(x.data+'T12:00:00');
+      const dl=dt.toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit',month:'2-digit'}).replace('.','');
+      return `<div class="drow"><span class="dday">${dl}${x.posts>1?` · ${x.posts} posts`:''}</span><span class="dval ta">${fmt(x.alcance)}</span><span class="dval ta">${fmt(x.engajamento)}</span><span class="dseg ta">${x.seguidores>0?'+'+fmt(x.seguidores):'—'}</span></div>`;
+    }).join('') || `<div class="drow"><span class="dday" style="color:var(--mute)">Sem dias no período.</span></div>`);
+
+  // ranking (com filtro de formato)
+  let lst=pp.filter(p=>fTipo==='todos'||p.tipo===fTipo).sort((a,b)=>(b.engajamento||0)-(a.engajamento||0));
+  document.getElementById('count').textContent=lst.length+' posts';
+  document.getElementById('list').innerHTML = lst.map((p,i)=>{
+    const dia=new Date(p.publicado_em).toLocaleDateString('pt-BR',{day:'2-digit',month:'short'});
+    const seg=p.seguidores_dia>0?`<span class="pseg">+${fmt(p.seguidores_dia)} seg no dia</span>`:'';
+    const thumb=p.thumb
       ? `<img class="thumb" src="${p.thumb}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'thumb ph',textContent:'${ICON[p.tipo]}'}))">`
       : `<div class="thumb ph">${ICON[p.tipo]}</div>`;
     return `<a class="post ${i<3?'podium':''}" href="${p.permalink}" target="_blank" rel="noopener">
       <div class="rank ${i<3?'top':''}">${i+1}</div>
       ${thumb}
       <div class="pmain">
-        <div class="ptop"><span class="tag ${p.tipo}">${p.tipo}</span><span class="pdate">${dia}</span></div>
+        <div class="ptop"><span class="tag ${p.tipo}">${p.tipo}</span><span class="pdate">${dia}</span>${seg}</div>
         <div class="pcap">${(p.legenda||'').replace(/</g,'&lt;')||'—'}</div>
         <div class="metrics">
           <div class="met key"><b>${fmt(p.engajamento)}</b><span>engaj.</span></div>
@@ -165,39 +243,14 @@ function render(){
 }
 
 function boot(d){
-  DADOS=d; const r=d.resumo;
+  DADOS=d;
   document.getElementById('sub').textContent = `Manual do Recém-Nascido · @${d.conta.username}`;
   document.getElementById('meta').innerHTML =
-    `<span>últimas <b>${d.periodo_semanas} semanas</b> · <b>${r.n_posts}</b> publicações</span>`+
+    `<span>janela de <b>${d.periodo_semanas} semanas</b> · use o filtro de período abaixo</span>`+
     `<span><b>${fmt(d.conta.seguidores)}</b> seguidores · atualizado ${new Date(d.gerado_em).toLocaleDateString('pt-BR')}</span>`;
-
-  document.getElementById('kpis').innerHTML = [
-    ['Publicações', r.n_posts, ''],
-    ['Alcance total', fmt(r.alcance_total), 'hi'],
-    ['Engaj. médio/post', fmt(r.eng_medio), ''],
-    ['Salvamentos', fmt(r.salvamentos_total), ''],
-    ['Compartilham.', fmt(r.compart_total), ''],
-  ].map(([l,v,c])=>`<div class="kpi ${c}"><div class="lab">${l}</div><div class="val">${v}</div></div>`).join('');
-
-  const maxEng = Math.max(...Object.values(d.por_tipo).map(t=>t.eng_medio),1);
-  document.getElementById('tipos').innerHTML = Object.entries(d.por_tipo).map(([t,v])=>`
-    <div class="tipo">
-      <span class="tag ${t}">${t}</span>
-      <div class="bar"><i style="width:${Math.round(v.eng_medio/maxEng*100)}%;background:var(--${t==='reels'?'menu':t==='carrossel'?'mute':'goldink'})"></i></div>
-      <span class="num"><b>${fmt(v.eng_medio)}</b> eng · ${v.n} posts</span>
-    </div>`).join('');
-
-  const best=d.posts[0], reelsN=d.por_tipo.reels?.n||0, total=r.n_posts;
-  const bestDia = best ? new Date(best.publicado_em).toLocaleDateString('pt-BR',{day:'2-digit',month:'short'}) : '';
-  document.getElementById('insight').innerHTML =
-    `<b>Leitura rápida.</b> O melhor post (${bestDia}) fez <b>${fmt(best?.engajamento)}</b> de engajamento e
-     <b>${fmt(best?.alcance)}</b> de alcance. Reels são <b>${Math.round(reelsN/total*100)}%</b> das publicações e
-     puxam quase todo o alcance — o gancho <b>"comente PALAVRA"</b> lidera compartilhamentos (é ativação de ManyChat).
-     Replicar o formato dos 3 primeiros é a aposta mais segura.`;
-
-  document.querySelectorAll('#fTipo .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('#fTipo .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');fTipo=b.dataset.t;render();});
-  document.querySelectorAll('#fPer .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('#fPer .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');fPer=b.dataset.p;render();});
-  render();
+  document.querySelectorAll('#fTipo .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('#fTipo .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');fTipo=b.dataset.t;apply();});
+  document.querySelectorAll('#fPer .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('#fPer .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');fPer=b.dataset.p;apply();});
+  apply();
 }
 
 fetch('./dados.json?_='+Date.now()).then(r=>r.json()).then(boot)

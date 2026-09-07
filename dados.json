@@ -1,24 +1,25 @@
 {
-  "gerado_em": "2026-09-07T11:35:21.399Z",
+  "gerado_em": "2026-09-07T11:44:53.904Z",
   "conta": {
     "username": "manualdorecemnascido",
-    "seguidores": 648532,
+    "seguidores": 648535,
     "posts_total": 2235
   },
   "periodo_semanas": 8,
   "resumo": {
     "n_posts": 44,
-    "alcance_total": 3134385,
-    "eng_total": 187106,
-    "eng_medio": 4252,
-    "salvamentos_total": 23272,
-    "compart_total": 73194
+    "alcance_total": 3134600,
+    "eng_total": 187130,
+    "eng_medio": 4253,
+    "salvamentos_total": 23275,
+    "compart_total": 73194,
+    "seguidores_total": 8207
   },
   "por_tipo": {
     "reels": {
       "n": 44,
-      "alcance_medio": 71236,
-      "eng_medio": 4252
+      "alcance_medio": 71241,
+      "eng_medio": 4253
     },
     "carrossel": {
       "n": 0,
@@ -31,26 +32,444 @@
       "eng_medio": 0
     }
   },
+  "seguidores_por_dia": {
+    "2026-08-13": 306,
+    "2026-08-14": 311,
+    "2026-08-15": 351,
+    "2026-08-16": 363,
+    "2026-08-17": 506,
+    "2026-08-18": 318,
+    "2026-08-19": 279,
+    "2026-08-20": 262,
+    "2026-08-21": 251,
+    "2026-08-22": 305,
+    "2026-08-23": 303,
+    "2026-08-24": 272,
+    "2026-08-25": 242,
+    "2026-08-26": 214,
+    "2026-08-27": 291,
+    "2026-08-28": 238,
+    "2026-08-29": 418,
+    "2026-08-30": 389,
+    "2026-08-31": 298,
+    "2026-09-01": 709,
+    "2026-09-02": 531,
+    "2026-09-03": 414,
+    "2026-09-04": 309,
+    "2026-09-05": 327,
+    "2026-09-06": 0,
+    "2026-09-07": 0
+  },
+  "por_dia": [
+    {
+      "data": "2026-09-07",
+      "posts": 1,
+      "alcance": 1560,
+      "engajamento": 104,
+      "salvamentos": 12,
+      "compartilhamentos": 0,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-09-05",
+      "posts": 1,
+      "alcance": 33948,
+      "engajamento": 1516,
+      "salvamentos": 362,
+      "compartilhamentos": 364,
+      "seguidores": 327
+    },
+    {
+      "data": "2026-09-04",
+      "posts": 1,
+      "alcance": 16936,
+      "engajamento": 734,
+      "salvamentos": 116,
+      "compartilhamentos": 155,
+      "seguidores": 309
+    },
+    {
+      "data": "2026-09-03",
+      "posts": 1,
+      "alcance": 43599,
+      "engajamento": 755,
+      "salvamentos": 108,
+      "compartilhamentos": 171,
+      "seguidores": 414
+    },
+    {
+      "data": "2026-09-02",
+      "posts": 1,
+      "alcance": 4588,
+      "engajamento": 79,
+      "salvamentos": 7,
+      "compartilhamentos": 6,
+      "seguidores": 531
+    },
+    {
+      "data": "2026-09-01",
+      "posts": 1,
+      "alcance": 303305,
+      "engajamento": 27674,
+      "salvamentos": 2342,
+      "compartilhamentos": 14307,
+      "seguidores": 709
+    },
+    {
+      "data": "2026-08-31",
+      "posts": 1,
+      "alcance": 10319,
+      "engajamento": 1164,
+      "salvamentos": 233,
+      "compartilhamentos": 363,
+      "seguidores": 298
+    },
+    {
+      "data": "2026-08-29",
+      "posts": 1,
+      "alcance": 45348,
+      "engajamento": 893,
+      "salvamentos": 126,
+      "compartilhamentos": 283,
+      "seguidores": 418
+    },
+    {
+      "data": "2026-08-28",
+      "posts": 1,
+      "alcance": 4645,
+      "engajamento": 112,
+      "salvamentos": 7,
+      "compartilhamentos": 6,
+      "seguidores": 238
+    },
+    {
+      "data": "2026-08-27",
+      "posts": 1,
+      "alcance": 14096,
+      "engajamento": 367,
+      "salvamentos": 47,
+      "compartilhamentos": 42,
+      "seguidores": 291
+    },
+    {
+      "data": "2026-08-26",
+      "posts": 1,
+      "alcance": 24615,
+      "engajamento": 1452,
+      "salvamentos": 196,
+      "compartilhamentos": 426,
+      "seguidores": 214
+    },
+    {
+      "data": "2026-08-25",
+      "posts": 1,
+      "alcance": 25495,
+      "engajamento": 1087,
+      "salvamentos": 200,
+      "compartilhamentos": 313,
+      "seguidores": 242
+    },
+    {
+      "data": "2026-08-24",
+      "posts": 1,
+      "alcance": 18467,
+      "engajamento": 948,
+      "salvamentos": 100,
+      "compartilhamentos": 173,
+      "seguidores": 272
+    },
+    {
+      "data": "2026-08-22",
+      "posts": 1,
+      "alcance": 50978,
+      "engajamento": 4591,
+      "salvamentos": 801,
+      "compartilhamentos": 1328,
+      "seguidores": 305
+    },
+    {
+      "data": "2026-08-21",
+      "posts": 1,
+      "alcance": 8909,
+      "engajamento": 275,
+      "salvamentos": 26,
+      "compartilhamentos": 34,
+      "seguidores": 251
+    },
+    {
+      "data": "2026-08-20",
+      "posts": 1,
+      "alcance": 44398,
+      "engajamento": 1884,
+      "salvamentos": 279,
+      "compartilhamentos": 728,
+      "seguidores": 262
+    },
+    {
+      "data": "2026-08-19",
+      "posts": 1,
+      "alcance": 26367,
+      "engajamento": 1873,
+      "salvamentos": 185,
+      "compartilhamentos": 211,
+      "seguidores": 279
+    },
+    {
+      "data": "2026-08-17",
+      "posts": 1,
+      "alcance": 260668,
+      "engajamento": 14422,
+      "salvamentos": 2049,
+      "compartilhamentos": 5943,
+      "seguidores": 506
+    },
+    {
+      "data": "2026-08-15",
+      "posts": 1,
+      "alcance": 17348,
+      "engajamento": 832,
+      "salvamentos": 109,
+      "compartilhamentos": 310,
+      "seguidores": 351
+    },
+    {
+      "data": "2026-08-14",
+      "posts": 1,
+      "alcance": 7290,
+      "engajamento": 204,
+      "salvamentos": 12,
+      "compartilhamentos": 35,
+      "seguidores": 311
+    },
+    {
+      "data": "2026-08-12",
+      "posts": 1,
+      "alcance": 14921,
+      "engajamento": 256,
+      "salvamentos": 31,
+      "compartilhamentos": 27,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-08-11",
+      "posts": 1,
+      "alcance": 297044,
+      "engajamento": 13325,
+      "salvamentos": 1551,
+      "compartilhamentos": 6504,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-08-10",
+      "posts": 1,
+      "alcance": 35633,
+      "engajamento": 1955,
+      "salvamentos": 128,
+      "compartilhamentos": 1013,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-08-08",
+      "posts": 1,
+      "alcance": 11726,
+      "engajamento": 267,
+      "salvamentos": 29,
+      "compartilhamentos": 16,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-08-07",
+      "posts": 1,
+      "alcance": 40156,
+      "engajamento": 3748,
+      "salvamentos": 633,
+      "compartilhamentos": 1358,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-08-06",
+      "posts": 1,
+      "alcance": 33106,
+      "engajamento": 1610,
+      "salvamentos": 253,
+      "compartilhamentos": 345,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-08-05",
+      "posts": 1,
+      "alcance": 30075,
+      "engajamento": 1144,
+      "salvamentos": 168,
+      "compartilhamentos": 219,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-08-04",
+      "posts": 2,
+      "alcance": 448565,
+      "engajamento": 33173,
+      "salvamentos": 2910,
+      "compartilhamentos": 14699,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-08-03",
+      "posts": 1,
+      "alcance": 16093,
+      "engajamento": 482,
+      "salvamentos": 48,
+      "compartilhamentos": 98,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-08-01",
+      "posts": 1,
+      "alcance": 12379,
+      "engajamento": 245,
+      "salvamentos": 48,
+      "compartilhamentos": 41,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-07-31",
+      "posts": 1,
+      "alcance": 23080,
+      "engajamento": 1174,
+      "salvamentos": 122,
+      "compartilhamentos": 124,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-07-30",
+      "posts": 1,
+      "alcance": 33469,
+      "engajamento": 417,
+      "salvamentos": 83,
+      "compartilhamentos": 48,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-07-29",
+      "posts": 1,
+      "alcance": 28292,
+      "engajamento": 1575,
+      "salvamentos": 241,
+      "compartilhamentos": 388,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-07-28",
+      "posts": 1,
+      "alcance": 43933,
+      "engajamento": 2521,
+      "salvamentos": 374,
+      "compartilhamentos": 760,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-07-27",
+      "posts": 1,
+      "alcance": 67051,
+      "engajamento": 5554,
+      "salvamentos": 866,
+      "compartilhamentos": 2210,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-07-24",
+      "posts": 1,
+      "alcance": 26444,
+      "engajamento": 1180,
+      "salvamentos": 110,
+      "compartilhamentos": 239,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-07-23",
+      "posts": 1,
+      "alcance": 113040,
+      "engajamento": 1385,
+      "salvamentos": 288,
+      "compartilhamentos": 247,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-07-22",
+      "posts": 1,
+      "alcance": 59423,
+      "engajamento": 1239,
+      "salvamentos": 163,
+      "compartilhamentos": 398,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-07-21",
+      "posts": 1,
+      "alcance": 355439,
+      "engajamento": 20200,
+      "salvamentos": 3275,
+      "compartilhamentos": 5864,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-07-20",
+      "posts": 1,
+      "alcance": 26343,
+      "engajamento": 1397,
+      "salvamentos": 160,
+      "compartilhamentos": 487,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-07-17",
+      "posts": 1,
+      "alcance": 49619,
+      "engajamento": 2270,
+      "salvamentos": 280,
+      "compartilhamentos": 490,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-07-16",
+      "posts": 1,
+      "alcance": 77604,
+      "engajamento": 10074,
+      "salvamentos": 1693,
+      "compartilhamentos": 3941,
+      "seguidores": 0
+    },
+    {
+      "data": "2026-07-14",
+      "posts": 1,
+      "alcance": 328286,
+      "engajamento": 20973,
+      "salvamentos": 2504,
+      "compartilhamentos": 8480,
+      "seguidores": 0
+    }
+  ],
   "posts": [
     {
       "id": "18389112673163535",
       "permalink": "https://www.instagram.com/reel/Dcvb4Dqj34I/",
-      "thumb": "https://scontent-gru2-2.cdninstagram.com/v/t51.82787-15/791586580_18470976094112114_8438522231420444032_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=V23hy8tzR_EQ7kNvwH0n9_d&_nc_oc=Adr6BJEI53sWbYEjToU876S1fhiWdlJ9ouC7kFm5ki3k7a-6VD5g_XxA9pD9LBH-92w&_nc_zt=23&_nc_ht=scontent-gru2-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQK7bjta29J71vdO2cZDcFrGZl5RDVCruLx_cm1YTueQ-yftquxGSQkTb0GYzkLTFbsUAO-a69_0&oh=00_AQJ3qRAGfZkckL8l9q9U9OdJx_-ftscePavng90aXd9KkQ&oe=6AA47136",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/791586580_18470976094112114_8438522231420444032_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFfJSWbprMmyQPr5Xi2Wf-mlamqZCh2KPOVqapkKHYo81bVEpMTHOtUaZTNm5RosvkMWiIXytC9UdVmU4E05H-p&_nc_ohc=V23hy8tzR_EQ7kNvwFs1q6z&_nc_oc=AdqEApsinGqfPBapK8bGkjvOIX-cWv8Q3xaTcuwn_aM5os7KEvuns1nQA0zTq_De2kI&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQJT6Usxhum0QE1QaN_WCollwRwjBYH3iz6u5kP23kIFQfTSH2EHH8IS0VVCLrIaTH0FeG2Wb6Zm&oh=00_AQJkMy4_c8StX2YV3lxcDF-Ey8_kyh9GXo-LVBAABVKnAw&oe=6AA47136",
       "tipo": "reels",
       "publicado_em": "2026-09-01T11:00:25+0000",
       "legenda": "Comente: CONSULTA\npara receber mais informações 🥰\n\nVocê sabia que seu bebê não pode ser amamentado de barriguinha para cima? Dessa forma, e",
-      "alcance": 303158,
-      "curtidas": 10614,
+      "alcance": 303305,
+      "curtidas": 10618,
       "comentarios": 138,
-      "salvamentos": 2341,
+      "salvamentos": 2342,
       "compartilhamentos": 14307,
-      "visualizacoes": 345194,
-      "engajamento": 27669
+      "visualizacoes": 345355,
+      "engajamento": 27674,
+      "seguidores_dia": 709
     },
     {
       "id": "18066013415741051",
       "permalink": "https://www.instagram.com/reel/DbnVslSDRlJ/",
-      "thumb": "https://scontent-gru2-2.cdninstagram.com/v/t51.82787-15/763463649_18465576244112114_6224720025936577180_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=QcStVRCCYOcQ7kNvwFcKr66&_nc_oc=AdpoXxXt4EImyv5Djvu5qggpmu9wnCuR1ZxUx7QL-3d5YBpUm7E18Sfz-StpGPUTxbw&_nc_zt=23&_nc_ht=scontent-gru2-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQKtIIzHd2dfNcpYelqu4Gk0Y51o3u2hEY26AZRCq84rPtNAscIV6DmrLCUY4VphslkSE8wYhP5w&oh=00_AQIdkubnA7aCgex8I9vz6evvHQQ3a5LqkJTVtlC-sbvLTg&oe=6AA46F13",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/763463649_18465576244112114_6224720025936577180_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeEhrAFuzz3MIKOc4s3qLgWrsrx3Ghylv62yvHcaHKW_rZKj0YXFIfIazJ2lI4b5XFEBGvXbiACXl_wYf1CTeR1X&_nc_ohc=QcStVRCCYOcQ7kNvwHDVuw-&_nc_oc=AdrP3yro0YRaFBP1KRq50tf7NOyVNKQRAyW8Ge3W2B9SxX7SxE4_85Fmw4o6wRJEt84&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQKf7s5Rl9crFurpPPIbcJdHd5TYkpsAa3yxpFXnD-PDIlvd8SfWxRDE6y2iDZhFx2j9fRCl79ji&oh=00_AQJymFnJxLg4YGW8Iyy0q2On2Fqwz6QjOkuLY6QySDos3Q&oe=6AA46F13",
       "tipo": "reels",
       "publicado_em": "2026-08-04T11:00:34+0000",
       "legenda": "Comente aqui SONO25 e receba gratuitamente o e-book: Meu bebê não dorme no berço ❤",
@@ -59,13 +478,14 @@
       "comentarios": 381,
       "salvamentos": 2015,
       "compartilhamentos": 11425,
-      "visualizacoes": 394943,
-      "engajamento": 26348
+      "visualizacoes": 394950,
+      "engajamento": 26348,
+      "seguidores_dia": null
     },
     {
       "id": "18062115407723149",
       "permalink": "https://www.instagram.com/reel/DaxQnjFgf2t/",
-      "thumb": "https://scontent-gru2-1.cdninstagram.com/v/t51.82787-15/742800667_18461761591112114_5436262727447684962_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=uVacuG0g3CQQ7kNvwGF5Y6q&_nc_oc=Adr-P4uMFPqSvs2t7h5ujp1HvukS0vY4lQp90MqyrFlvfVf9kkIwmcQW85N-jyhOAck&_nc_zt=23&_nc_ht=scontent-gru2-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQLk1by-UyX0DBkkzjws3qH5FGP-r1qEVaCR9-cFwB7_aZlGtInGgs9uGUaCky46ievEbgIUc3Ta&oh=00_AQIgEoKbF_zPXny5OinSYPGpL1mHAnxKRuO-g5VSmvr84A&oe=6AA45C5B",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/742800667_18461761591112114_5436262727447684962_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeEQ8km2f_J4Glo2ASmSvhoov72b_yyxm6S_vZv_LLGbpFjEbxA4niRGFZeaHh9Sk047one7zsqy-ZiUOxej-EF2&_nc_ohc=uVacuG0g3CQQ7kNvwH41VwS&_nc_oc=AdprrnmNS5t28prAud-SLz73oRgr2riqShGPWETqgI2k-p71rEhroK_17SVxPb68qC8&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQIFgO5Kj7oPEnknq20vcs1uBUHo7nNgPrZngiNym2l8iHWxE_v21hqIJbm6vp25xtuXRut4YZuX&oh=00_AQJnBdK-vUYla5L20PtHwsMvWU2_m0ItfhYA6wDDLDsWZQ&oe=6AA45C5B",
       "tipo": "reels",
       "publicado_em": "2026-07-14T11:00:43+0000",
       "legenda": "Posição para o bebê arrotar 😍",
@@ -74,28 +494,30 @@
       "comentarios": 47,
       "salvamentos": 2504,
       "compartilhamentos": 8480,
-      "visualizacoes": 416507,
-      "engajamento": 20973
+      "visualizacoes": 416521,
+      "engajamento": 20973,
+      "seguidores_dia": null
     },
     {
       "id": "17910891858432567",
       "permalink": "https://www.instagram.com/reel/DbDSSm9D55z/",
-      "thumb": "https://scontent-gru2-1.cdninstagram.com/v/t51.71878-15/752822686_2119387638640668_5182970708252073483_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=sseBy25H0Z4Q7kNvwFm25Vt&_nc_oc=AdqpVZVp_89p2y11tZiv0APYlnIQmN_oa81SU7vcmE0caAtDaiQ6hHyPSlPb8sbaiiw&_nc_zt=23&_nc_ht=scontent-gru2-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQKB5LhR2aUYI7sljle_9dvq-gJJbZn2hNjm3mCtC36WvOkJamyRr3NRsk0g_Q7VbYKtHd-ZxG1z&oh=00_AQLRwsCQPOM0p-2JeqR_--z-dxMoyE1mJFysOGaOCjmWGw&oe=6AA48A05",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.71878-15/752822686_2119387638640668_5182970708252073483_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeF7EvZYacwqkS2nIa8tq_a-QpsDZvdvFB5CmwNm928UHoiVOH1asPE7TJmsEXfo7fk-StRJk66G2T29K3t43ASi&_nc_ohc=sseBy25H0Z4Q7kNvwFAog82&_nc_oc=AdqMB9DnWaaHj3KbAYg8Ekf6MLarN3xuXzJOlEnFTOMfKpCFDEX6xmd7UzoKdH1l7fk&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQKALrzGIuJvENickUB4OOimc1G9e4BobqLAVe01jk5-JoZWJek2KaLKR4_JxuNgGgHQj0RZKIk1&oh=00_AQJ16zwnbmie0itY3iSVz6hA208sFq5ntq3g1a_sNdyGaQ&oe=6AA48A05",
       "tipo": "reels",
       "publicado_em": "2026-07-21T11:00:55+0000",
       "legenda": "Como colocar o bebê na banheira na hora do banho ❤️",
       "alcance": 355439,
-      "curtidas": 10851,
-      "comentarios": 80,
+      "curtidas": 10853,
+      "comentarios": 79,
       "salvamentos": 3275,
       "compartilhamentos": 5864,
-      "visualizacoes": 447785,
-      "engajamento": 20199
+      "visualizacoes": 447799,
+      "engajamento": 20200,
+      "seguidores_dia": null
     },
     {
       "id": "18388423360165870",
       "permalink": "https://www.instagram.com/reel/DcIz4brApFN/",
-      "thumb": "https://scontent-gru1-2.cdninstagram.com/v/t51.82787-15/778835763_18468062311112114_1574392055906590401_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=5lif9tNax4AQ7kNvwFjJUHx&_nc_oc=AdoHwyM973WBVHJoUNc1NhqQPW8_Wg6q1g0DN6BcqcEkNWwOztm03685bqeEmjFBz58&_nc_zt=23&_nc_ht=scontent-gru1-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQL9VYoJZbABpIJtoAMmf5aUhsMl86LKew9FU47DFhCFB_ShyKjUwWE8M2ZyfpYRVz2tDDI7gZh9&oh=00_AQJfvvhx3RzYJCT2AvYjnEHEZePMl8UhQZAUoXIJPinouA&oe=6AA47AE3",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/778835763_18468062311112114_1574392055906590401_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFiji-sYQnut7sRAfBIwSv3wqrbWblZTCzCqttZuVlMLKvDjVGaXzkcLq3vmAOJWNjeA4CUNu3FJm5_bcmjO2AK&_nc_ohc=5lif9tNax4AQ7kNvwGc0G9n&_nc_oc=Ado4wzLjMR0LBSf-ju1vFohsOLeTIsAr1WPTuEsHx8_Muf-l0UAnWlSW1mhboHLzzkc&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQLEbH7SY_sSj5gSuaBqIoFy118vtLlQj6OEI6scC9yfGX2zSy_3n-4cJ8FR4ZPJzvcyr4Lh2wvy&oh=00_AQIJN6-Cdq4XPYgBvTWkuI4nn8h4imgYRMKGfGTyScslkg&oe=6AA47AE3",
       "tipo": "reels",
       "publicado_em": "2026-08-17T11:00:25+0000",
       "legenda": "👉Comente AULA para ter acesso à ala gratuita sobre autonomia de sono 😍",
@@ -104,13 +526,14 @@
       "comentarios": 572,
       "salvamentos": 2049,
       "compartilhamentos": 5943,
-      "visualizacoes": 320374,
-      "engajamento": 14422
+      "visualizacoes": 320384,
+      "engajamento": 14422,
+      "seguidores_dia": 506
     },
     {
       "id": "18140537056566609",
       "permalink": "https://www.instagram.com/reel/Db5W7kTAXLZ/",
-      "thumb": "https://scontent-gru2-1.cdninstagram.com/v/t51.71878-15/772964707_3474200479407067_8567610852230077208_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=sOmUsJCWgloQ7kNvwHUfcxK&_nc_oc=AdoNl9j8f8donX94hTnoWI9MvqN38D0tHepjXWGUexD4ZX6YsJ89VX0lkeqKWBLLCP8&_nc_zt=23&_nc_ht=scontent-gru2-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQKEb-Vob67_T2n6Vl_Z3_8W54FAkLYP5uveAyIQPIjYgpzKMnEHLt-8cjqThiZchKv1eKkDwGjP&oh=00_AQKADvX4wjPr8aQDx8LfJ9fPNgWaJR-MVrpVdFa4BrV5cQ&oe=6AA47855",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.71878-15/772964707_3474200479407067_8567610852230077208_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeG1N3__MHncQ6qfx2698UrNgnc2KKB_GzOCdzYooH8bM-JON2zh1i-Ojg8hodPRnrUf6Rm132JEaH8Ta-S1Jjk_&_nc_ohc=sOmUsJCWgloQ7kNvwF_9Q0M&_nc_oc=Adp9ZDRNUfEsSe7LHuTyJWbC7OmNVvMdKesG_z-8WppOcMYMSo1f8XNq4q7a8nDlfB8&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQLotT_iUUgBeayty59LQhABZP4TfXzr9LZS25kAUJF82eeFlRLMpmPYs4XWiVq0Yaro04yZsgBA&oh=00_AQLxETFK5iD8q42GLU3JsAA2k5rG7v1AfYE1hUnv5htAFw&oe=6AA47855",
       "tipo": "reels",
       "publicado_em": "2026-08-11T11:00:25+0000",
       "legenda": "Se o bebê estiver dormindo sem supervisão, usar cobertor se torna arriscado ⚠️",
@@ -119,13 +542,14 @@
       "comentarios": 45,
       "salvamentos": 1551,
       "compartilhamentos": 6504,
-      "visualizacoes": 342789,
-      "engajamento": 13325
+      "visualizacoes": 342838,
+      "engajamento": 13325,
+      "seguidores_dia": null
     },
     {
       "id": "17933328369341939",
       "permalink": "https://www.instagram.com/reel/Da2aWfQCVTi/",
-      "thumb": "https://scontent-gru2-1.cdninstagram.com/v/t51.82787-15/748969731_18462115924112114_4208380282847825617_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=N2Yw865BGg0Q7kNvwEbdaR8&_nc_oc=AdqqVYEETa5LYEZvsSpKAj2rA6lwMzxss8zTQ0reFasWzSMJUrS-iWan2As-aSSGpjc&_nc_zt=23&_nc_ht=scontent-gru2-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQIhJPQj8lXTULeD02bfoQaJ7oMih1YA4ENSLRHx7II4sXcGWtIA2w9MGCMgABr68swnm3-e66Q0&oh=00_AQJ4tYHqaTQGaREXi4yt3Hc56GdrQvPr_ruq2VClyp8R8w&oe=6AA460B8",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/748969731_18462115924112114_4208380282847825617_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFFLE3J-sx2R0bf9RudFL6mJnjW2HXiizQmeNbYdeKLNIvm3hJLC4LGVPuABCjAzTx7y35uZNkHFMTykwYVmf09&_nc_ohc=N2Yw865BGg0Q7kNvwEuBl0m&_nc_oc=AdrViaO-FRIfogers1564dpI5nKuvlgl-cSYDnF4Pvy9J4WQ2o0apbiYyasfiFRq9U0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQJgRK8N4TQXmtfuE9sjsc9Xg9IljrlTI7BqCbiqwz91nss2H1nB0jX7KaeG2K-QbQPLu-tFJdGo&oh=00_AQLTpuUaGvJYTuq4vbjilOxKrf7yn79hzVpQIzFxfm8kJA&oe=6AA460B8",
       "tipo": "reels",
       "publicado_em": "2026-07-16T11:00:26+0000",
       "legenda": "Compartilha essa informação importante com uma mamãe 😍❤️",
@@ -135,12 +559,13 @@
       "salvamentos": 1693,
       "compartilhamentos": 3941,
       "visualizacoes": 104460,
-      "engajamento": 10074
+      "engajamento": 10074,
+      "seguidores_dia": null
     },
     {
       "id": "17933496324358735",
       "permalink": "https://www.instagram.com/reel/DbnVYU9iXlL/",
-      "thumb": "https://scontent-gru2-2.cdninstagram.com/v/t51.71878-15/762864492_3710910725729827_4569101085645540691_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=W7IjlcljMuAQ7kNvwE6h6d3&_nc_oc=AdqdZ_fBxY5sKZBYVEl5aIGakKE-5Z7a7C8phtjh2IsL-uAJ3hYdHTyUd9THcZ395qQ&_nc_zt=23&_nc_ht=scontent-gru2-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQInNmvPqZl2OoCoHIoYrBkqSsamtR0iQgR1Vtn9fy2UzjzQkSqOasHryTLFyUrH4SEF8Ey5rXAo&oh=00_AQL1v2Z8xy2Pn-GbCwDIHqiPx9Ge-s9WthZAZriticBVgg&oe=6AA47B8D",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.71878-15/762864492_3710910725729827_4569101085645540691_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFjtcPHRSZml2LOvGOcn459nCA0c3fZI9icIDRzd9kj2Jrgpl-YMjNx5TDttMywnDvs_QWnxBb1CJUcI7yYwUd3&_nc_ohc=W7IjlcljMuAQ7kNvwEu44u4&_nc_oc=AdplW4gRJJ1IGN6q1n4DutgsmC5k_YWG1mofCIyGUoeR9m7IcxtnCHG2WYi4oT0iFcg&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQJ2eEqCOWBrLKA42laILfLoicMhfjrGORCVbsYHMVnuo7KTZJ3lrMTWP-Msq628ZDfzC0ePNTNJ&oh=00_AQK6V1aQkzltl32254wHhtQijzv7JWy_fo5G-ZtgJcVTGQ&oe=6AA47B8D",
       "tipo": "reels",
       "publicado_em": "2026-08-04T11:00:26+0000",
       "legenda": "Como evitar a braquicefalia em bebês ⚠️",
@@ -150,12 +575,13 @@
       "salvamentos": 895,
       "compartilhamentos": 3274,
       "visualizacoes": 125871,
-      "engajamento": 6825
+      "engajamento": 6825,
+      "seguidores_dia": null
     },
     {
       "id": "18047631239587913",
       "permalink": "https://www.instagram.com/reel/DbSvAl7jFlH/",
-      "thumb": "https://scontent-gru1-2.cdninstagram.com/v/t51.82787-15/758426898_18464128303112114_8563273275319606751_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=HZQ3thtI2CsQ7kNvwFuWjA3&_nc_oc=Adr0XT06AvXyvsxyam-6SgYFUCJxopzI7aPbZsn8-dSpIOqyxqz2BPSwcX4pNqe_tr8&_nc_zt=23&_nc_ht=scontent-gru1-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQKYCgOGH3IjSYnWy2T_eR9pqqEcovHhGgv1iX-Nraln-Hgkfq87CFb4J4mZmdOBpwvjBZ3r6A9L&oh=00_AQJ4xcWM10eU8Z2fVhKbiq2sSE8FEZa5I78LkiYN2ATnKQ&oe=6AA4582F",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/758426898_18464128303112114_8563273275319606751_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeHCpcXgDFOGautwm7XobZF3L2UGmd6p-MAvZQaZ3qn4wLCt4aMXG4AuLebNkduuH7pKZzsCbZLM7TAR52Waigl6&_nc_ohc=HZQ3thtI2CsQ7kNvwGerEkZ&_nc_oc=AdpF5lKwj_zxRaFS6WRWi7_RdgaxBDMglBFxARuqE1s1QcORexSZ735R0iOLP03D3xw&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQI9JiyQwSm5nUf64KcFNONl8L2ft99BMYA8-9MYkrTGQ5EaBINbpP_zaKiESmel8H84PIlEcXVM&oh=00_AQJR0HgjvHC4JWklBKnt_5mdxGAw8A8DA8aqBALLo2I2PQ&oe=6AA4906F",
       "tipo": "reels",
       "publicado_em": "2026-07-27T11:00:25+0000",
       "legenda": "👉Comente AULA para ter acesso à aula gratuita sobre autonomia de sono 😍",
@@ -165,12 +591,13 @@
       "salvamentos": 866,
       "compartilhamentos": 2210,
       "visualizacoes": 82897,
-      "engajamento": 5554
+      "engajamento": 5554,
+      "seguidores_dia": null
     },
     {
       "id": "18050059586646754",
       "permalink": "https://www.instagram.com/reel/DcWHlvnlOdi/",
-      "thumb": "https://scontent-gru2-1.cdninstagram.com/v/t51.71878-15/779167651_1768520747480390_3121619968240091084_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=qbzHU0SxVu8Q7kNvwHsjaX4&_nc_oc=AdrnifQUndhenYuvMo0RWBd2XEOksDezzO3lDqMelUf4RnPsEH1-6V3QSst-9-2yxDo&_nc_zt=23&_nc_ht=scontent-gru2-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQIW56kXN0PaGPR5eYs1zsAHnlfYticXucNXfNinxBIfv2A3wR9jHHyr7q1V8VaR-WlGMeZmEBOZ&oh=00_AQJ8Bo5o8EIQnm_83ZDg57RSIDOtWJmeGO7kIPx8gMPY0A&oe=6AA48D38",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.71878-15/779167651_1768520747480390_3121619968240091084_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeEUbsWd3215IGivM-9AmCjNLdUVUYji99ot1RVRiOL32kSNxcxXrbUi8-ckBLool7enMScfmY6snIm_Kx3AiIsq&_nc_ohc=qbzHU0SxVu8Q7kNvwEONtjY&_nc_oc=AdqSFdWK32twsFGvGU3c-8xR96p1_fT947xD8IG0y3nRs3zzv1MxFFnBscX2aFOwk60&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQLT-dkthhaBMPcWfWCvV9OJbWBglQ4l9JD9wco94BquHTZjb8ity70CYcWVdkwlkOskfzRJK3tv&oh=00_AQIT7mH7G2AV7Wv_NmYMIh_hH5KPcrTIyGwJf8_GqeVmyA&oe=6AA48D38",
       "tipo": "reels",
       "publicado_em": "2026-08-22T14:24:20+0000",
       "legenda": "Comente #AMA\nPara receber o link do ebook gratuito: Por que meu bebê parece não saciar no seio?\n#recemnascido #newborn #gestacao #maedeprime",
@@ -179,13 +606,14 @@
       "comentarios": 528,
       "salvamentos": 801,
       "compartilhamentos": 1328,
-      "visualizacoes": 66875,
-      "engajamento": 4591
+      "visualizacoes": 66876,
+      "engajamento": 4591,
+      "seguidores_dia": 305
     },
     {
       "id": "18095776187618083",
       "permalink": "https://www.instagram.com/reel/DbvD4NRgVbe/",
-      "thumb": "https://scontent-gru1-1.cdninstagram.com/v/t51.82787-15/767031626_18466112596112114_5808672308735188955_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=NktUzdKBOxIQ7kNvwFqhgzc&_nc_oc=Adp8Cgk98JlU06RoiFSiLmI_LmR4D_dMJmpzRXW_zTLCN_3JTNL8oLRneH0T_bFE0iI&_nc_zt=23&_nc_ht=scontent-gru1-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQJ95Ce9yulnNkxT3pNY8lxRp611IGqJhaMQ5V2imO2-k8568xMJBFurVWJspT6CiKJ8XWVmHoAl&oh=00_AQLCkcwlYfM0_FoZV0qhpmcziO0lfEo0AWOfQctvgXoOPA&oe=6AA48F97",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/767031626_18466112596112114_5808672308735188955_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeHFaphcnT-HuUOYmpaOcY3hSiYaoVNNRhBKJhqhU01GEFcZYftdzSCp8bdLfghm5VaGDPBKWmgeCLQjNXLW8cuI&_nc_ohc=NktUzdKBOxIQ7kNvwH7BOrA&_nc_oc=AdrxstgFRBe_lTXY_kM3Ii9GB0DmKh18wKEiMHHuOu9R5IaKItGBCGaJgxvZ8cKcXYs&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQKdFdn7jCBeRzLaUOfA8-ZPPAf4ffpcH7dYPHiSX2nBOSDpjESl4xcVSEVJ7k9mtkks881Bos0f&oh=00_AQKqf88p3xl2NQ4k_G5oV85BO-SIvlxNouOHh43BbfY9zQ&oe=6AA48F97",
       "tipo": "reels",
       "publicado_em": "2026-08-07T11:00:27+0000",
       "legenda": "👉Comente AULA para ter acesso à ala gratuita sobre autonomia de sono 😍",
@@ -195,12 +623,13 @@
       "salvamentos": 633,
       "compartilhamentos": 1358,
       "visualizacoes": 49251,
-      "engajamento": 3748
+      "engajamento": 3748,
+      "seguidores_dia": null
     },
     {
       "id": "18058448720598569",
       "permalink": "https://www.instagram.com/reel/DbVTl7IjvIB/",
-      "thumb": "https://scontent-gru1-2.cdninstagram.com/v/t51.82787-15/757979443_18464303266112114_9133991613687431443_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=5asVXkRJYfEQ7kNvwHF2hL3&_nc_oc=AdqXTr0Sw_04LqByQLmLjSDnyNJm_0KFGLqQ5HPjT5E5PEhgUD6-hvc7Z0TitUh36v0&_nc_zt=23&_nc_ht=scontent-gru1-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQK7Wll8zuPS6I92kuiFjMj7uRD_GFvQ-GEJ_FWA8QToFgsjPRYq-W8WM4rBw_8hMRyZ8YXFBbJ2&oh=00_AQLJZKWO7JKQH2p2rCvXa30nNjzwXPGOrK1HsNJ84iVaKQ&oe=6AA46A6A",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/757979443_18464303266112114_9133991613687431443_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFn4InNLv5FUVY4G2S2frf5Csmfz_CgZ3gKyZ_P8KBneMC8DgLm2p7aVKnATCda_CdVYE2ZjeZLT1g2JRyRtUId&_nc_ohc=5asVXkRJYfEQ7kNvwEHSdn6&_nc_oc=AdpeXabhhuC04PDnC0bEh6gz0QQ6wKBYq6PEC6rawuotFT-N3t8lIZjGaB5TQmBncMc&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQLSnc8JhkpNYOlK_9n-PjGhn0nPuYo1xp7fYFNKcfqfLO6BpqToesIY8J7L_U8B3tCyxzCaXl-0&oh=00_AQIdgzvGd2v8tr48rqFkCIdWI0Fi2EPdoGXUVbwoTvcfaw&oe=6AA46A6A",
       "tipo": "reels",
       "publicado_em": "2026-07-28T11:00:37+0000",
       "legenda": "Se seu bebê acorda sempre que vai arrotar, eu tenho uma dica que vai te ajudar muito!!! 😍\nJá compartilha com uma mamãe ❤️",
@@ -210,12 +639,13 @@
       "salvamentos": 374,
       "compartilhamentos": 760,
       "visualizacoes": 56709,
-      "engajamento": 2521
+      "engajamento": 2521,
+      "seguidores_dia": null
     },
     {
       "id": "18106272266109961",
       "permalink": "https://www.instagram.com/reel/Da4-6qgkyUu/",
-      "thumb": "https://scontent-gru2-1.cdninstagram.com/v/t51.82787-15/749535763_18462292390112114_8285945187948726474_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=dZxuOvrPn68Q7kNvwE9ug51&_nc_oc=AdqsIu8Ag8SEGQ2Eg7Zq8oLVgW34ev-3e525iw_PgINzKJvlmM8WcYUH6RG4qSjM7zQ&_nc_zt=23&_nc_ht=scontent-gru2-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQIUGkFCG1O8rtUXkZqfdmbh5PkfdpZPHuewT7-uqbVAGTndFwvo2U5J6yqLVW4cCKPeQ-jdO8E4&oh=00_AQITHrzVQYtFEGZocuTrKDx3QE_rs7xObDVYX2yS9ebpYg&oe=6AA45F94",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/749535763_18462292390112114_8285945187948726474_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeEPYQ-uJpR111gxdY9YGlLMRvCeY7MlZ_ZG8J5jsyVn9sG70Y7hZHOMkb64CClhEKN1WgDCy4Q83_yCp0a49YrX&_nc_ohc=dZxuOvrPn68Q7kNvwEuH-sV&_nc_oc=AdoRPR6EbiBD3Tvfxl9QEll4oGoLAlms3krrbrQKSysREr5zGAKQxI3TbOD2WtZNKgI&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQKWiVe3Y_6wMHl9y6bSBDjHjkmdi7CAtapc5uSmOglCxm7PW6alSgJwrARafQwwmGQwLopKcdkT&oh=00_AQLenAQiypxCmkFS6BP8peI9ahH0YBEUeyIjNFtDAFBZrg&oe=6AA45F94",
       "tipo": "reels",
       "publicado_em": "2026-07-17T11:00:47+0000",
       "legenda": "👉Comente AULA para ter acesso à ala gratuita sobre autonomia de sono 😍",
@@ -225,27 +655,29 @@
       "salvamentos": 280,
       "compartilhamentos": 490,
       "visualizacoes": 67282,
-      "engajamento": 2270
+      "engajamento": 2270,
+      "seguidores_dia": null
     },
     {
       "id": "18070446653448878",
       "permalink": "https://www.instagram.com/reel/Db2yDj_j1N2/",
-      "thumb": "https://scontent-gru1-2.cdninstagram.com/v/t51.71878-15/772145976_1432601712026283_1293031806267621118_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=mZHsYyet3VwQ7kNvwFyhmnv&_nc_oc=AdqW-4AmJqo6rqJn15Nb2CyrRFqvPqa4Zt_etFc4ToCIvAtmR5txQQTzYrAguHRDa50&_nc_zt=23&_nc_ht=scontent-gru1-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQKO79syQ2Q1hme9XmzKE0QLTO9568QKZJjI4Bh2JNBi1Y6H0qQDHKBBQmkA4678bQw2QfyS3jcQ&oh=00_AQI52Oa1haO2VQmo5-UwuHlmIIlS-C1SgVJ0shIfELNYLw&oe=6AA46E18",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.71878-15/772145976_1432601712026283_1293031806267621118_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeG7WgmPly19IJeZ463-OEAccEtYONCAh3JwS1g40ICHct_95RfFR_OWHp_1HU_xVJDhCmj0i-U9zKLxrtXmy1qY&_nc_ohc=mZHsYyet3VwQ7kNvwEk-1Oy&_nc_oc=AdqfszJMK86NkSj4tMQJfxVRNuPegu_qRSQWs0hWopssNZmIUer3B0yBrpySMCwPjjc&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQLUsfl0Ac3Ad3F5a4UlFHs4KsqLeA51N1WwegGa1-95oiYdr53PPYaEDp1gUxX2TbopGaIM4BID&oh=00_AQKsKzQ1Jp29vzOtTu1m47zQtHTPNshs1Nf_Zl7wTY04Aw&oe=6AA46E18",
       "tipo": "reels",
       "publicado_em": "2026-08-10T11:00:25+0000",
       "legenda": "Comente aqui SONO25 e receba gratuitamente o e-book: Meu bebê não dorme no berço ❤",
-      "alcance": 35620,
+      "alcance": 35633,
       "curtidas": 709,
       "comentarios": 80,
       "salvamentos": 128,
       "compartilhamentos": 1013,
-      "visualizacoes": 48291,
-      "engajamento": 1955
+      "visualizacoes": 48292,
+      "engajamento": 1955,
+      "seguidores_dia": null
     },
     {
       "id": "18488733043098065",
       "permalink": "https://www.instagram.com/reel/DcQhtYtggaY/",
-      "thumb": "https://scontent-gru1-1.cdninstagram.com/v/t51.71878-15/779944558_1371775181793903_2485473987463638275_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=CYea4WvilYIQ7kNvwG76wBB&_nc_oc=AdplyeOpA6rUhrsVQ-H2xHtBq0yy77ED7Z05DoxVjI_Lim2OTdP-l070Uq3XM9ZitfE&_nc_zt=23&_nc_ht=scontent-gru1-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQI6_DPi93NbeNQ_RkG5kNXyZ4sdpydiPrYJjjA050FoTinhdV8aK9K4koGvweNfYKER1AUAYlHn&oh=00_AQKzi-Vlz1Jt3pzDvm7NyiVxmA3kJ0H_RhU2TkmJsaE9Gw&oe=6AA4770F",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.71878-15/779944558_1371775181793903_2485473987463638275_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeEruFlLJ0hgl5NcqZJ30t6iA_8tVjcg5HID_y1WNyDkcitNkA4CM5Bz-NLcCUHNfzLgavEtyzFTV0-GCsQH2bqA&_nc_ohc=CYea4WvilYIQ7kNvwGcAuna&_nc_oc=AdpNdbd_vL6IHNnfcp02tm5Y06tpFMgq9Ku3IDf28pZSrBXbryAFe3s_aPKCS4TtWKY&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQJea904nd-jyzfHVXlIoxd42q7EvetDGjx7SY_PUx-FX9emAht11ylVcpgSiN19pPfHPnVRadMG&oh=00_AQKR25JiRcsXbFQL6WtDsa6XngHYP8sDtv6kRg9JUOa9TA&oe=6AA4770F",
       "tipo": "reels",
       "publicado_em": "2026-08-20T11:00:25+0000",
       "legenda": "Existem alguns fatores importantes que podem afetar diretamente o sono do bebê, muitos deles pode estar passando despercebido, eles são:\n\n1-",
@@ -255,12 +687,13 @@
       "salvamentos": 279,
       "compartilhamentos": 728,
       "visualizacoes": 73804,
-      "engajamento": 1884
+      "engajamento": 1884,
+      "seguidores_dia": 262
     },
     {
       "id": "18380246062228836",
       "permalink": "https://www.instagram.com/reel/DcN9FNXiPSq/",
-      "thumb": "https://scontent-gru1-2.cdninstagram.com/v/t51.71878-15/779728939_1806170697209925_7676546057304511703_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=bZIvQlXJofgQ7kNvwF_n2b8&_nc_oc=Adq93cEGPYeFGO3-9soVu74Met7IAxjWp-hrevgdrohDNF7cTz5Os5_KRimSE5jj0Ko&_nc_zt=23&_nc_ht=scontent-gru1-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQLv1bmes0AweCLp0Kc81pi148zuh7kPT2_2zi_NPERTjDltYWUu4zpitSnYXtY8DVvyh22JtLmy&oh=00_AQIsMCaZVVDzeMJGRHmnrlGFfgIXKtDrZlGJWMUZkkGNdw&oe=6AA4626A",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.71878-15/779728939_1806170697209925_7676546057304511703_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeG6p72gmDq596GTjWBJIJRTrFEBtepdlfSsUQG16l2V9DFM9owirQaCBvr8Xy01W55TkbhXOH8H55HMBCvfsZB8&_nc_ohc=lhOFo5jUSBIQ7kNvwGtNto1&_nc_oc=AdrnLpeLl1M7nQ0L143dp9jp0H2AMVqABcpTosU535f5NSD5pcBr4RPCb3AH7tlJckU&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQJ9v61qLZiVHGEwkARPRN5e4FUkFj2IItE0s3QLQjBNwudrdwykI47tipkbx59H4_T4w7RZbmPa&oh=00_AQL_x5xdj1mLVc0DlQ1bcvyA5I0ksAP6-6o9mjfguzMJBA&oe=6AA4626A",
       "tipo": "reels",
       "publicado_em": "2026-08-19T11:00:26+0000",
       "legenda": "Comenta QUERO\nque eu te mando o link deste produto, e vários outros em promoção, no meu grupo de Ofertas Maternas!! 🥰",
@@ -270,12 +703,13 @@
       "salvamentos": 185,
       "compartilhamentos": 211,
       "visualizacoes": 39043,
-      "engajamento": 1873
+      "engajamento": 1873,
+      "seguidores_dia": 279
     },
     {
       "id": "18609828532036398",
       "permalink": "https://www.instagram.com/reel/DbseyMznJV-/",
-      "thumb": "https://scontent-gru2-2.cdninstagram.com/v/t51.82787-15/767243196_18465938536112114_3621259857888901137_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=2MHiC5qkST0Q7kNvwEqZZir&_nc_oc=Adpa3zi6ujEWfMeDNLs5t0x66lHSqjYjFN8a6ioa6KwMoe5ZEVS5ivEJUWDoiuZBlFs&_nc_zt=23&_nc_ht=scontent-gru2-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQI1yOGrtBErkGtfS-dNZoozHhDHoJd71kWLUHcpEnwOmEd7asT44r6Rpyt6XEEyW0395ZcbkcH7&oh=00_AQL4ogfj8RLwXqi8Ma7EI7aCq6bSGdRe8U_tnbb7zAXPcw&oe=6AA46843",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/767243196_18465938536112114_3621259857888901137_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFELVGv4pzmqKHPiCILfrMueLH8CXnVoeN4sfwJedWh4zDnFOpyPgsZxEWk54WN74QWwbih9m0Fo6fXkeTL-okY&_nc_ohc=2MHiC5qkST0Q7kNvwEtRv1-&_nc_oc=AdrAas86G_ndz1yhZhVPwErQXLHFX61g2_-BEdjT3PBF8p0mJpljk0Ig_RpLiGfhw5g&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQIfqxwPWfXQ3WcHWBSJprcJQKEV9NrYpMjEcR5tIjWv2ZgXj1LdEKAWYXkL0zv9UI4bLLECP1yI&oh=00_AQJ4vKmjJ9RRRjMAOgXI_q-viKsyfyAj4s4gFIy7q7IOww&oe=6AA46843",
       "tipo": "reels",
       "publicado_em": "2026-08-06T11:00:25+0000",
       "legenda": "Compartilha essa informação importante com uma mamãe 😍❤️",
@@ -285,12 +719,13 @@
       "salvamentos": 253,
       "compartilhamentos": 345,
       "visualizacoes": 48609,
-      "engajamento": 1610
+      "engajamento": 1610,
+      "seguidores_dia": null
     },
     {
       "id": "17940343824275761",
       "permalink": "https://www.instagram.com/reel/DbYR_RpAXtI/",
-      "thumb": "https://scontent-gru1-2.cdninstagram.com/v/t51.82787-15/759610991_18464509063112114_3033602526989779327_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=0EJUnH9iRlcQ7kNvwEOkcEi&_nc_oc=AdrASfguLweK-mNZJiBj_wjpz6UEGLcLlOtP1typEdsKinGyuWggYI1-Qwcmk1JNNqo&_nc_zt=23&_nc_ht=scontent-gru1-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQLIfHaquzaLqGpJsykydl2-N2P4sUH23uFa7ukr4UJCTbcAupUfp--CewEk4UVwCZcaNEYE1aLn&oh=00_AQLvcWu11NKFmMvhyUCarNoXBv-QbOLBr07bPDPV4whXdg&oe=6AA4898A",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/759610991_18464509063112114_3033602526989779327_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeHlmVK6dt_-Kq7ug6mp6vh7lgreXItp4SKWCt5ci2nhIp2RwA7LunIEEk52dv-blpSmvIvEfd0LqTW5MogAY9ZE&_nc_ohc=0EJUnH9iRlcQ7kNvwF-J6uw&_nc_oc=AdqDRjIYGGpUg_3AMnoiO0NiPEk-fN88Q-vGkI24iKK6Yen_r2pKwm9LgSyx82G_7Mc&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQLqXeK2mG8krW2pahvFVJHR4FdWMIBLIg5VeBQtBJ4tSkCfmlhOEtn7TCivETwGNHoBkE2uDlp5&oh=00_AQKWvJA6_I1aKrzcV456rRfRuxc1FBCxC3VSQYgxz_rKJw&oe=6AA4898A",
       "tipo": "reels",
       "publicado_em": "2026-07-29T14:30:23+0000",
       "legenda": "QUER O LINK? Comente \"QUERO\" ❤️\n\nSegurança no sono infantil\nSaco de dormir\nMelhor saco de dormir\nProteção para o sono do bebê\nSoneca segura\n",
@@ -300,27 +735,29 @@
       "salvamentos": 241,
       "compartilhamentos": 388,
       "visualizacoes": 37074,
-      "engajamento": 1575
+      "engajamento": 1575,
+      "seguidores_dia": null
     },
     {
       "id": "18130641703707694",
       "permalink": "https://www.instagram.com/reel/Dc6Da0gAsl_/",
-      "thumb": "https://scontent-gru1-2.cdninstagram.com/v/t51.71878-15/797646364_1085916754190415_166040555572286822_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=5BZhy7zJWHoQ7kNvwGIjegJ&_nc_oc=AdrSiwHDhGwJwXD0MpMknwkAhBaMfcwB5mVCZF4tcCLEINoks10KiQJGtKFjUoiN5fE&_nc_zt=23&_nc_ht=scontent-gru1-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQJCfHjfJJo_XDvjPy0c9UPTPosKn-E-m9VCcNpDoRLb4R9Ee9wFkqUsICPYoUPW310IOqtbkbc1&oh=00_AQKhphknM0Q4jDT-9DtfvuqH9k5CDq9oiB8CnTkOpYk9KA&oe=6AA482DC",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.71878-15/797646364_1085916754190415_166040555572286822_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFRTHFY_4NfQ7axncYtnqN_htjn9XY9Q2uG2Of1dj1Da-_DRX8aYDzJCEi6vWEJQEkMp4nt0A0zZFrKXtbq2K1R&_nc_ohc=5BZhy7zJWHoQ7kNvwE7ZI-I&_nc_oc=AdodvhQXOPtgIco5KH0TGDqCkSQCAINXar-7Ddr3LiwWEsG7IJ-GqzJy2sFp_ulI8qQ&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQJCMPfAZgOQ6qstu6OjkO2OiILAJalhiHCuZrVlCf2K6v2tnJ3ku5mzRt9z9OJb15CbCeSmbv9J&oh=00_AQKMLavUbk1V-6bbcQv-KbZFlm5q2UIsGR1mYA122kBPZg&oe=6AA482DC",
       "tipo": "reels",
       "publicado_em": "2026-09-05T14:00:24+0000",
       "legenda": "Comenta QUERO\nque eu te mando o link destes produtos, e vários outros em promoção, no meu grupo de Ofertas Maternas!! 🥰\n\n#trocadefraldas #f",
-      "alcance": 33914,
-      "curtidas": 594,
+      "alcance": 33948,
+      "curtidas": 595,
       "comentarios": 188,
       "salvamentos": 362,
       "compartilhamentos": 364,
-      "visualizacoes": 50132,
-      "engajamento": 1515
+      "visualizacoes": 50176,
+      "engajamento": 1516,
+      "seguidores_dia": 327
     },
     {
       "id": "18209939056358844",
       "permalink": "https://www.instagram.com/reel/DcgXRUKjo5U/",
-      "thumb": "https://scontent-gru1-2.cdninstagram.com/v/t51.82787-15/782616370_18469870474112114_2104275730131067235_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=WYXJJlcJ6NIQ7kNvwFcglt3&_nc_oc=Adqpm0fe55peuqOPxsJqqoEpUP1A4sHNbsMYDt_WF9nlsffFWAhz-VzicAr6DLBwOyI&_nc_zt=23&_nc_ht=scontent-gru1-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQLvhD5yjKcvj5_5Of2yodOrn3uSYU-SONNTv5cTg6y_p1S975pHqpYyn0sjeSG6zXEIefgOZSrd&oh=00_AQJu-bNMoCMRuyHLLLk7MsXsupjQkBdRmxqvokFqcjtQog&oe=6AA47F6B",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/782616370_18469870474112114_2104275730131067235_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeHz7vgn1Bu8k49hdKza8LLA-GVPcgArMXT4ZU9yACsxdAiqOIQB-lu3PusG4kguoIvSLznxUheNIv9sbWskkqFS&_nc_ohc=WYXJJlcJ6NIQ7kNvwGFRCRd&_nc_oc=Ado44HJB3LBFOQeD3EyFN5vCmwG8dAxSxEbsW4mKkaCiUS5pmWLjdCkUnQZWqkcj_p4&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQIZzbGWucs4otjklj3xIP1F726ICYppUbDIYYSJbQzHAA4-SwdCFqxGthy0XRWIvLBvTnmQpC2D&oh=00_AQKEmlLIR1r5NjUrc0KBTvy5nMpvp5jwVhjUuNy1ojXPPQ&oe=6AA47F6B",
       "tipo": "reels",
       "publicado_em": "2026-08-26T14:00:25+0000",
       "legenda": "Comenta QUERO\nque eu te mando o link deste produto, e vários outros em promoção, no meu grupo de Ofertas Maternas!! 🥰\n\nNinho redutor\nSono d",
@@ -329,13 +766,14 @@
       "comentarios": 40,
       "salvamentos": 196,
       "compartilhamentos": 426,
-      "visualizacoes": 35048,
-      "engajamento": 1452
+      "visualizacoes": 35049,
+      "engajamento": 1452,
+      "seguidores_dia": 214
     },
     {
       "id": "18049605800598145",
       "permalink": "https://www.instagram.com/reel/DbAtbCUiHpT/",
-      "thumb": "https://scontent-gru1-2.cdninstagram.com/v/t51.82787-15/752617168_18462866599112114_4092166318623026309_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=SDfIiv501EQQ7kNvwG5ScoA&_nc_oc=AdrovmHUYEaDR5bRYnI6LJpN9WD9OhlOFuidVaJtyG25MuMjZByf-arpGrRRimG9cR8&_nc_zt=23&_nc_ht=scontent-gru1-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQKFSxh0jr_nTw98J-S0z2ffLowIbynjNX0ooFRP7vwW2cnyR2LFUd55DZyCBumF_FkDHj6RTckd&oh=00_AQIgwplmGJajTbSfYRUbNGTVui52aluxIFj0wLQpLbRFaQ&oe=6AA48F1D",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/752617168_18462866599112114_4092166318623026309_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeHZf8g7svrqX4yRLytnG5QFvv_-Y_I38nm-__5j8jfyeTeiEt9p87F35TPf4GY14k1D2rqT6eKoAkB-1_XxMRko&_nc_ohc=SDfIiv501EQQ7kNvwGHeIMi&_nc_oc=AdreOXh2ukK6xBPJX5a2LFWnbL_-TOKXb1sWcJXHROvdaB-Ox-X7IZhR3UnpXsjo4Zk&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQK9-3RxJmEH6itvxVUAXjLn941KLqDoaLUlbfGn9Do7qz4q-8clB7L6m0SreXA_fjxvsa9UCazG&oh=00_AQKGTF0fJUoPX3se61h_6VXfIZT1rbTf9Etd2yoKtiG3dA&oe=6AA48F1D",
       "tipo": "reels",
       "publicado_em": "2026-07-20T11:00:26+0000",
       "legenda": "Comente aqui SONO25 e receba gratuitamente o e-book: Meu bebê não dorme no berço ❤",
@@ -345,12 +783,13 @@
       "salvamentos": 160,
       "compartilhamentos": 487,
       "visualizacoes": 34096,
-      "engajamento": 1397
+      "engajamento": 1397,
+      "seguidores_dia": null
     },
     {
       "id": "17927129673379828",
       "permalink": "https://www.instagram.com/reel/DbIblubCZzA/",
-      "thumb": "https://scontent-gru2-2.cdninstagram.com/v/t51.71878-15/754143145_1914437029214079_8585366111883191511_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=dzPo04K_N2sQ7kNvwFr0d4M&_nc_oc=Adqsq3wHJ5bZvvIBqvCAaYq3gIrhiJTZWGHk6vAEnESYA3R1FWX3qDmzGw6b00L80Jo&_nc_zt=23&_nc_ht=scontent-gru2-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQLJ4WqrO6BMKhyI2SeB3JM5aTO4HVHZKH1U2mzah6LnSpgQjkAJ9lrhOFFZCkxll0txpy-Hk-L3&oh=00_AQL_uy3CxR3jHUAUAhINqqV8SeqcHtEnCJ95gs8hZOJ7PQ&oe=6AA475AB",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.71878-15/754143145_1914437029214079_8585366111883191511_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFQjPhrppwhA15YwcK1C0mE4JlSke_2PFzgmVKR7_Y8XN-1wE8Gnq6VEvtT7XgjVCjRMDqoNwwnwHSm3gYjNyso&_nc_ohc=dzPo04K_N2sQ7kNvwFLMNvZ&_nc_oc=AdqobP0jJ6gk7EGAzbad-0cGtzKNrRC77ebG5F42_4hyrdiAREobUDC7pF2f--rhbn4&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQIScbmuN4NOVQehSuCcf33sOhU3L8TCd3_4-1Xc66emQoIA4rfIQ56Gz5EZaC827IPfIauy6O8S&oh=00_AQI-jP0smaI1WiNOPSlIuGA9dh_JnwC11TLnpp4QItZTZw&oe=6AA475AB",
       "tipo": "reels",
       "publicado_em": "2026-07-23T11:00:25+0000",
       "legenda": "O banho do recém-nascido é simples, mas alguns cuidados fazem toda a diferença para a segurança do bebê ❤️\n\n1- Sabonete: a pele do recém-nas",
@@ -360,12 +799,13 @@
       "salvamentos": 288,
       "compartilhamentos": 247,
       "visualizacoes": 177976,
-      "engajamento": 1385
+      "engajamento": 1385,
+      "seguidores_dia": null
     },
     {
       "id": "17995169630995197",
       "permalink": "https://www.instagram.com/reel/DbGLcIViTEn/",
-      "thumb": "https://scontent-gru1-2.cdninstagram.com/v/t51.82787-15/753356680_18463236583112114_375887296123326097_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=DPRdocI4QDcQ7kNvwEGOHpO&_nc_oc=AdoMNgskcbGSg0dqu3L82a0SVDJiwtd41mbVOOpwfvnWlInYP-abrzZI8cbZZUUnjHM&_nc_zt=23&_nc_ht=scontent-gru1-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQLvvRwVKUnL95ZcKErpsK1Z3rGylHbNZItFgYgm5JZMWPadgCUDAwRqhYlIPk_BX41F7qrc0Elq&oh=00_AQKOHwmqcpCoXKEpoWBYBHBVYpg9u6oxvkI1B4mTKvrHIA&oe=6AA47BF3",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/753356680_18463236583112114_375887296123326097_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFR4pT7-zeKje-9O5zxm9WUXHGTLRvv4fBccZMtG-_h8F8gAEvsazcmYIuRIEk0SMNsw57_RQ1IjdxpmJI5Xb0-&_nc_ohc=DPRdocI4QDcQ7kNvwFJNR8t&_nc_oc=AdrKlNSPY_prpEQN6irTJ1edB-vnmVAIN5a-CMq4uQD9SdAuOcnjiD97S0_vOc8OE6g&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQKW_tnF077uNeQDqWotah1owfNLs10y2RMieD466omI0TtOAWUAAGJK-qklGvt-K6ll_Omp6Uyg&oh=00_AQK6xTifrT4fYkqHg6afXevXBo78c059HUsNq64gqgcCwg&oe=6AA47BF3",
       "tipo": "reels",
       "publicado_em": "2026-07-22T14:00:23+0000",
       "legenda": "QUER O LINK? Comente \"QUERO\" ❤️\n\nLixador de unhas elétrico para bebê\nKit de unhas para bebê\nLixa segura para recém-nascido\nCuidados com o be",
@@ -375,12 +815,13 @@
       "salvamentos": 163,
       "compartilhamentos": 398,
       "visualizacoes": 87124,
-      "engajamento": 1239
+      "engajamento": 1239,
+      "seguidores_dia": null
     },
     {
       "id": "17869512108632160",
       "permalink": "https://www.instagram.com/reel/DbLAmjvDxIF/",
-      "thumb": "https://scontent-gru1-2.cdninstagram.com/v/t51.82787-15/755867843_18463562248112114_286347183447026433_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=eSlsmZZz6Y4Q7kNvwG2BTKm&_nc_oc=Adq4GGvs4C7YC-ZVu6bZP6gA8CI6___U5dgM7PPxjpGd-lloQsAuvaPFU_5tVjvLUv4&_nc_zt=23&_nc_ht=scontent-gru1-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQJUDZsjSceAWozgQXwVJqt2XlvjLs-YWaawGe0y1WF6hylNP8itq7fw7RetaC8aoM83S_E4J-EA&oh=00_AQL4PFc1i9Rh5VJWf-RfOTvOO8f_JoFCTgOQ3KDeBku3Uw&oe=6AA487D8",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/755867843_18463562248112114_286347183447026433_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFjzpZwJTgVJK8Cb6kTIutohZBftcvrJNeFkF-1y-sk10ian8HRJa0us3SmWwdIJIfBxaEUeW2KAgLMMo5UJD2j&_nc_ohc=eSlsmZZz6Y4Q7kNvwELeVJc&_nc_oc=Adrtr2UQrvmgIFIgUwovozD_h19vbEe2lhAxaDhNGRrcD1Kt2HoW0PxKTmZzh0xn4AY&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQKlAQLDD7j_BqmktYhBxtvJM7s34IxtPf38Zpu9Jnx2H5NawweWkVmp819IK_6H8lA4VBtChBVt&oh=00_AQJaL9ufLpCWpKsyP7JhU_M-ah-KkjFnn-4MwCZoLSnwgQ&oe=6AA487D8",
       "tipo": "reels",
       "publicado_em": "2026-07-24T11:01:00+0000",
       "legenda": "Comente aqui SONO25 e receba gratuitamente o e-book: Meu bebê não dorme no berço ❤",
@@ -390,12 +831,13 @@
       "salvamentos": 110,
       "compartilhamentos": 239,
       "visualizacoes": 37081,
-      "engajamento": 1180
+      "engajamento": 1180,
+      "seguidores_dia": null
     },
     {
       "id": "18123147967687607",
       "permalink": "https://www.instagram.com/reel/DbdCFZ2FHCe/",
-      "thumb": "https://scontent-gru2-1.cdninstagram.com/v/t51.82787-15/761545523_18464828545112114_3190969447033963793_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=_FNtMwr1WYUQ7kNvwEoWxY_&_nc_oc=AdqskLr_QNY64qfcdonZkFr5nPkQnG4yuUPNHXHWiEuxlfN_-cYisry_fcm9j-hgi7E&_nc_zt=23&_nc_ht=scontent-gru2-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQJ9pciV5eQxxWwDBKZXYzmnhO1ofMP3Mo_AJb0Jk2lgiEbD1knQkoTzCSyeo4JrP5Ec11LqN4wq&oh=00_AQJ-T_1ruBIt6NMsfk1ftNWiVOTXWtPUBwi_qegPL4yZcQ&oe=6AA4762D",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/761545523_18464828545112114_3190969447033963793_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeG7F4LWhSoQUyQsJmKtrHsj5HghaxQB9YHkeCFrFAH1gScUlTzivfUDzRRC9Qeoj1hP1_Mkqd4WMrmIT3DqFci1&_nc_ohc=_FNtMwr1WYUQ7kNvwHK__Gv&_nc_oc=AdrnlwVmyeMbVAhjhbLeBbQMm9NQm59VB6libi9oQ615psQ5QKW1mteZMszx5V3sizQ&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQJgAbjdlkDZ_fN5nuOaKWLU0HtmyPZdvUP1VLp4ru66-Dx3SsxfnUMJ6WhvetvnMLYgcmlag10O&oh=00_AQLCkWtCxZHhegdQ_lq-CLX0oAOZ8mdB3tqGxm1l2fIAHw&oe=6AA4762D",
       "tipo": "reels",
       "publicado_em": "2026-07-31T11:00:50+0000",
       "legenda": "👉Comente AULA para ter acesso à ala gratuita sobre autonomia de sono 😍",
@@ -405,27 +847,29 @@
       "salvamentos": 122,
       "compartilhamentos": 124,
       "visualizacoes": 32591,
-      "engajamento": 1174
+      "engajamento": 1174,
+      "seguidores_dia": null
     },
     {
       "id": "18379436311226604",
       "permalink": "https://www.instagram.com/reel/Dcs3KhIgoby/",
-      "thumb": "https://scontent-gru2-1.cdninstagram.com/v/t51.82787-15/789837316_18470790985112114_611674235436765782_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=fxBboT5gMc4Q7kNvwHg8Zrc&_nc_oc=AdoMaDc__csFXAAe-bX4rd0fIgWnst6rBwxuEn6ogAcMC8nZp9SNCM4aScakiu2khEc&_nc_zt=23&_nc_ht=scontent-gru2-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQInX-9nik6HYm-H69zibYxZZ56QjsfBg6vvf3CX3Y5h0XFb8nJJkvITv9UlgeFAMEkcNug3WITR&oh=00_AQLlEgskwpv4rJ-FWlhkeTzdZsBAsCRVOUCd4QXwRTvPTQ&oe=6AA4705F",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/789837316_18470790985112114_611674235436765782_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFbfQ83BNhJ_v7aeO0F57ImkG0KrdLVx5mQbQqt0tXHmUWS5eRV7vu-DjkFuBUOK2S8lSrlsMcK8ZQ3FPW7LFcQ&_nc_ohc=fxBboT5gMc4Q7kNvwFke8b7&_nc_oc=AdqX-veGL6VTQkRmby4_Dr8YNbiChBPPm3QaGwxACLD16isQNIx5Jq2WF5hcI-P9MGo&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQLT7hSvSHYd3WW1v69KtydXKZtzpgCXTZ920ng6YAF7ZcYq2u6-KMW-4pGbnHuR-YI2eoNWvUb2&oh=00_AQINJpk-zFq3Q2iGdxEodF76WUXH0EV10RzK464RCJqNDA&oe=6AA4705F",
       "tipo": "reels",
       "publicado_em": "2026-08-31T11:00:26+0000",
       "legenda": "Comente aqui SONO25 e receba gratuitamente o e-book: Meu bebê não dorme no berço ❤",
-      "alcance": 10316,
+      "alcance": 10319,
       "curtidas": 460,
       "comentarios": 101,
       "salvamentos": 233,
       "compartilhamentos": 363,
-      "visualizacoes": 14464,
-      "engajamento": 1164
+      "visualizacoes": 14466,
+      "engajamento": 1164,
+      "seguidores_dia": 298
     },
     {
       "id": "18546114676078091",
       "permalink": "https://www.instagram.com/reel/DbqOvyXCWqe/",
-      "thumb": "https://scontent-gru2-2.cdninstagram.com/v/t51.82787-15/766207338_18465795622112114_2806782757431340108_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=3cYMty-aMroQ7kNvwEIVT-p&_nc_oc=AdrKBY6BeMiwgmgTyw5PD8Gx-Sunoi9RES_uy15GHFpcaluOPDx6PPex_3Iwo9bxCAs&_nc_zt=23&_nc_ht=scontent-gru2-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQI8rNC83PaXRkVDzhJjeN2SGuj6IHqTrBAkHbDPRPomgU9WvRiWpLFBYEsb89tAOe68V-Gd41xc&oh=00_AQK6yEBySnoTibYXmfiG4D6ncND1a2W9SgZHHC_bNTo5Gg&oe=6AA48D71",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/766207338_18465795622112114_2806782757431340108_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeGOlH7QM1nfHTfLZ9ADWewb8ZVoXa0-EJDxlWhdrT4QkDCZV1cygX60yEm2zLn907CBvdLIZ9YojlEyQ2iDVkKF&_nc_ohc=3cYMty-aMroQ7kNvwFa5pu-&_nc_oc=AdqVKxeJyqxpmc3In4kIHqE9batLsNx5vEyiZIck2FZp7q2ayrFBPmWffVwV7M6dRJU&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQIgVr_cpuOjjD3HVTyBUV_4zjJmNT6UEJdlCZ6VM33xbSXL5hMhnwEJstqznYfCmU3dQ7tLUvpM&oh=00_AQKcHKvu9ZDPk57ZJPtUx5EAblrKPi1rQW5r1_a3NNsWzA&oe=6AA48D71",
       "tipo": "reels",
       "publicado_em": "2026-08-05T14:00:24+0000",
       "legenda": "QUER O LINK? Comente \"QUERO\" ❤️\n\nAlmofada de amamentação para bebês\nAmamentação mães\nAlmofada para mães amamentarem\nAlmofada apoio para bebê",
@@ -435,12 +879,13 @@
       "salvamentos": 168,
       "compartilhamentos": 219,
       "visualizacoes": 42598,
-      "engajamento": 1144
+      "engajamento": 1144,
+      "seguidores_dia": null
     },
     {
       "id": "18095161106634659",
       "permalink": "https://www.instagram.com/reel/DcdZ3kSEmOL/",
-      "thumb": "https://scontent-gru2-2.cdninstagram.com/v/t51.82787-15/780374898_18469658299112114_6882895842980213252_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=UFzKyprtN_4Q7kNvwFDFf6x&_nc_oc=AdoFGVN7QRpdVmelzu4Q2VACvUIBSGtfWoKJNUkhJ4vQRu8gdub6dolS8-F9aCMDqag&_nc_zt=23&_nc_ht=scontent-gru2-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQI6ygQXtSgu7L4ewRUrRR1hk_ws1nBVrh5y1VuoKUh3T-sDsxYS8IbVYs4RuEM6qDww2oSycjcn&oh=00_AQLJPIumUaw5wC1ypqCCSpZ8QARlRfBhhSqd9I-lzOs4Rw&oe=6AA4874A",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/780374898_18469658299112114_6882895842980213252_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFD3e1dfD3SVVVsEubHtEEvP-0wyucmoeA_7TDK5yah4EegSHhJLTuOAqUKNHXHEpwX_0kzJyt1Ke8O42VlDAsj&_nc_ohc=UFzKyprtN_4Q7kNvwHiIQVH&_nc_oc=AdoCTQwBDhi7kP4QcAPxsF37wsOPNLqSlFkKaqmfnvrmamjvG5mEha1lmK6xzRefh3s&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQKdarFZ8QuMl72p_HWk913Fg6zQ80UjWVjXCjfuvXeokBk8ZpjxHdIgjSppb2M0ax24IAVNXUAP&oh=00_AQJAgnMAGNnTs16J8wxkuxPY7PUUZPJsIRxjfLYNWhXLgg&oe=6AA4874A",
       "tipo": "reels",
       "publicado_em": "2026-08-25T11:00:25+0000",
       "legenda": "Deixe seu bebê mais confortável na hora do banho 😍",
@@ -449,13 +894,14 @@
       "comentarios": 6,
       "salvamentos": 200,
       "compartilhamentos": 313,
-      "visualizacoes": 35625,
-      "engajamento": 1087
+      "visualizacoes": 35627,
+      "engajamento": 1087,
+      "seguidores_dia": 242
     },
     {
       "id": "18408974563154308",
       "permalink": "https://www.instagram.com/reel/Dca1MtADPiE/",
-      "thumb": "https://scontent-gru2-1.cdninstagram.com/v/t51.82787-15/784326213_18469471645112114_1504936321783172009_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=e_Mkfcryd-cQ7kNvwEq_wHV&_nc_oc=AdrhwQs5a0CMsRihf_w9g0bEVGDFbWfYjeQlm6lsBBB5dprv10MFzTiE_9AFrrvS5O8&_nc_zt=23&_nc_ht=scontent-gru2-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQJ0__pCK1v0i5OIC9jFJFA-S_1InE-MR-Ns0Z0Z2xg6L2eq-jUfbBZGJJzWBD-20sG5pzdz-Qsr&oh=00_AQJAk9l-G4MdOS7pYs_wUd-8_2u9JK6xgXKoS2wFUTRH0Q&oe=6AA48D3A",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/784326213_18469471645112114_1504936321783172009_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFCfG7RSNFSyrxSY1lUZGe8CSa5D7CdGloJJrkPsJ0aWr1l0fVd4jnMjhh_nW12bJUI3hllrP6bGOStmmSUjPw7&_nc_ohc=e_Mkfcryd-cQ7kNvwESeYDv&_nc_oc=AdpxwLxB40sAAGp_-Yeb1DJDoj2iqVC5TznPHREJ-PRNb97pHM0kgKMjgUnCakN5xrk&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQL-u3g7RPObv6fFyGRzomzl0wfTn4g-2yl0EKjSWVkFSFrUzEhWuO0FkNEU2tNFIKGVHcH3WIMW&oh=00_AQIubvv_a-chYlCMpSBZaO6ZiDJ3YYgj5g_H69NH1fJfKw&oe=6AA48D3A",
       "tipo": "reels",
       "publicado_em": "2026-08-24T11:00:26+0000",
       "legenda": "Comente aqui SONO25 e receba gratuitamente o e-book: Meu bebê não dorme no berço ❤",
@@ -465,12 +911,13 @@
       "salvamentos": 100,
       "compartilhamentos": 173,
       "visualizacoes": 26021,
-      "engajamento": 948
+      "engajamento": 948,
+      "seguidores_dia": 272
     },
     {
       "id": "18163630090470174",
       "permalink": "https://www.instagram.com/reel/DcoGu4tjVUV/",
-      "thumb": "https://scontent-gru2-1.cdninstagram.com/v/t51.82787-15/785745358_18470451328112114_8318936385545978730_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=j14n357MtkEQ7kNvwE5cyNs&_nc_oc=AdpVayhn__zR8QtCCvcZ_e-9O9EMhvVT-Ob-oLVC039uFiwn3FUCqK0jxkMRL5N96CU&_nc_zt=23&_nc_ht=scontent-gru2-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQKADTlTY2Dd3YZx3uL3N_XNbrp98PSnWSdBFcy5HJDPt6dL4Ixt7LYt9TZdTMbIJ1Wr4enQMxNL&oh=00_AQLBCNKNT8YpGm7cW3pPng8fTSSQ0NJvjD_XisXEgliU1w&oe=6AA46FD6",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/785745358_18470451328112114_8318936385545978730_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeEd0Nsxp5QMtsazGPNeDNoVJsGEfIhETZ8mwYR8iERNnyyl-r2Kg4lOSEJ0VcQILWDkKZzgmRRj8LxqnVjt3AK4&_nc_ohc=j14n357MtkEQ7kNvwFx76n0&_nc_oc=Ado60m8u-13q5BA1eCKrr3f2CN7Yp34_wvcIr0PoiX_-BQ21e3-AARGcylmLSj6KhWM&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQLWU8qvOe_bk1a-lv_ik29jxwCzdhyn9wJTpqTObi-uQNueZLjddPFvGgZz7VoiJwFIXRFXU1xU&oh=00_AQKym32vx8AhdDwkGfXS-_sF0TmIpLn9oULIXayimftjWQ&oe=6AA46FD6",
       "tipo": "reels",
       "publicado_em": "2026-08-29T14:15:22+0000",
       "legenda": "Comenta QUERO\nque eu te mando o link deste produto, e vários outros em promoção, no meu grupo de Ofertas Maternas!! 🥰\n\nLixador de unhas elé",
@@ -479,13 +926,14 @@
       "comentarios": 99,
       "salvamentos": 126,
       "compartilhamentos": 283,
-      "visualizacoes": 60716,
-      "engajamento": 893
+      "visualizacoes": 60723,
+      "engajamento": 893,
+      "seguidores_dia": 418
     },
     {
       "id": "18171615952378949",
       "permalink": "https://www.instagram.com/reel/DcDprGylUdh/",
-      "thumb": "https://scontent-gru1-2.cdninstagram.com/v/t51.82787-15/776351517_18467633065112114_6412146025593978534_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=uthgAW305CIQ7kNvwGLZngS&_nc_oc=AdqQe9F4MoBLgEzyiWbMudChZ1U6JvSEydTV0IdQm_8Hla18acjd-IvQ8jrQ7BTDSAs&_nc_zt=23&_nc_ht=scontent-gru1-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQIWzhlfV-Try2Le6hgfPLrnbdnqdtTPOAlZJq-xuJyFvgc0htIWfugnyZYxgMjyHdAcTd9YBOu1&oh=00_AQIcJBLbS5HNPENUHWTZF48nykyx_rpEnI6Lh7fGWPU37Q&oe=6AA478A6",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/776351517_18467633065112114_6412146025593978534_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeHfhXvUpTEl-Woo5gY-EADPhslRch0v8mmGyVFyHS_yaQbk3fzDi-Lno_a-Zm_Pcl6bEjLhy2im6I-50m4utgYk&_nc_ohc=uthgAW305CIQ7kNvwGIPx0Y&_nc_oc=AdrOJTseKrOc7QeOGxyrkfKfK5PtDo8V24bseDtheZUnDM9TZpqhr1sMTBGjZhNcnoY&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQL5-0vo_y8prpttQpJCxGooiNvvg643J8MboftGIRhnlqudxiozTEdzO4pM2nPRnre30tS13cxj&oh=00_AQLGYX4rdUKRaxfMOkTKyCe7O8LPxJ4tThwnhCa6MLSZbQ&oe=6AA478A6",
       "tipo": "reels",
       "publicado_em": "2026-08-15T11:00:26+0000",
       "legenda": "Comente aqui SONO25 e receba gratuitamente o e-book: Meu bebê não dorme no berço ❤",
@@ -495,12 +943,13 @@
       "salvamentos": 109,
       "compartilhamentos": 310,
       "visualizacoes": 24756,
-      "engajamento": 832
+      "engajamento": 832,
+      "seguidores_dia": 351
     },
     {
       "id": "18112726189998067",
       "permalink": "https://www.instagram.com/reel/Dc0k54pCnr7/",
-      "thumb": "https://scontent-gru2-1.cdninstagram.com/v/t51.82787-15/790529097_18471338782112114_920400216350971845_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=NosxY1H10GMQ7kNvwG7IGfR&_nc_oc=AdqBpQS5SzNsrXMfvcWDEod47C_XUiV1WEhxvZlnjj0flx4F3VLvXR4qUnwCO7mRXdk&_nc_zt=23&_nc_ht=scontent-gru2-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQLAwOp0sZAhwfdCtayp9zuKpxU34qVGysQFNtDKRisP_PFJ4pjwr5AEjtQBPdDE8oon0Z3ENMMI&oh=00_AQKC2cqLj8h12einFC4zghOil1ZjwsvB0td0XdvTmf94Hw&oe=6AA471ED",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/790529097_18471338782112114_920400216350971845_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeHuUQpJZ1KLvtPgpKHqCEIQPjdgWQDY36I-N2BZANjfokPx3vXDy3WHoHdEQektEuMK_f4BlKcwgAQ2IWXYr8CT&_nc_ohc=NosxY1H10GMQ7kNvwHRw1Sf&_nc_oc=AdpfACZp2vp03qGsvQsVyz-oa4AXHzLANogQzGcyMmJ8NEsVUaoAoPSQEiEaHHBOXa8&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQIE5kv0EoKbwjI-UOWcJnYb-BHsVmuzh2xJmtdsD3XP_DuLqx7gU3JLL47oc7qdxd5hkEXZsybU&oh=00_AQJfG2kaOZEBY5bPYy8ZyG9kjeuPGzGRVv6TFfiWUrqUpA&oe=6AA471ED",
       "tipo": "reels",
       "publicado_em": "2026-09-03T11:00:25+0000",
       "legenda": "1- Irritações sem motivos aparentes\nO bebê está bem, as vezes brincando… e de repente chora. Na maioria das vezes não é manha, é cansaço acu",
@@ -509,28 +958,30 @@
       "comentarios": 16,
       "salvamentos": 108,
       "compartilhamentos": 171,
-      "visualizacoes": 69195,
-      "engajamento": 755
+      "visualizacoes": 69216,
+      "engajamento": 755,
+      "seguidores_dia": 414
     },
     {
       "id": "17892550998416022",
       "permalink": "https://www.instagram.com/reel/Dc3J2euEqFs/",
-      "thumb": "https://scontent-gru2-1.cdninstagram.com/v/t51.82787-15/793161141_18471526711112114_8923909801115950834_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=0ZRbQPfBN_sQ7kNvwGPCs_K&_nc_oc=AdoW_fGmVEFfz0XF2DCpnaG122neH8PFF-YiY968Jtu6U3u6qZSWa5xhbDVZClY8kb4&_nc_zt=23&_nc_ht=scontent-gru2-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQJ7kg14ZV_n4Dh_xKM89cgD_SL3Bdw7d4jpIG-xiJpyUs8EFIJ7GZr6fLDpH6lyiYYYPFbfKWLC&oh=00_AQJmtJ2X-oHxUUdDmUwQjO5tTFj5llwvLa3sl9pfjBpQ4Q&oe=6AA48E5A",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/793161141_18471526711112114_8923909801115950834_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeH8wqD-ViJ-p__Cm5PdrXQc435dZSqEeUPjfl1lKoR5Q2TLrPK-ZgDxauvNR4H0Ay_Zg377SioL-ooTkEczj-8Q&_nc_ohc=0ZRbQPfBN_sQ7kNvwFldE0Y&_nc_oc=AdqbkPw6jNS7UUcuDm-OPihIlbQfGpVAkN3gI4PKYenJAKTz6V4YDAFKOexhSSZSTD0&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQIPK0_7dCW98WbT8AahB9d0RT0hfGLPMKuQOWy9Pg44i8PHbV4DnJZ0WC8Gd2IyEgvCu9PGYAW2&oh=00_AQLcrMEykHEFa6reEWQft3iuMbneZ3UYhm3msuxk6QyqPQ&oe=6AA48E5A",
       "tipo": "reels",
       "publicado_em": "2026-09-04T11:00:27+0000",
       "legenda": "👉Comente AULA para ter acesso à ala gratuita sobre autonomia de sono 😍",
-      "alcance": 16918,
+      "alcance": 16936,
       "curtidas": 379,
       "comentarios": 75,
       "salvamentos": 116,
       "compartilhamentos": 155,
-      "visualizacoes": 23259,
-      "engajamento": 734
+      "visualizacoes": 23265,
+      "engajamento": 734,
+      "seguidores_dia": 309
     },
     {
       "id": "17982971997062502",
       "permalink": "https://www.instagram.com/reel/DbkwSDqD7tn/",
-      "thumb": "https://scontent-gru1-1.cdninstagram.com/v/t51.82787-15/764005734_18465406921112114_4289923516699725963_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=TFd7cYF8_1cQ7kNvwGTi5YQ&_nc_oc=AdrzC3kXaEtedsnc66oS4svcJkgX_3RhjxgrgH7G_BSd6POWUnwkMc0GwYDpqf2rWDU&_nc_zt=23&_nc_ht=scontent-gru1-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQLQO3pp8ONCAeEYJTRdwVHwxhwyPDqLnFnPXlsrGbTmbOxCqgBI1H6iLCov64CrWQdJAvjaGq_s&oh=00_AQINxA7KqOdUN0JWDOCPVl4qc397u8Yn5YucnglbxiDZNg&oe=6AA4619F",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/764005734_18465406921112114_4289923516699725963_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFke5v1nzaglr4uJ9NGXMbe31b1v-YROmXfVvW_5hE6ZZ5IhD575O8DrP9Mv_oKV1wRKe9RAxGE0UXhRbtrf5HS&_nc_ohc=TFd7cYF8_1cQ7kNvwFzKaPV&_nc_oc=AdrmiRe_cJtIPYidgMJXUmUAc8w8i0vnXOoE-0WCXY6SX_S0gQ9OaAINn9o021bktqQ&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQJ_LNVkiHX6YovBsfCHN1tJFefPOwCEZOM580ciBvif54_cAjnCbeePV7b_g_qvGh_bfY4djAVJ&oh=00_AQJeZ8HPB4mvVrgu00tMQ86LYavHqicg1J_jzHwTdTj6fQ&oe=6AA4619F",
       "tipo": "reels",
       "publicado_em": "2026-08-03T11:00:25+0000",
       "legenda": "Comente aqui SONO25 e receba gratuitamente o e-book: Meu bebê não dorme no berço ❤",
@@ -540,12 +991,13 @@
       "salvamentos": 48,
       "compartilhamentos": 98,
       "visualizacoes": 20290,
-      "engajamento": 482
+      "engajamento": 482,
+      "seguidores_dia": null
     },
     {
       "id": "18136360957607263",
       "permalink": "https://www.instagram.com/reel/DbadCWNAYKn/",
-      "thumb": "https://scontent-gru2-1.cdninstagram.com/v/t51.71878-15/758456530_4597316560538295_8234271921581590661_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=fyPoK0CXci8Q7kNvwHj1UWs&_nc_oc=AdrhHsR-ix070JASR6bFq4brXntlfuqEigGEzMZ3mozEOOiRvnIITzalSgJqbFj4EHM&_nc_zt=23&_nc_ht=scontent-gru2-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQKkmivqe44IhKXgNkRaBdQ9otRcOi9zmI_hTZBUxd5gUK6w5bkM1WrQJ0aXwo9HCMAmW2WlE-4l&oh=00_AQIeTESspYgW88t33Xim5GN4SveqaQFBdvcsmAac0vz7eg&oe=6AA45C4E",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.71878-15/758456530_4597316560538295_8234271921581590661_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeHdUb_gXoyDnd830bfEGSpAxm-wadT-8inGb7Bp1P7yKQuN7F1EM0hPKs-v4JPS8oGfGlTA31r7GWyyl7EabiBm&_nc_ohc=fyPoK0CXci8Q7kNvwF0Zbi8&_nc_oc=Adrq89bR67PVHUmgOID3HG2cY0MZ2Zk9KryksFaMX4mYhtZKrifMi2ok0QNKwtijJ9I&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQJOo3PbsS1DE_Q4T4bouVgekYEA4MTXI2KUVVEr_ccWI37HxXuuy857PR5mGKHp9038GpSSu2uY&oh=00_AQIXBZnvKLssknPRSIE6zdLnRizD2sctdSbiaQ-Qi5vYjw&oe=6AA45C4E",
       "tipo": "reels",
       "publicado_em": "2026-07-30T11:00:27+0000",
       "legenda": "Durante a gestação é muito comum olhar para o formato do bico e pensar “será que vou conseguir amamentar?”, mas a verdade é que isso não def",
@@ -555,12 +1007,13 @@
       "salvamentos": 83,
       "compartilhamentos": 48,
       "visualizacoes": 54213,
-      "engajamento": 417
+      "engajamento": 417,
+      "seguidores_dia": null
     },
     {
       "id": "18112340662952653",
       "permalink": "https://www.instagram.com/reel/DcijxVqj4so/",
-      "thumb": "https://scontent-gru1-2.cdninstagram.com/v/t51.71878-15/785759006_1599376418248958_5111246517925787639_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=y32ax8cRo1wQ7kNvwFEjNSS&_nc_oc=Adr_W_Y4eQAuNwswCEuJl41UIOsS-fN5fPxqTNNSndTXnaTBIfG9JYtz1yO1V5IT-Jg&_nc_zt=23&_nc_ht=scontent-gru1-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQKRlQO_3vaWFZfhXcG-XSgjoYdHorjDHRN_BwSkSg6PGGAanvOshzArYQ40g-ANkZTyjO4hsuD3&oh=00_AQI9uLY6E59YvZ2SaqOz1NMj4E0bToMn0QvLo8Z3qBXKqg&oe=6AA47A37",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.71878-15/785759006_1599376418248958_5111246517925787639_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeHC9DNSmquigmWKmavogJNfsXx9Gtstal2xfH0a2y1qXRqSZvNjHpbO0ceSZ_Ds2Tz_SIfpyg6gJuFyCfw3Om4p&_nc_ohc=y32ax8cRo1wQ7kNvwHcZwPU&_nc_oc=AdpYan9Ukq5f-kHESqthSFv-GODNhmVgLfLYMROFwMR_P2aK8QMZkVARZMnR-N-NULE&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQIlu75uPHInmfxYTo-Vwz2uFC2YxuXJIydaln50II4KQ7A24tq5pdw6hDPp7xupT8lCVaOIjacW&oh=00_AQLmtE6x8cEvko7Kt-73WszDFRrxhwc5pU_T9nQofKSnpw&oe=6AA47A37",
       "tipo": "reels",
       "publicado_em": "2026-08-27T11:00:27+0000",
       "legenda": "Comente #AMA \npara receber o ebook gratuíto \"Por que meu bebê parece não sacviar no seio?\" 🤗\n#recemnascido #newborn #gestacao #maedeprimeir",
@@ -569,13 +1022,14 @@
       "comentarios": 49,
       "salvamentos": 47,
       "compartilhamentos": 42,
-      "visualizacoes": 17728,
-      "engajamento": 367
+      "visualizacoes": 17733,
+      "engajamento": 367,
+      "seguidores_dia": 291
     },
     {
       "id": "18041134301814184",
       "permalink": "https://www.instagram.com/reel/DcTG26miU_T/",
-      "thumb": "https://scontent-gru2-2.cdninstagram.com/v/t51.82787-15/778551140_18468907204112114_8598568963269148472_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=L39-3Rb_E9YQ7kNvwENgJFH&_nc_oc=AdrzgY-MwNc-Qfr0oHspQK_OV4wf5sPZ6qcv3jx2Gb49bdbIwhTH6s4IPyTWGqVsEGA&_nc_zt=23&_nc_ht=scontent-gru2-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQJlJFR_fR54-9Rczi-uDhoHp9uspISGyfUsDtpi8uRDWU93BoQErBee3C8I96vCpc8VY8ID7Ddl&oh=00_AQKKVDsldlFYwWg9S4ZCtNd7-dQReGxi9xdSfxm6Pn-_bg&oe=6AA48658",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/778551140_18468907204112114_8598568963269148472_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFr0MafEBGA5l4AYriaQ2COKuG3X1QkIbMq4bdfVCQhszZl2cQ8BtSZRJV1sSromcaDvHWRiS2eqkoGx8C-KDq_&_nc_ohc=L39-3Rb_E9YQ7kNvwE5WE-F&_nc_oc=AdqhsQRh48vaBW5mWwqJ5-wVfM3yIqoEhc0UjngJNm-meCbB7w-emw-zg9qjLHKqKIk&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQJ7bxWIF8lTA_Hx3_Wh63gh7jO14oc0QxKQ2NtK8niX6bkznlo0QT26Wk1xtWmQBp7To4HhkPOa&oh=00_AQJIDpsxgDhY-vjfoQyPGj0xzF-y9lCeZiBZR4R4Il9ugg&oe=6AA48658",
       "tipo": "reels",
       "publicado_em": "2026-08-21T11:00:25+0000",
       "legenda": "Comente aqui SONO25 e receba gratuitamente o e-book: Meu bebê não dorme no berço ❤",
@@ -585,12 +1039,13 @@
       "salvamentos": 26,
       "compartilhamentos": 34,
       "visualizacoes": 12083,
-      "engajamento": 275
+      "engajamento": 275,
+      "seguidores_dia": 251
     },
     {
       "id": "18149213527527855",
       "permalink": "https://www.instagram.com/reel/Dbx9I9sj4li/",
-      "thumb": "https://scontent-gru1-2.cdninstagram.com/v/t51.82787-15/768258388_18466319683112114_4415427646750314684_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=iZL7Lfs0jSUQ7kNvwHvfeYk&_nc_oc=AdpAWWYsNaT5FuoAUI-3orsbVIm5C-WJ68kF_Kem7OEXYPBOXcNzUkOClmsJO4zMgtw&_nc_zt=23&_nc_ht=scontent-gru1-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQKlSvf1KdxPsRZR03FrcK0pbpsQpihVUiT2jln0yCQi0yD5nqgn3wUHTV2aYGXv6oFWe4vw8tot&oh=00_AQIr2vrqjjtrYNnHZQN1Z0pox9aPwdvCf5rNClCEc9pmIA&oe=6AA46227",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/768258388_18466319683112114_4415427646750314684_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeGOz4zREkTPw9SZrCz-r2AhaYm6xukfx4lpibrG6R_HiZEnEfL53ap4bFo186F5I5jLPaz8gjvEK1NeS_y5Yyx6&_nc_ohc=iZL7Lfs0jSUQ7kNvwEgy8cB&_nc_oc=AdqB29mMUqVf5QwFxqqqYfnyOnT084VD9hvwLo-nh16Ygxdzmqe168c-H0r0SWzNiAY&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQKAc3ICnX1kjhEYZnlhm1sWH7aaUeVWqi3Gej01GyWXq2dmsJyVeLVIfvXAL1DJvCzsYP4bq-OA&oh=00_AQJCTlIcmj0nej9DWxFacQs0ggiIChpRvNbuJSVQUErHDw&oe=6AA46227",
       "tipo": "reels",
       "publicado_em": "2026-08-08T14:00:24+0000",
       "legenda": "QUER O LINK? Comente \"QUERO\" ❤️\n\nBabá eletrônica\nSegurança do bebê\nBebê dormindo seguro\nSono do recém nascido\nBabá eletrônica para bebê\nEnxo",
@@ -600,12 +1055,13 @@
       "salvamentos": 29,
       "compartilhamentos": 16,
       "visualizacoes": 15245,
-      "engajamento": 267
+      "engajamento": 267,
+      "seguidores_dia": null
     },
     {
       "id": "18101331461264329",
       "permalink": "https://www.instagram.com/reel/Db8SgxWAjwA/",
-      "thumb": "https://scontent-gru1-2.cdninstagram.com/v/t51.82787-15/774165790_18467040709112114_41225227456708508_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=eNMjKBZJCfkQ7kNvwGvaY_A&_nc_oc=AdrO9fL9fGGQ_WHN5B1zDWtGsfiFZZdZia15Ut2izwMraGt8ZPRXGSwSypxb09sr8DA&_nc_zt=23&_nc_ht=scontent-gru1-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQJtUoLoyJ4jH7b8C6pucgKytzUtDa6PaxgYUDXk5yliHppQJSh1qwy9um-jkXWYPOZFHUGinf98&oh=00_AQJAuOTRrI6dbnfGW623SqA5iebh3OYREzSsOx1F65deCw&oe=6AA47315",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/774165790_18467040709112114_41225227456708508_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFRi302PWFqj-fOE8sGJNwwTTiqppyplWxNOKqmnKmVbJ5z7pltfnRP4BnN58BGeU7cB6YjpNEGO_j39NIgzrV-&_nc_ohc=eNMjKBZJCfkQ7kNvwGYyU2h&_nc_oc=AdrI66nwM7dW0IUKATycpJ66e-ET0OzGW_jpcPg-1fKYA50blZGvgf4C9iR7viFDdaw&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQLi-_vcyvL3IAeVnrPaZ7iTquhaudPxdc_JbJzsd9Zerp910YDSPXuOvxOWrAUYUNT9dBp3cbvC&oh=00_AQKEfBZeuJzyoImKbdIkSx-8ZNwrr8l6f1JFUH8PEoW1rA&oe=6AA47315",
       "tipo": "reels",
       "publicado_em": "2026-08-12T14:00:25+0000",
       "legenda": "Comenta QUERO\nque eu te mando o link deste produto, e vários outros em promoção, no meu grupo de Ofertas Maternas!! 🥰\n\nNebulizador portátil",
@@ -615,12 +1071,13 @@
       "salvamentos": 31,
       "compartilhamentos": 27,
       "visualizacoes": 19894,
-      "engajamento": 256
+      "engajamento": 256,
+      "seguidores_dia": null
     },
     {
       "id": "18000832649977685",
       "permalink": "https://www.instagram.com/reel/Dbf7VRgjbvg/",
-      "thumb": "https://scontent-gru2-1.cdninstagram.com/v/t51.71878-15/762864386_3175421976181829_4484324067536914193_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=j609Y6G6XcAQ7kNvwFZ5uNZ&_nc_oc=AdrwZyV75WzFl8qNz2bQCOC9REUNQRn2riHRW_dbg1lWdH0cT45ZTEQKL-9sP7EZMcg&_nc_zt=23&_nc_ht=scontent-gru2-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQI6FHVBYBv1ITpASnKX3BpdMg-nG3AeqdtV27ZSIjJgS5sJJRRUb5o0ZWvCXXuPfyl44QqbJVXm&oh=00_AQIFPcLnxVVlf_4D3M7FhsN-VQUv_CAi0VvtFPBpvh_B-A&oe=6AA4719D",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.71878-15/762864386_3175421976181829_4484324067536914193_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeFcmG3-SnO2KuiPAoqgMlemzJEkAGC3GnnMkSQAYLcaeXQ6EzA_SYSw5T5Tnsi22rrjeCJeGSmemszA3f8A4YI-&_nc_ohc=j609Y6G6XcAQ7kNvwHao2_4&_nc_oc=Ado3QzlksjujhOBBKtAO6sqfj5r-09lwxUYL63C6Ws7LQ3GBF8QDh0ykT4NBmbDyvVU&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQLF_DBS9vutJmzLk9mOxFx7k-JmYjwORsngsDZt_Ht2kIN7qvLbTP8LoBjb31VVm-18c51JMIIS&oh=00_AQKimfRVHulVbTjQ2VWmrehYrOzEC83lnz0cehB2KVIOag&oe=6AA4719D",
       "tipo": "reels",
       "publicado_em": "2026-08-01T14:00:24+0000",
       "legenda": "QUER O LINK? Comente \"QUERO\" ❤️\n\nColetor de leite materno\nColetor de silicone para amamentação\nExtração confortável\nColetor portátil para mã",
@@ -630,12 +1087,13 @@
       "salvamentos": 48,
       "compartilhamentos": 41,
       "visualizacoes": 17255,
-      "engajamento": 245
+      "engajamento": 245,
+      "seguidores_dia": null
     },
     {
       "id": "18203485978366054",
       "permalink": "https://www.instagram.com/reel/DcBJ-PBjLxG/",
-      "thumb": "https://scontent-gru2-2.cdninstagram.com/v/t51.71878-15/774515217_1592221555588415_7429456373999111894_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=cSuwcp3k_HEQ7kNvwEtXvka&_nc_oc=AdqDAjvBClsDCs0MOnIKTTxnTHhAYnud9GOKlaRQjNDGz8Cfav3VpZvbhLb4_rXw7hs&_nc_zt=23&_nc_ht=scontent-gru2-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQLJQPE-7y_hdy-HXCzROfeeP03_d6d0mKUHUDqwQwDAPlZPm04Zp-CqQUgHRNHj02em_EWNxaKW&oh=00_AQKaR3g1kw8fTYg6irjeEBKY-JB8FRE_EhQPPzA4XGpoXQ&oe=6AA47EA6",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.71878-15/774515217_1592221555588415_7429456373999111894_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeHX6hOyoZdhssBYEf5REdY6q0-iAJOsra2rT6IAk6ytrcrjhKyZCPSCXo8eNjy3EBMV1iSaNRdcxcQIypf0KgkZ&_nc_ohc=cSuwcp3k_HEQ7kNvwHUCdWZ&_nc_oc=AdqyCq1wT6BEetIEfgkcfZjEj_Rf3QYPcfd5WuXZpuCwqmOPOcHNyLK6mkseAMGPSDg&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQLVMsUgjpstdOdHeElBdojKux4m2Nfcz9P1GmPK7dbOksOxxW17oqLWjnML59os__q2mrZMldvz&oh=00_AQIsc3UxdoI48S13TLPgF8RPM9yS-kkMs4GX2TawprYPTQ&oe=6AA47EA6",
       "tipo": "reels",
       "publicado_em": "2026-08-14T11:01:19+0000",
       "legenda": "QUER O LINK? Comente \"QUERO\" ❤️\n\nA poltrona de amamentação é o item de enxoval mais usado pela mãe e bebê!! A Damie faz do seu jeitinho, per",
@@ -645,12 +1103,13 @@
       "salvamentos": 12,
       "compartilhamentos": 35,
       "visualizacoes": 9279,
-      "engajamento": 204
+      "engajamento": 204,
+      "seguidores_dia": 311
     },
     {
       "id": "17990993966993867",
       "permalink": "https://www.instagram.com/reel/DclIPVBFDc9/",
-      "thumb": "https://scontent-gru1-2.cdninstagram.com/v/t51.71878-15/785776026_1565128078404216_5612436012628018470_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=eQFgWXkzK20Q7kNvwFmISZB&_nc_oc=Adr1zqKNT6qxCwJF_DWgUlRlb1OOD7YZqsjEqsRvmVPfH-S80NsjKIo4DbMzvIjopiY&_nc_zt=23&_nc_ht=scontent-gru1-2.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQL1uQHjQH9IbqYKa-TFO7aIMFoM2hgHkzQpzLCXuRLjL9ISdSDNmxSvnpLkZnXOFg4ByoMZ40wh&oh=00_AQKUi-qkfJtN_JV7t7A9DBaI6MD5FYRZGZOfKhtiSmkRIg&oe=6AA46F56",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.71878-15/785776026_1565128078404216_5612436012628018470_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeEu-WSHPgYAdDH5JMrr_e9paTn7F_3Xkd9pOfsX_deR3zowfe_VPDc4xz5HH22Xg9vxUriPFI9BY0cirX05nnsF&_nc_ohc=eQFgWXkzK20Q7kNvwHSr2_K&_nc_oc=Adr69glIy_I0QbidL6xpqCw4tgi3WebH8A42kbe-m8KIKI4bVhqNR1cSVHkZVtevaJg&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQJZHZ9DCwIiIRVDHZ8HnMG78OX2-n-dsqPKyzjWzmIddKHqQPF8XQ6Ku0pGw7l-nOxJDrKk7UJj&oh=00_AQJr5p6ISDuGUaTtL6mPtQYdZLWPXWHxRpEyUHP_r1Ju5w&oe=6AA46F56",
       "tipo": "reels",
       "publicado_em": "2026-08-28T11:00:27+0000",
       "legenda": "👉Comente AULA para ter acesso à ala gratuita sobre autonomia de sono 😍",
@@ -660,27 +1119,29 @@
       "salvamentos": 7,
       "compartilhamentos": 6,
       "visualizacoes": 6052,
-      "engajamento": 112
+      "engajamento": 112,
+      "seguidores_dia": 238
     },
     {
       "id": "17967886428155315",
       "permalink": "https://www.instagram.com/reel/Dc-4IzeEdZz/",
-      "thumb": "https://scontent-gru1-1.cdninstagram.com/v/t51.82787-15/799910229_18472082071112114_7908718323234765455_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=5F33P86UGHMQ7kNvwHsAa0W&_nc_oc=AdoRR424IdHKTlIrMFgMu0QIB070DSoWonFxAuOVeqEEsZX337ufqdQLNa1VmYb-v1A&_nc_zt=23&_nc_ht=scontent-gru1-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQKMB2WkKvb2XeUZ0i-V0B-E0KCG3zrI1JNdqnuLIQEUFsIgII-YvositMPKFmyl81Ufg2B17i-X&oh=00_AQI9v0PQxdLZ5VIVAhQJRnA3X30SDpVBmxivh_hsbmBhAg&oe=6AA45CDE",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.82787-15/799910229_18472082071112114_7908718323234765455_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeHBQuet_pZbPHA1-CC97a6XGDVwOBXKWk0YNXA4FcpaTRs2Rm-KIHC6H5r-Bhpdh7C6-0Sn8fv87zD-uwb7EE9N&_nc_ohc=5F33P86UGHMQ7kNvwFdG8Br&_nc_oc=AdozGbGjKW5SJCmD_e4KvEjQQXzmSopjWBeci0z7ax1H0CcXQj9Rb_AIimQJ9syrfrc&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQK8beF7Invpjbjjb3fsAoJ5X_xtA37ajZNfpYrEjUwibQA7NJuM0SE4XU3jkXq7Dv98QUwIc0KF&oh=00_AQI3A62UBMqCqqZSKFi86b5HotGnqb5Ju2YwPG6DQdOkdQ&oe=6AA45CDE",
       "tipo": "reels",
       "publicado_em": "2026-09-07T11:00:32+0000",
       "legenda": "Comente aqui SONO25 e receba gratuitamente o e-book: Meu bebê não dorme no berço ❤",
       "alcance": 1560,
-      "curtidas": 45,
-      "comentarios": 31,
-      "salvamentos": 10,
+      "curtidas": 54,
+      "comentarios": 37,
+      "salvamentos": 12,
       "compartilhamentos": 0,
-      "visualizacoes": 3411,
-      "engajamento": 87
+      "visualizacoes": 4100,
+      "engajamento": 104,
+      "seguidores_dia": 0
     },
     {
       "id": "18015386360980040",
       "permalink": "https://www.instagram.com/reel/DcyVA4qiO85/",
-      "thumb": "https://scontent-gru2-1.cdninstagram.com/v/t51.71878-15/791890864_27981798981447137_1802033351654379935_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=Iw_FBvg5ZTQQ7kNvwGFp2PX&_nc_oc=AdrQ0G1l2Ms_tsXBhHEGB1SBgsuOq1a3BdL4ePpzq_141KSp277cTtpV-kh5WMiz7CQ&_nc_zt=23&_nc_ht=scontent-gru2-1.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=E94zPj2sVJ_t7BfcZm05dg&_nc_tpa=Q5bMBQIgeXPk-kOjCEVlMnAlRY-QaYLXBoUOAn0mJejisPiJQqVHIItnyrFDC-KetohHINZoyuBe8OaY&oh=00_AQLirnlQRRfVfU5QHCs7Pyn5p4PYu4uc93otKw0M77-WUw&oe=6AA47702",
+      "thumb": "https://scontent.cdninstagram.com/v/t51.71878-15/791890864_27981798981447137_1802033351654379935_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=107&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_eui2=AeH8nY35KX9lmiG6H9-1ghfwAlZC-vzU8pkCVkL6_NTymbkPLkwQMFZRZM7Yo975V-spqYFiEDfUAjnHP_fn-IOn&_nc_ohc=Iw_FBvg5ZTQQ7kNvwF_hTHt&_nc_oc=AdpiU2hQL6HBoN3c9lqnl--NitVWnp2X6YYpFhrwuqPaoXETZIH00PAB9KBoWRO-LOU&_nc_zt=23&_nc_ht=scontent.cdninstagram.com&edm=AM6HXa8EAAAA&_nc_gid=7wp8HKsfFDJqce72sd_j-A&_nc_tpa=Q5bMBQLxhp8TJNd33SFvpjViRx4GoNtwHiS12_sDaYpz7Y7u4aL_SsTSdqJ7y0PSk7irlDSsCspV01PK&oh=00_AQKenNX9HOCibnM7JyCKn_DqUSWIQ1IY_9QKvcAw1cIOKw&oe=6AA47702",
       "tipo": "reels",
       "publicado_em": "2026-09-02T14:00:24+0000",
       "legenda": "Comenta QUERO\nque eu te mando o link deste produto e vários outros em promoção, no meu grupo de Ofertas Maternas!! 🥰\n\n#banhodobebê \n#rotina",
@@ -689,8 +1150,9 @@
       "comentarios": 34,
       "salvamentos": 7,
       "compartilhamentos": 6,
-      "visualizacoes": 6151,
-      "engajamento": 79
+      "visualizacoes": 6153,
+      "engajamento": 79,
+      "seguidores_dia": 531
     }
   ]
 }
