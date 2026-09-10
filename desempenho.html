@@ -256,5 +256,6 @@ function boot(d){
 fetch('./dados.json?_='+Date.now()).then(r=>r.json()).then(boot)
   .catch(e=>document.getElementById('sub').textContent='erro ao carregar dados.json');
 </script>
+<script src="sidebar.js" defer></script>
 </body>
 </html>
