@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta name="theme-color" content="#3A5049">
 <style>
-  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--hover:#E9F3F1;--line:#DCE8E6;--ink:#23332F;--mute:#6E827D;--dim:#93A5A1;--gold:#E3A31B;--gold2:#C88C10;--goldink:#8A5E0A;--goldbg:#FDF1D6;--teal:#17A2A0;--menu:#3A5049;--menuTxt:#E7EEEC;--menuMute:#9DB3AD}
+  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--hover:#E9F3F1;--line:#DCE8E6;--ink:#23332F;--mute:#6E827D;--dim:#93A5A1;--gold:#E3A31B;--gold2:#C88C10;--goldink:#8A5E0A;--goldbg:#FDF1D6;--menu:#3A5049;--menuTxt:#E7EEEC;--menuMute:#9DB3AD}
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.5;overflow-x:hidden}
   a{color:inherit;text-decoration:none}
@@ -19,39 +19,55 @@
   .top h1{font-size:1.18rem;font-weight:800;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .top p{color:var(--menuMute);font-size:.82rem;margin-top:2px}
   .top .back{flex:0 0 auto;color:var(--menuTxt);font-size:.82rem;font-weight:700;background:rgba(255,255,255,.10);padding:8px 13px;border-radius:10px}
-  .top .back:hover{background:rgba(255,255,255,.18)}
   .wrap{max-width:1000px;margin:0 auto;padding:24px 18px 70px}
 
-  .drop{border:2px dashed var(--line);border-radius:18px;background:var(--panel);padding:26px 20px;text-align:center;cursor:pointer;transition:.15s;box-shadow:0 1px 2px rgba(35,51,47,.04)}
+  .tabs{display:flex;gap:6px;margin-bottom:14px}
+  .tabs button{font-size:13px;font-weight:700;border:1px solid var(--line);background:#fff;color:var(--mute);border-radius:11px;padding:9px 15px;cursor:pointer;font-family:inherit}
+  .tabs button.on{background:var(--menu);color:#fff;border-color:var(--menu)}
+
+  .drop{border:2px dashed var(--line);border-radius:18px;background:var(--panel);padding:24px 20px;text-align:center;cursor:pointer;transition:.15s;box-shadow:0 1px 2px rgba(35,51,47,.04)}
   .drop:hover,.drop.over{border-color:var(--gold);background:var(--goldbg)}
-  .drop .ic{width:48px;height:48px;margin:0 auto 10px;border-radius:14px;background:var(--goldbg);color:var(--gold2);display:grid;place-items:center}
-  .drop .ic svg{width:26px;height:26px;fill:currentColor}
+  .drop .ic{width:46px;height:46px;margin:0 auto 9px;border-radius:13px;background:var(--goldbg);color:var(--gold2);display:grid;place-items:center}
+  .drop .ic svg{width:24px;height:24px;fill:currentColor}
   .drop h2{font-size:1rem;font-weight:800}
   .drop p{color:var(--mute);font-size:.85rem;margin-top:4px}
   .drop input{display:none}
+  .status{margin:12px 2px 0;font-size:.85rem;color:var(--mute);min-height:18px}
 
-  .status{margin:14px 2px 0;font-size:.85rem;color:var(--mute);min-height:20px}
-  .status b{color:var(--goldink)}
-
-  .head{display:flex;justify-content:space-between;align-items:baseline;margin:26px 4px 12px}
+  .head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:24px 4px 12px;flex-wrap:wrap}
   .head h3{font-size:.82rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
   .head .n{font-size:12.5px;color:var(--mute)}
+  .srch{flex:1;min-width:180px;max-width:340px;border:1px solid var(--line);border-radius:11px;padding:9px 13px;font-family:inherit;font-size:14px;background:#fff;color:var(--ink)}
+  .srch:focus{outline:2px solid var(--goldbg);border-color:var(--gold)}
 
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(154px,1fr));gap:14px}
   .item{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 16px rgba(35,51,47,.05)}
-  .item .media{aspect-ratio:1;background:var(--hover);display:block;position:relative}
-  .item .media img{width:100%;height:100%;object-fit:cover;display:block}
-  .item .media .vid{width:100%;height:100%;display:grid;place-items:center;font-size:34px;color:var(--menu)}
+  .item .media{aspect-ratio:1;background:var(--hover);display:grid;place-items:center;position:relative}
+  .item .media img{width:100%;height:100%;object-fit:cover}
+  .item .media .v{color:#5B726B}.item .media .v svg{width:36px;height:36px;fill:currentColor}
+  .item .media .pl{position:absolute;left:7px;bottom:7px;width:18px;height:18px;fill:#fff;filter:drop-shadow(0 1px 1px rgba(0,0,0,.5))}
   .item .meta{padding:9px 11px}
-  .item .fn{font-size:11.5px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}
+  .item .fn{font-size:12px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:700}
   .item .sz{font-size:10.5px;color:var(--dim);margin-top:1px}
   .item .acts{display:flex;gap:6px;padding:0 11px 11px}
-  .item button{flex:1;font-size:11px;font-weight:700;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:5px;cursor:pointer;font-family:inherit}
+  .item button{flex:1;font-size:11px;font-weight:700;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:6px;cursor:pointer;font-family:inherit}
   .item button:hover{border-color:var(--gold);color:var(--goldink)}
   .item button.del:hover{border-color:#c0442e;color:#c0442e}
   .empty{grid-column:1/-1;text-align:center;color:var(--mute);padding:40px 20px;background:var(--panel);border:1px solid var(--line);border-radius:16px}
-  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--menu);color:#fff;padding:10px 18px;border-radius:999px;font-size:13px;font-weight:600;opacity:0;transition:.2s;pointer-events:none}
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--menu);color:#fff;padding:10px 18px;border-radius:999px;font-size:13px;font-weight:600;opacity:0;transition:.2s;pointer-events:none;z-index:30}
   .toast.show{opacity:1}
+  .modal{position:fixed;inset:0;background:rgba(20,30,27,.5);display:none;place-items:center;padding:16px;z-index:20}
+  .modal.show{display:grid}
+  .modal .box{background:var(--panel);border-radius:18px;max-width:560px;width:100%;max-height:86vh;overflow:auto;padding:18px}
+  .modal h3{font-size:15px;font-weight:800;margin-bottom:4px}
+  .modal .sub{font-size:12.5px;color:var(--mute);margin-bottom:12px}
+  .nmrow{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+  .nmrow .th{width:46px;height:46px;border-radius:9px;overflow:hidden;background:var(--hover);flex:0 0 auto;display:grid;place-items:center}
+  .nmrow .th img{width:100%;height:100%;object-fit:cover}.nmrow .th .v{color:#5B726B}.nmrow .th .v svg{width:20px;height:20px;fill:currentColor}
+  .nmrow input{flex:1;border:1px solid var(--line);border-radius:10px;padding:9px 11px;font-family:inherit;font-size:14px;background:var(--card)}
+  .mbtn{margin-top:14px;display:flex;gap:8px;justify-content:flex-end}
+  .mbtn button{font-size:13px;font-weight:700;border-radius:10px;padding:9px 16px;cursor:pointer;border:1px solid var(--line);background:var(--card);font-family:inherit}
+  .mbtn button.ok{background:var(--menu);color:#fff;border-color:var(--menu)}
 </style>
 </head>
 <body>
@@ -61,69 +77,114 @@
   <a class="back" href="index.html">← HUB</a>
 </div>
 <div class="wrap">
-  <label class="drop" id="drop">
-    <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l4 4h-3v6h-2V7H8l4-4zM5 15h14v4a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4z"/></svg></div>
-    <h2>Arraste ou clique pra subir</h2>
-    <p>JPG, PNG, WEBP ou MP4 — vai pro banco de mídia do Manual</p>
-    <input type="file" id="file" accept="image/jpeg,image/png,image/webp,video/mp4,video/quicktime" multiple>
-  </label>
-  <div class="status" id="status"></div>
+  <div class="tabs"><button class="on" id="tLib" onclick="tab('lib')">🗂 Biblioteca</button><button id="tDrive" onclick="tab('drive')">☁️ Google Drive</button></div>
 
-  <div class="head"><h3>Na biblioteca</h3><span class="n" id="count"></span></div>
-  <div class="grid" id="grid"><div class="empty">carregando…</div></div>
+  <div id="libpane">
+    <label class="drop" id="drop">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l4 4h-3v6h-2V7H8l4-4zM5 15h14v4a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4z"/></svg></div>
+      <h2>Arraste ou clique pra subir</h2>
+      <p>Vou pedir um nome pra cada arquivo — pra você localizar depois</p>
+      <input type="file" id="file" accept="image/jpeg,image/png,image/webp,video/mp4,video/quicktime" multiple>
+    </label>
+    <div class="status" id="status"></div>
+
+    <div class="head"><h3>Na biblioteca</h3><input class="srch" id="srch" placeholder="Localizar por nome…"><span class="n" id="count"></span></div>
+    <div class="grid" id="grid"><div class="empty">carregando…</div></div>
+  </div>
+
+  <div id="drivepane" hidden>
+    <div class="empty" id="drivebody">carregando…</div>
+  </div>
 </div>
+
+<!-- nomear -->
+<div class="modal" id="nomear"><div class="box">
+  <h3>Dê um nome pra cada arquivo</h3>
+  <div class="sub">É como você vai localizar depois na biblioteca.</div>
+  <div id="nmlist"></div>
+  <div class="mbtn"><button onclick="document.getElementById('nomear').classList.remove('show');pend=null;">Cancelar</button><button class="ok" id="nmok">Enviar</button></div>
+</div></div>
 <div class="toast" id="toast"></div>
 
 <script>
 const API='https://n8n-n8n.xktssy.easypanel.host/webhook/motor-midia';
 const grid=document.getElementById('grid'), statusEl=document.getElementById('status');
-const isVid=t=>/video/.test(t||'');
+const isVid=t=>/video|\.mp4|\.mov/i.test(t||'');
+const VIC='<svg viewBox="0 0 24 24"><path d="M4 6h11a2 2 0 0 1 2 2v1.4l3.1-2a.6.6 0 0 1 .9.5v8.2a.6.6 0 0 1-.9.5L17 15.1V16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/></svg>';
+const PLAY='<svg class="pl" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
 const fmtSz=n=>n>=1048576?(n/1048576).toFixed(1)+' MB':n>=1024?Math.round(n/1024)+' KB':'<1 KB';
+const esc=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const labelDe=n=>String(n||'').replace(/-\d{10,}\./,'.').replace(/\.[^.]+$/,'').replace(/[-_]+/g,' ').trim()||n;
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1900);}
+let cache=[];
 
-function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800);}
-
+function pinta(){
+  const q=(document.getElementById('srch').value||'').toLowerCase();
+  const arr=cache.filter(a=>labelDe(a.nome).toLowerCase().includes(q));
+  document.getElementById('count').textContent=arr.length+(arr.length===1?' arquivo':' arquivos');
+  grid.innerHTML=arr.map(a=>{
+    const vid=isVid(a.tipo);
+    const media=a.poster?`<img src="${a.poster}">`+(vid?PLAY:''):(vid?`<div class="v">${VIC}</div>`:`<img src="${a.url}" loading="lazy">`);
+    return `<div class="item"><div class="media">${media}</div>
+      <div class="meta"><div class="fn" title="${esc(labelDe(a.nome))}">${esc(labelDe(a.nome))}</div><div class="sz">${vid?'vídeo · ':''}${fmtSz(a.tamanho)}</div></div>
+      <div class="acts"><button onclick="copiar('${a.url}')">Copiar URL</button><button class="del" onclick="apagar('${a.nome.replace(/'/g,'')}')">Apagar</button></div></div>`;
+  }).join('') || `<div class="empty">Nada encontrado.</div>`;
+}
 async function carregar(){
-  try{
-    const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'list'})}).then(r=>r.json());
-    const arr=r.arquivos||[];
-    document.getElementById('count').textContent=arr.length+(arr.length===1?' arquivo':' arquivos');
-    grid.innerHTML=arr.map(a=>`
-      <div class="item">
-        <div class="media">${isVid(a.tipo)?`<div class="vid">🎬</div>`:`<img src="${a.url}" loading="lazy" alt="">`}</div>
-        <div class="meta"><div class="fn" title="${a.nome}">${a.nome}</div><div class="sz">${fmtSz(a.tamanho)}</div></div>
-        <div class="acts">
-          <button onclick="copiar('${a.url}')">Copiar URL</button>
-          <button class="del" onclick="apagar('${a.nome.replace(/'/g,"")}')">Apagar</button>
-        </div>
-      </div>`).join('') || `<div class="empty">Nada ainda — suba a primeira mídia acima.</div>`;
+  try{ const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'list'})}).then(r=>r.json());
+    cache=r.arquivos||[]; pinta();
   }catch(e){ grid.innerHTML=`<div class="empty">erro ao carregar</div>`; }
 }
-function copiar(u){ navigator.clipboard.writeText(u); toast('URL copiada'); }
-async function apagar(nome){
-  if(!confirm('Apagar '+nome+'?'))return;
-  await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'delete',nome})});
-  toast('apagado'); carregar();
-}
+document.getElementById('srch').oninput=pinta;
+window.copiar=u=>{navigator.clipboard.writeText(u);toast('URL copiada');};
+window.apagar=async nome=>{ if(!confirm('Apagar '+nome+'?'))return; await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'delete',nome})}); toast('apagado'); carregar(); };
 
-async function subir(files){
-  for(const f of files){
-    statusEl.innerHTML=`enviando <b>${f.name}</b>…`;
-    const b64=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result.split(',')[1]);r.onerror=rej;r.readAsDataURL(f);});
-    try{
-      const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({acao:'upload',mime:f.type||'image/jpeg',nome_base:f.name.replace(/\.[^.]+$/,''),base64:b64})}).then(r=>r.json());
-      if(!r.ok) throw 0;
-    }catch(e){ statusEl.innerHTML=`falhou em <b>${f.name}</b>`; }
-  }
-  statusEl.textContent='pronto ✓'; setTimeout(()=>statusEl.textContent='',2500);
-  carregar();
-}
-
-const drop=document.getElementById('drop'), file=document.getElementById('file');
-file.onchange=e=>{ if(e.target.files.length) subir(e.target.files); file.value=''; };
+// upload com nome obrigatório + poster de vídeo
+let pend=null;
+document.getElementById('file').onchange=e=>{if(e.target.files.length)abrirNomear([...e.target.files]);e.target.value='';};
+const drop=document.getElementById('drop');
 ['dragover','dragenter'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('over');}));
 ['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove('over');}));
-drop.addEventListener('drop',e=>{ if(e.dataTransfer.files.length) subir(e.dataTransfer.files); });
+drop.addEventListener('drop',e=>{if(e.dataTransfer.files.length)abrirNomear([...e.dataTransfer.files]);});
+function abrirNomear(files){ pend=files;
+  document.getElementById('nmlist').innerHTML=files.map((f,i)=>`<div class="nmrow"><div class="th">${isVid(f.type)?`<div class="v">${VIC}</div>`:`<img src="${URL.createObjectURL(f)}">`}</div><input data-i="${i}" value="${esc(f.name.replace(/\.[^.]+$/,''))}" placeholder="nome pra localizar"></div>`).join('');
+  document.getElementById('nomear').classList.add('show');
+}
+document.getElementById('nmok').onclick=async()=>{
+  const inputs=[...document.querySelectorAll('#nmlist input')];
+  if(inputs.some(x=>!x.value.trim())){toast('dê um nome a cada arquivo');return;}
+  document.getElementById('nomear').classList.remove('show');
+  const files=pend; pend=null;
+  for(let i=0;i<files.length;i++){ await subirUm(files[i], inputs[i].value.trim()); }
+  statusEl.textContent='pronto ✓'; setTimeout(()=>statusEl.textContent='',2500); carregar();
+};
+function capturaPoster(f){return new Promise(res=>{
+  const v=document.createElement('video');v.muted=true;v.playsInline=true;v.preload='metadata';
+  const url=URL.createObjectURL(f);v.src=url;let done=false;const fin=d=>{if(done)return;done=true;URL.revokeObjectURL(url);res(d||'')};
+  v.onloadeddata=()=>{try{v.currentTime=Math.min(1,(v.duration||3)/3)}catch(e){fin('')}};
+  v.onseeked=()=>{try{const w=Math.min(720,v.videoWidth||720),h=Math.round(w*((v.videoHeight||1280)/(v.videoWidth||720)));const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(v,0,0,w,h);fin(c.toDataURL('image/jpeg',0.72))}catch(e){fin('')}};
+  v.onerror=()=>fin('');setTimeout(()=>fin(''),7000);
+});}
+async function subirUm(f,nome){
+  statusEl.innerHTML='enviando <b>'+esc(nome)+'</b>…';
+  const b64=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result.split(',')[1]);r.onerror=rej;r.readAsDataURL(f);});
+  const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'upload',mime:f.type||'image/jpeg',nome_base:nome,base64:b64})}).then(r=>r.json());
+  if(!r.ok){statusEl.innerHTML='falhou em <b>'+esc(nome)+'</b>';return;}
+  if(isVid(r.tipo)){ const p=await capturaPoster(f); if(p) await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'upload_poster',for:r.nome,base64:p.split(',')[1]})}).catch(()=>{}); }
+}
+
+// abas
+window.tab=async n=>{
+  document.getElementById('tLib').classList.toggle('on',n==='lib');
+  document.getElementById('tDrive').classList.toggle('on',n==='drive');
+  document.getElementById('libpane').hidden=n!=='lib';
+  document.getElementById('drivepane').hidden=n!=='drive';
+  if(n==='drive'){ const b=document.getElementById('drivebody'); b.textContent='carregando…';
+    const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'drive_list'})}).then(r=>r.json()).catch(()=>({}));
+    if(r.need_folder) b.innerHTML='☁️ A pasta do Google Drive ainda não foi conectada.<br>Me manda o link da pasta que eu ligo aqui.';
+    else b.textContent=(r.arquivos&&r.arquivos.length)?'':'pasta vazia';
+  }
+};
 carregar();
 </script>
 </body>

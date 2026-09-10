@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Calendário de posts · HUB Manual</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#3A5049">
+<style>
+  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--hover:#E9F3F1;--line:#DCE8E6;--ink:#23332F;--mute:#6E827D;--dim:#93A5A1;--gold:#E3A31B;--gold2:#C88C10;--goldink:#8A5E0A;--menu:#3A5049;--menuTxt:#E7EEEC;--menuMute:#9DB3AD;--live:#1E874B}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.5;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .top{background:var(--menu);color:var(--menuTxt);padding:18px 22px;display:flex;align-items:center;gap:14px}
+  .top .logo{width:42px;height:42px;border-radius:12px;flex:0 0 auto;overflow:hidden}
+  .top .logo img{width:100%;height:100%;display:block}
+  .top .tt{min-width:0;flex:1}
+  .top h1{font-size:1.18rem;font-weight:800;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .top p{color:var(--menuMute);font-size:.82rem;margin-top:2px}
+  .top .back{flex:0 0 auto;color:var(--menuTxt);font-size:.82rem;font-weight:700;background:rgba(255,255,255,.10);padding:8px 13px;border-radius:10px}
+  .wrap{max-width:1080px;margin:0 auto;padding:22px 18px 70px}
+
+  .bar{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+  .nav{display:flex;align-items:center;gap:8px}
+  .nav button{width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--menu);font-size:18px;cursor:pointer;display:grid;place-items:center}
+  .nav button:hover{border-color:var(--gold);color:var(--goldink)}
+  .nav .m{font-size:1.05rem;font-weight:800;min-width:170px;text-align:center}
+  .bar .sp{flex:1}
+  .bar .novo{background:var(--menu);color:#fff;border:none;border-radius:11px;padding:10px 16px;font-size:13.5px;font-weight:800;cursor:pointer;font-family:inherit}
+  .bar .novo:hover{background:#2f423c}
+
+  .cal{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 18px rgba(35,51,47,.05)}
+  .dows{display:grid;grid-template-columns:repeat(7,1fr);background:var(--card);border-bottom:1px solid var(--line)}
+  .dows div{padding:9px 6px;text-align:center;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
+  .grid{display:grid;grid-template-columns:repeat(7,1fr)}
+  .cell{min-height:104px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:6px;position:relative}
+  .cell:nth-child(7n){border-right:none}
+  .cell.out{background:#F3F8F7}
+  .cell .dn{font-size:12px;font-weight:700;color:var(--mute);margin-bottom:4px}
+  .cell.today .dn{background:var(--gold);color:#fff;border-radius:50%;width:22px;height:22px;display:grid;place-items:center}
+  .ev{display:flex;align-items:center;gap:7px;background:#FCF7EC;border:1px solid #EFE1BE;border-left:3px solid var(--gold);border-radius:8px;padding:5px 6px;margin-bottom:5px;cursor:pointer;overflow:hidden}
+  .ev:hover{border-color:var(--gold)}
+  .ev.rascunho{border-left-color:var(--dim)} .ev.publicado{border-left-color:var(--live)} .ev.erro{border-left-color:#B2432C}
+  .ev .th{width:22px;height:22px;border-radius:5px;overflow:hidden;background:var(--hover);flex:0 0 auto;display:grid;place-items:center}
+  .ev .th img{width:100%;height:100%;object-fit:cover}
+  .ev .th .v{width:13px;height:13px;fill:#5B726B}
+  .ev .tx{min-width:0;line-height:1.15}
+  .ev .tx b{font-size:10.5px;display:block}
+  .ev .tx small{font-size:9.5px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;max-width:100%}
+
+  .rasc{margin-top:20px}
+  .rasc h2{font-size:.82rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin-bottom:12px}
+  .rlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+  .rcard{display:flex;gap:11px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:11px;cursor:pointer;box-shadow:0 1px 2px rgba(35,51,47,.04)}
+  .rcard:hover{border-color:var(--gold)}
+  .rcard .th{width:48px;height:48px;border-radius:10px;overflow:hidden;background:var(--hover);flex:0 0 auto;display:grid;place-items:center;border:1px solid var(--line)}
+  .rcard .th img{width:100%;height:100%;object-fit:cover}.rcard .th .v{width:22px;height:22px;fill:#5B726B}
+  .rcard .tx{min-width:0}.rcard .tx b{font-size:13px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .rcard .tx small{font-size:11px;color:var(--mute)}
+  .empty{color:var(--mute);font-size:13px;padding:8px 2px}
+  @media(max-width:640px){.cell{min-height:78px}.ev .tx small{display:none}}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="logo"><img src="favicon.svg" alt=""></div>
+  <div class="tt"><h1>Calendário de posts</h1><p>Agendados e rascunhos do Manual</p></div>
+  <a class="back" href="publicador.html">← Publicador</a>
+</div>
+<div class="wrap">
+  <div class="bar">
+    <div class="nav"><button id="prev">‹</button><div class="m" id="mlabel">—</div><button id="next">›</button></div>
+    <div class="sp"></div>
+    <button class="novo" onclick="location.href='publicador.html'">+ Novo post</button>
+  </div>
+
+  <div class="cal">
+    <div class="dows"><div>Dom</div><div>Seg</div><div>Ter</div><div>Qua</div><div>Qui</div><div>Sex</div><div>Sáb</div></div>
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <div class="rasc">
+    <h2>Rascunhos (sem data)</h2>
+    <div class="rlist" id="rlist"><div class="empty">carregando…</div></div>
+  </div>
+</div>
+
+<script>
+const AGENDAR='https://n8n-n8n.xktssy.easypanel.host/webhook/motor-agendar';
+const VIC='<svg class="v" viewBox="0 0 24 24"><path d="M4 6h11a2 2 0 0 1 2 2v1.4l3.1-2a.6.6 0 0 1 .9.5v8.2a.6.6 0 0 1-.9.5L17 15.1V16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/></svg>';
+const esc=s=>String(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const isVid=t=>/video|\.mp4|\.mov/i.test(t||'');
+let posts=[], cur=new Date(); cur.setDate(1);
+
+function thumbDe(p){ const m=(p.midia&&p.midia[0])||{}; const src=p.capa|| (!isVid(m.tipo)&&m.url)||''; return src?`<img src="${src}">`:VIC; }
+function legLine(p){ const l=(p.legenda||'').replace(/\n/g,' ').trim(); return l?esc(l.slice(0,46)):(p.tipo||'post'); }
+
+async function carregar(){
+  try{ const r=await fetch(AGENDAR,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'listar'})}).then(r=>r.json());
+    posts=r.dados||[]; }catch(e){ posts=[]; }
+  render();
+}
+function render(){
+  const y=cur.getFullYear(), mo=cur.getMonth();
+  const mn=cur.toLocaleDateString('pt-BR',{month:'long'});
+  document.getElementById('mlabel').textContent=mn.charAt(0).toUpperCase()+mn.slice(1)+' de '+y;
+  const first=new Date(y,mo,1), start=first.getDay(), dim=new Date(y,mo+1,0).getDate();
+  const today=new Date(); today.setHours(0,0,0,0);
+  const byDay={}; posts.filter(p=>p.agendado_para).forEach(p=>{ const d=new Date(p.agendado_para); if(d.getFullYear()===y&&d.getMonth()===mo){ (byDay[d.getDate()]=byDay[d.getDate()]||[]).push(p); } });
+  let html='';
+  for(let i=0;i<start;i++) html+='<div class="cell out"></div>';
+  for(let d=1;d<=dim;d++){ const cd=new Date(y,mo,d);
+    const evs=(byDay[d]||[]).sort((a,b)=>new Date(a.agendado_para)-new Date(b.agendado_para));
+    html+=`<div class="cell${cd.getTime()===today.getTime()?' today':''}"><div class="dn">${d}</div>`+
+      evs.map(p=>{ const t=new Date(p.agendado_para); const hm=t.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+        return `<div class="ev ${p.status}" onclick="location.href='publicador.html?edit=${p.id}'"><div class="th">${thumbDe(p)}</div><div class="tx"><b>${hm}</b><small>${legLine(p)}</small></div></div>`; }).join('')+
+      '</div>';
+  }
+  const cells=start+dim; for(let i=cells;i%7!==0;i++) html+='<div class="cell out"></div>';
+  document.getElementById('grid').innerHTML=html;
+  // rascunhos
+  const rasc=posts.filter(p=>p.status==='rascunho');
+  document.getElementById('rlist').innerHTML= rasc.length? rasc.map(p=>`<div class="rcard" onclick="location.href='publicador.html?edit=${p.id}'"><div class="th">${thumbDe(p)}</div><div class="tx"><b>${legLine(p)||'rascunho'}</b><small>${p.tipo||''}</small></div></div>`).join('') : '<div class="empty">Nenhum rascunho.</div>';
+}
+document.getElementById('prev').onclick=()=>{cur.setMonth(cur.getMonth()-1);render();};
+document.getElementById('next').onclick=()=>{cur.setMonth(cur.getMonth()+1);render();};
+carregar();
+</script>
+</body>
+</html>
