@@ -278,6 +278,8 @@ const $=s=>document.querySelector(s);
 const isVid=t=>/video|\.mp4|\.mov/i.test(t||'');
 const VIC='<svg viewBox="0 0 24 24"><path d="M4 6h11a2 2 0 0 1 2 2v1.4l3.1-2a.6.6 0 0 1 .9.5v8.2a.6.6 0 0 1-.9.5L17 15.1V16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/></svg>';
 const PLAY='<svg class="pl" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+window.__selv='<div class="v">'+VIC+'</div>';
+window.__pvv='<svg class="vic" viewBox="0 0 24 24"><path d="M4 6h11a2 2 0 0 1 2 2v1.4l3.1-2a.6.6 0 0 1 .9.5v8.2a.6.6 0 0 1-.9.5L17 15.1V16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/></svg>';
 function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1900);}
 function esc(s){return String(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
 function labelDe(nome){return String(nome||'').replace(/-\d{10,}\./,'.').replace(/\.[^.]+$/,'').replace(/[-_]+/g,' ').trim()||nome;}
@@ -306,7 +308,7 @@ document.querySelectorAll('#fTipo .chip').forEach(b=>b.onclick=()=>{
 
 // ── mídia selecionada ──
 function renderSel(){
-  $('#sel').innerHTML=midias.map((m,i)=>`<div class="t">${m.poster?`<img src="${m.poster}">`+(isVid(m.tipo)?PLAY:''):(isVid(m.tipo)?`<div class="v">${VIC}</div>`:`<img src="${m.url}">`)}<button class="x" onclick="tira(${i})">×</button></div>`).join('');
+  $('#sel').innerHTML=midias.map((m,i)=>`<div class="t">${m.poster?`<img src="${m.poster}" onerror="this.outerHTML=window.__selv">`+(isVid(m.tipo)?PLAY:''):(isVid(m.tipo)?`<div class="v">${VIC}</div>`:`<img src="${m.url}">`)}<button class="x" onclick="tira(${i})">×</button></div>`).join('');
   renderPreview();
 }
 window.tira=i=>{midias.splice(i,1);renderSel();};
@@ -373,8 +375,9 @@ $('#legenda').addEventListener('input',renderPreview);
 function renderPreview(){
   const m=midias[0];
   const mc=$('#pvMedia'); mc.className='igmedia'+(tipo==='reels'?' reels':tipo==='story'?' story':'');
-  if(m){ if(m.poster) mc.innerHTML=`<img src="${m.poster}">`+(tipo==='reels'?'<span class="badge">Reels</span>':'');
-    else if(isVid(m.tipo)) mc.innerHTML=`<svg class="vic" viewBox="0 0 24 24"><path d="M4 6h11a2 2 0 0 1 2 2v1.4l3.1-2a.6.6 0 0 1 .9.5v8.2a.6.6 0 0 1-.9.5L17 15.1V16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/></svg>`+(tipo==='reels'?'<span class="badge">Reels</span>':'');
+  if(m){ const badge=(tipo==='reels'?'<span class="badge">Reels</span>':'');
+    if(m.poster) mc.innerHTML=`<img src="${m.poster}" onerror="this.outerHTML=window.__pvv">`+badge;
+    else if(isVid(m.tipo)) mc.innerHTML=window.__pvv+badge;
     else mc.innerHTML=`<img src="${m.url}">`;
   } else mc.innerHTML='<div class="ph">A mídia aparece aqui</div>';
   const sub=$('#pvSub'); sub.textContent = colabs.length? ('com @'+colabs[0]+(colabs.length>1?` +${colabs.length-1}`:'')) : (plats.size>1? [...plats].length+' redes' : 'prévia do post');
@@ -440,7 +443,7 @@ async function carregarResumo(){
 }
 function preencher(p){
   tipo=p.tipo||'foto'; document.querySelectorAll('#fTipo .chip').forEach(x=>x.classList.toggle('on',x.dataset.t===tipo));
-  midias=(p.midia||[]).map((m,i)=>({url:m.url,tipo:m.tipo,poster:(p.capa&&i===0&&isVid(m.tipo))?p.capa:(isVid(m.tipo)?'':m.url),ordem:i}));
+  midias=(p.midia||[]).map((m,i)=>({url:m.url,tipo:m.tipo,poster:(p.capa&&i===0)?p.capa:(isVid(m.tipo)?m.url+'.poster.jpg':''),ordem:i}));
   $('#legenda').value=p.legenda||'';
   plats=new Set((p.plataformas&&p.plataformas.length?p.plataformas:['instagram']));
   document.querySelectorAll('#nets .net').forEach(b=>b.classList.toggle('on',plats.has(b.dataset.k)));

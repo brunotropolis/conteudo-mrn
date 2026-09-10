@@ -89,11 +89,16 @@
 <script>
 const AGENDAR='https://n8n-n8n.xktssy.easypanel.host/webhook/motor-agendar';
 const VIC='<svg class="v" viewBox="0 0 24 24"><path d="M4 6h11a2 2 0 0 1 2 2v1.4l3.1-2a.6.6 0 0 1 .9.5v8.2a.6.6 0 0 1-.9.5L17 15.1V16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/></svg>';
+window.__vic=VIC;
 const esc=s=>String(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const isVid=t=>/video|\.mp4|\.mov/i.test(t||'');
 let posts=[], cur=new Date(); cur.setDate(1);
 
-function thumbDe(p){ const m=(p.midia&&p.midia[0])||{}; const src=p.capa|| (!isVid(m.tipo)&&m.url)||''; return src?`<img src="${src}">`:VIC; }
+function thumbDe(p){ const m=(p.midia&&p.midia[0])||{};
+  if(p.capa) return `<img src="${p.capa}" onerror="this.outerHTML=window.__vic">`;
+  if(m.url && !isVid(m.tipo)) return `<img src="${m.url}">`;
+  if(m.url && isVid(m.tipo)) return `<img src="${m.url}.poster.jpg" onerror="this.outerHTML=window.__vic">`;
+  return VIC; }
 function legLine(p){ const l=(p.legenda||'').replace(/\n/g,' ').trim(); return l?esc(l.slice(0,46)):(p.tipo||'post'); }
 
 async function carregar(){
