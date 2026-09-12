@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Gestor Social · HUB Manual</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#3A5049">
+<style>
+  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--hover:#E9F3F1;--line:#DCE8E6;--ink:#23332F;--mute:#6E827D;--dim:#93A5A1;--gold:#E3A31B;--gold2:#C88C10;--goldink:#8A5E0A;--goldbg:#FDF1D6;--menu:#3A5049;--menuTxt:#E7EEEC;--menuMute:#9DB3AD}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.5;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .top{background:var(--menu);color:var(--menuTxt);padding:18px 22px;display:flex;align-items:center;gap:14px}
+  .top .logo{width:42px;height:42px;border-radius:12px;flex:0 0 auto;overflow:hidden}
+  .top .logo img{width:100%;height:100%;display:block}
+  .top .tt{min-width:0;flex:1}
+  .top h1{font-size:1.18rem;font-weight:800;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .top p{color:var(--menuMute);font-size:.82rem;margin-top:2px}
+  .top .back{flex:0 0 auto;color:var(--menuTxt);font-size:.82rem;font-weight:700;background:rgba(255,255,255,.10);padding:8px 13px;border-radius:10px}
+  .wrap{max-width:900px;margin:0 auto;padding:24px 18px 70px}
+
+  .banner{display:flex;gap:11px;align-items:flex-start;background:#FDF8EC;border:1px solid #EFE1BE;border-radius:14px;padding:13px 15px;font-size:13px;color:var(--ink);margin-bottom:16px}
+  .banner .bic{flex:0 0 auto;width:24px;height:24px;border-radius:7px;background:var(--gold);color:#fff;display:grid;place-items:center;margin-top:1px}
+  .banner .bic svg{width:14px;height:14px;fill:currentColor}
+  .banner b{color:var(--goldink)}
+
+  .head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:2px 2px 14px;flex-wrap:wrap}
+  .head h2{font-size:1rem;font-weight:800}
+  .novo{font-size:13px;font-weight:800;border:1px solid var(--menu);background:var(--menu);color:#fff;border-radius:11px;padding:10px 16px;cursor:pointer;font-family:inherit}
+
+  .list{display:flex;flex-direction:column;gap:12px}
+  .flow{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:15px 16px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 16px rgba(35,51,47,.05)}
+  .flow.off{opacity:.6}
+  .flow .r1{display:flex;align-items:center;gap:10px}
+  .flow .nm{font-size:15px;font-weight:800;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .st{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border-radius:999px;flex:0 0 auto}
+  .st::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;flex:0 0 auto}
+  .st.on{background:#E4F3EA;color:#1E874B}.st.of{background:#F0E7E6;color:#9A5B52}
+  .gats{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+  .gat{font-size:11px;font-weight:700;background:var(--hover);color:#3f4e48;border-radius:999px;padding:3px 9px}
+  .prev{font-size:12.5px;color:var(--mute);margin-top:9px;display:grid;gap:3px}
+  .prev div{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .prev b{color:#4a5c56;font-weight:700}
+  .flow .acts{display:flex;gap:7px;margin-top:12px;flex-wrap:wrap}
+  .flow .acts button{font-size:12px;font-weight:700;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:9px;padding:7px 13px;cursor:pointer;font-family:inherit}
+  .flow .acts button:hover{border-color:var(--gold);color:var(--goldink)}
+  .flow .acts button.del{color:#B2493A}
+  .flow .acts button.del:hover{border-color:#c0442e;color:#c0442e}
+  .empty{text-align:center;color:var(--mute);padding:38px 20px;background:var(--panel);border:1px dashed #A7C0B9;border-radius:16px}
+
+  .modal{position:fixed;inset:0;background:rgba(20,30,27,.5);display:none;place-items:center;padding:16px;z-index:20}
+  .modal.show{display:grid}
+  .box{background:var(--panel);border-radius:18px;max-width:560px;width:100%;max-height:88vh;overflow:auto;padding:20px}
+  .box h3{font-size:16px;font-weight:800;margin-bottom:3px}
+  .box .sub{font-size:12.5px;color:var(--mute);margin-bottom:14px}
+  .f{display:block;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#566862;margin:14px 0 6px}
+  .f:first-of-type{margin-top:0}
+  .fld{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:14px;background:var(--card);color:var(--ink)}
+  .fld:focus{outline:2px solid var(--goldbg);border-color:var(--gold)}
+  textarea.fld{min-height:64px;resize:vertical}
+  .gatbox{display:flex;flex-wrap:wrap;gap:6px;align-items:center;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:7px 9px}
+  .gatbox .tag{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;color:var(--menu);background:#E7F0ED;border:1px solid #CFE3DD;border-radius:8px;padding:3px 8px}
+  .gatbox .tag b{color:#B2432C;cursor:pointer}
+  .gatbox input{border:none;background:none;outline:none;padding:4px;flex:1;min-width:110px;font-size:14px}
+  .hint{font-size:11.5px;color:var(--dim);margin-top:6px}
+  .mbtn{margin-top:18px;display:flex;gap:8px;justify-content:flex-end}
+  .mbtn button{font-size:13px;font-weight:700;border-radius:10px;padding:10px 18px;cursor:pointer;border:1px solid var(--line);background:var(--card);font-family:inherit}
+  .mbtn button.ok{background:var(--menu);color:#fff;border-color:var(--menu)}
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--menu);color:#fff;padding:10px 18px;border-radius:999px;font-size:13px;font-weight:600;opacity:0;transition:.2s;pointer-events:none;z-index:30}
+  .toast.show{opacity:1}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="logo"><img src="favicon.svg" alt=""></div>
+  <div class="tt"><h1>Gestor Social</h1><p>Automações de rede social do Manual (comentário → direct)</p></div>
+  <a class="back" href="index.html">← HUB</a>
+</div>
+<div class="wrap">
+  <div class="banner">
+    <span class="bic"><svg viewBox="0 0 24 24"><path d="M8 5h3v14H8zm5 0h3v14h-3z"/></svg></span>
+    <div><b>Modo seguro:</b> aqui você cadastra os fluxos de rede social. Por enquanto é o cadastro, o disparo automático (comentário → direct) a gente liga na próxima etapa. Isto é separado do CRM, não mexe nos fluxos de curso.</div>
+  </div>
+  <div class="head"><h2>Fluxos de rede social</h2><button class="novo" onclick="abrir()">+ Novo fluxo</button></div>
+  <div class="list" id="list"><div class="empty">carregando…</div></div>
+</div>
+
+<div class="modal" id="modal"><div class="box">
+  <h3 id="mtitle">Novo fluxo</h3>
+  <div class="sub">A palavra no comentário do post ativa a resposta pública e a mensagem no direct.</div>
+  <label class="f">Nome do fluxo</label>
+  <input class="fld" id="fNome" placeholder="Ex: Guia do Soninho">
+  <label class="f">Palavras que ativam</label>
+  <div class="gatbox" id="gatbox"><input type="text" id="gatin" placeholder="palavra e Enter (ex: SONO)"></div>
+  <label class="f">Resposta pública no comentário</label>
+  <textarea class="fld" id="fResp" placeholder="Ex: te mandei no direct 💛"></textarea>
+  <label class="f">Mensagem do direct (DM)</label>
+  <textarea class="fld" id="fDM" placeholder="O que a pessoa recebe no direct"></textarea>
+  <label class="f">Link (opcional)</label>
+  <input class="fld" id="fLink" placeholder="https://…">
+  <div class="hint">O rastreamento de cliques a gente liga junto com o disparo.</div>
+  <div class="mbtn"><button onclick="fechar()">Cancelar</button><button class="ok" id="msalvar">Salvar</button></div>
+</div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const API='https://n8n-n8n.xktssy.easypanel.host/webhook/motor-automacoes';
+const esc=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1900);}
+async function call(body){ return fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).then(r=>r.json()).catch(()=>({})); }
+let cache=[], editId=null, gatilhos=[];
+
+async function carregar(){ const r=await call({acao:'list'}); cache=r.fluxos||[]; pinta(); }
+function pinta(){
+  const box=document.getElementById('list');
+  if(!cache.length){ box.innerHTML='<div class="empty">Nenhum fluxo ainda. Crie o primeiro em "+ Novo fluxo".</div>'; return; }
+  box.innerHTML=cache.map(f=>{
+    const gats=(f.gatilhos||[]).map(g=>`<span class="gat">${esc(g)}</span>`).join('');
+    let prev='';
+    if(f.resposta_publica) prev+=`<div><b>Comentário:</b> ${esc(f.resposta_publica)}</div>`;
+    if(f.msg_dm) prev+=`<div><b>Direct:</b> ${esc(f.msg_dm)}</div>`;
+    if(f.link_url) prev+=`<div><b>Link:</b> ${esc(f.link_url)}</div>`;
+    return `<div class="flow${f.ativo?'':' off'}">
+      <div class="r1"><span class="nm">${esc(f.nome)}</span><span class="st ${f.ativo?'on':'of'}">${f.ativo?'ativo':'pausado'}</span></div>
+      ${gats?`<div class="gats">${gats}</div>`:''}
+      ${prev?`<div class="prev">${prev}</div>`:''}
+      <div class="acts">
+        <button onclick="editar('${f.id}')">Editar</button>
+        <button onclick="toggle('${f.id}')">${f.ativo?'Pausar':'Ativar'}</button>
+        <button class="del" onclick="apagar('${f.id}')">Apagar</button>
+      </div></div>`;
+  }).join('');
+}
+function renderGat(){ const box=document.getElementById('gatbox'); box.querySelectorAll('.tag').forEach(t=>t.remove()); const inp=document.getElementById('gatin');
+  gatilhos.forEach((g,i)=>{ const s=document.createElement('span'); s.className='tag'; s.innerHTML=`${esc(g)} <b onclick="remGat(${i})">×</b>`; box.insertBefore(s,inp); }); }
+window.remGat=i=>{ gatilhos.splice(i,1); renderGat(); };
+document.getElementById('gatin').addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===','){ e.preventDefault();
+  const v=e.target.value.trim().replace(/,/g,'').slice(0,40);
+  if(v && !gatilhos.some(x=>x.toLowerCase()===v.toLowerCase()) && gatilhos.length<20) gatilhos.push(v);
+  e.target.value=''; renderGat(); } });
+
+window.abrir=()=>{ editId=null; gatilhos=[]; document.getElementById('mtitle').textContent='Novo fluxo';
+  ['fNome','fResp','fDM','fLink'].forEach(id=>document.getElementById(id).value=''); renderGat();
+  document.getElementById('modal').classList.add('show'); };
+window.editar=id=>{ const f=cache.find(x=>x.id===id); if(!f)return; editId=id; gatilhos=(f.gatilhos||[]).slice();
+  document.getElementById('mtitle').textContent='Editar fluxo';
+  document.getElementById('fNome').value=f.nome||''; document.getElementById('fResp').value=f.resposta_publica||'';
+  document.getElementById('fDM').value=f.msg_dm||''; document.getElementById('fLink').value=f.link_url||''; renderGat();
+  document.getElementById('modal').classList.add('show'); };
+window.fechar=()=>document.getElementById('modal').classList.remove('show');
+document.getElementById('msalvar').onclick=async()=>{
+  const nome=document.getElementById('fNome').value.trim(); if(!nome){toast('dê um nome ao fluxo');return;}
+  const body={acao:editId?'update':'add', id:editId||undefined, nome, gatilhos,
+    resposta_publica:document.getElementById('fResp').value.trim(), msg_dm:document.getElementById('fDM').value.trim(),
+    link_url:document.getElementById('fLink').value.trim() };
+  const r=await call(body); if(r.ok){ fechar(); toast('salvo ✓'); carregar(); } else toast(r.erro||'erro');
+};
+window.toggle=async id=>{ const r=await call({acao:'toggle',id}); toast(r.ok?'ok ✓':'erro'); carregar(); };
+window.apagar=async id=>{ if(!confirm('Apagar este fluxo?'))return; const r=await call({acao:'delete',id}); toast(r.ok?'apagado':'erro'); carregar(); };
+carregar();
+</script>
+<script src="sidebar.js" defer></script>
+</body>
+</html>

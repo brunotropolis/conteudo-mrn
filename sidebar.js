@@ -11,6 +11,7 @@
     pen:'<path d="M3 17.25V21h3.75L17.8 9.94l-3.75-3.75zM20.7 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75z"/>',
     link:'<path d="M10.6 13.4a4 4 0 0 0 5.66 0l3-3a4 4 0 1 0-5.66-5.66l-1.5 1.5 1.42 1.42 1.5-1.5a2 2 0 1 1 2.82 2.82l-3 3a2 2 0 0 1-2.82 0zM13.4 10.6a4 4 0 0 0-5.66 0l-3 3a4 4 0 1 0 5.66 5.66l1.5-1.5-1.42-1.42-1.5 1.5a2 2 0 1 1-2.82-2.82l3-3a2 2 0 0 1 2.82 0z"/>',
     gear:'<path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm8.9 4a7 7 0 0 0-.1-1.2l2-1.6-2-3.4-2.4 1a7 7 0 0 0-2-1.2L14 2h-4l-.4 2.4a7 7 0 0 0-2 1.2l-2.4-1-2 3.4 2 1.6A7 7 0 0 0 3.1 12c0 .4 0 .8.1 1.2l-2 1.6 2 3.4 2.4-1c.6.5 1.3.9 2 1.2L10 22h4l.4-2.4c.7-.3 1.4-.7 2-1.2l2.4 1 2-3.4-2-1.6c.1-.4.1-.8.1-1.2z"/>',
+    bolt:'<path d="M13 2L4.5 13.5H11l-1 8.5L19.5 10H13z"/>',
     burger:'<path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/>'
   };
   var NAV=[
@@ -21,6 +22,7 @@
     {item:'Publicador', href:'publicador.html', ic:'send'},
     {item:'Calendário de posts', href:'calendario.html', ic:'cal'},
     {item:'Biblioteca de mídia', href:'midia.html', ic:'lib'},
+    {item:'Gestor social', href:'automacoes.html', ic:'bolt'},
     {cat:'Campanhas'},
     {item:'Anúncios', href:'anuncios.html', ic:'target'},
     {cat:'Utilidades'},
