@@ -24,6 +24,7 @@
     {item:'Anúncios', href:'anuncios.html', ic:'target'},
     {cat:'Utilidades'},
     {item:'Agente de copy', href:'agente-copy.html', ic:'pen'},
+    {item:'Categorias e editorias', href:'admin.html', ic:'target'},
     {item:'UTM do Manual', href:'https://utm.brunotropolis.com.br', ic:'link', ext:true}
   ];
   var path=(location.pathname.split('/').pop()||'index.html').toLowerCase()||'index.html';

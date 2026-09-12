@@ -204,8 +204,7 @@
           <input type="file" id="file" accept="image/jpeg,image/png,image/webp,video/mp4,video/quicktime" multiple>
         </label>
         <div class="mrow">
-          <button type="button" id="fromLib">🗂 Biblioteca</button>
-          <button type="button" id="fromDrive">☁️ Google Drive</button>
+          <button type="button" id="fromLib">🗂 Escolher da Biblioteca</button>
         </div>
       </div>
       <div class="sel" id="sel"></div>
@@ -265,7 +264,6 @@
 <div class="modal" id="pick"><div class="box">
   <h3>Escolher mídia</h3>
   <div class="sub">Marque um ou mais arquivos.</div>
-  <div class="tabs"><button class="on" data-tab="lib" onclick="switchTab('lib')">🗂 Biblioteca</button><button data-tab="drive" onclick="switchTab('drive')">☁️ Google Drive</button></div>
   <input type="text" class="srch" id="psrch" placeholder="Localizar por nome…">
   <div class="pgrid" id="pgrid"><div class="emptyb">carregando…</div></div>
   <div class="mbtn"><button onclick="fecharPick()">Cancelar</button><button class="ok" onclick="usarPick()">Usar selecionadas</button></div>
@@ -423,25 +421,18 @@ function fmtQuando(v){try{const d=new Date(v);return d.toLocaleDateString('pt-BR
 $('#quando').addEventListener('input',renderPreview);
 
 // ── picker biblioteca / drive ──
-let pickTab='lib', libCache=[];
-$('#fromLib').onclick=()=>{openPick('lib');};
-$('#fromDrive').onclick=()=>{openPick('drive');};
-async function openPick(tab){ $('#pick').classList.add('show'); switchTab(tab); }
-window.switchTab=async(tab)=>{
-  pickTab=tab; document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.tab===tab));
-  $('#psrch').style.display=tab==='lib'?'block':'none';
+let libCache=[];
+$('#fromLib').onclick=()=>{openPick();};
+async function openPick(){ $('#pick').classList.add('show');
   $('#pgrid').innerHTML='<div class="emptyb">carregando…</div>';
-  if(tab==='lib'){ const r=await fetch(MIDIA,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'list'})}).then(r=>r.json()); libCache=r.arquivos||[]; desenhaLib(); }
-  else{ const r=await fetch(MIDIA,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'drive_list'})}).then(r=>r.json()).catch(()=>({}));
-    if(r.need_folder){ $('#pgrid').innerHTML='<div class="emptyb">☁️ A pasta do Google Drive ainda não foi conectada.<br>Me manda o link da pasta que eu ligo aqui.</div>'; }
-    else { const arr=r.arquivos||[]; $('#pgrid').innerHTML=arr.length?arr.map(a=>pit(a)).join(''):'<div class="emptyb">pasta vazia</div>'; } }
-};
+  const r=await fetch(MIDIA,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'list'})}).then(r=>r.json()); libCache=r.arquivos||[]; desenhaLib();
+}
 function pit(a){ const vid=isVid(a.tipo); const th=a.poster?`<img src="${a.poster}">`+(vid?PLAY:''):(vid?`<div class="v">${VIC}</div>`:`<img src="${a.url}">`);
-  return `<div class="pit" data-url="${a.url}" data-tipo="${a.tipo}" data-poster="${a.poster||''}" onclick="this.classList.toggle('on')"><div class="th">${th}</div><div class="nm">${esc(labelDe(a.nome))}</div></div>`; }
+  return `<div class="pit" data-url="${a.url}" data-tipo="${a.tipo}" data-poster="${a.poster||''}" onclick="this.classList.toggle('on')"><div class="th">${th}</div><div class="nm">${esc(a.titulo||labelDe(a.nome))}</div></div>`; }
 function desenhaLib(){ const q=($('#psrch').value||'').toLowerCase();
-  const arr=libCache.filter(a=>labelDe(a.nome).toLowerCase().includes(q));
+  const arr=libCache.filter(a=>(a.titulo||labelDe(a.nome)).toLowerCase().includes(q));
   $('#pgrid').innerHTML=arr.length?arr.map(a=>pit(a)).join(''):'<div class="emptyb">nada encontrado</div>'; }
-$('#psrch').oninput=()=>{ if(pickTab==='lib') desenhaLib(); };
+$('#psrch').oninput=desenhaLib;
 window.fecharPick=()=>$('#pick').classList.remove('show');
 window.usarPick=()=>{ document.querySelectorAll('#pgrid .pit.on').forEach(el=>add({url:el.dataset.url,tipo:el.dataset.tipo,poster:el.dataset.poster})); fecharPick(); };
 
