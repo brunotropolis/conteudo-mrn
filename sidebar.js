@@ -22,7 +22,7 @@
     {item:'Publicador', href:'publicador.html', ic:'send'},
     {item:'Calendário de posts', href:'calendario.html', ic:'cal'},
     {item:'Biblioteca de mídia', href:'midia.html', ic:'lib'},
-    {item:'Automações', href:'automacoes.html', ic:'bolt'},
+    {item:'Automações', href:'https://automacoes.manualdorecemnascido.com.br', ic:'bolt', ext:true},
     {cat:'Campanhas'},
     {item:'Anúncios', href:'anuncios.html', ic:'target'},
     {cat:'Utilidades'},
