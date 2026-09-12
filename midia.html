@@ -72,6 +72,16 @@
   .fld{border:1px solid var(--line);border-radius:10px;padding:9px 11px;font-family:inherit;font-size:14px;background:var(--card);color:var(--ink);width:100%}
   .fld:focus{outline:2px solid var(--goldbg);border-color:var(--gold)}
   .selrow{display:flex;gap:7px}.selrow select{flex:1;min-width:0}
+  .req{font-size:12px;color:#8A5E0A;background:var(--goldbg);border:1px solid #F0DCA6;border-radius:10px;padding:8px 11px;margin-bottom:12px;font-weight:600}
+  .req b{font-weight:800}
+  .cgrp{margin-top:2px}
+  .cgrp .cl{font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#566862;margin-bottom:5px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chp{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;color:var(--mute);border-radius:999px;padding:5px 11px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit}
+  .chp::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--c,#9AB0AA);flex:0 0 auto}
+  .chp:hover{border-color:var(--c,#9AB0AA)}
+  .chp.on{background:var(--c,#3A5049);color:var(--io,#fff);border-color:var(--c,#3A5049)}
+  .chp.on::before{background:var(--io,#fff)}
   .mbtn{margin-top:6px;display:flex;gap:8px;justify-content:flex-end}
   .mbtn button{font-size:13px;font-weight:700;border-radius:10px;padding:9px 16px;cursor:pointer;border:1px solid var(--line);background:var(--card);font-family:inherit}
   .mbtn button.ok{background:var(--menu);color:#fff;border-color:var(--menu)}
@@ -100,7 +110,7 @@
 <!-- nomear (upload) -->
 <div class="modal" id="nomear"><div class="box">
   <h3>Descreva cada arquivo</h3>
-  <div class="sub">Título é obrigatório. Categoria e editoria ajudam a filtrar e vão alimentar a automação.</div>
+  <div class="req">Pra subir, cada arquivo precisa de <b>título</b> e de <b>uma categoria e uma editoria</b> selecionadas. É o que deixa a mídia organizada e pronta pra automação.</div>
   <div id="nmlist"></div>
   <div class="mbtn"><button onclick="document.getElementById('nomear').classList.remove('show');pend=null;">Cancelar</button><button class="ok" id="nmok">Enviar</button></div>
 </div></div>
@@ -108,10 +118,11 @@
 <!-- editar item -->
 <div class="modal" id="editm"><div class="box">
   <h3>Editar mídia</h3>
-  <div class="sub">Muda o título, a categoria ou a editoria deste arquivo.</div>
-  <div class="ff" style="display:flex;flex-direction:column;gap:9px">
+  <div class="req">Título, categoria e editoria são <b>obrigatórios</b>.</div>
+  <div class="ff" style="display:flex;flex-direction:column;gap:12px">
     <input class="fld" id="eTit" placeholder="título">
-    <div class="selrow"><select class="fld" id="eCat"></select><select class="fld" id="eEdi"></select></div>
+    <div class="cgrp"><div class="cl">Categoria</div><div class="chips" id="eCat"></div></div>
+    <div class="cgrp"><div class="cl">Editoria</div><div class="chips" id="eEdi"></div></div>
   </div>
   <div class="mbtn"><button onclick="document.getElementById('editm').classList.remove('show');editNome=null;">Cancelar</button><button class="ok" id="eok">Salvar</button></div>
 </div></div>
@@ -137,8 +148,13 @@ async function carregarTax(){
   }catch(e){}
   pintaFiltros();
 }
-function opts(tipo,val){ return '<option value="">— '+(tipo==='categoria'?'categoria':'editoria')+' —</option>'+
-  (TAX[tipo]||[]).map(t=>`<option value="${t.slug}"${t.slug===val?' selected':''}>${esc(t.nome)}</option>`).join(''); }
+function inkFor(hex){hex=String(hex||'').replace('#','');if(hex.length===3)hex=hex.split('').map(c=>c+c).join('');const f=i=>{let c=(parseInt(hex.substr(i,2),16)||0)/255;return c<=0.03928?c/12.92:Math.pow((c+0.055)/1.055,2.4);};const L=0.2126*f(0)+0.7152*f(2)+0.0722*f(4);return ((L+0.05)/0.05)>(1.05/(L+0.05))?'#23332F':'#fff';}
+function chipsHTML(tipo,val){ return (TAX[tipo]||[]).map(t=>{ const c=t.cor||'#7A8F89';
+  return `<button type="button" class="chp${t.slug===val?' on':''}" data-slug="${t.slug}" style="--c:${c};--io:${inkFor(c)}" onclick="pickChip(this)">${esc(t.nome)}</button>`;}).join('')
+  || '<span style="font-size:12px;color:var(--dim)">nenhuma — cadastre no Admin</span>'; }
+window.pickChip=el=>{ const g=el.closest('.chips'); const was=el.classList.contains('on');
+  g.querySelectorAll('.chp').forEach(c=>c.classList.remove('on')); if(!was) el.classList.add('on'); };
+const chipVal=g=>{ const on=g&&g.querySelector('.chp.on'); return on?on.dataset.slug:''; };
 function nomeTax(tipo,slug){ const t=TAXMAP[tipo+':'+slug]; return t?t.nome:slug; }
 function corTax(tipo,slug){ const t=TAXMAP[tipo+':'+slug]; return t&&t.cor?t.cor:'#7A8F89'; }
 
@@ -163,8 +179,8 @@ function pinta(){
     const vid=isVid(a.tipo||a.mime);
     const media=a.poster?`<img src="${a.poster}">`+(vid?PLAY:''):(vid?`<div class="v">${VIC}</div>`:`<img src="${a.url}" loading="lazy">`);
     let tags='';
-    if(a.categoria) tags+=`<span class="badge" style="background:${corTax('categoria',a.categoria)}">${esc(nomeTax('categoria',a.categoria))}</span>`;
-    if(a.editoria) tags+=`<span class="badge" style="background:${corTax('editoria',a.editoria)}">${esc(nomeTax('editoria',a.editoria))}</span>`;
+    if(a.categoria){const c=corTax('categoria',a.categoria);tags+=`<span class="badge" style="background:${c};color:${inkFor(c)}">${esc(nomeTax('categoria',a.categoria))}</span>`;}
+    if(a.editoria){const c=corTax('editoria',a.editoria);tags+=`<span class="badge" style="background:${c};color:${inkFor(c)}">${esc(nomeTax('editoria',a.editoria))}</span>`;}
     const t=esc(a.titulo||a.nome);
     return `<div class="item"><div class="media">${media}</div>
       <div class="meta"><div class="fn" title="${t}">${t}</div><div class="tags">${tags}</div><div class="sz">${vid?'vídeo · ':''}${fmtSz(a.tamanho)}</div></div>
@@ -184,13 +200,16 @@ window.apagar=async nome=>{ if(!confirm('Apagar este arquivo?'))return; await fe
 let editNome=null;
 window.editar=nome=>{ const a=cache.find(x=>x.nome===nome); if(!a)return; editNome=nome;
   document.getElementById('eTit').value=a.titulo||'';
-  document.getElementById('eCat').innerHTML=opts('categoria',a.categoria||'');
-  document.getElementById('eEdi').innerHTML=opts('editoria',a.editoria||'');
+  document.getElementById('eCat').innerHTML=chipsHTML('categoria',a.categoria||'');
+  document.getElementById('eEdi').innerHTML=chipsHTML('editoria',a.editoria||'');
   document.getElementById('editm').classList.add('show');
 };
 document.getElementById('eok').onclick=async()=>{
-  const titulo=document.getElementById('eTit').value.trim(); if(!titulo){toast('título é obrigatório');return;}
-  const body={acao:'editar',nome:editNome,titulo,categoria:document.getElementById('eCat').value,editoria:document.getElementById('eEdi').value};
+  const titulo=document.getElementById('eTit').value.trim();
+  const categoria=chipVal(document.getElementById('eCat')), editoria=chipVal(document.getElementById('eEdi'));
+  if(!titulo){toast('título é obrigatório');return;}
+  if(!categoria||!editoria){toast('escolha categoria e editoria');return;}
+  const body={acao:'editar',nome:editNome,titulo,categoria,editoria};
   document.getElementById('editm').classList.remove('show');
   const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).then(r=>r.json()).catch(()=>({}));
   toast(r.ok?'salvo ✓':'erro'); editNome=null; carregar();
@@ -204,22 +223,23 @@ const drop=document.getElementById('drop');
 ['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove('over');}));
 drop.addEventListener('drop',e=>{if(e.dataTransfer.files.length)abrirNomear([...e.dataTransfer.files]);});
 function abrirNomear(files){ pend=files;
-  document.getElementById('nmlist').innerHTML=files.map((f,i)=>`<div class="nmrow">
+  document.getElementById('nmlist').innerHTML=files.map((f,i)=>`<div class="nmrow" data-i="${i}">
     <div class="th">${isVid(f.type)?`<div class="v">${VIC}</div>`:`<img src="${URL.createObjectURL(f)}">`}</div>
     <div class="ff">
-      <input class="fld" data-i="${i}" data-k="tit" value="${esc(f.name.replace(/\.[^.]+$/,''))}" placeholder="título (obrigatório)">
-      <div class="selrow"><select class="fld" data-i="${i}" data-k="cat">${opts('categoria','')}</select><select class="fld" data-i="${i}" data-k="edi">${opts('editoria','')}</select></div>
+      <input class="fld" data-k="tit" value="${esc(f.name.replace(/\.[^.]+$/,''))}" placeholder="título (obrigatório)">
+      <div class="cgrp"><div class="cl">Categoria</div><div class="chips" data-k="cat">${chipsHTML('categoria','')}</div></div>
+      <div class="cgrp"><div class="cl">Editoria</div><div class="chips" data-k="edi">${chipsHTML('editoria','')}</div></div>
     </div></div>`).join('');
   document.getElementById('nomear').classList.add('show');
 }
 document.getElementById('nmok').onclick=async()=>{
-  const tits=[...document.querySelectorAll('#nmlist input[data-k="tit"]')];
-  if(tits.some(x=>!x.value.trim())){toast('dê um título a cada arquivo');return;}
-  const cat=[...document.querySelectorAll('#nmlist select[data-k="cat"]')];
-  const edi=[...document.querySelectorAll('#nmlist select[data-k="edi"]')];
+  const rows=[...document.querySelectorAll('#nmlist .nmrow')];
+  const dados=rows.map(r=>({tit:r.querySelector('input[data-k="tit"]').value.trim(),cat:chipVal(r.querySelector('.chips[data-k="cat"]')),edi:chipVal(r.querySelector('.chips[data-k="edi"]'))}));
+  if(dados.some(d=>!d.tit)){toast('dê um título a cada arquivo');return;}
+  if(dados.some(d=>!d.cat||!d.edi)){toast('escolha categoria e editoria de cada arquivo');return;}
   document.getElementById('nomear').classList.remove('show');
   const files=pend; pend=null;
-  for(let i=0;i<files.length;i++){ await subirUm(files[i], tits[i].value.trim(), cat[i].value, edi[i].value); }
+  for(let i=0;i<files.length;i++){ await subirUm(files[i], dados[i].tit, dados[i].cat, dados[i].edi); }
   statusEl.textContent='pronto ✓'; setTimeout(()=>statusEl.textContent='',2500); carregar();
 };
 function capturaPoster(f){return new Promise(res=>{

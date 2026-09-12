@@ -156,11 +156,22 @@
   .modal .mbtn button{font-size:13px;font-weight:700;border-radius:10px;padding:9px 16px;cursor:pointer;border:1px solid var(--line);background:var(--card);font-family:inherit}
   .modal .mbtn button.ok{background:var(--menu);color:#fff;border-color:var(--menu)}
   /* modal nomear */
-  .nmrow{display:flex;align-items:center;gap:10px;margin-bottom:9px}
-  .nmrow .th{width:46px;height:46px;border-radius:9px;overflow:hidden;background:var(--hover);flex:0 0 auto;display:grid;place-items:center}
+  .nmrow{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .nmrow:last-of-type{border-bottom:0}
+  .nmrow .th{width:54px;height:54px;border-radius:9px;overflow:hidden;background:var(--hover);flex:0 0 auto;display:grid;place-items:center}
   .nmrow .th img{width:100%;height:100%;object-fit:cover}
-  .nmrow .th .v{color:#5B726B}.nmrow .th .v svg{width:20px;height:20px;fill:currentColor}
-  .nmrow input{flex:1}
+  .nmrow .th .v{color:#5B726B}.nmrow .th .v svg{width:22px;height:22px;fill:currentColor}
+  .nmrow .ff{flex:1;min-width:0;display:flex;flex-direction:column;gap:9px}
+  .nmrow .ff input{width:100%}
+  .req{font-size:12px;color:#8A5E0A;background:var(--goldbg);border:1px solid #F0DCA6;border-radius:10px;padding:8px 11px;margin-bottom:12px;font-weight:600}
+  .req b{font-weight:800}
+  .cgrp .cl{font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#566862;margin-bottom:5px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chp{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;color:var(--mute);border-radius:999px;padding:5px 11px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit}
+  .chp::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--c,#9AB0AA);flex:0 0 auto}
+  .chp:hover{border-color:var(--c,#9AB0AA)}
+  .chp.on{background:var(--c,#3A5049);color:var(--io,#fff);border-color:var(--c,#3A5049)}
+  .chp.on::before{background:var(--io,#fff)}
 
   @media(max-width:860px){.cols{grid-template-columns:1fr}.pvwrap{position:static}}
   @media(max-width:440px){.two{grid-template-columns:1fr}}
@@ -271,8 +282,8 @@
 
 <!-- nomear arquivos no upload -->
 <div class="modal" id="nomear"><div class="box">
-  <h3>Dê um nome pra cada arquivo</h3>
-  <div class="sub">É como você vai localizar depois na biblioteca.</div>
+  <h3>Descreva cada arquivo</h3>
+  <div class="req">Pra subir, cada arquivo precisa de <b>título</b> e de <b>uma categoria e uma editoria</b> selecionadas. É o que deixa a mídia organizada na biblioteca e pronta pra automação.</div>
   <div id="nmlist"></div>
   <div class="mbtn"><button onclick="document.getElementById('nomear').classList.remove('show');pendFiles=null;">Cancelar</button><button class="ok" id="nmok">Enviar</button></div>
 </div></div>
@@ -308,6 +319,19 @@ window.__pvv='<svg class="vic" viewBox="0 0 24 24"><path d="M4 6h11a2 2 0 0 1 2 
 function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1900);}
 function esc(s){return String(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
 function labelDe(nome){return String(nome||'').replace(/-\d{10,}\./,'.').replace(/\.[^.]+$/,'').replace(/[-_]+/g,' ').trim()||nome;}
+
+// taxonomias (categoria/editoria) + chips
+let TAX={categoria:[],editoria:[]};
+async function carregarTax(){ try{ const r=await fetch(MIDIA,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'tax_list'})}).then(r=>r.json());
+  TAX={categoria:[],editoria:[]}; (r.taxonomias||[]).forEach(t=>{ (TAX[t.tipo]=TAX[t.tipo]||[]).push(t); }); }catch(e){} }
+function inkFor(hex){hex=String(hex||'').replace('#','');if(hex.length===3)hex=hex.split('').map(c=>c+c).join('');const f=i=>{let c=(parseInt(hex.substr(i,2),16)||0)/255;return c<=0.03928?c/12.92:Math.pow((c+0.055)/1.055,2.4);};const L=0.2126*f(0)+0.7152*f(2)+0.0722*f(4);return ((L+0.05)/0.05)>(1.05/(L+0.05))?'#23332F':'#fff';}
+function chipsHTML(tipo,val){ return (TAX[tipo]||[]).map(t=>{ const c=t.cor||'#7A8F89';
+  return `<button type="button" class="chp${t.slug===val?' on':''}" data-slug="${t.slug}" style="--c:${c};--io:${inkFor(c)}" onclick="pickChip(this)">${esc(t.nome)}</button>`;}).join('')
+  || '<span style="font-size:12px;color:var(--dim)">nenhuma — cadastre no Admin</span>'; }
+window.pickChip=el=>{ const g=el.closest('.chips'); const was=el.classList.contains('on');
+  g.querySelectorAll('.chp').forEach(c=>c.classList.remove('on')); if(!was) el.classList.add('on'); };
+const chipVal=g=>{ const on=g&&g.querySelector('.chp.on'); return on?on.dataset.slug:''; };
+carregarTax();
 
 // estado
 let tipo='foto', midias=[], plats=new Set(['instagram']), colabs=[], editId=null;
@@ -364,28 +388,34 @@ media.addEventListener('drop',e=>{if(e.dataTransfer.files.length)abrirNomear([..
 
 function abrirNomear(files){
   pendFiles=files;
-  $('#nmlist').innerHTML=files.map((f,i)=>`<div class="nmrow">
+  $('#nmlist').innerHTML=files.map((f,i)=>`<div class="nmrow" data-i="${i}">
     <div class="th">${isVid(f.type)?`<div class="v">${VIC}</div>`:`<img src="${URL.createObjectURL(f)}">`}</div>
-    <input type="text" data-i="${i}" value="${esc(f.name.replace(/\.[^.]+$/,''))}" placeholder="nome pra localizar">
+    <div class="ff">
+      <input class="fld" data-k="tit" type="text" value="${esc(f.name.replace(/\.[^.]+$/,''))}" placeholder="título (obrigatório)">
+      <div class="cgrp"><div class="cl">Categoria</div><div class="chips" data-k="cat">${chipsHTML('categoria','')}</div></div>
+      <div class="cgrp"><div class="cl">Editoria</div><div class="chips" data-k="edi">${chipsHTML('editoria','')}</div></div>
+    </div>
   </div>`).join('');
   $('#nomear').classList.add('show');
 }
 $('#nmok').onclick=async()=>{
-  const inputs=[...$('#nmlist').querySelectorAll('input')];
-  if(inputs.some(x=>!x.value.trim())){toast('dê um nome a cada arquivo');return;}
+  const rows=[...$('#nmlist').querySelectorAll('.nmrow')];
+  const dados=rows.map(r=>({tit:r.querySelector('input[data-k="tit"]').value.trim(),cat:chipVal(r.querySelector('.chips[data-k="cat"]')),edi:chipVal(r.querySelector('.chips[data-k="edi"]'))}));
+  if(dados.some(d=>!d.tit)){toast('dê um título a cada arquivo');return;}
+  if(dados.some(d=>!d.cat||!d.edi)){toast('escolha categoria e editoria de cada arquivo');return;}
   $('#nomear').classList.remove('show');
   const files=pendFiles; pendFiles=null;
-  for(let i=0;i<files.length;i++){ await subirUm(files[i], inputs[i].value.trim()); }
+  for(let i=0;i<files.length;i++){ await subirUm(files[i], dados[i]); }
   toast('mídia enviada ✓');
 };
-async function subirUm(f,nome){
-  toast('enviando '+nome+'…');
+async function subirUm(f,meta){
+  toast('enviando '+meta.tit+'…');
   const b64=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result.split(',')[1]);r.onerror=rej;r.readAsDataURL(f);});
-  const r=await fetch(MIDIA,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'upload',mime:f.type||'image/jpeg',nome_base:nome,base64:b64})}).then(r=>r.json());
-  if(!r.ok)return;
+  const resp=await fetch(MIDIA,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'upload',mime:f.type||'image/jpeg',titulo:meta.tit,categoria:meta.cat,editoria:meta.edi,base64:b64})}).then(r=>r.json());
+  if(!resp.ok)return; const a=resp.arquivo||{};
   let poster='';
-  if(isVid(r.tipo)){ const p=await capturaPoster(f,false); if(p){ const pr=await fetch(MIDIA,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'upload_poster',for:r.nome,base64:p.split(',')[1]})}).then(r=>r.json()).catch(()=>({})); poster=pr.url||''; } }
-  add({url:r.url,tipo:r.tipo,poster});
+  if(isVid(a.tipo)&&a.nome){ const p=await capturaPoster(f,false); if(p){ const pr=await fetch(MIDIA,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'upload_poster',for:a.nome,base64:p.split(',')[1]})}).then(r=>r.json()).catch(()=>({})); poster=(pr.poster&&pr.poster[0]&&pr.poster[0].poster)||(a.url+'.poster.jpg'); } }
+  add({url:a.url,tipo:a.tipo,poster});
 }
 
 // ── colaboradores @ ──
@@ -503,7 +533,8 @@ $('#capOk').onclick=async()=>{
   $('#capOk').disabled=true; toast('salvando capa…');
   const pr=await fetch(MIDIA,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'upload_poster',for:nome,base64:dataUrl.split(',')[1]})}).then(r=>r.json()).catch(()=>({}));
   $('#capOk').disabled=false;
-  if(pr.url){ m.poster=pr.url+'?t='+Date.now(); renderSel(); toast('capa definida ✓'); fecharCapa(); }
+  const purl=(pr.poster&&pr.poster[0]&&pr.poster[0].poster)||(pr.ok?(m.url.split('?')[0]+'.poster.jpg'):'');
+  if(purl){ m.poster=purl+'?t='+Date.now(); renderSel(); toast('capa definida ✓'); fecharCapa(); }
   else toast('erro ao salvar a capa');
 };
 
