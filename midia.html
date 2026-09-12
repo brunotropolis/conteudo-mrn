@@ -21,7 +21,7 @@
   .top .back{flex:0 0 auto;color:var(--menuTxt);font-size:.82rem;font-weight:700;background:rgba(255,255,255,.10);padding:8px 13px;border-radius:10px}
   .wrap{max-width:1000px;margin:0 auto;padding:24px 18px 70px}
 
-  .drop{border:2px dashed var(--line);border-radius:18px;background:var(--panel);padding:24px 20px;text-align:center;cursor:pointer;transition:.15s;box-shadow:0 1px 2px rgba(35,51,47,.04)}
+  .drop{display:block;border:2px dashed #A7C0B9;border-radius:16px;background:var(--card);padding:22px 20px;text-align:center;cursor:pointer;transition:.15s;box-shadow:0 1px 2px rgba(35,51,47,.04)}
   .drop:hover,.drop.over{border-color:var(--gold);background:var(--goldbg)}
   .drop .ic{width:46px;height:46px;margin:0 auto 9px;border-radius:13px;background:var(--goldbg);color:var(--gold2);display:grid;place-items:center}
   .drop .ic svg{width:24px;height:24px;fill:currentColor}
@@ -59,6 +59,7 @@
   .item .acts{display:flex;gap:6px;padding:4px 12px 12px}
   .item button{flex:1;font-size:11px;font-weight:700;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:6px;cursor:pointer;font-family:inherit}
   .item button:hover{border-color:var(--gold);color:var(--goldink)}
+  .item button.del{color:#B2493A}
   .item button.del:hover{border-color:#c0442e;color:#c0442e}
   .empty{grid-column:1/-1;text-align:center;color:var(--mute);padding:40px 20px;background:var(--panel);border:1px solid var(--line);border-radius:16px}
   .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--menu);color:#fff;padding:10px 18px;border-radius:999px;font-size:13px;font-weight:600;opacity:0;transition:.2s;pointer-events:none;z-index:30}
@@ -94,14 +95,14 @@
 <body>
 <div class="top">
   <div class="logo"><img src="favicon.svg" alt=""></div>
-  <div class="tt"><h1>Biblioteca de Mídia</h1><p>Fotos e vídeos do Manual — o Publicador usa daqui</p></div>
+  <div class="tt"><h1>Biblioteca de Mídia</h1><p>Fotos e vídeos do Manual, o Publicador usa daqui</p></div>
   <a class="back" href="index.html">← HUB</a>
 </div>
 <div class="wrap">
   <label class="drop" id="drop">
     <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l4 4h-3v6h-2V7H8l4-4zM5 15h14v4a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4z"/></svg></div>
     <h2>Arraste ou clique pra subir</h2>
-    <p>Vou pedir <b>título</b>, categoria e editoria de cada arquivo — pra localizar depois</p>
+    <p>Vou pedir <b>título</b>, categoria e editoria de cada arquivo, pra localizar depois</p>
     <input type="file" id="file" accept="image/jpeg,image/png,image/webp,video/mp4,video/quicktime" multiple>
   </label>
   <div class="status" id="status"></div>
@@ -159,7 +160,7 @@ async function carregarTax(){
 function inkFor(hex){hex=String(hex||'').replace('#','');if(hex.length===3)hex=hex.split('').map(c=>c+c).join('');const f=i=>{let c=(parseInt(hex.substr(i,2),16)||0)/255;return c<=0.03928?c/12.92:Math.pow((c+0.055)/1.055,2.4);};const L=0.2126*f(0)+0.7152*f(2)+0.0722*f(4);return ((L+0.05)/0.05)>(1.05/(L+0.05))?'#23332F':'#fff';}
 function chipsHTML(tipo,val){ return (TAX[tipo]||[]).map(t=>{ const c=t.cor||'#7A8F89';
   return `<button type="button" class="chp${t.slug===val?' on':''}" data-slug="${t.slug}" style="--c:${c};--io:${inkFor(c)}" onclick="pickChip(this)">${esc(t.nome)}</button>`;}).join('')
-  || '<span style="font-size:12px;color:var(--dim)">nenhuma — cadastre no Admin</span>'; }
+  || '<span style="font-size:12px;color:var(--dim)">nenhuma, cadastre no Admin</span>'; }
 window.pickChip=el=>{ const g=el.closest('.chips'); const was=el.classList.contains('on');
   g.querySelectorAll('.chp').forEach(c=>c.classList.remove('on')); if(!was) el.classList.add('on'); };
 const chipVal=g=>{ const on=g&&g.querySelector('.chp.on'); return on?on.dataset.slug:''; };

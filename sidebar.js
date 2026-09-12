@@ -1,4 +1,4 @@
-/* Sidebar única do HUB Motor de Conteúdo — injeta CSS + nav em todas as páginas.
+/* Sidebar única do HUB Motor de Conteúdo, injeta CSS + nav em todas as páginas.
    Uso: <script src="sidebar.js" defer></script> antes de </body>. Marca o item ativo pelo arquivo. */
 (function(){
   var ICON={
@@ -78,7 +78,7 @@
   aside.innerHTML=''
    +'<div class="brand"><div class="lg"><img src="favicon.svg" alt=""></div><div><b>Motor de Conteúdo</b><small>Manual do Recém-Nascido</small></div></div>'
    +'<nav>'+nav+'</nav>'
-   +'<div class="ft">⏸️ Modo seguro ligado — nada posta sozinho ainda.</div>';
+   +'<div class="ft">⏸️ Modo seguro ligado, nada posta sozinho ainda.</div>';
 
   var top=document.createElement('div'); top.className='sbtop';
   top.innerHTML='<button class="hb" aria-label="Menu">'+svg('burger')+'</button><b>'+(active||'Motor de Conteúdo')+'</b>';

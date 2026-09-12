@@ -94,7 +94,7 @@
 
   <div class="panel growth" id="growth">
     <h2>Crescimento de seguidores</h2>
-    <div class="hd"><div class="big" id="gBig">—</div><div class="meta" id="gMeta"></div></div>
+    <div class="hd"><div class="big" id="gBig">-</div><div class="meta" id="gMeta"></div></div>
     <svg class="chart" id="gChart" viewBox="0 0 600 130" preserveAspectRatio="none"></svg>
   </div>
 
@@ -201,7 +201,7 @@ async function renderAgenda(){
   const mon=new Date(now); mon.setHours(0,0,0,0); mon.setDate(now.getDate()-dow);
   const sun=new Date(mon); sun.setDate(mon.getDate()+6); sun.setHours(23,59,59,999);
   const sem=arr.filter(p=>p.agendado_para && p.status==='agendado').map(p=>({...p,_d:new Date(p.agendado_para)})).filter(p=>p._d>=mon&&p._d<=sun).sort((a,b)=>a._d-b._d);
-  document.getElementById('agSub').textContent = `${mon.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'})} – ${sun.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'})}`;
+  document.getElementById('agSub').textContent = `${mon.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'})}, ${sun.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'})}`;
   const el=document.getElementById('agenda');
   if(!sem.length){ el.innerHTML='<div class="empty">Nada agendado esta semana.<br><span class="nb" onclick="location.href=\'publicador.html\'">+ Agendar um post</span></div>'; return; }
   el.innerHTML=sem.map(p=>{ const d=p._d;
