@@ -91,6 +91,17 @@
   .colabbox .tag b{color:#B2432C;cursor:pointer;font-weight:800}
   .colabbox input{border:none;background:none;outline:none;padding:4px;flex:1;min-width:90px;font-size:14px}
 
+  /* automacao */
+  .autobox{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:15px}
+  .autotoggle{display:flex;align-items:center;gap:9px;cursor:pointer;font-size:13.5px;font-weight:700;color:var(--ink)}
+  .autotoggle input{width:17px;height:17px;accent-color:var(--menu);cursor:pointer;flex:0 0 auto}
+  .automark{font-size:11px;color:#8A5E0A;padding-left:26px;margin-top:5px;line-height:1.45}
+  #autoFields{margin-top:12px;display:flex;flex-direction:column;gap:4px}
+  #autoFields .ff{font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#566862;margin:8px 0 5px}
+  #autoFields .ff:first-child{margin-top:0}
+  #autoFields textarea{min-height:64px}
+  #gatbox .tag b{color:#B2432C}
+
   .submit{width:100%;margin-top:20px;background:var(--menu);color:#fff;border:none;border-radius:12px;padding:13px;font-size:15px;font-weight:800;cursor:pointer;font-family:inherit;transition:background .15s}
   .submit:hover:not(:disabled){background:#2f423c}
   .submit:disabled{opacity:.5;cursor:default}
@@ -230,6 +241,22 @@
       </div>
       <div class="hint">O post de collab aparece também no perfil marcado (ele aceita o convite).</div>
 
+      <label class="f">Automação</label>
+      <div class="autobox">
+        <label class="autotoggle"><input type="checkbox" id="autoOn"> <span>Este post ativa automação (comentário com palavra → direct)</span></label>
+        <div class="automark">Por enquanto é só marcação: fica salvo no post, mas ainda não dispara. A automação do Instagram a gente liga na próxima etapa (o Facebook, quando a publicação no FB entrar no ar).</div>
+        <div id="autoFields" hidden>
+          <label class="ff">Palavras que ativam</label>
+          <div class="colabbox" id="gatbox"><input type="text" id="gatin" placeholder="palavra e Enter (ex: SONO)"></div>
+          <label class="ff">Fluxo (pré-cadastrado no CRM)</label>
+          <select id="autoFluxo"><option value="">Carregando fluxos…</option></select>
+          <label class="ff">Chamada no post (CTA)</label>
+          <textarea id="autoLegenda" placeholder="Ex: comenta SONO que eu te mando o guia 💛"></textarea>
+          <label class="ff">Mensagem do direct (DM)</label>
+          <textarea id="autoDM" placeholder="O que a pessoa recebe no direct quando comenta a palavra"></textarea>
+        </div>
+      </div>
+
       <div class="two">
         <div><label class="f">Agendar para</label><input type="datetime-local" id="quando"></div>
         <div><label class="f">Replicar</label>
@@ -334,7 +361,7 @@ const chipVal=g=>{ const on=g&&g.querySelector('.chp.on'); return on?on.dataset.
 carregarTax();
 
 // estado
-let tipo='foto', midias=[], plats=new Set(['instagram']), colabs=[], editId=null;
+let tipo='foto', midias=[], plats=new Set(['instagram']), colabs=[], gatilhos=[], editId=null;
 
 // ── redes ──
 const NETS=[
@@ -431,6 +458,26 @@ $('#colabin').addEventListener('keydown',e=>{
 });
 $('#legenda').addEventListener('input',renderPreview);
 
+// ── automação (marcação) ──
+function renderGat(){ const box=$('#gatbox'); box.querySelectorAll('.tag').forEach(t=>t.remove()); const inp=$('#gatin');
+  gatilhos.forEach((g,i)=>{ const s=document.createElement('span'); s.className='tag'; s.innerHTML=`${esc(g)} <b onclick="remGat(${i})">×</b>`; box.insertBefore(s,inp); }); }
+window.remGat=i=>{ gatilhos.splice(i,1); renderGat(); };
+$('#gatin').addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===','){ e.preventDefault();
+  const v=e.target.value.trim().replace(/,/g,'').slice(0,40);
+  if(v && !gatilhos.some(x=>x.toLowerCase()===v.toLowerCase()) && gatilhos.length<20) gatilhos.push(v);
+  e.target.value=''; renderGat(); } });
+$('#autoOn').addEventListener('change',e=>{ $('#autoFields').hidden=!e.target.checked; });
+(async()=>{ try{ const r=await fetch(AGENDAR,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'fluxos'})}).then(r=>r.json());
+  const arr=r.dados||[]; const sel=$('#autoFluxo');
+  sel.innerHTML='<option value="">Escolher fluxo…</option>'+arr.map(f=>`<option value="${f.id}">${esc(f.nome)}${f.ativo?'':' (inativo)'}</option>`).join('');
+  if(window.__pendingFluxo){ sel.value=window.__pendingFluxo; window.__pendingFluxo=null; }
+}catch(e){ $('#autoFluxo').innerHTML='<option value="">erro ao carregar fluxos</option>'; } })();
+function getAutomacao(){ const sel=$('#autoFluxo');
+  return { ativa:$('#autoOn').checked, plataformas:[...plats].filter(k=>k==='instagram'||k==='facebook'),
+    gatilhos:gatilhos.slice(), fluxo_id:sel.value||null,
+    fluxo_nome: sel.value?(sel.options[sel.selectedIndex].text||'').replace(/ \(inativo\)$/,''):'',
+    legenda_cta:$('#autoLegenda').value.trim(), msg_dm:$('#autoDM').value.trim() }; }
+
 // ── PREVIEW ──
 function renderPreview(){
   const m=midias[0];
@@ -472,7 +519,7 @@ $('#salvar').onclick=async()=>{
   const quando=$('#quando').value, rep=$('#rep').value;
   const capa=midias[0]? ((midias[0].poster||(isVid(midias[0].tipo)?'':midias[0].url))||'').split('?')[0] : '';
   const payload={ acao: editId?'editar':'agendar', id:editId||undefined, tipo, legenda:$('#legenda').value,
-    midia:midias, capa, plataformas:[...plats], colaboradores:colabs,
+    midia:midias, capa, plataformas:[...plats], colaboradores:colabs, automacao:getAutomacao(),
     agendado_para: quando?new Date(quando).toISOString():null, recorrencia: rep?{tipo:rep}:null };
   $('#salvar').disabled=true; $('#msg').textContent='salvando…';
   try{
@@ -481,6 +528,7 @@ $('#salvar').onclick=async()=>{
     $('#msg').textContent = editId? 'alterado ✓' : (quando?'agendado ✓':'salvo como rascunho ✓');
     if(editId){ setTimeout(()=>location.href='calendario.html',700); return; }
     midias=[];renderSel();$('#legenda').value='';$('#quando').value='';$('#rep').value='';colabs=[];renderColab();
+    gatilhos=[];renderGat();$('#autoOn').checked=false;$('#autoFields').hidden=true;$('#autoFluxo').value='';$('#autoLegenda').value='';$('#autoDM').value='';
     carregarResumo();
   }catch(e){ $('#msg').textContent='erro ao salvar'; }
   $('#salvar').disabled=false;
@@ -501,6 +549,11 @@ function preencher(p){
   plats=new Set((p.plataformas&&p.plataformas.length?p.plataformas:['instagram']));
   document.querySelectorAll('#nets .net').forEach(b=>b.classList.toggle('on',plats.has(b.dataset.k)));
   colabs=(p.colaboradores||[]).slice(); renderColab();
+  const a=p.automacao||{};
+  $('#autoOn').checked=!!a.ativa; $('#autoFields').hidden=!a.ativa;
+  gatilhos=(a.gatilhos||[]).slice(); renderGat();
+  $('#autoLegenda').value=a.legenda_cta||''; $('#autoDM').value=a.msg_dm||'';
+  if(a.fluxo_id){ const sel=$('#autoFluxo'); if([...sel.options].some(o=>o.value===a.fluxo_id)) sel.value=a.fluxo_id; else window.__pendingFluxo=a.fluxo_id; }
   if(p.agendado_para){ const d=new Date(p.agendado_para); const pad=n=>String(n).padStart(2,'0'); $('#quando').value=`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`; }
   if(p.recorrencia&&p.recorrencia.tipo) $('#rep').value=p.recorrencia.tipo;
   renderSel();
