@@ -200,10 +200,11 @@
   function renderKPIs(t){
     var ctr=(t.acessos>0)?Math.round(t.cliques/t.acessos*1000)/10:0;
     document.getElementById('kpis').innerHTML=
-      kpi('Acessos', fmt(t.acessos))
+      kpi('Acessos', fmt(t.acessos), false, 'visitas (pageviews)')
+     +kpi('Usuários únicos', fmt(t.usuarios), true, 'pessoas distintas')
+     +kpi('Sessões', fmt(t.sessoes), false, 'visitas por sessão')
      +kpi('Cliques', fmt(t.cliques), true)
      +kpi('Taxa de clique', ctr+'%', false, 'cliques ÷ acessos')
-     +kpi('Sessões', fmt(t.sessoes))
      +kpi('Dead clicks', fmt(t.dead_clicks), false, 'toques sem link');
   }
   function kpi(lab,val,hi,sub){ return '<div class="kpi'+(hi?' hi':'')+'"><div class="lab">'+lab+'</div><div class="val">'+val+'</div>'+(sub?'<div class="sub">'+sub+'</div>':'')+'</div>'; }
