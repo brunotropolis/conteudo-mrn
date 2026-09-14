@@ -67,6 +67,9 @@
   .ta{text-align:right}
 
   .empty{color:var(--dim);font-size:13px;padding:8px 2px}
+  .more{font-size:11.5px;font-weight:700;color:var(--dim);padding:8px 2px 0;text-align:center}
+  .toggleall{display:block;width:100%;max-width:340px;margin:2px auto 20px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:11px;font-family:inherit;font-weight:800;font-size:.9rem;color:var(--goldink);cursor:pointer}
+  .toggleall:hover{border-color:var(--gold);background:var(--goldbg)}
   footer{color:var(--dim);text-align:center;font-size:.78rem;padding:10px 20px 40px}
 
   @media(max-width:860px){ .grid2,.grid3{grid-template-columns:1fr} }
@@ -115,6 +118,8 @@
   </div>
 
   <div class="kpis" id="kpis"></div>
+
+  <button class="toggleall" id="toggleall" onclick="toggleAll()">Ver todas as métricas ⌄</button>
 
   <div class="panel">
     <h2>Volume de acesso</h2>
@@ -175,7 +180,8 @@
     opts=opts||{};
     if(!items||!items.length){ el.innerHTML='<div class="empty">Sem dados ainda.</div>'; return; }
     var max=Math.max.apply(null, items.map(function(x){return +x[valKey]||0;}))||1;
-    el.innerHTML=items.map(function(x){
+    var vis=items.slice(0, EXPAND?99999:5);
+    el.innerHTML=vis.map(function(x){
       var v=+x[valKey]||0, w=Math.max(3, Math.round(v/max*100));
       var lab=(x[labelKey]==null||x[labelKey]==='')?'—':String(x[labelKey]);
       var extra=opts.sub?('<small>'+ (x[opts.sub]||'') +'</small>'):'';
@@ -184,17 +190,20 @@
         +'<div class="bar'+(opts.gold?' gold':'')+'"><i style="width:'+w+'%"></i></div>'
         +'<div class="bn">'+second+'</div></div>';
     }).join('');
+    if(!EXPAND && items.length>5){ el.innerHTML+='<div class="more">+'+(items.length-5)+' mais</div>'; }
   }
 
   function renderDias(el, items){
     if(!items||!items.length){ el.innerHTML='<div class="empty">Sem dados ainda.</div>'; return; }
-    var rows=items.slice().sort(function(a,b){return a.dia<b.dia?1:-1;});
+    var all=items.slice().sort(function(a,b){return a.dia<b.dia?1:-1;});
+    var rows=all.slice(0, EXPAND?99999:5);
     var head='<div class="drow dhead"><span>Dia</span><span class="ta">Acessos</span><span class="ta">Cliques</span></div>';
     el.innerHTML=head+rows.map(function(r){
       var d=new Date(r.dia+'T12:00:00');
       var lbl=d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',weekday:'short'}).replace('.','');
       return '<div class="drow"><div class="dday">'+lbl+'</div><div class="dv ta">'+fmt(r.acessos)+'</div><div class="dv k ta">'+fmt(r.cliques)+'</div></div>';
     }).join('');
+    if(!EXPAND && all.length>5){ el.innerHTML+='<div class="more">+'+(all.length-5)+' dias</div>'; }
   }
 
   function renderKPIs(t){
@@ -209,20 +218,31 @@
   }
   function kpi(lab,val,hi,sub){ return '<div class="kpi'+(hi?' hi':'')+'"><div class="lab">'+lab+'</div><div class="val">'+val+'</div>'+(sub?'<div class="sub">'+sub+'</div>':'')+'</div>'; }
 
+  var DATA=null, EXPAND=false;
+  function renderAll(){
+    var d=DATA||{};
+    renderKPIs(d.totais||{});
+    renderDias(document.getElementById('pordia'), d.por_dia);
+    bars(document.getElementById('porcat'), d.por_categoria, 'categoria','cliques',{gold:true});
+    bars(document.getElementById('toplinks'), d.top_links, 'link','cliques',{gold:true, sub:'categoria'});
+    bars(document.getElementById('porrede'), d.por_rede, 'rede','acessos',{second:'cliques'});
+    bars(document.getElementById('pordisp'), d.por_dispositivo, 'dispositivo','acessos',{second:'cliques'});
+    bars(document.getElementById('poros'), d.por_os, 'os','acessos',{});
+    bars(document.getElementById('cidades'), d.cidades, 'cidade','acessos',{sub:'uf'});
+    bars(document.getElementById('estados'), d.estados, 'uf','acessos',{});
+    var dead=(d.dead_por_alvo||[]).map(function(x){return {alvo:nomeDead(x.alvo), qtd:x.qtd};});
+    bars(document.getElementById('deadalvo'), dead, 'alvo','qtd',{gold:true, unit:'×'});
+  }
+  function toggleAll(){
+    EXPAND=!EXPAND;
+    document.getElementById('toggleall').textContent=EXPAND?'Ver top 5 de cada ⌃':'Ver todas as métricas ⌄';
+    renderAll();
+  }
   function load(){
     var q=API+'?days='+state.d+(state.rede?('&rede='+encodeURIComponent(state.rede)):'')+(state.device?('&device='+encodeURIComponent(state.device)):'');
     document.getElementById('fmeta').textContent='carregando…';
     fetch(q).then(function(r){return r.json();}).then(function(d){
-      renderKPIs(d.totais||{});
-      renderDias(document.getElementById('pordia'), d.por_dia);
-      bars(document.getElementById('porcat'), d.por_categoria, 'categoria','cliques',{gold:true});
-      bars(document.getElementById('toplinks'), d.top_links, 'link','cliques',{gold:true, sub:'categoria'});
-      bars(document.getElementById('porrede'), d.por_rede, 'rede','acessos',{second:'cliques'});
-      bars(document.getElementById('pordisp'), d.por_dispositivo, 'dispositivo','acessos',{second:'cliques'});
-      bars(document.getElementById('poros'), d.por_os, 'os','acessos',{});
-      bars(document.getElementById('cidades'), d.cidades, 'cidade','acessos',{sub:'uf'});
-      bars(document.getElementById('estados'), d.estados, 'uf','acessos',{});
-      bars(document.getElementById('deadalvo'), d.dead_por_alvo, 'alvo','qtd',{gold:true, unit:'×'});
+      DATA=d; renderAll();
       var t=d.totais||{};
       document.getElementById('fmeta').innerHTML='<b>'+fmt(t.acessos)+'</b> acessos · <b>'+fmt(t.cliques)+'</b> cliques';
     }).catch(function(e){
