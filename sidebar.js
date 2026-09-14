@@ -18,6 +18,7 @@
     {item:'Início', href:'index.html', ic:'home'},
     {cat:'Métricas'},
     {item:'Melhores conteúdos', href:'desempenho.html', ic:'chart'},
+    {item:'Dash Link Bio', href:'dashbio.html', ic:'link'},
     {cat:'Ferramentas'},
     {item:'Publicador', href:'publicador.html', ic:'send'},
     {item:'Calendário de posts', href:'calendario.html', ic:'cal'},

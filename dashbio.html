@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Dash Link Bio · HUB Manual</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#3A5049">
+<style>
+  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--hover:#E9F3F1;--line:#DCE8E6;--ink:#23332F;--mute:#6E827D;--dim:#93A5A1;--gold:#E3A31B;--gold2:#C88C10;--goldink:#8A5E0A;--goldbg:#FDF1D6;--teal:#17A2A0;--blue:#4E7CA6;--menu:#3A5049;--menuTxt:#E7EEEC;--menuMute:#9DB3AD}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.5;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+
+  .top{background:var(--menu);color:var(--menuTxt);padding:18px 22px;display:flex;align-items:center;gap:14px}
+  .top .logo{width:42px;height:42px;border-radius:12px;flex:0 0 auto;overflow:hidden}
+  .top .logo img{width:100%;height:100%;display:block}
+  .top .tt{min-width:0;flex:1}
+  .top h1{font-size:1.18rem;font-weight:800;letter-spacing:-.01em}
+  .top p{color:var(--menuMute);font-size:.82rem;margin-top:2px}
+  .top .back{flex:0 0 auto;color:var(--menuTxt);font-size:.82rem;font-weight:700;background:rgba(255,255,255,.10);padding:8px 13px;border-radius:10px}
+
+  .wrap{max-width:1040px;margin:0 auto;padding:26px 18px 70px}
+
+  .filters{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin:0 2px 20px}
+  .fgrp{display:flex;flex-direction:column;gap:6px}
+  .fgrp .flabel{font-size:10.5px;font-weight:800;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+  .grp{display:flex;gap:5px;background:var(--panel);border:1px solid var(--line);padding:5px;border-radius:12px;flex-wrap:wrap}
+  .chip{font-size:12.5px;font-weight:700;color:var(--mute);padding:6px 12px;border-radius:8px;cursor:pointer;border:none;background:none;font-family:inherit}
+  .chip.on{background:var(--menu);color:#fff}
+  .fspacer{flex:1}
+  .fmeta{font-size:12px;color:var(--mute);align-self:center}
+  .fmeta b{color:var(--ink)}
+
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:20px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:15px 16px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 18px rgba(35,51,47,.05)}
+  .kpi .lab{font-size:11px;color:#52615A;text-transform:uppercase;letter-spacing:.07em;font-weight:700}
+  .kpi .val{font-size:26px;font-weight:800;margin-top:6px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .kpi.hi .val{color:var(--goldink)}
+  .kpi .sub{font-size:11px;color:var(--dim);margin-top:2px}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:16px}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 18px rgba(35,51,47,.05);margin-bottom:16px}
+  .panel h2{margin:0 0 4px;font-size:.82rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+  .panel .hint{font-size:11.5px;color:var(--dim);margin-bottom:14px}
+
+  .blist{display:flex;flex-direction:column;gap:11px;margin-top:12px}
+  .brow{display:grid;grid-template-columns:minmax(90px,34%) 1fr auto;align-items:center;gap:12px}
+  .brow .bl{font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:capitalize}
+  .brow .bl small{color:var(--dim);text-transform:uppercase;font-size:10px;font-weight:700;margin-left:4px}
+  .bar{height:9px;background:var(--hover);border-radius:999px;overflow:hidden}
+  .bar>i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--menu),var(--teal))}
+  .bar.gold>i{background:linear-gradient(90deg,var(--gold),var(--gold2))}
+  .brow .bn{font-size:12.5px;color:var(--mute);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .brow .bn b{color:var(--ink)}
+
+  .days{max-height:340px;overflow-y:auto;margin-top:12px}
+  .days::-webkit-scrollbar{width:8px}.days::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
+  .drow{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:10px;padding:9px 2px;border-bottom:1px solid var(--line);align-items:center}
+  .drow.dhead{position:sticky;top:0;background:var(--panel);border-bottom:2px solid var(--line)}
+  .drow.dhead span{font-size:10.5px;font-weight:800;color:#52615A;text-transform:uppercase;letter-spacing:.05em}
+  .drow .dday{font-weight:700;font-size:13px;text-transform:capitalize}
+  .drow .dv{font-variant-numeric:tabular-nums;font-weight:700;font-size:13px}
+  .drow .dv.k{color:var(--goldink);font-weight:800}
+  .ta{text-align:right}
+
+  .empty{color:var(--dim);font-size:13px;padding:8px 2px}
+  footer{color:var(--dim);text-align:center;font-size:.78rem;padding:10px 20px 40px}
+
+  @media(max-width:860px){ .grid2,.grid3{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="logo"><img src="favicon.svg" alt=""></div>
+  <div class="tt"><h1>Dash Link Bio</h1><p>Acessos, cliques e dead clicks do link da bio</p></div>
+  <a class="back" href="index.html">← HUB</a>
+</div>
+<div class="wrap">
+
+  <div class="filters">
+    <div class="fgrp">
+      <span class="flabel">Período</span>
+      <div class="grp" id="fperiodo">
+        <button class="chip" data-d="1">Hoje</button>
+        <button class="chip on" data-d="7">7 dias</button>
+        <button class="chip" data-d="30">30 dias</button>
+        <button class="chip" data-d="3650">Tudo</button>
+      </div>
+    </div>
+    <div class="fgrp">
+      <span class="flabel">Rede</span>
+      <div class="grp" id="frede">
+        <button class="chip on" data-v="">Todas</button>
+        <button class="chip" data-v="instagram">Instagram</button>
+        <button class="chip" data-v="facebook">Facebook</button>
+        <button class="chip" data-v="youtube">YouTube</button>
+        <button class="chip" data-v="tiktok">TikTok</button>
+        <button class="chip" data-v="(direto)">Direto</button>
+      </div>
+    </div>
+    <div class="fgrp">
+      <span class="flabel">Dispositivo</span>
+      <div class="grp" id="fdisp">
+        <button class="chip on" data-v="">Todos</button>
+        <button class="chip" data-v="mobile">Celular</button>
+        <button class="chip" data-v="desktop">Desktop</button>
+        <button class="chip" data-v="tablet">Tablet</button>
+      </div>
+    </div>
+    <div class="fspacer"></div>
+    <div class="fmeta" id="fmeta">carregando…</div>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="panel">
+    <h2>Volume de acesso</h2>
+    <div class="hint">Acessos (visitas) e cliques por dia — fuso de Brasília.</div>
+    <div class="days" id="pordia"></div>
+  </div>
+
+  <div class="grid2">
+    <div class="panel"><h2>Mais clicados por categoria</h2><div class="hint">Cliques agrupados por seção da página.</div><div class="blist" id="porcat"></div></div>
+    <div class="panel"><h2>Top links clicados</h2><div class="hint">Ranking dos links mais tocados.</div><div class="blist" id="toplinks"></div></div>
+  </div>
+
+  <div class="grid3">
+    <div class="panel"><h2>Fonte de acesso</h2><div class="hint">De qual rede veio o acesso.</div><div class="blist" id="porrede"></div></div>
+    <div class="panel"><h2>Plataforma</h2><div class="hint">Aparelho usado no acesso.</div><div class="blist" id="pordisp"></div></div>
+    <div class="panel"><h2>Sistema (OS)</h2><div class="hint">Sistema operacional.</div><div class="blist" id="poros"></div></div>
+  </div>
+
+  <div class="grid2">
+    <div class="panel"><h2>Cidades</h2><div class="hint">Top cidades por acesso.</div><div class="blist" id="cidades"></div></div>
+    <div class="panel"><h2>Estados</h2><div class="hint">Top estados (UF) por acesso.</div><div class="blist" id="estados"></div></div>
+  </div>
+
+  <div class="panel">
+    <h2>Dead clicks</h2>
+    <div class="hint">Toques que não caíram em nenhum link (a pessoa clicou achando que era clicável). Pistas do que ajustar na página.</div>
+    <div class="blist" id="deadalvo"></div>
+  </div>
+
+  <footer>Dados via coletor próprio (Cloudflare Worker + Supabase) · começou a medir em 14/09/2026</footer>
+</div>
+
+<script src="sidebar.js" defer></script>
+<script>
+  var API='https://bio.manualdorecemnascido.com.br/__ev/dash';
+  var state={d:7, rede:'', device:''};
+  var fmt=function(n){ return (n==null?0:n).toLocaleString('pt-BR'); };
+
+  // traduz seletor CSS do dead click pra nome amigavel (pra equipe de conteudo)
+  function nomeDead(sel){
+    var s=(sel||'').toLowerCase();
+    var map=[
+      ['pickhint','Aviso "toque na sua fase"'],
+      ['hero','Foto de perfil'],['ph','Foto de perfil'],['profile','Área do perfil'],
+      ['role','Subtítulo do perfil'],['tag','Frase da bio'],
+      ['pt','Título de categoria'],['pdesc','Descrição da categoria'],['phead','Cabeçalho de categoria'],
+      ['catchev','Seta da categoria'],['chev','Seta do link'],
+      ['rtxt','Texto do link'],['rtitle','Título do link'],['rsub','Descrição do link'],
+      ['tw','Foto do link'],['thumb','Foto do link'],['vec','Selo do link'],
+      ['wrap','Fundo da página'],['footer','Rodapé'],['fsoc','Ícones sociais'],
+      ['simple-parc','Área de parceria'],['catbody','Dentro da categoria'],['cat','Bloco de categoria']
+    ];
+    for(var i=0;i<map.length;i++){ if(s.indexOf(map[i][0])>=0) return map[i][1]; }
+    return sel||'—';
+  }
+
+  function bars(el, items, labelKey, valKey, opts){
+    opts=opts||{};
+    if(!items||!items.length){ el.innerHTML='<div class="empty">Sem dados ainda.</div>'; return; }
+    var max=Math.max.apply(null, items.map(function(x){return +x[valKey]||0;}))||1;
+    el.innerHTML=items.map(function(x){
+      var v=+x[valKey]||0, w=Math.max(3, Math.round(v/max*100));
+      var lab=(x[labelKey]==null||x[labelKey]==='')?'—':String(x[labelKey]);
+      var extra=opts.sub?('<small>'+ (x[opts.sub]||'') +'</small>'):'';
+      var second=opts.second?(' <b>'+fmt(v)+'</b> · '+fmt(+x[opts.second]||0)+' cliq'):(' <b>'+fmt(v)+'</b>'+(opts.unit||''));
+      return '<div class="brow"><div class="bl">'+lab+extra+'</div>'
+        +'<div class="bar'+(opts.gold?' gold':'')+'"><i style="width:'+w+'%"></i></div>'
+        +'<div class="bn">'+second+'</div></div>';
+    }).join('');
+  }
+
+  function renderDias(el, items){
+    if(!items||!items.length){ el.innerHTML='<div class="empty">Sem dados ainda.</div>'; return; }
+    var rows=items.slice().sort(function(a,b){return a.dia<b.dia?1:-1;});
+    var head='<div class="drow dhead"><span>Dia</span><span class="ta">Acessos</span><span class="ta">Cliques</span></div>';
+    el.innerHTML=head+rows.map(function(r){
+      var d=new Date(r.dia+'T12:00:00');
+      var lbl=d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',weekday:'short'}).replace('.','');
+      return '<div class="drow"><div class="dday">'+lbl+'</div><div class="dv ta">'+fmt(r.acessos)+'</div><div class="dv k ta">'+fmt(r.cliques)+'</div></div>';
+    }).join('');
+  }
+
+  function renderKPIs(t){
+    var ctr=(t.acessos>0)?Math.round(t.cliques/t.acessos*1000)/10:0;
+    document.getElementById('kpis').innerHTML=
+      kpi('Acessos', fmt(t.acessos))
+     +kpi('Cliques', fmt(t.cliques), true)
+     +kpi('Taxa de clique', ctr+'%', false, 'cliques ÷ acessos')
+     +kpi('Sessões', fmt(t.sessoes))
+     +kpi('Dead clicks', fmt(t.dead_clicks), false, 'toques sem link');
+  }
+  function kpi(lab,val,hi,sub){ return '<div class="kpi'+(hi?' hi':'')+'"><div class="lab">'+lab+'</div><div class="val">'+val+'</div>'+(sub?'<div class="sub">'+sub+'</div>':'')+'</div>'; }
+
+  function load(){
+    var q=API+'?days='+state.d+(state.rede?('&rede='+encodeURIComponent(state.rede)):'')+(state.device?('&device='+encodeURIComponent(state.device)):'');
+    document.getElementById('fmeta').textContent='carregando…';
+    fetch(q).then(function(r){return r.json();}).then(function(d){
+      renderKPIs(d.totais||{});
+      renderDias(document.getElementById('pordia'), d.por_dia);
+      bars(document.getElementById('porcat'), d.por_categoria, 'categoria','cliques',{gold:true});
+      bars(document.getElementById('toplinks'), d.top_links, 'link','cliques',{gold:true, sub:'categoria'});
+      bars(document.getElementById('porrede'), d.por_rede, 'rede','acessos',{second:'cliques'});
+      bars(document.getElementById('pordisp'), d.por_dispositivo, 'dispositivo','acessos',{second:'cliques'});
+      bars(document.getElementById('poros'), d.por_os, 'os','acessos',{});
+      bars(document.getElementById('cidades'), d.cidades, 'cidade','acessos',{sub:'uf'});
+      bars(document.getElementById('estados'), d.estados, 'uf','acessos',{});
+      bars(document.getElementById('deadalvo'), d.dead_por_alvo, 'alvo','qtd',{gold:true, unit:'×'});
+      var t=d.totais||{};
+      document.getElementById('fmeta').innerHTML='<b>'+fmt(t.acessos)+'</b> acessos · <b>'+fmt(t.cliques)+'</b> cliques';
+    }).catch(function(e){
+      document.getElementById('fmeta').textContent='erro ao carregar';
+    });
+  }
+
+  function wire(id, key, isNum){
+    document.getElementById(id).addEventListener('click', function(e){
+      var b=e.target.closest('.chip'); if(!b) return;
+      [].forEach.call(this.querySelectorAll('.chip'), function(c){c.classList.remove('on');});
+      b.classList.add('on');
+      state[key]= isNum ? (+b.dataset.d) : (b.dataset.v||'');
+      load();
+    });
+  }
+  wire('fperiodo','d',true);
+  wire('frede','rede',false);
+  wire('fdisp','device',false);
+  load();
+</script>
+</body>
+</html>
