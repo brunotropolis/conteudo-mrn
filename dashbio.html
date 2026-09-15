@@ -119,6 +119,11 @@
 
   <div class="kpis" id="kpis"></div>
 
+  <div class="grid2" id="destaques" style="margin-bottom:20px">
+    <div class="kpi hi"><div class="lab">Cliques · Dream Baby Pocket</div><div class="val" id="kDBP">—</div><div class="sub">dentro da seção Sono</div></div>
+    <div class="kpi hi"><div class="lab">Cliques · Quiz do Sono</div><div class="val" id="kQuiz">—</div><div class="sub">banner roxo (antes do Gestante)</div></div>
+  </div>
+
   <button class="toggleall" id="toggleall" onclick="toggleAll()">Ver todas as métricas ⌄</button>
 
   <div class="panel">
@@ -222,6 +227,15 @@
   function renderAll(){
     var d=DATA||{};
     renderKPIs(d.totais||{});
+    var links=d.top_links||[];
+    var dbp=0, quiz=0;
+    links.forEach(function(x){
+      var l=(x.link||'').toLowerCase();
+      if(l.indexOf('dream baby pocket')>=0) dbp+=(+x.cliques||0);
+      if(l.indexOf('descubra o perfil')>=0) quiz+=(+x.cliques||0);
+    });
+    document.getElementById('kDBP').textContent=fmt(dbp);
+    document.getElementById('kQuiz').textContent=fmt(quiz);
     renderDias(document.getElementById('pordia'), d.por_dia);
     bars(document.getElementById('porcat'), d.por_categoria, 'categoria','cliques',{gold:true});
     bars(document.getElementById('toplinks'), d.top_links, 'link','cliques',{gold:true, sub:'categoria'});
