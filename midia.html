@@ -263,11 +263,18 @@ function capturaPoster(f){return new Promise(res=>{
 });}
 async function subirUm(f,titulo,categoria,editoria){
   statusEl.innerHTML='enviando <b>'+esc(titulo)+'</b>…';
-  const b64=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result.split(',')[1]);r.onerror=rej;r.readAsDataURL(f);});
-  const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'upload',mime:f.type||'image/jpeg',titulo,categoria,editoria,base64:b64})}).then(r=>r.json());
+  const mime=f.type||'application/octet-stream';
+  // 1) URL de upload assinada — o arquivo NÃO passa pelo n8n (evita o teto de payload; vídeo grande funciona)
+  const s=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'sign_upload',titulo,mime})}).then(r=>r.json()).catch(()=>({}));
+  if(!s.ok||!s.upload_url){statusEl.innerHTML='falhou em <b>'+esc(titulo)+'</b>';return;}
+  // 2) sobe DIRETO pro Supabase Storage
+  const put=await fetch(s.upload_url,{method:'PUT',headers:{'Content-Type':mime,'x-upsert':'true'},body:f}).catch(()=>({ok:false}));
+  if(!put.ok){statusEl.innerHTML='falhou o envio de <b>'+esc(titulo)+'</b>';return;}
+  // 3) grava o metadado (título/categoria/editoria)
+  const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'upload_meta',titulo,categoria,editoria,mime,tamanho:f.size,nome:s.nome})}).then(r=>r.json()).catch(()=>({}));
   if(!r.ok){statusEl.innerHTML='falhou em <b>'+esc(titulo)+'</b>';return;}
-  const nome=(r.arquivo&&r.arquivo.nome)||'';
-  if(isVid(f.type)&&nome){ const p=await capturaPoster(f); if(p) await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'upload_poster',for:nome,base64:p.split(',')[1]})}).catch(()=>{}); }
+  const nome=(r.arquivo&&r.arquivo.nome)||s.nome||'';
+  if(isVid(mime)&&nome){ const p=await capturaPoster(f); if(p) await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'upload_poster',for:nome,base64:p.split(',')[1]})}).catch(()=>{}); }
 }
 
 carregarTax(); carregar();

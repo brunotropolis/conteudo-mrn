@@ -437,8 +437,13 @@ $('#nmok').onclick=async()=>{
 };
 async function subirUm(f,meta){
   toast('enviando '+meta.tit+'…');
-  const b64=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result.split(',')[1]);r.onerror=rej;r.readAsDataURL(f);});
-  const resp=await fetch(MIDIA,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'upload',mime:f.type||'image/jpeg',titulo:meta.tit,categoria:meta.cat,editoria:meta.edi,base64:b64})}).then(r=>r.json());
+  const mime=f.type||'application/octet-stream';
+  // arquivo sobe DIRETO pro Storage (assina -> PUT -> grava metadado); não passa pelo n8n, então vídeo grande funciona
+  const s=await fetch(MIDIA,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'sign_upload',titulo:meta.tit,mime})}).then(r=>r.json()).catch(()=>({}));
+  if(!s.ok||!s.upload_url){toast('falhou o envio');return;}
+  const put=await fetch(s.upload_url,{method:'PUT',headers:{'Content-Type':mime,'x-upsert':'true'},body:f}).catch(()=>({ok:false}));
+  if(!put.ok){toast('falhou o envio');return;}
+  const resp=await fetch(MIDIA,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'upload_meta',titulo:meta.tit,categoria:meta.cat,editoria:meta.edi,mime,tamanho:f.size,nome:s.nome})}).then(r=>r.json()).catch(()=>({}));
   if(!resp.ok)return; const a=resp.arquivo||{};
   let poster='';
   if(isVid(a.tipo)&&a.nome){ const p=await capturaPoster(f,false); if(p){ const pr=await fetch(MIDIA,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'upload_poster',for:a.nome,base64:p.split(',')[1]})}).then(r=>r.json()).catch(()=>({})); poster=(pr.poster&&pr.poster[0]&&pr.poster[0].poster)||(a.url+'.poster.jpg'); } }
