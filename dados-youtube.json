@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-18T19:34:12.048Z",
+  "gerado_em": "2026-09-18T19:41:16.276Z",
   "conta": {
     "username": "manualdorecemnascido",
     "display_name": "Manual do Recém-Nascido",
@@ -11,19 +11,21 @@
   "periodo_semanas": 8,
   "resumo": {
     "n_videos": 25,
-    "views_total": 590163,
-    "likes_total": 13863,
+    "views_total": 590371,
+    "likes_total": 13867,
     "comments_total": 163,
-    "eng_total": 14026,
+    "eng_total": 14030,
     "eng_medio": 561,
     "shorts": 25,
-    "longos": 0
+    "longos": 0,
+    "inscritos_liquido": 4201,
+    "ret_media_seg": 45
   },
   "por_dia": [
     {
       "data": "2026-09-17",
       "posts": 1,
-      "views": 7272,
+      "views": 7285,
       "engajamento": 254
     },
     {
@@ -35,20 +37,20 @@
     {
       "data": "2026-09-12",
       "posts": 1,
-      "views": 2441,
+      "views": 2442,
       "engajamento": 100
     },
     {
       "data": "2026-09-09",
       "posts": 1,
-      "views": 171116,
+      "views": 171138,
       "engajamento": 1926
     },
     {
       "data": "2026-09-08",
       "posts": 1,
-      "views": 59661,
-      "engajamento": 844
+      "views": 59720,
+      "engajamento": 845
     },
     {
       "data": "2026-09-05",
@@ -77,7 +79,7 @@
     {
       "data": "2026-08-29",
       "posts": 1,
-      "views": 33253,
+      "views": 33275,
       "engajamento": 557
     },
     {
@@ -107,7 +109,7 @@
     {
       "data": "2026-08-19",
       "posts": 1,
-      "views": 4530,
+      "views": 4541,
       "engajamento": 130
     },
     {
@@ -137,8 +139,8 @@
     {
       "data": "2026-08-04",
       "posts": 1,
-      "views": 79090,
-      "engajamento": 2117
+      "views": 79109,
+      "engajamento": 2118
     },
     {
       "data": "2026-08-01",
@@ -149,8 +151,8 @@
     {
       "data": "2026-07-31",
       "posts": 1,
-      "views": 18325,
-      "engajamento": 654
+      "views": 18384,
+      "engajamento": 655
     },
     {
       "data": "2026-07-30",
@@ -161,14 +163,511 @@
     {
       "data": "2026-07-29",
       "posts": 1,
-      "views": 30178,
-      "engajamento": 1620
+      "views": 30180,
+      "engajamento": 1621
     },
     {
       "data": "2026-07-28",
       "posts": 1,
       "views": 6961,
       "engajamento": 349
+    }
+  ],
+  "crescimento": [
+    {
+      "data": "2026-09-16",
+      "views": 106181,
+      "ganhos": 137,
+      "perdidos": 67,
+      "liquido": 70,
+      "min_assistidos": 32266,
+      "ret_media_seg": 41
+    },
+    {
+      "data": "2026-09-15",
+      "views": 120326,
+      "ganhos": 135,
+      "perdidos": 42,
+      "liquido": 93,
+      "min_assistidos": 34878,
+      "ret_media_seg": 38
+    },
+    {
+      "data": "2026-09-14",
+      "views": 129038,
+      "ganhos": 179,
+      "perdidos": 105,
+      "liquido": 74,
+      "min_assistidos": 37852,
+      "ret_media_seg": 39
+    },
+    {
+      "data": "2026-09-13",
+      "views": 120283,
+      "ganhos": 162,
+      "perdidos": 85,
+      "liquido": 77,
+      "min_assistidos": 36935,
+      "ret_media_seg": 40
+    },
+    {
+      "data": "2026-09-12",
+      "views": 105881,
+      "ganhos": 153,
+      "perdidos": 52,
+      "liquido": 101,
+      "min_assistidos": 31419,
+      "ret_media_seg": 40
+    },
+    {
+      "data": "2026-09-11",
+      "views": 80946,
+      "ganhos": 103,
+      "perdidos": 35,
+      "liquido": 68,
+      "min_assistidos": 26541,
+      "ret_media_seg": 43
+    },
+    {
+      "data": "2026-09-10",
+      "views": 86014,
+      "ganhos": 108,
+      "perdidos": 39,
+      "liquido": 69,
+      "min_assistidos": 28322,
+      "ret_media_seg": 43
+    },
+    {
+      "data": "2026-09-09",
+      "views": 77880,
+      "ganhos": 124,
+      "perdidos": 36,
+      "liquido": 88,
+      "min_assistidos": 27071,
+      "ret_media_seg": 46
+    },
+    {
+      "data": "2026-09-08",
+      "views": 71531,
+      "ganhos": 111,
+      "perdidos": 46,
+      "liquido": 65,
+      "min_assistidos": 25570,
+      "ret_media_seg": 47
+    },
+    {
+      "data": "2026-09-07",
+      "views": 78314,
+      "ganhos": 112,
+      "perdidos": 35,
+      "liquido": 77,
+      "min_assistidos": 28687,
+      "ret_media_seg": 47
+    },
+    {
+      "data": "2026-09-06",
+      "views": 70513,
+      "ganhos": 126,
+      "perdidos": 75,
+      "liquido": 51,
+      "min_assistidos": 24529,
+      "ret_media_seg": 45
+    },
+    {
+      "data": "2026-09-05",
+      "views": 72754,
+      "ganhos": 129,
+      "perdidos": 66,
+      "liquido": 63,
+      "min_assistidos": 25259,
+      "ret_media_seg": 44
+    },
+    {
+      "data": "2026-09-04",
+      "views": 65241,
+      "ganhos": 102,
+      "perdidos": 29,
+      "liquido": 73,
+      "min_assistidos": 24306,
+      "ret_media_seg": 48
+    },
+    {
+      "data": "2026-09-03",
+      "views": 66165,
+      "ganhos": 108,
+      "perdidos": 43,
+      "liquido": 65,
+      "min_assistidos": 23970,
+      "ret_media_seg": 49
+    },
+    {
+      "data": "2026-09-02",
+      "views": 64844,
+      "ganhos": 99,
+      "perdidos": 44,
+      "liquido": 55,
+      "min_assistidos": 25506,
+      "ret_media_seg": 52
+    },
+    {
+      "data": "2026-09-01",
+      "views": 70128,
+      "ganhos": 111,
+      "perdidos": 36,
+      "liquido": 75,
+      "min_assistidos": 27411,
+      "ret_media_seg": 50
+    },
+    {
+      "data": "2026-08-31",
+      "views": 65710,
+      "ganhos": 113,
+      "perdidos": 95,
+      "liquido": 18,
+      "min_assistidos": 26529,
+      "ret_media_seg": 51
+    },
+    {
+      "data": "2026-08-30",
+      "views": 69323,
+      "ganhos": 121,
+      "perdidos": 54,
+      "liquido": 67,
+      "min_assistidos": 25876,
+      "ret_media_seg": 47
+    },
+    {
+      "data": "2026-08-29",
+      "views": 72142,
+      "ganhos": 108,
+      "perdidos": 86,
+      "liquido": 22,
+      "min_assistidos": 26057,
+      "ret_media_seg": 45
+    },
+    {
+      "data": "2026-08-28",
+      "views": 61819,
+      "ganhos": 107,
+      "perdidos": 35,
+      "liquido": 72,
+      "min_assistidos": 25493,
+      "ret_media_seg": 53
+    },
+    {
+      "data": "2026-08-27",
+      "views": 70821,
+      "ganhos": 140,
+      "perdidos": 94,
+      "liquido": 46,
+      "min_assistidos": 28537,
+      "ret_media_seg": 52
+    },
+    {
+      "data": "2026-08-26",
+      "views": 62024,
+      "ganhos": 130,
+      "perdidos": 64,
+      "liquido": 66,
+      "min_assistidos": 28304,
+      "ret_media_seg": 47
+    },
+    {
+      "data": "2026-08-25",
+      "views": 61726,
+      "ganhos": 122,
+      "perdidos": 61,
+      "liquido": 61,
+      "min_assistidos": 28575,
+      "ret_media_seg": 48
+    },
+    {
+      "data": "2026-08-24",
+      "views": 59911,
+      "ganhos": 122,
+      "perdidos": 37,
+      "liquido": 85,
+      "min_assistidos": 28056,
+      "ret_media_seg": 49
+    },
+    {
+      "data": "2026-08-23",
+      "views": 63511,
+      "ganhos": 123,
+      "perdidos": 130,
+      "liquido": -7,
+      "min_assistidos": 26920,
+      "ret_media_seg": 45
+    },
+    {
+      "data": "2026-08-22",
+      "views": 64455,
+      "ganhos": 128,
+      "perdidos": 59,
+      "liquido": 69,
+      "min_assistidos": 27807,
+      "ret_media_seg": 46
+    },
+    {
+      "data": "2026-08-21",
+      "views": 63298,
+      "ganhos": 118,
+      "perdidos": 60,
+      "liquido": 58,
+      "min_assistidos": 28042,
+      "ret_media_seg": 47
+    },
+    {
+      "data": "2026-08-20",
+      "views": 66652,
+      "ganhos": 164,
+      "perdidos": 105,
+      "liquido": 59,
+      "min_assistidos": 29724,
+      "ret_media_seg": 47
+    },
+    {
+      "data": "2026-08-19",
+      "views": 72021,
+      "ganhos": 133,
+      "perdidos": 53,
+      "liquido": 80,
+      "min_assistidos": 32722,
+      "ret_media_seg": 47
+    },
+    {
+      "data": "2026-08-18",
+      "views": 72512,
+      "ganhos": 154,
+      "perdidos": 33,
+      "liquido": 121,
+      "min_assistidos": 32625,
+      "ret_media_seg": 47
+    },
+    {
+      "data": "2026-08-17",
+      "views": 71477,
+      "ganhos": 143,
+      "perdidos": 42,
+      "liquido": 101,
+      "min_assistidos": 32179,
+      "ret_media_seg": 47
+    },
+    {
+      "data": "2026-08-16",
+      "views": 77946,
+      "ganhos": 168,
+      "perdidos": 95,
+      "liquido": 73,
+      "min_assistidos": 33846,
+      "ret_media_seg": 45
+    },
+    {
+      "data": "2026-08-15",
+      "views": 77475,
+      "ganhos": 154,
+      "perdidos": 36,
+      "liquido": 118,
+      "min_assistidos": 32839,
+      "ret_media_seg": 44
+    },
+    {
+      "data": "2026-08-14",
+      "views": 76776,
+      "ganhos": 153,
+      "perdidos": 40,
+      "liquido": 113,
+      "min_assistidos": 33347,
+      "ret_media_seg": 45
+    },
+    {
+      "data": "2026-08-13",
+      "views": 72871,
+      "ganhos": 177,
+      "perdidos": 72,
+      "liquido": 105,
+      "min_assistidos": 32512,
+      "ret_media_seg": 46
+    },
+    {
+      "data": "2026-08-12",
+      "views": 76988,
+      "ganhos": 156,
+      "perdidos": 45,
+      "liquido": 111,
+      "min_assistidos": 32935,
+      "ret_media_seg": 45
+    },
+    {
+      "data": "2026-08-11",
+      "views": 66449,
+      "ganhos": 158,
+      "perdidos": 95,
+      "liquido": 63,
+      "min_assistidos": 31610,
+      "ret_media_seg": 48
+    },
+    {
+      "data": "2026-08-10",
+      "views": 70873,
+      "ganhos": 127,
+      "perdidos": 37,
+      "liquido": 90,
+      "min_assistidos": 32186,
+      "ret_media_seg": 46
+    },
+    {
+      "data": "2026-08-09",
+      "views": 75518,
+      "ganhos": 112,
+      "perdidos": 48,
+      "liquido": 64,
+      "min_assistidos": 29848,
+      "ret_media_seg": 41
+    },
+    {
+      "data": "2026-08-08",
+      "views": 95053,
+      "ganhos": 146,
+      "perdidos": 33,
+      "liquido": 113,
+      "min_assistidos": 35708,
+      "ret_media_seg": 40
+    },
+    {
+      "data": "2026-08-07",
+      "views": 101175,
+      "ganhos": 146,
+      "perdidos": 73,
+      "liquido": 73,
+      "min_assistidos": 38898,
+      "ret_media_seg": 41
+    },
+    {
+      "data": "2026-08-06",
+      "views": 107609,
+      "ganhos": 186,
+      "perdidos": 74,
+      "liquido": 112,
+      "min_assistidos": 40750,
+      "ret_media_seg": 41
+    },
+    {
+      "data": "2026-08-05",
+      "views": 96342,
+      "ganhos": 174,
+      "perdidos": 44,
+      "liquido": 130,
+      "min_assistidos": 37421,
+      "ret_media_seg": 42
+    },
+    {
+      "data": "2026-08-04",
+      "views": 87118,
+      "ganhos": 151,
+      "perdidos": 62,
+      "liquido": 89,
+      "min_assistidos": 35943,
+      "ret_media_seg": 44
+    },
+    {
+      "data": "2026-08-03",
+      "views": 83794,
+      "ganhos": 167,
+      "perdidos": 124,
+      "liquido": 43,
+      "min_assistidos": 33831,
+      "ret_media_seg": 43
+    },
+    {
+      "data": "2026-08-02",
+      "views": 91571,
+      "ganhos": 140,
+      "perdidos": 72,
+      "liquido": 68,
+      "min_assistidos": 35148,
+      "ret_media_seg": 41
+    },
+    {
+      "data": "2026-08-01",
+      "views": 91102,
+      "ganhos": 145,
+      "perdidos": 52,
+      "liquido": 93,
+      "min_assistidos": 35107,
+      "ret_media_seg": 41
+    },
+    {
+      "data": "2026-07-31",
+      "views": 97650,
+      "ganhos": 174,
+      "perdidos": 83,
+      "liquido": 91,
+      "min_assistidos": 38359,
+      "ret_media_seg": 41
+    },
+    {
+      "data": "2026-07-30",
+      "views": 88188,
+      "ganhos": 172,
+      "perdidos": 78,
+      "liquido": 94,
+      "min_assistidos": 35898,
+      "ret_media_seg": 43
+    },
+    {
+      "data": "2026-07-29",
+      "views": 87045,
+      "ganhos": 169,
+      "perdidos": 68,
+      "liquido": 101,
+      "min_assistidos": 35834,
+      "ret_media_seg": 44
+    },
+    {
+      "data": "2026-07-28",
+      "views": 69936,
+      "ganhos": 161,
+      "perdidos": 81,
+      "liquido": 80,
+      "min_assistidos": 30912,
+      "ret_media_seg": 46
+    },
+    {
+      "data": "2026-07-27",
+      "views": 75110,
+      "ganhos": 141,
+      "perdidos": 85,
+      "liquido": 56,
+      "min_assistidos": 33481,
+      "ret_media_seg": 47
+    },
+    {
+      "data": "2026-07-26",
+      "views": 68819,
+      "ganhos": 169,
+      "perdidos": 59,
+      "liquido": 110,
+      "min_assistidos": 29714,
+      "ret_media_seg": 46
+    },
+    {
+      "data": "2026-07-25",
+      "views": 67144,
+      "ganhos": 145,
+      "perdidos": 101,
+      "liquido": 44,
+      "min_assistidos": 29092,
+      "ret_media_seg": 46
+    },
+    {
+      "data": "2026-07-24",
+      "views": 66965,
+      "ganhos": 144,
+      "perdidos": 59,
+      "liquido": 85,
+      "min_assistidos": 29009,
+      "ret_media_seg": 46
     }
   ],
   "videos": [
@@ -178,7 +677,7 @@
       "thumb": "https://i.ytimg.com/vi/TZQgmdwUX_I/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=TZQgmdwUX_I",
       "publicado_em": "2026-09-09T14:00:51Z",
-      "views": 171116,
+      "views": 171138,
       "curtidas": 1917,
       "comentarios": 9,
       "engajamento": 1926,
@@ -191,10 +690,10 @@
       "thumb": "https://i.ytimg.com/vi/wfb5eUSHjrU/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=wfb5eUSHjrU",
       "publicado_em": "2026-08-04T11:01:21Z",
-      "views": 79090,
-      "curtidas": 2094,
+      "views": 79109,
+      "curtidas": 2095,
       "comentarios": 23,
-      "engajamento": 2117,
+      "engajamento": 2118,
       "formato": "short",
       "duracao_seg": 48
     },
@@ -204,10 +703,10 @@
       "thumb": "https://i.ytimg.com/vi/bZ6qFuvgcqg/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=bZ6qFuvgcqg",
       "publicado_em": "2026-09-08T11:00:57Z",
-      "views": 59661,
-      "curtidas": 835,
+      "views": 59720,
+      "curtidas": 836,
       "comentarios": 9,
-      "engajamento": 844,
+      "engajamento": 845,
       "formato": "short",
       "duracao_seg": 54
     },
@@ -230,7 +729,7 @@
       "thumb": "https://i.ytimg.com/vi/FXDsg1L6-fU/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=FXDsg1L6-fU",
       "publicado_em": "2026-08-29T14:15:39Z",
-      "views": 33253,
+      "views": 33275,
       "curtidas": 553,
       "comentarios": 4,
       "engajamento": 557,
@@ -243,10 +742,10 @@
       "thumb": "https://i.ytimg.com/vi/2tyt0IlpR-Y/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=2tyt0IlpR-Y",
       "publicado_em": "2026-07-29T14:00:45Z",
-      "views": 30178,
-      "curtidas": 1612,
+      "views": 30180,
+      "curtidas": 1613,
       "comentarios": 8,
-      "engajamento": 1620,
+      "engajamento": 1621,
       "formato": "short",
       "duracao_seg": 49
     },
@@ -282,10 +781,10 @@
       "thumb": "https://i.ytimg.com/vi/NiSI8aaOft8/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=NiSI8aaOft8",
       "publicado_em": "2026-07-31T11:01:09Z",
-      "views": 18325,
-      "curtidas": 640,
+      "views": 18384,
+      "curtidas": 641,
       "comentarios": 14,
-      "engajamento": 654,
+      "engajamento": 655,
       "formato": "short",
       "duracao_seg": 41
     },
@@ -347,7 +846,7 @@
       "thumb": "https://i.ytimg.com/vi/dAwAO8DDnd4/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=dAwAO8DDnd4",
       "publicado_em": "2026-09-17T11:00:54Z",
-      "views": 7272,
+      "views": 7285,
       "curtidas": 251,
       "comentarios": 3,
       "engajamento": 254,
@@ -451,7 +950,7 @@
       "thumb": "https://i.ytimg.com/vi/_DNjVZs8t-Y/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=_DNjVZs8t-Y",
       "publicado_em": "2026-08-19T11:00:44Z",
-      "views": 4530,
+      "views": 4541,
       "curtidas": 130,
       "comentarios": 0,
       "engajamento": 130,
@@ -477,7 +976,7 @@
       "thumb": "https://i.ytimg.com/vi/BJfs0Jn-RNk/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=BJfs0Jn-RNk",
       "publicado_em": "2026-09-12T14:00:57Z",
-      "views": 2441,
+      "views": 2442,
       "curtidas": 98,
       "comentarios": 2,
       "engajamento": 100,
