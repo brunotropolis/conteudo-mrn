@@ -183,17 +183,20 @@ function seguidoresPeriodo(){
 function apply(){ if(rede==='tiktok') applyTikTok(); else if(rede==='youtube') applyYouTube(); else applyIG(); }
 
 function ytPeriodo(){ return fPer==='all' ? YDADOS.videos.slice() : YDADOS.videos.filter(v=>new Date(v.publicado_em).getTime()>=Date.now()-fPer*DAYMS); }
+function crescPeriodo(){ const c=YDADOS.crescimento||[]; return fPer==='all' ? c : c.filter(x=>x.data>=limDate()); }
 function applyYouTube(){
   const all = ytPeriodo();
   const vv = all.filter(v=>fTipo==='todos'||v.formato===fTipo);
-  const eng_medio = all.length ? Math.round(sum(all,'engajamento')/all.length) : 0;
+  const cr = crescPeriodo();
+  const liquido = cr.reduce((s,x)=>s+(x.liquido||0),0);
+  const retMedia = cr.length ? Math.round(cr.reduce((s,x)=>s+(x.ret_media_seg||0),0)/cr.length) : (YDADOS.resumo.ret_media_seg||0);
   const shorts=all.filter(v=>v.formato==='short').length, longos=all.filter(v=>v.formato==='video').length;
   document.getElementById('kpis').innerHTML = [
     ['Inscritos', fmt(YDADOS.conta.seguidores), 'hi'],
+    ['Ganho líquido', (liquido>=0?'+':'')+fmt(liquido), 'hi'],
+    ['Views (janela)', fmt(cr.length?sum(cr,'views'):sum(all,'views')), ''],
+    ['Retenção média', retMedia?retMedia+'s':'-', ''],
     ['Vídeos (janela)', all.length, ''],
-    ['Views', fmt(sum(all,'views')), ''],
-    ['Curtidas', fmt(sum(all,'curtidas')), ''],
-    ['Comentários', fmt(sum(all,'comentarios')), ''],
     ['Shorts × longos', shorts+' / '+longos, ''],
   ].map(([l,v,c])=>`<div class="kpi ${c}"><div class="lab">${l}</div><div class="val">${v}</div></div>`).join('');
 
@@ -201,10 +204,22 @@ function applyYouTube(){
   const bestDia=best?new Date(best.publicado_em).toLocaleDateString('pt-BR',{day:'2-digit',month:'short'}):'';
   document.getElementById('insight').innerHTML = best
     ? `<b>Leitura rápida.</b> No período, o vídeo campeão (${bestDia}) fez <b>${fmt(best.views)}</b> views e
-       <b>${fmt(best.engajamento)}</b> de engajamento. O canal tem <b>${fmt(YDADOS.conta.seguidores)}</b> inscritos e
-       <b>${fmt(YDADOS.conta.views_totais)}</b> de views no total. O ranking está por <b>views</b> — replicar os ganchos
-       dos primeiros é a aposta mais segura. <i>Crescimento de inscritos dia a dia e retenção exigem a API de Analytics.</i>`
+       <b>${fmt(best.engajamento)}</b> de engajamento. O canal ganhou <b>${liquido>=0?'+':''}${fmt(liquido)}</b> inscritos
+       (líquido) e segura em média <b>${retMedia}s</b> de retenção. Tem <b>${fmt(YDADOS.conta.seguidores)}</b> inscritos e
+       <b>${fmt(YDADOS.conta.views_totais)}</b> de views no total — o ranking está por <b>views</b>, replicar os ganchos
+       dos primeiros é a aposta mais segura.`
     : `<b>Leitura rápida.</b> Sem vídeos publicados nesse período.`;
+
+  // crescimento de inscritos por dia (Analytics API)
+  const dias=cr;
+  document.getElementById('pordia').innerHTML =
+    `<div class="drow dhead"><span>Dia</span><span class="ta">Views</span><span class="ta">Retenção</span><span class="ta">Inscritos</span></div>`+
+    (dias.map(x=>{
+      const dt=new Date(x.data+'T12:00:00');
+      const dl=dt.toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit',month:'2-digit'}).replace('.','');
+      const liq=x.liquido||0;
+      return `<div class="drow"><span class="dday">${dl}</span><span class="dval ta">${fmt(x.views)}</span><span class="dval ta">${x.ret_media_seg||0}s</span><span class="dseg ta" style="color:${liq<0?'#B23A3A':'var(--goldink)'}">${liq>=0?'+':''}${fmt(liq)}</span></div>`;
+    }).join('') || `<div class="drow"><span class="dday" style="color:var(--mute)">Sem dados de crescimento no período.</span></div>`);
 
   const list=[...vv].sort((a,b)=>(b.views||0)-(a.views||0));
   document.getElementById('count').textContent=list.length+' vídeos';
@@ -373,10 +388,11 @@ function setRede(r){
   rede=r;
   const tk = r==='tiktok', yt = r==='youtube';
   document.getElementById('panelFormato').style.display = (tk||yt)?'none':'';
-  document.getElementById('panelDia').style.display     = (tk||yt)?'none':'';
+  document.getElementById('panelDia').style.display     = tk?'none':'';   // TikTok esconde; YouTube usa (crescimento)
   document.getElementById('fTipo').style.display         = tk?'none':'';   // TikTok esconde; YouTube usa (shorts/vídeos)
   document.getElementById('row2').style.gridTemplateColumns = (tk||yt)?'1fr':'';
   document.getElementById('rankTitle').textContent = (tk||yt)?'Ranking de vídeos':'Ranking de posts';
+  document.querySelector('#panelDia h2').textContent = yt?'Crescimento de inscritos por dia':'Performance por dia';
   if(yt) montaTipos('youtube'); else if(!tk) montaTipos('instagram');
   if(tk && !TDADOS){
     document.getElementById('sub').textContent='carregando TikTok…';
