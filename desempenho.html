@@ -125,6 +125,7 @@
     <div class="grp" id="fRede">
       <button class="chip on" data-r="instagram">Instagram</button>
       <button class="chip" data-r="tiktok">TikTok</button>
+      <button class="chip" data-r="youtube">YouTube</button>
     </div>
     <span class="flabel">Período</span>
     <div class="grp" id="fPer">
@@ -158,7 +159,7 @@
   </div>
   <div class="list" id="list"></div>
 </div>
-<footer>Uso interno · Manual do Recém-Nascido · Instagram (Graph API) + TikTok (Display API)</footer>
+<footer>Uso interno · Manual do Recém-Nascido · Instagram (Graph API) + TikTok (Display API) + YouTube (Data API v3)</footer>
 
 <script>
 const DAYMS=864e5;
@@ -168,7 +169,7 @@ const fmt = n => n==null ? '-'
   : String(n);
 const ICON = {reels:'🎬', carrossel:'🖼️', foto:'📷'};
 const sum=(a,k)=>a.reduce((s,x)=>s+(x[k]||0),0);
-let DADOS=null, TDADOS=null, fTipo='todos', fPer='all', rede='instagram';
+let DADOS=null, TDADOS=null, YDADOS=null, fTipo='todos', fPer='all', rede='instagram';
 
 const limDate = () => new Date(Date.now()-fPer*DAYMS).toISOString().slice(0,10);
 function postsPeriodo(){ return fPer==='all' ? DADOS.posts.slice() : DADOS.posts.filter(p=>new Date(p.publicado_em).getTime()>=Date.now()-fPer*DAYMS); }
@@ -179,7 +180,56 @@ function seguidoresPeriodo(){
   return Object.entries(map).reduce((s,[d,v])=>d>=limDate()?s+(v||0):s,0);
 }
 
-function apply(){ if(rede==='tiktok') applyTikTok(); else applyIG(); }
+function apply(){ if(rede==='tiktok') applyTikTok(); else if(rede==='youtube') applyYouTube(); else applyIG(); }
+
+function ytPeriodo(){ return fPer==='all' ? YDADOS.videos.slice() : YDADOS.videos.filter(v=>new Date(v.publicado_em).getTime()>=Date.now()-fPer*DAYMS); }
+function applyYouTube(){
+  const all = ytPeriodo();
+  const vv = all.filter(v=>fTipo==='todos'||v.formato===fTipo);
+  const eng_medio = all.length ? Math.round(sum(all,'engajamento')/all.length) : 0;
+  const shorts=all.filter(v=>v.formato==='short').length, longos=all.filter(v=>v.formato==='video').length;
+  document.getElementById('kpis').innerHTML = [
+    ['Inscritos', fmt(YDADOS.conta.seguidores), 'hi'],
+    ['Vídeos (janela)', all.length, ''],
+    ['Views', fmt(sum(all,'views')), ''],
+    ['Curtidas', fmt(sum(all,'curtidas')), ''],
+    ['Comentários', fmt(sum(all,'comentarios')), ''],
+    ['Shorts × longos', shorts+' / '+longos, ''],
+  ].map(([l,v,c])=>`<div class="kpi ${c}"><div class="lab">${l}</div><div class="val">${v}</div></div>`).join('');
+
+  const best=[...all].sort((a,b)=>(b.views||0)-(a.views||0))[0];
+  const bestDia=best?new Date(best.publicado_em).toLocaleDateString('pt-BR',{day:'2-digit',month:'short'}):'';
+  document.getElementById('insight').innerHTML = best
+    ? `<b>Leitura rápida.</b> No período, o vídeo campeão (${bestDia}) fez <b>${fmt(best.views)}</b> views e
+       <b>${fmt(best.engajamento)}</b> de engajamento. O canal tem <b>${fmt(YDADOS.conta.seguidores)}</b> inscritos e
+       <b>${fmt(YDADOS.conta.views_totais)}</b> de views no total. O ranking está por <b>views</b> — replicar os ganchos
+       dos primeiros é a aposta mais segura. <i>Crescimento de inscritos dia a dia e retenção exigem a API de Analytics.</i>`
+    : `<b>Leitura rápida.</b> Sem vídeos publicados nesse período.`;
+
+  const list=[...vv].sort((a,b)=>(b.views||0)-(a.views||0));
+  document.getElementById('count').textContent=list.length+' vídeos';
+  document.getElementById('list').innerHTML = list.map((p,i)=>{
+    const dia=new Date(p.publicado_em).toLocaleDateString('pt-BR',{day:'2-digit',month:'short'});
+    const isShort=p.formato==='short';
+    const thumb=p.thumb
+      ? `<img class="thumb" src="${p.thumb}" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'thumb ph',textContent:'${isShort?'⚡':'▶️'}'}))">`
+      : `<div class="thumb ph">${isShort?'⚡':'▶️'}</div>`;
+    return `<a class="post ${i<3?'podium':''}" href="${p.link||'#'}" target="_blank" rel="noopener">
+      <div class="rank ${i<3?'top':''}">${i+1}</div>
+      ${thumb}
+      <div class="pmain">
+        <div class="ptop"><span class="tag ${isShort?'foto':'reels'}">${isShort?'Short':'vídeo'}</span><span class="pdate">${dia}</span></div>
+        <div class="pcap">${(p.titulo||'').replace(/</g,'&lt;')||'-'}</div>
+        <div class="metrics">
+          <div class="met key"><b>${fmt(p.views)}</b><span>views</span></div>
+          <div class="met"><b>${fmt(p.curtidas)}</b><span>curtidas</span></div>
+          <div class="met"><b>${fmt(p.comentarios)}</b><span>coment.</span></div>
+          <div class="met"><b>${fmt(p.engajamento)}</b><span>engaj.</span></div>
+          <div class="met"><b>${p.duracao_seg?Math.round(p.duracao_seg)+'s':'-'}</b><span>duração</span></div>
+        </div>
+      </div></a>`;
+  }).join('') || `<div class="panel" style="text-align:center;color:var(--mute)">Nenhum vídeo nesse filtro.</div>`;
+}
 
 function tkPeriodo(){ return fPer==='all' ? TDADOS.videos.slice() : TDADOS.videos.filter(v=>new Date(v.publicado_em).getTime()>=Date.now()-fPer*DAYMS); }
 function applyTikTok(){
@@ -297,27 +347,47 @@ function applyIG(){
 }
 
 function updHead(){
-  const d = rede==='tiktok' ? TDADOS : DADOS;
+  const d = rede==='tiktok' ? TDADOS : rede==='youtube' ? YDADOS : DADOS;
   if(!d) return;
-  const nome = rede==='tiktok' ? 'TikTok' : 'Instagram';
+  const nome = rede==='tiktok' ? 'TikTok' : rede==='youtube' ? 'YouTube' : 'Instagram';
+  const unid = rede==='youtube' ? 'inscritos' : 'seguidores';
   document.getElementById('sub').textContent = `Manual do Recém-Nascido · @${d.conta.username} · ${nome}`;
   document.getElementById('meta').innerHTML =
     `<span>janela de <b>${d.periodo_semanas} semanas</b> · use o filtro de período abaixo</span>`+
-    `<span><b>${fmt(d.conta.seguidores)}</b> seguidores · atualizado ${new Date(d.gerado_em).toLocaleDateString('pt-BR')}</span>`;
+    `<span><b>${fmt(d.conta.seguidores)}</b> ${unid} · atualizado ${new Date(d.gerado_em).toLocaleDateString('pt-BR')}</span>`;
+}
+
+// chips do filtro de formato conforme a rede (IG = reels/carrossel/foto · YouTube = shorts/vídeos)
+const TIPOS = {
+  instagram:[['todos','Todos'],['reels','Reels'],['carrossel','Carrossel'],['foto','Foto']],
+  youtube:[['todos','Todos'],['short','Shorts'],['video','Vídeos']],
+};
+function montaTipos(r){
+  const g=document.getElementById('fTipo');
+  g.innerHTML=(TIPOS[r]||TIPOS.instagram).map(([v,l],i)=>`<button class="chip ${i===0?'on':''}" data-t="${v}">${l}</button>`).join('');
+  g.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{g.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');fTipo=b.dataset.t;apply();});
+  fTipo='todos';
 }
 
 function setRede(r){
   rede=r;
-  const tk = r==='tiktok';
-  document.getElementById('panelFormato').style.display = tk?'none':'';
-  document.getElementById('panelDia').style.display     = tk?'none':'';
-  document.getElementById('fTipo').style.display         = tk?'none':'';
-  document.getElementById('row2').style.gridTemplateColumns = tk?'1fr':'';
-  document.getElementById('rankTitle').textContent = tk?'Ranking de vídeos':'Ranking de posts';
+  const tk = r==='tiktok', yt = r==='youtube';
+  document.getElementById('panelFormato').style.display = (tk||yt)?'none':'';
+  document.getElementById('panelDia').style.display     = (tk||yt)?'none':'';
+  document.getElementById('fTipo').style.display         = tk?'none':'';   // TikTok esconde; YouTube usa (shorts/vídeos)
+  document.getElementById('row2').style.gridTemplateColumns = (tk||yt)?'1fr':'';
+  document.getElementById('rankTitle').textContent = (tk||yt)?'Ranking de vídeos':'Ranking de posts';
+  if(yt) montaTipos('youtube'); else if(!tk) montaTipos('instagram');
   if(tk && !TDADOS){
     document.getElementById('sub').textContent='carregando TikTok…';
     fetch('./dados-tiktok.json?_='+Date.now()).then(r=>r.json()).then(d=>{TDADOS=d;updHead();apply();})
       .catch(()=>document.getElementById('sub').textContent='erro ao carregar dados-tiktok.json');
+    return;
+  }
+  if(yt && !YDADOS){
+    document.getElementById('sub').textContent='carregando YouTube…';
+    fetch('./dados-youtube.json?_='+Date.now()).then(r=>r.json()).then(d=>{YDADOS=d;updHead();apply();})
+      .catch(()=>document.getElementById('sub').textContent='erro ao carregar dados-youtube.json');
     return;
   }
   updHead(); apply();
@@ -329,9 +399,9 @@ function boot(d){
   document.querySelectorAll('#fRede .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('#fRede .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');setRede(b.dataset.r);});
   document.querySelectorAll('#fTipo .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('#fTipo .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');fTipo=b.dataset.t;apply();});
   document.querySelectorAll('#fPer .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('#fPer .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');fPer=b.dataset.p;apply();});
-  // rede inicial via ?rede=tiktok
+  // rede inicial via ?rede=tiktok|youtube
   const qr=new URLSearchParams(location.search).get('rede');
-  if(qr==='tiktok'){ document.querySelectorAll('#fRede .chip').forEach(x=>x.classList.toggle('on',x.dataset.r==='tiktok')); setRede('tiktok'); }
+  if(qr==='tiktok'||qr==='youtube'){ document.querySelectorAll('#fRede .chip').forEach(x=>x.classList.toggle('on',x.dataset.r===qr)); setRede(qr); }
   else apply();
 }
 
