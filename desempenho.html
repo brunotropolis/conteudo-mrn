@@ -82,6 +82,7 @@
   .post{display:grid;grid-template-columns:32px 60px 1fr;gap:14px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px 16px 12px 12px;box-shadow:0 1px 2px rgba(35,51,47,.04);transition:transform .12s,box-shadow .12s,border-color .12s}
   .post:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(35,51,47,.08);border-color:var(--gold)}
   .post.podium{border-left:4px solid var(--gold)}
+  .post>.rank{grid-column:1}.post>.thumb{grid-column:2}.post>.pmain{grid-column:3}
   .rank{font-size:15px;font-weight:800;color:var(--dim);text-align:center;font-variant-numeric:tabular-nums}
   .rank.top{color:var(--goldink)}
   .thumb{width:60px;height:60px;border-radius:12px;object-fit:cover;background:var(--hover);display:block}
@@ -120,6 +121,11 @@
   <div class="meta" id="meta"></div>
 
   <div class="filters">
+    <span class="flabel">Rede</span>
+    <div class="grp" id="fRede">
+      <button class="chip on" data-r="instagram">Instagram</button>
+      <button class="chip" data-r="tiktok">TikTok</button>
+    </div>
     <span class="flabel">Período</span>
     <div class="grp" id="fPer">
       <button class="chip" data-p="7">7 dias</button>
@@ -131,15 +137,15 @@
 
   <div class="kpis" id="kpis"></div>
 
-  <div class="row2">
-    <div class="panel"><h2>Desempenho por formato</h2><div class="tipos" id="tipos"></div></div>
+  <div class="row2" id="row2">
+    <div class="panel" id="panelFormato"><h2>Desempenho por formato</h2><div class="tipos" id="tipos"></div></div>
     <div class="insight" id="insight"></div>
   </div>
 
-  <div class="panel pordia"><h2>Performance por dia</h2><div id="pordia"></div></div>
+  <div class="panel pordia" id="panelDia"><h2>Performance por dia</h2><div id="pordia"></div></div>
 
   <div class="listhead">
-    <h2>Ranking de posts</h2>
+    <h2 id="rankTitle">Ranking de posts</h2>
     <div class="lhright">
       <div class="grp" id="fTipo">
         <button class="chip on" data-t="todos">Todos</button>
@@ -152,7 +158,7 @@
   </div>
   <div class="list" id="list"></div>
 </div>
-<footer>Uso interno · Manual do Recém-Nascido · dados do Instagram (Graph API)</footer>
+<footer>Uso interno · Manual do Recém-Nascido · Instagram (Graph API) + TikTok (Display API)</footer>
 
 <script>
 const DAYMS=864e5;
@@ -162,7 +168,7 @@ const fmt = n => n==null ? '-'
   : String(n);
 const ICON = {reels:'🎬', carrossel:'🖼️', foto:'📷'};
 const sum=(a,k)=>a.reduce((s,x)=>s+(x[k]||0),0);
-let DADOS=null, fTipo='todos', fPer='all';
+let DADOS=null, TDADOS=null, fTipo='todos', fPer='all', rede='instagram';
 
 const limDate = () => new Date(Date.now()-fPer*DAYMS).toISOString().slice(0,10);
 function postsPeriodo(){ return fPer==='all' ? DADOS.posts.slice() : DADOS.posts.filter(p=>new Date(p.publicado_em).getTime()>=Date.now()-fPer*DAYMS); }
@@ -173,7 +179,55 @@ function seguidoresPeriodo(){
   return Object.entries(map).reduce((s,[d,v])=>d>=limDate()?s+(v||0):s,0);
 }
 
-function apply(){
+function apply(){ if(rede==='tiktok') applyTikTok(); else applyIG(); }
+
+function tkPeriodo(){ return fPer==='all' ? TDADOS.videos.slice() : TDADOS.videos.filter(v=>new Date(v.publicado_em).getTime()>=Date.now()-fPer*DAYMS); }
+function applyTikTok(){
+  const vv = tkPeriodo();
+  const eng_medio = vv.length ? Math.round(sum(vv,'engajamento')/vv.length) : 0;
+  document.getElementById('kpis').innerHTML = [
+    ['Seguidores', fmt(TDADOS.conta.seguidores), 'hi'],
+    ['Vídeos (janela)', vv.length, ''],
+    ['Views', fmt(sum(vv,'views')), ''],
+    ['Curtidas', fmt(sum(vv,'curtidas')), ''],
+    ['Comentários', fmt(sum(vv,'comentarios')), ''],
+    ['Engaj. médio/vídeo', fmt(eng_medio), ''],
+  ].map(([l,v,c])=>`<div class="kpi ${c}"><div class="lab">${l}</div><div class="val">${v}</div></div>`).join('');
+
+  const best=[...vv].sort((a,b)=>(b.views||0)-(a.views||0))[0];
+  const bestDia=best?new Date(best.publicado_em).toLocaleDateString('pt-BR',{day:'2-digit',month:'short'}):'';
+  document.getElementById('insight').innerHTML = best
+    ? `<b>Leitura rápida.</b> No período, o vídeo campeão (${bestDia}) fez <b>${fmt(best.views)}</b> views e
+       <b>${fmt(best.engajamento)}</b> de engajamento. A conta tem <b>${fmt(TDADOS.conta.seguidores)}</b> seguidores e
+       <b>${fmt(TDADOS.conta.curtidas_totais)}</b> curtidas no total. O ranking abaixo está por <b>views</b> — os ganchos
+       dos primeiros são o que mais roda; replicar é a aposta mais segura.`
+    : `<b>Leitura rápida.</b> Sem vídeos publicados nesse período.`;
+
+  const list=[...vv].sort((a,b)=>(b.views||0)-(a.views||0));
+  document.getElementById('count').textContent=list.length+' vídeos';
+  document.getElementById('list').innerHTML = list.map((p,i)=>{
+    const dia=new Date(p.publicado_em).toLocaleDateString('pt-BR',{day:'2-digit',month:'short'});
+    const thumb=p.thumb
+      ? `<img class="thumb" src="${p.thumb}" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'thumb ph',textContent:'🎵'}))">`
+      : `<div class="thumb ph">🎵</div>`;
+    return `<a class="post ${i<3?'podium':''}" href="${p.link||'#'}" target="_blank" rel="noopener">
+      <div class="rank ${i<3?'top':''}">${i+1}</div>
+      ${thumb}
+      <div class="pmain">
+        <div class="ptop"><span class="tag reels">vídeo</span><span class="pdate">${dia}</span></div>
+        <div class="pcap">${(p.titulo||'').replace(/</g,'&lt;')||'-'}</div>
+        <div class="metrics">
+          <div class="met key"><b>${fmt(p.views)}</b><span>views</span></div>
+          <div class="met"><b>${fmt(p.curtidas)}</b><span>curtidas</span></div>
+          <div class="met"><b>${fmt(p.comentarios)}</b><span>coment.</span></div>
+          <div class="met"><b>${fmt(p.compartilhamentos)}</b><span>compart.</span></div>
+          <div class="met"><b>${fmt(p.engajamento)}</b><span>engaj.</span></div>
+        </div>
+      </div></a>`;
+  }).join('') || `<div class="panel" style="text-align:center;color:var(--mute)">Nenhum vídeo nesse filtro.</div>`;
+}
+
+function applyIG(){
   const pp = postsPeriodo();
   const eng_medio = pp.length ? Math.round(sum(pp,'engajamento')/pp.length) : 0;
 
@@ -242,15 +296,43 @@ function apply(){
   }).join('') || `<div class="panel" style="text-align:center;color:var(--mute)">Nenhum post nesse filtro.</div>`;
 }
 
-function boot(d){
-  DADOS=d;
-  document.getElementById('sub').textContent = `Manual do Recém-Nascido · @${d.conta.username}`;
+function updHead(){
+  const d = rede==='tiktok' ? TDADOS : DADOS;
+  if(!d) return;
+  const nome = rede==='tiktok' ? 'TikTok' : 'Instagram';
+  document.getElementById('sub').textContent = `Manual do Recém-Nascido · @${d.conta.username} · ${nome}`;
   document.getElementById('meta').innerHTML =
     `<span>janela de <b>${d.periodo_semanas} semanas</b> · use o filtro de período abaixo</span>`+
     `<span><b>${fmt(d.conta.seguidores)}</b> seguidores · atualizado ${new Date(d.gerado_em).toLocaleDateString('pt-BR')}</span>`;
+}
+
+function setRede(r){
+  rede=r;
+  const tk = r==='tiktok';
+  document.getElementById('panelFormato').style.display = tk?'none':'';
+  document.getElementById('panelDia').style.display     = tk?'none':'';
+  document.getElementById('fTipo').style.display         = tk?'none':'';
+  document.getElementById('row2').style.gridTemplateColumns = tk?'1fr':'';
+  document.getElementById('rankTitle').textContent = tk?'Ranking de vídeos':'Ranking de posts';
+  if(tk && !TDADOS){
+    document.getElementById('sub').textContent='carregando TikTok…';
+    fetch('./dados-tiktok.json?_='+Date.now()).then(r=>r.json()).then(d=>{TDADOS=d;updHead();apply();})
+      .catch(()=>document.getElementById('sub').textContent='erro ao carregar dados-tiktok.json');
+    return;
+  }
+  updHead(); apply();
+}
+
+function boot(d){
+  DADOS=d;
+  updHead();
+  document.querySelectorAll('#fRede .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('#fRede .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');setRede(b.dataset.r);});
   document.querySelectorAll('#fTipo .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('#fTipo .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');fTipo=b.dataset.t;apply();});
   document.querySelectorAll('#fPer .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('#fPer .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');fPer=b.dataset.p;apply();});
-  apply();
+  // rede inicial via ?rede=tiktok
+  const qr=new URLSearchParams(location.search).get('rede');
+  if(qr==='tiktok'){ document.querySelectorAll('#fRede .chip').forEach(x=>x.classList.toggle('on',x.dataset.r==='tiktok')); setRede('tiktok'); }
+  else apply();
 }
 
 fetch('./dados.json?_='+Date.now()).then(r=>r.json()).then(boot)
