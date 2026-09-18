@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Legendas &amp; Hashtags · HUB Manual</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#3A5049">
+<style>
+  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--hover:#E9F3F1;--line:#DCE8E6;--ink:#23332F;--mute:#6E827D;--dim:#93A5A1;--gold:#E3A31B;--gold2:#C88C10;--goldink:#8A5E0A;--goldbg:#FDF1D6;--menu:#3A5049;--menuTxt:#E7EEEC;--menuMute:#9DB3AD}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.5;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .top{background:var(--menu);color:var(--menuTxt);padding:18px 22px;display:flex;align-items:center;gap:14px}
+  .top .logo{width:42px;height:42px;border-radius:12px;flex:0 0 auto;overflow:hidden}
+  .top .logo img{width:100%;height:100%;display:block}
+  .top .tt{min-width:0;flex:1}
+  .top h1{font-size:1.18rem;font-weight:800;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .top p{color:var(--menuMute);font-size:.82rem;margin-top:2px}
+  .top .back{flex:0 0 auto;color:var(--menuTxt);font-size:.82rem;font-weight:700;background:rgba(255,255,255,.10);padding:8px 13px;border-radius:10px}
+  .wrap{max-width:900px;margin:0 auto;padding:22px 18px 80px}
+  .sechead{font-size:1.05rem;font-weight:800;color:var(--ink);margin:22px 4px 6px;display:flex;align-items:center;gap:9px}
+  .sechead:first-child{margin-top:2px}
+  .lead{color:#46574F;font-size:.9rem;margin:0 4px 16px}
+  .note{background:var(--goldbg);border:1px solid #F0D79A;color:#6E561B;border-radius:12px;padding:11px 14px;font-size:.84rem;margin:0 0 18px;line-height:1.55}
+  .note code{background:#fff;border:1px solid #EAD9A8;border-radius:6px;padding:1px 6px;font-size:.86em;color:#8A5E0A;font-weight:700}
+
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:15px 16px;margin-bottom:13px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 16px rgba(35,51,47,.05)}
+  .chead{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+  .badge{flex:0 0 auto;min-width:46px;height:30px;padding:0 10px;border-radius:9px;display:grid;place-items:center;font-weight:800;font-size:13px;letter-spacing:.02em;color:#fff}
+  .chead .nm{flex:1;min-width:0;font-weight:800;font-size:15px}
+  .chead .sl{font-size:11px;color:#728680;font-weight:600}
+  .fld{margin-top:11px}
+  .fld label{display:block;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#5C6F6A;margin-bottom:5px}
+  .fld label .hint{text-transform:none;letter-spacing:0;font-weight:600;color:#728680;margin-left:6px}
+  input[type=text],textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 11px;font-family:inherit;font-size:14px;background:var(--card);color:var(--ink);resize:vertical}
+  input[type=text]:focus,textarea:focus{outline:none;border-color:var(--gold);background:#fff}
+  textarea{min-height:60px;line-height:1.5}
+  .grow{display:flex;gap:10px;flex-wrap:wrap}
+  .grow .fld{flex:1;min-width:150px;margin-top:11px}
+  .actions{display:flex;align-items:center;gap:10px;margin-top:13px}
+  .btn{font-size:13px;font-weight:800;border-radius:10px;padding:9px 16px;cursor:pointer;border:1px solid var(--menu);background:var(--menu);color:#fff;font-family:inherit}
+  .btn:disabled{opacity:.5;cursor:default}
+  .btn.ghost{background:#fff;color:var(--menu)}
+  .saved{font-size:12px;color:#2E7D5B;font-weight:700;opacity:0;transition:.2s}
+  .saved.show{opacity:1}
+  .htgrid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+  @media(max-width:680px){.htgrid{grid-template-columns:1fr}}
+  .empty{text-align:center;color:var(--mute);padding:26px}
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--menu);color:#fff;padding:10px 18px;border-radius:999px;font-size:13px;font-weight:600;opacity:0;transition:.2s;pointer-events:none;z-index:30}
+  .toast.show{opacity:1}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="logo"><img src="favicon.svg" alt=""></div>
+  <div class="tt"><h1>Legendas &amp; Hashtags</h1><p>O texto que a esteira coloca em cada post</p></div>
+  <a class="back" href="admin.html">← Admin</a>
+</div>
+<div class="wrap">
+  <div class="note">
+    Cada arquivo de vídeo tem um <b>código de 7 caracteres</b> no nome (<code>XXX&nbsp;T&nbsp;YYY</code>).
+    O <b>4º caractere (T)</b> define o <b>tipo</b> → escolhe as <b>hashtags</b>. Os <b>3 últimos (YYY)</b> definem a <b>finalidade</b> → escolhem a <b>legenda/CTA</b>.
+    A legenda final = legenda da finalidade + as hashtags do tipo.
+    No <b>Instagram e Facebook</b> vai a legenda com o "Comente…" (automação). No <b>TikTok e YouTube</b> vai a versão sem "Comente" (lá não há automação).
+  </div>
+
+  <h2 class="sechead">🏷️ Legendas por finalidade</h2>
+  <p class="lead">A legenda de cada tipo de post. Edite e clique em Salvar em cada card.</p>
+  <div id="finList"><div class="empty">carregando…</div></div>
+
+  <h2 class="sechead">#️⃣ Hashtags por tipo de conteúdo</h2>
+  <p class="lead">Coladas no fim da legenda, conforme o 4º caractere do código. Separe por espaço.</p>
+  <div id="tipList" class="htgrid"><div class="empty">carregando…</div></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const API='https://n8n-n8n.xktssy.easypanel.host/webhook/motor-legendas';
+const CORES={A:'#B5651D',C:'#4C7A9B',S:'#5B6BB0',G:'#3A8A6E',P:'#C88C10','01':'#5B6BB0','02':'#5B6BB0','03':'#B5651D','04':'#3A8A6E','05':'#C88C10'};
+const corFin=cod=>CORES[cod]||CORES[cod.slice(0,2)]||'#7A8F89';
+function inkFor(hex){const h=String(hex||'').replace('#','');if(h.length<6)return '#fff';const c=i=>{const v=parseInt(h.slice(i,i+2),16)/255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4);};const L=.2126*c(0)+.7152*c(2)+.0722*c(4);return L>0.4?'#1c231f':'#fff';}
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function armarDirty(){document.querySelectorAll('.card').forEach(card=>{const btn=card.querySelector('.btn');if(!btn)return;btn.disabled=true;card.querySelectorAll('[data-k]').forEach(el=>{const ev=()=>{btn.disabled=false;};el.addEventListener('input',ev);el.addEventListener('change',ev);});});}
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1900);}
+async function call(body){ return fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).then(r=>r.json()).catch(()=>({})); }
+
+async function carregar(){
+  const r=await call({acao:'list'});
+  renderFin(r.finalidade||[]);
+  renderTip(r.tipo||[]);
+  armarDirty();
+}
+
+function renderFin(arr){
+  const box=document.getElementById('finList');
+  if(!arr.length){ box.innerHTML='<div class="empty">nada ainda</div>'; return; }
+  box.innerHTML=arr.map(f=>`<div class="card" data-cod="${esc(f.codigo)}">
+    <div class="chead">
+      <span class="badge" style="background:${corFin(f.codigo)};color:${inkFor(corFin(f.codigo))}">${esc(f.codigo)}</span>
+      <div class="nm">${esc(f.rotulo)}<div class="sl">atualizado ${esc(f.atualizado_fmt||'—')}</div></div>
+    </div>
+    <div class="grow">
+      <div class="fld" style="flex:0 0 180px"><label>Palavra-gatilho <span class="hint">(IG/FB)</span></label>
+        <input type="text" data-k="palavra_gatilho" value="${esc(f.palavra_gatilho)}" placeholder="ex: CONSULTA"></div>
+    </div>
+    <div class="fld"><label>Legenda Instagram / Facebook <span class="hint">com o "Comente…"</span></label>
+      <textarea data-k="legenda_ig_fb" placeholder="Texto que vai no post do IG e do FB">${esc(f.legenda_ig_fb)}</textarea></div>
+    <div class="fld"><label>Legenda TikTok / YouTube <span class="hint">sem "Comente", sem automação</span></label>
+      <textarea data-k="legenda_tiktok_yt" placeholder="Se vazio, no TikTok/YT entra só as hashtags">${esc(f.legenda_tiktok_yt)}</textarea></div>
+    <div class="actions">
+      <button class="btn" onclick="salvarFin(this)">Salvar</button>
+      <span class="saved">salvo ✓</span>
+    </div>
+  </div>`).join('');
+}
+window.salvarFin=async btn=>{
+  const card=btn.closest('.card'); const codigo=card.dataset.cod;
+  const body={acao:'salvar_finalidade',codigo};
+  card.querySelectorAll('[data-k]').forEach(el=>body[el.dataset.k]=el.value);
+  btn.disabled=true;
+  const r=await call(body);
+  if(r.ok){ btn.disabled=true; const s=card.querySelector('.saved'); s.classList.add('show'); setTimeout(()=>s.classList.remove('show'),1800); if(r.finalidade&&r.finalidade[0]) card.querySelector('.sl').textContent='atualizado '+(r.finalidade[0].atualizado_fmt||''); }
+  else { btn.disabled=false; toast('erro: '+(r.erro||'falhou')); }
+};
+
+function renderTip(arr){
+  const box=document.getElementById('tipList');
+  if(!arr.length){ box.innerHTML='<div class="empty">nada ainda</div>'; return; }
+  box.innerHTML=arr.map(t=>`<div class="card" data-tipo="${esc(t.codigo)}">
+    <div class="chead">
+      <span class="badge" style="background:${CORES[t.codigo]||'#7A8F89'};color:${inkFor(CORES[t.codigo]||'#7A8F89')}">${esc(t.codigo)}</span>
+      <div class="nm">${esc(t.rotulo)}<div class="sl">tipo ${esc(t.codigo)}${t.codigo==='P'?' · por produto':''}</div></div>
+    </div>
+    <div class="fld"><label>Hashtags ${t.codigo==='P'?'<span class="hint">(cadastradas por produto, na planilha de produtos)</span>':'<span class="hint">separe por espaço</span>'}</label>
+      <textarea data-k="hashtags" placeholder="${t.codigo==='P'?'As hashtags do produto vêm da planilha de produtos':'#hashtag1 #hashtag2 #hashtag3'}">${esc(t.hashtags)}</textarea></div>
+    <div class="actions">
+      <button class="btn" onclick="salvarTip(this)">Salvar</button>
+      <span class="saved">salvo ✓</span>
+    </div>
+  </div>`).join('');
+}
+window.salvarTip=async btn=>{
+  const card=btn.closest('.card'); const tipo=card.dataset.tipo;
+  const body={acao:'salvar_hashtags',tipo,hashtags:card.querySelector('[data-k="hashtags"]').value};
+  btn.disabled=true;
+  const r=await call(body);
+  if(r.ok){ btn.disabled=true; const s=card.querySelector('.saved'); s.classList.add('show'); setTimeout(()=>s.classList.remove('show'),1800); }
+  else { btn.disabled=false; toast('erro: '+(r.erro||'falhou')); }
+};
+
+carregar();
+</script>
+<script src="sidebar.js" defer></script>
+</body>
+</html>
