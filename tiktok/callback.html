@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>TikTok OAuth — callback</title>
+<style>
+  :root{--verde:#3A5049;--dourado:#E3A31B;--ink:#1c1c1c;--bg:#f7f5f0}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);
+    min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+  .card{background:#fff;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.08);max-width:560px;width:100%;padding:28px}
+  h1{font-size:1.15rem;margin:0 0 6px;color:var(--verde)}
+  p{margin:6px 0;font-size:.92rem;line-height:1.45}
+  .lbl{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#777;margin-top:16px}
+  code{display:block;background:#f1efe9;border:1px solid #e2ded4;border-radius:8px;padding:10px 12px;
+    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.85rem;word-break:break-all;margin-top:4px}
+  .ok{color:var(--verde);font-weight:600}
+  .err{color:#b3261e;font-weight:600}
+  button{margin-top:6px;background:var(--dourado);border:0;color:#3a2c00;font-weight:700;
+    padding:8px 14px;border-radius:8px;cursor:pointer;font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>TikTok — retorno da autorização</h1>
+  <p id="status">Lendo os parâmetros…</p>
+  <div id="fields"></div>
+</div>
+<script>
+(function(){
+  const q = new URLSearchParams(location.search);
+  const code = q.get('code');
+  const state = q.get('state');
+  const scopes = q.get('scopes');
+  const error = q.get('error');
+  const errDesc = q.get('error_description');
+  const status = document.getElementById('status');
+  const fields = document.getElementById('fields');
+  function row(label, value){
+    if(!value) return '';
+    return '<div class="lbl">'+label+'</div><code id="v_'+label+'">'+value+'</code>'+
+      '<button onclick="navigator.clipboard.writeText(document.getElementById(\'v_'+label+'\').textContent)">Copiar</button>';
+  }
+  if(error){
+    status.innerHTML = '<span class="err">Erro na autorizacao:</span> '+error+(errDesc?(' — '+errDesc):'');
+  } else if(code){
+    status.innerHTML = '<span class="ok">Autorizacao recebida.</span> Copie o codigo abaixo (vale por poucos minutos) e volte pro Claude.';
+    fields.innerHTML = row('code', code) + row('scopes', scopes) + row('state', state);
+  } else {
+    status.innerHTML = 'Nenhum codigo na URL. Abra esta pagina pelo fluxo de autorizacao do TikTok.';
+  }
+})();
+</script>
+</body>
+</html>
