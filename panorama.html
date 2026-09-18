@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Panorama · HUB Manual</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#3A5049">
+<style>
+  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--hover:#E9F3F1;--line:#DCE8E6;--ink:#23332F;--mute:#6E827D;--dim:#93A5A1;--gold:#E3A31B;--gold2:#C88C10;--goldink:#8A5E0A;--goldbg:#FDF1D6;--teal:#17A2A0;--menu:#3A5049;--menuTxt:#E7EEEC;--menuMute:#9DB3AD;
+    --ig:#C13584;--fb:#1877F2;--tt:#111;--yt:#FF0000;--tthero:#3FE0D5}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.5;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .top{background:var(--menu);color:var(--menuTxt);padding:18px 22px;display:flex;align-items:center;gap:14px}
+  .top .logo{width:42px;height:42px;border-radius:12px;flex:0 0 auto;overflow:hidden}
+  .top .logo img{width:100%;height:100%;display:block}
+  .top .tt{min-width:0;flex:1}
+  .top h1{font-size:1.18rem;font-weight:800;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .top p{color:var(--menuMute);font-size:.82rem;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .top .back{flex:0 0 auto;color:var(--menuTxt);font-size:.82rem;font-weight:700;background:rgba(255,255,255,.10);padding:8px 13px;border-radius:10px}
+  .top .back:hover{background:rgba(255,255,255,.18)}
+  .wrap{max-width:1000px;margin:0 auto;padding:26px 18px 70px}
+  .meta{color:var(--mute);font-size:.85rem;margin:0 4px 18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .meta b{color:var(--ink)}
+
+  /* HERO seguidores */
+  .hero{background:linear-gradient(135deg,#3A5049,#2C3E38);color:#fff;border-radius:22px;padding:26px 26px 28px;margin-bottom:18px;box-shadow:0 10px 30px rgba(35,51,47,.18)}
+  .hero .lab{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:#B9CCC6;font-weight:700}
+  .hero .big{font-size:52px;font-weight:800;letter-spacing:-.02em;line-height:1.05;margin:4px 0 2px;font-variant-numeric:tabular-nums}
+  .hero .sub{color:#CDDDD8;font-size:.9rem;margin-bottom:18px}
+  .hero .sub b{color:#F4C560}
+  .netlist{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+  .net{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px}
+  .net .dot{width:11px;height:11px;border-radius:50%;flex:0 0 auto}
+  .net .nm{font-size:13.5px;font-weight:600;color:#E7EEEC}
+  .net .ct{font-size:14px;font-weight:800;font-variant-numeric:tabular-nums}
+  .net .barw{grid-column:1/-1;height:6px;background:rgba(255,255,255,.12);border-radius:999px;overflow:hidden;margin-top:-2px}
+  .net .barw > i{display:block;height:100%;border-radius:999px}
+
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:22px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:15px 16px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 18px rgba(35,51,47,.05)}
+  .kpi .lab{font-size:11px;color:#52615A;text-transform:uppercase;letter-spacing:.07em;font-weight:700}
+  .kpi .val{font-size:25px;font-weight:800;margin-top:6px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .kpi .hint{font-size:11px;color:var(--dim);margin-top:3px}
+  .kpi.hi .val{color:var(--goldink)}
+
+  .sec{font-size:.82rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin:6px 4px 12px}
+  .tops{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .tp{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 18px rgba(35,51,47,.05);display:flex;flex-direction:column;border-top:4px solid var(--line)}
+  .tp.ig{border-top-color:var(--ig)}.tp.fb{border-top-color:var(--fb)}.tp.tt{border-top-color:var(--tt)}.tp.yt{border-top-color:var(--yt)}
+  .tp .rede{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+  .tp .rede .dot{width:10px;height:10px;border-radius:50%}
+  .tp .rede .nm{font-size:12.5px;font-weight:800;letter-spacing:.02em}
+  .tp .rede .h{font-size:11.5px;color:var(--dim);margin-left:auto}
+  .tp .body{display:grid;grid-template-columns:74px 1fr;gap:12px;align-items:center}
+  .tp .thumb{width:74px;height:74px;border-radius:12px;object-fit:cover;background:var(--hover);display:block}
+  .tp .thumb.ph{display:flex;align-items:center;justify-content:center;font-size:26px}
+  .tp .cap{font-size:13px;color:var(--ink);font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:8px;min-height:2.6em}
+  .tp .mets{display:flex;gap:16px}
+  .tp .m{display:flex;flex-direction:column}
+  .tp .m b{font-size:17px;font-weight:800;color:var(--goldink);font-variant-numeric:tabular-nums}
+  .tp .m.s b{color:var(--ink)}
+  .tp .m span{font-size:10px;color:#52615A;text-transform:uppercase;letter-spacing:.03em}
+  .tp .empty{color:var(--mute);font-size:.9rem;padding:14px 2px}
+
+  .note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:16px;padding:14px 18px;margin-top:20px;font-size:.86rem;line-height:1.6;color:var(--mute)}
+  .note b{color:var(--ink)}
+  footer{color:var(--dim);text-align:center;font-size:.78rem;padding:16px 20px 40px}
+
+  @media(max-width:640px){ .netlist{grid-template-columns:1fr} .tops{grid-template-columns:1fr} .hero .big{font-size:42px} }
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="logo"><img src="favicon.svg" alt=""></div>
+  <div class="tt"><h1>Panorama · Todas as redes</h1><p id="sub">carregando…</p></div>
+  <a class="back" href="index.html">← HUB</a>
+</div>
+<div class="wrap">
+  <div class="meta" id="meta"></div>
+
+  <div class="hero">
+    <div class="lab">Seguidores somados</div>
+    <div class="big" id="totSeg">—</div>
+    <div class="sub" id="heroSub"></div>
+    <div class="netlist" id="netlist"></div>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="sec">Melhor publicação por rede <span style="font-weight:600;text-transform:none;letter-spacing:0;color:var(--dim)">· janela de 8 semanas · por engajamento</span></div>
+  <div class="tops" id="tops"></div>
+
+  <div class="note" id="note"></div>
+</div>
+<footer>Uso interno · Manual do Recém-Nascido · Instagram + Facebook + TikTok + YouTube</footer>
+
+<script>
+const fmt = n => n==null ? '-'
+  : n>=1e6 ? (n/1e6).toFixed(1).replace('.',',')+'M'
+  : n>=1000 ? (n/1000).toFixed(n>=1e4?0:1).replace('.',',')+'k'
+  : String(n);
+const sum=(a,k)=>a.reduce((s,x)=>s+(x[k]||0),0);
+const REDES = {
+  ig:{nome:'Instagram', cor:'var(--ig)', icon:'📸', arq:'dados.json'},
+  fb:{nome:'Facebook',  cor:'var(--fb)', icon:'👍', arq:'dados-facebook.json'},
+  tt:{nome:'TikTok',    cor:'var(--tt)', icon:'🎵', arq:'dados-tiktok.json'},
+  yt:{nome:'YouTube',   cor:'var(--yt)', icon:'▶️', arq:'dados-youtube.json'},
+};
+
+function topPost(rede, d){
+  if(rede==='ig'){ const p=[...(d.posts||[])].sort((a,b)=>(b.engajamento||0)-(a.engajamento||0))[0]; return p&&{titulo:p.legenda,thumb:p.thumb,link:p.permalink,eng:p.engajamento,sec:p.alcance,secLab:'alcance',pub:p.publicado_em}; }
+  if(rede==='fb'){ const p=[...(d.posts||[])].sort((a,b)=>(b.engajamento||0)-(a.engajamento||0))[0]; return p&&{titulo:p.titulo,thumb:p.thumb,link:p.link,eng:p.engajamento,sec:p.curtidas,secLab:'curtidas',pub:p.publicado_em}; }
+  const v=[...(d.videos||[])].sort((a,b)=>(b.engajamento||0)-(a.engajamento||0))[0];
+  return v&&{titulo:v.titulo,thumb:v.thumb,link:v.link,eng:v.engajamento,sec:v.views,secLab:'views',pub:v.publicado_em};
+}
+// exposição (alcance real no IG; views no TikTok/YT; FB não expõe)
+function exposicao(rede,d){
+  if(rede==='ig') return {v:d.resumo.alcance_total||0, tipo:'alcance'};
+  if(rede==='tt') return {v:d.resumo.views_total||0, tipo:'views'};
+  if(rede==='yt') return {v:(d.crescimento&&d.crescimento.length)?sum(d.crescimento,'views'):(d.resumo.views_total||0), tipo:'views'};
+  return {v:null, tipo:'—'};
+}
+function crescimento(rede,d){
+  if(rede==='ig') return d.resumo.seguidores_total||0;
+  if(rede==='fb') return d.resumo.seguidores_ganhos||0;
+  if(rede==='yt') return d.resumo.inscritos_liquido||0;
+  return null; // TikTok não expõe série de crescimento
+}
+function engajamento(rede,d){
+  if(rede==='ig') return d.resumo.eng_total||0;
+  if(rede==='fb') return d.resumo.eng_total||0;
+  return d.resumo.eng_total||0; // tt/yt
+}
+function nPub(rede,d){ return rede==='ig'||rede==='fb' ? (d.resumo.n_posts||0) : (d.resumo.n_videos||0); }
+
+Promise.all(Object.entries(REDES).map(([k,r])=>
+  fetch('./'+r.arq+'?_='+Date.now()).then(x=>x.json()).then(d=>[k,d]).catch(()=>[k,null])
+)).then(pairs=>{
+  const D={}; for(const [k,d] of pairs) D[k]=d;
+  const ativos=Object.keys(REDES).filter(k=>D[k]&&D[k].conta);
+
+  // total seguidores
+  const totSeg = ativos.reduce((s,k)=>s+(D[k].conta.seguidores||0),0);
+  document.getElementById('totSeg').textContent = fmt(totSeg).replace('M',' mi').replace('k',' mil');
+  document.getElementById('sub').textContent = 'Manual do Recém-Nascido · '+ativos.length+' redes';
+
+  const gerMax = Math.max(...ativos.map(k=>new Date(D[k].gerado_em||0).getTime()));
+  document.getElementById('meta').innerHTML =
+    `<span>números somados das <b>${ativos.length} redes</b> conectadas · publicações da <b>janela de 8 semanas</b></span>`+
+    `<span>atualizado ${new Date(gerMax).toLocaleDateString('pt-BR')}</span>`;
+
+  // crescimento total (só redes que expõem)
+  const cresRedes = ativos.filter(k=>crescimento(k,D[k])!=null);
+  const cresTot = cresRedes.reduce((s,k)=>s+crescimento(k,D[k]),0);
+  document.getElementById('heroSub').innerHTML = `<b>+${fmt(cresTot)}</b> novos seguidores nas últimas 8 semanas (soma de ${cresRedes.map(k=>REDES[k].nome).join(', ')})`;
+
+  // lista por rede — barra = FATIA do total somado (não % da maior), pra não distorcer
+  const heroCor = k => k==='tt' ? 'var(--tthero)' : REDES[k].cor;
+  document.getElementById('netlist').innerHTML = ativos
+    .sort((a,b)=>(D[b].conta.seguidores||0)-(D[a].conta.seguidores||0))
+    .map(k=>{
+      const seg=D[k].conta.seguidores||0;
+      const share = totSeg ? Math.round(seg/totSeg*100) : 0;
+      return `<div class="net">
+        <span class="dot" style="background:${heroCor(k)}"></span>
+        <span class="nm">${REDES[k].nome}</span>
+        <span class="ct">${fmt(seg)} <span style="color:#9DB3AD;font-weight:600;font-size:11.5px">· ${share}%</span></span>
+        <span class="barw"><i style="width:${share}%;background:${heroCor(k)}"></i></span>
+      </div>`;
+    }).join('');
+
+  // KPIs agregados
+  const expTot = ativos.reduce((s,k)=>s+(exposicao(k,D[k]).v||0),0);
+  const engTot = ativos.reduce((s,k)=>s+engajamento(k,D[k]),0);
+  const pubTot = ativos.reduce((s,k)=>s+nPub(k,D[k]),0);
+  document.getElementById('kpis').innerHTML = [
+    ['Crescimento (8 sem)', '+'+fmt(cresTot), 'hi', 'IG + FB + YouTube'],
+    ['Alcance & views (8 sem)', fmt(expTot), '', 'IG alcance · TikTok/YT views'],
+    ['Engajamento (8 sem)', fmt(engTot), '', 'curtidas + coment. + compart.'],
+    ['Publicações (8 sem)', pubTot, '', 'somadas nas 4 redes'],
+  ].map(([l,v,c,h])=>`<div class="kpi ${c}"><div class="lab">${l}</div><div class="val">${v}</div><div class="hint">${h}</div></div>`).join('');
+
+  // melhor publicação por rede
+  document.getElementById('tops').innerHTML = Object.keys(REDES).map(k=>{
+    const d=D[k];
+    if(!d||!d.conta) return `<div class="tp ${k}"><div class="rede"><span class="dot" style="background:${REDES[k].cor}"></span><span class="nm">${REDES[k].nome}</span></div><div class="empty">Sem dados.</div></div>`;
+    const p=topPost(k,d);
+    if(!p||!p.eng) return `<div class="tp ${k}"><div class="rede"><span class="dot" style="background:${REDES[k].cor}"></span><span class="nm">${REDES[k].nome}</span></div><div class="empty">Sem publicações na janela.</div></div>`;
+    const dia=p.pub?new Date(p.pub).toLocaleDateString('pt-BR',{day:'2-digit',month:'short'}):'';
+    const thumb=p.thumb
+      ? `<img class="thumb" src="${p.thumb}" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'thumb ph',textContent:'${REDES[k].icon}'}))">`
+      : `<div class="thumb ph">${REDES[k].icon}</div>`;
+    return `<a class="tp ${k}" href="${p.link||'#'}" target="_blank" rel="noopener">
+      <div class="rede"><span class="dot" style="background:${REDES[k].cor}"></span><span class="nm">${REDES[k].nome}</span><span class="h">${dia}</span></div>
+      <div class="body">
+        ${thumb}
+        <div>
+          <div class="cap">${(p.titulo||'(sem legenda)').replace(/</g,'&lt;')}</div>
+          <div class="mets">
+            <div class="m"><b>${fmt(p.eng)}</b><span>engajamento</span></div>
+            <div class="m s"><b>${fmt(p.sec)}</b><span>${p.secLab}</span></div>
+          </div>
+        </div>
+      </div></a>`;
+  }).join('');
+
+  document.getElementById('note').innerHTML =
+    `<b>Como ler.</b> Seguidores é o total atual de cada rede. Crescimento, engajamento e publicações são da <b>janela de 8 semanas</b>. `+
+    `Em <b>Alcance & views</b>, o Instagram entra com <b>alcance real</b> (pessoas únicas) e TikTok/YouTube com <b>views</b> — o Facebook não é somado aqui porque a Meta descontinuou o alcance de página na API. `+
+    `O <b>TikTok</b> não entra no crescimento porque a API de criador não expõe ganho de seguidores no tempo (só o total atual).`;
+}).catch(e=>{ document.getElementById('sub').textContent='erro ao carregar os dados'; });
+</script>
+<script src="sidebar.js" defer></script>
+</body>
+</html>

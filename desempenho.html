@@ -124,6 +124,7 @@
     <span class="flabel">Rede</span>
     <div class="grp" id="fRede">
       <button class="chip on" data-r="instagram">Instagram</button>
+      <button class="chip" data-r="facebook">Facebook</button>
       <button class="chip" data-r="tiktok">TikTok</button>
       <button class="chip" data-r="youtube">YouTube</button>
     </div>
@@ -159,7 +160,7 @@
   </div>
   <div class="list" id="list"></div>
 </div>
-<footer>Uso interno · Manual do Recém-Nascido · Instagram (Graph API) + TikTok (Display API) + YouTube (Data API v3)</footer>
+<footer>Uso interno · Manual do Recém-Nascido · Instagram + Facebook (Graph API) + TikTok (Display API) + YouTube (Data API v3)</footer>
 
 <script>
 const DAYMS=864e5;
@@ -169,7 +170,7 @@ const fmt = n => n==null ? '-'
   : String(n);
 const ICON = {reels:'🎬', carrossel:'🖼️', foto:'📷'};
 const sum=(a,k)=>a.reduce((s,x)=>s+(x[k]||0),0);
-let DADOS=null, TDADOS=null, YDADOS=null, fTipo='todos', fPer='all', rede='instagram';
+let DADOS=null, TDADOS=null, YDADOS=null, FDADOS=null, fTipo='todos', fPer='all', rede='instagram';
 
 const limDate = () => new Date(Date.now()-fPer*DAYMS).toISOString().slice(0,10);
 function postsPeriodo(){ return fPer==='all' ? DADOS.posts.slice() : DADOS.posts.filter(p=>new Date(p.publicado_em).getTime()>=Date.now()-fPer*DAYMS); }
@@ -180,7 +181,65 @@ function seguidoresPeriodo(){
   return Object.entries(map).reduce((s,[d,v])=>d>=limDate()?s+(v||0):s,0);
 }
 
-function apply(){ if(rede==='tiktok') applyTikTok(); else if(rede==='youtube') applyYouTube(); else applyIG(); }
+function apply(){ if(rede==='tiktok') applyTikTok(); else if(rede==='youtube') applyYouTube(); else if(rede==='facebook') applyFacebook(); else applyIG(); }
+
+function fbPeriodo(){ return fPer==='all' ? FDADOS.posts.slice() : FDADOS.posts.filter(v=>new Date(v.publicado_em).getTime()>=Date.now()-fPer*DAYMS); }
+function fbCresc(){ const c=FDADOS.crescimento||[]; return fPer==='all' ? c : c.filter(x=>x.data>=limDate()); }
+function applyFacebook(){
+  const pp = fbPeriodo();
+  const cr = fbCresc();
+  const ganhos = cr.reduce((s,x)=>s+(x.ganhos||0),0);
+  const eng_medio = pp.length ? Math.round(sum(pp,'engajamento')/pp.length) : 0;
+  document.getElementById('kpis').innerHTML = [
+    ['Seguidores', fmt(FDADOS.conta.seguidores), 'hi'],
+    ['Seguidores ganhos', '+'+fmt(ganhos), 'hi'],
+    ['Publicações', pp.length, ''],
+    ['Engaj. total', fmt(sum(pp,'engajamento')), ''],
+    ['Engaj. médio/post', fmt(eng_medio), ''],
+    ['Compartilham.', fmt(sum(pp,'compartilhamentos')), ''],
+  ].map(([l,v,c])=>`<div class="kpi ${c}"><div class="lab">${l}</div><div class="val">${v}</div></div>`).join('');
+
+  const best=[...pp].sort((a,b)=>(b.engajamento||0)-(a.engajamento||0))[0];
+  const bestDia=best?new Date(best.publicado_em).toLocaleDateString('pt-BR',{day:'2-digit',month:'short'}):'';
+  document.getElementById('insight').innerHTML = best
+    ? `<b>Leitura rápida.</b> No período, o melhor post (${bestDia}) fez <b>${fmt(best.engajamento)}</b> de engajamento
+       (<b>${fmt(best.curtidas)}</b> reações). A página ganhou <b>+${fmt(ganhos)}</b> seguidores e tem
+       <b>${fmt(FDADOS.conta.seguidores)}</b> no total. O ranking está por <b>engajamento</b> — replicar os ganchos
+       dos primeiros é a aposta mais segura. <i>A Meta não expõe mais alcance de página na API.</i>`
+    : `<b>Leitura rápida.</b> Sem publicações nesse período.`;
+
+  // crescimento por dia
+  document.getElementById('pordia').innerHTML =
+    `<div class="drow dhead"><span>Dia</span><span class="ta">Seguidores</span></div>`+
+    (cr.map(x=>{
+      const dt=new Date(x.data+'T12:00:00');
+      const dl=dt.toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit',month:'2-digit'}).replace('.','');
+      return `<div class="drow" style="grid-template-columns:1fr 1fr"><span class="dday">${dl}</span><span class="dseg ta">${x.ganhos>0?'+'+fmt(x.ganhos):'-'}</span></div>`;
+    }).join('') || `<div class="drow"><span class="dday" style="color:var(--mute)">Sem dados no período.</span></div>`);
+
+  const list=[...pp].sort((a,b)=>(b.engajamento||0)-(a.engajamento||0));
+  document.getElementById('count').textContent=list.length+' posts';
+  document.getElementById('list').innerHTML = list.map((p,i)=>{
+    const dia=new Date(p.publicado_em).toLocaleDateString('pt-BR',{day:'2-digit',month:'short'});
+    const thumb=p.thumb
+      ? `<img class="thumb" src="${p.thumb}" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'thumb ph',textContent:'👍'}))">`
+      : `<div class="thumb ph">👍</div>`;
+    return `<a class="post ${i<3?'podium':''}" href="${p.link||'#'}" target="_blank" rel="noopener">
+      <div class="rank ${i<3?'top':''}">${i+1}</div>
+      ${thumb}
+      <div class="pmain">
+        <div class="ptop"><span class="tag carrossel">post</span><span class="pdate">${dia}</span></div>
+        <div class="pcap">${(p.titulo||'(sem legenda)').replace(/</g,'&lt;')}</div>
+        <div class="metrics">
+          <div class="met key"><b>${fmt(p.engajamento)}</b><span>engaj.</span></div>
+          <div class="met"><b>${fmt(p.curtidas)}</b><span>reações</span></div>
+          <div class="met"><b>${fmt(p.comentarios)}</b><span>coment.</span></div>
+          <div class="met"><b>${fmt(p.compartilhamentos)}</b><span>compart.</span></div>
+          <div class="met"><b>-</b><span>alcance</span></div>
+        </div>
+      </div></a>`;
+  }).join('') || `<div class="panel" style="text-align:center;color:var(--mute)">Nenhum post nesse filtro.</div>`;
+}
 
 function ytPeriodo(){ return fPer==='all' ? YDADOS.videos.slice() : YDADOS.videos.filter(v=>new Date(v.publicado_em).getTime()>=Date.now()-fPer*DAYMS); }
 function crescPeriodo(){ const c=YDADOS.crescimento||[]; return fPer==='all' ? c : c.filter(x=>x.data>=limDate()); }
@@ -362,9 +421,9 @@ function applyIG(){
 }
 
 function updHead(){
-  const d = rede==='tiktok' ? TDADOS : rede==='youtube' ? YDADOS : DADOS;
+  const d = rede==='tiktok' ? TDADOS : rede==='youtube' ? YDADOS : rede==='facebook' ? FDADOS : DADOS;
   if(!d) return;
-  const nome = rede==='tiktok' ? 'TikTok' : rede==='youtube' ? 'YouTube' : 'Instagram';
+  const nome = rede==='tiktok' ? 'TikTok' : rede==='youtube' ? 'YouTube' : rede==='facebook' ? 'Facebook' : 'Instagram';
   const unid = rede==='youtube' ? 'inscritos' : 'seguidores';
   document.getElementById('sub').textContent = `Manual do Recém-Nascido · @${d.conta.username} · ${nome}`;
   document.getElementById('meta').innerHTML =
@@ -386,14 +445,21 @@ function montaTipos(r){
 
 function setRede(r){
   rede=r;
-  const tk = r==='tiktok', yt = r==='youtube';
-  document.getElementById('panelFormato').style.display = (tk||yt)?'none':'';
-  document.getElementById('panelDia').style.display     = tk?'none':'';   // TikTok esconde; YouTube usa (crescimento)
-  document.getElementById('fTipo').style.display         = tk?'none':'';   // TikTok esconde; YouTube usa (shorts/vídeos)
-  document.getElementById('row2').style.gridTemplateColumns = (tk||yt)?'1fr':'';
+  const tk = r==='tiktok', yt = r==='youtube', fb = r==='facebook';
+  const soLista = tk||yt||fb;
+  document.getElementById('panelFormato').style.display = soLista?'none':'';
+  document.getElementById('panelDia').style.display     = tk?'none':'';   // TikTok esconde; IG/YT/FB usam
+  document.getElementById('fTipo').style.display         = (tk||fb)?'none':''; // só IG e YouTube têm filtro de formato
+  document.getElementById('row2').style.gridTemplateColumns = soLista?'1fr':'';
   document.getElementById('rankTitle').textContent = (tk||yt)?'Ranking de vídeos':'Ranking de posts';
-  document.querySelector('#panelDia h2').textContent = yt?'Crescimento de inscritos por dia':'Performance por dia';
-  if(yt) montaTipos('youtube'); else if(!tk) montaTipos('instagram');
+  document.querySelector('#panelDia h2').textContent = yt?'Crescimento de inscritos por dia':fb?'Crescimento de seguidores por dia':'Performance por dia';
+  if(yt) montaTipos('youtube'); else if(!tk && !fb) montaTipos('instagram');
+  if(fb && !FDADOS){
+    document.getElementById('sub').textContent='carregando Facebook…';
+    fetch('./dados-facebook.json?_='+Date.now()).then(r=>r.json()).then(d=>{FDADOS=d;updHead();apply();})
+      .catch(()=>document.getElementById('sub').textContent='erro ao carregar dados-facebook.json');
+    return;
+  }
   if(tk && !TDADOS){
     document.getElementById('sub').textContent='carregando TikTok…';
     fetch('./dados-tiktok.json?_='+Date.now()).then(r=>r.json()).then(d=>{TDADOS=d;updHead();apply();})
@@ -417,7 +483,7 @@ function boot(d){
   document.querySelectorAll('#fPer .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('#fPer .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');fPer=b.dataset.p;apply();});
   // rede inicial via ?rede=tiktok|youtube
   const qr=new URLSearchParams(location.search).get('rede');
-  if(qr==='tiktok'||qr==='youtube'){ document.querySelectorAll('#fRede .chip').forEach(x=>x.classList.toggle('on',x.dataset.r===qr)); setRede(qr); }
+  if(qr==='tiktok'||qr==='youtube'||qr==='facebook'){ document.querySelectorAll('#fRede .chip').forEach(x=>x.classList.toggle('on',x.dataset.r===qr)); setRede(qr); }
   else apply();
 }
 
