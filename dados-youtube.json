@@ -1,0 +1,501 @@
+{
+  "gerado_em": "2026-09-18T19:34:12.048Z",
+  "conta": {
+    "username": "manualdorecemnascido",
+    "display_name": "Manual do Recém-Nascido",
+    "seguidores": 811000,
+    "views_totais": 134622907,
+    "videos_total": 1115,
+    "link": "https://youtube.com/@manualdorecemnascido"
+  },
+  "periodo_semanas": 8,
+  "resumo": {
+    "n_videos": 25,
+    "views_total": 590163,
+    "likes_total": 13863,
+    "comments_total": 163,
+    "eng_total": 14026,
+    "eng_medio": 561,
+    "shorts": 25,
+    "longos": 0
+  },
+  "por_dia": [
+    {
+      "data": "2026-09-17",
+      "posts": 1,
+      "views": 7272,
+      "engajamento": 254
+    },
+    {
+      "data": "2026-09-16",
+      "posts": 1,
+      "views": 1123,
+      "engajamento": 25
+    },
+    {
+      "data": "2026-09-12",
+      "posts": 1,
+      "views": 2441,
+      "engajamento": 100
+    },
+    {
+      "data": "2026-09-09",
+      "posts": 1,
+      "views": 171116,
+      "engajamento": 1926
+    },
+    {
+      "data": "2026-09-08",
+      "posts": 1,
+      "views": 59661,
+      "engajamento": 844
+    },
+    {
+      "data": "2026-09-05",
+      "posts": 1,
+      "views": 25020,
+      "engajamento": 484
+    },
+    {
+      "data": "2026-09-03",
+      "posts": 1,
+      "views": 5261,
+      "engajamento": 100
+    },
+    {
+      "data": "2026-09-02",
+      "posts": 1,
+      "views": 5016,
+      "engajamento": 102
+    },
+    {
+      "data": "2026-09-01",
+      "posts": 1,
+      "views": 6415,
+      "engajamento": 284
+    },
+    {
+      "data": "2026-08-29",
+      "posts": 1,
+      "views": 33253,
+      "engajamento": 557
+    },
+    {
+      "data": "2026-08-26",
+      "posts": 1,
+      "views": 4264,
+      "engajamento": 172
+    },
+    {
+      "data": "2026-08-25",
+      "posts": 1,
+      "views": 5694,
+      "engajamento": 230
+    },
+    {
+      "data": "2026-08-22",
+      "posts": 1,
+      "views": 13582,
+      "engajamento": 531
+    },
+    {
+      "data": "2026-08-20",
+      "posts": 1,
+      "views": 7196,
+      "engajamento": 166
+    },
+    {
+      "data": "2026-08-19",
+      "posts": 1,
+      "views": 4530,
+      "engajamento": 130
+    },
+    {
+      "data": "2026-08-14",
+      "posts": 1,
+      "views": 10287,
+      "engajamento": 345
+    },
+    {
+      "data": "2026-08-12",
+      "posts": 1,
+      "views": 24035,
+      "engajamento": 692
+    },
+    {
+      "data": "2026-08-11",
+      "posts": 1,
+      "views": 5092,
+      "engajamento": 267
+    },
+    {
+      "data": "2026-08-05",
+      "posts": 1,
+      "views": 42267,
+      "engajamento": 1625
+    },
+    {
+      "data": "2026-08-04",
+      "posts": 1,
+      "views": 79090,
+      "engajamento": 2117
+    },
+    {
+      "data": "2026-08-01",
+      "posts": 1,
+      "views": 9641,
+      "engajamento": 283
+    },
+    {
+      "data": "2026-07-31",
+      "posts": 1,
+      "views": 18325,
+      "engajamento": 654
+    },
+    {
+      "data": "2026-07-30",
+      "posts": 1,
+      "views": 12443,
+      "engajamento": 169
+    },
+    {
+      "data": "2026-07-29",
+      "posts": 1,
+      "views": 30178,
+      "engajamento": 1620
+    },
+    {
+      "data": "2026-07-28",
+      "posts": 1,
+      "views": 6961,
+      "engajamento": 349
+    }
+  ],
+  "videos": [
+    {
+      "id": "TZQgmdwUX_I",
+      "titulo": "bolsa térmica",
+      "thumb": "https://i.ytimg.com/vi/TZQgmdwUX_I/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=TZQgmdwUX_I",
+      "publicado_em": "2026-09-09T14:00:51Z",
+      "views": 171116,
+      "curtidas": 1917,
+      "comentarios": 9,
+      "engajamento": 1926,
+      "formato": "short",
+      "duracao_seg": 37
+    },
+    {
+      "id": "wfb5eUSHjrU",
+      "titulo": "COMO EVITAR A BRAQUICEFALIA?",
+      "thumb": "https://i.ytimg.com/vi/wfb5eUSHjrU/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=wfb5eUSHjrU",
+      "publicado_em": "2026-08-04T11:01:21Z",
+      "views": 79090,
+      "curtidas": 2094,
+      "comentarios": 23,
+      "engajamento": 2117,
+      "formato": "short",
+      "duracao_seg": 48
+    },
+    {
+      "id": "bZ6qFuvgcqg",
+      "titulo": "BEBÊ COM DISQUESIA",
+      "thumb": "https://i.ytimg.com/vi/bZ6qFuvgcqg/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=bZ6qFuvgcqg",
+      "publicado_em": "2026-09-08T11:00:57Z",
+      "views": 59661,
+      "curtidas": 835,
+      "comentarios": 9,
+      "engajamento": 844,
+      "formato": "short",
+      "duracao_seg": 54
+    },
+    {
+      "id": "s_-LAQEeozU",
+      "titulo": "Almofada de amamentação...",
+      "thumb": "https://i.ytimg.com/vi/s_-LAQEeozU/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=s_-LAQEeozU",
+      "publicado_em": "2026-08-05T14:00:41Z",
+      "views": 42267,
+      "curtidas": 1610,
+      "comentarios": 15,
+      "engajamento": 1625,
+      "formato": "short",
+      "duracao_seg": 36
+    },
+    {
+      "id": "FXDsg1L6-fU",
+      "titulo": "Lixa elétrica",
+      "thumb": "https://i.ytimg.com/vi/FXDsg1L6-fU/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=FXDsg1L6-fU",
+      "publicado_em": "2026-08-29T14:15:39Z",
+      "views": 33253,
+      "curtidas": 553,
+      "comentarios": 4,
+      "engajamento": 557,
+      "formato": "short",
+      "duracao_seg": 20
+    },
+    {
+      "id": "2tyt0IlpR-Y",
+      "titulo": "saco de dormir para bebês",
+      "thumb": "https://i.ytimg.com/vi/2tyt0IlpR-Y/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=2tyt0IlpR-Y",
+      "publicado_em": "2026-07-29T14:00:45Z",
+      "views": 30178,
+      "curtidas": 1612,
+      "comentarios": 8,
+      "engajamento": 1620,
+      "formato": "short",
+      "duracao_seg": 49
+    },
+    {
+      "id": "5vzDC5zE724",
+      "titulo": "Troca de fraldas",
+      "thumb": "https://i.ytimg.com/vi/5vzDC5zE724/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=5vzDC5zE724",
+      "publicado_em": "2026-09-05T14:00:48Z",
+      "views": 25020,
+      "curtidas": 476,
+      "comentarios": 8,
+      "engajamento": 484,
+      "formato": "short",
+      "duracao_seg": 34
+    },
+    {
+      "id": "nPLW-wJBxc0",
+      "titulo": "Dica para deixar o banho do bebê relaxante",
+      "thumb": "https://i.ytimg.com/vi/nPLW-wJBxc0/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=nPLW-wJBxc0",
+      "publicado_em": "2026-08-12T14:00:51Z",
+      "views": 24035,
+      "curtidas": 686,
+      "comentarios": 6,
+      "engajamento": 692,
+      "formato": "short",
+      "duracao_seg": 24
+    },
+    {
+      "id": "NiSI8aaOft8",
+      "titulo": "AUTONOMIA DE SONO DO BEBÊ",
+      "thumb": "https://i.ytimg.com/vi/NiSI8aaOft8/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=NiSI8aaOft8",
+      "publicado_em": "2026-07-31T11:01:09Z",
+      "views": 18325,
+      "curtidas": 640,
+      "comentarios": 14,
+      "engajamento": 654,
+      "formato": "short",
+      "duracao_seg": 41
+    },
+    {
+      "id": "O3gyQvGntcI",
+      "titulo": "Ruído branco",
+      "thumb": "https://i.ytimg.com/vi/O3gyQvGntcI/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=O3gyQvGntcI",
+      "publicado_em": "2026-08-22T14:00:51Z",
+      "views": 13582,
+      "curtidas": 517,
+      "comentarios": 14,
+      "engajamento": 531,
+      "formato": "short",
+      "duracao_seg": 44
+    },
+    {
+      "id": "uSGnfxj4Vpc",
+      "titulo": "A VERDADE SOBRE OS MAM*LOS NA AMAMENTAÇÃO",
+      "thumb": "https://i.ytimg.com/vi/uSGnfxj4Vpc/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=uSGnfxj4Vpc",
+      "publicado_em": "2026-07-30T11:00:40Z",
+      "views": 12443,
+      "curtidas": 165,
+      "comentarios": 4,
+      "engajamento": 169,
+      "formato": "short",
+      "duracao_seg": 9
+    },
+    {
+      "id": "Os-7anIicWY",
+      "titulo": "POltrona de amamentação",
+      "thumb": "https://i.ytimg.com/vi/Os-7anIicWY/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=Os-7anIicWY",
+      "publicado_em": "2026-08-14T13:12:44Z",
+      "views": 10287,
+      "curtidas": 335,
+      "comentarios": 10,
+      "engajamento": 345,
+      "formato": "short",
+      "duracao_seg": 56
+    },
+    {
+      "id": "ONJZdaK8pm4",
+      "titulo": "Coletor de leite materno",
+      "thumb": "https://i.ytimg.com/vi/ONJZdaK8pm4/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=ONJZdaK8pm4",
+      "publicado_em": "2026-08-01T14:00:49Z",
+      "views": 9641,
+      "curtidas": 279,
+      "comentarios": 4,
+      "engajamento": 283,
+      "formato": "short",
+      "duracao_seg": 32
+    },
+    {
+      "id": "dAwAO8DDnd4",
+      "titulo": "BEBÊ COM REFLUXO PODE DORMIR DE BARRIGA PRA CIMA?",
+      "thumb": "https://i.ytimg.com/vi/dAwAO8DDnd4/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=dAwAO8DDnd4",
+      "publicado_em": "2026-09-17T11:00:54Z",
+      "views": 7272,
+      "curtidas": 251,
+      "comentarios": 3,
+      "engajamento": 254,
+      "formato": "short",
+      "duracao_seg": 50
+    },
+    {
+      "id": "d53-s77xbXo",
+      "titulo": "5 COISAS QUE ATRAPALHAM O SONO DO SUE BEBÊ",
+      "thumb": "https://i.ytimg.com/vi/d53-s77xbXo/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=d53-s77xbXo",
+      "publicado_em": "2026-08-20T11:00:44Z",
+      "views": 7196,
+      "curtidas": 161,
+      "comentarios": 5,
+      "engajamento": 166,
+      "formato": "short",
+      "duracao_seg": 11
+    },
+    {
+      "id": "5b1e-yA8nzM",
+      "titulo": "BEBÊ QUE ACORDA AO ARROTAR",
+      "thumb": "https://i.ytimg.com/vi/5b1e-yA8nzM/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=5b1e-yA8nzM",
+      "publicado_em": "2026-07-28T11:01:09Z",
+      "views": 6961,
+      "curtidas": 342,
+      "comentarios": 7,
+      "engajamento": 349,
+      "formato": "short",
+      "duracao_seg": 48
+    },
+    {
+      "id": "2tizlWadtSA",
+      "titulo": "O BEBÊ NÃO PODE MAM*R ASSIM",
+      "thumb": "https://i.ytimg.com/vi/2tizlWadtSA/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=2tizlWadtSA",
+      "publicado_em": "2026-09-01T11:00:59Z",
+      "views": 6415,
+      "curtidas": 281,
+      "comentarios": 3,
+      "engajamento": 284,
+      "formato": "short",
+      "duracao_seg": 41
+    },
+    {
+      "id": "IT6NrKjME3w",
+      "titulo": "BEBÊ CALMO NA HORA DO BANHO",
+      "thumb": "https://i.ytimg.com/vi/IT6NrKjME3w/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=IT6NrKjME3w",
+      "publicado_em": "2026-08-25T11:00:54Z",
+      "views": 5694,
+      "curtidas": 228,
+      "comentarios": 2,
+      "engajamento": 230,
+      "formato": "short",
+      "duracao_seg": 26
+    },
+    {
+      "id": "D9C7BznvWnA",
+      "titulo": "SINAIS DE QUE SEU BEBÊ NÃO ESTÁ DORMINDO BEM DE DIA",
+      "thumb": "https://i.ytimg.com/vi/D9C7BznvWnA/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=D9C7BznvWnA",
+      "publicado_em": "2026-09-03T11:00:40Z",
+      "views": 5261,
+      "curtidas": 96,
+      "comentarios": 4,
+      "engajamento": 100,
+      "formato": "short",
+      "duracao_seg": 11
+    },
+    {
+      "id": "4zY56hKhbCY",
+      "titulo": "BEBÊ PODE USAR COBERTA?",
+      "thumb": "https://i.ytimg.com/vi/4zY56hKhbCY/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=4zY56hKhbCY",
+      "publicado_em": "2026-08-11T11:00:44Z",
+      "views": 5092,
+      "curtidas": 261,
+      "comentarios": 6,
+      "engajamento": 267,
+      "formato": "short",
+      "duracao_seg": 57
+    },
+    {
+      "id": "YbSwO9UF4To",
+      "titulo": "Brinquedo de banho",
+      "thumb": "https://i.ytimg.com/vi/YbSwO9UF4To/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=YbSwO9UF4To",
+      "publicado_em": "2026-09-02T14:00:41Z",
+      "views": 5016,
+      "curtidas": 101,
+      "comentarios": 1,
+      "engajamento": 102,
+      "formato": "short",
+      "duracao_seg": 25
+    },
+    {
+      "id": "_DNjVZs8t-Y",
+      "titulo": "Brinquedo de banho",
+      "thumb": "https://i.ytimg.com/vi/_DNjVZs8t-Y/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=_DNjVZs8t-Y",
+      "publicado_em": "2026-08-19T11:00:44Z",
+      "views": 4530,
+      "curtidas": 130,
+      "comentarios": 0,
+      "engajamento": 130,
+      "formato": "short",
+      "duracao_seg": 25
+    },
+    {
+      "id": "puXoits4I3A",
+      "titulo": "Ninho pode ser usado?",
+      "thumb": "https://i.ytimg.com/vi/puXoits4I3A/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=puXoits4I3A",
+      "publicado_em": "2026-08-26T14:00:48Z",
+      "views": 4264,
+      "curtidas": 172,
+      "comentarios": 0,
+      "engajamento": 172,
+      "formato": "short",
+      "duracao_seg": 42
+    },
+    {
+      "id": "BJfs0Jn-RNk",
+      "titulo": "Ruído branco",
+      "thumb": "https://i.ytimg.com/vi/BJfs0Jn-RNk/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=BJfs0Jn-RNk",
+      "publicado_em": "2026-09-12T14:00:57Z",
+      "views": 2441,
+      "curtidas": 98,
+      "comentarios": 2,
+      "engajamento": 100,
+      "formato": "short",
+      "duracao_seg": 46
+    },
+    {
+      "id": "JSRZoWve7fU",
+      "titulo": "Babá eletrônica",
+      "thumb": "https://i.ytimg.com/vi/JSRZoWve7fU/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=JSRZoWve7fU",
+      "publicado_em": "2026-09-16T14:00:39Z",
+      "views": 1123,
+      "curtidas": 23,
+      "comentarios": 2,
+      "engajamento": 25,
+      "formato": "short",
+      "duracao_seg": 29
+    }
+  ]
+}
