@@ -32,8 +32,7 @@
     {item:'Agente de copy', href:'agente-copy.html', ic:'pen'},
     {item:'UTM do Manual', href:'https://utm.brunotropolis.com.br', ic:'link', ext:true},
     {cat:'Admin'},
-    {item:'Admin', href:'admin.html', ic:'gear'},
-    {item:'Legendas & Hashtags', href:'legendas.html', ic:'pen'}
+    {item:'Admin', href:'admin.html', ic:'gear'}
   ];
   var path=(location.pathname.split('/').pop()||'index.html').toLowerCase()||'index.html';
   var svg=function(k){return '<svg viewBox="0 0 24 24">'+ICON[k]+'</svg>';};

@@ -75,7 +75,16 @@
 <div class="wrap">
 
   <h2 class="sechead">🧭 Como o código do arquivo identifica cada post</h2>
-  <p class="lead">O nome tem 7 caracteres: <code>XXX</code> (gravação) + <code>T</code> (tipo → escolhe as hashtags) + <code>YYY</code> (finalidade → escolhe a legenda). A capa é <code>XXX</code>+<code>CAPA</code>. Ex.: <code>003C01S</code> = gravação 003, tipo C, finalidade 01S.</p>
+  <p class="lead">O nome do arquivo tem 7 caracteres. Cada pedaço decide uma coisa:</p>
+  <div class="idcard" style="margin-bottom:14px">
+    <h3>Anatomia do código <span>· exemplo 003C01S</span></h3>
+    <table class="idt"><tbody>
+      <tr><td class="c"><span class="pill" style="background:#7A8F89">XXX</span></td><td class="c" style="color:var(--goldink);font-weight:800">003</td><td class="nm">Gravação</td><td class="gt">rodízio · não repete o mesmo vídeo</td></tr>
+      <tr><td class="c"><span class="pill" style="background:#4C7A9B">T</span></td><td class="c" style="color:var(--goldink);font-weight:800">C</td><td class="nm">Tipo de conteúdo</td><td class="gt">escolhe as <b>hashtags</b></td></tr>
+      <tr><td class="c"><span class="pill" style="background:#5B6BB0">YYY</span></td><td class="c" style="color:var(--goldink);font-weight:800">01S</td><td class="nm">Finalidade</td><td class="gt">escolhe a <b>legenda</b></td></tr>
+      <tr><td class="c"><span class="pill" style="background:#C88C10;color:#1c231f">CAPA</span></td><td class="c" style="color:var(--goldink);font-weight:800">003CAPA</td><td class="nm">Capa da gravação</td><td class="gt">imagem de capa do Reels</td></tr>
+    </tbody></table>
+  </div>
   <div class="idgrid">
     <div class="idcard"><h3>Finalidades <span>· YYY → legenda</span></h3><table class="idt"><tbody id="idFin"><tr><td class="empty">carregando…</td></tr></tbody></table></div>
     <div class="idcard"><h3>Tipos <span>· T → hashtags</span></h3><table class="idt"><tbody id="idTip"><tr><td class="empty">carregando…</td></tr></tbody></table></div>
@@ -99,7 +108,7 @@
 const API='https://n8n-n8n.xktssy.easypanel.host/webhook/motor-legendas';
 const CORES={A:'#B5651D',C:'#4C7A9B',S:'#5B6BB0',G:'#3A8A6E',P:'#C88C10','01':'#5B6BB0','02':'#5B6BB0','03':'#B5651D','04':'#3A8A6E','05':'#C88C10'};
 const corFin=cod=>CORES[cod]||CORES[String(cod).slice(0,2)]||'#7A8F89';
-function inkFor(hex){const h=String(hex||'').replace('#','');if(h.length<6)return '#fff';const c=i=>{const v=parseInt(h.slice(i,i+2),16)/255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4);};const L=.2126*c(0)+.7152*c(2)+.0722*c(4);return L>0.4?'#1c231f':'#fff';}
+function inkFor(hex){const h=String(hex||'').replace('#','');if(h.length<6)return '#fff';const c=i=>{const v=parseInt(h.slice(i,i+2),16)/255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4);};const L=.2126*c(0)+.7152*c(2)+.0722*c(4);return L>0.28?'#1c231f':'#fff';}
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function armarDirty(){document.querySelectorAll('.card').forEach(card=>{const btn=card.querySelector('.btn');if(!btn)return;btn.disabled=true;card.querySelectorAll('[data-k]').forEach(el=>{const ev=()=>{btn.disabled=false;};el.addEventListener('input',ev);el.addEventListener('change',ev);});});}
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1900);}
@@ -112,7 +121,6 @@ async function carregar(){
   renderConfig(cfg);
   renderFin(fin);
   renderTip(tip);
-  armarDirty();
 }
 
 function renderIdent(fin, tip){
@@ -139,9 +147,9 @@ function renderConfig(arr){
 window.salvarConfig=async btn=>{
   const card=btn.closest('.card');
   const body={acao:'salvar_config',chave:card.dataset.cfg,valor:card.querySelector('[data-k="valor"]').value};
-  btn.disabled=true; const r=await call(body);
+  btn.disabled=true; const r=await call(body); btn.disabled=false;
   if(r.ok){ const s=card.querySelector('.saved'); s.classList.add('show'); setTimeout(()=>s.classList.remove('show'),1800); }
-  else { btn.disabled=false; toast('erro: '+(r.erro||'falhou')); }
+  else toast('erro: '+(r.erro||'falhou'));
 };
 
 function renderFin(arr){
@@ -166,9 +174,9 @@ window.salvarFin=async btn=>{
   const body={acao:'salvar_finalidade',codigo};
   card.querySelectorAll('[data-k]').forEach(el=>body[el.dataset.k]=el.value);
   btn.disabled=true;
-  const r=await call(body);
+  const r=await call(body); btn.disabled=false;
   if(r.ok){ const s=card.querySelector('.saved'); s.classList.add('show'); setTimeout(()=>s.classList.remove('show'),1800); if(r.finalidade&&r.finalidade[0]) card.querySelector('.sl').textContent='atualizado '+(r.finalidade[0].atualizado_fmt||''); }
-  else { btn.disabled=false; toast('erro: '+(r.erro||'falhou')); }
+  else toast('erro: '+(r.erro||'falhou'));
 };
 
 function renderTip(arr){
@@ -191,9 +199,9 @@ window.salvarTip=async btn=>{
   const card=btn.closest('.card'); const tipo=card.dataset.tipo;
   const body={acao:'salvar_hashtags',tipo,hashtags:card.querySelector('[data-k="hashtags"]').value};
   btn.disabled=true;
-  const r=await call(body);
+  const r=await call(body); btn.disabled=false;
   if(r.ok){ const s=card.querySelector('.saved'); s.classList.add('show'); setTimeout(()=>s.classList.remove('show'),1800); }
-  else { btn.disabled=false; toast('erro: '+(r.erro||'falhou')); }
+  else toast('erro: '+(r.erro||'falhou'));
 };
 
 carregar();
