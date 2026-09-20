@@ -132,10 +132,10 @@
     <div class="grid" id="grid"></div>
   </div>
 
-  <!-- FILA — semana vigente -->
+  <!-- FILA — próximos 7 dias -->
   <div class="sec" id="sec-fila">
     <div class="sec-hd">
-      <h2>Fila — Semana vigente</h2>
+      <h2 id="fila-titulo">Fila — Próximos 7 dias</h2>
       <span class="cnt" id="fila-cnt"></span>
     </div>
     <div class="fila-grid" id="flist"><div class="empty">carregando…</div></div>
@@ -193,17 +193,14 @@ function fmtHm(iso) {
   return d.toLocaleTimeString('pt-BR', {hour:'2-digit', minute:'2-digit'});
 }
 
-// semana vigente: seg-dom da semana atual
+// próximos 7 dias a partir de hoje
 function semanaVigente() {
-  const now = new Date();
-  const dow = now.getDay();
-  const seg = new Date(now);
-  seg.setDate(now.getDate() - ((dow + 6) % 7));
-  seg.setHours(0, 0, 0, 0);
-  const dom = new Date(seg);
-  dom.setDate(seg.getDate() + 6);
-  dom.setHours(23, 59, 59, 999);
-  return { seg, dom };
+  const inicio = new Date();
+  inicio.setHours(0, 0, 0, 0);
+  const fim = new Date(inicio);
+  fim.setDate(inicio.getDate() + 7);
+  fim.setHours(23, 59, 59, 999);
+  return { seg: inicio, dom: fim };
 }
 
 async function carregar() {
@@ -267,9 +264,14 @@ function render() {
   document.getElementById('grid').innerHTML = html;
 }
 
-// ── FILA (semana vigente) ────────────────────────────
+// ── FILA (próximos 7 dias) ────────────────────────────
 function renderFila() {
   const { seg, dom } = semanaVigente();
+  // atualiza label com intervalo de datas
+  const opts = {day:'2-digit', month:'short'};
+  const label = seg.toLocaleDateString('pt-BR', opts) + ' – ' + dom.toLocaleDateString('pt-BR', opts);
+  document.getElementById('fila-titulo').textContent = `Fila — Próximos 7 dias (${label})`;
+
   const fila = posts.filter(p => {
     if (!p.agendado_para) return false;
     const d = new Date(p.agendado_para);
