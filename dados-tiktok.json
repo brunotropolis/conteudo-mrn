@@ -1,305 +1,329 @@
 {
-  "gerado_em": "2026-09-18T19:00:59.187Z",
+  "gerado_em": "2026-09-20T15:00:07.688Z",
   "conta": {
     "username": "manualdorecemnascido",
     "display_name": "Dayane Dos Anjos",
-    "seguidores": 659576,
+    "seguidores": 659541,
     "seguindo": 67,
-    "curtidas_totais": 11845833,
-    "videos_total": 778,
+    "curtidas_totais": 11846940,
+    "videos_total": 779,
     "verificado": false,
-    "link": "https://vm.tiktok.com/ZSqnRsmqF/"
+    "link": "https://vm.tiktok.com/ZSqcpeFPF/"
   },
   "periodo_semanas": 8,
   "resumo": {
-    "n_videos": 28,
-    "views_total": 290010,
-    "likes_total": 7758,
-    "comments_total": 59,
-    "shares_total": 824,
-    "eng_total": 8641,
-    "eng_medio": 309
+    "n_videos": 26,
+    "views_total": 314890,
+    "likes_total": 8304,
+    "comments_total": 63,
+    "shares_total": 922,
+    "eng_total": 9289,
+    "eng_medio": 357
   },
   "por_dia": [
     {
+      "data": "2026-09-19",
+      "posts": 1,
+      "views": 4603,
+      "engajamento": 162
+    },
+    {
       "data": "2026-09-17",
       "posts": 1,
-      "views": 2633,
-      "engajamento": 144
+      "views": 3265,
+      "engajamento": 159
     },
     {
       "data": "2026-09-16",
       "posts": 1,
-      "views": 1743,
-      "engajamento": 96
+      "views": 1897,
+      "engajamento": 104
     },
     {
       "data": "2026-09-12",
       "posts": 1,
-      "views": 3988,
-      "engajamento": 148
+      "views": 4205,
+      "engajamento": 158
     },
     {
       "data": "2026-09-09",
       "posts": 1,
-      "views": 11831,
-      "engajamento": 385
+      "views": 13763,
+      "engajamento": 423
     },
     {
       "data": "2026-09-08",
       "posts": 1,
-      "views": 4332,
-      "engajamento": 231
+      "views": 4457,
+      "engajamento": 233
     },
     {
       "data": "2026-09-05",
       "posts": 1,
-      "views": 3206,
-      "engajamento": 143
+      "views": 3525,
+      "engajamento": 152
     },
     {
       "data": "2026-09-03",
       "posts": 1,
-      "views": 35921,
-      "engajamento": 488
+      "views": 36863,
+      "engajamento": 498
     },
     {
       "data": "2026-09-02",
       "posts": 1,
-      "views": 753,
+      "views": 772,
       "engajamento": 17
     },
     {
       "data": "2026-09-01",
       "posts": 1,
-      "views": 4118,
-      "engajamento": 190
+      "views": 9424,
+      "engajamento": 294
     },
     {
       "data": "2026-08-29",
       "posts": 1,
-      "views": 3692,
-      "engajamento": 100
+      "views": 3765,
+      "engajamento": 102
     },
     {
       "data": "2026-08-26",
       "posts": 2,
-      "views": 7397,
-      "engajamento": 251
+      "views": 7563,
+      "engajamento": 254
     },
     {
       "data": "2026-08-25",
       "posts": 1,
-      "views": 31404,
-      "engajamento": 768
+      "views": 35237,
+      "engajamento": 843
     },
     {
       "data": "2026-08-22",
       "posts": 1,
-      "views": 3951,
+      "views": 3976,
       "engajamento": 186
     },
     {
       "data": "2026-08-20",
       "posts": 1,
-      "views": 36965,
-      "engajamento": 619
+      "views": 37626,
+      "engajamento": 632
     },
     {
       "data": "2026-08-14",
       "posts": 1,
-      "views": 2640,
+      "views": 2656,
       "engajamento": 102
     },
     {
       "data": "2026-08-12",
       "posts": 1,
-      "views": 34324,
-      "engajamento": 824
+      "views": 34769,
+      "engajamento": 834
     },
     {
       "data": "2026-08-11",
       "posts": 1,
-      "views": 2383,
+      "views": 2396,
       "engajamento": 136
     },
     {
       "data": "2026-08-05",
       "posts": 1,
-      "views": 33532,
-      "engajamento": 1125
+      "views": 34013,
+      "engajamento": 1138
     },
     {
       "data": "2026-08-04",
       "posts": 1,
-      "views": 14596,
-      "engajamento": 714
+      "views": 15272,
+      "engajamento": 742
     },
     {
       "data": "2026-08-01",
       "posts": 1,
-      "views": 4562,
+      "views": 4574,
       "engajamento": 176
     },
     {
       "data": "2026-07-31",
       "posts": 1,
-      "views": 12670,
-      "engajamento": 610
+      "views": 13289,
+      "engajamento": 636
     },
     {
       "data": "2026-07-30",
       "posts": 1,
-      "views": 5841,
+      "views": 5861,
       "engajamento": 95
     },
     {
       "data": "2026-07-29",
       "posts": 1,
-      "views": 3782,
-      "engajamento": 189
+      "views": 3810,
+      "engajamento": 190
     },
     {
       "data": "2026-07-28",
       "posts": 1,
-      "views": 23746,
-      "engajamento": 904
-    },
-    {
-      "data": "2026-07-25",
-      "posts": 3,
-      "views": 0,
-      "engajamento": 0
+      "views": 27309,
+      "engajamento": 1023
     }
   ],
   "videos": [
     {
       "id": "7676067013508353301",
       "titulo": "Existem alguns fatores importantes que podem afetar diretamente o sono do bebê, muitos deles pode estar passando despercebido, eles são: 1- ",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oQvSAEkC21VmEgio3XEiyv6BCYAZQIeGe9cEAB~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=72fc9951&x-expires=1789844400&x-signature=LFLwx2oxOdhEhpRsW7XP%2BSUi86c%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oQvSAEkC21VmEgio3XEiyv6BCYAZQIeGe9cEAB~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=ac197cdb&x-expires=1790002800&x-signature=ky9Gd%2FHYPBNtMeWnjkKDO%2Ftxbnc%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7676067013508353301?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-08-20T11:00:23.000Z",
-      "views": 36965,
-      "curtidas": 503,
+      "views": 37626,
+      "curtidas": 512,
       "comentarios": 2,
-      "compartilhamentos": 114,
-      "engajamento": 619
+      "compartilhamentos": 118,
+      "engajamento": 632
     },
     {
       "id": "7681262224744205589",
       "titulo": "1- Irritações sem motivos aparentes O bebê está bem, as vezes brincando… e de repente chora. Na maioria das vezes não é manha, é cansaço acu",
-      "thumb": "https://p19-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/o0VqCZEAEL0FTCUERgWEmHYA9N1fDBAyvftIHU~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=e0becdf9&x-expires=1789844400&x-signature=4ReSwjdRsbu9gwJBW52SQSDOh04%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "thumb": "https://p19-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/o0VqCZEAEL0FTCUERgWEmHYA9N1fDBAyvftIHU~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=83afe0c2&x-expires=1790002800&x-signature=%2FKXQ%2BzkhkXAnIPxfEmpJLd9XSLM%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7681262224744205589?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-09-03T11:00:23.000Z",
-      "views": 35921,
-      "curtidas": 449,
+      "views": 36863,
+      "curtidas": 459,
       "comentarios": 10,
       "compartilhamentos": 29,
-      "engajamento": 488
-    },
-    {
-      "id": "7673144845992676628",
-      "titulo": "Fraldinha de bebê algodão Fraldinha para recém nascido Fraldinha de algodão bebê Charutinho bebê Flanela de bebê Cueiro para recém-nascido C",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/okwUpjxRASAoA7x7AIFsffwD6fFvaHHEGfJD4Q~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=5397615e&x-expires=1789844400&x-signature=P08oYD%2Bts7o3EDj7eBWiRwZhcrY%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
-      "link": "https://www.tiktok.com/@manualdorecemnascido/video/7673144845992676628?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
-      "publicado_em": "2026-08-12T14:00:23.000Z",
-      "views": 34324,
-      "curtidas": 731,
-      "comentarios": 6,
-      "compartilhamentos": 87,
-      "engajamento": 824
-    },
-    {
-      "id": "7670546942795025665",
-      "titulo": "Almofada de amamentação para bebês Amamentação mães Almofada para mães amamentarem Almofada apoio para bebê Enxoval do bebê Amamentação #Alm",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/og4vvDFc3IDT64AEH2AgfQEbqmQq9G8BcAf0gC~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=6e3af3db&x-expires=1789844400&x-signature=tVvRx%2FNiupQH%2FJryhFTzjNiIhUo%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&s=TIKTOK_FOR_DEVELOPER&sc=cover&biz_tag=tt_video",
-      "link": "https://www.tiktok.com/@manualdorecemnascido/video/7670546942795025665?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
-      "publicado_em": "2026-08-05T14:00:23.000Z",
-      "views": 33532,
-      "curtidas": 1028,
-      "comentarios": 5,
-      "compartilhamentos": 92,
-      "engajamento": 1125
+      "engajamento": 498
     },
     {
       "id": "7677922451417845012",
       "titulo": "Deixe seu bebê mais confortável na hora do banho 😍",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oQEANarXpB1A0wfu9NICCiiA1dBkRoApVvTycK~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=35c074fa&x-expires=1789844400&x-signature=sv42wsWzbILT%2BKlwX%2B2g2gVOuCk%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "thumb": "https://p19-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oQEANarXpB1A0wfu9NICCiiA1dBkRoApVvTycK~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=6e022ed7&x-expires=1790002800&x-signature=GUAa2mTfAtsmtIlV335HsZJlq9s%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7677922451417845012?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-08-25T11:00:23.000Z",
-      "views": 31404,
-      "curtidas": 696,
+      "views": 35237,
+      "curtidas": 761,
       "comentarios": 3,
-      "compartilhamentos": 69,
-      "engajamento": 768
+      "compartilhamentos": 79,
+      "engajamento": 843
+    },
+    {
+      "id": "7673144845992676628",
+      "titulo": "Fraldinha de bebê algodão Fraldinha para recém nascido Fraldinha de algodão bebê Charutinho bebê Flanela de bebê Cueiro para recém-nascido C",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/okwUpjxRASAoA7x7AIFsffwD6fFvaHHEGfJD4Q~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=c07237ae&x-expires=1790002800&x-signature=P4RzNYPNB%2FbpVleukE5MCuvoUdA%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "link": "https://www.tiktok.com/@manualdorecemnascido/video/7673144845992676628?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
+      "publicado_em": "2026-08-12T14:00:23.000Z",
+      "views": 34769,
+      "curtidas": 738,
+      "comentarios": 6,
+      "compartilhamentos": 90,
+      "engajamento": 834
+    },
+    {
+      "id": "7670546942795025665",
+      "titulo": "Almofada de amamentação para bebês Amamentação mães Almofada para mães amamentarem Almofada apoio para bebê Enxoval do bebê Amamentação #Alm",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/og4vvDFc3IDT64AEH2AgfQEbqmQq9G8BcAf0gC~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=6396dc0f&x-expires=1790002800&x-signature=rXEq7sI0r18%2BLccSnf13LKj7OTU%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "link": "https://www.tiktok.com/@manualdorecemnascido/video/7670546942795025665?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
+      "publicado_em": "2026-08-05T14:00:23.000Z",
+      "views": 34013,
+      "curtidas": 1039,
+      "comentarios": 6,
+      "compartilhamentos": 93,
+      "engajamento": 1138
     },
     {
       "id": "7667532356147891474",
       "titulo": "Se seu bebê acorda sempre que vai arrotar, eu tenho uma dica que vai te ajudar muito!!! 😍 Já compartilha com uma mamãe ❤️",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oUDMffMYXAwtoFRPA2NelVKfOxfIQIA8ApiJgQ~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=88d9ddad&x-expires=1789844400&x-signature=hTSnHQ923SENG7g66lPwjs6owLE%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oUDMffMYXAwtoFRPA2NelVKfOxfIQIA8ApiJgQ~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=f9188195&x-expires=1790002800&x-signature=jI5ELQrARTg4lIBCerfmQeITICg%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&sc=cover&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7667532356147891474?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-07-28T11:01:07.000Z",
-      "views": 23746,
-      "curtidas": 746,
+      "views": 27309,
+      "curtidas": 838,
       "comentarios": 6,
-      "compartilhamentos": 152,
-      "engajamento": 904
+      "compartilhamentos": 179,
+      "engajamento": 1023
     },
     {
       "id": "7670129667256405266",
       "titulo": "Como evitar a braquicefalia em bebês ⚠️",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oQD9DEgmIYqAwGvJQCjAMpFAScSfjBfc7tETZK~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=679508c6&x-expires=1789844400&x-signature=9UzwRbkWIJCtAo0aAmKHymsoTKc%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oQD9DEgmIYqAwGvJQCjAMpFAScSfjBfc7tETZK~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=be009168&x-expires=1790002800&x-signature=7%2F%2FDl77c%2BLImh%2BaiF4ClEmWa%2FTM%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7670129667256405266?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-08-04T11:00:23.000Z",
-      "views": 14596,
-      "curtidas": 624,
-      "comentarios": 0,
-      "compartilhamentos": 90,
-      "engajamento": 714
-    },
-    {
-      "id": "7668650814206004498",
-      "titulo": "Autonomia de sono",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/owfzgk6QNCBi8L9EAInA3AEUNIAgH1csBvesiB~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=3467baef&x-expires=1789844400&x-signature=2yphFO694gkqTM7tkRRzOj8kbXM%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
-      "link": "https://www.tiktok.com/@manualdorecemnascido/video/7668650814206004498?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
-      "publicado_em": "2026-07-31T11:01:06.000Z",
-      "views": 12670,
-      "curtidas": 590,
-      "comentarios": 6,
-      "compartilhamentos": 14,
-      "engajamento": 610
+      "views": 15272,
+      "curtidas": 644,
+      "comentarios": 1,
+      "compartilhamentos": 97,
+      "engajamento": 742
     },
     {
       "id": "7683536580568468743",
       "titulo": "Postei no meu grupo de Ofertas Maternas, no whats!! Entre pelo link da Bio!! 🤗 #cuidadoscomobebê #recemnascido #maedeprimeiraviagem #matern",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oYICQABA9zioERDqOFFmf2f22Z5v6EAgcSWPCh~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=ca5ee981&x-expires=1789844400&x-signature=fGkPYCaIuxZ5XAe4KMPSsj57mts%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oYICQABA9zioERDqOFFmf2f22Z5v6EAgcSWPCh~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=e3a3a0f1&x-expires=1790002800&x-signature=GbReYtuPcq9ecJgLcyYHzbHYtek%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&s=TIKTOK_FOR_DEVELOPER&sc=cover&biz_tag=tt_video",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7683536580568468743?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-09-09T14:00:23.000Z",
-      "views": 11831,
-      "curtidas": 360,
+      "views": 13763,
+      "curtidas": 389,
       "comentarios": 3,
-      "compartilhamentos": 22,
-      "engajamento": 385
+      "compartilhamentos": 31,
+      "engajamento": 423
+    },
+    {
+      "id": "7668650814206004498",
+      "titulo": "Autonomia de sono",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/owfzgk6QNCBi8L9EAInA3AEUNIAgH1csBvesiB~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=576c6d79&x-expires=1790002800&x-signature=O382L6KYrAdhl%2BrFwOT2Lk93ESA%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "link": "https://www.tiktok.com/@manualdorecemnascido/video/7668650814206004498?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
+      "publicado_em": "2026-07-31T11:01:06.000Z",
+      "views": 13289,
+      "curtidas": 616,
+      "comentarios": 6,
+      "compartilhamentos": 14,
+      "engajamento": 636
+    },
+    {
+      "id": "7680520056391912724",
+      "titulo": "Você sabia que seu bebê não pode ser amamentado de barriguinha para cima? Dessa forma, ele tensiona a cervical, podendo até criar uma torcic",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/ocEWIeglfEEipBCnAD9qIECisEBUFvAyUrAIGg~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=abaabe0e&x-expires=1790002800&x-signature=yOndnV0MD132Js000%2FNQNKTwNnI%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "link": "https://www.tiktok.com/@manualdorecemnascido/video/7680520056391912724?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
+      "publicado_em": "2026-09-01T11:00:24.000Z",
+      "views": 9424,
+      "curtidas": 249,
+      "comentarios": 2,
+      "compartilhamentos": 43,
+      "engajamento": 294
     },
     {
       "id": "7668274205347106049",
       "titulo": "Durante a gestação é muito comum olhar para o formato do bico e pensar “será que vou conseguir amamentar?”, mas a verdade é que isso não def",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oAC3ELONMiBA1vZAE1iB2sfGIAuFgdoaBUrlVe~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=cbd95dcc&x-expires=1789844400&x-signature=NAP0arzyvce0HCWzXqo%2F8m7Lzpc%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oAC3ELONMiBA1vZAE1iB2sfGIAuFgdoaBUrlVe~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=6b589ceb&x-expires=1790002800&x-signature=30TALk1QxjE4PBmsmF6wVetLqaI%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&s=TIKTOK_FOR_DEVELOPER&sc=cover&biz_tag=tt_video",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7668274205347106049?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-07-30T11:00:23.000Z",
-      "views": 5841,
+      "views": 5861,
       "curtidas": 94,
       "comentarios": 1,
       "compartilhamentos": 0,
       "engajamento": 95
     },
     {
+      "id": "7687247548410645780",
+      "titulo": "Ninho redutor Sono do bebê Ninho redutor para amarrar Berço do bebê Ninho confortável e seguro Ninho ajustável para recém nascido Redutor de",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oAv2i4EgpZEFjEplCj92yrfAAVDRBCAIyAXqfu~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=e2ce21f1&x-expires=1790002800&x-signature=Y%2FCxjHqEz6q1TsE2tshebpPKlUg%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "link": "https://www.tiktok.com/@manualdorecemnascido/video/7687247548410645780?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
+      "publicado_em": "2026-09-19T14:00:21.000Z",
+      "views": 4603,
+      "curtidas": 147,
+      "comentarios": 2,
+      "compartilhamentos": 13,
+      "engajamento": 162
+    },
+    {
       "id": "7669063441222536455",
       "titulo": "Coletor de leite materno Coletor de silicone para amamentação Extração confortável Coletor portátil para mães Coletor prático para amamentaç",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/ocbEqFJ7wDUD23fv9AAmSpfGIfN2oYGE5ZQAfA~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=f26cd7cb&x-expires=1789844400&x-signature=656UeSQZL2C9J53%2BR9WGdmkFsl8%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/ocbEqFJ7wDUD23fv9AAmSpfGIfN2oYGE5ZQAfA~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=ee2f4b60&x-expires=1790002800&x-signature=3HHtCqRicR9WnC6mSokR55BUhOQ%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7669063441222536455?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-08-01T14:00:22.000Z",
-      "views": 4562,
+      "views": 4574,
       "curtidas": 172,
       "comentarios": 1,
       "compartilhamentos": 3,
@@ -308,58 +332,46 @@
     {
       "id": "7683117655099821332",
       "titulo": "Seu bebê fica se espremendo, tentando evacuar e não consegue? Pode ser disquesia ⚠️",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/osIfQAGA768PSgDViFEZfssOQrkfIEAAwFesJP~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=ab4b350c&x-expires=1789844400&x-signature=SKAvpYOLkkuvhYGcxPIuTMiYUmA%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/osIfQAGA768PSgDViFEZfssOQrkfIEAAwFesJP~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=ca21edf2&x-expires=1790002800&x-signature=8s3XYXsfX8KewJDUeKm2qy8hiLc%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&s=TIKTOK_FOR_DEVELOPER&sc=cover&biz_tag=tt_video",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7683117655099821332?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-09-08T11:00:24.000Z",
-      "views": 4332,
-      "curtidas": 216,
+      "views": 4457,
+      "curtidas": 217,
       "comentarios": 1,
-      "compartilhamentos": 14,
-      "engajamento": 231
+      "compartilhamentos": 15,
+      "engajamento": 233
     },
     {
       "id": "7678339926299249927",
       "titulo": "Ninho redutor Sono do bebê Berço do bebê Ninho confortável e seguro Ninho ajustável para recém nascido Redutor de berço macio #NinhoDeBebê #",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oECEgI80AlL7Mf1y2Le2eqGSqAOAeIfBXAw1AO~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=bfdc5896&x-expires=1789844400&x-signature=V0sJIQ%2FAEsWpwoLqCtviLYDQWo8%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oECEgI80AlL7Mf1y2Le2eqGSqAOAeIfBXAw1AO~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=cbfa0088&x-expires=1790002800&x-signature=atVfrdxAbgHp39QIbQQDfhYsMjU%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7678339926299249927?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-08-26T14:00:23.000Z",
-      "views": 4330,
+      "views": 4371,
       "curtidas": 167,
       "comentarios": 1,
       "compartilhamentos": 7,
       "engajamento": 175
     },
     {
-      "id": "7680520056391912724",
-      "titulo": "Você sabia que seu bebê não pode ser amamentado de barriguinha para cima? Dessa forma, ele tensiona a cervical, podendo até criar uma torcic",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/ocEWIeglfEEipBCnAD9qIECisEBUFvAyUrAIGg~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=c00ef701&x-expires=1789844400&x-signature=MOLzB3qjOXrcgygv8o1m1StyYX8%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
-      "link": "https://www.tiktok.com/@manualdorecemnascido/video/7680520056391912724?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
-      "publicado_em": "2026-09-01T11:00:24.000Z",
-      "views": 4118,
-      "curtidas": 158,
-      "comentarios": 2,
-      "compartilhamentos": 30,
-      "engajamento": 190
-    },
-    {
       "id": "7684648365673532693",
       "titulo": "Ruído branco Máquina de ruído branco Sons calmantes para bebê Aparelho de luz noturna Máquina de som Aparelho de som de ruído branco Ruído b",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/og1UC4PWIAqMCX8vEeAlhBEwAeivqcvZ0gmB1i~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=f03514a5&x-expires=1789844400&x-signature=8qN5ifctiZJmFVqd0vQYllEKA3o%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&s=TIKTOK_FOR_DEVELOPER&sc=cover&biz_tag=tt_video",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/og1UC4PWIAqMCX8vEeAlhBEwAeivqcvZ0gmB1i~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=bc14527c&x-expires=1790002800&x-signature=APQEKcnFl1xXji6dK1Mes9tMi3Q%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7684648365673532693?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-09-12T14:00:23.000Z",
-      "views": 3988,
-      "curtidas": 138,
+      "views": 4205,
+      "curtidas": 145,
       "comentarios": 1,
-      "compartilhamentos": 9,
-      "engajamento": 148
+      "compartilhamentos": 12,
+      "engajamento": 158
     },
     {
       "id": "7676855814954536193",
       "titulo": "Ruído branco Máquina de ruído branco Sons calmantes para bebê Aparelho de luz noturna Máquina de som Aparelho de som de ruído branco Ruído b",
-      "thumb": "https://p19-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oEVM1LJfIQEIAgE41TebwAvS7AffVGkWGALuK4~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=9e90641c&x-expires=1789844400&x-signature=oF%2FNbv7cABSC%2B4WoFa8lLCPJkYQ%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oEVM1LJfIQEIAgE41TebwAvS7AffVGkWGALuK4~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=ef88c3a1&x-expires=1790002800&x-signature=q57lSg%2FDiu%2BIP2%2F6jr8xM1vAdCQ%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7676855814954536193?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-08-22T14:00:23.000Z",
-      "views": 3951,
+      "views": 3976,
       "curtidas": 175,
       "comentarios": 1,
       "compartilhamentos": 10,
@@ -368,82 +380,82 @@
     {
       "id": "7667949723071941896",
       "titulo": "Segurança no sono infantil Saco de dormir Melhor saco de dormir Proteção para o sono do bebê Soneca segura Conforto e segurança para sono do",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oQDIwQDjAS7sGexT7LeXAUGJcA1f2IfCvAv3AU~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=2a84594a&x-expires=1789844400&x-signature=OzuY34PygdHUJc4Ck%2FB9hk3hKKI%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oQDIwQDjAS7sGexT7LeXAUGJcA1f2IfCvAv3AU~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=e00fbae4&x-expires=1790002800&x-signature=S5AElu%2Fy88kQH0IzEk324%2F6klEo%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7667949723071941896?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-07-29T14:00:23.000Z",
-      "views": 3782,
-      "curtidas": 175,
+      "views": 3810,
+      "curtidas": 176,
       "comentarios": 2,
       "compartilhamentos": 12,
-      "engajamento": 189
+      "engajamento": 190
     },
     {
       "id": "7679457045132659989",
       "titulo": "Lixador de unhas elétrico para bebê Kit de unhas para bebê Lixa segura para recém-nascido Cuidados com o bebê Lixa elétrica infantil Aparado",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/ooX1CSUAi9XiTC6EJgAES3rAeSExBBAwvfuIIc~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=637d0e42&x-expires=1789844400&x-signature=ZPU0HnGxL%2FOhksUdtdskpxinbI0%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/ooX1CSUAi9XiTC6EJgAES3rAeSExBBAwvfuIIc~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=9dae7626&x-expires=1790002800&x-signature=nu1emKQFAxBmzLZLE0bXYUIe3JE%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7679457045132659989?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-08-29T14:15:20.000Z",
-      "views": 3692,
-      "curtidas": 87,
+      "views": 3765,
+      "curtidas": 89,
       "comentarios": 0,
       "compartilhamentos": 13,
-      "engajamento": 100
+      "engajamento": 102
     },
     {
       "id": "7682050779368131847",
       "titulo": "Postei no meu grupo de Ofertas Maternas, no whats!! Entre pelo link da Bio!! 🤗 #trocadefraldas #fraldas #cuidadoscomobebê #higienedobebê #r",
-      "thumb": "https://p19-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oocmgnDAAIqAFCpBlUfC912hHe9ZICvXEEBktE~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=07395e03&x-expires=1789844400&x-signature=WWsh191lMNXmZoJtFapZbqI4aO8%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oocmgnDAAIqAFCpBlUfC912hHe9ZICvXEEBktE~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=d46998dc&x-expires=1790002800&x-signature=egyogH0lL30UIj7fvDikdaRXi3A%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7682050779368131847?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-09-05T14:00:22.000Z",
-      "views": 3206,
-      "curtidas": 136,
+      "views": 3525,
+      "curtidas": 144,
       "comentarios": 2,
-      "compartilhamentos": 5,
-      "engajamento": 143
+      "compartilhamentos": 6,
+      "engajamento": 152
+    },
+    {
+      "id": "7686457412999499029",
+      "titulo": "Compartilha essa informação importante com uma mamãe 😍❤️ #recemnascido #newborn #gestacao #maedeprimeiraviagem #amamentação #pega #leitemat",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oQ5OwLGe7fGZUQAXDXIIRCJSkAPAJuAQVVemeF~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=8eadfea2&x-expires=1790002800&x-signature=jydnT0mJp4Tr1GxKCcjTMjDcotY%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&sc=cover&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER",
+      "link": "https://www.tiktok.com/@manualdorecemnascido/video/7686457412999499029?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
+      "publicado_em": "2026-09-17T11:00:24.000Z",
+      "views": 3265,
+      "curtidas": 146,
+      "comentarios": 1,
+      "compartilhamentos": 12,
+      "engajamento": 159
     },
     {
       "id": "7678339879079644432",
       "titulo": "Ninho redutor Sono do bebê Berço do bebê Ninho confortável e seguro Ninho ajustável para recém nascido Redutor de berço macio #NinhoDeBebê #",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/osIdQAMA244Ol2GqJLEfehcfgLMftIAAIheuVG~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=51fc04ff&x-expires=1789844400&x-signature=%2FD3BTVsrzxCHbitHkfGC6Pucotk%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&sc=cover&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/osIdQAMA244Ol2GqJLEfehcfgLMftIAAIheuVG~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=9def6370&x-expires=1790002800&x-signature=pfPpb3pusLa6kA6Zi2wVKrV%2B31k%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7678339879079644432?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-08-26T14:00:22.000Z",
-      "views": 3067,
-      "curtidas": 69,
+      "views": 3192,
+      "curtidas": 72,
       "comentarios": 0,
       "compartilhamentos": 7,
-      "engajamento": 76
+      "engajamento": 79
     },
     {
       "id": "7673874763265199368",
       "titulo": "A poltrona de amamentação é o item de enxoval mais usado pela mãe e bebê!! A Damie faz do seu jeitinho, personalizada, perfeita para você!! ",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oQSGAGdf37UQfK1AoDDxIIt2kfF7ERFAABufao~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=5e8df1cc&x-expires=1789844400&x-signature=eJHpC09sWmw%2B%2BKG6%2FeiX%2FEIvu2Y%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&sc=cover&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oQSGAGdf37UQfK1AoDDxIIt2kfF7ERFAABufao~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=2923b2df&x-expires=1790002800&x-signature=6I%2BS6Ooq6gWdovp5FTDkzyKPur4%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7673874763265199368?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-08-14T13:13:17.000Z",
-      "views": 2640,
+      "views": 2656,
       "curtidas": 99,
       "comentarios": 0,
       "compartilhamentos": 3,
       "engajamento": 102
     },
     {
-      "id": "7686457412999499029",
-      "titulo": "Compartilha essa informação importante com uma mamãe 😍❤️ #recemnascido #newborn #gestacao #maedeprimeiraviagem #amamentação #pega #leitemat",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/oQ5OwLGe7fGZUQAXDXIIRCJSkAPAJuAQVVemeF~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=868fa3d6&x-expires=1789844400&x-signature=eyotp455aY6wJ4MEz%2BsDImcO%2ByI%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
-      "link": "https://www.tiktok.com/@manualdorecemnascido/video/7686457412999499029?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
-      "publicado_em": "2026-09-17T11:00:24.000Z",
-      "views": 2633,
-      "curtidas": 135,
-      "comentarios": 1,
-      "compartilhamentos": 8,
-      "engajamento": 144
-    },
-    {
       "id": "7672727265997835528",
       "titulo": "Se o bebê estiver dormindo sem supervisão, usar cobertor se torna arriscado ⚠️",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/ocJMSAYe5FBATfwAEUEDyMf5IAh0ADHeGA7Ir7~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=b634035f&x-expires=1789844400&x-signature=c26UEBX9Fd%2F3Pa5Dtgbmb8tEa5Q%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/ocJMSAYe5FBATfwAEUEDyMf5IAh0ADHeGA7Ir7~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=60f11b01&x-expires=1790002800&x-signature=ny7JWfAMPXSr7p0TQGWsb9xNJcU%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7672727265997835528?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-08-11T11:00:24.000Z",
-      "views": 2383,
+      "views": 2396,
       "curtidas": 110,
       "comentarios": 2,
       "compartilhamentos": 24,
@@ -452,62 +464,26 @@
     {
       "id": "7686132704995216660",
       "titulo": "Babá eletrônica Segurança do bebê Bebê dormindo seguro Sono do recém nascido Babá eletrônica para bebê Enxoval do bebê Cuidados com o bebê #",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/ogeC6B7uE9AInAP1BVciiBcVECkf5AdqRgBovg~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=f85de3de&x-expires=1789844400&x-signature=1Tht%2FJs6wGAZ%2Bpk77mdHoXCiwF0%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/ogeC6B7uE9AInAP1BVciiBcVECkf5AdqRgBovg~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=0f9e96f1&x-expires=1790002800&x-signature=oAYKLYbAKVKCdIDmakSbQfvI6go%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7686132704995216660?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-09-16T14:00:23.000Z",
-      "views": 1743,
-      "curtidas": 83,
+      "views": 1897,
+      "curtidas": 89,
       "comentarios": 3,
-      "compartilhamentos": 10,
-      "engajamento": 96
+      "compartilhamentos": 12,
+      "engajamento": 104
     },
     {
       "id": "7680937504219958529",
       "titulo": "Postei no meu grupo de Ofertas Maternas, no whats!! Entre pelo link da Bio!! 🤗 Brinquedo de banho para bebês, fácil de limpar!! #banhodobeb",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/osMfQAIGqVr7Dq1LIAAK2lQsfMageYfAZ2geJv~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=fd40f4db&x-expires=1789844400&x-signature=ozaaJ3vj88NdRiMc1bA45dE3KzA%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
+      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-v-89e0aa-sg/osMfQAIGqVr7Dq1LIAAK2lQsfMageYfAZ2geJv~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=095ba502&x-expires=1790002800&x-signature=IsSyevF26EhiC2cVEpdIlSaX7U4%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
       "link": "https://www.tiktok.com/@manualdorecemnascido/video/7680937504219958529?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
       "publicado_em": "2026-09-02T14:00:23.000Z",
-      "views": 753,
+      "views": 772,
       "curtidas": 17,
       "comentarios": 0,
       "compartilhamentos": 0,
       "engajamento": 17
-    },
-    {
-      "id": "7666544789134888213",
-      "titulo": "Faça o Quiz e descubra como fazer seu bebê dormir sozinho, sem choro e sem técnicas mirabolantes!",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0051c001-sg/ogO4UgyYEQAIAitFbmBDzlviVB11BZaBElKEA~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=4e9b70c2&x-expires=1789844400&x-signature=FSTpv1wpte%2Fy7extcpjVnmQXVH8%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
-      "link": "https://www.tiktok.com/@manualdorecemnascido/video/7666544789134888213?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
-      "publicado_em": "2026-07-25T19:09:28.000Z",
-      "views": 0,
-      "curtidas": 0,
-      "comentarios": 0,
-      "compartilhamentos": 0,
-      "engajamento": 0
-    },
-    {
-      "id": "7666544801193430279",
-      "titulo": "Faça o Quiz e descubra como fazer seu bebê dormir sozinho, sem choro e sem técnicas mirabolantes!",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0051c001-sg/oAdWFBzmYXA5FJAUAtlVEI9yGZvBaBiQtzBia~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=ce101bd0&x-expires=1789844400&x-signature=98A0a3V9V19ZSYo5oYl6V0sGlKE%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&s=TIKTOK_FOR_DEVELOPER&sc=cover&biz_tag=tt_video",
-      "link": "https://www.tiktok.com/@manualdorecemnascido/video/7666544801193430279?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
-      "publicado_em": "2026-07-25T19:09:27.000Z",
-      "views": 0,
-      "curtidas": 0,
-      "comentarios": 0,
-      "compartilhamentos": 0,
-      "engajamento": 0
-    },
-    {
-      "id": "7666544789134871829",
-      "titulo": "Faça o Quiz e descubra como fazer seu bebê dormir sozinho, sem choro e sem técnicas mirabolantes!",
-      "thumb": "https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0051c001-sg/oAC7ABNyLX9fXGgDQUQMMQ88geZWAoVzDolNeb~tplv-tiktokx-cropcenter-q:300:400:q70.webp?dr=14782&refresh_token=ee16571f&x-expires=1789844400&x-signature=cafdRM3Nu5%2BdpaSyMA6%2BcLQNS1A%3D&t=bacd0480&ps=933b5bde&shp=d05b14bd&shcp=8aecc5ac&idc=my2&biz_tag=tt_video&s=TIKTOK_FOR_DEVELOPER&sc=cover",
-      "link": "https://www.tiktok.com/@manualdorecemnascido/video/7666544789134871829?utm_campaign=tt4d_open_api&utm_source=sbaw34le3dcezeoj5i",
-      "publicado_em": "2026-07-25T19:09:27.000Z",
-      "views": 0,
-      "curtidas": 0,
-      "comentarios": 0,
-      "compartilhamentos": 0,
-      "engajamento": 0
     }
   ]
 }
