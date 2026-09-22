@@ -83,7 +83,7 @@
   aside.innerHTML=''
    +'<div class="brand"><div class="lg"><img src="favicon.svg" alt=""></div><div><b>Motor de Conteúdo</b><small>Manual do Recém-Nascido</small></div></div>'
    +'<nav>'+nav+'</nav>'
-   +'<div class="ft">⏸️ Modo seguro ligado, nada posta sozinho ainda.</div>';
+   +'<div class="ft">▶️ Publicação automática ligada: agendados saem sozinhos no horário.</div>';
 
   var top=document.createElement('div'); top.className='sbtop';
   top.innerHTML='<button class="hb" aria-label="Menu">'+svg('burger')+'</button><b>'+(active||'Motor de Conteúdo')+'</b>';
