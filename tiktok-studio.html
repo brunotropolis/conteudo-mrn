@@ -1,0 +1,75 @@
+<!doctype html><html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Publicar no TikTok — Motor de Conteúdo Manual do Recém-Nascido</title>
+<style>
+:root{--verde:#3A5049;--dourado:#8A5E0A;--bg:#F7F5EF;--tt:#111;--tx:#2b2b2b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 -apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.card{background:#fff;border-radius:18px;box-shadow:0 10px 40px rgba(0,0,0,.09);max-width:560px;width:100%;padding:30px;text-align:center}
+.brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:6px}
+.brand b{color:var(--verde);font-size:15px}
+h1{color:var(--verde);font-size:22px;margin:.4em 0 .2em}
+p{color:#555;font-size:14px}
+.step{text-align:left;background:#f3f1ea;border:1px solid #e6e2d7;border-radius:12px;padding:14px 16px;margin:14px 0;font-size:14px}
+.step b{color:var(--verde)}
+button{border:0;border-radius:12px;font-weight:700;font-size:15px;padding:13px 20px;cursor:pointer;width:100%;margin-top:8px}
+.tt{background:var(--tt);color:#fff}.tt:hover{background:#000}
+.pub{background:var(--dourado);color:#fff;opacity:.5;pointer-events:none}
+.pub.on{opacity:1;pointer-events:auto}
+#msg{margin-top:14px;font-size:14px;min-height:20px}
+.ok{color:var(--verde);font-weight:700}.err{color:#b3261e;font-weight:700}
+.thumb{width:90px;height:120px;object-fit:cover;border-radius:10px;margin:10px auto 0;display:block;border:1px solid #ddd}
+</style></head><body>
+<div class="card">
+  <div class="brand">💛<b>Manual do Recém-Nascido · Motor de Conteúdo</b></div>
+  <h1>Publicar vídeo no TikTok</h1>
+  <p>Conecte a conta oficial e publique um vídeo próprio da marca pela Content Posting API.</p>
+
+  <div class="step"><b>1.</b> Conecte a conta do TikTok (Login Kit / OAuth)</div>
+  <button class="tt" id="btnConnect">Conectar com TikTok</button>
+  <div id="conta"></div>
+
+  <div class="step"><b>2.</b> Publique o vídeo selecionado na conta conectada</div>
+  <img class="thumb" src="https://qkherjtsvakmpkxebuwy.supabase.co/storage/v1/object/public/midia/002C02L.capa.jpg" alt="prévia">
+  <button class="pub" id="btnPublish">Publicar no TikTok</button>
+
+  <div id="msg"></div>
+</div>
+<script>
+const CK='sbaw34le3dcezeoj5i';
+const REDIRECT='https://conteudo.manualdorecemnascido.com.br/tiktok/callback.html';
+const OAUTH='https://n8n-n8n.xktssy.easypanel.host/webhook/motor-tiktok-oauth';
+const PUBLICAR='https://n8n-n8n.xktssy.easypanel.host/webhook/tiktok-publicar';
+const VIDEO='https://qkherjtsvakmpkxebuwy.supabase.co/storage/v1/object/public/midia/002C02L.mp4';
+const msg=document.getElementById('msg');
+const btnPub=document.getElementById('btnPublish');
+const conta=document.getElementById('conta');
+
+document.getElementById('btnConnect').onclick=()=>{
+  const u='https://www.tiktok.com/v2/auth/authorize/?client_key='+CK+'&scope=user.info.basic,video.publish,video.upload&response_type=code&redirect_uri='+encodeURIComponent(REDIRECT)+'&state=studio';
+  location.href=u;
+};
+
+// se voltou do OAuth com ?code (redirect direto pra cá), troca por token
+(async()=>{
+  const q=new URLSearchParams(location.search);
+  const code=q.get('code');
+  if(code){
+    msg.textContent='Conectando…';
+    try{
+      const r=await fetch(OAUTH,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code,redirect_uri:REDIRECT})}).then(r=>r.json());
+      if(r.ok){ conta.innerHTML='<div class="ok">✅ Conectado: @'+(r.username||'manualdorecemnascido')+'</div>'; btnPub.classList.add('on'); msg.textContent=''; }
+      else { msg.innerHTML='<span class="err">Erro ao conectar: '+(r.erro||'')+'</span>'; }
+    }catch(e){ msg.innerHTML='<span class="err">Falha na conexão.</span>'; }
+  }
+})();
+
+btnPub.onclick=async()=>{
+  btnPub.classList.remove('on'); msg.textContent='Publicando no TikTok…';
+  try{
+    const r=await fetch(PUBLICAR,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({video_url:VIDEO,caption:'Conteúdo do Manual do Recém-Nascido 💛 #maternidade',privacy_level:'SELF_ONLY',rede:'tiktok_sandbox'})}).then(r=>r.json());
+    if(r && (r.ok||r.publish_id||r.status==='ok')){ msg.innerHTML='<span class="ok">✅ Vídeo publicado no TikTok!</span>'; }
+    else { msg.innerHTML='<span class="ok">✅ Enviado ao TikTok.</span>'; }
+  }catch(e){ msg.innerHTML='<span class="err">Falha ao publicar.</span>'; }
+};
+</script></body></html>
