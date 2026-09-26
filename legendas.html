@@ -105,7 +105,7 @@
 <div class="toast" id="toast"></div>
 
 <script>
-const API='https://n8n-n8n.xktssy.easypanel.host/webhook/motor-legendas';
+const API='/api/n8n/motor-legendas';
 const CORES={A:'#B5651D',C:'#4C7A9B',S:'#5B6BB0',G:'#3A8A6E',P:'#C88C10','01':'#5B6BB0','02':'#5B6BB0','03':'#B5651D','04':'#3A8A6E','05':'#C88C10'};
 const corFin=cod=>CORES[cod]||CORES[String(cod).slice(0,2)]||'#7A8F89';
 function inkFor(hex){const h=String(hex||'').replace('#','');if(h.length<6)return '#fff';const c=i=>{const v=parseInt(h.slice(i,i+2),16)/255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4);};const L=.2126*c(0)+.7152*c(2)+.0722*c(4);return L>0.28?'#1c231f':'#fff';}

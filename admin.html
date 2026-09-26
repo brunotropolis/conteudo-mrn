@@ -74,7 +74,7 @@
 <div class="toast" id="toast"></div>
 
 <script>
-const API='https://n8n-n8n.xktssy.easypanel.host/webhook/motor-midia';
+const API='/api/n8n/motor-midia';
 const esc=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1900);}
 async function call(body){ return fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).then(r=>r.json()).catch(()=>({})); }
