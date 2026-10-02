@@ -206,10 +206,6 @@
   <a class="back" href="index.html">← HUB</a>
 </div>
 <div class="wrap">
-  <div class="banner">
-    <span class="bic"><svg viewBox="0 0 24 24"><path d="M8 5h3v14H8zm5 0h3v14h-3z"/></svg></span>
-    <div><b>Publicação automática ligada:</b> post com status <b>agendado</b> vai pro ar sozinho no horário, com a capa e a legenda de cada rede. Pra segurar um post, salve como rascunho.</div>
-  </div>
   <div class="editbar" id="editbar"><span id="editlbl">Editando um agendamento</span><a href="publicador.html" id="canceledit">cancelar edição ✕</a></div>
 
   <div class="cols">
@@ -244,22 +240,18 @@
 
       <label class="f">Legenda</label>
       <textarea id="legenda" placeholder="Escreva a legenda… use *negrito* e emojis 💛"></textarea>
-      <div class="hint">Dica: comece com um gancho forte. "Comente PALAVRA" puxa ativação de ManyChat.</div>
 
       <label class="f">Marcar @ (colaborador)</label>
       <div class="colabbox" id="colabbox">
         <input type="text" id="colabin" placeholder="@perfil e Enter, o post aparece nos dois">
       </div>
-      <div class="hint">O post de collab aparece também no perfil marcado (ele aceita o convite).</div>
 
       <label class="f">Hashtags</label>
       <div class="hgrupos" id="hgrupos"><span class="hgload">carregando grupos…</span></div>
-      <div class="hint">Toque num grupo pra colocar as # no fim da legenda (toque de novo pra tirar). Os grupos ficam no <a href="hashtags.html" style="color:var(--goldink);font-weight:700">Admin → Grupos de hashtags</a>.</div>
 
       <label class="f">Automação</label>
       <div class="autobox">
         <label class="autotoggle"><input type="checkbox" id="autoOn"> <span>Este post ativa automação (comentário com palavra → direct)</span></label>
-        <div class="automark">A chamada (CTA) entra no começo da legenda do Instagram e do Facebook. As palavras que ativam e a mensagem do direct vêm do fluxo escolhido.</div>
         <div id="autoFields">
           <div style="display:none"><div class="colabbox" id="gatbox"><input type="text" id="gatin"></div></div>
           <label class="ff">Fluxo</label>
@@ -272,7 +264,6 @@
 
       <label class="f">Agendar para</label><input type="datetime-local" id="quando">
       <input type="hidden" id="rep" value="">
-      <div class="hint">Sem data = salva como rascunho.</div>
 
       <button class="submit" id="salvar">Agendar post</button>
       <div class="msg" id="msg"></div>
