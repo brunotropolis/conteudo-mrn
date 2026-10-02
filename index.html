@@ -79,6 +79,14 @@
   .empty{text-align:center;color:var(--mute);font-size:13px;padding:26px 12px}
   .empty .nb{display:inline-block;margin-top:10px;background:var(--menu);color:#fff;border-radius:10px;padding:8px 15px;font-weight:700;font-size:12.5px;cursor:pointer}
 
+  :root{--ig:#C13584;--fb:#1877F2;--tt:#111;--yt:#FF0000}
+  .lgd{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:#55655F;font-weight:700;margin-top:10px}
+  .lgd i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+  .nets{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+  .nets span{font-size:10.5px;font-weight:700;color:#B7C9C3;background:rgba(255,255,255,.09);border-radius:999px;padding:2px 8px}
+  .nets span b{color:#fff}
+  .rb{font-size:9.5px;font-weight:800;color:#fff !important;border-radius:999px;padding:1px 7px;letter-spacing:.02em}
+  .rb.ig{background:var(--ig)}.rb.fb{background:var(--fb)}.rb.tt{background:var(--tt)}.rb.yt{background:var(--yt)}
   @media(max-width:980px){.kpis{grid-template-columns:repeat(2,1fr)}.dash2{grid-template-columns:1fr}}
   @media(max-width:520px){.kpis{grid-template-columns:1fr}}
 </style>
@@ -86,7 +94,7 @@
 <body>
 <div class="wrap">
   <div class="pagehdr">
-    <div><h1>Início</h1><p>Visão geral do conteúdo do Manual · <span id="upd" class="up"></span></p></div>
+    <div><h1>Início</h1><p>Visão geral do Manual nas 4 redes · <span id="upd" class="up"></span></p></div>
     <button class="novo" onclick="location.href='publicador.html'">+ Novo post</button>
   </div>
 
@@ -96,6 +104,7 @@
     <h2>Crescimento de seguidores</h2>
     <div class="hd"><div class="big" id="gBig">-</div><div class="meta" id="gMeta"></div></div>
     <svg class="chart" id="gChart" viewBox="0 0 600 130" preserveAspectRatio="none"></svg>
+    <div class="lgd" id="gLgd"></div>
   </div>
 
   <div class="dash2">
@@ -106,7 +115,7 @@
     </div>
     <div class="panel">
       <h2>Destaques do mês</h2>
-      <div class="sub" id="deSub">Os posts que mais performaram</div>
+      <div class="sub" id="deSub">Os posts que mais engajaram, em todas as redes</div>
       <div class="list" id="destaques"><div class="empty">carregando…</div></div>
     </div>
   </div>
@@ -135,63 +144,88 @@ function thumbAg(p){ const m=(p.midia&&p.midia[0])||{};
   return VIC; }
 const DIAS=['dom','seg','ter','qua','qui','sex','sáb'];
 
+const REDES={ig:{n:'Instagram',f:'dados.json'},fb:{n:'Facebook',f:'dados-facebook.json'},tt:{n:'TikTok',f:'dados-tiktok.json'},yt:{n:'YouTube',f:'dados-youtube.json'}};
+const COR={ig:'#C13584',fb:'#1877F2',tt:'#111',yt:'#FF0000'};
+const sumk=(a,k)=>(a||[]).reduce((s,x)=>s+Number(x[k]||0),0);
+
 async function init(){
-  let dj={};
-  try{ dj=await fetch('dados.json?_='+Date.now()).then(r=>r.json()); }catch(e){}
-  renderKPIs(dj); renderGrowth(dj); renderDestaques(dj);
-  if(dj.gerado_em){ try{ document.getElementById('upd').textContent='atualizado '+new Date(dj.gerado_em).toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'})+' '+new Date(dj.gerado_em).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}); }catch(e){} }
+  const D={};
+  await Promise.all(Object.entries(REDES).map(([k,r])=>fetch(r.f+'?_='+Date.now()).then(x=>x.json()).then(d=>{D[k]=d;}).catch(()=>{})));
+  const ativos=Object.keys(REDES).filter(k=>D[k]&&D[k].conta);
+  renderKPIs(D,ativos); renderGrowth(D); renderDestaques(D,ativos);
+  const ts=Math.max(0,...ativos.map(k=>new Date(D[k].gerado_em||0).getTime()));
+  if(ts){ const g=new Date(ts); document.getElementById('upd').textContent='atualizado '+g.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'})+' '+g.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}); }
   renderAgenda();
 }
 
-function somaMes(spd){ const now=new Date(), y=now.getFullYear(), m=now.getMonth(); let s=0;
-  Object.keys(spd||{}).forEach(k=>{ const d=new Date(k+'T12:00:00'); if(d.getFullYear()===y&&d.getMonth()===m) s+=Number(spd[k]||0); }); return s; }
+// ganho diário por rede (o TikTok não informa série): {dia:{ig,fb,yt}}
+function serieDiaria(D){
+  const m={};
+  const put=(dia,k,v)=>{ if(!dia) return; (m[dia]=m[dia]||{})[k]=(m[dia][k]||0)+Number(v||0); };
+  if(D.ig) Object.entries(D.ig.seguidores_por_dia||{}).forEach(([d,v])=>put(d,'ig',v));
+  if(D.fb) (D.fb.crescimento||[]).forEach(x=>put(x.data,'fb',x.ganhos));
+  if(D.yt) (D.yt.crescimento||[]).forEach(x=>put(x.data,'yt',x.liquido));
+  return m;
+}
+function noMes(dia){ const n=new Date(), d=new Date(dia+'T12:00:00'); return d.getFullYear()===n.getFullYear()&&d.getMonth()===n.getMonth(); }
 
-function renderKPIs(dj){
-  const c=dj.conta||{}, r=dj.resumo||{}, spd=dj.seguidores_por_dia||{};
-  const mes=somaMes(spd), sem=dj.periodo_semanas||8;
+function renderKPIs(D,ativos){
+  const seg=ativos.reduce((s,k)=>s+Number(D[k].conta.seguidores||0),0);
+  const ser=serieDiaria(D);
+  const mes=Object.entries(ser).filter(([d])=>noMes(d)).reduce((s,[,v])=>s+(v.ig||0)+(v.fb||0)+(v.yt||0),0);
+  const ytViews=D.yt?((D.yt.crescimento&&D.yt.crescimento.length)?sumk(D.yt.crescimento,'views'):Number(D.yt.resumo.views_total||0)):0;
+  const exp=(D.ig?Number(D.ig.resumo.alcance_total||0):0)+(D.tt?Number(D.tt.resumo.views_total||0):0)+ytViews;
+  const eng=ativos.reduce((s,k)=>s+Number(D[k].resumo.eng_total||0),0);
+  const pub=ativos.reduce((s,k)=>s+Number(D[k].resumo.n_posts||D[k].resumo.n_videos||0),0);
+  const sem=(D.ig&&D.ig.periodo_semanas)||8;
+  const chips=[...ativos].sort((a,b)=>D[b].conta.seguidores-D[a].conta.seguidores).map(k=>`<span>${REDES[k].n} <b>${kf(D[k].conta.seguidores)}</b></span>`).join('');
   document.getElementById('kpis').innerHTML=`
-    <div class="kpi hero"><div class="lb"><span class="d">${icon(IC.foll)}</span>Seguidores</div><div class="v">${nf(c.seguidores)}</div><div class="dl up">▲ +${nf(mes)} este mês</div></div>
-    <div class="kpi"><div class="lb"><span class="d">${icon(IC.reach)}</span>Alcance</div><div class="v">${kf(r.alcance_total)}</div><div class="dl">${nf(r.n_posts)} posts · ${sem} sem</div></div>
-    <div class="kpi"><div class="lb"><span class="d">${icon(IC.eng)}</span>Engaj. médio</div><div class="v">${kf(r.eng_medio)}</div><div class="dl">por post</div></div>
-    <div class="kpi"><div class="lb"><span class="d">${icon(IC.save)}</span>Salvamentos</div><div class="v">${kf(r.salvamentos_total)}</div><div class="dl">no período</div></div>`;
+    <div class="kpi hero"><div class="lb"><span class="d">${icon(IC.foll)}</span>Seguidores · ${ativos.length} redes</div><div class="v">${kf(seg)}</div><div class="dl up">▲ +${nf(mes)} este mês</div><div class="nets">${chips}</div></div>
+    <div class="kpi"><div class="lb"><span class="d">${icon(IC.reach)}</span>Alcance & views</div><div class="v">${kf(exp)}</div><div class="dl">IG alcance · TikTok/YT views · ${sem} sem</div></div>
+    <div class="kpi"><div class="lb"><span class="d">${icon(IC.eng)}</span>Engajamento</div><div class="v">${kf(eng)}</div><div class="dl">somado nas ${ativos.length} redes · ${sem} sem</div></div>
+    <div class="kpi"><div class="lb"><span class="d">${icon(IC.save)}</span>Publicações</div><div class="v">${nf(pub)}</div><div class="dl">nas ${ativos.length} redes · ${sem} sem</div></div>`;
 }
 
-function renderGrowth(dj){
-  const spd=dj.seguidores_por_dia||{}, r=dj.resumo||{};
-  const dias=Object.keys(spd).sort();
-  const validos=dias.filter(k=>Number(spd[k])>0);
+function renderGrowth(D){
+  const ser=serieDiaria(D);
+  const dias=Object.keys(ser).sort();
   const last=dias.slice(-30);
-  const tot=r.seguidores_total||validos.reduce((a,k)=>a+Number(spd[k]||0),0);
-  const media=validos.length?Math.round(validos.reduce((a,k)=>a+Number(spd[k]||0),0)/validos.length):0;
+  const tot=dias.reduce((s,d)=>s+(ser[d].ig||0)+(ser[d].fb||0)+(ser[d].yt||0),0);
   document.getElementById('gBig').innerHTML=`<span>+${nf(tot)}</span> seguidores`;
-  document.getElementById('gMeta').textContent=`~${nf(media)}/dia · ${dj.periodo_semanas||8} semanas`;
-  // chart
-  const W=600,H=130,pad=6, n=last.length||1, max=Math.max(1,...last.map(k=>Number(spd[k]||0)));
-  const bw=(W-pad*2)/n;
-  let bars='', labs='';
-  last.forEach((k,i)=>{ const val=Number(spd[k]||0); const h=Math.round((val/max)*(H-24)); const x=pad+i*bw; const y=H-14-h;
-    bars+=`<rect x="${(x+1).toFixed(1)}" y="${y}" width="${(bw-2).toFixed(1)}" height="${Math.max(h,1)}" rx="1.5"><title>${k}: +${val}</title></rect>`;
-    if(i%5===0||i===last.length-1){ const dd=new Date(k+'T12:00:00'); labs+=`<text class="cxlab" x="${(x+bw/2).toFixed(1)}" y="${H-2}" text-anchor="middle">${dd.getDate()}/${dd.getMonth()+1}</text>`; }
+  document.getElementById('gMeta').textContent=`~${nf(Math.round(tot/Math.max(1,dias.length)))}/dia · Instagram + Facebook + YouTube`;
+  const W=600,H=130,pad=6,n=last.length||1;
+  const totDia=d=>['ig','fb','yt'].reduce((s,k)=>s+Math.max(0,ser[d][k]||0),0);
+  const max=Math.max(1,...last.map(totDia));
+  const bw=(W-pad*2)/n; let bars='',labs='';
+  last.forEach((d,i)=>{ const x=pad+i*bw; let y=H-14; const tip=[];
+    ['ig','fb','yt'].forEach(k=>{ const v=Math.max(0,ser[d][k]||0); if(!v) return; const h=(v/max)*(H-24); y-=h;
+      bars+=`<rect x="${(x+1).toFixed(1)}" y="${y.toFixed(1)}" width="${(bw-2).toFixed(1)}" height="${Math.max(h,0.5).toFixed(1)}" style="fill:${COR[k]};opacity:.9"></rect>`; tip.push(REDES[k].n+' +'+nf(v)); });
+    bars+=`<rect x="${(x+1).toFixed(1)}" y="${y.toFixed(1)}" width="${(bw-2).toFixed(1)}" height="${(H-14-y).toFixed(1)}" style="fill:transparent"><title>${d}: ${tip.join(' · ')||'sem dado'}</title></rect>`;
+    if(i%5===0||i===last.length-1){ const dd=new Date(d+'T12:00:00'); labs+=`<text class="cxlab" x="${(x+bw/2).toFixed(1)}" y="${H-2}" text-anchor="middle">${dd.getDate()}/${dd.getMonth()+1}</text>`; }
   });
   document.getElementById('gChart').innerHTML=`<line class="axis" x1="0" y1="${H-14}" x2="${W}" y2="${H-14}"/>${bars}${labs}`;
+  document.getElementById('gLgd').innerHTML=['ig','fb','yt'].filter(k=>D[k]).map(k=>`<span><i style="background:${COR[k]}"></i>${REDES[k].n}</span>`).join('')+'<span style="color:var(--dim);font-weight:600">TikTok não informa ganho por dia</span>';
 }
 
-function renderDestaques(dj){
-  let posts=(dj.posts||[]).slice();
-  const now=new Date(), y=now.getFullYear(), m=now.getMonth();
-  let mesP=posts.filter(p=>{ const d=new Date(p.publicado_em); return d.getFullYear()===y&&d.getMonth()===m; });
-  if(mesP.length<2) mesP=posts; // início do mês: usa o período todo
-  mesP.sort((a,b)=>(b.engajamento||0)-(a.engajamento||0));
-  const top=mesP.slice(0,4);
-  document.getElementById('deSub').textContent = (mesP===posts?'Os que mais performaram no período':'Os que mais performaram este mês');
-  const el=document.getElementById('destaques');
-  el.innerHTML= top.length? top.map((p,i)=>`
-    <a class="drow" href="${p.permalink||'#'}" target="_blank" rel="noopener">
-      <div class="th"><span class="rk">${i+1}</span>${p.thumb?`<img src="${p.thumb}" referrerpolicy="no-referrer">`:VIC}</div>
-      <div class="info"><b>${esc((p.legenda||'post').replace(/\n/g,' ').slice(0,60))}</b>
-        <div class="mx"><span>👁 <b>${kf(p.alcance)}</b></span><span>🔖 <b>${kf(p.salvamentos)}</b></span>${p.seguidores_dia>0?`<span class="gain">+${nf(p.seguidores_dia)} seg.</span>`:''}</div>
+function renderDestaques(D,ativos){
+  const all=[];
+  ativos.forEach(k=>{ const d=D[k];
+    if(k==='ig') (d.posts||[]).forEach(p=>all.push({k,t:p.legenda,th:p.thumb,l:p.permalink,e:p.engajamento,pub:p.publicado_em,m1:p.alcance,m1l:'👁',m2:p.salvamentos,m2l:'🔖'}));
+    else if(k==='fb') (d.posts||[]).forEach(p=>all.push({k,t:p.titulo,th:p.thumb,l:p.link,e:p.engajamento,pub:p.publicado_em,m1:p.curtidas,m1l:'👍',m2:p.compartilhamentos,m2l:'↗'}));
+    else (d.videos||[]).forEach(v=>all.push({k,t:v.titulo,th:v.thumb,l:v.link,e:v.engajamento,pub:v.publicado_em,m1:v.views,m1l:'▶',m2:v.comentarios,m2l:'💬'}));
+  });
+  let lista=all.filter(p=>p.pub&&noMes(String(p.pub).slice(0,10)));
+  const doMes=lista.length>=3; if(!doMes) lista=all;
+  lista.sort((a,b)=>(b.e||0)-(a.e||0));
+  const top=lista.slice(0,5);
+  document.getElementById('deSub').textContent=doMes?'Os que mais engajaram este mês, em todas as redes':'Os que mais engajaram no período, em todas as redes';
+  document.getElementById('destaques').innerHTML=top.length?top.map((p,i)=>`
+    <a class="drow" href="${p.l||'#'}" target="_blank" rel="noopener">
+      <div class="th"><span class="rk">${i+1}</span>${p.th?`<img src="${p.th}" referrerpolicy="no-referrer" onerror="this.outerHTML=window.__vic">`:VIC}</div>
+      <div class="info"><b>${esc((p.t||'post').replace(/\n/g,' ').slice(0,60))}</b>
+        <div class="mx"><span class="rb ${p.k}">${REDES[p.k].n}</span><span>❤ <b>${kf(p.e)}</b></span><span>${p.m1l} <b>${kf(p.m1)}</b></span><span>${p.m2l} <b>${kf(p.m2)}</b></span></div>
       </div>
-    </a>`).join('') : '<div class="empty">Sem posts no período ainda.</div>';
+    </a>`).join(''):'<div class="empty">Sem posts no período ainda.</div>';
 }
 
 async function renderAgenda(){

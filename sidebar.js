@@ -26,11 +26,6 @@
     {item:'Calendário de posts', href:'calendario.html', ic:'cal'},
     {item:'Biblioteca de mídia', href:'midia.html', ic:'lib'},
     {item:'Automações', href:'automacoes.html', ic:'bolt'},
-    {cat:'Campanhas'},
-    {item:'Anúncios', href:'anuncios.html', ic:'target'},
-    {cat:'Utilidades'},
-    {item:'Agente de copy', href:'agente-copy.html', ic:'pen'},
-    {item:'UTM do Manual', href:'https://utm.brunotropolis.com.br', ic:'link', ext:true},
     {cat:'Admin'},
     {item:'Admin', href:'admin.html', ic:'gear'}
   ];
