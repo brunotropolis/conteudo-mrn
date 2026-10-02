@@ -87,7 +87,18 @@
   .nets span b{color:#fff}
   .rb{font-size:9.5px;font-weight:800;color:#fff !important;border-radius:999px;padding:1px 7px;letter-spacing:.02em}
   .rb.ig{background:var(--ig)}.rb.fb{background:var(--fb)}.rb.tt{background:var(--tt)}.rb.yt{background:var(--yt)}
-  @media(max-width:980px){.kpis{grid-template-columns:repeat(2,1fr)}.dash2{grid-template-columns:1fr}}
+  .netbar{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:6px 0;margin-bottom:20px}
+  .netbar .ni{padding:12px 18px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:4px;min-width:0}
+  .netbar .ni:first-child{border-left:none}
+  .netbar .nh{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:var(--mute);text-transform:uppercase;letter-spacing:.04em}
+  .netbar .nh i{width:10px;height:10px;border-radius:3px;flex:0 0 auto}
+  .netbar .nv{font-size:1.45rem;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+  .netbar .ng{font-size:11.5px;font-weight:700;color:var(--live)}
+  .netbar .ng.na{color:var(--dim);font-weight:600}
+  .netbar .sh{height:5px;border-radius:99px;background:var(--hover);overflow:hidden;margin-top:4px}
+  .netbar .sh b{display:block;height:100%;border-radius:99px}
+  .netbar .sp{font-size:10.5px;color:var(--dim);font-weight:600}
+  @media(max-width:980px){.netbar{grid-template-columns:repeat(2,1fr)}.netbar .ni:nth-child(3){border-left:none}.netbar .ni:nth-child(n+3){border-top:1px solid var(--line)}.kpis{grid-template-columns:repeat(2,1fr)}.dash2{grid-template-columns:1fr}}
   @media(max-width:520px){.kpis{grid-template-columns:1fr}}
 </style>
 </head>
@@ -99,6 +110,8 @@
   </div>
 
   <div class="kpis" id="kpis"></div>
+
+  <div class="panel netbar" id="netbar"></div>
 
   <div class="panel growth" id="growth">
     <h2>Crescimento de seguidores</h2>
@@ -152,7 +165,7 @@ async function init(){
   const D={};
   await Promise.all(Object.entries(REDES).map(([k,r])=>fetch(r.f+'?_='+Date.now()).then(x=>x.json()).then(d=>{D[k]=d;}).catch(()=>{})));
   const ativos=Object.keys(REDES).filter(k=>D[k]&&D[k].conta);
-  renderKPIs(D,ativos); renderGrowth(D); renderDestaques(D,ativos);
+  renderKPIs(D,ativos); renderNetbar(D,ativos); renderGrowth(D); renderDestaques(D,ativos);
   const ts=Math.max(0,...ativos.map(k=>new Date(D[k].gerado_em||0).getTime()));
   if(ts){ const g=new Date(ts); document.getElementById('upd').textContent='atualizado '+g.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'})+' '+g.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}); }
   renderAgenda();
@@ -178,12 +191,27 @@ function renderKPIs(D,ativos){
   const eng=ativos.reduce((s,k)=>s+Number(D[k].resumo.eng_total||0),0);
   const pub=ativos.reduce((s,k)=>s+Number(D[k].resumo.n_posts||D[k].resumo.n_videos||0),0);
   const sem=(D.ig&&D.ig.periodo_semanas)||8;
-  const chips=[...ativos].sort((a,b)=>D[b].conta.seguidores-D[a].conta.seguidores).map(k=>`<span>${REDES[k].n} <b>${kf(D[k].conta.seguidores)}</b></span>`).join('');
   document.getElementById('kpis').innerHTML=`
-    <div class="kpi hero"><div class="lb"><span class="d">${icon(IC.foll)}</span>Seguidores · ${ativos.length} redes</div><div class="v">${kf(seg)}</div><div class="dl up">▲ +${nf(mes)} este mês</div><div class="nets">${chips}</div></div>
+    <div class="kpi hero"><div class="lb"><span class="d">${icon(IC.foll)}</span>Seguidores · ${ativos.length} redes</div><div class="v">${kf(seg)}</div><div class="dl up">▲ +${nf(mes)} este mês</div></div>
     <div class="kpi"><div class="lb"><span class="d">${icon(IC.reach)}</span>Alcance & views</div><div class="v">${kf(exp)}</div><div class="dl">IG alcance · TikTok/YT views · ${sem} sem</div></div>
     <div class="kpi"><div class="lb"><span class="d">${icon(IC.eng)}</span>Engajamento</div><div class="v">${kf(eng)}</div><div class="dl">somado nas ${ativos.length} redes · ${sem} sem</div></div>
     <div class="kpi"><div class="lb"><span class="d">${icon(IC.save)}</span>Publicações</div><div class="v">${nf(pub)}</div><div class="dl">nas ${ativos.length} redes · ${sem} sem</div></div>`;
+}
+
+function renderNetbar(D,ativos){
+  const tot=ativos.reduce((s,k)=>s+Number(D[k].conta.seguidores||0),0)||1;
+  const cres=k=>k==='ig'?D.ig.resumo.seguidores_total:k==='fb'?D.fb.resumo.seguidores_ganhos:k==='yt'?D.yt.resumo.inscritos_liquido:null;
+  const sem=(D.ig&&D.ig.periodo_semanas)||8;
+  document.getElementById('netbar').innerHTML=[...ativos].sort((a,b)=>D[b].conta.seguidores-D[a].conta.seguidores).map(k=>{
+    const seg=Number(D[k].conta.seguidores||0), pct=Math.round(seg/tot*100), c=cres(k);
+    return `<div class="ni">
+      <div class="nh"><i style="background:${COR[k]}"></i>${REDES[k].n}</div>
+      <div class="nv">${kf(seg)}</div>
+      ${c!=null?`<div class="ng">+${nf(c)} em ${sem} sem</div>`:`<div class="ng na">sem série de crescimento</div>`}
+      <div class="sh"><b style="width:${pct}%;background:${COR[k]}"></b></div>
+      <div class="sp">${pct}% do total</div>
+    </div>`;
+  }).join('');
 }
 
 function renderGrowth(D){
@@ -204,7 +232,7 @@ function renderGrowth(D){
     if(i%5===0||i===last.length-1){ const dd=new Date(d+'T12:00:00'); labs+=`<text class="cxlab" x="${(x+bw/2).toFixed(1)}" y="${H-2}" text-anchor="middle">${dd.getDate()}/${dd.getMonth()+1}</text>`; }
   });
   document.getElementById('gChart').innerHTML=`<line class="axis" x1="0" y1="${H-14}" x2="${W}" y2="${H-14}"/>${bars}${labs}`;
-  document.getElementById('gLgd').innerHTML=['ig','fb','yt'].filter(k=>D[k]).map(k=>`<span><i style="background:${COR[k]}"></i>${REDES[k].n}</span>`).join('')+'<span style="color:var(--dim);font-weight:600">TikTok não informa ganho por dia</span>';
+  document.getElementById('gLgd').innerHTML=['ig','fb','yt'].filter(k=>D[k]).map(k=>`<span><i style="background:${COR[k]}"></i>${REDES[k].n}</span>`).join('')+'<span style="color:var(--mute);font-weight:600">TikTok não informa ganho por dia</span>';
 }
 
 function renderDestaques(D,ativos){

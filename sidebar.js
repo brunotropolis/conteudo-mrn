@@ -37,6 +37,8 @@
    +'body{padding-left:242px}'
    +'.sb{position:fixed;left:0;top:0;bottom:0;width:242px;background:#33473F;color:#E7EEEC;display:flex;flex-direction:column;z-index:40;overflow-y:auto;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}'
    +'.sb::-webkit-scrollbar{width:8px}.sb::-webkit-scrollbar-thumb{background:rgba(255,255,255,.14);border-radius:8px}'
+   +'body{background:#F6E6BC !important}'
+   +'.pagehdr p,.pagehdr .up,.pagehdr small{color:#5E5843 !important}'
    +'.sb .brand{display:flex;align-items:center;gap:11px;padding:18px 18px 12px}'
    +'.sb .brand .lg{width:40px;height:40px;border-radius:12px;overflow:hidden;flex:0 0 auto;background:#E3A31B;display:grid;place-items:center}'
    +'.sb .brand .lg img{width:100%;height:100%;display:block}'
@@ -76,7 +78,7 @@
 
   var aside=document.createElement('aside'); aside.className='sb';
   aside.innerHTML=''
-   +'<div class="brand"><div class="lg"><img src="favicon.svg" alt=""></div><div><b>Motor de Conteúdo</b><small>Manual do Recém-Nascido</small></div></div>'
+   +'<div class="brand"><div><b>Motor de Conteúdo</b><small>Manual do Recém-Nascido</small></div></div>'
    +'<nav>'+nav+'</nav>'
    +'<div class="ft">▶️ Publicação automática ligada: agendados saem sozinhos no horário.</div>';
 
