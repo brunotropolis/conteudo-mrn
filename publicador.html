@@ -107,6 +107,10 @@
   #autoFields .ff{font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#566862;margin:8px 0 5px}
   #autoFields .ff:first-child{margin-top:0}
   #autoFields textarea{min-height:64px}
+  #autoFields select,#autoFields textarea{background:#E9EEED;color:#93A5A1;border-color:#DCE4E2;cursor:not-allowed}
+  #autoFields .ff{opacity:.55}
+  #autoFields.on select,#autoFields.on textarea{background:#fff;color:var(--ink);border-color:#C9D6D2;cursor:auto}
+  #autoFields.on .ff{opacity:1}
   #gatbox .tag b{color:#B2432C}
 
   .submit{width:100%;margin-top:20px;background:var(--menu);color:#fff;border:none;border-radius:12px;padding:13px;font-size:15px;font-weight:800;cursor:pointer;font-family:inherit;transition:background .15s}
@@ -255,11 +259,10 @@
       <label class="f">Automação</label>
       <div class="autobox">
         <label class="autotoggle"><input type="checkbox" id="autoOn"> <span>Este post ativa automação (comentário com palavra → direct)</span></label>
-        <div class="automark">Por enquanto é só marcação: fica salvo no post, mas ainda não dispara. A automação do Instagram a gente liga na próxima etapa (o Facebook, quando a publicação no FB entrar no ar).</div>
-        <div id="autoFields" hidden>
-          <label class="ff">Palavras que ativam</label>
-          <div class="colabbox" id="gatbox"><input type="text" id="gatin" placeholder="palavra e Enter (ex: SONO)"></div>
-          <label class="ff">Fluxo (pré-cadastrado no CRM)</label>
+        <div class="automark">A chamada (CTA) entra no começo da legenda do Instagram e do Facebook. As palavras que ativam e a mensagem do direct vêm do fluxo escolhido.</div>
+        <div id="autoFields">
+          <div style="display:none"><div class="colabbox" id="gatbox"><input type="text" id="gatin"></div></div>
+          <label class="ff">Fluxo</label>
           <select id="autoFluxo"><option value="">Carregando fluxos…</option></select>
           <label class="ff">Chamada no post (CTA)</label>
           <textarea id="autoLegenda" placeholder="Ex: comenta SONO que eu te mando o guia 💛"></textarea>
@@ -498,7 +501,10 @@ $('#gatin').addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===','){ e.
   const v=e.target.value.trim().replace(/,/g,'').slice(0,40);
   if(v && !gatilhos.some(x=>x.toLowerCase()===v.toLowerCase()) && gatilhos.length<20) gatilhos.push(v);
   e.target.value=''; renderGat(); } });
-$('#autoOn').addEventListener('change',e=>{ $('#autoFields').hidden=!e.target.checked; });
+function setAuto(on){ $('#autoFields').classList.toggle('on',on); $('#autoFluxo').disabled=!on; $('#autoLegenda').disabled=!on; renderPreview(); }
+$('#autoOn').addEventListener('change',e=>setAuto(e.target.checked));
+$('#autoLegenda').addEventListener('input',renderPreview);
+setAuto(false);
 (async()=>{ try{ const r=await fetch(AGENDAR,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'fluxos'})}).then(r=>r.json());
   const arr=r.dados||[]; const sel=$('#autoFluxo');
   sel.innerHTML='<option value="">Escolher fluxo…</option>'+arr.map(f=>`<option value="${f.id}">${esc(f.nome)}${f.ativo?'':' (inativo)'}</option>`).join('');
@@ -520,7 +526,8 @@ function renderPreview(){
     else mc.innerHTML=`<img src="${m.url}">`;
   } else mc.innerHTML='<div class="ph">A mídia aparece aqui</div>';
   const sub=$('#pvSub'); sub.textContent = colabs.length? ('com @'+colabs[0]+(colabs.length>1?` +${colabs.length-1}`:'')) : (plats.size>1? [...plats].length+' redes' : 'prévia do post');
-  const leg=$('#legenda').value.trim();
+  const ctaOn=$('#autoOn')&&$('#autoOn').checked&&($('#autoLegenda').value||'').trim();
+  const leg=[ctaOn&&(plats.has('instagram')||plats.has('facebook'))?ctaOn:'', $('#legenda').value.trim()].filter(Boolean).join('\n\n');
   let cap='<b>manualdorecemnascido</b> ';
   if(leg){ cap+= esc(leg.slice(0,140)).replace(/@([a-zA-Z0-9._]+)/g,'<span class="mm">@$1</span>').replace(/\n/g,' '); if(leg.length>140)cap+=' <span class="more">mais</span>'; }
   else cap+='<span class="more">sua legenda aparece aqui…</span>';
@@ -560,7 +567,7 @@ $('#salvar').onclick=async()=>{
     $('#msg').textContent = editId? 'alterado ✓' : (quando?'agendado ✓':'salvo como rascunho ✓');
     if(editId){ setTimeout(()=>location.href='calendario.html',700); return; }
     midias=[];renderSel();$('#legenda').value='';$('#quando').value='';$('#rep').value='';colabs=[];renderColab();
-    resetHG();gatilhos=[];renderGat();$('#autoOn').checked=false;$('#autoFields').hidden=true;$('#autoFluxo').value='';$('#autoLegenda').value='';$('#autoDM').value='';
+    resetHG();gatilhos=[];renderGat();$('#autoOn').checked=false;setAuto(false);$('#autoFluxo').value='';$('#autoLegenda').value='';$('#autoDM').value='';
     carregarResumo();
   }catch(e){ $('#msg').textContent='erro ao salvar'; }
   $('#salvar').disabled=false;
@@ -582,9 +589,9 @@ function preencher(p){
   document.querySelectorAll('#nets .net').forEach(b=>b.classList.toggle('on',plats.has(b.dataset.k)));
   colabs=(p.colaboradores||[]).slice(); renderColab();
   const a=p.automacao||{};
-  $('#autoOn').checked=!!a.ativa; $('#autoFields').hidden=!a.ativa;
+  $('#autoOn').checked=!!a.ativa;
   gatilhos=(a.gatilhos||[]).slice(); renderGat();
-  $('#autoLegenda').value=a.legenda_cta||''; $('#autoDM').value=a.msg_dm||'';
+  $('#autoLegenda').value=a.legenda_cta||''; $('#autoDM').value=a.msg_dm||''; setAuto(!!a.ativa);
   if(a.fluxo_id){ const sel=$('#autoFluxo'); if([...sel.options].some(o=>o.value===a.fluxo_id)) sel.value=a.fluxo_id; else window.__pendingFluxo=a.fluxo_id; }
   if(p.agendado_para){ const d=new Date(p.agendado_para); const pad=n=>String(n).padStart(2,'0'); $('#quando').value=`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`; }
   if(p.recorrencia&&p.recorrencia.tipo) $('#rep').value=p.recorrencia.tipo;
