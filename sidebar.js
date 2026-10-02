@@ -19,7 +19,6 @@
     {item:'Início', href:'index.html', ic:'home'},
     {cat:'Métricas'},
     {item:'Panorama', href:'panorama.html', ic:'globe'},
-    {item:'Melhores conteúdos', href:'desempenho.html', ic:'chart'},
     {item:'Dash Link Bio', href:'dashbio.html', ic:'link'},
     {cat:'Ferramentas'},
     {item:'Publicador', href:'publicador.html', ic:'send'},
@@ -68,6 +67,7 @@
    +'  .sbscrim.on{display:block}'
    +'}';
   var st=document.createElement('style'); st.textContent=css; document.head.appendChild(st);
+  if(window.self!==window.top){ var em=document.createElement('style'); em.textContent='body{padding-left:0!important;background:transparent!important}.top,footer{display:none!important}.wrap{padding:0 0 6px!important;max-width:none!important}'; document.head.appendChild(em); return; }
 
   var active=null;
   var nav=NAV.map(function(x){

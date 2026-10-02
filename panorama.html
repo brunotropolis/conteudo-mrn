@@ -94,6 +94,9 @@
   <div class="tops" id="tops"></div>
 
   <div class="note" id="note"></div>
+
+  <div class="sec" style="margin-top:28px">Melhores conteúdos <span style="font-weight:600;text-transform:none;letter-spacing:0;color:var(--dim)">· escolha a rede e o período</span></div>
+  <iframe id="mc" src="desempenho.html" title="Melhores conteúdos" scrolling="no" style="width:100%;border:0;display:block;height:900px;background:transparent"></iframe>
 </div>
 <footer>Uso interno · Manual do Recém-Nascido · Instagram + Facebook + TikTok + YouTube</footer>
 
@@ -214,5 +217,13 @@ Promise.all(Object.entries(REDES).map(([k,r])=>
 }).catch(e=>{ document.getElementById('sub').textContent='erro ao carregar os dados'; });
 </script>
 <script src="sidebar.js" defer></script>
+<script>
+(function(){const f=document.getElementById('mc');
+  function fit(){try{const b=f.contentDocument&&f.contentDocument.body;if(b)f.style.height=(b.scrollHeight+4)+'px';}catch(e){}}
+  f.addEventListener('load',()=>{fit();try{new ResizeObserver(fit).observe(f.contentDocument.body);}catch(e){}
+    try{new MutationObserver(fit).observe(f.contentDocument.body,{childList:true,subtree:true});}catch(e){}
+    setTimeout(fit,800);setTimeout(fit,2500);});
+})();
+</script>
 </body>
 </html>
