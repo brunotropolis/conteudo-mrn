@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Caixa de entrada · HUB Manual</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#3A5049">
+<style>
+  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--hover:#E9F3F1;--line:#DCE8E6;--ink:#23332F;--mute:#6E827D;--dim:#93A5A1;--gold:#E3A31B;--goldink:#8A5E0A;--goldbg:#FDF1D6;--menu:#3A5049;--live:#1E874B;--ig:#C13584;--fb:#1877F2;--warn:#a33a26}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.45;overflow-x:hidden}
+  .top{background:var(--menu);color:#E7EEEC;padding:18px 22px}
+  .wrap{max-width:1180px;margin:0 auto;padding:20px 16px 40px}
+  .pagehdr{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:0 4px 12px}
+  .pagehdr h1{font-size:1.5rem;font-weight:800;letter-spacing:-.02em}
+  .resumo{font-size:.85rem;color:var(--mute);font-weight:600}
+  .box{display:grid;grid-template-columns:360px 1fr;gap:14px;height:calc(100vh - 150px);min-height:520px}
+  .col{background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 16px rgba(35,51,47,.05);display:flex;flex-direction:column;min-height:0;overflow:hidden}
+  .filtros{padding:12px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
+  .filtros input,.filtros select{width:100%;border:1px solid var(--line);border-radius:10px;padding:8px 11px;font-family:inherit;font-size:13.5px;background:var(--card);color:var(--ink)}
+  .linha{display:flex;gap:8px;align-items:center}
+  .seg{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1}
+  .seg button{flex:1;border:0;background:var(--card);font:700 12px inherit;font-family:inherit;padding:7px 4px;color:var(--mute);cursor:pointer}
+  .seg button.on{background:var(--menu);color:#fff}
+  .tg{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:var(--mute);white-space:nowrap;cursor:pointer}
+  .tg input{width:15px;height:15px;accent-color:var(--live)}
+  .lista{overflow-y:auto;flex:1}
+  .ct{display:flex;gap:10px;padding:11px 12px;border-bottom:1px solid var(--line);cursor:pointer;align-items:flex-start}
+  .ct:hover{background:var(--hover)} .ct.on{background:#DCEBE7;box-shadow:inset 3px 0 0 var(--menu)}
+  .ct.novo{background:#F1F8F4} .ct.novo b{font-weight:900} .ct.novo .prev{color:var(--ink);font-weight:600}
+  .av svg{width:20px;height:20px;fill:#9DB3AD}
+  .av{width:38px;height:38px;border-radius:50%;background:var(--hover);flex:none;position:relative;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--menu);font-size:14px;overflow:hidden}
+  .av img{width:100%;height:100%;object-fit:cover}
+  .rd{position:absolute;right:-1px;bottom:-1px;width:14px;height:14px;border-radius:50%;border:2px solid #fff}
+  .rd.instagram{background:var(--ig)} .rd.facebook{background:var(--fb)}
+  .ctx{min-width:0;flex:1}
+  .ctn{display:flex;justify-content:space-between;gap:6px}
+  .ctn b{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ctn time{font-size:11px;color:var(--dim);white-space:nowrap}
+  .prev{font-size:12.5px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .nl{background:var(--live);color:#fff;font-size:10.5px;font-weight:800;border-radius:999px;padding:1px 7px;margin-left:6px}
+  .tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+  .tag{font-size:10.5px;font-weight:700;color:var(--goldink);background:var(--goldbg);border-radius:999px;padding:1px 7px}
+  .vazio{color:var(--mute);text-align:center;padding:30px 16px;font-size:13.5px}
+  .chdr{padding:12px 16px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:center}
+  .chdr .ctx b{font-size:15px}
+  .chdr small{display:block;color:var(--mute);font-size:12px}
+  .voltar{display:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:6px 10px;font-weight:800;font-family:inherit;cursor:pointer;color:var(--menu)}
+  .msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:8px;background:#FAFCFB}
+  .m{max-width:78%;padding:9px 12px;border-radius:14px;font-size:13.5px;white-space:pre-wrap;word-wrap:break-word}
+  .m.entrada{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px}
+  .m.saida{align-self:flex-end;background:#E3EFEC;border-bottom-right-radius:4px}
+  .m .meta{display:block;font-size:10.5px;color:var(--dim);margin-top:4px;font-weight:600}
+  .m .lbl{display:inline-block;font-size:10.5px;font-weight:800;border-radius:999px;padding:1px 7px;margin-bottom:4px;background:var(--hover);color:var(--menu)}
+  .m .bt{display:inline-block;margin:6px 4px 0 0;font-size:11.5px;font-weight:700;border:1px solid #c9dcd8;border-radius:8px;padding:3px 8px;background:#fff}
+  .m.err{border:1px solid #e3c4bd;background:#fbefec}
+  .dia{align-self:center;font-size:11px;color:var(--dim);font-weight:700;margin:6px 0}
+  .resp{border-top:1px solid var(--line);padding:10px 12px;display:flex;flex-direction:column;gap:6px}
+  .resp .jan{font-size:12px;font-weight:700;border-radius:10px;padding:7px 10px}
+  .jan.ok{color:var(--live);background:#EAF5EE} .jan.no{color:#8a3a26;background:#FBEFE9;border:1px solid #F0D3C8}
+  .resp textarea:disabled{background:#EEF2F1;color:var(--dim);cursor:not-allowed}
+  .resp .linha textarea{flex:1;border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-family:inherit;font-size:13.5px;resize:none;height:44px;background:var(--card)}
+  .btn{font-size:13px;font-weight:800;border-radius:10px;padding:9px 16px;cursor:pointer;border:1px solid var(--menu);background:var(--menu);color:#fff;font-family:inherit}
+  .btn:disabled{opacity:.45;cursor:default}
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--menu);color:#fff;padding:10px 18px;border-radius:999px;font-size:13px;font-weight:600;opacity:0;transition:.2s;pointer-events:none;z-index:30;max-width:90vw;text-align:center}
+  .toast.show{opacity:1}
+  @media (max-width:820px){
+    .wrap{padding:14px 12px 30px}
+    .box{grid-template-columns:1fr;height:calc(100vh - 130px)}
+    .box.conversa .col.lado{display:none}
+    .box:not(.conversa) .col.chat{display:none}
+    .voltar{display:inline-block}
+    .pagehdr h1{display:none}
+    .m{max-width:90%}
+  }
+</style>
+</head>
+<body>
+<div class="top"><b>Caixa de entrada</b></div>
+<div class="wrap">
+  <div class="pagehdr"><h1>Caixa de entrada</h1><span class="resumo" id="resumo"></span></div>
+  <div class="box" id="box">
+    <div class="col lado">
+      <div class="filtros">
+        <input id="busca" placeholder="Buscar por @, nome ou mensagem">
+        <div class="linha">
+          <div class="seg" id="redes"><button data-r="" class="on">Todas</button><button data-r="instagram">Instagram</button><button data-r="facebook">Facebook</button></div>
+        </div>
+        <div class="linha">
+          <select id="ftag"><option value="">Todas as etiquetas / funis</option></select>
+          <label class="tg"><input type="checkbox" id="fnl">não lidas</label>
+        </div>
+      </div>
+      <div class="lista" id="lista"><div class="vazio">carregando…</div></div>
+    </div>
+    <div class="col chat">
+      <div class="chdr" id="chdr"><button class="voltar" id="voltar">←</button><div class="ctx"><b>Selecione uma conversa</b><small>Comentários, directs, toques em botão e respostas (nossas, do ManyChat ou da equipe) aparecem aqui.</small></div></div>
+      <div class="msgs" id="msgs"></div>
+      <div class="resp" id="resp" hidden>
+        <span class="jan" id="jan"></span>
+        <div class="linha"><textarea id="txt" placeholder="Escreva a resposta…"></textarea><button class="btn" id="enviar">Enviar</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script src="sidebar.js"></script>
+<script>
+const API='/api/n8n/motor-inbox';
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const toast=t=>{const e=$('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),3200);};
+const api=async(b)=>{const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)});if(!r.ok)throw new Error('HTTP '+r.status);return r.json();};
+const quando=iso=>{if(!iso)return'';const d=new Date(iso),h=new Date();const mesmoDia=d.toDateString()===h.toDateString();return mesmoDia?d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}):d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'});};
+const nomeDe=c=>c.username?'@'+c.username:(c.nome||('Contato '+String(c.usuario_id).slice(-5)));
+const inicial=c=>(c.username||c.nome||'?').replace(/[^a-zA-ZÀ-ÿ0-9]/g,'').charAt(0).toUpperCase()||'?';
+const SILH='<svg viewBox="0 0 24 24"><path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zm0 2c-4.4 0-8 2.2-8 5v2h16v-2c0-2.8-3.6-5-8-5z"/></svg>';
+const avatar=c=>'<div class="av">'+(c.foto_url?'<img src="'+esc(c.foto_url)+'" alt="" onerror="this.remove()">':(c.username||c.nome?esc(inicial(c)):SILH))+'<span class="rd '+esc(c.rede)+'"></span></div>';
+const ROT={comentario:'Comentário',resposta_publica:'Resposta pública',fluxo:'Automação',eco:'Enviado pelo app (ManyChat / equipe)',manual:'Você respondeu',postback:'Tocou no botão',story_resposta:'Respondeu o story',dm:''};
+
+let filtro={rede:'',tag:'',busca:'',nao_lidas:false}, atual=null, contatos=[];
+
+async function carregarTags(){
+  try{const r=await api({acao:'tags'});const sel=$('ftag'),v=sel.value;
+    sel.innerHTML='<option value="">Todas as etiquetas / funis</option>'+(r.dados||[]).map(t=>'<option value="'+esc(t.tag)+'">'+esc(t.tag)+' ('+t.n+')</option>').join('');sel.value=v;}catch(e){}
+}
+async function carregarLista(){
+  try{
+    const r=await api(Object.assign({acao:'contatos'},filtro));
+    contatos=r.dados||[];
+    const nl=contatos.filter(c=>c.nao_lidas>0).length;
+    $('resumo').textContent=contatos.length+' contato'+(contatos.length===1?'':'s')+(nl?' · '+nl+' com mensagem nova':'');
+    $('lista').innerHTML=contatos.length?contatos.map(c=>'<div class="ct'+(atual===c.id?' on':'')+(c.nao_lidas>0?' novo':'')+'" data-id="'+c.id+'">'+avatar(c)+
+      '<div class="ctx"><div class="ctn"><b>'+esc(nomeDe(c))+(c.nao_lidas>0?'<span class="nl">'+c.nao_lidas+'</span>':'')+'</b><time>'+quando(c.ultimo_em)+'</time></div>'+
+      '<div class="prev">'+(c.ultima_texto?(c.ultima_direcao==='saida'?'Enviado: ':'')+esc(c.ultima_texto):(c.ultima_direcao==='saida'?'Mensagem enviada':'Mensagem recebida'))+'</div>'+
+      ((c.tags||[]).length?'<div class="tags">'+c.tags.slice(0,4).map(t=>'<span class="tag">'+esc(t)+'</span>').join('')+(c.tags.length>4?'<span class="tag">+'+(c.tags.length-4)+'</span>':'')+'</div>':'')+
+      '</div></div>').join(''):'<div class="vazio">Nenhum contato'+(filtro.tag||filtro.busca||filtro.rede||filtro.nao_lidas?' com esse filtro':' ainda — eles aparecem conforme as pessoas comentam e mandam direct')+'.</div>';
+  }catch(e){$('lista').innerHTML='<div class="vazio">Não consegui carregar ('+esc(e.message)+').</div>';}
+}
+async function abrir(id){
+  atual=id; $('box').classList.add('conversa');
+  document.querySelectorAll('.ct').forEach(x=>x.classList.toggle('on',x.dataset.id===id));
+  $('msgs').innerHTML='<div class="vazio">carregando…</div>';
+  try{
+    const r=await api({acao:'conversa',contato_id:id}); const d=r.dados||{}; const c=d.contato||{};
+    $('chdr').innerHTML='<button class="voltar" id="voltar">←</button>'+avatar(c)+'<div class="ctx"><b>'+esc(nomeDe(c))+'</b><small>'+(c.rede==='facebook'?'Facebook':'Instagram')+(c.nome&&c.username?' · '+esc(c.nome):'')+' · desde '+quando(c.primeiro_em)+'</small>'+
+      ((d.tags||[]).length?'<div class="tags">'+d.tags.map(t=>'<span class="tag" title="'+new Date(t.em).toLocaleString('pt-BR')+'">'+esc(t.tag)+'</span>').join('')+'</div>':'')+'</div>';
+    $('voltar').onclick=fecharConversa;
+    let dia='', html='';
+    for(const m of (d.mensagens||[])){
+      const dd=new Date(m.em).toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit',month:'2-digit'});
+      if(dd!==dia){dia=dd;html+='<div class="dia">'+dd+'</div>';}
+      const ex=m.extra||{}; const erro=ex.erro||(ex.status&&ex.status>=300);
+      const lbl=m.canal==='fluxo'?'Automação'+(ex.automacao?': '+ex.automacao:''):(ROT[m.canal]||'');
+      html+='<div class="m '+m.direcao+(erro?' err':'')+'">'+(lbl?'<span class="lbl">'+esc(lbl)+'</span><br>':'')+esc(m.texto||'')+
+        ((ex.botoes||[]).length?'<br>'+ex.botoes.map(b=>'<span class="bt">'+esc(b)+'</span>').join(''):'')+
+        (erro?'<br><b style="color:var(--warn);font-size:11.5px">não entregue: '+esc(ex.erro||('HTTP '+ex.status))+'</b>':'')+
+        '<span class="meta">'+new Date(m.em).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})+'</span></div>';
+    }
+    $('msgs').innerHTML=html||'<div class="vazio">Sem mensagens.</div>';
+    $('msgs').scrollTop=$('msgs').scrollHeight;
+    const aberta=c.ultima_msg_dele && (Date.now()-new Date(c.ultima_msg_dele).getTime())<24*3600e3;
+    $('resp').hidden=false;
+    $('jan').className='jan '+(aberta?'ok':'no');
+    $('jan').textContent=aberta?'✓ Dá pra responder até '+new Date(new Date(c.ultima_msg_dele).getTime()+24*3600e3).toLocaleString('pt-BR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})+' (janela de 24h da Meta)':'🔒 Fora da janela de 24h: a Meta só deixa responder depois que a pessoa mandar uma nova mensagem.';
+    $('txt').placeholder=aberta?'Escreva a resposta…':'Resposta travada até a pessoa escrever de novo';
+    $('enviar').disabled=!aberta; $('txt').disabled=!aberta;
+    const it=contatos.find(x=>x.id===id); if(it&&it.nao_lidas){it.nao_lidas=0;carregarLista();}
+  }catch(e){$('msgs').innerHTML='<div class="vazio">Não consegui abrir ('+esc(e.message)+').</div>';}
+}
+function fecharConversa(){ $('box').classList.remove('conversa'); }
+$('voltar').onclick=fecharConversa;
+$('enviar').onclick=async()=>{
+  const t=$('txt').value.trim(); if(!t||!atual) return;
+  $('enviar').disabled=true;
+  try{const r=await api({acao:'responder',contato_id:atual,texto:t});
+    if(r.ok){$('txt').value='';toast('Enviado ✓');await abrir(atual);carregarLista();} else toast(r.erro||'Não enviou');
+  }catch(e){toast('Erro: '+e.message);} finally{$('enviar').disabled=false;}
+};
+$('txt').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();$('enviar').click();}});
+$('lista').addEventListener('click',e=>{const x=e.target.closest('.ct');if(x)abrir(x.dataset.id);});
+$('redes').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#redes button').forEach(x=>x.classList.toggle('on',x===b));filtro.rede=b.dataset.r;carregarLista();});
+$('ftag').onchange=e=>{filtro.tag=e.target.value;carregarLista();};
+$('fnl').onchange=e=>{filtro.nao_lidas=e.target.checked;carregarLista();};
+let tb; $('busca').oninput=e=>{clearTimeout(tb);tb=setTimeout(()=>{filtro.busca=e.target.value.trim();carregarLista();},350);};
+carregarTags(); carregarLista();
+setInterval(()=>{ if(document.hidden) return; carregarLista(); if(atual && !$('txt').value) abrir(atual); }, 20000);
+setInterval(carregarTags, 120000);
+</script>
+</body>
+</html>
