@@ -1,173 +1,176 @@
 {
-  "gerado_em": "2026-10-06T15:00:19.536Z",
+  "gerado_em": "2026-10-07T15:00:20.200Z",
   "conta": {
     "username": "manualdorecemnascido",
     "display_name": "Manual do Recém-Nascido",
     "seguidores": 813000,
-    "views_totais": 136341581,
+    "views_totais": 136357691,
     "videos_total": 1122,
     "link": "https://youtube.com/@manualdorecemnascido"
   },
   "periodo_semanas": 8,
   "resumo": {
-    "n_videos": 25,
-    "views_total": 735877,
-    "likes_total": 13129,
-    "comments_total": 220,
-    "eng_total": 13349,
-    "eng_medio": 534,
-    "shorts": 24,
+    "n_videos": 24,
+    "views_total": 726950,
+    "likes_total": 12570,
+    "comments_total": 216,
+    "eng_total": 12786,
+    "eng_medio": 533,
+    "shorts": 23,
     "longos": 1,
-    "inscritos_liquido": 4179,
+    "inscritos_liquido": 4202,
     "ret_media_seg": 45
   },
   "por_dia": [
     {
       "data": "2026-10-01",
       "posts": 1,
-      "views": 9804,
-      "engajamento": 381
+      "views": 11131,
+      "engajamento": 418
     },
     {
       "data": "2026-09-30",
       "posts": 1,
-      "views": 2381,
-      "engajamento": 109
+      "views": 2512,
+      "engajamento": 111
     },
     {
       "data": "2026-09-29",
       "posts": 1,
-      "views": 2942,
-      "engajamento": 176
+      "views": 3054,
+      "engajamento": 180
     },
     {
       "data": "2026-09-25",
       "posts": 1,
-      "views": 28669,
-      "engajamento": 1673
+      "views": 29237,
+      "engajamento": 1689
     },
     {
       "data": "2026-09-24",
       "posts": 2,
-      "views": 6827,
-      "engajamento": 216
+      "views": 6929,
+      "engajamento": 217
     },
     {
       "data": "2026-09-22",
       "posts": 1,
-      "views": 4316,
-      "engajamento": 208
+      "views": 4424,
+      "engajamento": 212
     },
     {
       "data": "2026-09-19",
       "posts": 1,
-      "views": 3968,
-      "engajamento": 196
+      "views": 4055,
+      "engajamento": 198
     },
     {
       "data": "2026-09-17",
       "posts": 1,
-      "views": 22906,
-      "engajamento": 713
+      "views": 23083,
+      "engajamento": 714
     },
     {
       "data": "2026-09-16",
       "posts": 1,
-      "views": 3428,
-      "engajamento": 90
+      "views": 3511,
+      "engajamento": 93
     },
     {
       "data": "2026-09-12",
       "posts": 1,
-      "views": 4442,
-      "engajamento": 164
+      "views": 4514,
+      "engajamento": 167
     },
     {
       "data": "2026-09-09",
       "posts": 1,
-      "views": 250195,
-      "engajamento": 2515
+      "views": 253931,
+      "engajamento": 2552
     },
     {
       "data": "2026-09-08",
       "posts": 1,
-      "views": 226244,
-      "engajamento": 2626
+      "views": 235084,
+      "engajamento": 2666
     },
     {
       "data": "2026-09-05",
       "posts": 1,
-      "views": 33731,
-      "engajamento": 600
+      "views": 33978,
+      "engajamento": 601
     },
     {
       "data": "2026-09-03",
       "posts": 1,
-      "views": 7535,
-      "engajamento": 137
+      "views": 7601,
+      "engajamento": 138
     },
     {
       "data": "2026-09-02",
       "posts": 1,
-      "views": 6417,
+      "views": 6472,
       "engajamento": 128
     },
     {
       "data": "2026-09-01",
       "posts": 1,
-      "views": 8062,
-      "engajamento": 355
+      "views": 8110,
+      "engajamento": 356
     },
     {
       "data": "2026-08-29",
       "posts": 1,
-      "views": 35266,
-      "engajamento": 582
+      "views": 35328,
+      "engajamento": 583
     },
     {
       "data": "2026-08-26",
       "posts": 1,
-      "views": 5591,
+      "views": 5636,
       "engajamento": 207
     },
     {
       "data": "2026-08-25",
       "posts": 1,
-      "views": 7327,
-      "engajamento": 288
+      "views": 7388,
+      "engajamento": 291
     },
     {
       "data": "2026-08-22",
       "posts": 1,
-      "views": 15144,
+      "views": 15214,
       "engajamento": 566
     },
     {
       "data": "2026-08-20",
       "posts": 1,
-      "views": 8905,
+      "views": 8966,
       "engajamento": 190
     },
     {
       "data": "2026-08-19",
       "posts": 1,
-      "views": 5541,
+      "views": 5581,
       "engajamento": 149
     },
     {
       "data": "2026-08-14",
       "posts": 1,
-      "views": 11180,
+      "views": 11211,
       "engajamento": 360
-    },
-    {
-      "data": "2026-08-12",
-      "posts": 1,
-      "views": 25056,
-      "engajamento": 720
     }
   ],
   "crescimento": [
+    {
+      "data": "2026-10-04",
+      "views": 81757,
+      "ganhos": 111,
+      "perdidos": 25,
+      "liquido": 86,
+      "min_assistidos": 24618,
+      "ret_media_seg": 40
+    },
     {
       "data": "2026-10-03",
       "views": 93755,
@@ -644,15 +647,6 @@
       "liquido": 111,
       "min_assistidos": 32935,
       "ret_media_seg": 45
-    },
-    {
-      "data": "2026-08-11",
-      "views": 66449,
-      "ganhos": 158,
-      "perdidos": 95,
-      "liquido": 63,
-      "min_assistidos": 31610,
-      "ret_media_seg": 48
     }
   ],
   "videos": [
@@ -662,10 +656,10 @@
       "thumb": "https://i.ytimg.com/vi/TZQgmdwUX_I/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=TZQgmdwUX_I",
       "publicado_em": "2026-09-09T14:00:51Z",
-      "views": 250195,
-      "curtidas": 2503,
-      "comentarios": 12,
-      "engajamento": 2515,
+      "views": 253931,
+      "curtidas": 2539,
+      "comentarios": 13,
+      "engajamento": 2552,
       "formato": "short",
       "duracao_seg": 37
     },
@@ -675,10 +669,10 @@
       "thumb": "https://i.ytimg.com/vi/bZ6qFuvgcqg/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=bZ6qFuvgcqg",
       "publicado_em": "2026-09-08T11:00:57Z",
-      "views": 226244,
-      "curtidas": 2598,
-      "comentarios": 28,
-      "engajamento": 2626,
+      "views": 235084,
+      "curtidas": 2637,
+      "comentarios": 29,
+      "engajamento": 2666,
       "formato": "short",
       "duracao_seg": 54
     },
@@ -688,10 +682,10 @@
       "thumb": "https://i.ytimg.com/vi/FXDsg1L6-fU/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=FXDsg1L6-fU",
       "publicado_em": "2026-08-29T14:15:39Z",
-      "views": 35266,
-      "curtidas": 578,
+      "views": 35328,
+      "curtidas": 579,
       "comentarios": 4,
-      "engajamento": 582,
+      "engajamento": 583,
       "formato": "short",
       "duracao_seg": 20
     },
@@ -701,10 +695,10 @@
       "thumb": "https://i.ytimg.com/vi/5vzDC5zE724/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=5vzDC5zE724",
       "publicado_em": "2026-09-05T14:00:48Z",
-      "views": 33731,
-      "curtidas": 589,
+      "views": 33978,
+      "curtidas": 590,
       "comentarios": 11,
-      "engajamento": 600,
+      "engajamento": 601,
       "formato": "short",
       "duracao_seg": 34
     },
@@ -714,25 +708,12 @@
       "thumb": "https://i.ytimg.com/vi/ii4yiCncXJg/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=ii4yiCncXJg",
       "publicado_em": "2026-09-25T11:01:58Z",
-      "views": 28669,
-      "curtidas": 1595,
+      "views": 29237,
+      "curtidas": 1611,
       "comentarios": 78,
-      "engajamento": 1673,
+      "engajamento": 1689,
       "formato": "short",
       "duracao_seg": 87
-    },
-    {
-      "id": "nPLW-wJBxc0",
-      "titulo": "Dica para deixar o banho do bebê relaxante",
-      "thumb": "https://i.ytimg.com/vi/nPLW-wJBxc0/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=nPLW-wJBxc0",
-      "publicado_em": "2026-08-12T14:00:51Z",
-      "views": 25056,
-      "curtidas": 713,
-      "comentarios": 7,
-      "engajamento": 720,
-      "formato": "short",
-      "duracao_seg": 24
     },
     {
       "id": "dAwAO8DDnd4",
@@ -740,10 +721,10 @@
       "thumb": "https://i.ytimg.com/vi/dAwAO8DDnd4/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=dAwAO8DDnd4",
       "publicado_em": "2026-09-17T11:00:54Z",
-      "views": 22906,
-      "curtidas": 702,
+      "views": 23083,
+      "curtidas": 703,
       "comentarios": 11,
-      "engajamento": 713,
+      "engajamento": 714,
       "formato": "short",
       "duracao_seg": 50
     },
@@ -753,7 +734,7 @@
       "thumb": "https://i.ytimg.com/vi/O3gyQvGntcI/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=O3gyQvGntcI",
       "publicado_em": "2026-08-22T14:00:51Z",
-      "views": 15144,
+      "views": 15214,
       "curtidas": 551,
       "comentarios": 15,
       "engajamento": 566,
@@ -766,7 +747,7 @@
       "thumb": "https://i.ytimg.com/vi/Os-7anIicWY/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=Os-7anIicWY",
       "publicado_em": "2026-08-14T13:12:44Z",
-      "views": 11180,
+      "views": 11211,
       "curtidas": 350,
       "comentarios": 10,
       "engajamento": 360,
@@ -779,10 +760,10 @@
       "thumb": "https://i.ytimg.com/vi/23AmEjxtSXU/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=23AmEjxtSXU",
       "publicado_em": "2026-10-01T11:00:56Z",
-      "views": 9804,
-      "curtidas": 378,
-      "comentarios": 3,
-      "engajamento": 381,
+      "views": 11131,
+      "curtidas": 414,
+      "comentarios": 4,
+      "engajamento": 418,
       "formato": "short",
       "duracao_seg": 40
     },
@@ -792,7 +773,7 @@
       "thumb": "https://i.ytimg.com/vi/d53-s77xbXo/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=d53-s77xbXo",
       "publicado_em": "2026-08-20T11:00:44Z",
-      "views": 8905,
+      "views": 8966,
       "curtidas": 184,
       "comentarios": 6,
       "engajamento": 190,
@@ -805,10 +786,10 @@
       "thumb": "https://i.ytimg.com/vi/2tizlWadtSA/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=2tizlWadtSA",
       "publicado_em": "2026-09-01T11:00:59Z",
-      "views": 8062,
-      "curtidas": 352,
+      "views": 8110,
+      "curtidas": 353,
       "comentarios": 3,
-      "engajamento": 355,
+      "engajamento": 356,
       "formato": "short",
       "duracao_seg": 41
     },
@@ -818,10 +799,10 @@
       "thumb": "https://i.ytimg.com/vi/D9C7BznvWnA/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=D9C7BznvWnA",
       "publicado_em": "2026-09-03T11:00:40Z",
-      "views": 7535,
-      "curtidas": 133,
+      "views": 7601,
+      "curtidas": 134,
       "comentarios": 4,
-      "engajamento": 137,
+      "engajamento": 138,
       "formato": "short",
       "duracao_seg": 11
     },
@@ -831,10 +812,10 @@
       "thumb": "https://i.ytimg.com/vi/IT6NrKjME3w/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=IT6NrKjME3w",
       "publicado_em": "2026-08-25T11:00:54Z",
-      "views": 7327,
-      "curtidas": 286,
+      "views": 7388,
+      "curtidas": 289,
       "comentarios": 2,
-      "engajamento": 288,
+      "engajamento": 291,
       "formato": "short",
       "duracao_seg": 26
     },
@@ -844,10 +825,10 @@
       "thumb": "https://i.ytimg.com/vi/l2LDXgsjWrU/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=l2LDXgsjWrU",
       "publicado_em": "2026-09-24T11:00:47Z",
-      "views": 6827,
-      "curtidas": 213,
+      "views": 6929,
+      "curtidas": 214,
       "comentarios": 3,
-      "engajamento": 216,
+      "engajamento": 217,
       "formato": "short",
       "duracao_seg": 54
     },
@@ -857,7 +838,7 @@
       "thumb": "https://i.ytimg.com/vi/YbSwO9UF4To/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=YbSwO9UF4To",
       "publicado_em": "2026-09-02T14:00:41Z",
-      "views": 6417,
+      "views": 6472,
       "curtidas": 127,
       "comentarios": 1,
       "engajamento": 128,
@@ -870,7 +851,7 @@
       "thumb": "https://i.ytimg.com/vi/puXoits4I3A/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=puXoits4I3A",
       "publicado_em": "2026-08-26T14:00:48Z",
-      "views": 5591,
+      "views": 5636,
       "curtidas": 206,
       "comentarios": 1,
       "engajamento": 207,
@@ -883,7 +864,7 @@
       "thumb": "https://i.ytimg.com/vi/_DNjVZs8t-Y/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=_DNjVZs8t-Y",
       "publicado_em": "2026-08-19T11:00:44Z",
-      "views": 5541,
+      "views": 5581,
       "curtidas": 148,
       "comentarios": 1,
       "engajamento": 149,
@@ -896,10 +877,10 @@
       "thumb": "https://i.ytimg.com/vi/BJfs0Jn-RNk/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=BJfs0Jn-RNk",
       "publicado_em": "2026-09-12T14:00:57Z",
-      "views": 4442,
-      "curtidas": 162,
+      "views": 4514,
+      "curtidas": 165,
       "comentarios": 2,
-      "engajamento": 164,
+      "engajamento": 167,
       "formato": "short",
       "duracao_seg": 46
     },
@@ -909,10 +890,10 @@
       "thumb": "https://i.ytimg.com/vi/-1Vy5N_AYrw/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=-1Vy5N_AYrw",
       "publicado_em": "2026-09-22T14:30:50Z",
-      "views": 4316,
-      "curtidas": 205,
+      "views": 4424,
+      "curtidas": 209,
       "comentarios": 3,
-      "engajamento": 208,
+      "engajamento": 212,
       "formato": "short",
       "duracao_seg": 38
     },
@@ -922,10 +903,10 @@
       "thumb": "https://i.ytimg.com/vi/jDWwboa6nRI/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=jDWwboa6nRI",
       "publicado_em": "2026-09-19T14:00:59Z",
-      "views": 3968,
-      "curtidas": 194,
+      "views": 4055,
+      "curtidas": 196,
       "comentarios": 2,
-      "engajamento": 196,
+      "engajamento": 198,
       "formato": "short",
       "duracao_seg": 63
     },
@@ -935,10 +916,10 @@
       "thumb": "https://i.ytimg.com/vi/JSRZoWve7fU/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=JSRZoWve7fU",
       "publicado_em": "2026-09-16T14:00:39Z",
-      "views": 3428,
-      "curtidas": 88,
+      "views": 3511,
+      "curtidas": 91,
       "comentarios": 2,
-      "engajamento": 90,
+      "engajamento": 93,
       "formato": "short",
       "duracao_seg": 29
     },
@@ -948,10 +929,10 @@
       "thumb": "https://i.ytimg.com/vi/qAi0pfMamFY/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=qAi0pfMamFY",
       "publicado_em": "2026-09-29T11:00:55Z",
-      "views": 2942,
-      "curtidas": 169,
+      "views": 3054,
+      "curtidas": 173,
       "comentarios": 7,
-      "engajamento": 176,
+      "engajamento": 180,
       "formato": "short",
       "duracao_seg": 63
     },
@@ -961,10 +942,10 @@
       "thumb": "https://i.ytimg.com/vi/lBsNkxpZOSs/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=lBsNkxpZOSs",
       "publicado_em": "2026-09-30T14:00:55Z",
-      "views": 2381,
-      "curtidas": 105,
+      "views": 2512,
+      "curtidas": 107,
       "comentarios": 4,
-      "engajamento": 109,
+      "engajamento": 111,
       "formato": "short",
       "duracao_seg": 79
     },
