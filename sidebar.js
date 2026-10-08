@@ -18,47 +18,47 @@
     burger:'<path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/>'
   };
   var NAV=[
-    {item:'Início', href:'index.html', ic:'home'},
+    {item:'Início', href:'index.html', ic:'⌂'},
     {cat:'Métricas'},
-    {item:'Panorama', href:'panorama.html', ic:'globe'},
-    {item:'Dashboard Link Bio', href:'dashbio.html', ic:'link'},
+    {item:'Panorama', href:'panorama.html', ic:'📈'},
+    {item:'Dashboard Link Bio', href:'dashbio.html', ic:'🔗'},
     {cat:'Ferramentas'},
-    {item:'Publicador', href:'publicador.html', ic:'send'},
-    {item:'Calendário de posts', href:'calendario.html', ic:'cal'},
-    {item:'Calendário de produtos', href:'calendario.html?visao=produtos', ic:'cal'},
-    {item:'Biblioteca de mídia', href:'midia.html', ic:'lib'},
-    {item:'Automações', href:'automacoes.html', ic:'bolt'},
-    {item:'Caixa de entrada', href:'inbox.html', ic:'chat'},
-    {item:'Contatos', href:'contatos.html', ic:'users'},
+    {item:'Publicador', href:'publicador.html', ic:'📤'},
+    {item:'Calendário de posts', href:'calendario.html', ic:'📅'},
+    {item:'Calendário de produtos', href:'calendario.html?visao=produtos', ic:'🛍️'},
+    {item:'Biblioteca de mídia', href:'midia.html', ic:'🎞️'},
+    {item:'Automações', href:'automacoes.html', ic:'⚡'},
+    {item:'Caixa de entrada', href:'inbox.html', ic:'💬'},
+    {item:'Contatos', href:'contatos.html', ic:'👥'},
     {cat:'Admin'},
-    {item:'Admin', href:'admin.html', ic:'gear'}
+    {item:'Admin', href:'admin.html', ic:'⚙'}
   ];
   var path=(location.pathname.split('/').pop()||'index.html').toLowerCase()||'index.html';
-  var svg=function(k){return '<svg viewBox="0 0 24 24">'+ICON[k]+'</svg>';};
+  var svg=function(k){return ICON[k]?'<svg viewBox="0 0 24 24">'+ICON[k]+'</svg>':'<i class="em">'+k+'</i>';};
 
   // Estilo do CRM (pedido Bruno 08/Out): menu verde FLUTUANTE (solto da borda, cantos 24px, sombra), itens em
   // maiúscula pequena, item ativo = pílula clara com sombra, cards com cantos 16px e sombra suave, miolo mais largo.
-  // Fundo mostarda (#F6E6BC) continua (decisão 02/Out).
+  // 08/Out (Bruno): fundo e ícones também iguais ao CRM — fundo verde-claro #E8F1F0 (era mostarda desde 02/Out), ícones emoji, texto branco.
   var estreita=/^(admin|hashtags|legendas)\.html$/.test(path); // telas de formulário ficam mais estreitas
   var css=''
    +'.top{display:none!important}'
-   +'body{padding-left:260px;background:#F6E6BC !important}'
+   +'body{padding-left:260px;background:#E8F1F0 !important}'
    +'.wrap{max-width:'+(estreita?'1100px':'1480px')+' !important;padding-left:24px !important;padding-right:24px !important;padding-top:24px !important}'
-   +'*::-webkit-scrollbar{width:8px;height:8px}*::-webkit-scrollbar-track{background:transparent}*::-webkit-scrollbar-thumb{background:#D8CBA4;border-radius:8px}*::-webkit-scrollbar-thumb:hover{background:#C9B98C}'
+   +'*::-webkit-scrollbar{width:8px;height:8px}*::-webkit-scrollbar-track{background:transparent}*::-webkit-scrollbar-thumb{background:#CBDCD8;border-radius:8px}*::-webkit-scrollbar-thumb:hover{background:#B4CCC6}'
    +'.panel,.card,.kpi,.col,.igcard,.idcard,.insight,.panelf,.pessoas{border-radius:16px !important;box-shadow:0 1px 2px rgba(35,51,47,.06),0 4px 16px -6px rgba(35,51,47,.12) !important}'
    +'.sb{position:fixed;left:12px;top:12px;bottom:12px;width:236px;background:#3A5049;color:#E7EEEC;display:flex;flex-direction:column;z-index:40;overflow:hidden;border-radius:24px;box-shadow:0 12px 32px rgba(35,50,45,.22);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}'
    +'.sb nav{padding:20px 12px 12px;flex:1;overflow-y:auto}'
    +'.sb nav::-webkit-scrollbar-thumb{background:#4A625A}'
    +'#insight,#note{display:none !important}#row2{grid-template-columns:1fr !important}'
    +'.panel h2,.listhead h2,.sec,.kpi:not(.hero) .lb,.kpi:not(.hero) .lab,.netbar .nh,.filters .flabel,.drow.dhead span,label.f,label.ff{color:#111 !important}'
-   +'.pagehdr p,.pagehdr .up,.pagehdr small{color:#5E5843 !important}'
+   +'.pagehdr p,.pagehdr .up,.pagehdr small{color:#6E827D !important}'
    +'.sb .cat{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.62);padding:16px 12px 6px}'
    +'.sb .cat:first-child{padding-top:0}'
-   +'.sb a.n{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:#9DB3AD;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px;text-decoration:none;transition:background .15s,color .15s}'
+   +'.sb a.n{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:#E7EEEC;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px;text-decoration:none;transition:background .15s,color .15s}'
    +'.sb a.n span{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'
-   +'.sb a.n svg{width:17px;height:17px;fill:currentColor;opacity:.8;flex:0 0 auto}'
-   +'.sb a.n:hover{background:rgba(255,255,255,.05);color:#E7EEEC}'
-   +'.sb a.n.on{background:#F6E6BC;color:#23332F;font-weight:700;box-shadow:0 1px 2px rgba(35,51,47,.06),0 4px 16px -6px rgba(35,51,47,.12)}'
+   +'.sb a.n svg{width:17px;height:17px;fill:currentColor;opacity:.8;flex:0 0 auto}.sb a.n .em{font-style:normal;font-size:16px;line-height:1;width:18px;text-align:center;flex:0 0 auto;opacity:.85}.sb a.n.on .em{opacity:1}'
+   +'.sb a.n:hover{background:rgba(255,255,255,.06);color:#fff}'
+   +'.sb a.n.on{background:#E8F1F0;color:#23332F;font-weight:700;box-shadow:0 1px 2px rgba(35,51,47,.06),0 4px 16px -6px rgba(35,51,47,.12)}'
    +'.sb a.n.on svg{opacity:1;fill:#3A5049}'
    +'.sb a.n .ex{flex:0 0 auto;font-size:11px;opacity:.5}'
    +'.sb .ft{padding:14px 20px 16px;border-top:1px solid rgba(255,255,255,.1);font-size:11px;color:#9DB3AD;line-height:1.45}'
