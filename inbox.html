@@ -8,113 +8,117 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta name="theme-color" content="#3A5049">
 <style>
-  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--hover:#E9F3F1;--line:#DCE8E6;--ink:#23332F;--mute:#6E827D;--dim:#93A5A1;--gold:#E3A31B;--goldink:#8A5E0A;--goldbg:#FDF1D6;--menu:#3A5049;--live:#1E874B;--ig:#C13584;--fb:#1877F2;--warn:#a33a26}
+  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--hover:#FBF8F0;--line:#E6E0D0;--ink:#1A2522;--mute:#5A6B65;--dim:#6B7B76;--gold:#E3A31B;--menu:#3A5049;--live:#1E874B;--ig:#C13584;--fb:#1877F2}
   *{margin:0;padding:0;box-sizing:border-box} [hidden]{display:none!important}
   body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.45;overflow-x:hidden}
   .top{background:var(--menu);color:#E7EEEC;padding:18px 22px}
-  .wrap{max-width:1180px;margin:0 auto;padding:20px 16px 40px}
-  .pagehdr{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:0 4px 12px}
+  .wrap{max-width:1240px;margin:0 auto;padding:20px 16px 40px}
+  .pagehdr{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:0 4px 14px}
   .pagehdr h1{font-size:1.5rem;font-weight:800;letter-spacing:-.02em}
   .resumo{font-size:.85rem;color:var(--mute);font-weight:600}
-  .box{display:grid;grid-template-columns:360px 1fr;gap:14px;height:calc(100vh - 150px);min-height:520px}
-  .col{background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 16px rgba(35,51,47,.05);display:flex;flex-direction:column;min-height:0;overflow:hidden}
+  /* abas grandes */
+  .abas{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+  .abas button{display:flex;align-items:center;justify-content:center;gap:10px;height:58px;border-radius:16px;border:1px solid var(--line);background:var(--panel);font:800 16px inherit;font-family:inherit;color:var(--mute);cursor:pointer;box-shadow:0 1px 2px rgba(35,51,47,.04)}
+  .abas button .ic{font-size:20px}
+  .abas button.on{background:var(--menu);border-color:var(--menu);color:#fff;box-shadow:0 6px 16px rgba(58,80,73,.22)}
+  .abas .cnt{font-size:12px;font-weight:800;border-radius:999px;padding:2px 9px;background:#EFE7D3;color:var(--menu)}
+  .abas button.on .cnt{background:rgba(255,255,255,.18);color:#fff}
+  /* painéis */
+  .box{display:grid;grid-template-columns:380px 1fr;gap:14px;height:calc(100vh - 210px);min-height:520px}
+  .col{background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 16px rgba(35,51,47,.05);display:flex;flex-direction:column;min-height:0;min-width:0;overflow:hidden}
   .filtros{padding:12px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
-  .filtros input,.filtros select{width:100%;border:1px solid var(--line);border-radius:10px;padding:8px 11px;font-family:inherit;font-size:13.5px;background:var(--card);color:var(--ink)}
+  .filtros input,.filtros select{width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-family:inherit;font-size:13.5px;background:#FBFAF6;color:var(--ink)}
   .linha{display:flex;gap:8px;align-items:center}
-  .seg{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1}
-  .seg button{flex:1;border:0;background:var(--card);font:700 12px inherit;font-family:inherit;padding:7px 4px;color:var(--mute);cursor:pointer}
+  .seg{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:1;min-width:0}
+  .seg button{flex:1;border:0;background:#FBFAF6;font:700 12.5px inherit;font-family:inherit;padding:8px 4px;color:var(--mute);cursor:pointer;white-space:nowrap}
   .seg button.on{background:var(--menu);color:#fff}
+  .sub{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line);background:#FBFAF6}
+  .sub button{flex:1;border:1px solid var(--line);background:#fff;border-radius:10px;padding:9px 6px;font:800 13px inherit;font-family:inherit;color:var(--mute);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
+  .sub button.on{border-color:var(--gold);background:#FFF4D9;color:#7F5600}
+  .sub .n{font-size:11px;background:#EFE7D3;border-radius:999px;padding:1px 7px;color:var(--menu)}
   .tg{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:var(--mute);white-space:nowrap;cursor:pointer}
   .tg input{width:15px;height:15px;accent-color:var(--live)}
   .lista{overflow-y:auto;flex:1}
+  .vazio{color:var(--mute);text-align:center;padding:30px 16px;font-size:13.5px}
+  /* contatos (lista de mensagens) */
   .ct{display:flex;gap:12px;padding:13px 16px;min-height:76px;border-bottom:1px solid #EFE7D3;cursor:pointer;align-items:flex-start;border-left:4px solid transparent}
-  .ct:hover{background:#FBF8F0} .ct.on{background:#fff;border-left-color:var(--gold);box-shadow:0 2px 8px rgba(0,0,0,.04)}
+  .ct:hover{background:var(--hover)} .ct.on{background:#FFF9EB;border-left-color:#E69526}
   .ct.novo b{font-weight:800} .ct.novo .prev{color:var(--ink);font-weight:600}
-  .av svg{width:20px;height:20px;fill:#9DB3AD}
-  .av{width:44px;height:44px;border-radius:50%;background:var(--hover);flex:none;position:relative;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--menu);font-size:14px;overflow:hidden}
-  .av img{width:100%;height:100%;object-fit:cover}
+  .av{width:44px;height:44px;border-radius:50%;background:#EEF3F1;flex:none;position:relative;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--menu);font-size:15px;overflow:visible}
+  .av img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+  .av svg{width:22px;height:22px;fill:#9DB3AD}
   .rd{position:absolute;right:-1px;bottom:-1px;width:14px;height:14px;border-radius:50%;border:2px solid #fff}
   .rd.instagram{background:var(--ig)} .rd.facebook{background:var(--fb)}
   .ctx{min-width:0;flex:1}
   .ctn{display:flex;justify-content:space-between;gap:6px}
-  .ctn b{font-size:14px;font-weight:600;color:#1A2522;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .ctn time{font-size:11px;color:#6B7B76;white-space:nowrap;padding-top:2px}
-  .prev{font-size:13px;color:#5A6B65;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ctn b{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ctn time{font-size:11px;color:var(--dim);white-space:nowrap;padding-top:2px}
+  .prev{font-size:13px;color:var(--mute);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .nl{background:var(--gold);color:#fff;font-size:11px;font-weight:800;border-radius:10px;padding:1px 7px;margin-left:6px}
   .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
   .tag{font-size:10.5px;font-weight:600;color:#3A5049;background:#E8EFEA;border-radius:12px;padding:2px 8px;line-height:14px}
-  .tag.mais{background:#F1EEE6;color:#5A6B65}
-  .vazio{color:var(--mute);text-align:center;padding:30px 16px;font-size:13.5px}
-  .chdr{padding:14px 18px;border-bottom:1px solid #EFE7D3;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .tag.mais{background:#F1EEE6;color:var(--mute)}
+  .vf{display:inline-flex;width:15px;height:15px;border-radius:50%;background:#3897F0;color:#fff;font-size:10px;align-items:center;justify-content:center;margin-left:4px;vertical-align:-2px;font-weight:900}
+  .anon{color:var(--mute);font-style:italic}
+  /* conversa */
+  .chdr{padding:14px 18px;border-bottom:1px solid #EFE7D3;display:flex;gap:12px;align-items:center;flex-wrap:wrap;min-height:72px}
+  .chdr .ctx b{font-size:16px;font-weight:700}
+  .chdr small{display:block;color:var(--mute);font-size:12.5px;margin-top:2px}
   .chdr .tags{margin:6px 0 0 auto;justify-content:flex-end;max-width:45%}
   .chdr .tags .tag{background:#FFF4D9;border:1px solid #F0D38D;color:#7F5600;font-size:11px;padding:3px 10px}
-  .chdr .ctx b{font-size:16px;font-weight:700;color:#1A2522}
-  .chdr small{display:block;color:#5A6B65;font-size:12.5px;margin-top:2px}
   .voltar{display:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:6px 10px;font-weight:800;font-family:inherit;cursor:pointer;color:var(--menu)}
   .msgs{flex:1;overflow-y:auto;padding:20px 22px;display:flex;flex-direction:column;gap:6px;background:#FAFAF7}
-  .m{max-width:68%;padding:10px 14px;border-radius:12px;font-size:14px;line-height:1.5;white-space:pre-wrap;word-wrap:break-word;color:#1A2522}
+  .m{max-width:68%;padding:10px 14px;border-radius:12px;font-size:14px;line-height:1.5;white-space:pre-wrap;word-wrap:break-word}
   .m.troca{margin-top:14px}
   .m a{color:#1B67D2;text-decoration:underline;word-break:break-all}
   .m.entrada{align-self:flex-start;background:#fff;border:1px solid #E2E8E5;border-radius:12px 12px 12px 2px}
   .m.saida{align-self:flex-end;background:#F3F7F5;border:1px dashed #B8C7C1;border-radius:12px 12px 2px 12px}
   .m.saida.humano{background:#3A5049;border:0;color:#fff} .m.saida.humano .meta{color:#C9D6D1} .m.saida.humano .lbl{background:rgba(255,255,255,.16);color:#fff} .m.saida.humano a{color:#CFE3FF}
   .m.saida.publica{background:#fff;border:1px solid #E2E8E5}
-  .m .meta{display:block;font-size:11px;color:#6B7B76;margin-top:6px;font-weight:600;text-align:right}
+  .m .meta{display:block;font-size:11px;color:var(--dim);margin-top:6px;font-weight:600;text-align:right}
   .m .lbl{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;border-radius:4px;padding:2px 6px;margin-bottom:6px;background:rgba(58,80,73,.1);color:#3A5049}
   .m .bts{display:flex;flex-direction:column;gap:6px;margin-top:10px}
   .m .bt{display:block;text-align:center;font-size:12px;font-weight:700;border:1px solid var(--gold);color:#8F6300;border-radius:6px;padding:7px 14px;background:#fff}
-  .m.err{border:1px solid #e3c4bd;background:#fbefec}
-  .dia{align-self:center;font-size:11px;color:#5A6B65;font-weight:700;margin:16px 0 8px;background:#EFE7D3;border-radius:12px;padding:4px 12px}
-  .resp{border-top:1px solid #EFE7D3;padding:12px 16px;display:flex;flex-direction:column;gap:6px}
-  .resp .jan{font-size:12.5px;font-weight:600;border-radius:8px;padding:12px 16px}
-  .jan.ok{color:#1E6B3E;background:#EAF5EE;border:1px solid #CFE6D7} .jan.no{color:#7F5600;background:#FFF9EB;border:1px solid #F3E0B5}
-  .resp textarea:disabled{background:#EEF2F1;color:var(--dim);cursor:not-allowed}
-  .resp .linha textarea{flex:1;border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-family:inherit;font-size:13.5px;resize:none;height:44px;background:var(--card)}
-  .btn{font-size:13px;font-weight:800;border-radius:10px;padding:9px 16px;cursor:pointer;border:1px solid var(--menu);background:var(--menu);color:#fff;font-family:inherit}
-  .btn:disabled{opacity:.45;cursor:default}
-  .abas{display:flex;gap:6px;margin:0 4px 12px;flex-wrap:wrap}
-  .abas button{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:8px 16px;font:800 13px inherit;font-family:inherit;color:var(--mute);cursor:pointer;display:flex;align-items:center;gap:7px}
-  .abas button.on{background:var(--menu);border-color:var(--menu);color:#fff}
-  .abas .cnt{font-size:11px;font-weight:800;border-radius:999px;padding:0 7px;background:var(--hover);color:var(--menu)}
-  .abas button.on .cnt{background:rgba(255,255,255,.18);color:#fff}
-  .cm{padding:12px 14px;border-bottom:1px solid var(--line);cursor:pointer}
-  .cm:hover{background:var(--hover)} .cm.on{background:#DCEBE7;box-shadow:inset 3px 0 0 var(--menu)}
-  .cm .top2{display:flex;gap:10px;align-items:center}
-  .cm .txt{margin:8px 0 0 48px;font-size:14px;font-weight:600;color:var(--ink);white-space:pre-wrap;word-wrap:break-word}
-  .cm .rp{margin:8px 0 0 48px;font-size:12.5px;color:#4A5D58;background:var(--card);border-radius:10px;padding:6px 10px}
-  .cm .auto{margin:6px 0 0 48px;display:flex;gap:6px;flex-wrap:wrap}
+  .m.err{border:1px solid #EBC9BF;background:#FDF3EF}
+  .m .nao{display:block;margin-top:8px;font-size:12px;font-weight:700;color:#9A3B22}
+  .dia{align-self:center;font-size:11px;color:var(--mute);font-weight:700;margin:16px 0 8px;background:#EFE7D3;border-radius:12px;padding:4px 12px}
+  .resp{border-top:1px solid #EFE7D3;padding:12px 16px}
+  .resp .linha textarea{flex:1;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-family:inherit;font-size:14px;resize:none;height:46px;background:#FBFAF6}
+  .resp textarea:disabled{background:#F4F6F5;color:#8A9993;cursor:not-allowed}
+  .btn{font-size:13px;font-weight:800;border-radius:10px;padding:10px 18px;cursor:pointer;border:1px solid var(--menu);background:var(--menu);color:#fff;font-family:inherit}
+  .btn:disabled{background:#C8D3CE;border-color:#C8D3CE;cursor:not-allowed}
+  /* comentários por post */
+  .pst{display:flex;gap:12px;padding:12px 14px;border-bottom:1px solid #EFE7D3;cursor:pointer;border-left:4px solid transparent}
+  .pst:hover{background:var(--hover)} .pst.on{background:#FFF9EB;border-left-color:#E69526}
+  .th{width:64px;height:64px;border-radius:10px;background:#EEF3F1;flex:none;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;color:#9DB3AD;font-size:22px}
+  .th img{width:100%;height:100%;object-fit:cover}
+  .th .rd{right:3px;bottom:3px}
+  .pst .leg{font-size:13px;color:var(--ink);font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .pst .info{font-size:12px;color:var(--mute);margin-top:6px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
   .pill{font-size:10.5px;font-weight:800;border-radius:999px;padding:2px 8px;background:#EAF5EE;color:var(--live)}
-  .pill.no{background:var(--hover);color:var(--mute)}
-  .vf{display:inline-flex;width:15px;height:15px;border-radius:50%;background:#3897F0;color:#fff;font-size:10px;align-items:center;justify-content:center;margin-left:4px;vertical-align:-2px;font-weight:900}
-  .anon{color:var(--mute);font-style:italic}
-  /* aba Contatos */
-  .pessoas{background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 16px rgba(35,51,47,.05);overflow:hidden}
-  .pessoas .filtros{flex-direction:row;flex-wrap:wrap;align-items:center}
-  .pessoas .filtros input{flex:1;min-width:200px;width:auto}
-  .pessoas .filtros select{width:auto}
-  .pessoas .filtros .tg input{width:15px;min-width:0;flex:none;padding:0}
-  .tab th{white-space:nowrap}
-  .tab{width:100%;border-collapse:collapse;font-size:13px}
-  .tab th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute);font-weight:800;padding:10px 12px;border-bottom:1px solid var(--line);background:var(--card);position:sticky;top:0}
-  .tab td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
-  .tab tr:hover td{background:var(--hover);cursor:pointer}
-  .tab .pess{display:flex;gap:10px;align-items:center;min-width:0}
-  .tab .pess b{display:block;font-size:13.5px}
-  .tab .pess small{display:block;color:var(--mute);font-size:12px}
-  .tab .num{font-variant-numeric:tabular-nums;font-weight:700}
-  .tabwrap{overflow:auto;max-height:calc(100vh - 230px)}
-  .nota{font-size:12.5px;color:#4A5D58;padding:10px 14px;border-top:1px solid var(--line);background:var(--card)}
-  @media (max-width:820px){ .box{grid-template-columns:minmax(0,1fr)!important} .col,.pessoas,.filtros,.seg{min-width:0} .abas{gap:5px} .abas button{padding:7px 11px;font-size:12.5px} .tab td,.tab th{padding:9px 8px} .tab .esc{display:none} .seg button{font-size:11.5px;padding:7px 2px} .pessoas .filtros select{width:100%} .pessoas .filtros .seg{min-width:0!important;width:100%} }
+  .pill.cinza{background:#F1EEE6;color:var(--mute)}
+  .phdr{display:flex;gap:14px;padding:14px 18px;border-bottom:1px solid #EFE7D3;align-items:flex-start}
+  .phdr .th{width:72px;height:72px;border-radius:12px}
+  .phdr .leg{font-size:13.5px;color:var(--ink);white-space:pre-wrap;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+  .phdr a.abrir{display:inline-block;margin-top:8px;font-size:12.5px;font-weight:800;color:var(--menu);text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:5px 10px}
+  .cms{flex:1;overflow-y:auto;background:#FAFAF7;padding:8px 0}
+  .cm{display:flex;gap:12px;padding:12px 18px;border-bottom:1px solid #F0EBDD}
+  .cm .txt{font-size:14px;font-weight:600;margin-top:4px;white-space:pre-wrap;word-wrap:break-word}
+  .cm .rp{margin-top:8px;font-size:12.5px;color:var(--mute);background:#F1EFE8;border:0;border-radius:10px;padding:8px 12px}
+  .cm .acoes{margin-top:8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .cm .ver{font-size:12px;font-weight:800;color:var(--menu);background:none;border:1px solid var(--line);border-radius:8px;padding:4px 10px;cursor:pointer;font-family:inherit}
   .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--menu);color:#fff;padding:10px 18px;border-radius:999px;font-size:13px;font-weight:600;opacity:0;transition:.2s;pointer-events:none;z-index:30;max-width:90vw;text-align:center}
   .toast.show{opacity:1}
   @media (max-width:820px){
     .wrap{padding:14px 12px 30px}
-    .box{grid-template-columns:1fr;height:calc(100vh - 130px)}
-    .box.conversa .col.lado{display:none}
-    .box:not(.conversa) .col.chat{display:none}
+    .abas button{height:50px;font-size:14.5px}
+    .box{grid-template-columns:minmax(0,1fr);height:calc(100vh - 170px)}
+    .box.aberto .col.lado{display:none}
+    .box:not(.aberto) .col.chat{display:none}
     .voltar{display:inline-block}
     .pagehdr h1{display:none}
     .m{max-width:90%}
+    .chdr .tags{max-width:100%;margin-left:0}
   }
 </style>
 </head>
@@ -122,39 +126,41 @@
 <div class="top"><b>Caixa de entrada</b></div>
 <div class="wrap">
   <div class="pagehdr"><h1>Caixa de entrada</h1><span class="resumo" id="resumo"></span></div>
-  <div class="abas" id="abas"><button data-a="mensagens" class="on">💬 Mensagens</button><button data-a="comentarios">🗨️ Comentários</button><button data-a="contatos">👥 Contatos <span class="cnt" id="ncont"></span></button></div>
-  <div class="pessoas" id="pessoas" hidden>
-    <div class="filtros">
-      <input id="pbusca" placeholder="Buscar por @ ou nome">
-      <div class="seg" id="predes" style="flex:0 0 auto;min-width:240px"><button data-r="" class="on">Todas</button><button data-r="instagram">Instagram</button><button data-r="facebook">Facebook</button></div>
-      <select id="ptag"><option value="">Todos os fluxos</option></select>
-      <select id="pord"><option value="recentes">Interação mais recente</option><option value="primeiros">Primeira interação</option><option value="seguidores">Mais seguidores</option></select>
-      <label class="tg"><input type="checkbox" id="pvf">só verificados</label>
-    </div>
-    <div class="tabwrap"><table class="tab"><thead><tr><th>Pessoa</th><th>Rede</th><th class="esc">Seguidores</th><th>1ª interação</th><th class="esc">Última</th><th class="esc">Interações</th><th>Fluxos</th></tr></thead><tbody id="ptab"><tr><td colspan="7" class="vazio">carregando…</td></tr></tbody></table></div>
-    <div class="nota">Foto, nome, verificado e seguidores: a Meta só libera depois que a pessoa manda um direct ou toca num botão da automação. Quem só comentou aparece com o @ (Instagram) e o resto chega quando ela interagir no direct. No Facebook a Meta não identifica quem só comentou: essas pessoas aparecem só na aba Comentários.</div>
+  <div class="abas" id="abas">
+    <button data-a="mensagens" class="on"><span class="ic">💬</span>Mensagens <span class="cnt" id="nmsg"></span></button>
+    <button data-a="comentarios"><span class="ic">🗨️</span>Comentários <span class="cnt" id="ncom"></span></button>
   </div>
-  <div class="box" id="box">
+
+  <!-- MENSAGENS -->
+  <div class="box" id="boxM">
     <div class="col lado">
       <div class="filtros">
         <input id="busca" placeholder="Buscar por @, nome ou mensagem">
-        <div class="linha">
-          <div class="seg" id="redes"><button data-r="" class="on">Todas</button><button data-r="instagram">Instagram</button><button data-r="facebook">Facebook</button></div>
-        </div>
-        <div class="linha">
-          <select id="ftag"><option value="">Todas as etiquetas / funis</option></select>
-          <label class="tg"><input type="checkbox" id="fnl">não lidas</label>
-        </div>
+        <div class="seg" id="redes"><button data-r="" class="on">Todas</button><button data-r="instagram">Instagram</button><button data-r="facebook">Facebook</button></div>
+        <div class="linha"><select id="ftag"><option value="">Todas as etiquetas / funis</option></select><label class="tg"><input type="checkbox" id="fnl">não lidas</label></div>
       </div>
+      <div class="sub" id="subM"><button data-t="conversas" class="on">✍️ Conversas</button><button data-t="automacoes">⚡ Automações</button></div>
       <div class="lista" id="lista"><div class="vazio">carregando…</div></div>
     </div>
     <div class="col chat">
-      <div class="chdr" id="chdr"><button class="voltar" id="voltar">←</button><div class="ctx"><b>Selecione uma conversa</b><small>Comentários, directs, toques em botão e respostas (nossas, do ManyChat ou da equipe) aparecem aqui.</small></div></div>
+      <div class="chdr" id="chdr"><button class="voltar" data-volta="M">←</button><div class="ctx"><b>Selecione uma conversa</b><small>Directs, respostas de story, toques em botão e mensagens das automações.</small></div></div>
       <div class="msgs" id="msgs"></div>
-      <div class="resp" id="resp" hidden>
-        <span class="jan" id="jan"></span>
-        <div class="linha"><textarea id="txt" placeholder="Escreva a resposta…"></textarea><button class="btn" id="enviar">Enviar</button></div>
+      <div class="resp" id="resp" hidden><div class="linha"><textarea id="txt" placeholder="Escreva a resposta…"></textarea><button class="btn" id="enviar">Enviar</button></div></div>
+    </div>
+  </div>
+
+  <!-- COMENTÁRIOS -->
+  <div class="box" id="boxC" hidden>
+    <div class="col lado">
+      <div class="filtros">
+        <div class="seg" id="credes"><button data-r="" class="on">Todas</button><button data-r="instagram">Instagram</button><button data-r="facebook">Facebook</button></div>
       </div>
+      <div class="lista" id="posts"><div class="vazio">carregando…</div></div>
+    </div>
+    <div class="col chat">
+      <div class="phdr" id="phdr"><button class="voltar" data-volta="C">←</button><div class="ctx"><b>Selecione um post</b><small style="display:block;color:var(--mute);font-size:12.5px">Os comentários de cada post aparecem aqui, separados entre os que a automação respondeu e os normais.</small></div></div>
+      <div class="sub" id="subC" hidden><button data-t="auto" class="on">⚡ Com automação <span class="n" id="nauto"></span></button><button data-t="normal">💬 Normais <span class="n" id="nnorm"></span></button></div>
+      <div class="cms" id="cms"></div>
     </div>
   </div>
 </div>
@@ -166,139 +172,146 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const toast=t=>{const e=$('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),3200);};
 const api=async(b)=>{const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)});if(!r.ok)throw new Error('HTTP '+r.status);return r.json();};
-const quando=iso=>{if(!iso)return'';const d=new Date(iso),h=new Date();const mesmoDia=d.toDateString()===h.toDateString();return mesmoDia?d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}):d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'});};
-const nomeDe=c=>c.username?'@'+c.username:(c.nome||('Contato '+String(c.usuario_id).slice(-5)));
-const inicial=c=>(c.username||c.nome||'?').replace(/[^a-zA-ZÀ-ÿ0-9]/g,'').charAt(0).toUpperCase()||'?';
-const linkar=t=>esc(t).replace(/https?:\/\/[^\s<]+/g,u=>'<a href="'+u+'" target="_blank" rel="noopener">'+u+'</a>');
-const SILH='<svg viewBox="0 0 24 24"><path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zm0 2c-4.4 0-8 2.2-8 5v2h16v-2c0-2.8-3.6-5-8-5z"/></svg>';
-const avatar=c=>'<div class="av">'+(c.foto_url?'<img src="'+esc(c.foto_url)+'" alt="" onerror="this.remove()">':(c.username||c.nome?esc(inicial(c)):SILH))+'<span class="rd '+esc(c.rede)+'"></span></div>';
-const ROT={comentario:'Comentário',resposta_publica:'Resposta pública',fluxo:'Automação',eco:'Enviado pelo app (ManyChat / equipe)',manual:'Você respondeu',postback:'Tocou no botão',story_resposta:'Respondeu o story',dm:''};
-
-let filtro={rede:'',tag:'',busca:'',nao_lidas:false}, atual=null, contatos=[], aba='mensagens';
-const anon=c=>String(c.usuario_id||'').startsWith('comentario:');
-const nomeVis=c=>anon(c)?'<span class="anon">Pessoa do Facebook</span>':esc(nomeDe(c))+(c.verificado?'<span class="vf" title="Verificado">✓</span>':'');
-const fmtN=n=>n==null?'—':n>=1e6?(n/1e6).toFixed(1).replace('.',',')+' mi':n>=1e3?(n/1e3).toFixed(n>=1e4?0:1).replace('.',',')+' mil':String(n);
+const quando=iso=>{if(!iso)return'';const d=new Date(iso),h=new Date();return d.toDateString()===h.toDateString()?d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}):d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'});};
 const dataCurta=iso=>iso?new Date(iso).toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',year:'2-digit'}):'—';
-const linkPost=(rede,post)=>post&&rede==='facebook'?'https://www.facebook.com/'+post:'';
+const fmtN=n=>n==null?'':n>=1e6?(n/1e6).toFixed(1).replace('.',',')+' mi':n>=1e3?(n/1e3).toFixed(n>=1e4?0:1).replace('.',',')+' mil':String(n);
+const anon=c=>String(c.usuario_id||'').startsWith('comentario:');
+const nomeDe=c=>c.username?'@'+c.username:(c.nome||('Contato '+String(c.usuario_id).slice(-5)));
+const nomeVis=c=>anon(c)?'<span class="anon">Pessoa do Facebook</span>':esc(nomeDe(c))+(c.verificado?'<span class="vf" title="Verificado">✓</span>':'');
+const inicial=c=>(c.username||c.nome||'?').replace(/[^a-zA-ZÀ-ÿ0-9]/g,'').charAt(0).toUpperCase()||'?';
+const SILH='<svg viewBox="0 0 24 24"><path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zm0 2c-4.4 0-8 2.2-8 5v2h16v-2c0-2.8-3.6-5-8-5z"/></svg>';
+const avatar=c=>'<div class="av">'+(c.foto_url?'<img src="'+esc(c.foto_url)+'" alt="" onerror="this.remove()">':(!anon(c)&&(c.username||c.nome)?esc(inicial(c)):SILH))+'<span class="rd '+esc(c.rede)+'"></span></div>';
+const linkar=t=>esc(t).replace(/https?:\/\/[^\s<]+/g,u=>'<a href="'+u+'" target="_blank" rel="noopener">'+u+'</a>');
+const ROT={comentario:'Comentário',resposta_publica:'Resposta pública',fluxo:'Automação',eco:'Enviado pela equipe',manual:'Você respondeu',postback:'Tocou no botão',story_resposta:'Respondeu o story',dm:''};
+// erro da Meta → português
+const erroPt=e=>{const s=String(e||'');
+  if(/cant reply to this activity|10903/i.test(s)) return 'Não enviado: comentário feito por admin da página (o Facebook não deixa a página mandar direct pra quem a administra).';
+  if(/outside of allowed window|24 ?h/i.test(s)) return 'Não enviado: passou de 24h desde a última mensagem da pessoa.';
+  if(/already been replied|only reply once/i.test(s)) return 'Não enviado: esse comentário já tinha recebido o direct.';
+  if(/another app|outro app/i.test(s)) return 'Não enviado: outro app (ManyChat) estava controlando a conversa.';
+  return 'Não enviado: '+s;};
 
+let aba='mensagens', tipoM='conversas', filtro={rede:'',tag:'',busca:'',nao_lidas:false}, atual=null, contatos=[];
+let credes='', postAtual=null, tipoC='auto', comentarios=[];
+
+// ---------- MENSAGENS ----------
 async function carregarTags(){
   try{const r=await api({acao:'tags'});const sel=$('ftag'),v=sel.value;
-    const ops=(r.dados||[]).map(t=>'<option value="'+esc(t.tag)+'">'+esc(t.tag)+' ('+t.n+')</option>').join('');
-    sel.innerHTML='<option value="">Todas as etiquetas / funis</option>'+ops;sel.value=v;
-    const ps=$('ptag'),pv=ps.value; ps.innerHTML='<option value="">Todos os fluxos</option>'+ops; ps.value=pv;}catch(e){}
+    sel.innerHTML='<option value="">Todas as etiquetas / funis</option>'+(r.dados||[]).map(t=>'<option value="'+esc(t.tag)+'">'+esc(t.tag)+' ('+t.n+')</option>').join('');sel.value=v;}catch(e){}
 }
-async function carregarComentarios(){
-  try{
-    const r=await api({acao:'comentarios',rede:filtro.rede,tag:filtro.tag,busca:filtro.busca});
-    const cs=r.dados||[];
-    $('resumo').textContent=cs.length+' comentário'+(cs.length===1?'':'s')+' recentes';
-    $('lista').innerHTML=cs.length?cs.map(c=>'<div class="cm'+(atual===c.contato_id?' on':'')+'" data-id="'+c.contato_id+'">'+
-      '<div class="top2">'+avatar(c)+'<div class="ctx"><div class="ctn"><b>'+nomeVis(c)+'</b><time>'+quando(c.em)+'</time></div>'+
-      '<div class="prev">'+(c.rede==='facebook'?'Facebook':'Instagram')+(linkPost(c.rede,c.post)?' · <a href="'+esc(linkPost(c.rede,c.post))+'" target="_blank" rel="noopener" onclick="event.stopPropagation()">ver post</a>':'')+'</div></div></div>'+
-      '<div class="txt">'+esc(c.texto||'')+'</div>'+
-      (c.resposta?'<div class="rp">Respondemos: '+esc(c.resposta)+'</div>':'')+
-      '<div class="auto">'+(c.automacao?'<span class="pill">⚡ '+esc(c.automacao)+'</span>':'<span class="pill no">sem automação</span>')+'</div>'+
-      '</div>').join(''):'<div class="vazio">Nenhum comentário'+(filtro.tag||filtro.busca||filtro.rede?' com esse filtro':' ainda')+'.</div>';
-  }catch(e){$('lista').innerHTML='<div class="vazio">Não consegui carregar ('+esc(e.message)+').</div>';}
-}
-let pf={rede:'',tag:'',busca:'',ordem:'recentes',verificado:false};
-async function carregarPessoas(){
-  try{
-    const r=await api(Object.assign({acao:'pessoas'},pf)); const d=r.dados||{}; const ps=d.lista||[];
-    $('ncont').textContent=d.total!=null?d.total:'';
-    $('resumo').textContent=(d.total||0)+' contato'+(d.total===1?'':'s')+(ps.length<(d.total||0)?' · mostrando '+ps.length:'');
-    $('ptab').innerHTML=ps.length?ps.map(c=>'<tr data-id="'+c.id+'"><td><div class="pess">'+avatar(c)+'<div style="min-width:0"><b>'+nomeVis(c)+(c.segue_voce?' <span class="pill" title="Segue o perfil">segue</span>':'')+'</b>'+
-      '<small>'+(c.nome&&c.username?esc(c.nome):(c.username||c.nome?'':'nome chega quando ela mandar direct'))+'</small></div></div></td>'+
-      '<td>'+(c.rede==='facebook'?'Facebook':'Instagram')+'</td><td class="esc num">'+fmtN(c.seguidores)+'</td><td>'+dataCurta(c.primeiro_em)+'</td><td class="esc">'+dataCurta(c.ultimo_em)+'</td><td class="esc num">'+(c.interacoes||0)+'</td>'+
-      '<td>'+((c.tags||[]).length?'<div class="tags">'+c.tags.map(t=>'<span class="tag">#'+esc(t)+'</span>').join('')+'</div>':'<span style="color:var(--dim)">—</span>')+'</td></tr>').join('')
-      :'<tr><td colspan="7" class="vazio">Nenhum contato com esse filtro.</td></tr>';
-  }catch(e){$('ptab').innerHTML='<tr><td colspan="7" class="vazio">Não consegui carregar ('+esc(e.message)+').</td></tr>';}
-}
-function trocarAba(a){
-  aba=a; document.querySelectorAll('#abas button').forEach(x=>x.classList.toggle('on',x.dataset.a===a));
-  $('pessoas').hidden=a!=='contatos'; $('box').hidden=a==='contatos';
-  atual=null; fecharConversa(); $('msgs').innerHTML=''; $('resp').hidden=true;
-  $('chdr').innerHTML='<button class="voltar" id="voltar">←</button><div class="ctx"><b>Selecione '+(a==='comentarios'?'um comentário':'uma conversa')+'</b><small>'+(a==='comentarios'?'Abre a conversa completa da pessoa: comentários, respostas e directs.':'Directs, toques em botão, respostas de story e mensagens das automações.')+'</small></div>';
-  $('voltar').onclick=fecharConversa;
-  $('fnl').parentElement.style.display=a==='mensagens'?'':'none';
-  recarregar();
-}
-function recarregar(){ if(aba==='contatos') return carregarPessoas(); if(aba==='comentarios') return carregarComentarios(); return carregarLista(); }
 async function carregarLista(){
   try{
-    const r=await api(Object.assign({acao:'contatos',tipo:'mensagens'},filtro));
+    const r=await api(Object.assign({acao:'contatos',tipo:tipoM},filtro));
     contatos=r.dados||[];
     const nl=contatos.filter(c=>c.nao_lidas>0).length;
     $('resumo').textContent=contatos.length+' contato'+(contatos.length===1?'':'s')+(nl?' · '+nl+' com mensagem nova':'');
+    $('nmsg').textContent=nl||'';
     $('lista').innerHTML=contatos.length?contatos.map(c=>'<div class="ct'+(atual===c.id?' on':'')+(c.nao_lidas>0?' novo':'')+'" data-id="'+c.id+'">'+avatar(c)+
-      '<div class="ctx"><div class="ctn"><b>'+esc(nomeDe(c))+(c.nao_lidas>0?'<span class="nl">'+c.nao_lidas+'</span>':'')+'</b><time>'+quando(c.ultimo_em)+'</time></div>'+
+      '<div class="ctx"><div class="ctn"><b>'+nomeVis(c)+(c.nao_lidas>0?'<span class="nl">'+c.nao_lidas+'</span>':'')+'</b><time>'+quando(c.ultimo_em)+'</time></div>'+
       '<div class="prev">'+(c.ultima_texto?(c.ultima_direcao==='saida'?'Enviado: ':'')+esc(c.ultima_texto):(c.ultima_direcao==='saida'?'Mensagem enviada':'Mensagem recebida'))+'</div>'+
       ((c.tags||[]).length?'<div class="tags">'+c.tags.slice(0,2).map(t=>'<span class="tag">'+esc(t)+'</span>').join('')+(c.tags.length>2?'<span class="tag mais">+'+(c.tags.length-2)+'</span>':'')+'</div>':'')+
-      '</div></div>').join(''):'<div class="vazio">Nenhum contato'+(filtro.tag||filtro.busca||filtro.rede||filtro.nao_lidas?' com esse filtro':' ainda — eles aparecem conforme as pessoas comentam e mandam direct')+'.</div>';
+      '</div></div>').join(''):'<div class="vazio">'+(tipoM==='conversas'?'Ninguém escreveu no direct':'Nenhuma conversa só de automação')+(filtro.tag||filtro.busca||filtro.rede||filtro.nao_lidas?' com esse filtro':' ainda')+'.</div>';
   }catch(e){$('lista').innerHTML='<div class="vazio">Não consegui carregar ('+esc(e.message)+').</div>';}
 }
 async function abrir(id){
-  atual=id; $('box').classList.add('conversa');
+  atual=id; $('boxM').classList.add('aberto');
   document.querySelectorAll('.ct').forEach(x=>x.classList.toggle('on',x.dataset.id===id));
   $('msgs').innerHTML='<div class="vazio">carregando…</div>';
   try{
     const r=await api({acao:'conversa',contato_id:id}); const d=r.dados||{}; const c=d.contato||{};
-    $('chdr').innerHTML='<button class="voltar" id="voltar">←</button>'+avatar(c)+'<div class="ctx"><b>'+nomeVis(c)+'</b><small>'+(c.rede==='facebook'?'Facebook':'Instagram')+(c.nome&&c.username?' · '+esc(c.nome):'')+(c.seguidores!=null?' · '+fmtN(c.seguidores)+' seguidores':'')+' · desde '+dataCurta(c.primeiro_em)+'</small></div>'+
+    $('chdr').innerHTML='<button class="voltar" data-volta="M">←</button>'+avatar(c)+'<div class="ctx"><b>'+nomeVis(c)+'</b><small>'+(c.rede==='facebook'?'Facebook':'Instagram')+(c.nome&&c.username?' · '+esc(c.nome):'')+(c.seguidores!=null?' · '+fmtN(c.seguidores)+' seguidores':'')+' · desde '+dataCurta(c.primeiro_em)+'</small></div>'+
       ((d.tags||[]).length?'<div class="tags">'+d.tags.map(t=>'<span class="tag" title="'+new Date(t.em).toLocaleString('pt-BR')+'">'+esc(t.tag)+'</span>').join('')+'</div>':'');
-    $('voltar').onclick=fecharConversa;
     let dia='', html='', ant=null;
-    const SO_COMENT=['comentario','resposta_publica'];
-    for(const m of (d.mensagens||[]).filter(m=>aba==='comentarios'||!SO_COMENT.includes(m.canal))){
+    for(const m of (d.mensagens||[]).filter(m=>!['comentario','resposta_publica'].includes(m.canal))){
       const dd=new Date(m.em).toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit',month:'2-digit'});
-      if(dd!==dia){dia=dd;html+='<div class="dia">'+dd+'</div>';}
+      if(dd!==dia){dia=dd;html+='<div class="dia">'+dd+'</div>';ant=null;}
       const ex=m.extra||{}; const erro=ex.erro||(ex.status&&ex.status>=300);
       const lbl=m.canal==='fluxo'?'Automação'+(ex.automacao?' · '+ex.automacao:''):(ROT[m.canal]||'');
-      const tipo=(m.canal==='eco'||m.canal==='manual')?' humano':(m.canal==='resposta_publica'?' publica':'');
+      const tipo=(m.canal==='eco'||m.canal==='manual')?' humano':'';
       const troca=(ant&&ant!==m.direcao)?' troca':''; ant=m.direcao;
       html+='<div class="m '+m.direcao+tipo+troca+(erro?' err':'')+'">'+(lbl?'<span class="lbl">'+esc(lbl)+'</span><br>':'')+linkar(m.texto||'')+
         ((ex.botoes||[]).length?'<div class="bts">'+ex.botoes.map(b=>'<span class="bt">'+esc(b)+'</span>').join('')+'</div>':'')+
-        (erro?'<br><b style="color:var(--warn);font-size:11.5px">não entregue: '+esc(ex.erro||('HTTP '+ex.status))+'</b>':'')+
+        (erro?'<span class="nao">'+esc(erroPt(ex.erro||('HTTP '+ex.status)))+'</span>':'')+
         '<span class="meta">'+new Date(m.em).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})+'</span></div>';
     }
-    $('msgs').innerHTML=html||'<div class="vazio">Sem mensagens.</div>';
+    $('msgs').innerHTML=html||'<div class="vazio">Ainda não houve direct com essa pessoa.</div>';
     $('msgs').scrollTop=$('msgs').scrollHeight;
     const aberta=c.ultima_msg_dele && (Date.now()-new Date(c.ultima_msg_dele).getTime())<24*3600e3;
-    $('resp').hidden=false;
-    $('jan').className='jan '+(aberta?'ok':'no');
-    $('jan').textContent=aberta?'✓ Dá pra responder até '+new Date(new Date(c.ultima_msg_dele).getTime()+24*3600e3).toLocaleString('pt-BR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})+' (janela de 24h da Meta)'
-      :anon(c)?'ℹ️ Comentário anônimo do Facebook: a Meta não diz quem é, então não dá pra responder por aqui. A automação já mandou a resposta no direct dela.'
-      :!c.ultima_msg_dele?'ℹ️ Essa pessoa só comentou. A Meta deixa mandar 1 direct por comentário (a automação já mandou). Você consegue responder aqui assim que ela escrever no direct.'
-      :'ℹ️ Já passaram 24h da última mensagem dela. A Meta só libera responder quando ela escrever de novo.';
-    $('txt').placeholder=aberta?'Escreva a resposta…':'Resposta travada até a pessoa escrever de novo';
+    $('resp').hidden=anon(c);
+    $('txt').placeholder=aberta?'Escreva a resposta…':'Resposta liberada quando a pessoa escrever no direct';
     $('enviar').disabled=!aberta; $('txt').disabled=!aberta;
     const it=contatos.find(x=>x.id===id); if(it&&it.nao_lidas){it.nao_lidas=0;carregarLista();}
   }catch(e){$('msgs').innerHTML='<div class="vazio">Não consegui abrir ('+esc(e.message)+').</div>';}
 }
-function fecharConversa(){ $('box').classList.remove('conversa'); }
-$('voltar').onclick=fecharConversa;
 $('enviar').onclick=async()=>{
   const t=$('txt').value.trim(); if(!t||!atual) return;
   $('enviar').disabled=true;
   try{const r=await api({acao:'responder',contato_id:atual,texto:t});
-    if(r.ok){$('txt').value='';toast('Enviado ✓');await abrir(atual);carregarLista();} else toast(r.erro||'Não enviou');
+    if(r.ok){$('txt').value='';toast('Enviado ✓');await abrir(atual);carregarLista();} else toast(erroPt(r.erro||'não enviou'));
   }catch(e){toast('Erro: '+e.message);} finally{$('enviar').disabled=false;}
 };
 $('txt').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();$('enviar').click();}});
-$('lista').addEventListener('click',e=>{const x=e.target.closest('.ct,.cm');if(x)abrir(x.dataset.id);});
-$('redes').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#redes button').forEach(x=>x.classList.toggle('on',x===b));filtro.rede=b.dataset.r;recarregar();});
-$('ftag').onchange=e=>{filtro.tag=e.target.value;recarregar();};
-$('fnl').onchange=e=>{filtro.nao_lidas=e.target.checked;recarregar();};
-let tb; $('busca').oninput=e=>{clearTimeout(tb);tb=setTimeout(()=>{filtro.busca=e.target.value.trim();recarregar();},350);};
+$('lista').addEventListener('click',e=>{const x=e.target.closest('.ct');if(x)abrir(x.dataset.id);});
+$('redes').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#redes button').forEach(x=>x.classList.toggle('on',x===b));filtro.rede=b.dataset.r;carregarLista();});
+$('subM').addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.dataset.t===tipoM)return;tipoM=b.dataset.t;document.querySelectorAll('#subM button').forEach(x=>x.classList.toggle('on',x===b));carregarLista();});
+$('ftag').onchange=e=>{filtro.tag=e.target.value;carregarLista();};
+$('fnl').onchange=e=>{filtro.nao_lidas=e.target.checked;carregarLista();};
+let tb; $('busca').oninput=e=>{clearTimeout(tb);tb=setTimeout(()=>{filtro.busca=e.target.value.trim();carregarLista();},350);};
+
+// ---------- COMENTÁRIOS (por post) ----------
+let postsCache=[];
+async function carregarPosts(){
+  try{
+    const r=await api({acao:'posts',rede:credes}); postsCache=r.dados||[];
+    const tot=postsCache.reduce((a,p)=>a+p.n,0);
+    if(aba==='comentarios') $('resumo').textContent=postsCache.length+' posts · '+tot+' comentários';
+    $('posts').innerHTML=postsCache.length?postsCache.map(p=>'<div class="pst'+(postAtual&&postAtual.post===p.post?' on':'')+'" data-p="'+esc(p.post)+'">'+
+      '<div class="th">'+(p.thumb?'<img src="'+esc(p.thumb)+'" alt="" onerror="this.remove()">':'🎬')+'<span class="rd '+esc(p.rede)+'"></span></div>'+
+      '<div class="ctx"><div class="leg">'+esc((p.legenda||'(post sem legenda)').replace(/\s+/g,' '))+'</div>'+
+      '<div class="info">'+p.n+' comentário'+(p.n===1?'':'s')+' · '+quando(p.ult)+(p.n_auto?' <span class="pill">⚡ '+p.n_auto+'</span>':'')+(p.n-p.n_auto?' <span class="pill cinza">💬 '+(p.n-p.n_auto)+'</span>':'')+'</div></div></div>').join('')
+      :'<div class="vazio">Nenhum comentário'+(credes?' nessa rede':'')+' ainda.</div>';
+  }catch(e){$('posts').innerHTML='<div class="vazio">Não consegui carregar ('+esc(e.message)+').</div>';}
+}
+async function abrirPost(pid){
+  postAtual=postsCache.find(p=>p.post===pid)||{post:pid}; $('boxC').classList.add('aberto');
+  document.querySelectorAll('.pst').forEach(x=>x.classList.toggle('on',x.dataset.p===pid));
+  const p=postAtual;
+  $('phdr').innerHTML='<button class="voltar" data-volta="C">←</button><div class="th">'+(p.thumb?'<img src="'+esc(p.thumb)+'" alt="" onerror="this.remove()">':'🎬')+'<span class="rd '+esc(p.rede||'')+'"></span></div>'+
+    '<div class="ctx"><div class="leg">'+esc(p.legenda||'(post sem legenda)')+'</div>'+(p.link?'<a class="abrir" href="'+esc(p.link)+'" target="_blank" rel="noopener">Abrir post ↗</a>':'')+'</div>';
+  $('subC').hidden=false; $('cms').innerHTML='<div class="vazio">carregando…</div>';
+  try{ const r=await api({acao:'comentarios',post:pid,limite:500}); comentarios=r.dados||[]; desenharComentarios(); }
+  catch(e){$('cms').innerHTML='<div class="vazio">Não consegui carregar ('+esc(e.message)+').</div>';}
+}
+function desenharComentarios(){
+  const auto=comentarios.filter(c=>c.automacao), norm=comentarios.filter(c=>!c.automacao);
+  $('nauto').textContent=auto.length; $('nnorm').textContent=norm.length;
+  const vis=tipoC==='auto'?auto:norm;
+  $('cms').innerHTML=vis.length?vis.map(c=>'<div class="cm">'+avatar(c)+'<div class="ctx"><div class="ctn"><b>'+nomeVis(c)+'</b><time>'+quando(c.em)+'</time></div>'+
+    '<div class="txt">'+esc(c.texto||'')+'</div>'+
+    (c.resposta?'<div class="rp">Respondemos: '+esc(c.resposta)+'</div>':'')+
+    '<div class="acoes">'+(c.automacao?'<span class="pill">⚡ '+esc(c.automacao)+'</span>':'')+(!anon(c)?'<button class="ver" data-c="'+esc(c.contato_id)+'">Abrir conversa</button>':'')+'</div>'+
+    '</div></div>').join('')
+    :'<div class="vazio">'+(tipoC==='auto'?'Nenhum comentário respondido por automação neste post.':'Nenhum comentário normal neste post.')+'</div>';
+}
+$('posts').addEventListener('click',e=>{const x=e.target.closest('.pst');if(x)abrirPost(x.dataset.p);});
+$('subC').addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.dataset.t===tipoC)return;tipoC=b.dataset.t;document.querySelectorAll('#subC button').forEach(x=>x.classList.toggle('on',x===b));desenharComentarios();});
+$('credes').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#credes button').forEach(x=>x.classList.toggle('on',x===b));credes=b.dataset.r;carregarPosts();});
+$('cms').addEventListener('click',e=>{const b=e.target.closest('.ver');if(!b)return;trocarAba('mensagens');abrir(b.dataset.c);});
+
+// ---------- abas ----------
+function trocarAba(a){
+  aba=a; document.querySelectorAll('#abas button').forEach(x=>x.classList.toggle('on',x.dataset.a===a));
+  $('boxM').hidden=a!=='mensagens'; $('boxC').hidden=a!=='comentarios';
+  if(a==='comentarios') carregarPosts(); else carregarLista();
+}
 $('abas').addEventListener('click',e=>{const b=e.target.closest('button');if(b&&b.dataset.a!==aba)trocarAba(b.dataset.a);});
-// aba Contatos
-$('predes').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#predes button').forEach(x=>x.classList.toggle('on',x===b));pf.rede=b.dataset.r;carregarPessoas();});
-$('ptag').onchange=e=>{pf.tag=e.target.value;carregarPessoas();};
-$('pord').onchange=e=>{pf.ordem=e.target.value;carregarPessoas();};
-$('pvf').onchange=e=>{pf.verificado=e.target.checked;carregarPessoas();};
-let pb; $('pbusca').oninput=e=>{clearTimeout(pb);pb=setTimeout(()=>{pf.busca=e.target.value.trim();carregarPessoas();},350);};
-$('ptab').addEventListener('click',e=>{const tr=e.target.closest('tr[data-id]');if(!tr)return;trocarAba('mensagens');abrir(tr.dataset.id);});
-carregarTags(); carregarLista(); api({acao:'pessoas',limite:1}).then(r=>{$('ncont').textContent=(r.dados||{}).total||'';}).catch(()=>{});
-setInterval(()=>{ if(document.hidden) return; recarregar(); if(atual && aba!=='contatos' && !$('txt').value) abrir(atual); }, 20000);
+document.addEventListener('click',e=>{const v=e.target.closest('.voltar');if(!v)return;$(v.dataset.volta==='C'?'boxC':'boxM').classList.remove('aberto');});
+
+carregarTags(); carregarLista(); api({acao:'posts'}).then(r=>{$('ncom').textContent=(r.dados||[]).length?(r.dados||[]).reduce((a,p)=>a+p.n,0):'';}).catch(()=>{});
+setInterval(()=>{ if(document.hidden) return;
+  if(aba==='mensagens'){ carregarLista(); if(atual && !$('txt').value) abrir(atual); }
+  else { carregarPosts(); if(postAtual) api({acao:'comentarios',post:postAtual.post,limite:500}).then(r=>{comentarios=r.dados||[];desenharComentarios();}).catch(()=>{}); }
+}, 20000);
 setInterval(carregarTags, 120000);
 </script>
 </body>
