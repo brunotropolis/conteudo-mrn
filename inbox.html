@@ -27,39 +27,47 @@
   .tg{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:var(--mute);white-space:nowrap;cursor:pointer}
   .tg input{width:15px;height:15px;accent-color:var(--live)}
   .lista{overflow-y:auto;flex:1}
-  .ct{display:flex;gap:10px;padding:11px 12px;border-bottom:1px solid var(--line);cursor:pointer;align-items:flex-start}
-  .ct:hover{background:var(--hover)} .ct.on{background:#DCEBE7;box-shadow:inset 3px 0 0 var(--menu)}
-  .ct.novo{background:#F1F8F4} .ct.novo b{font-weight:900} .ct.novo .prev{color:var(--ink);font-weight:600}
+  .ct{display:flex;gap:12px;padding:13px 16px;min-height:76px;border-bottom:1px solid #EFE7D3;cursor:pointer;align-items:flex-start;border-left:4px solid transparent}
+  .ct:hover{background:#FBF8F0} .ct.on{background:#fff;border-left-color:var(--gold);box-shadow:0 2px 8px rgba(0,0,0,.04)}
+  .ct.novo b{font-weight:800} .ct.novo .prev{color:var(--ink);font-weight:600}
   .av svg{width:20px;height:20px;fill:#9DB3AD}
-  .av{width:38px;height:38px;border-radius:50%;background:var(--hover);flex:none;position:relative;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--menu);font-size:14px;overflow:hidden}
+  .av{width:44px;height:44px;border-radius:50%;background:var(--hover);flex:none;position:relative;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--menu);font-size:14px;overflow:hidden}
   .av img{width:100%;height:100%;object-fit:cover}
   .rd{position:absolute;right:-1px;bottom:-1px;width:14px;height:14px;border-radius:50%;border:2px solid #fff}
   .rd.instagram{background:var(--ig)} .rd.facebook{background:var(--fb)}
   .ctx{min-width:0;flex:1}
   .ctn{display:flex;justify-content:space-between;gap:6px}
-  .ctn b{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .ctn time{font-size:11px;color:var(--dim);white-space:nowrap}
-  .prev{font-size:12.5px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .nl{background:var(--live);color:#fff;font-size:10.5px;font-weight:800;border-radius:999px;padding:1px 7px;margin-left:6px}
-  .tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
-  .tag{font-size:10.5px;font-weight:700;color:var(--goldink);background:var(--goldbg);border-radius:999px;padding:1px 7px}
+  .ctn b{font-size:14px;font-weight:600;color:#1A2522;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ctn time{font-size:11px;color:#6B7B76;white-space:nowrap;padding-top:2px}
+  .prev{font-size:13px;color:#5A6B65;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .nl{background:var(--gold);color:#fff;font-size:11px;font-weight:800;border-radius:10px;padding:1px 7px;margin-left:6px}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+  .tag{font-size:10.5px;font-weight:600;color:#3A5049;background:#E8EFEA;border-radius:12px;padding:2px 8px;line-height:14px}
+  .tag.mais{background:#F1EEE6;color:#5A6B65}
   .vazio{color:var(--mute);text-align:center;padding:30px 16px;font-size:13.5px}
-  .chdr{padding:12px 16px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:center}
-  .chdr .ctx b{font-size:15px}
-  .chdr small{display:block;color:var(--mute);font-size:12px}
+  .chdr{padding:14px 18px;border-bottom:1px solid #EFE7D3;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .chdr .tags{margin:6px 0 0 auto;justify-content:flex-end;max-width:45%}
+  .chdr .tags .tag{background:#FFF4D9;border:1px solid #F0D38D;color:#7F5600;font-size:11px;padding:3px 10px}
+  .chdr .ctx b{font-size:16px;font-weight:700;color:#1A2522}
+  .chdr small{display:block;color:#5A6B65;font-size:12.5px;margin-top:2px}
   .voltar{display:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:6px 10px;font-weight:800;font-family:inherit;cursor:pointer;color:var(--menu)}
-  .msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:8px;background:#FAFCFB}
-  .m{max-width:78%;padding:9px 12px;border-radius:14px;font-size:13.5px;white-space:pre-wrap;word-wrap:break-word}
-  .m.entrada{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px}
-  .m.saida{align-self:flex-end;background:#E3EFEC;border-bottom-right-radius:4px}
-  .m .meta{display:block;font-size:10.5px;color:var(--dim);margin-top:4px;font-weight:600}
-  .m .lbl{display:inline-block;font-size:10.5px;font-weight:800;border-radius:999px;padding:1px 7px;margin-bottom:4px;background:var(--hover);color:var(--menu)}
-  .m .bt{display:inline-block;margin:6px 4px 0 0;font-size:11.5px;font-weight:700;border:1px solid #c9dcd8;border-radius:8px;padding:3px 8px;background:#fff}
+  .msgs{flex:1;overflow-y:auto;padding:20px 22px;display:flex;flex-direction:column;gap:6px;background:#FAFAF7}
+  .m{max-width:68%;padding:10px 14px;border-radius:12px;font-size:14px;line-height:1.5;white-space:pre-wrap;word-wrap:break-word;color:#1A2522}
+  .m.troca{margin-top:14px}
+  .m a{color:#1B67D2;text-decoration:underline;word-break:break-all}
+  .m.entrada{align-self:flex-start;background:#fff;border:1px solid #E2E8E5;border-radius:12px 12px 12px 2px}
+  .m.saida{align-self:flex-end;background:#F3F7F5;border:1px dashed #B8C7C1;border-radius:12px 12px 2px 12px}
+  .m.saida.humano{background:#3A5049;border:0;color:#fff} .m.saida.humano .meta{color:#C9D6D1} .m.saida.humano .lbl{background:rgba(255,255,255,.16);color:#fff} .m.saida.humano a{color:#CFE3FF}
+  .m.saida.publica{background:#fff;border:1px solid #E2E8E5}
+  .m .meta{display:block;font-size:11px;color:#6B7B76;margin-top:6px;font-weight:600;text-align:right}
+  .m .lbl{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;border-radius:4px;padding:2px 6px;margin-bottom:6px;background:rgba(58,80,73,.1);color:#3A5049}
+  .m .bts{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+  .m .bt{display:block;text-align:center;font-size:12px;font-weight:700;border:1px solid var(--gold);color:#8F6300;border-radius:6px;padding:7px 14px;background:#fff}
   .m.err{border:1px solid #e3c4bd;background:#fbefec}
-  .dia{align-self:center;font-size:11px;color:var(--dim);font-weight:700;margin:6px 0}
-  .resp{border-top:1px solid var(--line);padding:10px 12px;display:flex;flex-direction:column;gap:6px}
-  .resp .jan{font-size:12px;font-weight:700;border-radius:10px;padding:7px 10px}
-  .jan.ok{color:var(--live);background:#EAF5EE} .jan.no{color:#8a3a26;background:#FBEFE9;border:1px solid #F0D3C8}
+  .dia{align-self:center;font-size:11px;color:#5A6B65;font-weight:700;margin:16px 0 8px;background:#EFE7D3;border-radius:12px;padding:4px 12px}
+  .resp{border-top:1px solid #EFE7D3;padding:12px 16px;display:flex;flex-direction:column;gap:6px}
+  .resp .jan{font-size:12.5px;font-weight:600;border-radius:8px;padding:12px 16px}
+  .jan.ok{color:#1E6B3E;background:#EAF5EE;border:1px solid #CFE6D7} .jan.no{color:#7F5600;background:#FFF9EB;border:1px solid #F3E0B5}
   .resp textarea:disabled{background:#EEF2F1;color:var(--dim);cursor:not-allowed}
   .resp .linha textarea{flex:1;border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-family:inherit;font-size:13.5px;resize:none;height:44px;background:var(--card)}
   .btn{font-size:13px;font-weight:800;border-radius:10px;padding:9px 16px;cursor:pointer;border:1px solid var(--menu);background:var(--menu);color:#fff;font-family:inherit}
@@ -161,6 +169,7 @@ const api=async(b)=>{const r=await fetch(API,{method:'POST',headers:{'Content-Ty
 const quando=iso=>{if(!iso)return'';const d=new Date(iso),h=new Date();const mesmoDia=d.toDateString()===h.toDateString();return mesmoDia?d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}):d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'});};
 const nomeDe=c=>c.username?'@'+c.username:(c.nome||('Contato '+String(c.usuario_id).slice(-5)));
 const inicial=c=>(c.username||c.nome||'?').replace(/[^a-zA-ZÀ-ÿ0-9]/g,'').charAt(0).toUpperCase()||'?';
+const linkar=t=>esc(t).replace(/https?:\/\/[^\s<]+/g,u=>'<a href="'+u+'" target="_blank" rel="noopener">'+u+'</a>');
 const SILH='<svg viewBox="0 0 24 24"><path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zm0 2c-4.4 0-8 2.2-8 5v2h16v-2c0-2.8-3.6-5-8-5z"/></svg>';
 const avatar=c=>'<div class="av">'+(c.foto_url?'<img src="'+esc(c.foto_url)+'" alt="" onerror="this.remove()">':(c.username||c.nome?esc(inicial(c)):SILH))+'<span class="rd '+esc(c.rede)+'"></span></div>';
 const ROT={comentario:'Comentário',resposta_publica:'Resposta pública',fluxo:'Automação',eco:'Enviado pelo app (ManyChat / equipe)',manual:'Você respondeu',postback:'Tocou no botão',story_resposta:'Respondeu o story',dm:''};
@@ -224,7 +233,7 @@ async function carregarLista(){
     $('lista').innerHTML=contatos.length?contatos.map(c=>'<div class="ct'+(atual===c.id?' on':'')+(c.nao_lidas>0?' novo':'')+'" data-id="'+c.id+'">'+avatar(c)+
       '<div class="ctx"><div class="ctn"><b>'+esc(nomeDe(c))+(c.nao_lidas>0?'<span class="nl">'+c.nao_lidas+'</span>':'')+'</b><time>'+quando(c.ultimo_em)+'</time></div>'+
       '<div class="prev">'+(c.ultima_texto?(c.ultima_direcao==='saida'?'Enviado: ':'')+esc(c.ultima_texto):(c.ultima_direcao==='saida'?'Mensagem enviada':'Mensagem recebida'))+'</div>'+
-      ((c.tags||[]).length?'<div class="tags">'+c.tags.slice(0,4).map(t=>'<span class="tag">'+esc(t)+'</span>').join('')+(c.tags.length>4?'<span class="tag">+'+(c.tags.length-4)+'</span>':'')+'</div>':'')+
+      ((c.tags||[]).length?'<div class="tags">'+c.tags.slice(0,2).map(t=>'<span class="tag">'+esc(t)+'</span>').join('')+(c.tags.length>2?'<span class="tag mais">+'+(c.tags.length-2)+'</span>':'')+'</div>':'')+
       '</div></div>').join(''):'<div class="vazio">Nenhum contato'+(filtro.tag||filtro.busca||filtro.rede||filtro.nao_lidas?' com esse filtro':' ainda — eles aparecem conforme as pessoas comentam e mandam direct')+'.</div>';
   }catch(e){$('lista').innerHTML='<div class="vazio">Não consegui carregar ('+esc(e.message)+').</div>';}
 }
@@ -234,18 +243,20 @@ async function abrir(id){
   $('msgs').innerHTML='<div class="vazio">carregando…</div>';
   try{
     const r=await api({acao:'conversa',contato_id:id}); const d=r.dados||{}; const c=d.contato||{};
-    $('chdr').innerHTML='<button class="voltar" id="voltar">←</button>'+avatar(c)+'<div class="ctx"><b>'+nomeVis(c)+'</b><small>'+(c.rede==='facebook'?'Facebook':'Instagram')+(c.nome&&c.username?' · '+esc(c.nome):'')+(c.seguidores!=null?' · '+fmtN(c.seguidores)+' seguidores':'')+' · desde '+dataCurta(c.primeiro_em)+'</small>'+
-      ((d.tags||[]).length?'<div class="tags">'+d.tags.map(t=>'<span class="tag" title="'+new Date(t.em).toLocaleString('pt-BR')+'">'+esc(t.tag)+'</span>').join('')+'</div>':'')+'</div>';
+    $('chdr').innerHTML='<button class="voltar" id="voltar">←</button>'+avatar(c)+'<div class="ctx"><b>'+nomeVis(c)+'</b><small>'+(c.rede==='facebook'?'Facebook':'Instagram')+(c.nome&&c.username?' · '+esc(c.nome):'')+(c.seguidores!=null?' · '+fmtN(c.seguidores)+' seguidores':'')+' · desde '+dataCurta(c.primeiro_em)+'</small></div>'+
+      ((d.tags||[]).length?'<div class="tags">'+d.tags.map(t=>'<span class="tag" title="'+new Date(t.em).toLocaleString('pt-BR')+'">'+esc(t.tag)+'</span>').join('')+'</div>':'');
     $('voltar').onclick=fecharConversa;
-    let dia='', html='';
+    let dia='', html='', ant=null;
     const SO_COMENT=['comentario','resposta_publica'];
     for(const m of (d.mensagens||[]).filter(m=>aba==='comentarios'||!SO_COMENT.includes(m.canal))){
       const dd=new Date(m.em).toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit',month:'2-digit'});
       if(dd!==dia){dia=dd;html+='<div class="dia">'+dd+'</div>';}
       const ex=m.extra||{}; const erro=ex.erro||(ex.status&&ex.status>=300);
-      const lbl=m.canal==='fluxo'?'Automação'+(ex.automacao?': '+ex.automacao:''):(ROT[m.canal]||'');
-      html+='<div class="m '+m.direcao+(erro?' err':'')+'">'+(lbl?'<span class="lbl">'+esc(lbl)+'</span><br>':'')+esc(m.texto||'')+
-        ((ex.botoes||[]).length?'<br>'+ex.botoes.map(b=>'<span class="bt">'+esc(b)+'</span>').join(''):'')+
+      const lbl=m.canal==='fluxo'?'Automação'+(ex.automacao?' · '+ex.automacao:''):(ROT[m.canal]||'');
+      const tipo=(m.canal==='eco'||m.canal==='manual')?' humano':(m.canal==='resposta_publica'?' publica':'');
+      const troca=(ant&&ant!==m.direcao)?' troca':''; ant=m.direcao;
+      html+='<div class="m '+m.direcao+tipo+troca+(erro?' err':'')+'">'+(lbl?'<span class="lbl">'+esc(lbl)+'</span><br>':'')+linkar(m.texto||'')+
+        ((ex.botoes||[]).length?'<div class="bts">'+ex.botoes.map(b=>'<span class="bt">'+esc(b)+'</span>').join('')+'</div>':'')+
         (erro?'<br><b style="color:var(--warn);font-size:11.5px">não entregue: '+esc(ex.erro||('HTTP '+ex.status))+'</b>':'')+
         '<span class="meta">'+new Date(m.em).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})+'</span></div>';
     }
@@ -254,7 +265,10 @@ async function abrir(id){
     const aberta=c.ultima_msg_dele && (Date.now()-new Date(c.ultima_msg_dele).getTime())<24*3600e3;
     $('resp').hidden=false;
     $('jan').className='jan '+(aberta?'ok':'no');
-    $('jan').textContent=aberta?'✓ Dá pra responder até '+new Date(new Date(c.ultima_msg_dele).getTime()+24*3600e3).toLocaleString('pt-BR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})+' (janela de 24h da Meta)':'🔒 Fora da janela de 24h: a Meta só deixa responder depois que a pessoa mandar uma nova mensagem.';
+    $('jan').textContent=aberta?'✓ Dá pra responder até '+new Date(new Date(c.ultima_msg_dele).getTime()+24*3600e3).toLocaleString('pt-BR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})+' (janela de 24h da Meta)'
+      :anon(c)?'ℹ️ Comentário anônimo do Facebook: a Meta não diz quem é, então não dá pra responder por aqui. A automação já mandou a resposta no direct dela.'
+      :!c.ultima_msg_dele?'ℹ️ Essa pessoa só comentou. A Meta deixa mandar 1 direct por comentário (a automação já mandou). Você consegue responder aqui assim que ela escrever no direct.'
+      :'ℹ️ Já passaram 24h da última mensagem dela. A Meta só libera responder quando ela escrever de novo.';
     $('txt').placeholder=aberta?'Escreva a resposta…':'Resposta travada até a pessoa escrever de novo';
     $('enviar').disabled=!aberta; $('txt').disabled=!aberta;
     const it=contatos.find(x=>x.id===id); if(it&&it.nao_lidas){it.nao_lidas=0;carregarLista();}
