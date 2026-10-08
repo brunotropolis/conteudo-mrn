@@ -24,6 +24,7 @@
     {cat:'Ferramentas'},
     {item:'Publicador', href:'publicador.html', ic:'send'},
     {item:'Calendário de posts', href:'calendario.html', ic:'cal'},
+    {item:'Calendário de produtos', href:'calendario.html?visao=produtos', ic:'cal'},
     {item:'Biblioteca de mídia', href:'midia.html', ic:'lib'},
     {item:'Automações', href:'automacoes.html', ic:'bolt'},
     {item:'Caixa de entrada', href:'inbox.html', ic:'chat'},
@@ -76,7 +77,8 @@
   var nav=NAV.map(function(x){
     if(x.cat) return '<div class="cat">'+x.cat+'</div>';
     var base=x.href.split('/').pop().toLowerCase();
-    var on=(!x.ext && (base===path || (path==='index.html'&&base==='index.html')));
+    var aqui=path+(location.search.indexOf('visao=produtos')>=0?'?visao=produtos':'');
+    var on=(!x.ext && (base===aqui || (aqui==='index.html'&&base==='index.html')));
     if(on) active=x.item;
     return '<a class="n'+(on?' on':'')+'" href="'+x.href+'"'+(x.ext?' target="_blank" rel="noopener"':'')+'>'+svg(x.ic)+'<span>'+x.item+'</span>'+(x.ext?'<span class="ex">↗</span>':'')+'</a>';
   }).join('');

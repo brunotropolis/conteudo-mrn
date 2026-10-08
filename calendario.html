@@ -44,6 +44,7 @@
   .ev{display:flex;align-items:flex-start;gap:6px;background:#FCF7EC;border:1px solid #EFE1BE;border-left:3px solid var(--gold);border-radius:8px;padding:5px 6px;margin-bottom:5px;cursor:pointer;overflow:hidden}
   .ev:hover{border-color:var(--gold2)}
   .ev.rascunho{border-left-color:var(--dim);background:#F8F8F8}
+  .ev.pausado{border-left-color:#B7791F;background:#FFF6E5}
   .ev.publicado{border-left-color:var(--live);background:#EEF8F2}
   .ev.erro{border-left-color:#B2432C;background:#FDF3F1}
   .ev .th{width:28px;height:28px;border-radius:5px;overflow:hidden;background:var(--hover);flex:0 0 auto;display:grid;place-items:center;margin-top:1px}
@@ -80,6 +81,7 @@
   .frow .fdt .fbadge{font-size:9.5px;font-weight:700;border-radius:20px;padding:2px 8px;display:inline-block;margin-top:4px}
   .fbadge.agendado{background:#FEF7E6;color:#9A6800;border:1px solid #FAEBC7}
   .fbadge.publicado{background:#EEF8F2;color:#1A5E33;border:1px solid #B9E6CA}
+  .fbadge.pausado{background:#FFF1D6;color:#8A5A00;border:1px solid #F3D9A4}
   .fbadge.rascunho{background:#F3F3F3;color:var(--mute);border:1px solid var(--line)}
   .fbadge.erro{background:#FDF3F1;color:#9B3A28;border:1px solid #F5C6BC}
 
@@ -162,6 +164,13 @@ window.__vic = VIC;
 const esc = s => String(s || '').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const isVid = t => /video|\.mp4|\.mov/i.test(t || '');
 let posts = [], cur = new Date(), histLimit = 20;
+// ?visao=produtos → calendário separado só de PRODUTOS (origem 'produtos'); sem parâmetro → só conteúdo
+const VISAO_PRODUTOS = new URLSearchParams(location.search).get('visao') === 'produtos';
+if (VISAO_PRODUTOS) {
+  document.title = 'Calendário de produtos · HUB Manual';
+  addEventListener('DOMContentLoaded', () => { const h = document.querySelector('.tt h1'), q = document.querySelector('.tt p');
+    if (h) h.textContent = 'Calendário de produtos'; if (q) q.textContent = 'Ciclo de produtos · quarta e sábado, 8h · Instagram e Facebook'; });
+}
 cur.setDate(1);
 
 function thumbDe(p) {
@@ -210,7 +219,7 @@ async function carregar() {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({acao: 'listar'})
     }).then(r => r.json());
-    posts = r.dados || [];
+    posts = (r.dados || []).filter(p => VISAO_PRODUTOS ? p.origem === 'produtos' : p.origem !== 'produtos');
   } catch(e) { posts = []; }
   render();
   renderFila();
