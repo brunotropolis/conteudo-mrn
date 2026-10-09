@@ -134,6 +134,7 @@
   .igmedia{width:100%;aspect-ratio:1;background:var(--hover);position:relative;display:grid;place-items:center}
   .igmedia.reels,.igmedia.story{aspect-ratio:9/16;max-height:520px}
   .igmedia img{width:100%;height:100%;object-fit:cover}
+  .igmedia video{width:100%;height:100%;object-fit:cover;background:#000;display:block}
   .igmedia .vic{width:52px;height:52px;fill:#5B726B;opacity:.8}
   .igmedia .ph{color:var(--dim);font-size:12.5px;text-align:center;padding:20px}
   .igmedia .badge{position:absolute;top:9px;right:9px;background:rgba(20,30,27,.6);color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:999px;text-transform:uppercase;letter-spacing:.04em}
@@ -520,8 +521,9 @@ function renderPreview(){
   const m=midias[0];
   const mc=$('#pvMedia'); mc.className='igmedia'+(tipo==='reels'?' reels':tipo==='story'?' story':'');
   if(m){ const badge=(tipo==='reels'?'<span class="badge">Reels</span>':'');
-    if(m.poster) mc.innerHTML=`<img src="${m.poster}" onerror="this.outerHTML=window.__pvv">`+badge;
-    else if(isVid(m.tipo)) mc.innerHTML=window.__pvv+badge;
+    // vídeo: player de verdade (capa como pôster; preload none = só baixa quando der play, os arquivos têm 60-100 MB)
+    if(isVid(m.tipo) && m.url){ const atual=mc.querySelector('video'); if(!atual || atual.dataset.src!==m.url) mc.innerHTML=`<video data-src="${m.url}" src="${m.url}"${m.poster?` poster="${m.poster}"`:''} controls playsinline preload="none"></video>`+badge; }
+    else if(m.poster) mc.innerHTML=`<img src="${m.poster}" onerror="this.outerHTML=window.__pvv">`+badge;
     else mc.innerHTML=`<img src="${m.url}">`;
   } else mc.innerHTML='<div class="ph">A mídia aparece aqui</div>';
   const sub=$('#pvSub'); sub.textContent = colabs.length? ('com @'+colabs[0]+(colabs.length>1?` +${colabs.length-1}`:'')) : (plats.size>1? [...plats].length+' redes' : 'prévia do post');
