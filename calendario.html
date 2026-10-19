@@ -46,6 +46,8 @@
   .ev.rascunho{border-left-color:var(--dim);background:#F8F8F8}
   .ev.pausado{border-left-color:#B7791F;background:#FFF6E5}
   .ev.publicado{border-left-color:var(--live);background:#EEF8F2}
+  .evprod{display:block;font-size:10.5px;font-weight:800;color:#7A3E9D;background:#F5EDFA;border:1px dashed #C9A6DE;border-radius:8px;padding:5px 7px;margin-bottom:5px;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .evprod:hover{background:#EEDFF7}
   .ev.erro{border-left-color:#B2432C;background:#FDF3F1}
   .ev .th{width:28px;height:28px;border-radius:5px;overflow:hidden;background:var(--hover);flex:0 0 auto;display:grid;place-items:center;margin-top:1px}
   .ev .th img{width:100%;height:100%;object-fit:cover}
@@ -163,7 +165,9 @@ const VIC = '<svg class="v" viewBox="0 0 24 24"><path d="M4 6h11a2 2 0 0 1 2 2v1
 window.__vic = VIC;
 const esc = s => String(s || '').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const isVid = t => /video|\.mp4|\.mov/i.test(t || '');
-let posts = [], cur = new Date(), histLimit = 20;
+let posts = [], todos = [], cur = new Date(), histLimit = 20;
+// ?mes=AAAA-MM abre o calendário nesse mês (vem do atalho "Post de produto")
+{ const m = (new URLSearchParams(location.search).get('mes') || '').match(/^(\d{4})-(\d{2})$/); if (m) cur = new Date(+m[1], +m[2] - 1, 1); }
 // ?visao=produtos → calendário separado só de PRODUTOS (origem 'produtos'); sem parâmetro → só conteúdo
 const VISAO_PRODUTOS = new URLSearchParams(location.search).get('visao') === 'produtos';
 if (VISAO_PRODUTOS) {
@@ -219,7 +223,8 @@ async function carregar() {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({acao: 'listar'})
     }).then(r => r.json());
-    posts = (r.dados || []).filter(p => VISAO_PRODUTOS ? p.origem === 'produtos' : p.origem !== 'produtos');
+    todos = r.dados || [];
+    posts = todos.filter(p => VISAO_PRODUTOS ? p.origem === 'produtos' : p.origem !== 'produtos');
   } catch(e) { posts = []; }
   render();
   renderFila();
@@ -248,6 +253,13 @@ function render() {
     }
   });
 
+  // no calendário de conteúdo: dias com post de PRODUTO ganham um atalho pro Calendário de produtos
+  const prodDays = {};
+  if (!VISAO_PRODUTOS) todos.filter(p => p.origem === 'produtos' && p.agendado_para && p.status !== 'cancelado').forEach(p => {
+    const d = new Date(p.agendado_para); if (d.getFullYear() === y && d.getMonth() === mo) prodDays[d.getDate()] = (prodDays[d.getDate()] || 0) + 1;
+  });
+  const mesParam = y + '-' + String(mo + 1).padStart(2, '0');
+
   let html = '';
   for (let i = 0; i < start; i++) html += '<div class="cell out"></div>';
   for (let d = 1; d <= dim; d++) {
@@ -266,6 +278,7 @@ function render() {
             `<span class="leg">${legLine(p)}</span>`+
           `</div></div>`;
       }).join('') +
+      (prodDays[d] ? `<a class="evprod" href="calendario.html?visao=produtos&mes=${mesParam}" title="Abrir o Calendário de produtos">🛍️ Post de produto${prodDays[d] > 1 ? 's (' + prodDays[d] + ')' : ''}</a>` : '') +
     '</div>';
   }
   const cells = start + dim;
