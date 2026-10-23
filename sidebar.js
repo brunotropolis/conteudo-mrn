@@ -22,6 +22,7 @@
     {cat:'Métricas'},
     {item:'Panorama', href:'panorama.html', ic:'📈'},
     {item:'Dashboard Link Bio', href:'dashbio.html', ic:'🔗'},
+    {item:'Funil das automações', href:'funil.html', ic:'🎯'},
     {cat:'Ferramentas'},
     {item:'Publicador', href:'publicador.html', ic:'📤'},
     {item:'Calendário de posts', href:'calendario.html', ic:'📅'},

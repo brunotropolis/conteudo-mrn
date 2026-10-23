@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Funil das Automações · HUB Manual</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#3A5049">
+<style>
+  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--hover:#E9F3F1;--line:#DCE8E6;--ink:#23332F;--mute:#6E827D;--dim:#93A5A1;--gold:#E3A31B;--gold2:#C88C10;--goldink:#8A5E0A;--goldbg:#FDF1D6;--teal:#17A2A0;--blue:#4E7CA6;--menu:#3A5049;--menuTxt:#E7EEEC;--menuMute:#9DB3AD;--rose:#C2577A}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.5;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .top{background:var(--menu);color:var(--menuTxt);padding:18px 22px;display:flex;align-items:center;gap:14px}
+  .top .logo{width:42px;height:42px;border-radius:12px;flex:0 0 auto;overflow:hidden}
+  .top .logo img{width:100%;height:100%;display:block}
+  .top .tt{min-width:0;flex:1}
+  .top h1{font-size:1.18rem;font-weight:800;letter-spacing:-.01em}
+  .top p{color:var(--menuMute);font-size:.82rem;margin-top:2px}
+  .top .back{flex:0 0 auto;color:var(--menuTxt);font-size:.82rem;font-weight:700;background:rgba(255,255,255,.10);padding:8px 13px;border-radius:10px}
+  .wrap{max-width:1100px;margin:0 auto;padding:26px 18px 70px}
+
+  .filters{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin:0 2px 20px}
+  .fgrp{display:flex;flex-direction:column;gap:6px}
+  .flabel{font-size:10.5px;font-weight:800;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+  .grp{display:flex;gap:5px;background:var(--panel);border:1px solid var(--line);padding:5px;border-radius:12px;flex-wrap:wrap}
+  .chip{font-size:12.5px;font-weight:700;color:var(--mute);padding:6px 12px;border-radius:8px;cursor:pointer;border:none;background:none;font-family:inherit}
+  .chip.on{background:var(--menu);color:#fff}
+  .fspacer{flex:1}
+  .fmeta{font-size:12px;color:var(--mute);align-self:center}
+
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:20px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:15px 16px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 18px rgba(35,51,47,.05)}
+  .kpi.hi{border-top:4px solid var(--teal)}
+  .kpi .lab{font-size:11px;color:#52615A;text-transform:uppercase;letter-spacing:.07em;font-weight:700}
+  .kpi .val{font-size:26px;font-weight:800;margin-top:6px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .kpi .sub{font-size:11px;color:var(--dim);margin-top:2px}
+
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 18px rgba(35,51,47,.05);margin-bottom:16px}
+  .panel h2{font-size:.82rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+  .panel .hint{font-size:11.5px;color:var(--dim);margin:2px 0 14px}
+
+  .auto{border-top:1px solid var(--line);padding:16px 2px 14px}
+  .auto:first-child{border-top:none;padding-top:4px}
+  .auto .hd{display:flex;align-items:center;gap:10px;flex-wrap:wrap;cursor:pointer}
+  .auto .nm{font-weight:800;font-size:14px;flex:1;min-width:180px}
+  .tag{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:3px 8px;border-radius:999px;background:var(--hover);color:var(--mute)}
+  .tag.prod{background:var(--goldbg);color:var(--goldink)}
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:10px}
+  .st{min-width:0}
+  .st.off .n,.st.off .l{color:var(--dim)}
+  .st .l{font-size:10.5px;font-weight:700;color:var(--mute);text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .st .n{font-size:19px;font-weight:800;font-variant-numeric:tabular-nums;margin-top:2px}
+  .st .p{font-size:11.5px;font-weight:700;color:var(--teal)}
+  .st .na{font-size:11.5px;color:var(--dim)}
+  .bar{height:4px;background:var(--hover);border-radius:999px;overflow:hidden;margin-top:6px}
+  .bar>i{display:block;height:100%;border-radius:999px;background:var(--c,var(--teal))}
+  .links{margin-top:12px;display:none}
+  .auto.open .links{display:block}
+  .lrow{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;padding:6px 2px;border-bottom:1px dashed var(--line)}
+  .lrow span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mute)}
+  .lrow b{font-variant-numeric:tabular-nums}
+  .seta{color:var(--dim);font-size:12px}
+  .note{font-size:11.5px;color:var(--dim);margin:-8px 2px 16px}
+  .empty{color:var(--dim);font-size:13px;padding:8px 2px}
+  footer{color:var(--dim);text-align:center;font-size:.78rem;padding:10px 20px 40px}
+  @media(max-width:760px){ .steps{grid-template-columns:repeat(3,1fr);gap:14px 12px} .wrap{padding:18px 16px 60px} }
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="logo"><img src="favicon.svg" alt=""></div>
+  <div class="tt"><h1>Funil das Automações</h1><p>Quem comentou, recebeu o direct, clicou e segue o perfil</p></div>
+  <a class="back" href="index.html">← HUB</a>
+</div>
+<div class="wrap">
+  <div class="filters">
+    <div class="fgrp">
+      <span class="flabel">Período</span>
+      <div class="grp" id="fperiodo">
+        <button class="chip" data-d="1">Hoje</button>
+        <button class="chip on" data-d="7">7 dias</button>
+        <button class="chip" data-d="30">30 dias</button>
+        <button class="chip" data-d="120">Tudo</button>
+      </div>
+    </div>
+    <div class="fgrp">
+      <span class="flabel">Tipo</span>
+      <div class="grp" id="ftipo">
+        <button class="chip on" data-v="">Todas</button>
+        <button class="chip" data-v="produto">Produtos</button>
+        <button class="chip" data-v="conteudo">Conteúdo e iscas</button>
+      </div>
+    </div>
+    <div class="fspacer"></div>
+    <div class="fmeta" id="fmeta">carregando…</div>
+  </div>
+  <div class="note" id="note" hidden></div>
+  <div class="kpis" id="kpis"></div>
+  <div class="panel">
+    <h2>Por automação</h2>
+    <p class="hint">Toque numa automação pra ver os cliques por link. "Próximo passo" = botão que continua o fluxo (ex.: QUERO O LINK). "Link" = loja, ebook, página.</p>
+    <div id="lista"><div class="empty">carregando…</div></div>
+  </div>
+</div>
+<footer>HUB Manual · Motor de Conteúdo</footer>
+<script>
+const API='/api/n8n/motor-inbox';
+let dias=7, tipo='', dados=null;
+const pct=(a,b)=>b?Math.round(a*100/b)+'%':'';
+const fmtD=s=>s?new Date(s).toLocaleString('pt-BR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}):'';
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const host=u=>{try{const h=new URL(u).hostname.replace(/^www\./,'');return /meli\.la|mercadoli/.test(h)?'Mercado Livre':/shopee/.test(h)?'Shopee':/amazon|amzn/.test(h)?'Amazon':/asofertasmaternas/.test(h)?'Grupo de ofertas':h}catch(e){return u}};
+function passo(l,n,base,cor,na,semBarra){
+  if(na) return `<div class="st off"><div class="l">${l}</div><div class="n">–</div><div class="na">${na}</div></div>`;
+  const p=base?Math.round(n*100/base):0;
+  return `<div class="st" style="--c:${cor}"><div class="l">${l}</div><div class="n">${n}</div>${base?`<div class="p">${p}%</div>`:'<div class="na">base</div>'}${semBarra||!base?'':`<div class="bar"><i style="width:${Math.min(100,p)}%"></i></div>`}</div>`;
+}
+function render(){
+  const L=(dados.lista||[]).filter(a=>!tipo||(tipo==='produto'?a.grupo==='produto':a.grupo!=='produto'));
+  const T=L.reduce((t,a)=>{for(const k of ['acionaram','receberam','clicaram_prox','clicaram_link','segue_sabido','seguem_agora','passaram_a_seguir'])t[k]=(t[k]||0)+a[k];t.rec_prox=(t.rec_prox||0)+(a.tem_prox?a.receberam:0);return t},{});
+  const k=(lab,val,sub,c)=>`<div class="kpi${c==='hi'?' hi':''}"><div class="lab">${lab}</div><div class="val">${val}</div><div class="sub">${sub||''}</div></div>`;
+  document.getElementById('kpis').innerHTML=
+    k('Acionaram',T.acionaram||0,'comentaram a palavra','')+
+    k('Receberam o direct',T.receberam||0,pct(T.receberam,T.acionaram)+' de quem acionou','')+
+    k('Clicaram próximo passo',T.clicaram_prox||0,pct(T.clicaram_prox,T.rec_prox)+' de '+(T.rec_prox||0)+' com esse botão','hi')+
+    k('Clicaram em link',T.clicaram_link||0,'pessoas únicas','hi')+
+    k('Seguem o perfil',T.seguem_agora||0,(T.segue_sabido||0)+' com perfil conhecido','')+
+    k('Passaram a seguir',T.passaram_a_seguir||0,'depois da automação','hi');
+  const el=document.getElementById('lista');
+  if(!L.length){el.innerHTML='<div class="empty">Nada nesse período.</div>';return;}
+  el.innerHTML=L.map((a,i)=>`<div class="auto" data-i="${i}">
+    <div class="hd"><span class="nm">${esc(a.nome)}</span><span class="tag ${a.grupo==='produto'?'prod':''}">${a.grupo==='produto'?'produto':'conteúdo'}</span><span class="seta">▾ links</span></div>
+    <div class="steps">
+      ${passo('Acionaram',a.acionaram,0,'var(--menu)')}
+      ${passo('Receberam',a.receberam,a.acionaram,'var(--teal)')}
+      ${a.tem_prox?passo('Próximo passo',a.clicaram_prox,a.receberam,'var(--teal)'):passo('Próximo passo',0,0,'',' sem esse botão')}
+      ${passo('Clicaram link',a.clicaram_link,a.receberam,'var(--teal)')}
+      ${a.segue_sabido?passo('Seguem o perfil',a.seguem_agora,a.segue_sabido,'var(--menu)','',true):passo('Seguem o perfil',0,0,'',' ainda sem dado')}
+    </div>
+    <div class="links">${(a.links||[]).length?(a.links.map(l=>`<div class="lrow"><span title="${esc(l.url)}">${esc(host(l.url))} · ${esc(l.url.replace(/^https?:\/\//,'').slice(0,60))}</span><b>${l.pessoas}</b></div>`).join('')):'<div class="empty">Nenhum clique em link nesse período.</div>'}
+      ${a.passaram_a_seguir?`<div class="lrow"><span>Passaram a seguir depois da automação</span><b>${a.passaram_a_seguir}</b></div>`:''}</div>
+  </div>`).join('');
+  el.querySelectorAll('.auto .hd').forEach(h=>h.onclick=()=>h.parentElement.classList.toggle('open'));
+}
+async function carregar(){
+  document.getElementById('fmeta').textContent='carregando…';
+  try{
+    const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'funil',dias})});
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    const j=await r.json(); dados=j.dados||j;
+    const n=document.getElementById('note');
+    const rl=dados.rastreio_links_desde, sh=dados.segue_hist_desde;
+    n.hidden=false;
+    n.innerHTML='ⓘ Cliques em link contam desde <b>'+fmtD(rl)+'</b>. "Passaram a seguir" conta desde <b>'+fmtD(sh)+'</b>. A Meta só mostra se a pessoa segue depois que ela interage no direct (clique ou mensagem).';
+    document.getElementById('fmeta').textContent='atualizado '+new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+    render();
+  }catch(e){ document.getElementById('lista').innerHTML='<div class="empty">Não consegui carregar ('+esc(e.message)+').</div>'; document.getElementById('fmeta').textContent=''; }
+}
+document.querySelectorAll('#fperiodo .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('#fperiodo .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');dias=+b.dataset.d;carregar();});
+document.querySelectorAll('#ftipo .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('#ftipo .chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');tipo=b.dataset.v;if(dados)render();});
+carregar();
+</script>
+<script src="sidebar.js?v=20261023" defer></script>
+</body>
+</html>
