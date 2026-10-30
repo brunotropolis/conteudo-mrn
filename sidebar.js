@@ -69,6 +69,10 @@
    +'.sb a.n .ex{flex:0 0 auto;font-size:11px;opacity:.5}'
    +'.sb .ft{padding:14px 20px 16px;border-top:1px solid rgba(255,255,255,.1);font-size:11px;color:#9DB3AD;line-height:1.45}'
    +'.sb .ft b{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#E3A31B;font-weight:700;margin-bottom:3px}'
+   +'.sb .eu{display:none;align-items:center;gap:10px;margin:0 12px 12px;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.07);color:#E7EEEC;font-size:12px}.sb .eu.on{display:flex}'
+   +'.sb .eu .av{width:30px;height:30px;border-radius:50%;background:#E3A31B;color:#23332F;display:grid;place-items:center;font-weight:800;font-size:13px;flex:0 0 auto}'
+   +'.sb .eu .q{flex:1;min-width:0;line-height:1.25}.sb .eu .q small{display:block;color:#9DB3AD;font-size:10.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'
+   +'.sb .eu a{flex:0 0 auto;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#FFD9D4;border:1.5px solid rgba(255,170,160,.55);border-radius:9px;padding:6px 10px;text-decoration:none}.sb .eu a:hover{background:rgba(255,120,100,.15);color:#fff}'
    +'.sbtop{display:none}'
    +'@media(max-width:900px){'
    +'  body{padding-left:0}'
@@ -99,6 +103,7 @@
   var aside=document.createElement('aside'); aside.className='sb';
   aside.innerHTML=''
    +'<nav>'+nav+'</nav>'
+   +'<div class="eu" id="sbEu"><span class="av"></span><span class="q"><b></b><small></small></span><a href="/cdn-cgi/access/logout">Sair</a></div>'
    +'<div class="ft"><b>Publicação</b>Automática ligada: agendados saem sozinhos no horário.</div>';
 
   var top=document.createElement('div'); top.className='sbtop';
@@ -110,6 +115,11 @@
   document.body.insertBefore(aside, document.body.firstChild);
   document.body.insertBefore(top, document.body.firstChild);
 
+  // quem está logado (Cloudflare Access) + Sair. Sair = /cdn-cgi/access/logout (encerra a sessão; o próximo login pede o e-mail de novo)
+  fetch('/cdn-cgi/access/get-identity',{credentials:'same-origin'}).then(function(r){return r.ok?r.json():null;}).then(function(u){
+    if(!u||!u.email) return; var em=String(u.email).toLowerCase(), nome=em.indexOf('day.dos.anjos')===0?'Day':(em.indexOf('contato@brunotropolis')===0?'Bruno':em.split('@')[0]);
+    var e=aside.querySelector('#sbEu'); e.querySelector('.av').textContent=nome.charAt(0).toUpperCase(); e.querySelector('b').textContent=nome; e.querySelector('small').textContent=em; e.classList.add('on');
+  }).catch(function(){});
   // contador dos carrosséis (só se o menu tem o item)
   if(aside.querySelector('.bdg')) fetch('/api/n8n/motor-carrosseis',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'listar'})}).then(function(r){return r.json();}).then(function(d){
     var L=d.dados||[]; aside.querySelectorAll('.bdg').forEach(function(b){ var st=b.dataset.st.split(','); var n=L.filter(function(c){return st.indexOf(c.status)>=0;}).length; if(n){ b.textContent=n; b.classList.add('on'); } });

@@ -30,7 +30,17 @@
   .lam .img img{width:100%;height:100%;display:block;object-fit:cover}
   .lam .n{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin:0 0 7px 4px}
   .lam .lado{position:sticky;top:18px;margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px}
-  .lam label{display:block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin-bottom:6px}
+  .lam label{display:block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+  .lr{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+  .mic{display:none;align-items:center;gap:6px;flex:0 0 auto;font:800 13px/1 system-ui,sans-serif;color:var(--ame);background:#F6EAF2;border:1px solid #E6CFE0;border-radius:999px;padding:8px 13px;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+  .temvoz .mic{display:inline-flex}
+  .mic svg{width:15px;height:15px;fill:currentColor}
+  .mic.on{background:#C0392B;border-color:#C0392B;color:#fff;animation:pulsa 1.2s ease-in-out infinite}
+  @keyframes pulsa{50%{box-shadow:0 0 0 6px rgba(192,57,43,.18)}}
+  @media(prefers-reduced-motion:reduce){.mic.on{animation:none}}
+  .ouvindo{font-size:.85rem;color:#C0392B;font-style:italic;margin-top:6px;min-height:0}
+  .ouvindo:empty{display:none}
+  textarea.grava{border-color:#C0392B;background:#FFF7F6}
   textarea{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;font-size:16px;line-height:1.45;color:var(--ink);background:var(--card);resize:vertical;outline:none;transition:border-color .15s,background .15s}
   textarea:focus{border-color:var(--menu);background:#fff}
   .lam textarea{min-height:84px}
@@ -38,7 +48,8 @@
   .ant{margin-top:8px;font-size:.86rem;color:#9A3B3B;background:#FBEDED;border-radius:10px;padding:6px 9px}
 
   .bloco{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:18px;margin-bottom:18px;box-shadow:0 1px 2px rgba(35,51,47,.05)}
-  .bloco h2{font-size:.85rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+  .bloco h2{font-size:.85rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+  .bloco .lr{margin-bottom:4px}
   .bloco .sub{font-size:.9rem;color:var(--mute);margin-bottom:10px}
   #leg{min-height:300px;background:#fff;border-color:#B9CCC7}
   .legrod{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:10px}
@@ -138,13 +149,13 @@ function montar(){
   C.laminas.forEach(function(u,i){
     var n=i+1, antes=(ult&&ult.slides&&ult.slides[n])?'<div class="ant">Pedido anterior: '+esc(ult.slides[n])+'</div>':'';
     h+='<div class="lam"><div><span class="n">Lâmina '+n+' de '+C.laminas.length+'</span><div class="img"><img src="'+esc(u)+'" alt="Lâmina '+n+'" '+(i>1?'loading="lazy"':'')+'></div></div>'
-      +(aberto?'<div class="lado"><label for="aj'+n+'">Ajuste na lâmina '+n+'</label><textarea id="aj'+n+'" data-n="'+n+'" placeholder="Ex.: trocar a palavra X por Y"></textarea>'+antes+'</div>':'<div></div>')+'</div>';
+      +(aberto?'<div class="lado"><div class="lr"><label for="aj'+n+'">Ajuste na lâmina '+n+'</label>'+'<button type="button" class="mic" data-alvo="aj'+n+'" aria-label="Ditar por voz">'+MICSVG+'<span>Falar</span></button>'+'</div><textarea id="aj'+n+'" data-n="'+n+'" placeholder="Escreve aqui ou toca em Falar"></textarea><div class="ouvindo" id="ouv_aj'+n+'"></div>'+antes+'</div>':'<div></div>')+'</div>';
   });
-  h+='<div class="bloco"><h2>Legenda</h2><div class="sub">'+(C.status==='publicado'?'Legenda publicada.':'✏️ Toca no texto pra editar. Salva sozinho e é essa legenda que vai pro post.')
+  h+='<div class="bloco"><div class="lr"><h2>Legenda</h2>'+(C.status!=='publicado'?'<button type="button" class="mic" data-alvo="leg" aria-label="Ditar por voz">'+MICSVG+'<span>Falar</span></button>':'')+'</div><div class="sub">'+(C.status==='publicado'?'Legenda publicada.':'✏️ Toca no texto pra editar. Salva sozinho e é essa legenda que vai pro post.')
     +(C.legenda_editada_por?' Última edição: '+esc(C.legenda_editada_por)+' em '+esc(C.legenda_editada_fmt)+'.':'')+'</div>'
-    +'<textarea id="leg" '+(C.status==='publicado'?'readonly':'')+'></textarea>'
+    +'<textarea id="leg" '+(C.status==='publicado'?'readonly':'')+'></textarea><div class="ouvindo" id="ouv_leg"></div>'
     +'<div class="legrod"><small id="legN"></small><span class="salvo" id="legS"></span><button class="btn ghost" id="bCp">Copiar legenda</button></div></div>';
-  if(aberto) h+='<div class="bloco"><h2>Ajuste geral</h2><div class="sub">Algo que vale pro carrossel inteiro (tom, ordem, tema). Opcional.</div><textarea id="geral" placeholder="Ex.: deixar mais leve, trocar a ordem das lâminas 3 e 4"></textarea></div>';
+  if(aberto) h+='<div class="bloco"><div class="lr"><h2>Ajuste geral</h2>'+'<button type="button" class="mic" data-alvo="geral" aria-label="Ditar por voz">'+MICSVG+'<span>Falar</span></button>'+'</div><div class="sub">Algo que vale pro carrossel inteiro (tom, ordem, tema). Opcional.</div><textarea id="geral" placeholder="Ex.: deixar mais leve, trocar a ordem das lâminas 3 e 4"></textarea><div class="ouvindo" id="ouv_geral"></div></div>';
   var hist=(C.ajustes||[]).slice().reverse();
   if(hist.length) h+='<details class="bloco hb"><summary><h2>Ajustes já pedidos ('+hist.length+')</h2></summary><ul class="hist">'+hist.map(function(a){
     var it=Object.keys(a.slides||{}).sort(function(x,y){return x-y;}).map(function(k){return 'Lâmina '+k+': '+esc(a.slides[k]);});
@@ -161,6 +172,36 @@ function montar(){
 }
 function contaLeg(){ var n=$('leg').value.length, e=$('legN'); e.textContent=n+' de 2.200 caracteres'; e.classList.toggle('longo',n>2200); }
 function ajustesDigitados(){ var s={}; document.querySelectorAll('.lam textarea').forEach(function(t){ t.classList.toggle('tem',!!t.value.trim()); if(t.value.trim()) s[t.dataset.n]=t.value.trim(); }); return s; }
+var REC=window.SpeechRecognition||window.webkitSpeechRecognition, MICSVG='<svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V22h2v-3.08A7 7 0 0 0 19 12h-2z"/></svg>', VOZ=null;
+if(REC) document.documentElement.classList.add('temvoz');
+function pararVoz(){ if(VOZ){ var v=VOZ; VOZ=null; try{ v.rec&&v.rec.stop(); }catch(e){} v.btn.classList.remove('on'); v.btn.querySelector('span').textContent='Falar'; $('ouv_'+v.alvo).textContent=''; var t=$(v.alvo); if(t.dataset.ph!==undefined){ t.placeholder=t.dataset.ph; } t.classList.remove('grava'); } }
+function ditar(btn){
+  // uma frase por vez e religa sozinho até tocar em Parar (o modo contínuo repete frases no Android)
+  var alvo=btn.dataset.alvo, ta=$(alvo);
+  if(VOZ&&VOZ.alvo===alvo){ pararVoz(); return; }
+  pararVoz();
+  VOZ={btn:btn,alvo:alvo,falhas:0};
+  btn.classList.add('on'); btn.querySelector('span').textContent='Parar'; $('ouv_'+alvo).textContent=''; ta.dataset.ph=ta.placeholder; ta.placeholder='● Gravando… fale agora'; ta.classList.add('grava');
+  var ouvir=function(){
+    if(!VOZ||VOZ.alvo!==alvo) return;
+    var rec=new REC(), base=ta.value; rec.lang='pt-BR'; rec.continuous=false; rec.interimResults=true; VOZ.rec=rec;
+    rec.onresult=function(e){
+      var fim='', tmp=''; for(var i=0;i<e.results.length;i++){ var t=e.results[i][0].transcript; if(e.results[i].isFinal) fim+=t; else tmp+=t; }
+      if(fim){ ta.value=(base&&!/\s$/.test(base)?base+' ':base)+fim.trim(); ta.dispatchEvent(new Event('input')); VOZ&&(VOZ.falhas=0,VOZ.mudo=0); }
+      $('ouv_'+alvo).textContent=tmp?'🎙️ '+tmp+'…':'';
+    };
+    rec.onerror=function(e){
+      if(e.error==='not-allowed'||e.error==='service-not-allowed'){ toast('Libera o microfone pro site nas configurações do navegador'); pararVoz(); }
+      else if(e.error==='no-speech'&&VOZ){ VOZ.mudo=(VOZ.mudo||0)+1; if(VOZ.mudo>3){ pararVoz(); } }
+      else if(e.error!=='aborted'&&VOZ){ VOZ.falhas++; }
+    };
+    rec.onend=function(){ if(VOZ&&VOZ.rec===rec){ if(VOZ.falhas>2){ toast('Não deu pra ouvir, tenta de novo'); pararVoz(); } else ouvir(); } };
+    try{ rec.start(); }catch(e){ pararVoz(); }
+  };
+  ouvir();
+}
+document.addEventListener('click',function(e){ var b=e.target.closest('.mic'); if(b){ e.preventDefault(); ditar(b); } });
+
 function barra(){
   var b=$('barra'), aberto=ABERTO.indexOf(C.status)>=0;
   b.hidden=!(aberto||C.status==='agendado');
@@ -180,6 +221,7 @@ function salvarLeg(){
   }).catch(function(){ toast('Sem conexão, tenta de novo'); return false; });
 }
 $('bAj').onclick=function(){
+  pararVoz();
   var s=ajustesDigitados(), g=$('geral')?$('geral').value.trim():'';
   if(!Object.keys(s).length&&!g) return;
   $('bAj').disabled=true; $('bAj').textContent='Enviando…';
@@ -208,6 +250,6 @@ document.addEventListener('keydown',function(e){ if(e.key==='Escape') $('md').cl
 window.addEventListener('beforeunload',function(e){ if(!C) return; var tem=Object.keys(ajustesDigitados()).length||($('geral')&&$('geral').value.trim())||($('leg')&&$('leg').value!==LEG0); if(tem){ e.preventDefault(); e.returnValue=''; } });
 if(!ID) location.replace('carrosseis.html'); else carregar();
 </script>
-<script src="sidebar.js?v=20261030c" defer></script>
+<script src="sidebar.js?v=20261030d" defer></script>
 </body>
 </html>
