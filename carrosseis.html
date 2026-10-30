@@ -39,14 +39,15 @@
 
   .grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
   .car{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(35,51,47,.05),0 6px 16px -8px rgba(35,51,47,.15)}
-  .car .capa{position:relative;aspect-ratio:4/5;background:#F3ECE4;cursor:pointer;overflow:hidden}
+  .car .capa{display:block;position:relative;aspect-ratio:4/5;background:#F3ECE4;cursor:pointer;overflow:hidden}
   .car .capa img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
   @media(hover:hover){.car .capa:hover img{transform:scale(1.03)}}
   .car .qtd{position:absolute;right:10px;bottom:10px;background:rgba(35,51,47,.78);color:#fff;font-size:11.5px;font-weight:700;border-radius:999px;padding:3px 9px}
   .car .corpo{padding:13px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
   .st{align-self:flex-start;font-size:10.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:3px 10px}
   .st.aguardando{background:var(--goldbg);color:#6B4706}.st.ajuste{background:#F7DDDD;color:#9A3B3B}
-  .st.aprovado{background:#DDEBDD;color:#2E6B3E}.st.agendado{background:#E6EEF9;color:#2C3E6B}
+  .st.ajustado{background:#EFE3F7;color:#5B2D7A}.st.aprovado{background:#DDEBDD;color:#2E6B3E}.st.agendado{background:#E6EEF9;color:#2C3E6B}.st.publicado{background:#E3E8E6;color:#3A5049}
+  .car .quando{font-size:.8rem;font-weight:700;color:#2C3E6B}
   .car h3{font-size:.98rem;font-weight:800;line-height:1.25}
   .car .tipo{font-size:.8rem;color:var(--mute)}
   .car .obs{font-size:.78rem;color:#8A4B12;background:#FFF6E6;border-radius:10px;padding:6px 9px}
@@ -57,19 +58,6 @@
   .vazio b{display:block;color:var(--ink);font-size:1rem;margin-bottom:4px}
 
 
-  /* modal */
-  .md{position:fixed;inset:0;background:rgba(20,30,27,.72);z-index:60;display:none;align-items:center;justify-content:center;padding:18px}
-  .md.on{display:flex}
-  .mdbox{background:#fff;border-radius:22px;max-width:1100px;width:100%;max-height:92vh;overflow:auto;padding:20px}
-  .mdtop{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px}
-  .mdtop h3{font-size:1.1rem;font-weight:800;flex:1}
-  .x{border:none;background:var(--hover);width:36px;height:36px;border-radius:10px;font-size:18px;cursor:pointer;flex:0 0 auto}
-  .lams{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;overscroll-behavior-x:contain}
-  .lamw{position:relative}.seta2{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.92);box-shadow:0 4px 14px rgba(0,0,0,.2);font-size:20px;cursor:pointer;z-index:2}.seta2.e{left:6px}.seta2.d{right:6px}@media(hover:none){.seta2{display:none}}
-  .lams img{flex:none;width:min(300px,72vw);border-radius:12px;scroll-snap-align:start}
-  .leg{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;white-space:pre-line;font-size:.88rem;position:relative}
-  .leg .cp{position:absolute;top:10px;right:10px;font-size:12px;font-weight:800;border:1px solid var(--line);background:#fff;border-radius:9px;padding:5px 10px;cursor:pointer}
-  .leg h4{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-bottom:6px}
 
   @media(max-width:560px){.grade{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.car .corpo{padding:10px 10px 11px}.car h3{font-size:.86rem}.car .tipo{font-size:.72rem}.car .obs{font-size:.7rem}.car .acts{flex-direction:column;gap:6px}.btn{font-size:12px;padding:7px 8px}.st{font-size:9.5px}}
   @media(max-width:760px){.montes{grid-template-columns:1fr}.monte{padding:16px 18px}.monte .num{font-size:2.1rem}}
@@ -80,7 +68,7 @@
   <div class="pagehdr">
     <div class="eyebrow">Conteúdo · Carrosséis</div>
     <h1>Carrosséis do Manual</h1>
-    <p>Tudo o que foi produzido pro @manualdorecemnascido. A Day aprova, e o aprovado vai pro Publicador às 20h, 1 por dia.</p>
+    <p>Tudo o que foi produzido pro @manualdorecemnascido. Abre o carrossel pra ver as lâminas grandes, pedir ajuste, mexer na legenda e aprovar. O aprovado entra no Publicador às 20h, 1 por dia.</p>
   </div>
 
   <div class="montes">
@@ -94,16 +82,10 @@
 
 </div>
 
-<div class="md" id="md"><div class="mdbox">
-  <div class="mdtop"><h3 id="mdT"></h3><button class="x" id="mdX" aria-label="Fechar">✕</button></div>
-  <div class="lamw"><button class="seta2 e" data-d="-1" aria-label="Anterior">‹</button><div class="lams" id="mdL"></div><button class="seta2 d" data-d="1" aria-label="Próxima">›</button></div>
-  <div class="leg"><button class="cp" id="mdC">Copiar legenda</button><h4>Legenda</h4><div id="mdG"></div></div>
-</div></div>
-
 <script>
 var L=[], V=new URLSearchParams(location.search).get('v')==='aprovados'?'aprovados':'pend';
-var PEND=['aguardando','ajuste'], OK=['aprovado','agendado'];
-var NOME={aguardando:'Aguardando a Day',ajuste:'Pedido de ajuste',aprovado:'Aprovado',agendado:'Agendado'};
+var PEND=['aguardando','ajuste','ajustado'], OK=['aprovado','agendado','publicado'];
+var NOME={aguardando:'Para revisar',ajuste:'Ajuste pedido',ajustado:'Ajustado, olhar de novo',aprovado:'Aprovado',agendado:'Agendado',publicado:'Publicado'};
 function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function render(){
   document.querySelectorAll('.monte[data-v]').forEach(function(m){m.classList.toggle('on',m.dataset.v===V);});
@@ -112,32 +94,23 @@ function render(){
   document.getElementById('secS').textContent=it.length+(it.length===1?' carrossel':' carrosséis');
   var g=document.getElementById('grade');
   if(!it.length){ g.innerHTML='<div class="vazio" style="grid-column:1/-1"><b>'+(V==='pend'?'Nada esperando aprovação':'Nenhum aprovado ainda')+'</b>'+(V==='pend'?'Tudo que estava aqui já foi visto pela Day.':'Assim que a Day aprovar, o carrossel aparece aqui com a data em que vai ao ar.')+'</div>'; return; }
-  g.innerHTML=it.map(function(c,k){
-    return '<div class="car"><div class="capa" data-k="'+L.indexOf(c)+'"><img src="'+esc(c.capa_url)+'" alt="'+esc(c.titulo)+'" loading="lazy"><span class="qtd">'+c.laminas+' lâminas</span></div>'
-     +'<div class="corpo"><span class="st '+c.status+'">'+NOME[c.status]+'</span><h3>'+esc(c.titulo)+'</h3><div class="tipo">'+esc(c.tipo)+'</div>'
-     +(c.obs?'<div class="obs">'+esc(c.obs)+'</div>':'')
-     +'<div class="acts"><button class="btn" data-k="'+L.indexOf(c)+'">Ver lâminas</button><a class="btn ghost" href="'+esc(c.url)+'" target="_blank" rel="noopener">Prévia ↗</a></div></div></div>';
+  g.innerHTML=it.map(function(c){
+    var href='carrossel.html?id='+encodeURIComponent(c.id);
+    var quando=c.status==='agendado'&&c.agendado_dia?'Vai ao ar '+c.agendado_dia+' às 20h':(c.status==='publicado'?'Já está no Instagram':'');
+    return '<div class="car"><a class="capa" href="'+href+'"><img src="'+esc(c.capa_url)+'" alt="'+esc(c.titulo)+'" loading="lazy"><span class="qtd">'+c.laminas.length+' lâminas</span></a>'
+     +'<div class="corpo"><span class="st '+c.status+'">'+NOME[c.status]+'</span><h3>'+esc(c.titulo)+'</h3><div class="tipo">'+esc(String(c.tipo).replace(/\s*·\s*template.*$/i,''))+'</div>'
+     +(quando?'<div class="quando">'+quando+'</div>':'')+(c.obs?'<div class="obs">'+esc(c.obs)+'</div>':'')
+     +'<div class="acts"><a class="btn" href="'+href+'">'+(V==='pend'?'Revisar e aprovar':'Abrir')+'</a></div></div></div>';
   }).join('');
 }
-function abrir(k){
-  var c=L[k]; document.getElementById('mdT').textContent=c.titulo;
-  document.getElementById('mdL').innerHTML=c.laminas_urls.map(function(u,i){return '<img src="'+esc(u)+'" alt="lâmina '+(i+1)+'" loading="lazy">';}).join('');
-  document.getElementById('mdG').textContent=c.legenda||'(sem legenda)';
-  document.getElementById('mdC').textContent='Copiar legenda'; document.getElementById('md').classList.add('on');
-}
 document.addEventListener('click',function(e){
-  var m=e.target.closest('.monte[data-v]'); if(m){ V=m.dataset.v; history.replaceState(null,'',V==='aprovados'?'?v=aprovados':location.pathname); render(); return; }
-  var k=e.target.closest('[data-k]'); if(k && !e.target.closest('a')){ abrir(+k.dataset.k); return; }
-  var sd=e.target.closest('.seta2'); if(sd){ var l=document.getElementById('mdL'); l.scrollBy({left:+sd.dataset.d*310,behavior:'smooth'}); return; }
-  if(e.target.id==='mdX'||e.target.id==='md'){ document.getElementById('md').classList.remove('on'); }
+  var m=e.target.closest('.monte[data-v]'); if(m){ V=m.dataset.v; history.replaceState(null,'',V==='aprovados'?'?v=aprovados':location.pathname); render(); }
 });
-document.addEventListener('keydown',function(e){ if(e.key==='Escape') document.getElementById('md').classList.remove('on'); });
-document.getElementById('mdC').onclick=function(){ var t=document.getElementById('mdG').textContent; navigator.clipboard.writeText(t).then(function(){ document.getElementById('mdC').textContent='Copiada ✓'; }); };
-fetch('carrosseis.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){
-  L=d; document.getElementById('nPend').textContent=L.filter(function(c){return PEND.indexOf(c.status)>=0;}).length;
+fetch('/api/n8n/motor-carrosseis',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'listar'})}).then(function(r){return r.json();}).then(function(d){
+  if(!d.ok) throw 0; L=d.dados; document.getElementById('nPend').textContent=L.filter(function(c){return PEND.indexOf(c.status)>=0;}).length;
   document.getElementById('nOk').textContent=L.filter(function(c){return OK.indexOf(c.status)>=0;}).length; render();
 }).catch(function(){ document.getElementById('grade').innerHTML='<div class="vazio" style="grid-column:1/-1"><b>Não consegui carregar a lista</b>Recarrega a página em instantes.</div>'; });
 </script>
-<script src="sidebar.js?v=20261030b" defer></script>
+<script src="sidebar.js?v=20261030c" defer></script>
 </body>
 </html>

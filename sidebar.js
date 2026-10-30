@@ -31,9 +31,9 @@
     {item:'Funil das automações', href:'funil.html', ic:'🎯'},
     {item:'Caixa de entrada', href:'inbox.html', ic:'💬'},
     {item:'Contatos', href:'contatos.html', ic:'👥'},
-    // Conteúdo (30/Out, pedido Bruno): carrosséis do projeto Maternidade. Dados em carrosseis.json (gerado por maternidade/montar_aprovacao.py)
+    // Conteúdo (30/Out, pedido Bruno): carrosséis do projeto Maternidade. Dados na tabela conteudo.carrosseis_aprovacao via /api/n8n/motor-carrosseis (maternidade/build_api.js)
     {cat:'Conteúdo'},
-    {item:'Carrosséis', href:'carrosseis.html', ic:'✨', badge:'aguardando', also:['base-carrosseis.html']},
+    {item:'Carrosséis', href:'carrosseis.html', ic:'✨', badge:'aguardando,ajustado', also:['base-carrosseis.html','carrossel.html']},
     {cat:'Admin'},
     {item:'Admin', href:'admin.html', ic:'⚙'}
   ];
@@ -111,8 +111,8 @@
   document.body.insertBefore(top, document.body.firstChild);
 
   // contador dos carrosséis (só se o menu tem o item)
-  if(aside.querySelector('.bdg')) fetch('carrosseis.json?t='+Date.now()).then(function(r){return r.json();}).then(function(L){
-    aside.querySelectorAll('.bdg').forEach(function(b){ var n=L.filter(function(c){return c.status===b.dataset.st;}).length; if(n){ b.textContent=n; b.classList.add('on'); } });
+  if(aside.querySelector('.bdg')) fetch('/api/n8n/motor-carrosseis',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'listar'})}).then(function(r){return r.json();}).then(function(d){
+    var L=d.dados||[]; aside.querySelectorAll('.bdg').forEach(function(b){ var st=b.dataset.st.split(','); var n=L.filter(function(c){return st.indexOf(c.status)>=0;}).length; if(n){ b.textContent=n; b.classList.add('on'); } });
   }).catch(function(){});
   function toggle(o){ aside.classList.toggle('open',o); scrim.classList.toggle('on',o); }
   top.querySelector('.hb').addEventListener('click',function(){ toggle(!aside.classList.contains('open')); });
