@@ -19,7 +19,7 @@
   .pagehdr p{color:#46574F;font-size:.92rem;max-width:720px;margin-top:4px}
 
   /* destaque: os dois montes */
-  .montes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:22px}
+  .montes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:22px}
   .monte{position:relative;display:flex;align-items:center;gap:18px;padding:22px 24px;border-radius:20px;cursor:pointer;border:2px solid transparent;background:var(--panel);box-shadow:0 1px 2px rgba(35,51,47,.06),0 6px 20px -8px rgba(35,51,47,.18);transition:transform .15s,border-color .15s;-webkit-tap-highlight-color:transparent;text-align:left;font:inherit;color:inherit}
   .monte .num{font-size:2.6rem;font-weight:800;line-height:1;letter-spacing:-.03em}
   .monte b{display:block;font-size:1.05rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
@@ -27,6 +27,7 @@
   .monte .ic{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;font-size:28px;flex:0 0 auto}
   .monte.pend .ic{background:var(--goldbg)}.monte.pend .num{color:var(--goldink)}
   .monte.ok .ic{background:#DDEBDD}.monte.ok .num{color:var(--live)}
+  .monte.db{background:linear-gradient(135deg,#3A5049,#2B3D37);color:#fff}.monte.db .ic{background:rgba(255,255,255,.12)}.monte.db span{color:#B8CBC6}.monte.db .seta{color:#E3A31B}
   .monte.on.pend{border-color:var(--gold);background:linear-gradient(135deg,#FFF9EA,#fff 60%)}
   .monte.on.ok{border-color:var(--live);background:linear-gradient(135deg,#EEF7EF,#fff 60%)}
   .monte .seta{margin-left:auto;font-size:1.3rem;color:var(--dim)}
@@ -55,14 +56,6 @@
   .vazio{background:rgba(255,255,255,.6);border:2px dashed #C9DAD6;border-radius:18px;padding:34px 20px;text-align:center;color:var(--mute);font-size:.92rem}
   .vazio b{display:block;color:var(--ink);font-size:1rem;margin-bottom:4px}
 
-  /* base de dados */
-  .base{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:center;margin-top:30px;padding:26px 28px;border-radius:22px;background:linear-gradient(135deg,#3A5049,#2B3D37);color:#E7EEEC;box-shadow:0 12px 32px -14px rgba(35,50,45,.5)}
-  .base .eyebrow{color:#E3A31B}
-  .base h2{font-size:1.35rem;font-weight:800;letter-spacing:-.01em;margin:4px 0 6px;color:#fff}
-  .base p{font-size:.9rem;color:#B8CBC6}
-  .base .chips{display:flex;flex-wrap:wrap;gap:8px}
-  .base .chips span{font-size:12px;font-weight:700;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:6px 12px}
-  .base .ir{display:inline-block;margin-top:14px;background:#E3A31B;color:#23332F;font-weight:800;font-size:13px;border-radius:12px;padding:10px 16px}
 
   /* modal */
   .md{position:fixed;inset:0;background:rgba(20,30,27,.72);z-index:60;display:none;align-items:center;justify-content:center;padding:18px}
@@ -79,7 +72,7 @@
   .leg h4{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-bottom:6px}
 
   @media(max-width:560px){.grade{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.car .corpo{padding:10px 10px 11px}.car h3{font-size:.86rem}.car .tipo{font-size:.72rem}.car .obs{font-size:.7rem}.car .acts{flex-direction:column;gap:6px}.btn{font-size:12px;padding:7px 8px}.st{font-size:9.5px}}
-  @media(max-width:760px){.montes{grid-template-columns:1fr}.base{grid-template-columns:1fr}.monte{padding:16px 18px}.monte .num{font-size:2.1rem}}
+  @media(max-width:760px){.montes{grid-template-columns:1fr}.monte{padding:16px 18px}.monte .num{font-size:2.1rem}}
 </style>
 </head>
 <body>
@@ -93,20 +86,12 @@
   <div class="montes">
     <button class="monte pend" data-v="pend"><div class="ic">✨</div><div><b>Para aprovação</b><span>Esperando a Day olhar</span></div><div class="num" id="nPend">0</div><span class="seta">›</span></button>
     <button class="monte ok" data-v="aprovados"><div class="ic">✅</div><div><b>Aprovados</b><span>Liberados e agendados</span></div><div class="num" id="nOk">0</div><span class="seta">›</span></button>
+    <a class="monte db" href="base-carrosseis.html"><div class="ic">📚</div><div><b>Base de dados</b><span>Referências, estilos, fontes, cores e regras</span></div><span class="seta">›</span></a>
   </div>
 
   <div class="sec"><h2 id="secT">Para aprovação</h2><small id="secS"></small></div>
   <div class="grade" id="grade"></div>
 
-  <a class="base" href="base-carrosseis.html">
-    <div>
-      <div class="eyebrow">Base de dados para criação dos carrosséis</div>
-      <h2>Tudo o que a gente usa pra criar</h2>
-      <p>Referências estudadas, estilos de carrossel com a paleta de cada um, fontes, cores, banco de imagens e as regras da marca.</p>
-      <span class="ir">Abrir a base →</span>
-    </div>
-    <div class="chips"><span>📌 Referências</span><span>🎨 Estilos</span><span>🔤 Fontes</span><span>🌈 Cores</span><span>🖼️ Imagens</span><span>✋ Regras</span></div>
-  </a>
 </div>
 
 <div class="md" id="md"><div class="mdbox">
@@ -121,7 +106,7 @@ var PEND=['aguardando','ajuste'], OK=['aprovado','agendado'];
 var NOME={aguardando:'Aguardando a Day',ajuste:'Pedido de ajuste',aprovado:'Aprovado',agendado:'Agendado'};
 function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function render(){
-  document.querySelectorAll('.monte').forEach(function(m){m.classList.toggle('on',m.dataset.v===V);});
+  document.querySelectorAll('.monte[data-v]').forEach(function(m){m.classList.toggle('on',m.dataset.v===V);});
   var grp=V==='pend'?PEND:OK, it=L.filter(function(c){return grp.indexOf(c.status)>=0;});
   document.getElementById('secT').textContent=V==='pend'?'Para aprovação':'Aprovados';
   document.getElementById('secS').textContent=it.length+(it.length===1?' carrossel':' carrosséis');
@@ -141,7 +126,7 @@ function abrir(k){
   document.getElementById('mdC').textContent='Copiar legenda'; document.getElementById('md').classList.add('on');
 }
 document.addEventListener('click',function(e){
-  var m=e.target.closest('.monte'); if(m){ V=m.dataset.v; history.replaceState(null,'',V==='aprovados'?'?v=aprovados':location.pathname); render(); return; }
+  var m=e.target.closest('.monte[data-v]'); if(m){ V=m.dataset.v; history.replaceState(null,'',V==='aprovados'?'?v=aprovados':location.pathname); render(); return; }
   var k=e.target.closest('[data-k]'); if(k && !e.target.closest('a')){ abrir(+k.dataset.k); return; }
   var sd=e.target.closest('.seta2'); if(sd){ var l=document.getElementById('mdL'); l.scrollBy({left:+sd.dataset.d*310,behavior:'smooth'}); return; }
   if(e.target.id==='mdX'||e.target.id==='md'){ document.getElementById('md').classList.remove('on'); }
@@ -153,6 +138,6 @@ fetch('carrosseis.json?t='+Date.now()).then(function(r){return r.json();}).then(
   document.getElementById('nOk').textContent=L.filter(function(c){return OK.indexOf(c.status)>=0;}).length; render();
 }).catch(function(){ document.getElementById('grade').innerHTML='<div class="vazio" style="grid-column:1/-1"><b>Não consegui carregar a lista</b>Recarrega a página em instantes.</div>'; });
 </script>
-<script src="sidebar.js?v=20261030a" defer></script>
+<script src="sidebar.js?v=20261030b" defer></script>
 </body>
 </html>

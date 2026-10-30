@@ -33,10 +33,7 @@
     {item:'Contatos', href:'contatos.html', ic:'👥'},
     // Conteúdo (30/Out, pedido Bruno): carrosséis do projeto Maternidade. Dados em carrosseis.json (gerado por maternidade/montar_aprovacao.py)
     {cat:'Conteúdo'},
-    {sub:'Carrosséis'},
-    {item:'Para aprovação', href:'carrosseis.html', ic:'✨', badge:'aguardando'},
-    {item:'Aprovados', href:'carrosseis.html?v=aprovados', ic:'✅', badge:'aprovado'},
-    {item:'Base de dados', href:'base-carrosseis.html', ic:'📚'},
+    {item:'Carrosséis', href:'carrosseis.html', ic:'✨', badge:'aguardando', also:['base-carrosseis.html']},
     {cat:'Admin'},
     {item:'Admin', href:'admin.html', ic:'⚙'}
   ];
@@ -93,8 +90,8 @@
     if(x.cat) return '<div class="cat">'+x.cat+'</div>';
     if(x.sub) return '<div class="sub">'+x.sub+'</div>';
     var base=x.href.split('/').pop().toLowerCase();
-    var aqui=path+(location.search.indexOf('visao=produtos')>=0?'?visao=produtos':'')+(location.search.indexOf('v=aprovados')>=0?'?v=aprovados':'');
-    var on=(!x.ext && (base===aqui || (aqui==='index.html'&&base==='index.html')));
+    var aqui=path+(location.search.indexOf('visao=produtos')>=0?'?visao=produtos':'');
+    var on=(!x.ext && (base===aqui || (x.also&&x.also.indexOf(aqui)>=0) || (aqui==='index.html'&&base==='index.html')));
     if(on) active=x.item;
     return '<a class="n'+(on?' on':'')+'" href="'+x.href+'"'+(x.ext?' target="_blank" rel="noopener"':'')+'>'+svg(x.ic)+'<span>'+x.item+'</span>'+(x.badge?'<b class="bdg" data-st="'+x.badge+'"></b>':'')+(x.ext?'<span class="ex">↗</span>':'')+'</a>';
   }).join('');
