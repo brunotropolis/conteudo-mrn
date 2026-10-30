@@ -31,6 +31,12 @@
     {item:'Funil das automações', href:'funil.html', ic:'🎯'},
     {item:'Caixa de entrada', href:'inbox.html', ic:'💬'},
     {item:'Contatos', href:'contatos.html', ic:'👥'},
+    // Conteúdo (30/Out, pedido Bruno): carrosséis do projeto Maternidade. Dados em carrosseis.json (gerado por maternidade/montar_aprovacao.py)
+    {cat:'Conteúdo'},
+    {sub:'Carrosséis'},
+    {item:'Para aprovação', href:'carrosseis.html', ic:'✨', badge:'aguardando'},
+    {item:'Aprovados', href:'carrosseis.html?v=aprovados', ic:'✅', badge:'aprovado'},
+    {item:'Base de dados', href:'base-carrosseis.html', ic:'📚'},
     {cat:'Admin'},
     {item:'Admin', href:'admin.html', ic:'⚙'}
   ];
@@ -55,6 +61,8 @@
    +'.pagehdr p,.pagehdr .up,.pagehdr small{color:#6E827D !important}'
    +'.sb .cat{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.62);padding:16px 12px 6px}'
    +'.sb .cat:first-child{padding-top:0}'
+   +'.sb .sub{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#E3A31B;padding:2px 12px 6px 14px;display:flex;align-items:center;gap:6px}.sb .sub:before{content:"";width:10px;height:1px;background:#E3A31B;opacity:.7}'
+   +'.sb .bdg{flex:0 0 auto;min-width:20px;height:20px;border-radius:999px;background:#E3A31B;color:#23332F;font-size:10.5px;font-weight:800;display:none;place-items:center;padding:0 6px}.sb .bdg.on{display:grid}.sb a.n.on .bdg{background:#3A5049;color:#fff}'
    +'.sb a.n{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;color:#E7EEEC;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px;text-decoration:none;transition:background .15s,color .15s}'
    +'.sb a.n span{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'
    +'.sb a.n svg{width:17px;height:17px;fill:currentColor;opacity:.8;flex:0 0 auto}.sb a.n .em{font-style:normal;font-size:16px;line-height:1;width:18px;text-align:center;flex:0 0 auto;opacity:.85}.sb a.n.on .em{opacity:1}'
@@ -83,11 +91,12 @@
   var active=null;
   var nav=NAV.map(function(x){
     if(x.cat) return '<div class="cat">'+x.cat+'</div>';
+    if(x.sub) return '<div class="sub">'+x.sub+'</div>';
     var base=x.href.split('/').pop().toLowerCase();
-    var aqui=path+(location.search.indexOf('visao=produtos')>=0?'?visao=produtos':'');
+    var aqui=path+(location.search.indexOf('visao=produtos')>=0?'?visao=produtos':'')+(location.search.indexOf('v=aprovados')>=0?'?v=aprovados':'');
     var on=(!x.ext && (base===aqui || (aqui==='index.html'&&base==='index.html')));
     if(on) active=x.item;
-    return '<a class="n'+(on?' on':'')+'" href="'+x.href+'"'+(x.ext?' target="_blank" rel="noopener"':'')+'>'+svg(x.ic)+'<span>'+x.item+'</span>'+(x.ext?'<span class="ex">↗</span>':'')+'</a>';
+    return '<a class="n'+(on?' on':'')+'" href="'+x.href+'"'+(x.ext?' target="_blank" rel="noopener"':'')+'>'+svg(x.ic)+'<span>'+x.item+'</span>'+(x.badge?'<b class="bdg" data-st="'+x.badge+'"></b>':'')+(x.ext?'<span class="ex">↗</span>':'')+'</a>';
   }).join('');
 
   var aside=document.createElement('aside'); aside.className='sb';
@@ -104,6 +113,10 @@
   document.body.insertBefore(aside, document.body.firstChild);
   document.body.insertBefore(top, document.body.firstChild);
 
+  // contador dos carrosséis (só se o menu tem o item)
+  if(aside.querySelector('.bdg')) fetch('carrosseis.json?t='+Date.now()).then(function(r){return r.json();}).then(function(L){
+    aside.querySelectorAll('.bdg').forEach(function(b){ var n=L.filter(function(c){return c.status===b.dataset.st;}).length; if(n){ b.textContent=n; b.classList.add('on'); } });
+  }).catch(function(){});
   function toggle(o){ aside.classList.toggle('open',o); scrim.classList.toggle('on',o); }
   top.querySelector('.hb').addEventListener('click',function(){ toggle(!aside.classList.contains('open')); });
   scrim.addEventListener('click',function(){ toggle(false); });

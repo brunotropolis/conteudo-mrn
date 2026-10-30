@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Base dos carrosséis · HUB Manual</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#3A5049">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..800,0..100,0..1;1,9..144,300..800,0..100,0..1&family=Hanken+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--hover:#E9F3F1;--line:#DCE8E6;--ink:#23332F;--mute:#6E827D;--dim:#93A5A1;--gold:#E3A31B;--goldink:#8A5E0A;--goldbg:#FDF1D6;--menu:#3A5049;--live:#1E874B}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.5;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1480px;margin:0 auto;padding:24px 18px 80px}
+  .pagehdr{margin:0 4px 16px}
+  .eyebrow{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--goldink)}
+  .pagehdr h1{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;margin-top:2px}
+  .pagehdr p{color:#46574F;font-size:.92rem;max-width:760px;margin-top:4px}
+  .voltar{display:inline-block;font-size:.85rem;font-weight:800;color:var(--goldink);margin-bottom:8px}
+
+  .indice{position:sticky;top:0;z-index:20;display:flex;gap:8px;overflow-x:auto;padding:10px 4px;margin:0 -4px 18px;background:linear-gradient(var(--bg) 80%,transparent);-webkit-overflow-scrolling:touch}
+  .indice a{flex:none;font-size:12.5px;font-weight:800;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;white-space:nowrap}
+  @media(hover:hover){.indice a:hover{border-color:var(--menu)}}
+
+  section{margin-bottom:34px}
+  .sh{display:flex;align-items:center;gap:12px;margin:0 4px 14px}
+  .sh .ic{width:44px;height:44px;border-radius:13px;background:#fff;display:grid;place-items:center;font-size:22px;box-shadow:0 1px 2px rgba(35,51,47,.06),0 4px 12px -6px rgba(35,51,47,.18)}
+  .sh h2{font-size:1.15rem;font-weight:800;letter-spacing:-.01em}
+  .sh p{font-size:.85rem;color:var(--mute)}
+
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:0 1px 2px rgba(35,51,47,.05),0 6px 16px -8px rgba(35,51,47,.14)}
+  .duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .lk{display:grid;grid-template-columns:160px minmax(0,1fr);gap:0;overflow:hidden;padding:0}
+  .lk img{width:100%;height:100%;min-height:150px;object-fit:cover;display:block;background:#F3ECE4}
+  .lk .t{padding:16px 18px;display:flex;flex-direction:column;gap:4px;justify-content:center}
+  .lk b{font-size:1rem;font-weight:800}
+  .lk span{font-size:.85rem;color:var(--mute)}
+  .lk em{font-style:normal;font-size:.82rem;font-weight:800;color:var(--goldink);margin-top:4px}
+  @media(hover:hover){.lk:hover{border-color:var(--menu)}}
+
+  /* estilos */
+  .estilos{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+  .est{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:grid;grid-template-columns:120px minmax(0,1fr);box-shadow:0 1px 2px rgba(35,51,47,.05),0 6px 16px -8px rgba(35,51,47,.14)}
+  .est img{width:100%;height:100%;object-fit:cover;display:block;min-height:170px}
+  .est .t{padding:14px 15px;display:flex;flex-direction:column;gap:5px}
+  .est .tag{align-self:flex-start;font-size:10.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:3px 9px;background:var(--hover);color:var(--menu)}
+  .est b{font-size:.98rem;font-weight:800;line-height:1.2}
+  .est p{font-size:.8rem;color:#46574F}
+  .sw{display:flex;gap:5px;margin-top:2px}
+  .sw i{width:22px;height:22px;border-radius:7px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+  .est a{font-size:.8rem;font-weight:800;color:var(--goldink);margin-top:auto}
+
+  /* fontes */
+  .fontes{display:grid;grid-template-columns:1.3fr 1fr;gap:14px}
+  .esp{background:#FBF7F2;border-radius:18px;padding:26px 28px;border:1px solid #EFE4D8}
+  .esp .tt{font-family:Fraunces,serif;font-variation-settings:'SOFT' 100,'WONK' 0;font-size:3rem;line-height:1.02;font-weight:620;color:#573151;letter-spacing:-.02em}
+  .esp .tt i{font-weight:430;color:#B05C80}
+  .esp .tx{font-family:'Hanken Grotesk',sans-serif;font-size:1.05rem;color:#3B2C25;margin-top:12px;max-width:520px}
+  .esp .nomes{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+  .esp .nomes span{font-size:12px;font-weight:800;background:#fff;border:1px solid #EFE4D8;border-radius:999px;padding:5px 12px;color:#573151}
+  ul.reg{list-style:none;display:flex;flex-direction:column;gap:9px}
+  ul.reg li{font-size:.88rem;position:relative;padding-left:16px}
+  ul.reg li:before{content:"•";color:var(--gold);font-weight:900;position:absolute;left:2px;top:0}
+
+  /* cores */
+  .paletas{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+  .pal{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .pal .faixa{display:flex;height:64px}.pal .faixa i{flex:1}
+  .pal .t{padding:10px 12px}
+  .pal b{font-size:.88rem;font-weight:800;display:block}
+  .pal span{font-size:.75rem;color:var(--mute);font-family:ui-monospace,Consolas,monospace}
+
+  /* regras */
+  .regras{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+  .rg{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start}
+  .rg .e{font-size:22px;line-height:1}
+  .rg b{display:block;font-size:.9rem;font-weight:800}
+  .rg span{font-size:.82rem;color:#46574F}
+
+  @media(max-width:760px){.duo,.fontes{grid-template-columns:1fr}.lk{grid-template-columns:110px minmax(0,1fr)}.est{grid-template-columns:100px minmax(0,1fr)}.esp .tt{font-size:2.3rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="pagehdr">
+    <a class="voltar" href="carrosseis.html">← Carrosséis</a>
+    <div class="eyebrow">Conteúdo · Carrosséis</div>
+    <h1>Base de dados para criação dos carrosséis</h1>
+    <p>O que a gente estudou e decidiu pra criar os carrosséis do Manual: de onde vêm as ideias, os estilos prontos, as fontes, as cores, as imagens e as regras que não podem ser quebradas.</p>
+  </div>
+
+  <nav class="indice">
+    <a href="#referencias">📌 Referências</a><a href="#estilos">🎨 Estilos</a><a href="#fontes">🔤 Fontes</a><a href="#cores">🌈 Cores</a><a href="#imagens">🖼️ Imagens</a><a href="#regras">✋ Regras</a>
+  </nav>
+
+  <section id="referencias">
+    <div class="sh"><div class="ic">📌</div><div><h2>Referências</h2><p>De onde vêm as ideias</p></div></div>
+    <div class="duo">
+      <a class="panel lk" href="https://brunotropolis.github.io/supernanny-previews/2026-10-28-referencias-maternidade/" target="_blank" rel="noopener">
+        <img src="https://brunotropolis.github.io/supernanny-previews/maternidade/img/refs.jpg" alt="capas das referências" loading="lazy">
+        <div class="t"><b>27 carrosséis que funcionam</b><span>Perfis de maternidade analisados um a um: categoria, estilo visual, jeito de falar, risco com a Meta e o que dá pra replicar.</span><em>Abrir o estudo ↗</em></div>
+      </a>
+      <div class="panel">
+        <b style="font-size:1rem">O que o estudo ensinou</b>
+        <ul class="reg" style="margin-top:10px">
+          <li>Humor e emoção dão alcance (48 a 78 mil curtidas), quase sempre em 1 lâmina.</li>
+          <li>Tabela e guia curtem pouco, mas são os mais salvos.</li>
+          <li>"Comenta a palavra" gera milhares de comentários quando entrega algo no direct.</li>
+          <li>Voz do bebê em 1ª pessoa ensina sem soar aula: é a cara da Day.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="estilos">
+    <div class="sh"><div class="ic">🎨</div><div><h2>Estilos de carrossel</h2><p>Os moldes prontos, cada um com a sua paleta pra não parecerem iguais</p></div></div>
+    <div class="estilos" id="estilos-g"></div>
+  </section>
+
+  <section id="fontes">
+    <div class="sh"><div class="ic">🔤</div><div><h2>Fontes</h2><p>Decidido em 29/Out depois do estudo de 9 combinações</p></div></div>
+    <div class="fontes">
+      <div class="esp">
+        <div class="tt">Seu bebê está <i>tentando te dizer</i></div>
+        <div class="tx">Texto corrido em Hanken Grotesk: limpa, fácil de ler no celular, combina com a serifa macia do título.</div>
+        <div class="nomes"><span>Título: Fraunces macia</span><span>Texto: Hanken Grotesk</span></div>
+      </div>
+      <div class="panel">
+        <b style="font-size:1rem">Como usar</b>
+        <ul class="reg" style="margin-top:10px">
+          <li>Título em Fraunces com o ajuste "macio" ligado.</li>
+          <li>Itálico só em 2 ou 3 palavras do título, na cor de destaque.</li>
+          <li>Nada de preto puro: café <code>#3B2C25</code> ou ameixa.</li>
+          <li>Rótulos pequenos em maiúscula com espaço entre letras.</li>
+        </ul>
+        <a href="https://brunotropolis.github.io/supernanny-previews/2026-10-29-estudo-fontes-maternidade/" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;font-size:.82rem;font-weight:800;color:var(--goldink)">Ver o estudo de fontes ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="cores">
+    <div class="sh"><div class="ic">🌈</div><div><h2>Cores</h2><p>Tiradas do link da bio e dos reels da Day (últimos 30 dias)</p></div></div>
+    <div class="paletas" id="pal-g"></div>
+    <a class="panel lk" style="margin-top:14px" href="https://brunotropolis.github.io/supernanny-previews/2026-10-28-referencias-maternidade/#cores" target="_blank" rel="noopener">
+      <img src="https://brunotropolis.github.io/supernanny-previews/maternidade/img/cores.jpg" alt="cores dos reels" loading="lazy">
+      <div class="t"><b>Estudo de cores completo</b><span>A paleta da bio, os quadros dos 26 reels da Day e de onde saiu cada cor.</span><em>Abrir o estudo ↗</em></div>
+    </a>
+  </section>
+
+  <section id="imagens">
+    <div class="sh"><div class="ic">🖼️</div><div><h2>Imagens</h2><p>De onde sai cada foto</p></div></div>
+    <div class="duo">
+      <a class="panel lk" href="https://brunotropolis.github.io/supernanny-previews/2026-10-29-acervo-imagens-maternidade/" target="_blank" rel="noopener">
+        <img src="https://brunotropolis.github.io/supernanny-previews/maternidade/img/banco.jpg" alt="banco de imagens" loading="lazy">
+        <div class="t"><b>Banco de imagens (136)</b><span>Grávidas e casais, bebês dormindo, Guia da Pega, Pocket e memes. Cada um abre o original no Drive.</span><em>Abrir o banco ↗</em></div>
+      </a>
+      <div class="panel">
+        <b style="font-size:1rem">Fotos e personagens</b>
+        <ul class="reg" style="margin-top:10px">
+          <li><b>Fotos da Day:</b> só reais (sessões de foto). Recortes inteiros prontos pro fechamento dos carrosséis.</li>
+          <li><b>Bebê do Manual:</b> o mesmo bebê gerado, do recém-nascido aos 6 meses, reaproveitável sem custo.</li>
+          <li><b>Ilustrações:</b> bebê do tummy time e a mãe do humor, em folha única pra manter o personagem.</li>
+          <li><b>Boneca:</b> boneca genérica dos memes, sem nome nem logo de marca.</li>
+          <li><b>Custo:</b> cada imagem gerada sai por US$ 0,09.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="regras">
+    <div class="sh"><div class="ic">✋</div><div><h2>Regras da marca</h2><p>Valem pra todo carrossel, sem exceção</p></div></div>
+    <div class="regras">
+      <div class="rg"><span class="e">✍️</span><div><b>Nome oficial</b><span>Nas artes é sempre "Dayane Dos Anjos". No texto corrido, "Day".</span></div></div>
+      <div class="rg"><span class="e">🙅‍♀️</span><div><b>Rosto da Day nunca por IA</b><span>Só fotos reais dela. IA só pra cena, bebê genérico e objeto.</span></div></div>
+      <div class="rg"><span class="e">🛏️</span><div><b>Sono seguro</b><span>Bebê dormindo sempre de barriga pra cima, berço vazio. De bruços só acordado.</span></div></div>
+      <div class="rg"><span class="e">🛡️</span><div><b>Filtro da Meta</b><span>Todo texto e legenda passa no filtro antes de virar arte. Tema de saúde não vira anúncio.</span></div></div>
+      <div class="rg"><span class="e">🔎</span><div><b>Dado de saúde na fonte</b><span>Vacina, idade e dose só conferidos no documento oficial, com a fonte citada.</span></div></div>
+      <div class="rg"><span class="e">💬</span><div><b>Jeito de falar</b><span>Sem travessão, sem "mamãe", sem prometer que o bebê dorme a noite toda.</span></div></div>
+      <div class="rg"><span class="e">🤍</span><div><b>Emojis</b><span>Nunca mamadeira. Usar 🤱 💛 🤍 🤰.</span></div></div>
+      <div class="rg"><span class="e">👀</span><div><b>Revisão</b><span>Toda arte passa pelo Gemini como diretor de arte, e nenhum texto cobre o rosto do bebê.</span></div></div>
+    </div>
+  </section>
+</div>
+
+<script>
+var P='https://brunotropolis.github.io/supernanny-previews/';
+var ESTILOS=[
+  {n:'Guia por fase',tag:'Técnico · salvável',q:'Ensinar algo que muda por idade ou fase, com tempo, onde fazer e conquistas.',c:['#573151','#725A76','#F7DEE7','#FBF7F2'],img:'capa_2026-10-29-tummy-time.jpg',ex:'2026-10-29-carrossel-tummy-time',exn:'Tummy time em cada fase'},
+  {n:'Versus',tag:'Humor',q:'X contra Y em rodadas, com a Day comentando cada uma. Bom pra comentário.',c:['#3E5C44','#5B8462','#FBF0D2','#F3D98B'],img:'capa_2026-10-29-qual-e-mais-forte.jpg',ex:'2026-10-29-carrossel-qual-e-mais-forte',exn:'Qual é mais forte?'},
+  {n:'Calendário',tag:'Salvável',q:'Tabela de consulta em linha do tempo (vacinas, marcos). Dado conferido na fonte.',c:['#2C3E6B','#1A2744','#A0BDE8','#F3D98B'],img:'capa_2026-10-29-vacinas-1o-ano.jpg',ex:'2026-10-29-carrossel-vacinas',exn:'Vacinas do 1º ano'},
+  {n:'Pitaco × realidade',tag:'Identificação',q:'Print de post da Day: o pitaco que toda mãe ouve e a resposta dela.',c:['#2E2420','#A7775B','#F3ECE4','#F3D98B'],img:'capa_2026-10-29-pitacos-rn.jpg',ex:'2026-10-29-carrossel-pitacos',exn:'Pitacos sobre recém-nascido'},
+  {n:'Meme sobre foto',tag:'Humor · alcance',q:'Boneca na maternidade real com frase amarela de meme. Fecha com a Day.',c:['#1E1714','#F7DF6E','#D3A994','#FCF9F4'],img:'capa_2026-10-29-boneca-maternidade.jpg',ex:'2026-10-29-carrossel-boneca',exn:'A boneca na maternidade real'},
+  {n:'Voz do bebê',tag:'Educativo',q:'O bebê fala mês a mês: o que ama, o que está fazendo e dicas. Pode ter parte 2.',c:['#573151','#F6C4DA','#FCF9F4','#C079A0'],img:'capa_2026-10-29-voz-do-bebe.jpg',ex:'2026-10-29-carrossel-voz-do-bebe',exn:'O que seu bebê está tentando te dizer'}
+];
+var PAL=[
+  {n:'Ameixa (marca)',c:['#573151','#725A76','#B05C80'],h:'#573151 · #725A76'},
+  {n:'Rosa da bio',c:['#FCEDF2','#F7DEE7','#F1CFDC'],h:'#FCEDF2 · #F7DEE7'},
+  {n:'Creme e areia',c:['#FCF9F4','#FBF7F2','#F3ECE4'],h:'#FBF7F2 · #F3ECE4'},
+  {n:'Madeira do quarto',c:['#513C31','#A7775B','#B4907D'],h:'#A7775B · #B4907D'},
+  {n:'Sono',c:['#1A2744','#2C3E6B','#A0BDE8'],h:'#2C3E6B · #A0BDE8'},
+  {n:'Ofertas (sálvia)',c:['#47654B','#6E9070','#CFE7C8'],h:'#6E9070 · #CFE7C8'},
+  {n:'Gestante',c:['#8E5273','#C079A0','#F6C4DA'],h:'#C079A0 · #F6C4DA'},
+  {n:'Dourado (destaque)',c:['#D9A93F','#F3D98B','#FBF0D2'],h:'#F3D98B · #D9A93F'}
+];
+document.getElementById('estilos-g').innerHTML=ESTILOS.map(function(e){
+  return '<div class="est"><img src="'+P+'maternidade/img/'+e.img+'" alt="exemplo '+e.n+'" loading="lazy"><div class="t"><span class="tag">'+e.tag+'</span><b>'+e.n+'</b><p>'+e.q+'</p>'
+   +'<div class="sw">'+e.c.map(function(c){return '<i style="background:'+c+'" title="'+c+'"></i>';}).join('')+'</div>'
+   +'<a href="'+P+e.ex+'/" target="_blank" rel="noopener">Exemplo: '+e.exn+' ↗</a></div></div>';
+}).join('');
+document.getElementById('pal-g').innerHTML=PAL.map(function(p){
+  return '<div class="pal"><div class="faixa">'+p.c.map(function(c){return '<i style="background:'+c+'"></i>';}).join('')+'</div><div class="t"><b>'+p.n+'</b><span>'+p.h+'</span></div></div>';
+}).join('');
+</script>
+<script src="sidebar.js?v=20261030a" defer></script>
+</body>
+</html>
