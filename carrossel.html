@@ -27,7 +27,9 @@
 
   .lam{display:grid;grid-template-columns:minmax(0,600px) minmax(260px,1fr);gap:22px;align-items:start;margin-bottom:26px}
   .lam .img{position:relative;border-radius:18px;overflow:hidden;background:#F3ECE4;box-shadow:0 2px 4px rgba(35,51,47,.06),0 14px 34px -14px rgba(35,51,47,.28);aspect-ratio:4/5}
-  .lam .img img{width:100%;height:100%;display:block;object-fit:cover}
+  .lam .img img,.lam .img video{width:100%;height:100%;display:block;object-fit:cover}
+  .lam .img video{background:#000}
+  .dia{display:inline-block;margin-top:8px;font-size:.88rem;font-weight:800;color:#2C3E6B;background:#E6EEF9;border-radius:999px;padding:4px 12px}
   .lam .n{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin:0 0 7px 4px}
   .lam .lado{position:sticky;top:18px;margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px}
   .lam label{display:block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
@@ -141,14 +143,15 @@ function montar(){
   var av='';
   if(C.status==='ajuste') av='<div class="aviso">Ajuste enviado'+(ult?' por '+esc(ult.por)+' em '+fmt(ult.em):'')+'. O Bruno vai refazer e o carrossel volta pra cá como "Ajustado".</div>';
   if(C.status==='ajustado') av='<div class="aviso lilas">Versão nova com os ajustes pedidos. Confere as lâminas e aprova, ou pede mais um ajuste.</div>';
-  if(C.status==='agendado') av='<div class="aviso azul">Aprovado'+(C.aprovado_por?' por '+esc(C.aprovado_por):'')+'. Vai ao ar <b>'+esc(C.agendado_dia)+' às 20h</b> no Instagram e no Facebook do Manual.</div>';
+  if(C.status==='agendado') av='<div class="aviso azul">Aprovado'+(C.aprovado_por?' por '+esc(C.aprovado_por):'')+'. Vai ao ar <b>'+esc(C.agendado_dia)+' às 20h</b> no Instagram do Manual.</div>';
   if(C.status==='publicado') av='<div class="aviso azul">Esse carrossel já foi publicado.</div>';
   var h='<div class="hdr"><span class="st '+C.status+'">'+NOME[C.status]+'</span><h1>'+esc(C.titulo)+'</h1><div class="tipo">'+esc(String(C.tipo).replace(/\s*·\s*template.*$/i,''))+' · '+C.laminas.length+' lâminas</div>'
+    +(C.dia_fmt&&C.status!=='agendado'&&C.status!=='publicado'?'<div class="dia">📅 Planejado pra '+SEM[C.dia_sem]+' '+esc(C.dia_fmt)+' às 20h'+(C.cta?' · termina com o vídeo '+esc(C.cta):'')+'</div>':'')
     +(C.obs?'<div class="aviso">'+esc(C.obs)+'</div>':'')+av
     +(aberto?'<p class="como">Quer mudar algo? Escreve no campo da lâmina (só onde precisar) e toca em <b>Enviar ajustes</b>. Tudo certo? Toca em <b>Aprovar</b>.</p>':'')+'</div>';
   C.laminas.forEach(function(u,i){
     var n=i+1, antes=(ult&&ult.slides&&ult.slides[n])?'<div class="ant">Pedido anterior: '+esc(ult.slides[n])+'</div>':'';
-    h+='<div class="lam"><div><span class="n">Lâmina '+n+' de '+C.laminas.length+'</span><div class="img"><img src="'+esc(u)+'" alt="Lâmina '+n+'" '+(i>1?'loading="lazy"':'')+'></div></div>'
+    h+='<div class="lam"><div><span class="n">Lâmina '+n+' de '+C.laminas.length+'</span><div class="img">'+(/\.(mp4|mov)$/i.test(u)?'<video src="'+esc(u)+'#t=0.5" controls playsinline preload="metadata"></video>':'<img src="'+esc(u)+'" alt="Lâmina '+n+'" '+(i>1?'loading="lazy"':'')+'>')+'</div></div>'
       +(aberto?'<div class="lado"><div class="lr"><label for="aj'+n+'">Ajuste na lâmina '+n+'</label>'+'<button type="button" class="mic" data-alvo="aj'+n+'" aria-label="Ditar por voz">'+MICSVG+'<span>Falar</span></button>'+'</div><textarea id="aj'+n+'" data-n="'+n+'" placeholder="Escreve aqui ou toca em Falar"></textarea><div class="ouvindo" id="ouv_aj'+n+'"></div>'+antes+'</div>':'<div></div>')+'</div>';
   });
   h+='<div class="bloco"><div class="lr"><h2>Legenda</h2>'+(C.status!=='publicado'?'<button type="button" class="mic" data-alvo="leg" aria-label="Ditar por voz">'+MICSVG+'<span>Falar</span></button>':'')+'</div><div class="sub">'+(C.status==='publicado'?'Legenda publicada.':'✏️ Toca no texto pra editar. Salva sozinho e é essa legenda que vai pro post.')
@@ -172,6 +175,7 @@ function montar(){
 }
 function contaLeg(){ var n=$('leg').value.length, e=$('legN'); e.textContent=n+' de 2.200 caracteres'; e.classList.toggle('longo',n>2200); }
 function ajustesDigitados(){ var s={}; document.querySelectorAll('.lam textarea').forEach(function(t){ t.classList.toggle('tem',!!t.value.trim()); if(t.value.trim()) s[t.dataset.n]=t.value.trim(); }); return s; }
+var SEM=['','segunda','terça','quarta','quinta','sexta','sábado','domingo'];
 var REC=window.SpeechRecognition||window.webkitSpeechRecognition, MICSVG='<svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V22h2v-3.08A7 7 0 0 0 19 12h-2z"/></svg>', VOZ=null;
 if(REC) document.documentElement.classList.add('temvoz');
 function pararVoz(){ if(VOZ){ var v=VOZ; VOZ=null; try{ v.rec&&v.rec.stop(); }catch(e){} v.btn.classList.remove('on'); v.btn.querySelector('span').textContent='Falar'; $('ouv_'+v.alvo).textContent=''; var t=$(v.alvo); if(t.dataset.ph!==undefined){ t.placeholder=t.dataset.ph; } t.classList.remove('grava'); } }
@@ -237,7 +241,7 @@ $('bOk').onclick=function(){
     }); return;
   }
   var pend=Object.keys(ajustesDigitados()).length||($('geral')&&$('geral').value.trim());
-  confirma('Aprovar este carrossel?',(pend?'Tem ajuste escrito que não foi enviado: ele será descartado. ':'')+'Ele entra no Publicador às 20h do próximo dia livre, no Instagram e no Facebook do Manual, com a legenda que está na tela.',function(){
+  confirma('Aprovar este carrossel?',(pend?'Tem ajuste escrito que não foi enviado: ele será descartado. ':'')+'Ele entra no Publicador às 20h '+(C.dia_fmt?'de '+SEM[C.dia_sem]+' '+C.dia_fmt:'do próximo dia livre')+', no Instagram do Manual, com a legenda que está na tela.',function(){
     $('bOk').disabled=true;
     salvarLeg().then(function(ok){ if(!ok) throw 0; return api({acao:'aprovar',id:ID}); }).then(function(d){
       $('bOk').disabled=false;

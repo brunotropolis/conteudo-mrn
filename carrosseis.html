@@ -68,7 +68,7 @@
   <div class="pagehdr">
     <div class="eyebrow">Conteúdo · Carrosséis</div>
     <h1>Carrosséis do Manual</h1>
-    <p>Tudo o que foi produzido pro @manualdorecemnascido. Abre o carrossel pra ver as lâminas grandes, pedir ajuste, mexer na legenda e aprovar. O aprovado entra no Publicador às 20h, 1 por dia.</p>
+    <p>Tudo o que foi produzido pro @manualdorecemnascido. Abre o carrossel pra ver as lâminas grandes, pedir ajuste, mexer na legenda e aprovar. O aprovado entra no Publicador às 20h do dia planejado, 1 por dia.</p>
   </div>
 
   <div class="montes">
@@ -96,7 +96,7 @@ function render(){
   if(!it.length){ g.innerHTML='<div class="vazio" style="grid-column:1/-1"><b>'+(V==='pend'?'Nada esperando aprovação':'Nenhum aprovado ainda')+'</b>'+(V==='pend'?'Tudo que estava aqui já foi visto pela Day.':'Assim que a Day aprovar, o carrossel aparece aqui com a data em que vai ao ar.')+'</div>'; return; }
   g.innerHTML=it.map(function(c){
     var href='carrossel.html?id='+encodeURIComponent(c.id);
-    var quando=c.status==='agendado'&&c.agendado_dia?'Vai ao ar '+c.agendado_dia+' às 20h':(c.status==='publicado'?'Já está no Instagram':'');
+    var quando=c.status==='agendado'&&c.agendado_dia?'Vai ao ar '+c.agendado_dia+' às 20h':(c.status==='publicado'?'Já está no Instagram':(c.dia_fmt?'Planejado pra '+['','seg','ter','qua','qui','sex','sáb','dom'][c.dia_sem]+' '+c.dia_fmt:''));
     return '<div class="car"><a class="capa" href="'+href+'"><img src="'+esc(c.capa_url)+'" alt="'+esc(c.titulo)+'" loading="lazy"><span class="qtd">'+c.laminas.length+' lâminas</span></a>'
      +'<div class="corpo"><span class="st '+c.status+'">'+NOME[c.status]+'</span><h3>'+esc(c.titulo)+'</h3><div class="tipo">'+esc(String(c.tipo).replace(/\s*·\s*template.*$/i,''))+'</div>'
      +(quando?'<div class="quando">'+quando+'</div>':'')+(c.obs?'<div class="obs">'+esc(c.obs)+'</div>':'')
@@ -107,7 +107,7 @@ document.addEventListener('click',function(e){
   var m=e.target.closest('.monte[data-v]'); if(m){ V=m.dataset.v; history.replaceState(null,'',V==='aprovados'?'?v=aprovados':location.pathname); render(); }
 });
 fetch('/api/n8n/motor-carrosseis',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'listar'})}).then(function(r){return r.json();}).then(function(d){
-  if(!d.ok) throw 0; L=d.dados; document.getElementById('nPend').textContent=L.filter(function(c){return PEND.indexOf(c.status)>=0;}).length;
+  if(!d.ok) throw 0; L=d.dados.sort(function(a,b){return (a.dia_fmt?0:1)-(b.dia_fmt?0:1)||String(a.dia_ord||'').localeCompare(String(b.dia_ord||''))||a.ordem-b.ordem;}); document.getElementById('nPend').textContent=L.filter(function(c){return PEND.indexOf(c.status)>=0;}).length;
   document.getElementById('nOk').textContent=L.filter(function(c){return OK.indexOf(c.status)>=0;}).length; render();
 }).catch(function(){ document.getElementById('grade').innerHTML='<div class="vazio" style="grid-column:1/-1"><b>Não consegui carregar a lista</b>Recarrega a página em instantes.</div>'; });
 </script>
