@@ -146,7 +146,7 @@ function montar(){
   if(C.status==='agendado') av='<div class="aviso azul">Aprovado'+(C.aprovado_por?' por '+esc(C.aprovado_por):'')+'. Vai ao ar <b>'+esc(C.agendado_dia)+' às 20h</b> no Instagram do Manual.</div>';
   if(C.status==='publicado') av='<div class="aviso azul">Esse carrossel já foi publicado.</div>';
   var h='<div class="hdr"><span class="st '+C.status+'">'+NOME[C.status]+'</span><h1>'+esc(C.titulo)+'</h1><div class="tipo">'+esc(String(C.tipo).replace(/\s*·\s*template.*$/i,''))+' · '+C.laminas.length+' lâminas</div>'
-    +(C.dia_fmt&&C.status!=='agendado'&&C.status!=='publicado'?'<div class="dia">📅 Planejado pra '+SEM[C.dia_sem]+' '+esc(C.dia_fmt)+' às 20h'+(C.cta?' · termina com o vídeo '+esc(C.cta):'')+'</div>':'')
+    +(C.dia_fmt&&C.status!=='agendado'&&C.status!=='publicado'?'<div class="dia">📅 Planejado pra '+SEM[C.dia_sem]+' '+esc(C.dia_fmt)+' às 20h'+(C.cta?' · vídeo '+esc(C.cta)+' na penúltima':'')+'</div>':'')
     +(C.obs?'<div class="aviso">'+esc(C.obs)+'</div>':'')+av
     +(aberto?'<p class="como">Quer mudar algo? Escreve no campo da lâmina (só onde precisar) e toca em <b>Enviar ajustes</b>. Tudo certo? Toca em <b>Aprovar</b>.</p>':'')+'</div>';
   C.laminas.forEach(function(u,i){
