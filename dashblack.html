@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Black 2026 · HUB Manual</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#3A5049">
+<style>
+  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--hover:#E9F3F1;--line:#DCE8E6;--ink:#23332F;--mute:#6E827D;--dim:#93A5A1;--gold:#E3A31B;--gold2:#C88C10;--goldink:#8A5E0A;--goldbg:#FDF1D6;--teal:#17A2A0;--blue:#4E7CA6;--menu:#3A5049;--menuTxt:#E7EEEC;--menuMute:#9DB3AD}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.5;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+
+  .top{background:var(--menu);color:var(--menuTxt);padding:18px 22px;display:flex;align-items:center;gap:14px}
+  .top .logo{width:42px;height:42px;border-radius:12px;flex:0 0 auto;overflow:hidden}
+  .top .logo img{width:100%;height:100%;display:block}
+  .top .tt{min-width:0;flex:1}
+  .top h1{font-size:1.18rem;font-weight:800;letter-spacing:-.01em}
+  .top p{color:var(--menuMute);font-size:.82rem;margin-top:2px}
+  .top .back{flex:0 0 auto;color:var(--menuTxt);font-size:.82rem;font-weight:700;background:rgba(255,255,255,.10);padding:8px 13px;border-radius:10px}
+
+  .wrap{max-width:1040px;margin:0 auto;padding:26px 18px 70px}
+
+  .filters{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin:0 2px 20px}
+  .fgrp{display:flex;flex-direction:column;gap:6px}
+  .fgrp .flabel{font-size:10.5px;font-weight:800;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+  .grp{display:flex;gap:5px;background:var(--panel);border:1px solid var(--line);padding:5px;border-radius:12px;flex-wrap:wrap}
+  .chip{font-size:12.5px;font-weight:700;color:var(--mute);padding:6px 12px;border-radius:8px;cursor:pointer;border:none;background:none;font-family:inherit}
+  .chip.on{background:var(--menu);color:#fff}
+  .fspacer{flex:1}
+  .fmeta{font-size:12px;color:var(--mute);align-self:center}
+  .fmeta b{color:var(--ink)}
+
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:20px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:15px 16px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 18px rgba(35,51,47,.05)}
+  .kpi .lab{font-size:11px;color:#52615A;text-transform:uppercase;letter-spacing:.07em;font-weight:700}
+  .kpi .val{font-size:26px;font-weight:800;margin-top:6px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .kpi.hi .val{color:var(--goldink)}
+  .kpi .sub{font-size:11px;color:var(--dim);margin-top:2px}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:16px}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:0 1px 2px rgba(35,51,47,.04),0 6px 18px rgba(35,51,47,.05);margin-bottom:16px}
+  .panel h2{margin:0 0 4px;font-size:.82rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+  .panel .hint{font-size:11.5px;color:var(--dim);margin-bottom:14px}
+
+  .blist{display:flex;flex-direction:column;gap:11px;margin-top:12px}
+  .brow{display:grid;grid-template-columns:minmax(90px,34%) 1fr auto;align-items:center;gap:12px}
+  .brow .bl{font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:capitalize}
+  .brow .bl small{color:var(--dim);text-transform:uppercase;font-size:10px;font-weight:700;margin-left:4px}
+  .bar{height:9px;background:var(--hover);border-radius:999px;overflow:hidden}
+  .bar>i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--menu),var(--teal))}
+  .bar.gold>i{background:linear-gradient(90deg,var(--gold),var(--gold2))}
+  .brow .bn{font-size:12.5px;color:var(--mute);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .brow .bn b{color:var(--ink)}
+
+  .days{max-height:340px;overflow-y:auto;margin-top:12px}
+  .days::-webkit-scrollbar{width:8px}.days::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
+  .drow{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:10px;padding:9px 2px;border-bottom:1px solid var(--line);align-items:center}
+  .drow.dhead{position:sticky;top:0;background:var(--panel);border-bottom:2px solid var(--line)}
+  .drow.dhead span{font-size:10.5px;font-weight:800;color:#52615A;text-transform:uppercase;letter-spacing:.05em}
+  .drow .dday{font-weight:700;font-size:13px;text-transform:capitalize}
+  .drow .dv{font-variant-numeric:tabular-nums;font-weight:700;font-size:13px}
+  .drow .dv.k{color:var(--goldink);font-weight:800}
+  .ta{text-align:right}
+
+  .empty{color:var(--dim);font-size:13px;padding:8px 2px}
+  .more{font-size:11.5px;font-weight:700;color:var(--dim);padding:8px 2px 0;text-align:center}
+  .toggleall{display:block;width:100%;max-width:340px;margin:2px auto 20px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:11px;font-family:inherit;font-weight:800;font-size:.9rem;color:var(--goldink);cursor:pointer}
+  .toggleall:hover{border-color:var(--gold);background:var(--goldbg)}
+  footer{color:var(--dim);text-align:center;font-size:.78rem;padding:10px 20px 40px}
+
+  @media(max-width:860px){ .grid2,.grid3{grid-template-columns:1fr} }
+
+  .tab{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px}
+  .tab th{font-size:10.5px;font-weight:800;color:#52615A;text-transform:uppercase;letter-spacing:.05em;text-align:right;padding:8px 6px;border-bottom:2px solid var(--line);white-space:nowrap}
+  .tab th:first-child,.tab td:first-child{text-align:left}
+  .tab td{padding:10px 6px;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+  .tab td small{display:block;color:var(--dim);font-size:10.5px;font-weight:700}
+  .tab td.k{color:var(--goldink);font-weight:800}
+  .tabwrap{overflow-x:auto}
+  .tag{display:inline-block;font-size:10px;font-weight:800;border-radius:6px;padding:1px 6px;margin-right:6px;vertical-align:1px}
+  .tag.black{background:#FCE3F0;color:#A0145E}.tag.clube{background:#E3F1E8;color:#2F6B47}
+  #botoes .brow{grid-template-columns:minmax(0,64%) 1fr auto}#botoes .bl{white-space:normal;line-height:1.35}
+  .clarity{display:inline-flex;gap:8px;align-items:center;font-size:12.5px;font-weight:800;color:var(--menu);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="logo"><img src="favicon.svg" alt=""></div>
+  <div class="tt"><h1>Black 2026</h1><p>Visitas, cliques e quem foi pro grupo nas páginas da Black Maternity e do Clube do Bebê</p></div>
+  <a class="back" href="index.html">‹ HUB</a>
+</div>
+<div class="wrap">
+  <div class="abas" data-grupo="panorama"></div>
+
+  <div class="filters">
+    <div class="fgrp">
+      <span class="flabel">Período</span>
+      <div class="grp" id="fperiodo">
+        <button class="chip" data-d="1">Hoje</button>
+        <button class="chip on" data-d="7">7 dias</button>
+        <button class="chip" data-d="30">30 dias</button>
+        <button class="chip" data-d="120">Tudo</button>
+      </div>
+    </div>
+    <div class="fgrp">
+      <span class="flabel">Frente</span>
+      <div class="grp" id="fsite">
+        <button class="chip on" data-v="">As duas</button>
+        <button class="chip" data-v="black">Black Maternity</button>
+        <button class="chip" data-v="clube">Clube do Bebê</button>
+      </div>
+    </div>
+    <div class="fspacer"></div>
+    <a class="clarity" href="https://clarity.microsoft.com/projects/view/iea4ittipt/heatmaps" target="_blank" rel="noopener">🔥 Mapa de calor no Clarity</a>
+    <div class="fmeta" id="fmeta">carregando…</div>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="panel">
+    <h2>Funil por página</h2>
+    <div class="hint">Visitas = quem abriu a página. Clicaram = tocou em algum botão. Preencheram = mandou o WhatsApp. Tela de entrada = chegou no "Tudo certo!". WhatsApp = foi levada pro grupo.</div>
+    <div class="tabwrap"><table class="tab" id="funil"></table></div>
+  </div>
+
+  <div class="grid2">
+    <div class="panel"><h2>Botões mais clicados</h2><div class="hint">Texto do botão · parte da página onde ele está</div><div class="blist" id="botoes"></div></div>
+    <div class="panel"><h2>De onde vieram</h2><div class="hint">Pelo utm_source ou ?origem= do link (stories, bio, whatsapp...). Sem nada = direto.</div><div class="blist" id="origens"></div></div>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h2>Por dia</h2><div class="days" id="dias"></div></div>
+    <div class="panel"><h2>Aparelho</h2><div class="blist" id="aparelhos"></div></div>
+  </div>
+
+  <footer>Coletor próprio (Worker do domínio + Supabase black_events) · mede desde 01/11/2026 · sem nome nem WhatsApp</footer>
+</div>
+
+<script src="sidebar.js?v=20261101a" defer></script>
+<script>
+  var API='https://black.manualdorecemnascido.com.br/__ev/dash';
+  var state={d:7, site:''};
+  var NOMES={'black:/':'Página de vendas','black:/aula':'Isca da aula','black:/enxoval':'Isca do ebook Enxoval','black:/vip':'Chamada direta (VIP)',
+    'clube:/sono':'Aula de sono','clube:/ebook-sono':'Ebook do sono','clube:/amamentacao':'Aula de amamentação','clube:/ebook-amamentacao':'Ebook de amamentação'};
+  var fmt=function(n){ return (n==null?0:n).toLocaleString('pt-BR'); };
+  var pct=function(a,b){ return b? (Math.round(a/b*1000)/10).toLocaleString('pt-BR')+'%' : '-'; };
+  var esc=function(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); };
+  function barras(el, itens, rot, val, sub){
+    if(!itens.length){ el.innerHTML='<div class="empty">Nada ainda nesse período.</div>'; return; }
+    var max=Math.max.apply(null, itens.map(val))||1;
+    el.innerHTML=itens.slice(0,12).map(function(x){ return '<div class="brow"><span class="bl" style="text-transform:none">'+rot(x)+'</span><div class="bar"><i style="width:'+(val(x)/max*100)+'%"></i></div><span class="bn"><b>'+fmt(val(x))+'</b>'+(sub?' '+sub(x):'')+'</span></div>'; }).join('');
+  }
+  function load(){
+    document.getElementById('fmeta').textContent='carregando…';
+    fetch(API+'?dias='+state.d+(state.site?'&site='+state.site:'')).then(function(r){return r.json();}).then(function(d){
+      var t=d.totais||{};
+      document.getElementById('kpis').innerHTML=[
+        ['Visitas',t.visitas,fmt(t.visitantes)+' pessoas'],['Cliques',t.cliques,'toques em botão'],['Preencheram',t.envios,pct(t.envios,t.visitas)+' das visitas'],
+        ['Tela de entrada',t.entrando,'chegaram no "Tudo certo!"'],['Foram pro WhatsApp',t.whatsapp,pct(t.whatsapp,t.visitas)+' das visitas',1]
+      ].map(function(k){ return '<div class="kpi'+(k[3]?' hi':'')+'"><div class="lab">'+k[0]+'</div><div class="val">'+fmt(k[1])+'</div><div class="sub">'+k[2]+'</div></div>'; }).join('');
+      var pp=(d.por_pagina||[]);
+      document.getElementById('funil').innerHTML='<tr><th>Página</th><th>Visitas</th><th>Clicaram</th><th>Preencheram</th><th>Tela de entrada</th><th>WhatsApp</th><th>Conversão</th></tr>'+
+        (pp.length? pp.map(function(p){ var n=NOMES[p.site+':'+p.pagina]||p.pagina; return '<tr><td><span class="tag '+p.site+'">'+(p.site==='black'?'BM':'Clube')+'</span>'+esc(n)+'<small>'+p.site+'.manualdorecemnascido.com.br'+esc(p.pagina)+'</small></td><td>'+fmt(p.visitas)+'</td><td>'+fmt(p.quem_clicou)+'</td><td>'+fmt(p.envios)+'</td><td>'+fmt(p.entrando)+'</td><td class="k">'+fmt(p.whatsapp)+'</td><td>'+pct(p.whatsapp,p.visitas)+'</td></tr>'; }).join('')
+          : '<tr><td colspan="7" class="empty" style="text-align:left">Nada ainda nesse período.</td></tr>');
+      barras(document.getElementById('botoes'), d.botoes||[], function(x){ return '<span class="tag '+x.site+'">'+esc(NOMES[x.site+':'+x.pagina]||x.pagina)+'</span>'+esc(x.alvo||'?'); }, function(x){return x.cliques;});
+      barras(document.getElementById('origens'), d.origens||[], function(x){ return esc(x.origem); }, function(x){return x.visitas;}, function(x){ return '· '+fmt(x.envios)+' preencheram'; });
+      barras(document.getElementById('aparelhos'), d.aparelhos||[], function(x){ return esc({mobile:'Celular',desktop:'Computador',tablet:'Tablet'}[x.device]||x.device); }, function(x){return x.visitas;});
+      var dias=(d.por_dia||[]).slice().reverse();
+      document.getElementById('dias').innerHTML='<div class="drow dhead"><span>Dia</span><span class="ta">Visitas</span><span class="ta">WhatsApp</span></div>'+
+        (dias.length? dias.map(function(x){ var p=x.dia.split('-'); return '<div class="drow"><span class="dday">'+p[2]+'/'+p[1]+'</span><span class="dv ta">'+fmt(x.visitas)+'</span><span class="dv k ta">'+fmt(x.whatsapp)+'</span></div>'; }).join('') : '<div class="empty">Nada ainda.</div>');
+      document.getElementById('fmeta').innerHTML='Atualizado <b>'+new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})+'</b>';
+    }).catch(function(){ document.getElementById('fmeta').textContent='não consegui carregar os dados'; });
+  }
+  function wire(id,key,isNum){
+    var g=document.getElementById(id);
+    g.addEventListener('click',function(e){ var b=e.target.closest('.chip'); if(!b) return;
+      [].forEach.call(g.querySelectorAll('.chip'),function(c){c.classList.remove('on');}); b.classList.add('on');
+      state[key]= isNum ? (+b.dataset.d) : (b.dataset.v||''); load(); });
+  }
+  wire('fperiodo','d',true); wire('fsite','site',false); load();
+</script>
+</body>
+</html>

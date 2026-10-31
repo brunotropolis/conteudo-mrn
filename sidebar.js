@@ -21,7 +21,7 @@
     {item:'Início', href:'index.html', ic:'⌂'},
     {cat:'Métricas'},
     // 31/Out (Bruno): Dash Link Bio saiu do menu e virou aba dentro do Panorama
-    {item:'Panorama', href:'panorama.html', ic:'📈', also:['dashbio.html']},
+    {item:'Panorama', href:'panorama.html', ic:'📈', also:['dashbio.html','dashblack.html']},
     {cat:'Ferramentas'},
     {item:'Publicador', href:'publicador.html', ic:'📤'},
     // 31/Out (Bruno): um calendário só, com filtro de tipo (reels/carrossel/produto) e cor por rede
@@ -90,7 +90,7 @@
    +'.abas a{font-size:12.5px;font-weight:700;color:#6E827D;padding:7px 14px;border-radius:9px;text-decoration:none;white-space:nowrap}.abas a:hover{color:#23332F}.abas a.on{background:#3A5049;color:#fff}';
   var st=document.createElement('style'); st.textContent=css; document.head.appendChild(st);
   // Abas: página com <div class="abas" data-grupo="X"></div> recebe os links do grupo (aba ativa pelo arquivo)
-  var ABAS={automacoes:[['Automações','automacoes.html'],['Funil das automações','funil.html']], panorama:[['Panorama','panorama.html'],['Link da bio','dashbio.html']]};
+  var ABAS={automacoes:[['Automações','automacoes.html'],['Funil das automações','funil.html']], panorama:[['Panorama','panorama.html'],['Link da bio','dashbio.html'],['Black 2026','dashblack.html']]};
   var montaAbas=function(){ [].forEach.call(document.querySelectorAll('.abas[data-grupo]'),function(el){ var g=ABAS[el.dataset.grupo]||[], p=(location.pathname.split('/').pop()||'index.html').toLowerCase();
     el.innerHTML=g.map(function(a){return '<a href="'+a[1]+'"'+(a[1]===p?' class="on"':'')+'>'+a[0]+'</a>';}).join(''); }); };
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',montaAbas); else montaAbas();
