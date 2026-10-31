@@ -123,7 +123,7 @@
 
   <div class="panel">
     <h2>Funil por página</h2>
-    <div class="hint">Visitas = quem abriu a página. Clicaram = tocou em algum botão. Preencheram = mandou o WhatsApp. Tela de entrada = chegou no "Tudo certo!". WhatsApp = foi levada pro grupo.</div>
+    <div class="hint">Pessoas = aparelhos diferentes (a mesma pessoa voltando 3 vezes conta 1). Visitas = aberturas da página. Clicaram = tocou em algum botão. Preencheram = mandou o WhatsApp. Tela de entrada = chegou no "Tudo certo!". WhatsApp = foi levada pro grupo.</div>
     <div class="tabwrap"><table class="tab" id="funil"></table></div>
   </div>
 
@@ -158,19 +158,19 @@
     fetch(API+'?dias='+state.d+(state.site?'&site='+state.site:'')).then(function(r){return r.json();}).then(function(d){
       var t=d.totais||{};
       document.getElementById('kpis').innerHTML=[
-        ['Visitas',t.visitas,fmt(t.visitantes)+' pessoas'],['Cliques',t.cliques,'toques em botão'],['Preencheram',t.envios,pct(t.envios,t.visitas)+' das visitas'],
-        ['Tela de entrada',t.entrando,'chegaram no "Tudo certo!"'],['Foram pro WhatsApp',t.whatsapp,pct(t.whatsapp,t.visitas)+' das visitas',1]
+        ['Pessoas únicas',t.visitantes,'cada aparelho conta 1x',1],['Visitas',t.visitas,'aberturas (sessões)'],['Cliques',t.cliques,'toques em botão'],['Preencheram',t.envios,pct(t.envios,t.visitantes)+' das pessoas'],
+        ['Tela de entrada',t.entrando,'chegaram no "Tudo certo!"'],['Foram pro WhatsApp',t.whatsapp,pct(t.whatsapp,t.visitantes)+' das pessoas',1]
       ].map(function(k){ return '<div class="kpi'+(k[3]?' hi':'')+'"><div class="lab">'+k[0]+'</div><div class="val">'+fmt(k[1])+'</div><div class="sub">'+k[2]+'</div></div>'; }).join('');
       var pp=(d.por_pagina||[]);
-      document.getElementById('funil').innerHTML='<tr><th>Página</th><th>Visitas</th><th>Clicaram</th><th>Preencheram</th><th>Tela de entrada</th><th>WhatsApp</th><th>Conversão</th></tr>'+
-        (pp.length? pp.map(function(p){ var n=NOMES[p.site+':'+p.pagina]||p.pagina; return '<tr><td><span class="tag '+p.site+'">'+(p.site==='black'?'BM':'Clube')+'</span>'+esc(n)+'<small>'+p.site+'.manualdorecemnascido.com.br'+esc(p.pagina)+'</small></td><td>'+fmt(p.visitas)+'</td><td>'+fmt(p.quem_clicou)+'</td><td>'+fmt(p.envios)+'</td><td>'+fmt(p.entrando)+'</td><td class="k">'+fmt(p.whatsapp)+'</td><td>'+pct(p.whatsapp,p.visitas)+'</td></tr>'; }).join('')
-          : '<tr><td colspan="7" class="empty" style="text-align:left">Nada ainda nesse período.</td></tr>');
+      document.getElementById('funil').innerHTML='<tr><th>Página</th><th>Pessoas</th><th>Visitas</th><th>Clicaram</th><th>Preencheram</th><th>Tela de entrada</th><th>WhatsApp</th><th>Conversão</th></tr>'+
+        (pp.length? pp.map(function(p){ var n=NOMES[p.site+':'+p.pagina]||p.pagina; return '<tr><td><span class="tag '+p.site+'">'+(p.site==='black'?'BM':'Clube')+'</span>'+esc(n)+'<small>'+p.site+'.manualdorecemnascido.com.br'+esc(p.pagina)+'</small></td><td class="k">'+fmt(p.pessoas)+'</td><td>'+fmt(p.visitas)+'</td><td>'+fmt(p.quem_clicou)+'</td><td>'+fmt(p.envios)+'</td><td>'+fmt(p.entrando)+'</td><td class="k">'+fmt(p.whatsapp)+'</td><td>'+pct(p.whatsapp,p.pessoas)+'</td></tr>'; }).join('')
+          : '<tr><td colspan="8" class="empty" style="text-align:left">Nada ainda nesse período.</td></tr>');
       barras(document.getElementById('botoes'), d.botoes||[], function(x){ return '<span class="tag '+x.site+'">'+esc(NOMES[x.site+':'+x.pagina]||x.pagina)+'</span>'+esc(x.alvo||'?'); }, function(x){return x.cliques;});
       barras(document.getElementById('origens'), d.origens||[], function(x){ return esc(x.origem); }, function(x){return x.visitas;}, function(x){ return '· '+fmt(x.envios)+' preencheram'; });
       barras(document.getElementById('aparelhos'), d.aparelhos||[], function(x){ return esc({mobile:'Celular',desktop:'Computador',tablet:'Tablet'}[x.device]||x.device); }, function(x){return x.visitas;});
       var dias=(d.por_dia||[]).slice().reverse();
-      document.getElementById('dias').innerHTML='<div class="drow dhead"><span>Dia</span><span class="ta">Visitas</span><span class="ta">WhatsApp</span></div>'+
-        (dias.length? dias.map(function(x){ var p=x.dia.split('-'); return '<div class="drow"><span class="dday">'+p[2]+'/'+p[1]+'</span><span class="dv ta">'+fmt(x.visitas)+'</span><span class="dv k ta">'+fmt(x.whatsapp)+'</span></div>'; }).join('') : '<div class="empty">Nada ainda.</div>');
+      document.getElementById('dias').innerHTML='<div class="drow dhead" style="grid-template-columns:1.2fr 1fr 1fr 1fr"><span>Dia</span><span class="ta">Pessoas</span><span class="ta">Visitas</span><span class="ta">WhatsApp</span></div>'+
+        (dias.length? dias.map(function(x){ var p=x.dia.split('-'); return '<div class="drow" style="grid-template-columns:1.2fr 1fr 1fr 1fr"><span class="dday">'+p[2]+'/'+p[1]+'</span><span class="dv ta">'+fmt(x.pessoas)+'</span><span class="dv ta">'+fmt(x.visitas)+'</span><span class="dv k ta">'+fmt(x.whatsapp)+'</span></div>'; }).join('') : '<div class="empty">Nada ainda.</div>');
       document.getElementById('fmeta').innerHTML='Atualizado <b>'+new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})+'</b>';
     }).catch(function(){ document.getElementById('fmeta').textContent='não consegui carregar os dados'; });
   }
