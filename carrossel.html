@@ -231,7 +231,7 @@ $('bAj').onclick=function(){
   $('bAj').disabled=true; $('bAj').textContent='Enviando…';
   salvarLeg().then(function(){ return api({acao:'ajustes',id:ID,titulo:C.titulo,slides:s,geral:g}); }).then(function(d){
     if(!d.ok){ toast(d.erro||'Não enviou'); barra(); return; }
-    toast('Ajustes enviados pro Bruno'); window.scrollTo({top:0,behavior:'smooth'}); carregar();
+    toast('Ajustes enviados pro Bruno'); voltarLista();
   }).catch(function(){ toast('Sem conexão, tenta de novo'); barra(); });
 };
 $('bOk').onclick=function(){
@@ -246,12 +246,15 @@ $('bOk').onclick=function(){
     salvarLeg().then(function(ok){ if(!ok) throw 0; return api({acao:'aprovar',id:ID}); }).then(function(d){
       $('bOk').disabled=false;
       if(!d.ok){ toast(d.erro||'Não aprovou'); return; }
-      toast('Aprovado! Vai ao ar '+d.dados[0].agendado_dia+' às 20h'); window.scrollTo({top:0,behavior:'smooth'}); carregar();
+      toast('Aprovado! Vai ao ar '+d.dados[0].agendado_dia+' às 20h'); voltarLista();
     }).catch(function(){ $('bOk').disabled=false; });
   });
 };
 document.addEventListener('keydown',function(e){ if(e.key==='Escape') $('md').classList.remove('on'); });
-window.addEventListener('beforeunload',function(e){ if(!C) return; var tem=Object.keys(ajustesDigitados()).length||($('geral')&&$('geral').value.trim())||($('leg')&&$('leg').value!==LEG0); if(tem){ e.preventDefault(); e.returnValue=''; } });
+// depois de aprovar ou enviar ajuste, volta pra lista (pedido do Bruno 31/Out), com tempo de ler o aviso
+var SAINDO=false;
+function voltarLista(){ SAINDO=true; setTimeout(function(){ location.href='carrosseis.html'; },1600); }
+window.addEventListener('beforeunload',function(e){ if(!C||SAINDO) return; var tem=Object.keys(ajustesDigitados()).length||($('geral')&&$('geral').value.trim())||($('leg')&&$('leg').value!==LEG0); if(tem){ e.preventDefault(); e.returnValue=''; } });
 if(!ID) location.replace('carrosseis.html'); else carregar();
 </script>
 <script src="sidebar.js?v=20261030d" defer></script>
