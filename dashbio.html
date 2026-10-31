@@ -78,10 +78,11 @@
 <body>
 <div class="top">
   <div class="logo"><img src="favicon.svg" alt=""></div>
-  <div class="tt"><h1>Dash Link Bio</h1><p>Acessos, cliques e dead clicks do link da bio</p></div>
+  <div class="tt"><h1>Link da bio</h1><p>Acessos, cliques, vendas e conversão do link da bio</p></div>
   <a class="back" href="index.html">← HUB</a>
 </div>
 <div class="wrap">
+  <div class="abas" data-grupo="panorama"></div>
 
   <div class="filters">
     <div class="fgrp">
@@ -124,6 +125,15 @@
     <div class="kpi hi"><div class="lab">Cliques · Quiz do Sono</div><div class="val" id="kQuiz">—</div><div class="sub">banner roxo (antes do Gestante)</div></div>
   </div>
 
+  <div class="panel" id="pvendas">
+    <h2>Vendas pelo link da bio</h2>
+    <div class="hint" id="vhint">Vendas do dash Meta Ads com a UTM do link da bio (utm_content = link-da-bio), no mesmo período e rede do filtro. Venda = compra paga sem contar order bump; faturamento soma os bumps.</div>
+    <div class="kpis" id="vkpis" style="margin-bottom:6px"><div class="empty">carregando…</div></div>
+    <div class="grid2" style="margin-bottom:0">
+      <div><h2 style="margin-top:10px">Por produto</h2><div class="blist" id="vprod"></div></div>
+      <div><h2 style="margin-top:10px">Por rede</h2><div class="blist" id="vrede"></div></div>
+    </div>
+  </div>
   <button class="toggleall" id="toggleall" onclick="toggleAll()">Ver todas as métricas ⌄</button>
 
   <div class="panel">
@@ -157,7 +167,7 @@
   <footer>Dados via coletor próprio (Cloudflare Worker + Supabase) · começou a medir em 14/09/2026</footer>
 </div>
 
-<script src="sidebar.js?v=20261030d" defer></script>
+<script src="sidebar.js?v=20261031a" defer></script>
 <script>
   var API='https://bio.manualdorecemnascido.com.br/__ev/dash';
   var state={d:7, rede:'', device:''};
@@ -190,6 +200,7 @@
       var v=+x[valKey]||0, w=Math.max(3, Math.round(v/max*100));
       var lab=(x[labelKey]==null||x[labelKey]==='')?'—':String(x[labelKey]);
       var extra=opts.sub?('<small>'+ (x[opts.sub]||'') +'</small>'):'';
+      if(opts.money){ var second=' <b>'+brl(v)+'</b>'; } else
       var second=opts.second?(' <b>'+fmt(v)+'</b> · '+fmt(+x[opts.second]||0)+' cliq'):(' <b>'+fmt(v)+'</b>'+(opts.unit||''));
       return '<div class="brow"><div class="bl">'+lab+extra+'</div>'
         +'<div class="bar'+(opts.gold?' gold':'')+'"><i style="width:'+w+'%"></i></div>'
@@ -252,11 +263,38 @@
     document.getElementById('toggleall').textContent=EXPAND?'Ver top 5 de cada ⌃':'Ver todas as métricas ⌄';
     renderAll();
   }
+  // Vendas (31/Out, pedido Bruno): vem do HUB (/api/n8n/motor-bio-vendas, atrás do login), NÃO do coletor aberto
+  var VENDAS=null;
+  var brl=function(n){ return (+n||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}); };
+  var pct=function(a,b){ return b>0 ? (Math.round(a/b*1000)/10).toLocaleString('pt-BR')+'%' : '—'; };
+  function renderVendas(){
+    var v=VENDAS, t=(DATA&&DATA.totais)||{};
+    if(!v){ return; }
+    if(!v.ok){ document.getElementById('vkpis').innerHTML='<div class="empty">Não consegui puxar as vendas agora.</div>'; return; }
+    document.getElementById('vkpis').innerHTML=
+      kpi('Vendas', fmt(v.vendas), true, 'pagas, sem order bump')
+     +kpi('Faturamento', brl(v.faturamento), true, 'com order bumps')
+     +kpi('Conversão por clique', pct(v.vendas, t.cliques), false, 'vendas ÷ cliques')
+     +kpi('Conversão por acesso', pct(v.vendas, t.acessos), false, 'vendas ÷ acessos')
+     +kpi('Ticket médio', v.vendas?brl(v.faturamento/v.vendas):'—', false, 'faturamento ÷ vendas')
+     +kpi('Reembolsos', fmt(v.reembolsos), false, 'no período');
+    bars(document.getElementById('vprod'), (v.por_produto||[]).map(function(x){return {produto:x.produto, valor:+x.valor, sub:fmt(x.vendas)+' vendas'+(x.bumps?(' · '+x.bumps+' bump'):'')};}), 'produto','valor',{gold:true, sub:'sub', money:true});
+    bars(document.getElementById('vrede'), (v.por_rede||[]).map(function(x){return {rede:x.rede, valor:+x.valor, sub:fmt(x.vendas)+' vendas'};}), 'rede','valor',{sub:'sub', money:true});
+    document.getElementById('vhint').textContent='Vendas do dash Meta Ads com a UTM do link da bio, desde '+String(v.desde||'').split('-').reverse().join('/')+(state.rede?(' · rede '+state.rede):'')+'. Venda = compra paga sem order bump; faturamento soma os bumps.'+(state.device?' O filtro de dispositivo não vale pras vendas.':'');
+  }
+  function loadVendas(){
+    document.getElementById('vkpis').innerHTML='<div class="empty">carregando…</div>';
+    var rede=['instagram','facebook','youtube','tiktok'].indexOf(state.rede)>=0?state.rede:'';
+    fetch('/api/n8n/motor-bio-vendas',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({days:state.d, rede:rede})})
+      .then(function(r){return r.json();}).then(function(d){ VENDAS=d; renderVendas(); })
+      .catch(function(){ VENDAS={ok:false}; renderVendas(); });
+  }
   function load(){
+    loadVendas();
     var q=API+'?days='+state.d+(state.rede?('&rede='+encodeURIComponent(state.rede)):'')+(state.device?('&device='+encodeURIComponent(state.device)):'');
     document.getElementById('fmeta').textContent='carregando…';
     fetch(q).then(function(r){return r.json();}).then(function(d){
-      DATA=d; renderAll();
+      DATA=d; renderAll(); renderVendas();
       var t=d.totais||{};
       document.getElementById('fmeta').innerHTML='<b>'+fmt(t.acessos)+'</b> acessos · <b>'+fmt(t.cliques)+'</b> cliques';
     }).catch(function(e){

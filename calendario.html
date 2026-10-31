@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Calendário de posts · HUB Manual</title>
+<title>Calendário · HUB Manual</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta name="theme-color" content="#3A5049">
 <style>
@@ -46,6 +46,20 @@
   .ev.rascunho{border-left-color:var(--dim);background:#F8F8F8}
   .ev.pausado{border-left-color:#B7791F;background:#FFF6E5}
   .ev.publicado{border-left-color:var(--live);background:#EEF8F2}
+  /* filtros (31/Out: calendário único com segmentação) */
+  .filt{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin:0 0 14px}
+  .fg{display:flex;flex-direction:column;gap:5px}
+  .fg .fl{font-size:10.5px;font-weight:800;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+  .grp{display:flex;gap:4px;background:#fff;border:1px solid var(--line);padding:4px;border-radius:12px;flex-wrap:wrap}
+  .chip{font-size:12px;font-weight:700;color:var(--mute);padding:6px 11px;border-radius:8px;cursor:pointer;border:none;background:none;font-family:inherit;display:flex;align-items:center;gap:6px}
+  .chip.on{background:var(--menu);color:#fff}
+  .chip i{width:9px;height:9px;border-radius:50%;display:inline-block}
+  .pl{display:inline-flex;gap:3px;margin-top:3px;flex-wrap:wrap}
+  .pl b{font-size:8.5px;font-weight:800;color:#fff;border-radius:4px;padding:1px 4px;line-height:1.3;letter-spacing:.02em}
+  .p-instagram{background:#D62976}.p-facebook{background:#1877F2}.p-tiktok{background:#111}.p-youtube{background:#E62117}
+  .tp{font-size:8.5px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--goldink);margin-right:4px}
+  .tp.produto{color:#7A3E9D}
+  .ev.prod{border-left-color:#9B59B6;background:#F7F0FB;border-color:#E6D4F0}
   .evprod{display:block;font-size:10.5px;font-weight:800;color:#7A3E9D;background:#F5EDFA;border:1px dashed #C9A6DE;border-radius:8px;padding:5px 7px;margin-bottom:5px;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .evprod:hover{background:#EEDFF7}
   .ev.erro{border-left-color:#B2432C;background:#FDF3F1}
@@ -114,7 +128,7 @@
 <body>
 <div class="top">
   <div class="logo"><img src="favicon.svg" alt=""></div>
-  <div class="tt"><h1>Calendário de posts</h1><p>Agendados e histórico do Manual</p></div>
+  <div class="tt"><h1>Calendário</h1><p>Todos os posts: conteúdo e produtos, por tipo e por rede</p></div>
   <a class="back" href="publicador.html">← Publicador</a>
 </div>
 <div class="wrap">
@@ -128,6 +142,15 @@
     </div>
     <div class="sp"></div>
     <button class="novo" onclick="location.href='publicador.html'">+ Novo post</button>
+  </div>
+
+  <div class="filt">
+    <div class="fg"><span class="fl">Tipo</span><div class="grp" id="ftipo">
+      <button class="chip on" data-v="">Todos</button><button class="chip" data-v="reels">Reels</button><button class="chip" data-v="carrossel">Carrossel</button><button class="chip" data-v="produto">Produto</button><button class="chip" data-v="foto">Foto</button><button class="chip" data-v="story">Story</button>
+    </div></div>
+    <div class="fg"><span class="fl">Rede</span><div class="grp" id="fplat">
+      <button class="chip on" data-v="">Todas</button><button class="chip" data-v="instagram"><i class="p-instagram"></i>Instagram</button><button class="chip" data-v="facebook"><i class="p-facebook"></i>Facebook</button><button class="chip" data-v="tiktok"><i class="p-tiktok"></i>TikTok</button><button class="chip" data-v="youtube"><i class="p-youtube"></i>Shorts</button>
+    </div></div>
   </div>
 
   <!-- calendário -->
@@ -168,13 +191,12 @@ const isVid = t => /video|\.mp4|\.mov/i.test(t || '');
 let posts = [], todos = [], cur = new Date(), histLimit = 20;
 // ?mes=AAAA-MM abre o calendário nesse mês (vem do atalho "Post de produto")
 { const m = (new URLSearchParams(location.search).get('mes') || '').match(/^(\d{4})-(\d{2})$/); if (m) cur = new Date(+m[1], +m[2] - 1, 1); }
-// ?visao=produtos → calendário separado só de PRODUTOS (origem 'produtos'); sem parâmetro → só conteúdo
-const VISAO_PRODUTOS = new URLSearchParams(location.search).get('visao') === 'produtos';
-if (VISAO_PRODUTOS) {
-  document.title = 'Calendário de produtos · HUB Manual';
-  addEventListener('DOMContentLoaded', () => { const h = document.querySelector('.tt h1'), q = document.querySelector('.tt p');
-    if (h) h.textContent = 'Calendário de produtos'; if (q) q.textContent = 'Ciclo de produtos · quarta e sábado, 8h · Instagram e Facebook'; });
-}
+// 31/Out (Bruno): calendário ÚNICO com segmentação (tipo + rede). ?visao=produtos abre já filtrado em Produto (link antigo).
+const PLAT = {instagram:'IG', facebook:'FB', tiktok:'TikTok', youtube:'Shorts'};
+const filtro = {tipo: new URLSearchParams(location.search).get('visao') === 'produtos' ? 'produto' : '', plat: ''};
+const tipoDe = p => p.origem === 'produtos' ? 'produto' : (p.tipo || 'post');
+const platChips = p => '<span class="pl">' + (p.plataformas || []).map(x => `<b class="p-${esc(x)}">${PLAT[x] || esc(x)}</b>`).join('') + '</span>';
+function aplicarFiltro() { posts = todos.filter(p => (!filtro.tipo || tipoDe(p) === filtro.tipo) && (!filtro.plat || (p.plataformas || []).indexOf(filtro.plat) >= 0)); }
 cur.setDate(1);
 
 function thumbDe(p) {
@@ -224,7 +246,7 @@ async function carregar() {
       body: JSON.stringify({acao: 'listar'})
     }).then(r => r.json());
     todos = r.dados || [];
-    posts = todos.filter(p => VISAO_PRODUTOS ? p.origem === 'produtos' : p.origem !== 'produtos');
+    aplicarFiltro();
   } catch(e) { posts = []; }
   render();
   renderFila();
@@ -253,13 +275,6 @@ function render() {
     }
   });
 
-  // no calendário de conteúdo: dias com post de PRODUTO ganham um atalho pro Calendário de produtos
-  const prodDays = {};
-  if (!VISAO_PRODUTOS) todos.filter(p => p.origem === 'produtos' && p.agendado_para && p.status !== 'cancelado').forEach(p => {
-    const d = new Date(p.agendado_para); if (d.getFullYear() === y && d.getMonth() === mo) prodDays[d.getDate()] = (prodDays[d.getDate()] || 0) + 1;
-  });
-  const mesParam = y + '-' + String(mo + 1).padStart(2, '0');
-
   let html = '';
   for (let i = 0; i < start; i++) html += '<div class="cell out"></div>';
   for (let d = 1; d <= dim; d++) {
@@ -270,15 +285,15 @@ function render() {
       evs.map(p => {
         const hm = fmtHm(p.agendado_para);
         const titulo = esc((p.titulo || '').trim() || p.tipo || 'post');
-        return `<div class="ev ${p.status}" onclick="location.href='publicador.html?edit=${p.id}'">`+
+        const tp = tipoDe(p);
+        return `<div class="ev ${p.status}${tp === 'produto' ? ' prod' : ''}" onclick="location.href='publicador.html?edit=${p.id}'">`+
           `<div class="th">${thumbDe(p)}</div>`+
           `<div class="tx">`+
             `<span class="ttl">${titulo}</span>`+
-            `<span class="hm">${hm}</span>`+
-            `<span class="leg">${legLine(p)}</span>`+
+            `<span class="hm"><span class="tp ${tp}">${tp === 'produto' ? 'Produto' : tipoLabel(p.tipo)}</span>${hm}</span>`+
+            platChips(p)+
           `</div></div>`;
       }).join('') +
-      (prodDays[d] ? `<a class="evprod" href="calendario.html?visao=produtos&mes=${mesParam}" title="Abrir o Calendário de produtos">🛍️ Post de produto${prodDays[d] > 1 ? 's (' + prodDays[d] + ')' : ''}</a>` : '') +
     '</div>';
   }
   const cells = start + dim;
@@ -318,7 +333,7 @@ function renderFila() {
       <div class="finfo">
         <span class="fname">${esc(p.titulo || p.tipo || 'sem título')}</span>
         <div class="fmeta">
-          <span class="tag">${tipoLabel(p.tipo)}</span>
+          <span class="tag">${tipoDe(p) === 'produto' ? 'Produto' : tipoLabel(p.tipo)}</span>${platChips(p)}
           ${autLabel}
           <span>${esc(legLine(p).slice(0, 50))}</span>
         </div>
@@ -357,7 +372,7 @@ function renderHistPage() {
       <div class="hinfo">
         <span class="hname">${esc(p.titulo || p.tipo || 'sem título')}</span>
         <div class="hmeta">
-          <span>${tipoLabel(p.tipo)}</span>
+          <span>${tipoDe(p) === 'produto' ? 'Produto' : tipoLabel(p.tipo)}</span>${platChips(p)}
           ${aut.fluxo_nome ? `<span>⚡ ${esc(String(aut.fluxo_nome).slice(0, 35))}</span>` : ''}
           <span>${esc(legLine(p).slice(0, 60))}</span>
         </div>
@@ -374,8 +389,16 @@ function mostrarMaisHist() { histLimit += 20; renderHistPage(); }
 document.getElementById('prev').onclick = () => { cur.setMonth(cur.getMonth() - 1); render(); };
 document.getElementById('next').onclick = () => { cur.setMonth(cur.getMonth() + 1); render(); };
 
+// filtros
+['ftipo', 'fplat'].forEach(id => {
+  const el = document.getElementById(id), k = id === 'ftipo' ? 'tipo' : 'plat';
+  el.querySelectorAll('.chip').forEach(c => c.classList.toggle('on', (c.dataset.v || '') === filtro[k]));
+  el.addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return;
+    el.querySelectorAll('.chip').forEach(c => c.classList.remove('on')); b.classList.add('on');
+    filtro[k] = b.dataset.v || ''; aplicarFiltro(); render(); renderFila(); renderHist(); });
+});
 carregar();
 </script>
-<script src="sidebar.js?v=20261030d" defer></script>
+<script src="sidebar.js?v=20261031a" defer></script>
 </body>
 </html>

@@ -20,15 +20,15 @@
   var NAV=[
     {item:'Início', href:'index.html', ic:'⌂'},
     {cat:'Métricas'},
-    {item:'Panorama', href:'panorama.html', ic:'📈'},
-    {item:'Dashboard Link Bio', href:'dashbio.html', ic:'🔗'},
+    // 31/Out (Bruno): Dash Link Bio saiu do menu e virou aba dentro do Panorama
+    {item:'Panorama', href:'panorama.html', ic:'📈', also:['dashbio.html']},
     {cat:'Ferramentas'},
     {item:'Publicador', href:'publicador.html', ic:'📤'},
-    {item:'Calendário de posts', href:'calendario.html', ic:'📅'},
-    {item:'Calendário de produtos', href:'calendario.html?visao=produtos', ic:'🛍️'},
+    // 31/Out (Bruno): um calendário só, com filtro de tipo (reels/carrossel/produto) e cor por rede
+    {item:'Calendário', href:'calendario.html', ic:'📅'},
     {item:'Biblioteca de mídia', href:'midia.html', ic:'🎞️'},
-    {item:'Automações', href:'automacoes.html', ic:'⚡'},
-    {item:'Funil das automações', href:'funil.html', ic:'🎯'},
+    // 31/Out (Bruno): Funil das automações virou aba dentro de Automações
+    {item:'Automações', href:'automacoes.html', ic:'⚡', also:['funil.html']},
     {item:'Caixa de entrada', href:'inbox.html', ic:'💬'},
     {item:'Contatos', href:'contatos.html', ic:'👥'},
     // Conteúdo (30/Out, pedido Bruno): carrosséis do projeto Maternidade. Dados na tabela conteudo.carrosseis_aprovacao via /api/n8n/motor-carrosseis (maternidade/build_api.js)
@@ -69,7 +69,7 @@
    +'.sb a.n .ex{flex:0 0 auto;font-size:11px;opacity:.5}'
    +'.sb .ft{padding:14px 20px 16px;border-top:1px solid rgba(255,255,255,.1);font-size:11px;color:#9DB3AD;line-height:1.45}'
    +'.sb .ft b{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#E3A31B;font-weight:700;margin-bottom:3px}'
-   +'.sb .eu{display:none;align-items:center;gap:10px;margin:0 12px 12px;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.07);color:#E7EEEC;font-size:12px}.sb .eu.on{display:flex}'
+   +'.sb .eu{display:none;align-items:center;gap:10px;margin:0 12px 14px;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.07);color:#E7EEEC;font-size:12px}.sb .eu.on{display:flex}'
    +'.sb .eu .av{width:30px;height:30px;border-radius:50%;background:#E3A31B;color:#23332F;display:grid;place-items:center;font-weight:800;font-size:13px;flex:0 0 auto}'
    +'.sb .eu .q{flex:1;min-width:0;line-height:1.25}.sb .eu .q small{display:block;color:#9DB3AD;font-size:10.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'
    +'.sb .eu a{flex:0 0 auto;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#FFD9D4;border:1.5px solid rgba(255,170,160,.55);border-radius:9px;padding:6px 10px;text-decoration:none}.sb .eu a:hover{background:rgba(255,120,100,.15);color:#fff}'
@@ -86,7 +86,14 @@
    +'  .sbscrim{display:none;position:fixed;inset:0;background:rgba(20,30,27,.5);z-index:38}'
    +'  .sbscrim.on{display:block}'
    +'}';
+  css+='.abas{display:flex;gap:4px;background:#fff;border:1px solid #DCE8E6;padding:4px;border-radius:12px;width:max-content;max-width:100%;margin:0 0 18px;overflow-x:auto;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}'
+   +'.abas a{font-size:12.5px;font-weight:700;color:#6E827D;padding:7px 14px;border-radius:9px;text-decoration:none;white-space:nowrap}.abas a:hover{color:#23332F}.abas a.on{background:#3A5049;color:#fff}';
   var st=document.createElement('style'); st.textContent=css; document.head.appendChild(st);
+  // Abas: página com <div class="abas" data-grupo="X"></div> recebe os links do grupo (aba ativa pelo arquivo)
+  var ABAS={automacoes:[['Automações','automacoes.html'],['Funil das automações','funil.html']], panorama:[['Panorama','panorama.html'],['Link da bio','dashbio.html']]};
+  var montaAbas=function(){ [].forEach.call(document.querySelectorAll('.abas[data-grupo]'),function(el){ var g=ABAS[el.dataset.grupo]||[], p=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    el.innerHTML=g.map(function(a){return '<a href="'+a[1]+'"'+(a[1]===p?' class="on"':'')+'>'+a[0]+'</a>';}).join(''); }); };
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',montaAbas); else montaAbas();
   if(window.self!==window.top){ var em=document.createElement('style'); em.textContent='body{padding-left:0!important;background:transparent!important}.top,footer{display:none!important}.wrap{padding:0 0 6px!important;max-width:none!important}'; document.head.appendChild(em); return; }
 
   var active=null;
@@ -94,7 +101,7 @@
     if(x.cat) return '<div class="cat">'+x.cat+'</div>';
     if(x.sub) return '<div class="sub">'+x.sub+'</div>';
     var base=x.href.split('/').pop().toLowerCase();
-    var aqui=path+(location.search.indexOf('visao=produtos')>=0?'?visao=produtos':'');
+    var aqui=path;
     var on=(!x.ext && (base===aqui || (x.also&&x.also.indexOf(aqui)>=0) || (aqui==='index.html'&&base==='index.html')));
     if(on) active=x.item;
     return '<a class="n'+(on?' on':'')+'" href="'+x.href+'"'+(x.ext?' target="_blank" rel="noopener"':'')+'>'+svg(x.ic)+'<span>'+x.item+'</span>'+(x.badge?'<b class="bdg" data-st="'+x.badge+'"></b>':'')+(x.ext?'<span class="ex">↗</span>':'')+'</a>';
@@ -103,8 +110,7 @@
   var aside=document.createElement('aside'); aside.className='sb';
   aside.innerHTML=''
    +'<nav>'+nav+'</nav>'
-   +'<div class="eu" id="sbEu"><span class="av"></span><span class="q"><b></b><small></small></span><a href="/cdn-cgi/access/logout">Sair</a></div>'
-   +'<div class="ft"><b>Publicação</b>Automática ligada: agendados saem sozinhos no horário.</div>';
+   +'<div class="eu on" id="sbEu"><span class="av">•</span><span class="q"><b>Conectado</b><small>sessão do HUB</small></span><a href="/cdn-cgi/access/logout">Sair</a></div>';
 
   var top=document.createElement('div'); top.className='sbtop';
   top.innerHTML='<button class="hb" aria-label="Menu">'+svg('burger')+'</button><b>'+(active||'Motor de Conteúdo')+'</b>';
