@@ -1,191 +1,206 @@
 {
-  "gerado_em": "2026-11-05T16:00:25.603Z",
+  "gerado_em": "2026-11-06T16:00:19.207Z",
   "conta": {
     "username": "manualdorecemnascido",
     "display_name": "Manual do Recém-Nascido",
     "seguidores": 815000,
-    "views_totais": 138940958,
-    "videos_total": 1143,
+    "views_totais": 139183833,
+    "videos_total": 1145,
     "link": "https://youtube.com/@manualdorecemnascido"
   },
   "periodo_semanas": 8,
   "resumo": {
-    "n_videos": 32,
-    "views_total": 586628,
-    "likes_total": 16387,
-    "comments_total": 253,
-    "eng_total": 16640,
-    "eng_medio": 520,
-    "shorts": 31,
+    "n_videos": 34,
+    "views_total": 678532,
+    "likes_total": 17833,
+    "comments_total": 291,
+    "eng_total": 18124,
+    "eng_medio": 533,
+    "shorts": 33,
     "longos": 1,
-    "inscritos_liquido": 3868,
+    "inscritos_liquido": 3911,
     "ret_media_seg": 43
   },
   "por_dia": [
     {
-      "data": "2026-11-05",
+      "data": "2026-11-06",
       "posts": 1,
-      "views": 1233,
-      "engajamento": 72
+      "views": 1286,
+      "engajamento": 133
+    },
+    {
+      "data": "2026-11-05",
+      "posts": 2,
+      "views": 6586,
+      "engajamento": 279
     },
     {
       "data": "2026-11-04",
       "posts": 1,
-      "views": 19474,
-      "engajamento": 476
+      "views": 23569,
+      "engajamento": 555
     },
     {
       "data": "2026-11-03",
       "posts": 2,
-      "views": 16735,
-      "engajamento": 774
+      "views": 21399,
+      "engajamento": 982
     },
     {
       "data": "2026-11-02",
       "posts": 2,
-      "views": 128641,
-      "engajamento": 2364
+      "views": 192775,
+      "engajamento": 3047
     },
     {
       "data": "2026-11-01",
       "posts": 2,
-      "views": 18848,
-      "engajamento": 710
+      "views": 19854,
+      "engajamento": 734
     },
     {
       "data": "2026-10-29",
       "posts": 1,
-      "views": 10030,
-      "engajamento": 330
+      "views": 10294,
+      "engajamento": 335
     },
     {
       "data": "2026-10-26",
       "posts": 1,
-      "views": 12734,
-      "engajamento": 623
+      "views": 12878,
+      "engajamento": 626
     },
     {
       "data": "2026-10-23",
       "posts": 1,
-      "views": 12206,
-      "engajamento": 435
+      "views": 12318,
+      "engajamento": 436
     },
     {
       "data": "2026-10-22",
       "posts": 1,
-      "views": 11752,
-      "engajamento": 534
+      "views": 11893,
+      "engajamento": 535
     },
     {
       "data": "2026-10-19",
       "posts": 1,
-      "views": 8588,
-      "engajamento": 339
+      "views": 8654,
+      "engajamento": 340
     },
     {
       "data": "2026-10-16",
       "posts": 1,
-      "views": 67262,
-      "engajamento": 1437
+      "views": 70718,
+      "engajamento": 1479
     },
     {
       "data": "2026-10-15",
       "posts": 2,
-      "views": 45490,
-      "engajamento": 944
+      "views": 49039,
+      "engajamento": 992
     },
     {
       "data": "2026-10-14",
       "posts": 1,
-      "views": 6011,
+      "views": 6061,
       "engajamento": 145
     },
     {
       "data": "2026-10-13",
       "posts": 1,
-      "views": 4186,
-      "engajamento": 222
+      "views": 4263,
+      "engajamento": 225
     },
     {
       "data": "2026-10-12",
       "posts": 1,
-      "views": 83602,
-      "engajamento": 1573
+      "views": 86585,
+      "engajamento": 1613
     },
     {
       "data": "2026-10-09",
       "posts": 1,
-      "views": 11570,
+      "views": 11624,
       "engajamento": 499
     },
     {
       "data": "2026-10-08",
       "posts": 1,
-      "views": 6183,
+      "views": 6226,
       "engajamento": 203
     },
     {
       "data": "2026-10-01",
       "posts": 1,
-      "views": 18736,
-      "engajamento": 596
+      "views": 18788,
+      "engajamento": 597
     },
     {
       "data": "2026-09-30",
       "posts": 1,
-      "views": 5608,
-      "engajamento": 218
+      "views": 5668,
+      "engajamento": 219
     },
     {
       "data": "2026-09-29",
       "posts": 1,
-      "views": 5540,
-      "engajamento": 318
+      "views": 5589,
+      "engajamento": 320
     },
     {
       "data": "2026-09-25",
       "posts": 1,
-      "views": 34538,
-      "engajamento": 1900
+      "views": 34594,
+      "engajamento": 1899
     },
     {
       "data": "2026-09-24",
       "posts": 2,
-      "views": 8409,
+      "views": 8446,
       "engajamento": 250
     },
     {
       "data": "2026-09-22",
       "posts": 1,
-      "views": 6409,
-      "engajamento": 281
+      "views": 6435,
+      "engajamento": 282
     },
     {
       "data": "2026-09-19",
       "posts": 1,
-      "views": 5750,
+      "views": 5778,
       "engajamento": 271
     },
     {
       "data": "2026-09-17",
       "posts": 1,
-      "views": 26056,
-      "engajamento": 795
+      "views": 26097,
+      "engajamento": 796
     },
     {
       "data": "2026-09-16",
       "posts": 1,
-      "views": 5049,
+      "views": 5095,
       "engajamento": 128
     },
     {
       "data": "2026-09-12",
       "posts": 1,
-      "views": 5988,
-      "engajamento": 203
+      "views": 6020,
+      "engajamento": 204
     }
   ],
   "crescimento": [
+    {
+      "data": "2026-11-03",
+      "views": 158374,
+      "ganhos": 238,
+      "perdidos": 126,
+      "liquido": 112,
+      "min_assistidos": 49038,
+      "ret_media_seg": 38
+    },
     {
       "data": "2026-11-02",
       "views": 141898,
@@ -197,29 +212,29 @@
     },
     {
       "data": "2026-11-01",
-      "views": 115502,
+      "views": 114895,
       "ganhos": 156,
       "perdidos": 49,
       "liquido": 107,
-      "min_assistidos": 35626,
+      "min_assistidos": 35618,
       "ret_media_seg": 39
     },
     {
       "data": "2026-10-31",
-      "views": 79611,
+      "views": 78853,
       "ganhos": 126,
       "perdidos": 38,
       "liquido": 88,
-      "min_assistidos": 26669,
+      "min_assistidos": 26641,
       "ret_media_seg": 43
     },
     {
       "data": "2026-10-30",
-      "views": 88099,
+      "views": 87675,
       "ganhos": 115,
       "perdidos": 36,
       "liquido": 79,
-      "min_assistidos": 28577,
+      "min_assistidos": 28524,
       "ret_media_seg": 41
     },
     {
@@ -269,11 +284,11 @@
     },
     {
       "data": "2026-10-24",
-      "views": 69590,
+      "views": 69230,
       "ganhos": 87,
       "perdidos": 51,
       "liquido": 36,
-      "min_assistidos": 23509,
+      "min_assistidos": 23479,
       "ret_media_seg": 43
     },
     {
@@ -314,11 +329,11 @@
     },
     {
       "data": "2026-10-19",
-      "views": 68623,
+      "views": 68247,
       "ganhos": 97,
       "perdidos": 40,
       "liquido": 57,
-      "min_assistidos": 26387,
+      "min_assistidos": 26320,
       "ret_media_seg": 49
     },
     {
@@ -341,11 +356,11 @@
     },
     {
       "data": "2026-10-16",
-      "views": 85620,
+      "views": 84913,
       "ganhos": 153,
       "perdidos": 163,
       "liquido": -10,
-      "min_assistidos": 29165,
+      "min_assistidos": 29132,
       "ret_media_seg": 44
     },
     {
@@ -404,11 +419,11 @@
     },
     {
       "data": "2026-10-09",
-      "views": 81406,
+      "views": 81361,
       "ganhos": 98,
       "perdidos": 36,
       "liquido": 62,
-      "min_assistidos": 26617,
+      "min_assistidos": 26625,
       "ret_media_seg": 43
     },
     {
@@ -440,92 +455,92 @@
     },
     {
       "data": "2026-10-05",
-      "views": 82082,
+      "views": 82044,
       "ganhos": 100,
       "perdidos": 28,
       "liquido": 72,
-      "min_assistidos": 28732,
+      "min_assistidos": 28766,
       "ret_media_seg": 46
     },
     {
       "data": "2026-10-04",
-      "views": 81757,
+      "views": 81363,
       "ganhos": 111,
       "perdidos": 25,
       "liquido": 86,
-      "min_assistidos": 24618,
+      "min_assistidos": 24626,
       "ret_media_seg": 41
     },
     {
       "data": "2026-10-03",
-      "views": 93755,
+      "views": 93678,
       "ganhos": 124,
       "perdidos": 34,
       "liquido": 90,
-      "min_assistidos": 28373,
+      "min_assistidos": 28397,
       "ret_media_seg": 41
     },
     {
       "data": "2026-10-02",
-      "views": 78827,
+      "views": 78762,
       "ganhos": 130,
       "perdidos": 67,
       "liquido": 63,
-      "min_assistidos": 27216,
+      "min_assistidos": 27262,
       "ret_media_seg": 46
     },
     {
       "data": "2026-10-01",
-      "views": 93886,
+      "views": 93827,
       "ganhos": 135,
       "perdidos": 47,
       "liquido": 88,
-      "min_assistidos": 30293,
+      "min_assistidos": 30320,
       "ret_media_seg": 42
     },
     {
       "data": "2026-09-30",
-      "views": 81147,
+      "views": 81087,
       "ganhos": 119,
       "perdidos": 37,
       "liquido": 82,
-      "min_assistidos": 26886,
+      "min_assistidos": 26909,
       "ret_media_seg": 44
     },
     {
       "data": "2026-09-29",
-      "views": 90459,
+      "views": 90356,
       "ganhos": 133,
       "perdidos": 31,
       "liquido": 102,
-      "min_assistidos": 29620,
+      "min_assistidos": 29655,
       "ret_media_seg": 43
     },
     {
       "data": "2026-09-28",
-      "views": 88619,
+      "views": 87122,
       "ganhos": 124,
       "perdidos": 29,
       "liquido": 95,
-      "min_assistidos": 30023,
+      "min_assistidos": 30003,
       "ret_media_seg": 46
     },
     {
       "data": "2026-09-27",
-      "views": 91767,
+      "views": 91713,
       "ganhos": 139,
       "perdidos": 46,
       "liquido": 93,
-      "min_assistidos": 29830,
+      "min_assistidos": 29846,
       "ret_media_seg": 43
     },
     {
       "data": "2026-09-26",
-      "views": 95695,
+      "views": 95614,
       "ganhos": 172,
       "perdidos": 74,
       "liquido": 98,
-      "min_assistidos": 31287,
+      "min_assistidos": 31311,
       "ret_media_seg": 42
     },
     {
@@ -662,15 +677,6 @@
       "liquido": 68,
       "min_assistidos": 26502,
       "ret_media_seg": 43
-    },
-    {
-      "data": "2026-09-10",
-      "views": 84529,
-      "ganhos": 108,
-      "perdidos": 39,
-      "liquido": 69,
-      "min_assistidos": 28276,
-      "ret_media_seg": 43
     }
   ],
   "videos": [
@@ -680,10 +686,10 @@
       "thumb": "https://i.ytimg.com/vi/2DJVru_hxKk/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=2DJVru_hxKk",
       "publicado_em": "2026-11-02T11:02:09Z",
-      "views": 104212,
-      "curtidas": 1601,
-      "comentarios": 45,
-      "engajamento": 1646,
+      "views": 165278,
+      "curtidas": 2187,
+      "comentarios": 74,
+      "engajamento": 2261,
       "formato": "short",
       "duracao_seg": 43
     },
@@ -693,10 +699,10 @@
       "thumb": "https://i.ytimg.com/vi/GK4Xf2Ss0C8/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=GK4Xf2Ss0C8",
       "publicado_em": "2026-10-12T11:01:24Z",
-      "views": 83602,
-      "curtidas": 1568,
+      "views": 86585,
+      "curtidas": 1608,
       "comentarios": 5,
-      "engajamento": 1573,
+      "engajamento": 1613,
       "formato": "short",
       "duracao_seg": 57
     },
@@ -706,25 +712,12 @@
       "thumb": "https://i.ytimg.com/vi/BceubSC4bhk/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=BceubSC4bhk",
       "publicado_em": "2026-10-16T11:01:21Z",
-      "views": 67262,
-      "curtidas": 1428,
-      "comentarios": 9,
-      "engajamento": 1437,
+      "views": 70718,
+      "curtidas": 1469,
+      "comentarios": 10,
+      "engajamento": 1479,
       "formato": "short",
       "duracao_seg": 49
-    },
-    {
-      "id": "ii4yiCncXJg",
-      "titulo": "Autonomia de sono do bebê",
-      "thumb": "https://i.ytimg.com/vi/ii4yiCncXJg/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=ii4yiCncXJg",
-      "publicado_em": "2026-09-25T11:01:58Z",
-      "views": 34538,
-      "curtidas": 1816,
-      "comentarios": 84,
-      "engajamento": 1900,
-      "formato": "short",
-      "duracao_seg": 87
     },
     {
       "id": "0jpwPtx9kdY",
@@ -732,25 +725,25 @@
       "thumb": "https://i.ytimg.com/vi/0jpwPtx9kdY/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=0jpwPtx9kdY",
       "publicado_em": "2026-10-15T11:00:43Z",
-      "views": 33838,
-      "curtidas": 590,
-      "comentarios": 8,
-      "engajamento": 598,
+      "views": 37291,
+      "curtidas": 637,
+      "comentarios": 9,
+      "engajamento": 646,
       "formato": "short",
       "duracao_seg": 42
     },
     {
-      "id": "dAwAO8DDnd4",
-      "titulo": "BEBÊ COM REFLUXO PODE DORMIR DE BARRIGA PRA CIMA?",
-      "thumb": "https://i.ytimg.com/vi/dAwAO8DDnd4/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=dAwAO8DDnd4",
-      "publicado_em": "2026-09-17T11:00:54Z",
-      "views": 26056,
-      "curtidas": 782,
-      "comentarios": 13,
-      "engajamento": 795,
+      "id": "ii4yiCncXJg",
+      "titulo": "Autonomia de sono do bebê",
+      "thumb": "https://i.ytimg.com/vi/ii4yiCncXJg/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=ii4yiCncXJg",
+      "publicado_em": "2026-09-25T11:01:58Z",
+      "views": 34594,
+      "curtidas": 1815,
+      "comentarios": 84,
+      "engajamento": 1899,
       "formato": "short",
-      "duracao_seg": 50
+      "duracao_seg": 87
     },
     {
       "id": "ppzEVGDyqnU",
@@ -758,12 +751,25 @@
       "thumb": "https://i.ytimg.com/vi/ppzEVGDyqnU/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=ppzEVGDyqnU",
       "publicado_em": "2026-11-02T17:01:15Z",
-      "views": 24429,
-      "curtidas": 711,
+      "views": 27497,
+      "curtidas": 779,
       "comentarios": 7,
-      "engajamento": 718,
+      "engajamento": 786,
       "formato": "short",
       "duracao_seg": 85
+    },
+    {
+      "id": "dAwAO8DDnd4",
+      "titulo": "BEBÊ COM REFLUXO PODE DORMIR DE BARRIGA PRA CIMA?",
+      "thumb": "https://i.ytimg.com/vi/dAwAO8DDnd4/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=dAwAO8DDnd4",
+      "publicado_em": "2026-09-17T11:00:54Z",
+      "views": 26097,
+      "curtidas": 783,
+      "comentarios": 13,
+      "engajamento": 796,
+      "formato": "short",
+      "duracao_seg": 50
     },
     {
       "id": "g3s2MLGfoUk",
@@ -771,10 +777,10 @@
       "thumb": "https://i.ytimg.com/vi/g3s2MLGfoUk/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=g3s2MLGfoUk",
       "publicado_em": "2026-11-04T11:01:25Z",
-      "views": 19474,
-      "curtidas": 465,
-      "comentarios": 11,
-      "engajamento": 476,
+      "views": 23569,
+      "curtidas": 541,
+      "comentarios": 14,
+      "engajamento": 555,
       "formato": "short",
       "duracao_seg": 64
     },
@@ -784,12 +790,25 @@
       "thumb": "https://i.ytimg.com/vi/23AmEjxtSXU/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=23AmEjxtSXU",
       "publicado_em": "2026-10-01T11:00:56Z",
-      "views": 18736,
-      "curtidas": 592,
+      "views": 18788,
+      "curtidas": 593,
       "comentarios": 4,
-      "engajamento": 596,
+      "engajamento": 597,
       "formato": "short",
       "duracao_seg": 40
+    },
+    {
+      "id": "8siPhupSyew",
+      "titulo": "Seu bebê dorme muito bem no colo mas acorda ao ir ao berço?",
+      "thumb": "https://i.ytimg.com/vi/8siPhupSyew/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=8siPhupSyew",
+      "publicado_em": "2026-11-03T11:01:23Z",
+      "views": 14249,
+      "curtidas": 621,
+      "comentarios": 5,
+      "engajamento": 626,
+      "formato": "short",
+      "duracao_seg": 65
     },
     {
       "id": "npUhIA73yW8",
@@ -797,25 +816,12 @@
       "thumb": "https://i.ytimg.com/vi/npUhIA73yW8/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=npUhIA73yW8",
       "publicado_em": "2026-10-26T11:01:21Z",
-      "views": 12734,
-      "curtidas": 620,
+      "views": 12878,
+      "curtidas": 623,
       "comentarios": 3,
-      "engajamento": 623,
+      "engajamento": 626,
       "formato": "short",
       "duracao_seg": 54
-    },
-    {
-      "id": "FqhNlyAUjw0",
-      "titulo": "Braquicefalia: como prevenir no bebê",
-      "thumb": "https://i.ytimg.com/vi/FqhNlyAUjw0/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=FqhNlyAUjw0",
-      "publicado_em": "2026-10-23T11:01:03Z",
-      "views": 12206,
-      "curtidas": 434,
-      "comentarios": 1,
-      "engajamento": 435,
-      "formato": "short",
-      "duracao_seg": 59
     },
     {
       "id": "ADTKAAnW7-I",
@@ -823,12 +829,25 @@
       "thumb": "https://i.ytimg.com/vi/ADTKAAnW7-I/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=ADTKAAnW7-I",
       "publicado_em": "2026-11-01T17:01:09Z",
-      "views": 12028,
-      "curtidas": 506,
+      "views": 12453,
+      "curtidas": 517,
       "comentarios": 4,
-      "engajamento": 510,
+      "engajamento": 521,
       "formato": "short",
       "duracao_seg": 55
+    },
+    {
+      "id": "FqhNlyAUjw0",
+      "titulo": "Braquicefalia: como prevenir no bebê",
+      "thumb": "https://i.ytimg.com/vi/FqhNlyAUjw0/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=FqhNlyAUjw0",
+      "publicado_em": "2026-10-23T11:01:03Z",
+      "views": 12318,
+      "curtidas": 435,
+      "comentarios": 1,
+      "engajamento": 436,
+      "formato": "short",
+      "duracao_seg": 59
     },
     {
       "id": "v-5Zs7o7QPs",
@@ -836,10 +855,10 @@
       "thumb": "https://i.ytimg.com/vi/v-5Zs7o7QPs/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=v-5Zs7o7QPs",
       "publicado_em": "2026-10-22T11:01:46Z",
-      "views": 11752,
-      "curtidas": 531,
+      "views": 11893,
+      "curtidas": 532,
       "comentarios": 3,
-      "engajamento": 534,
+      "engajamento": 535,
       "formato": "short",
       "duracao_seg": 50
     },
@@ -849,7 +868,7 @@
       "thumb": "https://i.ytimg.com/vi/iX2pTU-4Y-k/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=iX2pTU-4Y-k",
       "publicado_em": "2026-10-15T11:02:20Z",
-      "views": 11652,
+      "views": 11748,
       "curtidas": 344,
       "comentarios": 2,
       "engajamento": 346,
@@ -862,7 +881,7 @@
       "thumb": "https://i.ytimg.com/vi/HmPrukpvQB4/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=HmPrukpvQB4",
       "publicado_em": "2026-10-09T11:01:24Z",
-      "views": 11570,
+      "views": 11624,
       "curtidas": 495,
       "comentarios": 4,
       "engajamento": 499,
@@ -870,28 +889,15 @@
       "duracao_seg": 57
     },
     {
-      "id": "8siPhupSyew",
-      "titulo": "Seu bebê dorme muito bem no colo mas acorda ao ir ao berço?",
-      "thumb": "https://i.ytimg.com/vi/8siPhupSyew/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=8siPhupSyew",
-      "publicado_em": "2026-11-03T11:01:23Z",
-      "views": 10645,
-      "curtidas": 476,
-      "comentarios": 5,
-      "engajamento": 481,
-      "formato": "short",
-      "duracao_seg": 65
-    },
-    {
       "id": "QfpKoLf8qDo",
       "titulo": "Seio empedrado: o que fazer?",
       "thumb": "https://i.ytimg.com/vi/QfpKoLf8qDo/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=QfpKoLf8qDo",
       "publicado_em": "2026-10-29T11:01:04Z",
-      "views": 10030,
-      "curtidas": 328,
+      "views": 10294,
+      "curtidas": 333,
       "comentarios": 2,
-      "engajamento": 330,
+      "engajamento": 335,
       "formato": "short",
       "duracao_seg": 48
     },
@@ -901,10 +907,10 @@
       "thumb": "https://i.ytimg.com/vi/g7GvPOKUWoU/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=g7GvPOKUWoU",
       "publicado_em": "2026-10-19T11:01:13Z",
-      "views": 8588,
-      "curtidas": 337,
+      "views": 8654,
+      "curtidas": 338,
       "comentarios": 2,
-      "engajamento": 339,
+      "engajamento": 340,
       "formato": "short",
       "duracao_seg": 55
     },
@@ -914,7 +920,7 @@
       "thumb": "https://i.ytimg.com/vi/l2LDXgsjWrU/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=l2LDXgsjWrU",
       "publicado_em": "2026-09-24T11:00:47Z",
-      "views": 8409,
+      "views": 8446,
       "curtidas": 247,
       "comentarios": 3,
       "engajamento": 250,
@@ -927,12 +933,25 @@
       "thumb": "https://i.ytimg.com/vi/3poLCqitc5c/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=3poLCqitc5c",
       "publicado_em": "2026-11-01T11:01:24Z",
-      "views": 6820,
-      "curtidas": 196,
+      "views": 7401,
+      "curtidas": 209,
       "comentarios": 4,
-      "engajamento": 200,
+      "engajamento": 213,
       "formato": "short",
       "duracao_seg": 34
+    },
+    {
+      "id": "ABEfWuIOuec",
+      "titulo": "Autonomia de sono é a capacidade do bebê adormecer sozinho",
+      "thumb": "https://i.ytimg.com/vi/ABEfWuIOuec/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=ABEfWuIOuec",
+      "publicado_em": "2026-11-03T17:02:44Z",
+      "views": 7150,
+      "curtidas": 353,
+      "comentarios": 3,
+      "engajamento": 356,
+      "formato": "short",
+      "duracao_seg": 60
     },
     {
       "id": "-1Vy5N_AYrw",
@@ -940,10 +959,10 @@
       "thumb": "https://i.ytimg.com/vi/-1Vy5N_AYrw/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=-1Vy5N_AYrw",
       "publicado_em": "2026-09-22T14:30:50Z",
-      "views": 6409,
-      "curtidas": 277,
+      "views": 6435,
+      "curtidas": 278,
       "comentarios": 4,
-      "engajamento": 281,
+      "engajamento": 282,
       "formato": "short",
       "duracao_seg": 38
     },
@@ -953,7 +972,7 @@
       "thumb": "https://i.ytimg.com/vi/xEjgUp2JsmM/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=xEjgUp2JsmM",
       "publicado_em": "2026-10-08T12:38:48Z",
-      "views": 6183,
+      "views": 6226,
       "curtidas": 201,
       "comentarios": 2,
       "engajamento": 203,
@@ -961,25 +980,12 @@
       "duracao_seg": 91
     },
     {
-      "id": "ABEfWuIOuec",
-      "titulo": "Autonomia de sono é a capacidade do bebê adormecer sozinho",
-      "thumb": "https://i.ytimg.com/vi/ABEfWuIOuec/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=ABEfWuIOuec",
-      "publicado_em": "2026-11-03T17:02:44Z",
-      "views": 6090,
-      "curtidas": 291,
-      "comentarios": 2,
-      "engajamento": 293,
-      "formato": "short",
-      "duracao_seg": 60
-    },
-    {
       "id": "dbsytiKtCD0",
       "titulo": "Quem é a especialista da casa sobre o seu filho?",
       "thumb": "https://i.ytimg.com/vi/dbsytiKtCD0/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=dbsytiKtCD0",
       "publicado_em": "2026-10-14T10:53:00Z",
-      "views": 6011,
+      "views": 6061,
       "curtidas": 144,
       "comentarios": 1,
       "engajamento": 145,
@@ -992,12 +998,25 @@
       "thumb": "https://i.ytimg.com/vi/BJfs0Jn-RNk/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=BJfs0Jn-RNk",
       "publicado_em": "2026-09-12T14:00:57Z",
-      "views": 5988,
-      "curtidas": 201,
+      "views": 6020,
+      "curtidas": 202,
       "comentarios": 2,
-      "engajamento": 203,
+      "engajamento": 204,
       "formato": "short",
       "duracao_seg": 46
+    },
+    {
+      "id": "bK-tHaqynf0",
+      "titulo": "Você já se perguntou se a mamada do seu bebê está efetiva?",
+      "thumb": "https://i.ytimg.com/vi/bK-tHaqynf0/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=bK-tHaqynf0",
+      "publicado_em": "2026-11-05T11:01:20Z",
+      "views": 5875,
+      "curtidas": 243,
+      "comentarios": 1,
+      "engajamento": 244,
+      "formato": "short",
+      "duracao_seg": 69
     },
     {
       "id": "jDWwboa6nRI",
@@ -1005,7 +1024,7 @@
       "thumb": "https://i.ytimg.com/vi/jDWwboa6nRI/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=jDWwboa6nRI",
       "publicado_em": "2026-09-19T14:00:59Z",
-      "views": 5750,
+      "views": 5778,
       "curtidas": 268,
       "comentarios": 3,
       "engajamento": 271,
@@ -1018,10 +1037,10 @@
       "thumb": "https://i.ytimg.com/vi/lBsNkxpZOSs/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=lBsNkxpZOSs",
       "publicado_em": "2026-09-30T14:00:55Z",
-      "views": 5608,
-      "curtidas": 210,
+      "views": 5668,
+      "curtidas": 211,
       "comentarios": 8,
-      "engajamento": 218,
+      "engajamento": 219,
       "formato": "short",
       "duracao_seg": 79
     },
@@ -1031,10 +1050,10 @@
       "thumb": "https://i.ytimg.com/vi/qAi0pfMamFY/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=qAi0pfMamFY",
       "publicado_em": "2026-09-29T11:00:55Z",
-      "views": 5540,
-      "curtidas": 310,
+      "views": 5589,
+      "curtidas": 312,
       "comentarios": 8,
-      "engajamento": 318,
+      "engajamento": 320,
       "formato": "short",
       "duracao_seg": 63
     },
@@ -1044,7 +1063,7 @@
       "thumb": "https://i.ytimg.com/vi/JSRZoWve7fU/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=JSRZoWve7fU",
       "publicado_em": "2026-09-16T14:00:39Z",
-      "views": 5049,
+      "views": 5095,
       "curtidas": 126,
       "comentarios": 2,
       "engajamento": 128,
@@ -1057,25 +1076,38 @@
       "thumb": "https://i.ytimg.com/vi/t9cT8mxrfcU/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=t9cT8mxrfcU",
       "publicado_em": "2026-10-13T11:00:59Z",
-      "views": 4186,
-      "curtidas": 220,
+      "views": 4263,
+      "curtidas": 223,
       "comentarios": 2,
-      "engajamento": 222,
+      "engajamento": 225,
       "formato": "short",
       "duracao_seg": 59
     },
     {
-      "id": "bK-tHaqynf0",
-      "titulo": "Você já se perguntou se a mamada do seu bebê está efetiva?",
-      "thumb": "https://i.ytimg.com/vi/bK-tHaqynf0/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=bK-tHaqynf0",
-      "publicado_em": "2026-11-05T11:01:20Z",
-      "views": 1233,
-      "curtidas": 72,
+      "id": "TstbtWm6u1g",
+      "titulo": "Você sabia que o bebê não pode usar travesseiro?",
+      "thumb": "https://i.ytimg.com/vi/TstbtWm6u1g/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=TstbtWm6u1g",
+      "publicado_em": "2026-11-06T11:00:54Z",
+      "views": 1286,
+      "curtidas": 133,
       "comentarios": 0,
-      "engajamento": 72,
+      "engajamento": 133,
       "formato": "short",
-      "duracao_seg": 69
+      "duracao_seg": 63
+    },
+    {
+      "id": "IO1rWifpmj4",
+      "titulo": "O bebê não pode mamar de barriga para cima",
+      "thumb": "https://i.ytimg.com/vi/IO1rWifpmj4/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=IO1rWifpmj4",
+      "publicado_em": "2026-11-05T17:00:48Z",
+      "views": 711,
+      "curtidas": 33,
+      "comentarios": 2,
+      "engajamento": 35,
+      "formato": "short",
+      "duracao_seg": 32
     },
     {
       "id": "4NlEgnrhckg",
