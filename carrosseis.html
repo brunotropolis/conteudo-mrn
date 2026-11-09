@@ -50,6 +50,7 @@
   .car .quando{font-size:.8rem;font-weight:700;color:#2C3E6B}
   .car h3{font-size:.98rem;font-weight:800;line-height:1.25}
   .car .tipo{font-size:.8rem;color:var(--mute)}
+  .car.pos{border:3px dashed #8A5CC2}.car .pos-tag{align-self:flex-start;background:#8A5CC2;color:#fff;font-size:11px;font-weight:800;border-radius:999px;padding:3px 9px}
   .car .obs{font-size:.78rem;color:#8A4B12;background:#FFF6E6;border-radius:10px;padding:6px 9px}
   .car .acts{display:flex;gap:8px;margin-top:auto;padding-top:6px}
   .btn{flex:1;font-size:12.5px;font-weight:800;border-radius:10px;padding:8px 10px;cursor:pointer;border:1px solid var(--menu);background:var(--menu);color:#fff;font-family:inherit;text-align:center}
@@ -59,7 +60,8 @@
 
 
 
-  @media(max-width:560px){.grade{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.car .corpo{padding:10px 10px 11px}.car h3{font-size:.86rem}.car .tipo{font-size:.72rem}.car .obs{font-size:.7rem}.car .acts{flex-direction:column;gap:6px}.btn{font-size:12px;padding:7px 8px}.st{font-size:9.5px}}
+  @media(max-width:560px){.grade{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.car .corpo{padding:10px 10px 11px}.car h3{font-size:.86rem}.car .tipo{font-size:.72rem}.car.pos{border:3px dashed #8A5CC2}.car .pos-tag{align-self:flex-start;background:#8A5CC2;color:#fff;font-size:11px;font-weight:800;border-radius:999px;padding:3px 9px}
+  .car .obs{font-size:.7rem}.car .acts{flex-direction:column;gap:6px}.btn{font-size:12px;padding:7px 8px}.st{font-size:9.5px}}
   @media(max-width:760px){.montes{grid-template-columns:1fr}.monte{padding:16px 18px}.monte .num{font-size:2.1rem}}
 </style>
 </head>
@@ -96,9 +98,10 @@ function render(){
   if(!it.length){ g.innerHTML='<div class="vazio" style="grid-column:1/-1"><b>'+(V==='pend'?'Nada esperando aprovação':'Nenhum aprovado ainda')+'</b>'+(V==='pend'?'Tudo que estava aqui já foi visto pela Day.':'Assim que a Day aprovar, o carrossel aparece aqui com a data em que vai ao ar.')+'</div>'; return; }
   g.innerHTML=it.map(function(c){
     var href='carrossel.html?id='+encodeURIComponent(c.id);
-    var quando=c.status==='agendado'&&c.agendado_dia?'Vai ao ar '+c.agendado_dia+' às 20h':(c.status==='publicado'?'Já está no Instagram':(c.dia_fmt?'Planejado pra '+['','seg','ter','qua','qui','sex','sáb','dom'][c.dia_sem]+' '+c.dia_fmt:''));
-    return '<div class="car"><a class="capa" href="'+href+'"><img src="'+esc(c.capa_url)+'" alt="'+esc(c.titulo)+'" loading="lazy"><span class="qtd">'+c.laminas.length+' lâminas</span></a>'
-     +'<div class="corpo"><span class="st '+c.status+'">'+NOME[c.status]+'</span><h3>'+esc(c.titulo)+'</h3><div class="tipo">'+esc(String(c.tipo).replace(/\s*·\s*template.*$/i,''))+'</div>'
+    var POS=/-posblack$/.test(c.id);
+    var quando=POS?'Depois da Black: aprovar só guarda, não vai ao ar agora':c.status==='agendado'&&c.agendado_dia?'Vai ao ar '+c.agendado_dia+' às 20h':(c.status==='publicado'?'Já está no Instagram':(c.dia_fmt?'Planejado pra '+['','seg','ter','qua','qui','sex','sáb','dom'][c.dia_sem]+' '+c.dia_fmt:''));
+    return '<div class="car'+(POS?' pos':'')+'"><a class="capa" href="'+href+'"><img src="'+esc(c.capa_url)+'" alt="'+esc(c.titulo)+'" loading="lazy"><span class="qtd">'+c.laminas.length+' lâminas</span></a>'
+     +'<div class="corpo">'+(POS?'<span class="pos-tag">VERSÃO DEPOIS DA BLACK</span>':'')+'<span class="st '+c.status+'">'+(POS&&c.status==='aprovado'?'Aprovado, guardado':NOME[c.status])+'</span><h3>'+esc(c.titulo)+'</h3><div class="tipo">'+esc(String(c.tipo).replace(/\s*·\s*template.*$/i,''))+'</div>'
      +(quando?'<div class="quando">'+quando+'</div>':'')+(c.obs?'<div class="obs">'+esc(c.obs)+'</div>':'')
      +'<div class="acts"><a class="btn" href="'+href+'">'+(V==='pend'?'Revisar e aprovar':'Abrir')+'</a></div></div></div>';
   }).join('');

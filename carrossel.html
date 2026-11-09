@@ -143,6 +143,9 @@ function montar(){
   var av='';
   if(C.status==='ajuste') av='<div class="aviso">Ajuste enviado'+(ult?' por '+esc(ult.por)+' em '+fmt(ult.em):'')+'. O Bruno vai refazer e o carrossel volta pra cá como "Ajustado".</div>';
   if(C.status==='ajustado') av='<div class="aviso lilas">Versão nova com os ajustes pedidos. Confere as lâminas e aprova, ou pede mais um ajuste.</div>';
+  var POS=/-posblack$/.test(C.id);
+  if(POS) av+='<div class="aviso" style="background:#F1EAFA;color:#4B2A7A;border:2px dashed #8A5CC2"><b>Versão de DEPOIS da Black.</b> A borda roxa é só pra você enxergar, não vai no post. Aqui não tem o vídeo da Black: a última lâmina chama a isca. Aprovar só guarda; ela vai ao ar quando a Black acabar.</div>';
+  if(POS&&C.status==='aprovado') av+='<div class="aviso azul">Aprovado'+(C.aprovado_por?' por '+esc(C.aprovado_por):'')+' e guardado pra depois da Black.</div>';
   if(C.status==='agendado') av='<div class="aviso azul">Aprovado'+(C.aprovado_por?' por '+esc(C.aprovado_por):'')+'. Vai ao ar <b>'+esc(C.agendado_dia)+' às 20h</b> no Instagram do Manual.</div>';
   if(C.status==='publicado') av='<div class="aviso azul">Esse carrossel já foi publicado.</div>';
   var h='<div class="hdr"><span class="st '+C.status+'">'+NOME[C.status]+'</span><h1>'+esc(C.titulo)+'</h1><div class="tipo">'+esc(String(C.tipo).replace(/\s*·\s*template.*$/i,''))+' · '+C.laminas.length+' lâminas</div>'
@@ -208,7 +211,9 @@ document.addEventListener('click',function(e){ var b=e.target.closest('.mic'); i
 
 function barra(){
   var b=$('barra'), aberto=ABERTO.indexOf(C.status)>=0;
-  b.hidden=!(aberto||C.status==='agendado');
+  var POS=/-posblack$/.test(C.id);
+  b.hidden=!(aberto||C.status==='agendado'||(POS&&C.status==='aprovado'));
+  if(POS&&C.status==='aprovado'){ $('bAj').hidden=true; $('bOk').textContent='Desfazer aprovação'; $('bOk').className='btn ghost'; $('barraTxt').innerHTML='Guardado pra <b>depois da Black</b>'; return; }
   if(C.status==='agendado'){ $('bAj').hidden=true; $('bOk').textContent='Desfazer aprovação'; $('bOk').className='btn ghost'; $('barraTxt').innerHTML='Vai ao ar <b>'+esc(C.agendado_dia)+' às 20h</b>'; return; }
   $('bAj').hidden=false; $('bOk').textContent='Aprovar'; $('bOk').className='btn ok';
   var n=Object.keys(ajustesDigitados()).length+($('geral')&&$('geral').value.trim()?1:0);
@@ -235,18 +240,24 @@ $('bAj').onclick=function(){
   }).catch(function(){ toast('Sem conexão, tenta de novo'); barra(); });
 };
 $('bOk').onclick=function(){
+  var POS=/-posblack$/.test(C.id);
+  if(POS&&C.status==='aprovado'){
+    confirma('Desfazer a aprovação?','A versão de depois da Black volta pra "Para aprovação".',function(){
+      api({acao:'voltar',id:ID}).then(function(d){ if(!d.ok){ toast(d.erro||'Não deu'); return; } toast('Aprovação desfeita'); carregar(); });
+    }); return;
+  }
   if(C.status==='agendado'){
     confirma('Desfazer a aprovação?','O post sai do Publicador e o carrossel volta pra "Para aprovação".',function(){
       api({acao:'voltar',id:ID}).then(function(d){ if(!d.ok){ toast(d.erro||'Não deu'); return; } toast('Aprovação desfeita'); carregar(); });
     }); return;
   }
   var pend=Object.keys(ajustesDigitados()).length||($('geral')&&$('geral').value.trim());
-  confirma('Aprovar este carrossel?',(pend?'Tem ajuste escrito que não foi enviado: ele será descartado. ':'')+'Ele entra no Publicador às 20h '+(C.dia_fmt?'de '+SEM[C.dia_sem]+' '+C.dia_fmt:'do próximo dia livre')+', no Instagram do Manual, com a legenda que está na tela.',function(){
+  confirma('Aprovar este carrossel?',(pend?'Tem ajuste escrito que não foi enviado: ele será descartado. ':'')+(POS?'É a versão de depois da Black: fica guardada e NÃO vai ao ar agora.':'Ele entra no Publicador às 20h '+(C.dia_fmt?'de '+SEM[C.dia_sem]+' '+C.dia_fmt:'do próximo dia livre')+', no Instagram do Manual, com a legenda que está na tela.'),function(){
     $('bOk').disabled=true;
     salvarLeg().then(function(ok){ if(!ok) throw 0; return api({acao:'aprovar',id:ID}); }).then(function(d){
       $('bOk').disabled=false;
       if(!d.ok){ toast(d.erro||'Não aprovou'); return; }
-      toast('Aprovado! Vai ao ar '+d.dados[0].agendado_dia+' às 20h'); voltarLista();
+      toast(POS?'Aprovado e guardado pra depois da Black':'Aprovado! Vai ao ar '+d.dados[0].agendado_dia+' às 20h'); voltarLista();
     }).catch(function(){ $('bOk').disabled=false; });
   });
 };
