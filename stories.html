@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Stories · HUB Manual</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#3A5049">
+<style>
+  /* mesma casa dos Carrosséis: dois montes (para aprovação / aprovados) + grade de dias */
+  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--line:#DCE8E6;--ink:#23332F;--mute:#6E827D;--dim:#93A5A1;--gold:#E3A31B;--goldink:#8A5E0A;--goldbg:#FDF1D6;--menu:#3A5049;--live:#1E874B}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.5;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1480px;margin:0 auto;padding:24px 18px 70px}
+  .pagehdr{margin:0 4px 18px}
+  .eyebrow{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--goldink)}
+  .pagehdr h1{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;margin-top:2px}
+  .pagehdr p{color:#46574F;font-size:.92rem;max-width:720px;margin-top:4px}
+  .montes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:22px;max-width:980px}
+  .monte{display:flex;align-items:center;gap:18px;padding:22px 24px;border-radius:20px;cursor:pointer;border:2px solid transparent;background:var(--panel);box-shadow:0 1px 2px rgba(35,51,47,.06),0 6px 20px -8px rgba(35,51,47,.18);transition:transform .15s,border-color .15s;-webkit-tap-highlight-color:transparent;text-align:left;font:inherit;color:inherit}
+  .monte .num{font-size:2.6rem;font-weight:800;line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+  .monte b{display:block;font-size:1.05rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+  .monte span{display:block;font-size:.85rem;color:var(--mute);margin-top:2px}
+  .monte .ic{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;font-size:28px;flex:0 0 auto}
+  .monte.pend .ic{background:var(--goldbg)}.monte.pend .num{color:var(--goldink)}
+  .monte.ok .ic{background:#DDEBDD}.monte.ok .num{color:var(--live)}
+  .monte.on.pend{border-color:var(--gold);background:linear-gradient(135deg,#FFF9EA,#fff 60%)}
+  .monte.on.ok{border-color:var(--live);background:linear-gradient(135deg,#EEF7EF,#fff 60%)}
+  .monte .seta{margin-left:auto;font-size:1.3rem;color:var(--dim)}
+  @media(hover:hover){.monte:hover{transform:translateY(-2px)}}
+  .sec{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:0 4px 12px}
+  .sec h2{font-size:.85rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+  .sec small{color:var(--mute);font-size:.82rem}
+  .grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+  .dia{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(35,51,47,.05),0 6px 16px -8px rgba(35,51,47,.15)}
+  .faixa{display:flex;gap:4px;padding:10px 10px 0;cursor:pointer}
+  .faixa .s{position:relative;flex:0 0 calc((100% - 20px) / 6);min-width:0;aspect-ratio:9/16;border-radius:9px;overflow:hidden;background:#E3ECEA}
+  .faixa img,.faixa video{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+  .faixa .play{position:absolute;right:4px;bottom:4px;background:rgba(35,51,47,.78);color:#fff;font-size:10px;font-weight:700;border-radius:6px;padding:1px 5px}
+  .dia .corpo{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .st{align-self:flex-start;font-size:10.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:3px 10px}
+  .st.aguardando{background:var(--goldbg);color:#6B4706}.st.ajuste{background:#F7DDDD;color:#9A3B3B}.st.ajustado{background:#EFE3F7;color:#5B2D7A}.st.aprovado{background:#DDEBDD;color:#2E6B3E}
+  .dia h3{font-size:1rem;font-weight:800;line-height:1.25}
+  .dia .tipo{font-size:.8rem;color:var(--mute)}
+  .btn{display:block;font-size:12.5px;font-weight:800;border-radius:10px;padding:9px 10px;cursor:pointer;border:1px solid var(--menu);background:var(--menu);color:#fff;font-family:inherit;text-align:center;margin-top:auto}
+  .vazio{background:rgba(255,255,255,.6);border:2px dashed #C9DAD6;border-radius:18px;padding:34px 20px;text-align:center;color:var(--mute);font-size:.92rem;grid-column:1/-1}
+  .vazio b{display:block;color:var(--ink);font-size:1rem;margin-bottom:4px}
+  @media(max-width:760px){.montes{grid-template-columns:1fr}.monte{padding:16px 18px}.monte .num{font-size:2.1rem}}
+  @media(max-width:560px){.grade{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="pagehdr">
+    <div class="eyebrow">Conteúdo · Stories</div>
+    <h1>Stories do dia</h1>
+    <p>O acervo de stories da Day, um dia por cartão, na ordem de postar. Abre o dia pra ver cada story grande, pedir ajuste e aprovar. Aprovado, o Bruno sobe a pasta do dia no Drive pra você postar.</p>
+  </div>
+  <div class="montes">
+    <button class="monte pend" data-v="pend"><div class="ic">📲</div><div><b>Para aprovação</b><span>Esperando a Day olhar</span></div><div class="num" id="nPend">0</div><span class="seta">›</span></button>
+    <button class="monte ok" data-v="aprovados"><div class="ic">✅</div><div><b>Aprovados</b><span>Liberados pro Drive</span></div><div class="num" id="nOk">0</div><span class="seta">›</span></button>
+  </div>
+  <div class="sec"><h2 id="secT">Para aprovação</h2><small id="secS"></small></div>
+  <div class="grade" id="grade"><div class="vazio"><b>Carregando os stories…</b></div></div>
+</div>
+<script>
+var L=[], V=new URLSearchParams(location.search).get('v')==='aprovados'?'aprovados':'pend';
+var PEND=['aguardando','ajuste','ajustado'], OK=['aprovado'];
+var NOME={aguardando:'Para revisar',ajuste:'Ajuste pedido',ajustado:'Ajustado, olhar de novo',aprovado:'Aprovado'};
+function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function render(){
+  document.querySelectorAll('.monte[data-v]').forEach(function(m){m.classList.toggle('on',m.dataset.v===V);});
+  var grp=V==='pend'?PEND:OK, it=L.filter(function(c){return grp.indexOf(c.status)>=0;});
+  document.getElementById('secT').textContent=V==='pend'?'Para aprovação':'Aprovados';
+  document.getElementById('secS').textContent=it.length+(it.length===1?' dia':' dias');
+  var g=document.getElementById('grade');
+  if(!it.length){ g.innerHTML='<div class="vazio"><b>'+(V==='pend'?'Nada esperando aprovação':'Nenhum dia aprovado ainda')+'</b>'+(V==='pend'?'Quando o Bruno mandar dias novos, eles aparecem aqui.':'Assim que você aprovar um dia, ele aparece aqui.')+'</div>'; return; }
+  g.innerHTML=it.map(function(c){
+    var href='story.html?id='+encodeURIComponent(c.id), principais=c.stories.filter(function(s){return !s.extra;});
+    var faixa=principais.slice(0,6).map(function(s){
+      return '<div class="s">'+(s.tipo==='video'?'<video src="'+esc(s.url)+'#t=1" muted playsinline preload="metadata"></video><span class="play">▶</span>':'<img src="'+esc(s.url)+'" alt="" loading="lazy">')+'</div>';
+    }).join('');
+    return '<div class="dia"><a class="faixa" href="'+href+'" aria-label="Abrir '+esc(c.titulo)+'">'+faixa+'</a><div class="corpo"><span class="st '+c.status+'">'+NOME[c.status]+'</span><h3>'+esc(c.titulo)+'</h3>'
+      +'<div class="tipo">'+principais.length+' stories'+(c.status==='aprovado'&&c.aprovado_por?' · aprovado por '+esc(c.aprovado_por)+' em '+esc(c.aprovado_fmt):'')+'</div>'
+      +'<a class="btn" href="'+href+'">'+(V==='pend'?'Revisar e aprovar':'Abrir')+'</a></div></div>';
+  }).join('');
+}
+document.addEventListener('click',function(e){ var m=e.target.closest('.monte[data-v]'); if(m){ V=m.dataset.v; history.replaceState(null,'',V==='aprovados'?'?v=aprovados':location.pathname); render(); } });
+fetch('/api/n8n/motor-carrosseis',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'stories_listar'})}).then(function(r){return r.json();}).then(function(d){
+  if(!d.ok) throw 0; L=d.dados||[];
+  document.getElementById('nPend').textContent=L.filter(function(c){return PEND.indexOf(c.status)>=0;}).length;
+  document.getElementById('nOk').textContent=L.filter(function(c){return OK.indexOf(c.status)>=0;}).length; render();
+}).catch(function(){ document.getElementById('grade').innerHTML='<div class="vazio"><b>Não consegui carregar a lista</b>Recarrega a página em instantes.</div>'; });
+</script>
+<script src="sidebar.js?v=20261116" defer></script>
+</body>
+</html>

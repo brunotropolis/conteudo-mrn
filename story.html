@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Stories do dia · HUB Manual</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#3A5049">
+<style>
+  /* mesmo molde da tela do carrossel: story grande à esquerda, campo de ajuste ao lado, barra fixa com Enviar ajustes / Aprovar */
+  :root{--bg:#E8F1F0;--panel:#fff;--card:#F4F9F8;--line:#DCE8E6;--ink:#23332F;--mute:#5E726D;--dim:#93A5A1;--gold:#E3A31B;--goldbg:#FDF1D6;--menu:#3A5049;--live:#1E874B;--ame:#573151}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.5;overflow-x:hidden;-webkit-text-size-adjust:100%}
+  a{color:inherit;text-decoration:none}
+  button,textarea{font-family:inherit}
+  .wrap{max-width:980px;margin:0 auto;padding:22px 18px 130px;container-type:inline-size}
+  .voltar{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--menu);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;margin-bottom:14px}
+  .hdr{margin:0 4px 22px}
+  .st{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;border-radius:999px;padding:4px 11px}
+  .st.aguardando{background:var(--goldbg);color:#6B4706}.st.ajuste{background:#F7DDDD;color:#9A3B3B}.st.ajustado{background:#EFE3F7;color:#5B2D7A}.st.aprovado{background:#DDEBDD;color:#2E6B3E}
+  .hdr h1{font-size:clamp(1.4rem,4.6vw,2rem);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin:10px 0 4px}
+  .hdr .tipo{color:var(--mute);font-size:.92rem}
+  .aviso{margin-top:12px;font-size:.9rem;border-radius:14px;padding:11px 14px;background:#FFF6E6;color:#8A4B12}
+  .aviso.azul{background:#E6EEF9;color:#2C3E6B}.aviso.lilas{background:#F3EAF9;color:#5B2D7A}
+  .como{margin-top:12px;font-size:.88rem;color:var(--mute)}
+  .lam{display:grid;grid-template-columns:minmax(0,360px) minmax(260px,1fr);gap:22px;align-items:start;margin-bottom:26px}
+  .lam .img{position:relative;border-radius:18px;overflow:hidden;background:#E3ECEA;box-shadow:0 2px 4px rgba(35,51,47,.06),0 14px 34px -14px rgba(35,51,47,.28);aspect-ratio:9/16}
+  .lam .img img,.lam .img video{width:100%;height:100%;display:block;object-fit:cover}
+  .lam .img video{background:#000}
+  .lam .n{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin:0 0 7px 4px}
+  .lam .lado{position:sticky;top:18px;margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:8px}
+  .nota{font-size:.88rem;background:#E6EEF9;color:#2C3E6B;border-radius:10px;padding:8px 10px}
+  .nota b{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase}
+  .lam.extra .img{outline:3px dashed #8A5CC2;outline-offset:3px}.lam.extra .n{color:#5B2D7A}
+  .lam label{display:block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+  .lr{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .mic{display:none;align-items:center;gap:6px;flex:0 0 auto;font:800 13px/1 system-ui,sans-serif;color:var(--ame);background:#F6EAF2;border:1px solid #E6CFE0;border-radius:999px;padding:8px 13px;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+  .temvoz .mic{display:inline-flex}
+  .mic svg{width:15px;height:15px;fill:currentColor}
+  .mic.on{background:#C0392B;border-color:#C0392B;color:#fff;animation:pulsa 1.2s ease-in-out infinite}
+  @keyframes pulsa{50%{box-shadow:0 0 0 6px rgba(192,57,43,.18)}}
+  @media(prefers-reduced-motion:reduce){.mic.on{animation:none}}
+  .ouvindo{font-size:.85rem;color:#C0392B;font-style:italic}
+  .ouvindo:empty{display:none}
+  textarea{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;font-size:16px;line-height:1.45;color:var(--ink);background:var(--card);resize:vertical;outline:none;transition:border-color .15s,background .15s;min-height:84px}
+  textarea:focus{border-color:var(--menu);background:#fff}
+  textarea.tem{border-color:var(--gold);background:#FFFBF0}
+  textarea.grava{border-color:#C0392B;background:#FFF7F6}
+  .ant{font-size:.86rem;color:#9A3B3B;background:#FBEDED;border-radius:10px;padding:6px 9px}
+  .bloco{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:18px;margin-bottom:18px;box-shadow:0 1px 2px rgba(35,51,47,.05)}
+  .bloco h2{font-size:.85rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+  .bloco .sub{font-size:.9rem;color:var(--mute);margin:4px 0 10px}
+  .links{list-style:none;display:grid;gap:8px}
+  .links li{display:flex;align-items:center;gap:10px;background:var(--card);border-radius:12px;padding:9px 12px;font-size:.9rem;min-width:0}
+  .links li span{flex:1;min-width:0;overflow-wrap:anywhere}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:14px;font-weight:800;border-radius:12px;padding:11px 16px;cursor:pointer;border:1px solid var(--menu);background:var(--menu);color:#fff;-webkit-tap-highlight-color:transparent;transition:transform .1s,opacity .15s}
+  .btn:active{transform:scale(.97)}
+  .btn.mini{font-size:12px;padding:6px 10px;border-radius:9px;flex:0 0 auto}
+  .btn.ghost{background:#fff;color:var(--menu);border-color:var(--line)}
+  .btn.ok{background:var(--live);border-color:var(--live)}
+  .btn.aj{background:var(--gold);border-color:var(--gold);color:#23332F}
+  .btn:disabled{background:#fff;border-color:var(--line);color:#8A9A96;cursor:default;transform:none}
+  .btn.okg{background:#fff;color:var(--live);border-color:var(--live)}
+  .hb summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between}.hb summary::-webkit-details-marker{display:none}.hb summary:after{content:'▾';color:var(--mute)}.hb[open] summary:after{content:'▴'}.hb[open] summary{margin-bottom:10px}.hb{background:var(--card)}
+  .hist{list-style:none;display:grid;gap:8px}
+  .hist li{font-size:.9rem;background:#fff;border-radius:12px;padding:9px 12px}
+  .hist li b{font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
+  .hist li.feito{opacity:.6}
+  .barra{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+  .barra .in{max-width:980px;margin:0 auto;display:flex;align-items:center;gap:10px}
+  .barra .txt{flex:1;min-width:0;font-size:.85rem;color:var(--mute)}
+  .barra .txt b{color:var(--ink)}
+  .toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%) translateY(20px);background:#23332F;color:#fff;font-size:.9rem;font-weight:600;border-radius:12px;padding:10px 16px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:70;max-width:calc(100% - 32px);text-align:center}
+  .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+  .md{position:fixed;inset:0;background:rgba(20,30,27,.6);z-index:60;display:none;align-items:center;justify-content:center;padding:18px}
+  .md.on{display:flex}
+  .mdbox{background:#fff;border-radius:22px;max-width:440px;width:100%;padding:22px}
+  .mdbox h3{font-size:1.15rem;font-weight:800;margin-bottom:6px}
+  .mdbox p{color:var(--mute);font-size:.92rem;margin-bottom:16px}
+  .mdbox .acts{display:flex;gap:10px;justify-content:flex-end}
+  .carregando{padding:60px 10px;text-align:center;color:var(--mute)}
+  @container (max-width:720px){
+    .lam{grid-template-columns:minmax(0,1fr);gap:10px;margin-bottom:28px;max-width:420px;margin-left:auto;margin-right:auto}
+    .lam .lado{position:static;padding:12px;margin-top:0}
+    textarea{min-height:64px}
+    .lam .img{width:min(100%,calc(62vh * 9 / 16));margin:0 auto}
+  }
+  @media(min-width:901px){.barra{left:260px}}
+  @media(max-width:640px){.wrap{padding:16px 12px 130px}.barra .txt{display:none}.barra .btn{flex:1;padding:12px 10px}}
+  @media(hover:hover){.btn:hover{opacity:.92}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="voltar" href="stories.html">← Stories</a>
+  <div id="app"><div class="carregando">Carregando o dia…</div></div>
+</div>
+<div class="barra" id="barra" hidden><div class="in">
+  <div class="txt" id="barraTxt"></div>
+  <button class="btn aj" id="bAj" disabled>Enviar ajustes</button>
+  <button class="btn ok" id="bOk">Aprovar</button>
+</div></div>
+<div class="md" id="md"><div class="mdbox">
+  <h3 id="mdT"></h3><p id="mdP"></p>
+  <div class="acts"><button class="btn ghost" id="mdN">Voltar</button><button class="btn ok" id="mdS">Confirmar</button></div>
+</div></div>
+<div class="toast" id="toast"></div>
+<script>
+var ID=new URLSearchParams(location.search).get('id'), C=null;
+var NOME={aguardando:'Para revisar',ajuste:'Ajuste pedido',ajustado:'Ajustado, olhar de novo',aprovado:'Aprovado'};
+var ABERTO=['aguardando','ajuste','ajustado'];
+function $(i){return document.getElementById(i);}
+function esc(s){return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function api(b){return fetch('/api/n8n/motor-carrosseis',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)}).then(function(r){return r.json();});}
+function toast(t){var e=$('toast');e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(function(){e.classList.remove('on');},3200);}
+function confirma(t,p,ok){ $('mdT').textContent=t; $('mdP').textContent=p; $('md').classList.add('on'); $('mdS').onclick=function(){ $('md').classList.remove('on'); ok(); }; }
+$('mdN').onclick=function(){ $('md').classList.remove('on'); };
+function fmt(iso){ var d=new Date(iso); return d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'})+' '+d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}); }
+var REC=window.SpeechRecognition||window.webkitSpeechRecognition, MICSVG='<svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V22h2v-3.08A7 7 0 0 0 19 12h-2z"/></svg>', VOZ=null;
+if(REC) document.documentElement.classList.add('temvoz');
+
+function carregar(){
+  api({acao:'stories_listar'}).then(function(d){
+    C=(d.dados||[]).filter(function(x){return x.id===ID;})[0];
+    if(!C){ $('app').innerHTML='<div class="carregando">Não achei esse dia. <a href="stories.html" style="text-decoration:underline">Voltar pra lista</a></div>'; return; }
+    document.title=C.titulo+' · Stories'; montar();
+  }).catch(function(){ $('app').innerHTML='<div class="carregando">Não consegui carregar. Recarrega a página.</div>'; });
+}
+function montar(){
+  var aberto=ABERTO.indexOf(C.status)>=0, pend=(C.ajustes||[]).filter(function(a){return !a.resolvido;}), ult=pend.length?pend[pend.length-1]:null, av='';
+  if(C.status==='ajuste') av='<div class="aviso">Ajuste enviado'+(ult?' por '+esc(ult.por)+' em '+fmt(ult.em):'')+'. O Bruno vai refazer e o dia volta pra cá como "Ajustado".</div>';
+  if(C.status==='ajustado') av='<div class="aviso lilas">Versão nova com os ajustes pedidos. Confere os stories e aprova, ou pede mais um ajuste.</div>';
+  if(C.status==='aprovado') av='<div class="aviso azul">Aprovado'+(C.aprovado_por?' por '+esc(C.aprovado_por)+' em '+esc(C.aprovado_fmt):'')+'. O Bruno sobe a pasta do dia no Drive pra você postar.</div>';
+  var principais=C.stories.filter(function(s){return !s.extra;}).length;
+  var h='<div class="hdr"><span class="st '+C.status+'">'+NOME[C.status]+'</span><h1>'+esc(C.titulo)+'</h1><div class="tipo">'+principais+' stories, na ordem de postar'+(C.versao>1?' · versão '+C.versao:'')+'</div>'+av
+    +(aberto?'<p class="como">Quer mudar algo? Escreve no campo do story (só onde precisar) e toca em <b>Enviar ajustes</b>. Tudo certo? Toca em <b>Aprovar</b>.</p>':'')+'</div>';
+  var k=0;
+  C.stories.forEach(function(s,i){
+    var n=i+1; if(!s.extra) k++;
+    var rot=s.extra?'Extra: '+esc(String(s.nome||'').replace(/^\d+-?\s*/,'')):'Story '+k+' de '+principais;
+    var antes=(ult&&ult.slides&&ult.slides[n])?'<div class="ant">Pedido anterior: '+esc(ult.slides[n])+'</div>':'';
+    h+='<div class="lam'+(s.extra?' extra':'')+'"><div><span class="n">'+rot+'</span><div class="img">'+(s.tipo==='video'?'<video src="'+esc(s.url)+'#t=0.5" controls playsinline preload="metadata"></video>':'<img src="'+esc(s.url)+'" alt="'+rot+'" '+(i>1?'loading="lazy"':'')+'>')+'</div></div>'
+      +'<div class="lado">'+(s.nota?'<div class="nota"><b>Na hora de postar</b><br>'+esc(s.nota)+'</div>':'')
+      +(aberto?'<div class="lr"><label for="aj'+n+'">Ajuste neste story</label><button type="button" class="mic" data-alvo="aj'+n+'" aria-label="Ditar por voz">'+MICSVG+'<span>Falar</span></button></div><textarea id="aj'+n+'" data-n="'+n+'" placeholder="Escreve aqui ou toca em Falar"></textarea><div class="ouvindo" id="ouv_aj'+n+'"></div>'+antes:'')
+      +(!s.nota&&!aberto?'<div class="nota" style="background:var(--card);color:var(--mute)">Sem figurinha pra colocar.</div>':'')+'</div></div>';
+  });
+  if((C.links||[]).length) h+='<div class="bloco"><h2>Links do dia</h2><div class="sub">Pro botão de link do story. Toca em Copiar e cola no Instagram.</div><ul class="links">'+C.links.map(function(l,i){
+    var m=String(l).match(/https?:\/\/\S+/); return '<li><span>'+esc(l)+'</span>'+(m?'<button class="btn mini ghost" data-cp="'+esc(m[0])+'">Copiar</button>':'')+'</li>'; }).join('')+'</ul></div>';
+  if(aberto) h+='<div class="bloco"><div class="lr"><h2>Ajuste geral</h2><button type="button" class="mic" data-alvo="geral" aria-label="Ditar por voz">'+MICSVG+'<span>Falar</span></button></div><div class="sub">Algo que vale pro dia inteiro (ordem, tema, tirar um story). Opcional.</div><textarea id="geral" placeholder="Ex.: trocar a ordem dos stories 2 e 3"></textarea><div class="ouvindo" id="ouv_geral"></div></div>';
+  var hist=(C.ajustes||[]).slice().reverse();
+  if(hist.length) h+='<details class="bloco hb"><summary><h2>Ajustes já pedidos ('+hist.length+')</h2></summary><ul class="hist">'+hist.map(function(a){
+    var it=Object.keys(a.slides||{}).sort(function(x,y){return x-y;}).map(function(j){return 'Story '+j+': '+esc(a.slides[j]);});
+    if(a.geral) it.push('Geral: '+esc(a.geral));
+    return '<li class="'+(a.resolvido?'feito':'')+'"><b>'+esc(a.por)+' · '+fmt(a.em)+(a.resolvido?' · feito':'')+'</b><br>'+it.join('<br>')+'</li>';
+  }).join('')+'</ul></details>';
+  $('app').innerHTML=h;
+  document.querySelectorAll('.lam textarea,#geral').forEach(function(t){ t.addEventListener('input',barra); });
+  barra();
+}
+document.addEventListener('click',function(e){
+  var c=e.target.closest('[data-cp]'); if(c){ var t=c.dataset.cp; (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){ toast('Link copiado'); },function(){ toast(t); }); return; }
+  var b=e.target.closest('.mic'); if(b){ e.preventDefault(); ditar(b); }
+});
+function ajustesDigitados(){ var s={}; document.querySelectorAll('.lam textarea').forEach(function(t){ t.classList.toggle('tem',!!t.value.trim()); if(t.value.trim()) s[t.dataset.n]=t.value.trim(); }); return s; }
+function pararVoz(){ if(VOZ){ var v=VOZ; VOZ=null; try{ v.rec&&v.rec.stop(); }catch(e){} v.btn.classList.remove('on'); v.btn.querySelector('span').textContent='Falar'; $('ouv_'+v.alvo).textContent=''; var t=$(v.alvo); if(t.dataset.ph!==undefined) t.placeholder=t.dataset.ph; t.classList.remove('grava'); } }
+function ditar(btn){
+  // uma frase por vez e religa sozinho até tocar em Parar (o modo contínuo repete frases no Android)
+  var alvo=btn.dataset.alvo, ta=$(alvo);
+  if(VOZ&&VOZ.alvo===alvo){ pararVoz(); return; }
+  pararVoz(); VOZ={btn:btn,alvo:alvo,falhas:0};
+  btn.classList.add('on'); btn.querySelector('span').textContent='Parar'; ta.dataset.ph=ta.placeholder; ta.placeholder='● Gravando… fale agora'; ta.classList.add('grava');
+  var ouvir=function(){
+    if(!VOZ||VOZ.alvo!==alvo) return;
+    var rec=new REC(), base=ta.value; rec.lang='pt-BR'; rec.continuous=false; rec.interimResults=true; VOZ.rec=rec;
+    rec.onresult=function(e){ var fim='',tmp=''; for(var i=0;i<e.results.length;i++){ var t=e.results[i][0].transcript; if(e.results[i].isFinal) fim+=t; else tmp+=t; }
+      if(fim){ ta.value=(base&&!/\s$/.test(base)?base+' ':base)+fim.trim(); ta.dispatchEvent(new Event('input')); VOZ&&(VOZ.falhas=0,VOZ.mudo=0); }
+      $('ouv_'+alvo).textContent=tmp?'🎙️ '+tmp+'…':''; };
+    rec.onerror=function(e){ if(e.error==='not-allowed'||e.error==='service-not-allowed'){ toast('Libera o microfone pro site nas configurações do navegador'); pararVoz(); }
+      else if(e.error==='no-speech'&&VOZ){ VOZ.mudo=(VOZ.mudo||0)+1; if(VOZ.mudo>3) pararVoz(); } else if(e.error!=='aborted'&&VOZ){ VOZ.falhas++; } };
+    rec.onend=function(){ if(VOZ&&VOZ.rec===rec){ if(VOZ.falhas>2){ toast('Não deu pra ouvir, tenta de novo'); pararVoz(); } else ouvir(); } };
+    try{ rec.start(); }catch(e){ pararVoz(); }
+  };
+  ouvir();
+}
+function barra(){
+  var b=$('barra'), aberto=ABERTO.indexOf(C.status)>=0;
+  b.hidden=!(aberto||C.status==='aprovado');
+  if(C.status==='aprovado'){ $('bAj').hidden=true; $('bOk').textContent='Desfazer aprovação'; $('bOk').className='btn ghost'; $('barraTxt').innerHTML='<b>Aprovado</b>, liberado pro Drive'; return; }
+  $('bAj').hidden=false; $('bOk').textContent='Aprovar';
+  var n=Object.keys(ajustesDigitados()).length+($('geral')&&$('geral').value.trim()?1:0);
+  $('bAj').disabled=!n; $('bAj').textContent=n?'Enviar ajustes ('+n+')':'Enviar ajustes';
+  $('bAj').className=n?'btn aj':'btn ghost'; $('bOk').className=n?'btn okg':'btn ok';
+  $('barraTxt').innerHTML=n?'<b>'+n+(n===1?' ajuste escrito':' ajustes escritos')+'</b>, ainda não enviado'+(n===1?'':'s'):'Tudo certo? Aprova. Algo pra mudar? Escreve ao lado do story.';
+}
+$('bAj').onclick=function(){
+  pararVoz();
+  var s=ajustesDigitados(), g=$('geral')?$('geral').value.trim():'';
+  if(!Object.keys(s).length&&!g) return;
+  $('bAj').disabled=true; $('bAj').textContent='Enviando…';
+  api({acao:'stories_ajustes',id:ID,slides:s,geral:g}).then(function(d){
+    if(!d.ok){ toast(d.erro||'Não enviou'); barra(); return; }
+    toast('Ajustes enviados pro Bruno'); voltarLista();
+  }).catch(function(){ toast('Sem conexão, tenta de novo'); barra(); });
+};
+$('bOk').onclick=function(){
+  if(C.status==='aprovado'){
+    confirma('Desfazer a aprovação?','O dia volta pra "Para aprovação".',function(){
+      api({acao:'stories_voltar',id:ID}).then(function(d){ if(!d.ok){ toast(d.erro||'Não deu'); return; } toast('Aprovação desfeita'); carregar(); });
+    }); return;
+  }
+  var pend=Object.keys(ajustesDigitados()).length||($('geral')&&$('geral').value.trim());
+  confirma('Aprovar os stories deste dia?',(pend?'Tem ajuste escrito que não foi enviado: ele será descartado. ':'')+'O Bruno sobe a pasta do dia no Drive pra você postar.',function(){
+    $('bOk').disabled=true;
+    api({acao:'stories_aprovar',id:ID}).then(function(d){
+      $('bOk').disabled=false;
+      if(!d.ok){ toast(d.erro||'Não aprovou'); return; }
+      toast('Aprovado!'); voltarLista();
+    }).catch(function(){ $('bOk').disabled=false; toast('Sem conexão, tenta de novo'); });
+  });
+};
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') $('md').classList.remove('on'); });
+var SAINDO=false;
+function voltarLista(){ SAINDO=true; setTimeout(function(){ location.href='stories.html'; },1600); }
+window.addEventListener('beforeunload',function(e){ if(!C||SAINDO) return; var tem=Object.keys(ajustesDigitados()).length||($('geral')&&$('geral').value.trim()); if(tem){ e.preventDefault(); e.returnValue=''; } });
+if(!ID) location.replace('stories.html'); else carregar();
+</script>
+<script src="sidebar.js?v=20261116" defer></script>
+</body>
+</html>

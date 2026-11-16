@@ -34,6 +34,8 @@
     // Conteúdo (30/Out, pedido Bruno): carrosséis do projeto Maternidade. Dados na tabela conteudo.carrosseis_aprovacao via /api/n8n/motor-carrosseis (maternidade/build_api.js)
     {cat:'Conteúdo'},
     {item:'Carrosséis', href:'carrosseis.html', ic:'✨', badge:'aguardando,ajustado', also:['base-carrosseis.html','carrossel.html']},
+    // 16/Nov (Bruno): stories diários da Day, mesma aprovação dos carrosséis. Tabela conteudo.stories_aprovacao, ações stories_* na mesma API (maternidade/build_api.js)
+    {item:'Stories', href:'stories.html', ic:'📲', badge:'aguardando,ajustado', api:'stories_listar', also:['story.html']},
     {cat:'Admin'},
     {item:'Admin', href:'admin.html', ic:'⚙'}
   ];
@@ -104,7 +106,7 @@
     var aqui=path;
     var on=(!x.ext && (base===aqui || (x.also&&x.also.indexOf(aqui)>=0) || (aqui==='index.html'&&base==='index.html')));
     if(on) active=x.item;
-    return '<a class="n'+(on?' on':'')+'" href="'+x.href+'"'+(x.ext?' target="_blank" rel="noopener"':'')+'>'+svg(x.ic)+'<span>'+x.item+'</span>'+(x.badge?'<b class="bdg" data-st="'+x.badge+'"></b>':'')+(x.ext?'<span class="ex">↗</span>':'')+'</a>';
+    return '<a class="n'+(on?' on':'')+'" href="'+x.href+'"'+(x.ext?' target="_blank" rel="noopener"':'')+'>'+svg(x.ic)+'<span>'+x.item+'</span>'+(x.badge?'<b class="bdg" data-st="'+x.badge+'" data-api="'+(x.api||'listar')+'"></b>':'')+(x.ext?'<span class="ex">↗</span>':'')+'</a>';
   }).join('');
 
   var aside=document.createElement('aside'); aside.className='sb';
@@ -127,9 +129,11 @@
     var e=aside.querySelector('#sbEu'); e.querySelector('.av').textContent=nome.charAt(0).toUpperCase(); e.querySelector('b').textContent=nome; e.querySelector('small').textContent=em; e.classList.add('on');
   }).catch(function(){});
   // contador dos carrosséis (só se o menu tem o item)
-  if(aside.querySelector('.bdg')) fetch('/api/n8n/motor-carrosseis',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:'listar'})}).then(function(r){return r.json();}).then(function(d){
-    var L=d.dados||[]; aside.querySelectorAll('.bdg').forEach(function(b){ var st=b.dataset.st.split(','); var n=L.filter(function(c){return st.indexOf(c.status)>=0;}).length; if(n){ b.textContent=n; b.classList.add('on'); } });
-  }).catch(function(){});
+  // contadores (carrosséis e stories): uma chamada por ação da API
+  var apis={}; aside.querySelectorAll('.bdg').forEach(function(b){ (apis[b.dataset.api]=apis[b.dataset.api]||[]).push(b); });
+  Object.keys(apis).forEach(function(ac){ fetch('/api/n8n/motor-carrosseis',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acao:ac})}).then(function(r){return r.json();}).then(function(d){
+    var L=d.dados||[]; apis[ac].forEach(function(b){ var st=b.dataset.st.split(','); var n=L.filter(function(c){return st.indexOf(c.status)>=0;}).length; if(n){ b.textContent=n; b.classList.add('on'); } });
+  }).catch(function(){}); });
   function toggle(o){ aside.classList.toggle('open',o); scrim.classList.toggle('on',o); }
   top.querySelector('.hb').addEventListener('click',function(){ toggle(!aside.classList.contains('open')); });
   scrim.addEventListener('click',function(){ toggle(false); });
