@@ -24,11 +24,19 @@
     'Buscar nome, @ ou mensagem': 'Search name, @ or message', 'Responder': 'Reply',
     'Respondemos:': 'We replied:', 'Etiquetas': 'Tags', 'Seguidores': 'Followers',
     'Segue você': 'Follows you', 'Primeiro contato': 'First contact', 'Último contato': 'Last contact',
-    'agora': 'now', 'hoje': 'today', 'ontem': 'yesterday'
+    'agora': 'now', 'hoje': 'today', 'ontem': 'yesterday',
+    'Buscar por @, nome ou mensagem': 'Search by @, name or message', 'Escreva a resposta…': 'Write a reply…',
+    'Buscar por @ ou nome': 'Search by @ or name',
+    'Directs, respostas de story, toques em botão e mensagens das automações.': 'Direct messages, story replies, button taps and automation messages.',
+    'Contatos · HUB Manual': 'Contacts · Manual HUB', 'Interação mais recente': 'Most recent interaction',
+    'Interações': 'Interactions', 'Mais seguidores': 'Most followers', 'Nenhum contato com esse filtro.': 'No contacts match this filter.',
+    'Primeira interação': 'First interaction', 'Todos os fluxos': 'All flows', 'Última': 'Last'
   };
   var RX = [
     [/^Nenhum comentário( nessa rede)? ainda\.$/, function (m, a) { return 'No comments' + (a ? ' on this network' : '') + ' yet.'; }],
     [/^Respondemos: /, 'We replied: '],
+    [/^(\d+) contatos?( · (\d+) com mensagem nova)?$/, function (m, a, b, c) { return a + ' contact' + (a === '1' ? '' : 's') + (b ? ' · ' + c + ' with new messages' : ''); }],
+    [/^Contato (\d+)$/, 'Contact $1'],
     [/^há (\d+) ?min$/, '$1 min ago'], [/^há (\d+) ?h$/, '$1 h ago'], [/^há (\d+) dias?$/, '$1 days ago'],
     [/^Não consegui carregar \((.*)\)\.$/, 'Could not load ($1).'], [/^Não consegui abrir \((.*)\)\.$/, 'Could not open ($1).']
   ];
