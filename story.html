@@ -48,6 +48,7 @@
   textarea.tem{border-color:var(--gold);background:#FFFBF0}
   textarea.grava{border-color:#C0392B;background:#FFF7F6}
   .ant{font-size:.86rem;color:#9A3B3B;background:#FBEDED;border-radius:10px;padding:6px 9px}
+  .ant.ok{color:#3F2A52;background:#F3ECF8}.ant .resp{margin-top:6px;color:#2E6B3E}
   .bloco{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:18px;margin-bottom:18px;box-shadow:0 1px 2px rgba(35,51,47,.05)}
   .bloco h2{font-size:.85rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
   .bloco .sub{font-size:.9rem;color:var(--mute);margin:4px 0 10px}
@@ -139,20 +140,22 @@ function montar(){
   C.stories.forEach(function(s,i){
     var n=i+1; if(!s.extra) k++;
     var rot=s.extra?'Extra: '+esc(String(s.nome||'').replace(/^\d+-?\s*/,'')):'Story '+k+' de '+principais;
-    var antes=(ult&&ult.slides&&ult.slides[n])?'<div class="ant">Pedido anterior: '+esc(ult.slides[n])+'</div>':'';
+    var antes='', pa=(C.ajustes||[]).filter(function(a){return a.slides&&a.slides[n];}).pop();
+    if(pa) antes='<div class="ant'+(pa.resolvido?' ok':'')+'"><b>'+(pa.resolvido?'Você pediu':'Pedido enviado')+' em '+fmt(pa.em)+':</b> '+esc(pa.slides[n])
+      +(pa.resolvido?'<div class="resp"><b>'+((pa.respostas&&pa.respostas[n])?'O que o Bruno fez:':'Feito nesta versão.')+'</b> '+esc((pa.respostas&&pa.respostas[n])||'')+'</div>':'')+'</div>';
     h+='<div class="lam'+(s.extra?' extra':'')+'"><div><span class="n">'+rot+'</span><div class="img">'+(s.tipo==='video'?'<video src="'+esc(s.url)+'#t=0.5" controls playsinline preload="metadata"></video>':'<img src="'+esc(s.url)+'" alt="'+rot+'" '+(i>1?'loading="lazy"':'')+'>')+'</div></div>'
       +'<div class="lado">'+(s.nota?'<div class="nota"><b>Na hora de postar</b><br>'+esc(s.nota)+'</div>':'')
-      +(aberto?'<div class="lr"><label for="aj'+n+'">Ajuste neste story</label><button type="button" class="mic" data-alvo="aj'+n+'" aria-label="Ditar por voz">'+MICSVG+'<span>Falar</span></button></div><textarea id="aj'+n+'" data-n="'+n+'" placeholder="Escreve aqui ou toca em Falar"></textarea><div class="ouvindo" id="ouv_aj'+n+'"></div>'+antes:'')
+      +(aberto?'<div class="lr"><label for="aj'+n+'">Ajuste neste story</label><button type="button" class="mic" data-alvo="aj'+n+'" aria-label="Ditar por voz">'+MICSVG+'<span>Falar</span></button></div><textarea id="aj'+n+'" data-n="'+n+'" placeholder="Escreve aqui ou toca em Falar"></textarea><div class="ouvindo" id="ouv_aj'+n+'"></div>':'')+antes
       +(!s.nota&&!aberto?'<div class="nota" style="background:var(--card);color:var(--mute)">Sem figurinha pra colocar.</div>':'')+'</div></div>';
   });
   if((C.links||[]).length) h+='<div class="bloco"><h2>Links do dia</h2><div class="sub">Pro botão de link do story. Toca em Copiar e cola no Instagram.</div><ul class="links">'+C.links.map(function(l,i){
     var m=String(l).match(/https?:\/\/\S+/); return '<li><span>'+esc(l)+'</span>'+(m?'<button class="btn mini ghost" data-cp="'+esc(m[0])+'">Copiar</button>':'')+'</li>'; }).join('')+'</ul></div>';
   if(aberto) h+='<div class="bloco"><div class="lr"><h2>Ajuste geral</h2><button type="button" class="mic" data-alvo="geral" aria-label="Ditar por voz">'+MICSVG+'<span>Falar</span></button></div><div class="sub">Algo que vale pro dia inteiro (ordem, tema, tirar um story). Opcional.</div><textarea id="geral" placeholder="Ex.: trocar a ordem dos stories 2 e 3"></textarea><div class="ouvindo" id="ouv_geral"></div></div>';
   var hist=(C.ajustes||[]).slice().reverse();
-  if(hist.length) h+='<details class="bloco hb"><summary><h2>Ajustes já pedidos ('+hist.length+')</h2></summary><ul class="hist">'+hist.map(function(a){
+  if(hist.length) h+='<details class="bloco hb"><summary><h2>Todos os ajustes pedidos ('+hist.length+')</h2></summary><ul class="hist">'+hist.map(function(a){
     var it=Object.keys(a.slides||{}).sort(function(x,y){return x-y;}).map(function(j){return 'Story '+j+': '+esc(a.slides[j]);});
     if(a.geral) it.push('Geral: '+esc(a.geral));
-    return '<li class="'+(a.resolvido?'feito':'')+'"><b>'+esc(a.por)+' · '+fmt(a.em)+(a.resolvido?' · feito':'')+'</b><br>'+it.join('<br>')+'</li>';
+    return '<li class="'+(a.resolvido?'feito':'')+'"><b>'+esc(a.por)+' · '+fmt(a.em)+(a.resolvido?' · feito':'')+'</b><br>'+it.join('<br>')+(a.respostas?'<br><i>O que o Bruno fez: '+Object.keys(a.respostas).map(function(j){return 'Story '+j+': '+esc(a.respostas[j]);}).join(' · ')+'</i>':'')+'</li>';
   }).join('')+'</ul></details>';
   $('app').innerHTML=h;
   document.querySelectorAll('.lam textarea,#geral').forEach(function(t){ t.addEventListener('input',barra); });
