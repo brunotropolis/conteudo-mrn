@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <title>Stories do dia · HUB Manual</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -91,6 +91,15 @@
   @media(max-width:640px){.wrap{padding:16px 12px 130px}.barra .txt{display:none}.barra .btn{flex:1;padding:12px 10px}}
   @media(hover:hover){.btn:hover{opacity:.92}}
 </style>
+<!-- trava-mobile: tela travada como app (sem zoom, sem escorregar pro lado) -->
+<style id="trava-mobile">
+html{overflow-x:hidden;overscroll-behavior-x:none}
+html,body{max-width:100%;touch-action:manipulation;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overflow-x:clip}
+@supports not (overflow-x:clip){body{overflow-x:hidden}}
+@media (max-width:820px){input,select,textarea{font-size:16px!important}}
+</style>
+<script id="trava-mobile-js">["gesturestart","gesturechange","gestureend"].forEach(function(t){document.addEventListener(t,function(e){e.preventDefault()},{passive:false})});document.addEventListener("touchmove",function(e){if(e.touches&&e.touches.length>1)e.preventDefault()},{passive:false});</script>
 </head>
 <body>
 <div class="wrap">
