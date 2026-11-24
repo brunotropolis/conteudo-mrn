@@ -1,257 +1,266 @@
 {
-  "gerado_em": "2026-11-23T16:00:36.885Z",
+  "gerado_em": "2026-11-24T16:00:28.046Z",
   "conta": {
     "username": "manualdorecemnascido",
     "display_name": "Manual do Recém-Nascido",
     "seguidores": 816000,
-    "views_totais": 140875733,
-    "videos_total": 1178,
+    "views_totais": 140984860,
+    "videos_total": 1180,
     "link": "https://youtube.com/@manualdorecemnascido"
   },
   "periodo_semanas": 8,
   "resumo": {
-    "n_videos": 59,
-    "views_total": 1381241,
-    "likes_total": 32488,
-    "comments_total": 404,
-    "eng_total": 32892,
-    "eng_medio": 557,
-    "shorts": 59,
+    "n_videos": 60,
+    "views_total": 1403796,
+    "likes_total": 33227,
+    "comments_total": 401,
+    "eng_total": 33628,
+    "eng_medio": 560,
+    "shorts": 60,
     "longos": 0,
-    "inscritos_liquido": 4041,
+    "inscritos_liquido": 4000,
     "ret_media_seg": 43
   },
   "por_dia": [
     {
-      "data": "2026-11-23",
+      "data": "2026-11-24",
       "posts": 1,
-      "views": 1540,
-      "engajamento": 71
+      "views": 1558,
+      "engajamento": 97
+    },
+    {
+      "data": "2026-11-23",
+      "posts": 2,
+      "views": 12208,
+      "engajamento": 510
     },
     {
       "data": "2026-11-22",
       "posts": 2,
-      "views": 11835,
-      "engajamento": 810
+      "views": 14793,
+      "engajamento": 1008
     },
     {
       "data": "2026-11-21",
       "posts": 2,
-      "views": 12518,
-      "engajamento": 487
+      "views": 14750,
+      "engajamento": 571
     },
     {
       "data": "2026-11-20",
       "posts": 2,
-      "views": 19381,
-      "engajamento": 784
+      "views": 24151,
+      "engajamento": 912
     },
     {
       "data": "2026-11-19",
       "posts": 2,
-      "views": 14025,
-      "engajamento": 866
+      "views": 14361,
+      "engajamento": 872
     },
     {
       "data": "2026-11-18",
       "posts": 2,
-      "views": 14987,
-      "engajamento": 682
+      "views": 15423,
+      "engajamento": 693
     },
     {
       "data": "2026-11-17",
       "posts": 2,
-      "views": 14140,
-      "engajamento": 766
+      "views": 14608,
+      "engajamento": 772
     },
     {
       "data": "2026-11-16",
       "posts": 2,
-      "views": 27682,
-      "engajamento": 1194
+      "views": 28920,
+      "engajamento": 1215
     },
     {
       "data": "2026-11-15",
       "posts": 2,
-      "views": 17733,
-      "engajamento": 720
+      "views": 19028,
+      "engajamento": 743
     },
     {
       "data": "2026-11-14",
       "posts": 2,
-      "views": 81175,
-      "engajamento": 1269
+      "views": 81906,
+      "engajamento": 1294
     },
     {
       "data": "2026-11-13",
       "posts": 2,
-      "views": 21868,
-      "engajamento": 986
+      "views": 21946,
+      "engajamento": 989
     },
     {
       "data": "2026-11-12",
       "posts": 2,
-      "views": 21824,
-      "engajamento": 901
+      "views": 21884,
+      "engajamento": 902
     },
     {
       "data": "2026-11-11",
       "posts": 2,
-      "views": 21824,
-      "engajamento": 753
+      "views": 21914,
+      "engajamento": 756
     },
     {
       "data": "2026-11-10",
       "posts": 2,
-      "views": 15853,
+      "views": 15901,
       "engajamento": 690
     },
     {
       "data": "2026-11-09",
       "posts": 2,
-      "views": 17191,
-      "engajamento": 810
+      "views": 17249,
+      "engajamento": 811
     },
     {
       "data": "2026-11-08",
       "posts": 2,
-      "views": 39618,
+      "views": 39695,
       "engajamento": 1707
     },
     {
       "data": "2026-11-07",
       "posts": 1,
-      "views": 6275,
+      "views": 6310,
       "engajamento": 175
     },
     {
       "data": "2026-11-06",
       "posts": 2,
-      "views": 28451,
+      "views": 28492,
       "engajamento": 926
     },
     {
       "data": "2026-11-05",
       "posts": 2,
-      "views": 14055,
-      "engajamento": 586
+      "views": 14098,
+      "engajamento": 588
     },
     {
       "data": "2026-11-04",
       "posts": 1,
-      "views": 40371,
-      "engajamento": 694
+      "views": 40506,
+      "engajamento": 696
     },
     {
       "data": "2026-11-03",
       "posts": 2,
-      "views": 27514,
+      "views": 27540,
       "engajamento": 1180
     },
     {
       "data": "2026-11-02",
       "posts": 2,
-      "views": 492653,
-      "engajamento": 5622
+      "views": 493483,
+      "engajamento": 5631
     },
     {
       "data": "2026-11-01",
       "posts": 2,
-      "views": 22442,
+      "views": 22570,
       "engajamento": 775
     },
     {
       "data": "2026-10-29",
       "posts": 1,
-      "views": 11095,
-      "engajamento": 350
+      "views": 11100,
+      "engajamento": 351
     },
     {
       "data": "2026-10-26",
       "posts": 1,
-      "views": 13493,
+      "views": 13503,
       "engajamento": 637
     },
     {
       "data": "2026-10-23",
       "posts": 1,
-      "views": 12935,
+      "views": 12941,
       "engajamento": 451
     },
     {
       "data": "2026-10-22",
       "posts": 1,
-      "views": 12589,
+      "views": 12595,
       "engajamento": 545
     },
     {
       "data": "2026-10-19",
       "posts": 1,
-      "views": 9102,
+      "views": 9104,
       "engajamento": 347
     },
     {
       "data": "2026-10-16",
       "posts": 1,
-      "views": 89070,
+      "views": 89074,
       "engajamento": 1679
     },
     {
       "data": "2026-10-15",
       "posts": 2,
-      "views": 85553,
+      "views": 85597,
       "engajamento": 1386
     },
     {
       "data": "2026-10-14",
       "posts": 1,
-      "views": 6440,
+      "views": 6442,
       "engajamento": 151
     },
     {
       "data": "2026-10-13",
       "posts": 1,
-      "views": 4748,
+      "views": 4760,
       "engajamento": 243
     },
     {
       "data": "2026-10-12",
       "posts": 1,
-      "views": 101559,
+      "views": 101600,
       "engajamento": 1783
     },
     {
       "data": "2026-10-09",
       "posts": 1,
-      "views": 12091,
+      "views": 12096,
       "engajamento": 507
     },
     {
       "data": "2026-10-08",
       "posts": 1,
-      "views": 6465,
+      "views": 6464,
       "engajamento": 204
     },
     {
       "data": "2026-10-01",
       "posts": 1,
-      "views": 19140,
+      "views": 19145,
       "engajamento": 600
     },
     {
       "data": "2026-09-30",
       "posts": 1,
-      "views": 6071,
+      "views": 6081,
       "engajamento": 231
-    },
-    {
-      "data": "2026-09-29",
-      "posts": 1,
-      "views": 5935,
-      "engajamento": 324
     }
   ],
   "crescimento": [
+    {
+      "data": "2026-11-21",
+      "views": 57153,
+      "ganhos": 96,
+      "perdidos": 42,
+      "liquido": 54,
+      "min_assistidos": 21722,
+      "ret_media_seg": 47
+    },
     {
       "data": "2026-11-20",
       "views": 53753,
@@ -497,11 +506,11 @@
     },
     {
       "data": "2026-10-24",
-      "views": 69590,
+      "views": 69230,
       "ganhos": 87,
       "perdidos": 51,
       "liquido": 36,
-      "min_assistidos": 23509,
+      "min_assistidos": 23479,
       "ret_media_seg": 43
     },
     {
@@ -542,11 +551,11 @@
     },
     {
       "data": "2026-10-19",
-      "views": 68623,
+      "views": 68247,
       "ganhos": 97,
       "perdidos": 40,
       "liquido": 57,
-      "min_assistidos": 26387,
+      "min_assistidos": 26320,
       "ret_media_seg": 49
     },
     {
@@ -569,11 +578,11 @@
     },
     {
       "data": "2026-10-16",
-      "views": 85620,
+      "views": 84913,
       "ganhos": 153,
       "perdidos": 163,
       "liquido": -10,
-      "min_assistidos": 29165,
+      "min_assistidos": 29132,
       "ret_media_seg": 44
     },
     {
@@ -728,15 +737,6 @@
       "liquido": 102,
       "min_assistidos": 29655,
       "ret_media_seg": 43
-    },
-    {
-      "data": "2026-09-28",
-      "views": 87122,
-      "ganhos": 124,
-      "perdidos": 29,
-      "liquido": 95,
-      "min_assistidos": 30003,
-      "ret_media_seg": 46
     }
   ],
   "videos": [
@@ -746,10 +746,10 @@
       "thumb": "https://i.ytimg.com/vi/2DJVru_hxKk/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=2DJVru_hxKk",
       "publicado_em": "2026-11-02T11:02:09Z",
-      "views": 461269,
-      "curtidas": 4621,
+      "views": 462085,
+      "curtidas": 4630,
       "comentarios": 139,
-      "engajamento": 4760,
+      "engajamento": 4769,
       "formato": "short",
       "duracao_seg": 43
     },
@@ -759,7 +759,7 @@
       "thumb": "https://i.ytimg.com/vi/GK4Xf2Ss0C8/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=GK4Xf2Ss0C8",
       "publicado_em": "2026-10-12T11:01:24Z",
-      "views": 101559,
+      "views": 101600,
       "curtidas": 1778,
       "comentarios": 5,
       "engajamento": 1783,
@@ -772,7 +772,7 @@
       "thumb": "https://i.ytimg.com/vi/BceubSC4bhk/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=BceubSC4bhk",
       "publicado_em": "2026-10-16T11:01:21Z",
-      "views": 89070,
+      "views": 89074,
       "curtidas": 1668,
       "comentarios": 11,
       "engajamento": 1679,
@@ -785,10 +785,10 @@
       "thumb": "https://i.ytimg.com/vi/lfZjE4ERYGc/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=lfZjE4ERYGc",
       "publicado_em": "2026-11-14T11:02:48Z",
-      "views": 76604,
-      "curtidas": 1195,
+      "views": 77289,
+      "curtidas": 1220,
       "comentarios": 8,
-      "engajamento": 1203,
+      "engajamento": 1228,
       "formato": "short",
       "duracao_seg": 46
     },
@@ -798,7 +798,7 @@
       "thumb": "https://i.ytimg.com/vi/0jpwPtx9kdY/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=0jpwPtx9kdY",
       "publicado_em": "2026-10-15T11:00:43Z",
-      "views": 73153,
+      "views": 73169,
       "curtidas": 1010,
       "comentarios": 13,
       "engajamento": 1023,
@@ -811,10 +811,10 @@
       "thumb": "https://i.ytimg.com/vi/g3s2MLGfoUk/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=g3s2MLGfoUk",
       "publicado_em": "2026-11-04T11:01:25Z",
-      "views": 40371,
-      "curtidas": 668,
+      "views": 40506,
+      "curtidas": 670,
       "comentarios": 26,
-      "engajamento": 694,
+      "engajamento": 696,
       "formato": "short",
       "duracao_seg": 64
     },
@@ -824,7 +824,7 @@
       "thumb": "https://i.ytimg.com/vi/ppzEVGDyqnU/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=ppzEVGDyqnU",
       "publicado_em": "2026-11-02T17:01:15Z",
-      "views": 31384,
+      "views": 31398,
       "curtidas": 853,
       "comentarios": 9,
       "engajamento": 862,
@@ -837,7 +837,7 @@
       "thumb": "https://i.ytimg.com/vi/S5pJ9-aWXfc/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=S5pJ9-aWXfc",
       "publicado_em": "2026-11-08T17:01:49Z",
-      "views": 30155,
+      "views": 30203,
       "curtidas": 1427,
       "comentarios": 10,
       "engajamento": 1437,
@@ -850,7 +850,7 @@
       "thumb": "https://i.ytimg.com/vi/23AmEjxtSXU/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=23AmEjxtSXU",
       "publicado_em": "2026-10-01T11:00:56Z",
-      "views": 19140,
+      "views": 19145,
       "curtidas": 596,
       "comentarios": 4,
       "engajamento": 600,
@@ -858,12 +858,25 @@
       "duracao_seg": 40
     },
     {
+      "id": "dxMHqxf9fPM",
+      "titulo": "Quando a fralda vaza nas costas",
+      "thumb": "https://i.ytimg.com/vi/dxMHqxf9fPM/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=dxMHqxf9fPM",
+      "publicado_em": "2026-11-20T17:01:16Z",
+      "views": 18557,
+      "curtidas": 597,
+      "comentarios": 10,
+      "engajamento": 607,
+      "formato": "short",
+      "duracao_seg": 69
+    },
+    {
       "id": "8siPhupSyew",
       "titulo": "Seu bebê dorme muito bem no colo mas acorda ao ir ao berço?",
       "thumb": "https://i.ytimg.com/vi/8siPhupSyew/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=8siPhupSyew",
       "publicado_em": "2026-11-03T11:01:23Z",
-      "views": 18532,
+      "views": 18545,
       "curtidas": 733,
       "comentarios": 7,
       "engajamento": 740,
@@ -871,30 +884,30 @@
       "duracao_seg": 65
     },
     {
-      "id": "kqHsX_XhEhQ",
-      "titulo": "Como vestir o bebê de acordo com o clima",
-      "thumb": "https://i.ytimg.com/vi/kqHsX_XhEhQ/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=kqHsX_XhEhQ",
-      "publicado_em": "2026-11-11T17:01:28Z",
-      "views": 17079,
-      "curtidas": 523,
-      "comentarios": 3,
-      "engajamento": 526,
-      "formato": "short",
-      "duracao_seg": 85
-    },
-    {
       "id": "3EEMfIy7fgY",
       "titulo": "Você sabia que o bebê não pode usar travesseiro?",
       "thumb": "https://i.ytimg.com/vi/3EEMfIy7fgY/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=3EEMfIy7fgY",
       "publicado_em": "2026-11-16T11:01:01Z",
-      "views": 17031,
-      "curtidas": 667,
+      "views": 18055,
+      "curtidas": 681,
       "comentarios": 8,
-      "engajamento": 675,
+      "engajamento": 689,
       "formato": "short",
       "duracao_seg": 34
+    },
+    {
+      "id": "kqHsX_XhEhQ",
+      "titulo": "Como vestir o bebê de acordo com o clima",
+      "thumb": "https://i.ytimg.com/vi/kqHsX_XhEhQ/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=kqHsX_XhEhQ",
+      "publicado_em": "2026-11-11T17:01:28Z",
+      "views": 17144,
+      "curtidas": 525,
+      "comentarios": 3,
+      "engajamento": 528,
+      "formato": "short",
+      "duracao_seg": 85
     },
     {
       "id": "TstbtWm6u1g",
@@ -902,7 +915,7 @@
       "thumb": "https://i.ytimg.com/vi/TstbtWm6u1g/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=TstbtWm6u1g",
       "publicado_em": "2026-11-06T11:00:54Z",
-      "views": 14764,
+      "views": 14777,
       "curtidas": 508,
       "comentarios": 8,
       "engajamento": 516,
@@ -910,17 +923,17 @@
       "duracao_seg": 63
     },
     {
-      "id": "dxMHqxf9fPM",
-      "titulo": "Quando a fralda vaza nas costas",
-      "thumb": "https://i.ytimg.com/vi/dxMHqxf9fPM/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=dxMHqxf9fPM",
-      "publicado_em": "2026-11-20T17:01:16Z",
-      "views": 14406,
-      "curtidas": 500,
-      "comentarios": 9,
-      "engajamento": 509,
+      "id": "l4agYRJ2Weg",
+      "titulo": "Você sabia que o bebê não pode mamar assim?",
+      "thumb": "https://i.ytimg.com/vi/l4agYRJ2Weg/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=l4agYRJ2Weg",
+      "publicado_em": "2026-11-15T17:01:06Z",
+      "views": 14470,
+      "curtidas": 577,
+      "comentarios": 5,
+      "engajamento": 582,
       "formato": "short",
-      "duracao_seg": 69
+      "duracao_seg": 53
     },
     {
       "id": "LSJZYKI8DNQ",
@@ -928,10 +941,10 @@
       "thumb": "https://i.ytimg.com/vi/LSJZYKI8DNQ/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=LSJZYKI8DNQ",
       "publicado_em": "2026-11-13T11:01:10Z",
-      "views": 13904,
-      "curtidas": 547,
+      "views": 13941,
+      "curtidas": 548,
       "comentarios": 3,
-      "engajamento": 550,
+      "engajamento": 551,
       "formato": "short",
       "duracao_seg": 30
     },
@@ -941,7 +954,7 @@
       "thumb": "https://i.ytimg.com/vi/ADTKAAnW7-I/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=ADTKAAnW7-I",
       "publicado_em": "2026-11-01T17:01:09Z",
-      "views": 13707,
+      "views": 13716,
       "curtidas": 539,
       "comentarios": 4,
       "engajamento": 543,
@@ -954,7 +967,7 @@
       "thumb": "https://i.ytimg.com/vi/krTyKYvvwMs/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=krTyKYvvwMs",
       "publicado_em": "2026-11-06T17:01:04Z",
-      "views": 13687,
+      "views": 13715,
       "curtidas": 406,
       "comentarios": 4,
       "engajamento": 410,
@@ -967,7 +980,7 @@
       "thumb": "https://i.ytimg.com/vi/npUhIA73yW8/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=npUhIA73yW8",
       "publicado_em": "2026-10-26T11:01:21Z",
-      "views": 13493,
+      "views": 13503,
       "curtidas": 634,
       "comentarios": 3,
       "engajamento": 637,
@@ -980,25 +993,12 @@
       "thumb": "https://i.ytimg.com/vi/6k3LoNkJyfQ/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=6k3LoNkJyfQ",
       "publicado_em": "2026-11-12T17:01:25Z",
-      "views": 13360,
-      "curtidas": 453,
+      "views": 13389,
+      "curtidas": 454,
       "comentarios": 1,
-      "engajamento": 454,
+      "engajamento": 455,
       "formato": "short",
       "duracao_seg": 50
-    },
-    {
-      "id": "l4agYRJ2Weg",
-      "titulo": "Você sabia que o bebê não pode mamar assim?",
-      "thumb": "https://i.ytimg.com/vi/l4agYRJ2Weg/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=l4agYRJ2Weg",
-      "publicado_em": "2026-11-15T17:01:06Z",
-      "views": 13231,
-      "curtidas": 556,
-      "comentarios": 5,
-      "engajamento": 561,
-      "formato": "short",
-      "duracao_seg": 53
     },
     {
       "id": "FqhNlyAUjw0",
@@ -1006,7 +1006,7 @@
       "thumb": "https://i.ytimg.com/vi/FqhNlyAUjw0/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=FqhNlyAUjw0",
       "publicado_em": "2026-10-23T11:01:03Z",
-      "views": 12935,
+      "views": 12941,
       "curtidas": 450,
       "comentarios": 1,
       "engajamento": 451,
@@ -1019,7 +1019,7 @@
       "thumb": "https://i.ytimg.com/vi/v-5Zs7o7QPs/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=v-5Zs7o7QPs",
       "publicado_em": "2026-10-22T11:01:46Z",
-      "views": 12589,
+      "views": 12595,
       "curtidas": 542,
       "comentarios": 3,
       "engajamento": 545,
@@ -1032,7 +1032,7 @@
       "thumb": "https://i.ytimg.com/vi/iX2pTU-4Y-k/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=iX2pTU-4Y-k",
       "publicado_em": "2026-10-15T11:02:20Z",
-      "views": 12400,
+      "views": 12428,
       "curtidas": 361,
       "comentarios": 2,
       "engajamento": 363,
@@ -1045,7 +1045,7 @@
       "thumb": "https://i.ytimg.com/vi/HmPrukpvQB4/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=HmPrukpvQB4",
       "publicado_em": "2026-10-09T11:01:24Z",
-      "views": 12091,
+      "views": 12096,
       "curtidas": 503,
       "comentarios": 4,
       "engajamento": 507,
@@ -1058,10 +1058,10 @@
       "thumb": "https://i.ytimg.com/vi/bK-tHaqynf0/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=bK-tHaqynf0",
       "publicado_em": "2026-11-05T11:01:20Z",
-      "views": 11745,
-      "curtidas": 487,
+      "views": 11768,
+      "curtidas": 488,
       "comentarios": 6,
-      "engajamento": 493,
+      "engajamento": 494,
       "formato": "short",
       "duracao_seg": 69
     },
@@ -1071,10 +1071,10 @@
       "thumb": "https://i.ytimg.com/vi/QfpKoLf8qDo/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=QfpKoLf8qDo",
       "publicado_em": "2026-10-29T11:01:04Z",
-      "views": 11095,
-      "curtidas": 348,
+      "views": 11100,
+      "curtidas": 349,
       "comentarios": 2,
-      "engajamento": 350,
+      "engajamento": 351,
       "formato": "short",
       "duracao_seg": 48
     },
@@ -1084,12 +1084,25 @@
       "thumb": "https://i.ytimg.com/vi/MwDAkTG_jNc/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=MwDAkTG_jNc",
       "publicado_em": "2026-11-16T17:01:22Z",
-      "views": 10651,
-      "curtidas": 511,
+      "views": 10865,
+      "curtidas": 518,
       "comentarios": 8,
-      "engajamento": 519,
+      "engajamento": 526,
       "formato": "short",
       "duracao_seg": 63
+    },
+    {
+      "id": "5VjZjMiMM7k",
+      "titulo": "Almofada de ervas anti cólica para bebês",
+      "thumb": "https://i.ytimg.com/vi/5VjZjMiMM7k/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=5VjZjMiMM7k",
+      "publicado_em": "2026-11-21T11:01:23Z",
+      "views": 10613,
+      "curtidas": 465,
+      "comentarios": 4,
+      "engajamento": 469,
+      "formato": "short",
+      "duracao_seg": 70
     },
     {
       "id": "D0rRyEXmfbg",
@@ -1097,10 +1110,10 @@
       "thumb": "https://i.ytimg.com/vi/D0rRyEXmfbg/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=D0rRyEXmfbg",
       "publicado_em": "2026-11-09T17:01:35Z",
-      "views": 9650,
-      "curtidas": 461,
+      "views": 9679,
+      "curtidas": 462,
       "comentarios": 5,
-      "engajamento": 466,
+      "engajamento": 467,
       "formato": "short",
       "duracao_seg": 63
     },
@@ -1110,7 +1123,7 @@
       "thumb": "https://i.ytimg.com/vi/xkwhkJ7gV8s/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=xkwhkJ7gV8s",
       "publicado_em": "2026-11-08T11:02:25Z",
-      "views": 9463,
+      "views": 9492,
       "curtidas": 270,
       "comentarios": 0,
       "engajamento": 270,
@@ -1123,7 +1136,7 @@
       "thumb": "https://i.ytimg.com/vi/i11N6ggs7Iw/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=i11N6ggs7Iw",
       "publicado_em": "2026-11-10T11:01:44Z",
-      "views": 9386,
+      "views": 9409,
       "curtidas": 361,
       "comentarios": 4,
       "engajamento": 365,
@@ -1136,7 +1149,7 @@
       "thumb": "https://i.ytimg.com/vi/g7GvPOKUWoU/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=g7GvPOKUWoU",
       "publicado_em": "2026-10-19T11:01:13Z",
-      "views": 9102,
+      "views": 9104,
       "curtidas": 345,
       "comentarios": 2,
       "engajamento": 347,
@@ -1144,25 +1157,12 @@
       "duracao_seg": 55
     },
     {
-      "id": "5VjZjMiMM7k",
-      "titulo": "Almofada de ervas anti cólica para bebês",
-      "thumb": "https://i.ytimg.com/vi/5VjZjMiMM7k/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=5VjZjMiMM7k",
-      "publicado_em": "2026-11-21T11:01:23Z",
-      "views": 9064,
-      "curtidas": 392,
-      "comentarios": 4,
-      "engajamento": 396,
-      "formato": "short",
-      "duracao_seg": 70
-    },
-    {
       "id": "ABEfWuIOuec",
       "titulo": "Autonomia de sono é a capacidade do bebê adormecer sozinho",
       "thumb": "https://i.ytimg.com/vi/ABEfWuIOuec/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=ABEfWuIOuec",
       "publicado_em": "2026-11-03T17:02:44Z",
-      "views": 8982,
+      "views": 8995,
       "curtidas": 436,
       "comentarios": 4,
       "engajamento": 440,
@@ -1170,12 +1170,25 @@
       "duracao_seg": 60
     },
     {
+      "id": "GOjY5jhiGAY",
+      "titulo": "Apesar de comum, calo no lábio do bebê não é normal",
+      "thumb": "https://i.ytimg.com/vi/GOjY5jhiGAY/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=GOjY5jhiGAY",
+      "publicado_em": "2026-11-19T11:01:36Z",
+      "views": 8864,
+      "curtidas": 556,
+      "comentarios": 9,
+      "engajamento": 565,
+      "formato": "short",
+      "duracao_seg": 55
+    },
+    {
       "id": "3poLCqitc5c",
       "titulo": "Comprar ou não roupa RN?",
       "thumb": "https://i.ytimg.com/vi/3poLCqitc5c/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=3poLCqitc5c",
       "publicado_em": "2026-11-01T11:01:24Z",
-      "views": 8735,
+      "views": 8854,
       "curtidas": 227,
       "comentarios": 5,
       "engajamento": 232,
@@ -1183,25 +1196,12 @@
       "duracao_seg": 34
     },
     {
-      "id": "GOjY5jhiGAY",
-      "titulo": "Apesar de comum, calo no lábio do bebê não é normal",
-      "thumb": "https://i.ytimg.com/vi/GOjY5jhiGAY/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=GOjY5jhiGAY",
-      "publicado_em": "2026-11-19T11:01:36Z",
-      "views": 8686,
-      "curtidas": 552,
-      "comentarios": 9,
-      "engajamento": 561,
-      "formato": "short",
-      "duracao_seg": 55
-    },
-    {
       "id": "_YP_V1J3wGI",
       "titulo": "Não confunda sucção não nutritiva com mamada não efetiva",
       "thumb": "https://i.ytimg.com/vi/_YP_V1J3wGI/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=_YP_V1J3wGI",
       "publicado_em": "2026-11-12T11:01:03Z",
-      "views": 8464,
+      "views": 8495,
       "curtidas": 445,
       "comentarios": 2,
       "engajamento": 447,
@@ -1214,12 +1214,25 @@
       "thumb": "https://i.ytimg.com/vi/2kPEXsnUpu0/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=2kPEXsnUpu0",
       "publicado_em": "2026-11-13T17:01:13Z",
-      "views": 7964,
-      "curtidas": 433,
+      "views": 8005,
+      "curtidas": 435,
       "comentarios": 3,
-      "engajamento": 436,
+      "engajamento": 438,
       "formato": "short",
       "duracao_seg": 51
+    },
+    {
+      "id": "0sKpPdszhlI",
+      "titulo": "Realmente é preciso usar meia no recém-nascido?",
+      "thumb": "https://i.ytimg.com/vi/0sKpPdszhlI/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=0sKpPdszhlI",
+      "publicado_em": "2026-11-22T11:01:29Z",
+      "views": 7957,
+      "curtidas": 538,
+      "comentarios": 3,
+      "engajamento": 541,
+      "formato": "short",
+      "duracao_seg": 60
     },
     {
       "id": "EBV7uP_l354",
@@ -1227,12 +1240,25 @@
       "thumb": "https://i.ytimg.com/vi/EBV7uP_l354/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=EBV7uP_l354",
       "publicado_em": "2026-11-18T17:01:22Z",
-      "views": 7794,
-      "curtidas": 258,
+      "views": 7880,
+      "curtidas": 261,
       "comentarios": 2,
-      "engajamento": 260,
+      "engajamento": 263,
       "formato": "short",
       "duracao_seg": 44
+    },
+    {
+      "id": "__otwJO3KI8",
+      "titulo": "Como usar o cueiro?",
+      "thumb": "https://i.ytimg.com/vi/__otwJO3KI8/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=__otwJO3KI8",
+      "publicado_em": "2026-11-23T17:01:21Z",
+      "views": 7768,
+      "curtidas": 321,
+      "comentarios": 0,
+      "engajamento": 321,
+      "formato": "short",
+      "duracao_seg": 38
     },
     {
       "id": "L3jwt3socko",
@@ -1240,7 +1266,7 @@
       "thumb": "https://i.ytimg.com/vi/L3jwt3socko/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=L3jwt3socko",
       "publicado_em": "2026-11-09T11:01:43Z",
-      "views": 7541,
+      "views": 7570,
       "curtidas": 340,
       "comentarios": 4,
       "engajamento": 344,
@@ -1253,25 +1279,12 @@
       "thumb": "https://i.ytimg.com/vi/zpIBcGLPNZc/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=zpIBcGLPNZc",
       "publicado_em": "2026-11-18T11:03:12Z",
-      "views": 7193,
-      "curtidas": 418,
+      "views": 7543,
+      "curtidas": 426,
       "comentarios": 4,
-      "engajamento": 422,
+      "engajamento": 430,
       "formato": "short",
       "duracao_seg": 52
-    },
-    {
-      "id": "0sKpPdszhlI",
-      "titulo": "Realmente é preciso usar meia no recém-nascido?",
-      "thumb": "https://i.ytimg.com/vi/0sKpPdszhlI/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=0sKpPdszhlI",
-      "publicado_em": "2026-11-22T11:01:29Z",
-      "views": 7190,
-      "curtidas": 490,
-      "comentarios": 2,
-      "engajamento": 492,
-      "formato": "short",
-      "duracao_seg": 60
     },
     {
       "id": "7LOV6NyHWnk",
@@ -1279,10 +1292,10 @@
       "thumb": "https://i.ytimg.com/vi/7LOV6NyHWnk/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=7LOV6NyHWnk",
       "publicado_em": "2026-11-17T17:01:14Z",
-      "views": 7173,
-      "curtidas": 436,
+      "views": 7510,
+      "curtidas": 439,
       "comentarios": 4,
-      "engajamento": 440,
+      "engajamento": 443,
       "formato": "short",
       "duracao_seg": 56
     },
@@ -1292,12 +1305,25 @@
       "thumb": "https://i.ytimg.com/vi/-8MvEn0sdKY/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=-8MvEn0sdKY",
       "publicado_em": "2026-11-17T11:01:25Z",
-      "views": 6967,
-      "curtidas": 324,
+      "views": 7098,
+      "curtidas": 327,
       "comentarios": 2,
-      "engajamento": 326,
+      "engajamento": 329,
       "formato": "short",
       "duracao_seg": 50
+    },
+    {
+      "id": "5byUCaj_gK4",
+      "titulo": "Como a mãe pode amamentar o bebê deitada?",
+      "thumb": "https://i.ytimg.com/vi/5byUCaj_gK4/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=5byUCaj_gK4",
+      "publicado_em": "2026-11-22T17:01:34Z",
+      "views": 6836,
+      "curtidas": 464,
+      "comentarios": 3,
+      "engajamento": 467,
+      "formato": "short",
+      "duracao_seg": 78
     },
     {
       "id": "GGuWca9Le2A",
@@ -1305,7 +1331,7 @@
       "thumb": "https://i.ytimg.com/vi/GGuWca9Le2A/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=GGuWca9Le2A",
       "publicado_em": "2026-11-10T17:01:35Z",
-      "views": 6467,
+      "views": 6492,
       "curtidas": 325,
       "comentarios": 0,
       "engajamento": 325,
@@ -1318,7 +1344,7 @@
       "thumb": "https://i.ytimg.com/vi/xEjgUp2JsmM/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=xEjgUp2JsmM",
       "publicado_em": "2026-10-08T12:38:48Z",
-      "views": 6465,
+      "views": 6464,
       "curtidas": 202,
       "comentarios": 2,
       "engajamento": 204,
@@ -1331,7 +1357,7 @@
       "thumb": "https://i.ytimg.com/vi/dbsytiKtCD0/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=dbsytiKtCD0",
       "publicado_em": "2026-10-14T10:53:00Z",
-      "views": 6440,
+      "views": 6442,
       "curtidas": 150,
       "comentarios": 1,
       "engajamento": 151,
@@ -1344,7 +1370,7 @@
       "thumb": "https://i.ytimg.com/vi/lHTRKuhXnPc/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=lHTRKuhXnPc",
       "publicado_em": "2026-11-07T11:01:52Z",
-      "views": 6275,
+      "views": 6310,
       "curtidas": 171,
       "comentarios": 4,
       "engajamento": 175,
@@ -1357,7 +1383,7 @@
       "thumb": "https://i.ytimg.com/vi/lBsNkxpZOSs/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=lBsNkxpZOSs",
       "publicado_em": "2026-09-30T14:00:55Z",
-      "views": 6071,
+      "views": 6081,
       "curtidas": 223,
       "comentarios": 8,
       "engajamento": 231,
@@ -1365,17 +1391,17 @@
       "duracao_seg": 79
     },
     {
-      "id": "qAi0pfMamFY",
-      "titulo": "COMO VESTIR O BEBÊ SEM ELE PASSAR FRIO",
-      "thumb": "https://i.ytimg.com/vi/qAi0pfMamFY/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=qAi0pfMamFY",
-      "publicado_em": "2026-09-29T11:00:55Z",
-      "views": 5935,
-      "curtidas": 316,
-      "comentarios": 8,
-      "engajamento": 324,
+      "id": "TU42_ufmhSU",
+      "titulo": "Cobertor no berço, pode ou não pode?",
+      "thumb": "https://i.ytimg.com/vi/TU42_ufmhSU/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=TU42_ufmhSU",
+      "publicado_em": "2026-11-20T11:01:09Z",
+      "views": 5594,
+      "curtidas": 304,
+      "comentarios": 1,
+      "engajamento": 305,
       "formato": "short",
-      "duracao_seg": 63
+      "duracao_seg": 50
     },
     {
       "id": "xS10suh95j8",
@@ -1383,38 +1409,12 @@
       "thumb": "https://i.ytimg.com/vi/xS10suh95j8/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=xS10suh95j8",
       "publicado_em": "2026-11-19T17:01:28Z",
-      "views": 5339,
-      "curtidas": 301,
+      "views": 5497,
+      "curtidas": 303,
       "comentarios": 4,
-      "engajamento": 305,
+      "engajamento": 307,
       "formato": "short",
       "duracao_seg": 57
-    },
-    {
-      "id": "TU42_ufmhSU",
-      "titulo": "Cobertor no berço, pode ou não pode?",
-      "thumb": "https://i.ytimg.com/vi/TU42_ufmhSU/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=TU42_ufmhSU",
-      "publicado_em": "2026-11-20T11:01:09Z",
-      "views": 4975,
-      "curtidas": 274,
-      "comentarios": 1,
-      "engajamento": 275,
-      "formato": "short",
-      "duracao_seg": 50
-    },
-    {
-      "id": "t9cT8mxrfcU",
-      "titulo": "POSIÇÃO BOA PARA O BEBÊ ARROTAR",
-      "thumb": "https://i.ytimg.com/vi/t9cT8mxrfcU/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=t9cT8mxrfcU",
-      "publicado_em": "2026-10-13T11:00:59Z",
-      "views": 4748,
-      "curtidas": 239,
-      "comentarios": 4,
-      "engajamento": 243,
-      "formato": "short",
-      "duracao_seg": 59
     },
     {
       "id": "1NUY-c_43Ro",
@@ -1422,25 +1422,25 @@
       "thumb": "https://i.ytimg.com/vi/1NUY-c_43Ro/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=1NUY-c_43Ro",
       "publicado_em": "2026-11-11T11:01:50Z",
-      "views": 4745,
-      "curtidas": 226,
+      "views": 4770,
+      "curtidas": 227,
       "comentarios": 1,
-      "engajamento": 227,
+      "engajamento": 228,
       "formato": "short",
       "duracao_seg": 38
     },
     {
-      "id": "5byUCaj_gK4",
-      "titulo": "Como a mãe pode amamentar o bebê deitada?",
-      "thumb": "https://i.ytimg.com/vi/5byUCaj_gK4/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=5byUCaj_gK4",
-      "publicado_em": "2026-11-22T17:01:34Z",
-      "views": 4645,
-      "curtidas": 316,
-      "comentarios": 2,
-      "engajamento": 318,
+      "id": "t9cT8mxrfcU",
+      "titulo": "POSIÇÃO BOA PARA O BEBÊ ARROTAR",
+      "thumb": "https://i.ytimg.com/vi/t9cT8mxrfcU/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=t9cT8mxrfcU",
+      "publicado_em": "2026-10-13T11:00:59Z",
+      "views": 4760,
+      "curtidas": 239,
+      "comentarios": 4,
+      "engajamento": 243,
       "formato": "short",
-      "duracao_seg": 78
+      "duracao_seg": 59
     },
     {
       "id": "CgpgyXNi1F0",
@@ -1448,7 +1448,7 @@
       "thumb": "https://i.ytimg.com/vi/CgpgyXNi1F0/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=CgpgyXNi1F0",
       "publicado_em": "2026-11-14T17:02:06Z",
-      "views": 4571,
+      "views": 4617,
       "curtidas": 64,
       "comentarios": 2,
       "engajamento": 66,
@@ -1461,12 +1461,25 @@
       "thumb": "https://i.ytimg.com/vi/wow1mPE-jE4/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=wow1mPE-jE4",
       "publicado_em": "2026-11-15T11:01:21Z",
-      "views": 4502,
-      "curtidas": 158,
+      "views": 4558,
+      "curtidas": 160,
       "comentarios": 1,
-      "engajamento": 159,
+      "engajamento": 161,
       "formato": "short",
       "duracao_seg": 45
+    },
+    {
+      "id": "d4k6x7eiyzo",
+      "titulo": "Seu bebê só dorme no colo?Chora assim que encosta no berço?",
+      "thumb": "https://i.ytimg.com/vi/d4k6x7eiyzo/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=d4k6x7eiyzo",
+      "publicado_em": "2026-11-23T11:01:21Z",
+      "views": 4440,
+      "curtidas": 188,
+      "comentarios": 1,
+      "engajamento": 189,
+      "formato": "short",
+      "duracao_seg": 26
     },
     {
       "id": "-2sGSPGPU8E",
@@ -1474,10 +1487,10 @@
       "thumb": "https://i.ytimg.com/vi/-2sGSPGPU8E/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=-2sGSPGPU8E",
       "publicado_em": "2026-11-21T17:02:05Z",
-      "views": 3454,
-      "curtidas": 89,
+      "views": 4137,
+      "curtidas": 100,
       "comentarios": 2,
-      "engajamento": 91,
+      "engajamento": 102,
       "formato": "short",
       "duracao_seg": 28
     },
@@ -1487,25 +1500,25 @@
       "thumb": "https://i.ytimg.com/vi/IO1rWifpmj4/mqdefault.jpg",
       "link": "https://youtube.com/watch?v=IO1rWifpmj4",
       "publicado_em": "2026-11-05T17:00:48Z",
-      "views": 2310,
-      "curtidas": 91,
+      "views": 2330,
+      "curtidas": 92,
       "comentarios": 2,
-      "engajamento": 93,
+      "engajamento": 94,
       "formato": "short",
       "duracao_seg": 32
     },
     {
-      "id": "d4k6x7eiyzo",
-      "titulo": "Seu bebê só dorme no colo?Chora assim que encosta no berço?",
-      "thumb": "https://i.ytimg.com/vi/d4k6x7eiyzo/mqdefault.jpg",
-      "link": "https://youtube.com/watch?v=d4k6x7eiyzo",
-      "publicado_em": "2026-11-23T11:01:21Z",
-      "views": 1540,
-      "curtidas": 71,
-      "comentarios": 0,
-      "engajamento": 71,
+      "id": "G0T-MI0TYAA",
+      "titulo": "Mamadas longas que parecem não ter fim não são normais",
+      "thumb": "https://i.ytimg.com/vi/G0T-MI0TYAA/mqdefault.jpg",
+      "link": "https://youtube.com/watch?v=G0T-MI0TYAA",
+      "publicado_em": "2026-11-24T11:01:18Z",
+      "views": 1558,
+      "curtidas": 96,
+      "comentarios": 1,
+      "engajamento": 97,
       "formato": "short",
-      "duracao_seg": 26
+      "duracao_seg": 68
     }
   ]
 }
