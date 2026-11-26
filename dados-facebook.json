@@ -1,22 +1,26 @@
 {
-  "gerado_em": "2026-11-25T16:01:07.278Z",
+  "gerado_em": "2026-11-26T16:00:51.859Z",
   "conta": {
     "username": "manualdorecemnascido",
     "display_name": "Manual do Recém-Nascido",
-    "seguidores": 368170,
+    "seguidores": 368210,
     "link": "https://www.facebook.com/1753378231566500"
   },
   "periodo_semanas": 8,
   "resumo": {
-    "n_posts": 88,
-    "eng_total": 4669,
-    "eng_medio": 53,
-    "likes_total": 4392,
-    "comments_total": 112,
-    "shares_total": 165,
-    "seguidores_ganhos": 6552
+    "n_posts": 93,
+    "eng_total": 4689,
+    "eng_medio": 50,
+    "likes_total": 4406,
+    "comments_total": 113,
+    "shares_total": 170,
+    "seguidores_ganhos": 6651
   },
   "crescimento": [
+    {
+      "data": "2026-11-25",
+      "ganhos": 241
+    },
     {
       "data": "2026-11-24",
       "ganhos": 195
@@ -228,50 +232,46 @@
     {
       "data": "2026-10-03",
       "ganhos": 169
-    },
-    {
-      "data": "2026-10-02",
-      "ganhos": 142
     }
   ],
   "posts": [
     {
       "id": "1753378231566500_1635235625057969",
       "titulo": "Posição para o bebê arrotar 😍",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/843522304_1023316804102434_5904106575597058454_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=4N51es52ziAQ7kNvwHiQKMY&_nc_oc=AdoZvnJBySYPg3qb6qL5Hl91imOytz3KUfdlpXDOMZGfehw59YC4XPxN1m-6AmPXeKg&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=yGZR5LotoQQktpB6cXKIsw&_nc_tpa=Q5bMBQIDgi7NbfX_OU_71ptK6jaGz26EYuZmd5pQEuTkLz_iefFqqPbHJ3vES8XneAICHOpdyQEe0xry&oh=00_AQRlfd5mSqD09JYfQ3mbo0N3TXp42E6Z59jhjjhmGCN3kw&oe=6B0CC573",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/843522304_1023316804102434_5904106575597058454_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=XZmrkHhrc24Q7kNvwFNZTAf&_nc_oc=AdpQ5urEKn-72-4BDDu47xRfWPjnawiwzxH_GF3q5LuAqH2MqHKMKe2IxAEtiA5Vdc8&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=AkICjZw7hW3GsKuj1_IXHw&_nc_tpa=Q5bMBQLzGruFKgY9bhLM51Gk1_FOUwxCaNfQZfnAQyebQNTWQ30nKhQFSk3X53B8xMJ_jirUuIlY5dAh&oh=00_AQRqQ1zEmZXh8b5nu7BESyMc_k569rQLbDTh7R1k1lTNxA&oe=6B0E16F3",
       "link": "https://www.facebook.com/reel/1023290980771683/",
       "publicado_em": "2026-10-13T11:01:34+0000",
-      "curtidas": 3120,
+      "curtidas": 3158,
       "comentarios": 31,
-      "compartilhamentos": 135,
-      "engajamento": 3286
+      "compartilhamentos": 137,
+      "engajamento": 3326
     },
     {
       "id": "1753378231566500_1626330565948475",
       "titulo": "Comente aqui SONO25 e receba gratuitamente o e-book: Meu bebê não dorme no berço ❤️\n\n#sonodobebê #autonomiadosono #maternidade #amamentação ",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t51.71878-10/834767161_1806445197238047_6180799367701545403_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=Duv1UIuzi7QQ7kNvwEFNIpw&_nc_oc=AdpmuJkxHIx2oPBoN_wQtza1XT3EyXzFP3Z0UBtzcGB64UClf_5ZpqB0ale5mntkkCU&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=M9CIXcksWx78ED40AUtfwQ&_nc_tpa=Q5bMBQJaQmn0n4VYv3_OtjOl6SWaRAXVsdx7s3z5U5qSk5nSUFcGoOY_Km2pWYS64I8NtnU2ypPGLRVm&oh=00_AQQysfhbS8junETB4xChuIAmpM-ivgDIldiPi7QoxTX3lw&oe=6B0CCF69",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t51.71878-10/834767161_1806445197238047_6180799367701545403_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=nFvyqp_64XAQ7kNvwF3KyRK&_nc_oc=Adol-UwBO5-NP_ECvsED8N_1V9RjoIB72AJA54RecaYbaTAZKzqr7VPO4nuKJuTwHJc&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=qIi1fn6rm7eHUtJjJuHPvw&_nc_tpa=Q5bMBQJ_caBQhqZdDL8hEbGnhVgKPns-zG5wXk0HAZfZPDHQHkG0-LLLGfrPZZzCWFB3l73J1t62OD0m&oh=00_AQSeko0eWzUVN_dLIGMtMA8vLq4JC27A1OTpFTUO_XhO2A&oe=6B0E20E9",
       "link": "https://www.facebook.com/reel/1090771950474703/",
       "publicado_em": "2026-10-03T23:33:26+0000",
-      "curtidas": 732,
-      "comentarios": 50,
-      "compartilhamentos": 14,
-      "engajamento": 796
+      "curtidas": 770,
+      "comentarios": 51,
+      "compartilhamentos": 15,
+      "engajamento": 836
     },
     {
       "id": "1753378231566500_1637202481527950",
       "titulo": "Compartilha essa informação importante com uma mamãe 😍❤️",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/851191446_1105055118976611_1126307468281790837_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=SYiKu_g6vRQQ7kNvwF4G6Fv&_nc_oc=Adqq2gIP8urc1-O1dyxVS8jmhoe6aVp3hzibfVypObuWXm6Sx6cP9G2dKMf5EZQhzE4&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=yGZR5LotoQQktpB6cXKIsw&_nc_tpa=Q5bMBQLCmlmBZBW6nCeBPWcUlZNnh49wCYm8dPdxdZg0F3ObObXpPAK1d_obqch7UNnQhlW16xOy--kg&oh=00_AQQ3KnZ0KLYkSYas5Ss4PHlegFXB9-_t6AR-FWaL_5ucMA&oe=6B0CD47E",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/851191446_1105055118976611_1126307468281790837_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=8jKHo9oZnqgQ7kNvwGc0RXG&_nc_oc=AdojvGofBw0b9-volKjyOSD9qL9PGu0zUoDhUxycWGxj2pk0_r--C5qfBWNTsicde8Y&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=AkICjZw7hW3GsKuj1_IXHw&_nc_tpa=Q5bMBQJFPKWZW2R3LthRu-Dfbh7MDWmRmJ5tPa4OJpKfR_hTlut0a6ZKFiEI_Gk86Sqm0ueVm7zl3lfa&oh=00_AQQohqOW4x1fKoAy8bUUJlt49Z2ZEYEkPx_-IUUhTLlkiw&oe=6B0E25FE",
       "link": "https://www.facebook.com/reel/1105027352312721/",
       "publicado_em": "2026-10-15T11:01:24+0000",
-      "curtidas": 116,
+      "curtidas": 115,
       "comentarios": 3,
       "compartilhamentos": 0,
-      "engajamento": 119
+      "engajamento": 118
     },
     {
       "id": "1753378231566500_1627718299143035",
       "titulo": "Comente aqui SONO25 e receba gratuitamente o e-book: Meu bebê não dorme no berço ❤",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/838954350_1461994685748949_2720125074096912022_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=co-Eno6-lMUQ7kNvwHvPm_c&_nc_oc=AdogCdBWUiolVKrHqQI4BVWsmoGPvOxRkjECXyrpkS5rVTkU1q5OSf-aylufGUExBF8&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=M9CIXcksWx78ED40AUtfwQ&_nc_tpa=Q5bMBQKBCS66BIhVxSXkaO3AKZtCyhiqfXAq0gTwpfCQD8udEjuUXMJK93Q5f3W6EQp1aCqvShgix-48&oh=00_AQRLCcZzopeK1lOSOfEayfIwUd8v0ifAwfhRu1kZyFSd6g&oe=6B0CC6E8",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/838954350_1461994685748949_2720125074096912022_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=co-Eno6-lMUQ7kNvwHvPm_c&_nc_oc=AdogCdBWUiolVKrHqQI4BVWsmoGPvOxRkjECXyrpkS5rVTkU1q5OSf-aylufGUExBF8&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=qIi1fn6rm7eHUtJjJuHPvw&_nc_tpa=Q5bMBQKq4fS1VftbdpfMSXBjNqcJ-LJuEMuzCe7V7kBf9d2eFo5RBnh38w1DWI3ErKuOnR3s5vTCb43k&oh=00_AQROqGQ8pTb-v5j4oIyicFnisV_PNk_ZGSbyTMrmjR9PQg&oe=6B0E1868",
       "link": "https://www.facebook.com/reel/1461994585748959/",
       "publicado_em": "2026-10-05T12:00:21+0000",
       "curtidas": 85,
@@ -282,7 +282,7 @@
     {
       "id": "1753378231566500_1624834019431463",
       "titulo": "👉Comente AULA para ter acesso à ala gratuita sobre autonomia de sono 😍",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/831106659_28652003577789254_8027670939130282913_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=UFVzl5LqinEQ7kNvwFXAHLJ&_nc_oc=AdqOFVTJ958xiuLoo__p_LrWTTc4zAkpYxA-jOc8K1h17Igrq347V3J1FFpuJCA_EJU&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=M9CIXcksWx78ED40AUtfwQ&_nc_tpa=Q5bMBQJJWBw3MMcxltS8_gvyOkcNRgxIxvps574ZdnTO1XJhG-52WwaCsKK-prOONj6rA643YhNqi_AZ&oh=00_AQTMoGtkB5daGWO1ORsvR60u1kLH1mNuXuY_hC3JG2bB6A&oe=6B0CDEEB",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/831106659_28652003577789254_8027670939130282913_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=UFVzl5LqinEQ7kNvwFXAHLJ&_nc_oc=AdqOFVTJ958xiuLoo__p_LrWTTc4zAkpYxA-jOc8K1h17Igrq347V3J1FFpuJCA_EJU&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=qIi1fn6rm7eHUtJjJuHPvw&_nc_tpa=Q5bMBQJ0Udh33YWpRT5OF7xxZLpPZ71P2eYL0suJu9v4RveyWeTljs75NQEmmsEecNj2ilPgcMYkG1q8&oh=00_AQTdDBT2IF0eNHVoDJkfE6F--cGJI7hbMbB9OpN19fi5og&oe=6B0E306B",
       "link": "https://www.facebook.com/reel/28651688647820747/",
       "publicado_em": "2026-10-02T11:01:10+0000",
       "curtidas": 71,
@@ -291,31 +291,20 @@
       "engajamento": 74
     },
     {
-      "id": "1753378231566500_1623793729535492",
-      "titulo": "Compartilha essa informação importante com uma mamãe 😍❤️",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/830218960_2188329221897002_6815949658330128238_n.jpg?_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=_PFf6zrKuCkQ7kNvwHsi7Ey&_nc_oc=AdpTOar5F7dMC8dkoiQx9PFhAa-9LiUOrIwTfeRXUI0LON1KRKZE_04uEHp3aLOwWps&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=M9CIXcksWx78ED40AUtfwQ&_nc_tpa=Q5bMBQK_aqmK8g_Ze4K5qdbgcT6rtg5KwBe6CYD8gQrjN5roAAm3mJCmyeAdJwIMeXwMdGXxy5hnpwhb&oh=00_AQSWNYl4GsxtkuOWYThzK5BcvURMJPNeMg636BNHXVO2OA&oe=6B0CE96F",
-      "link": "https://www.facebook.com/reel/2188295055233752/",
-      "publicado_em": "2026-10-01T11:01:10+0000",
-      "curtidas": 72,
-      "comentarios": 2,
-      "compartilhamentos": 0,
-      "engajamento": 74
-    },
-    {
       "id": "1753378231566500_1675207957727402",
       "titulo": "Comente aqui SONO25 e receba gratuitamente o e-book: O que ninguém te contou sobre o sono do bebê no berço ❤\n\n#sonodobebe #rotinadobebe #rec",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t51.82787-10/902954524_18485966791112114_1420541782014619010_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=mscwUPsvQx4Q7kNvwFb5VNc&_nc_oc=AdqbGJu4tcDI9s4pYA7dMJQGeZ3BYOr_lx8B_5ftNgzxzzsqp_b4ZlLf6pDQ6zMkT0o&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=9Fli5_N7d-u8lD7497Ulzg&_nc_tpa=Q5bMBQL7sigRV4UY_HBk-isVcPsX1d0WoVuXqXk6BJqk-ryofbb0I1NphQExn69Dz-o8CKIXQVyo5h0-&oh=00_AQQ7KtaJy9JazpsW--L4f5Uk2_kmkvHXceQIqD5Rr_haIg&oe=6B0CD272",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t51.82787-10/902954524_18485966791112114_1420541782014619010_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=mscwUPsvQx4Q7kNvwFb5VNc&_nc_oc=AdqbGJu4tcDI9s4pYA7dMJQGeZ3BYOr_lx8B_5ftNgzxzzsqp_b4ZlLf6pDQ6zMkT0o&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=nBAehv1TMtA4DsIzcwcYDw&_nc_tpa=Q5bMBQIivYWLhEJAsJfUKuKsdL7Ckwtrj52R3A0xgKU0USPeqBKQu5WwyaHVIieEHw8xK2YPGTMQl-uO&oh=00_AQRBCjSPQmP3HaoxyEmu0yfI1yTZH_JG-pNEJAD6fLLF-Q&oe=6B0E23F2",
       "link": "https://www.facebook.com/reel/2062510381133350/",
       "publicado_em": "2026-11-23T20:00:05+0000",
-      "curtidas": 59,
+      "curtidas": 61,
       "comentarios": 4,
-      "compartilhamentos": 5,
-      "engajamento": 68
+      "compartilhamentos": 7,
+      "engajamento": 72
     },
     {
       "id": "1753378231566500_1634234315158100",
       "titulo": "Comente aqui SONO25 e receba gratuitamente o e-book: Meu bebê não dorme no berço ❤",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/845530916_2345042269233375_1441447502521303271_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=R5IavUJ1NT8Q7kNvwFBUQ89&_nc_oc=AdoYQJLGJD23qWDowxvHdqO61BbKfiuyYxn38fBVb4WNjDIAOJHI5B8dJykSRBcSGv8&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=yGZR5LotoQQktpB6cXKIsw&_nc_tpa=Q5bMBQIeDYaJbpSM12OjaYqUGwLddBZCxH9tKP5MGObTOKrMKpO8a7tpZzk9o1FGlS2RzUoBuPMGJLqe&oh=00_AQSujvBP0pC3bv-g5Wfa1G72LJAEo0ITqNQ98_JRmk4J6w&oe=6B0CCFCA",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/845530916_2345042269233375_1441447502521303271_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=R5IavUJ1NT8Q7kNvwFBUQ89&_nc_oc=AdoYQJLGJD23qWDowxvHdqO61BbKfiuyYxn38fBVb4WNjDIAOJHI5B8dJykSRBcSGv8&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=AkICjZw7hW3GsKuj1_IXHw&_nc_tpa=Q5bMBQJ548KfM6iVNRlrso6mcJV1K9gHjyp-KWpsQ-uYREIE6zCSnSToO8hrwowFSSdxYG1O3N_kXdtg&oh=00_AQRsCYCDJZA2miblIHlYDS4ouulcslbyOqh2gFAIm-K7bQ&oe=6B0E214A",
       "link": "https://www.facebook.com/reel/2345010399236562/",
       "publicado_em": "2026-10-12T11:01:24+0000",
       "curtidas": 41,
@@ -326,7 +315,7 @@
     {
       "id": "1753378231566500_1630496442198554",
       "titulo": "Quem é a especialista da casa sobre o seu filho? Você. 💛\n\nDesde que ele nasceu você aprendeu a ler o que ele precisa antes mesmo dele saber",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/841664478_1495902735707568_8175358901547393480_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=YmIZfEsgLIYQ7kNvwHHmwHX&_nc_oc=AdoLhzTnm12VAEXCKhTuJfYQpEwntIBlUesWyF3GPtQQUeCHE162MB-y9ayM4zH47fA&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=M9CIXcksWx78ED40AUtfwQ&_nc_tpa=Q5bMBQKkIvpgPJ_Uwv6qoSZq_nVwws-oyEtZV8IpqIlW3buwQIcKt5JEsPw0xI3_7Yl_kXwcEFgvUqxZ&oh=00_AQTh1gW_6DY2Hx6QHbrL6mxtpEYAitlWO3X5vP1Ghp4MuA&oe=6B0CC72C",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/841664478_1495902735707568_8175358901547393480_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=YmIZfEsgLIYQ7kNvwHHmwHX&_nc_oc=AdoLhzTnm12VAEXCKhTuJfYQpEwntIBlUesWyF3GPtQQUeCHE162MB-y9ayM4zH47fA&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=AkICjZw7hW3GsKuj1_IXHw&_nc_tpa=Q5bMBQKvd6xXCnT_tZF4Q6HL8YqUbh11laSRUvanaC4pN19fvyB3E9FccefgZpSCBauCeWw6nAGesB-s&oh=00_AQQEnkO1gdoTUCSxhM39-hwp7jMyJWmDz-KtWSzOW0zsuQ&oe=6B0E18AC",
       "link": "https://www.facebook.com/reel/1495902595707582/",
       "publicado_em": "2026-10-08T12:48:33+0000",
       "curtidas": 22,
@@ -337,7 +326,7 @@
     {
       "id": "1753378231566500_1675207237727474",
       "titulo": "👉 Comente LIVE para ter acesso à aula gratuita sobre autonomia de sono 👈\n\n#sonodobebe #rotinadobebe #recemnascido #maedeprimeiraviagem #ma",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t51.82787-10/919208743_18486698404112114_3396046357151920007_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=vKDNcfIjNmkQ7kNvwHxNhfz&_nc_oc=Adpn43uZI4EFaUpiwHhmgwbg-X6Ml8csX6YiIvaETxLu_ke2CbvHvEG-1TpMLEW5waM&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=HKs09u0yw_gy6j8gpCticg&_nc_tpa=Q5bMBQIwiUJRNakLV98kRga7O8QH6h-JrfGmRlQOn4j8awarH3-tr_IWrlQPI7tvEPjU8heymanA6A2Y&oh=00_AQT48eEzRLwGcQpYCg62wqUQ59uz3NoaPdC_yLMV5EDq8g&oe=6B0CBEC8",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t51.82787-10/919208743_18486698404112114_3396046357151920007_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=vKDNcfIjNmkQ7kNvwHxNhfz&_nc_oc=Adpn43uZI4EFaUpiwHhmgwbg-X6Ml8csX6YiIvaETxLu_ke2CbvHvEG-1TpMLEW5waM&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=s0BjMXwRTCua8hyUFHOhkA&_nc_tpa=Q5bMBQI_q2ctWAjwEUM0Tt0DcSpld5E75ubEwhMwkWVxMIkg0SFQ_LqiY85I78dK91adtTbxckbHMKl3&oh=00_AQQ_fF3F3mwSJLHD7glR08R57vGEuOCh3zT5zLtzXhfTvw&oe=6B0E1048",
       "link": "https://www.facebook.com/reel/1837726977460110/",
       "publicado_em": "2026-11-21T20:00:26+0000",
       "curtidas": 16,
@@ -348,7 +337,7 @@
     {
       "id": "1753378231566500_1675207777727420",
       "titulo": "Comente: CONSULTA para receber mais informações 🥰\n\n#sonodobebe #rotinadobebe #recemnascido #maedeprimeiraviagem #maternidade #newborn #berç",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t51.82787-10/903005639_18486200062112114_7595874960476951973_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=OQcjDI2pJowQ7kNvwF8CzFQ&_nc_oc=AdpnKF5v9zNr9yIZUvunlPaxsvH3elQKrwU_Kuy1_g_pFPWE7wD1s-x7GnJuJm53zp8&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=q7NZiuNvfLODyRG8q8hpiQ&_nc_tpa=Q5bMBQJJ8huH_KvVWjKJS86H0ua0Jv7xw5wd0adgU0Z9qeTRJHHJgLfx3mNza4h4bWhDKH8UxOVwEcpG&oh=00_AQTMBT2seARRCQrhnyWHoDwIWjeCLxPhgmEF-txLH5qtrg&oe=6B0CDDD0",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t51.82787-10/903005639_18486200062112114_7595874960476951973_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=sj13g7sZI8QQ7kNvwGH44ip&_nc_oc=AdotTlBpnuOVqAHSK-LnsTcVH49Y2WcGPLcsMWR-Xz6vNTvLj_A444RIb5CdcOkZES8&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=nBAehv1TMtA4DsIzcwcYDw&_nc_tpa=Q5bMBQI4zQn1pWEUiko_lCwZWg7Oyp7QVlconYn-Kuui4Kcz5jI01YQQm18Ftw-1ZjaYF7ZBbSPUkJt2&oh=00_AQQ1JlWev5QQNOaL0fpNhMZVfcMxF6s9msnu550E1ER58Q&oe=6B0E2F50",
       "link": "https://www.facebook.com/reel/1454513643529327/",
       "publicado_em": "2026-11-23T05:00:04+0000",
       "curtidas": 9,
@@ -359,7 +348,7 @@
     {
       "id": "1753378231566500_1675207431060788",
       "titulo": "Comente #AMA para receber o E-book Gratuito: Por que meu bebê parece não saciar no seio?\n\n#recemnascido #newborn #gestacao #maedeprimeiravia",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t51.82787-10/903005723_18486535870112114_1975211499340001153_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=Qy3Tr_l3NTwQ7kNvwF8hyXE&_nc_oc=AdpCvGfkg7EbNgMppCxKuJeOK3CUgWMA8LDSTgqqwpRO4DzpStm_og2mOLKqhH1cfBw&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=q7NZiuNvfLODyRG8q8hpiQ&_nc_tpa=Q5bMBQIxZC8raholW0aQN9vkv6yBHgvW9wB1thcFoVG-zjNoKHXgZ1PBIah2idT2zkfJ0nBgFDyAp6Ez&oh=00_AQT9yN1eJ2ihakKY9ixShaGnKdGg6VWTun7D_MALB55wPw&oe=6B0CF3AA",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t51.82787-10/903005723_18486535870112114_1975211499340001153_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=sNQ53UKazssQ7kNvwFZsV_k&_nc_oc=AdrSb2CgdaYz3eDJrEN-TAEjFnHtIuH_We55xeW7yvY9M2lGIohkLrysbA0pIxYcMJI&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=s0BjMXwRTCua8hyUFHOhkA&_nc_tpa=Q5bMBQKMVL1tbbsQCp_6i5FRdTHWwbDzbNqUHZjDU1UBEk_muj7rUKZeuIeatSpEY9EzIxIb1Jkg2UPR&oh=00_AQSi-a4din7XkODGzgOb3_F_uHgeEdmSjcfCUlV6g8jkHg&oe=6B0E452A",
       "link": "https://www.facebook.com/reel/1125081130335910/",
       "publicado_em": "2026-11-22T05:00:13+0000",
       "curtidas": 10,
@@ -368,9 +357,20 @@
       "engajamento": 10
     },
     {
+      "id": "1753378231566500_1675208384394026",
+      "titulo": "QUER O LINK? Comente \"QUERO\" ❤️\n\nNinho redutor\nSono do bebê\nNinho redutor para amarrar\nBerço do bebê\nNinho confortável e seguro\nNinho ajustá",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t51.82787-10/904864225_18485540449112114_8331628815332945646_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=sptCEmhBFYUQ7kNvwEjsNu6&_nc_oc=AdqNhLXLVaCaKu3of8yfOCzfF8tbTLh6Qw6sjGjHtEUTPpcqOxhutREb0TVLOuOMCYc&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=J7f0FiokBeszfc8LN8ckIQ&_nc_tpa=Q5bMBQLTsQRg5gBT3C62CQQQMnvkuxrCpePORVGrJnYuBpemJiSce-Oz-uaTPqpgWdQja_YhLrlSFfb_&oh=00_AQQ9NVgZYS8nTukOdWew49eMVRMm_DO6LLjTG4BtvZGnpg&oe=6B0E28FC",
+      "link": "https://www.facebook.com/reel/1152582990587653/",
+      "publicado_em": "2026-11-24T20:00:18+0000",
+      "curtidas": 8,
+      "comentarios": 0,
+      "compartilhamentos": 0,
+      "engajamento": 8
+    },
+    {
       "id": "1753378231566500_1675207107727487",
       "titulo": "Comente ENXOVAL e receba gratuitamente o e-book Enxoval Descomplicado ❤\n\n#recemnascido #newborn #bebe #maternidade #maedeprimeiraviagem #ges",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t51.71878-10/912402617_1156670283608491_8601888065260106705_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=FXGbEbnF4o4Q7kNvwF2dFej&_nc_oc=AdoX-15HEQhTq6agJkDqMJv1TdngvMBXOb36q0ENxFstwVf5YBU6V9RE_92rfli68M0&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=HKs09u0yw_gy6j8gpCticg&_nc_tpa=Q5bMBQKm9IWVwKKqywez033MeneK_yaKzQn7cYpmQKS-bv7J7vm252-3MZUOgzfZkMn4oJsH2j6HiNJv&oh=00_AQSPBLOTfE7GDhsZhy_xqdTAcPjVwp-WZky1-zX-gBjA_Q&oe=6B0CCF50",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t51.71878-10/912402617_1156670283608491_8601888065260106705_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=FXGbEbnF4o4Q7kNvwF2dFej&_nc_oc=AdoX-15HEQhTq6agJkDqMJv1TdngvMBXOb36q0ENxFstwVf5YBU6V9RE_92rfli68M0&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=s0BjMXwRTCua8hyUFHOhkA&_nc_tpa=Q5bMBQJUw75-D4rdAp6wlNbGD8OYcwyRkqWYOlXBJ5PNhmO8YagDxcCB_RwKx9d7iZsm300bf19KqMRN&oh=00_AQTmPwq8egkLPPHSm3nanv8qYUXQCHOPT8NRY-g4wMlIWA&oe=6B0E20D0",
       "link": "https://www.facebook.com/reel/1887585302666959/",
       "publicado_em": "2026-11-21T17:01:42+0000",
       "curtidas": 8,
@@ -381,7 +381,7 @@
     {
       "id": "1753378231566500_1636209211627277",
       "titulo": "Quem é a especialista da casa sobre o seu filho? Você. 💛\n\nDesde que ele nasceu você aprendeu a ler o que ele precisa antes mesmo dele saber",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/850134027_2929823604064167_5577258945252249072_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=LZYb23LqfBIQ7kNvwFZx2dd&_nc_oc=AdpvJUAsrFX14b0yd6m66jz5BiMYQC0Ecor8IcTnYd8QlpHljoc1QYCIPvWgm9ZgtFg&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=yGZR5LotoQQktpB6cXKIsw&_nc_tpa=Q5bMBQJunGRIrw2Wm_UkO5HuUMw3LV-Clpsizh8eTT7u_6wzCKBOXUz5FpllGm0-5FzeWZNiFxaniAVA&oh=00_AQSNyg-YMl7XDqnwEqSvb7TxhID4_XGK7iV8qfkuCia2Pg&oe=6B0CCF92",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/850134027_2929823604064167_5577258945252249072_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=aLzI0Ytjsq8Q7kNvwEMgSuX&_nc_oc=AdoayuK07TWmEtyoeWgvyVGNFIc_6NfLYKAWi0xaANyplU8g8tlX5xsBr3rOO4i0OCI&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=AkICjZw7hW3GsKuj1_IXHw&_nc_tpa=Q5bMBQJlJqSwHFvpqe0kE_k0umjXom0xjNaJQ_J_AdMuUbed1s_cKkzcF0oSES1bkUgFe9mVhZiURM4L&oh=00_AQSV4zAW-rIgobcxFUWaSdI3g1dh-iihtr50g2pgp-PlRA&oe=6B0E2112",
       "link": "https://www.facebook.com/reel/2929823440730850/",
       "publicado_em": "2026-10-14T11:05:38+0000",
       "curtidas": 6,
@@ -392,7 +392,7 @@
     {
       "id": "1753378231566500_1675207511060780",
       "titulo": "QUER O LINK? Comente \"QUERO\" ❤️\n\nBabá eletrônica\nSegurança do bebê\nBebê dormindo seguro\nSono do recém nascido\nBabá eletrônica para bebê\nEnxo",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t51.82787-10/902954693_18486369955112114_5821990813122048543_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=33yCcCuMHHwQ7kNvwGnTwuD&_nc_oc=AdpfX_qX8kfojXG3iCOkifcbLMTSzV7zASuyfNH9-W-C3nA5eIsW2BL5ZNN2xLcYX_k&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=q7NZiuNvfLODyRG8q8hpiQ&_nc_tpa=Q5bMBQK1nh9cS7G9nUFj3xJ3EKGcSqDFlnSSyW7BgJJN0pW7aHmRo-U3zvWfYkaMZopDBBOieyVtsHCv&oh=00_AQSxj7cc65cU4qpA3IM3xc8ts57B-MsGJfnasMsieIj6gw&oe=6B0CDFEA",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t51.82787-10/902954693_18486369955112114_5821990813122048543_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=33yCcCuMHHwQ7kNvwGnTwuD&_nc_oc=AdpfX_qX8kfojXG3iCOkifcbLMTSzV7zASuyfNH9-W-C3nA5eIsW2BL5ZNN2xLcYX_k&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=s0BjMXwRTCua8hyUFHOhkA&_nc_tpa=Q5bMBQLcqGED3FoZB9OJduBvMBYOBHnzYxkr35Bc_PCBdPkm-y8s7OPWAmnlVD0lYRZOLm4eg36IvI-u&oh=00_AQR9g_tLEkkQYSV7eBAXqnIzrjG_IerNokgiRTR5Z1gDTw&oe=6B0E316A",
       "link": "https://www.facebook.com/reel/40095326060111144/",
       "publicado_em": "2026-11-22T17:00:52+0000",
       "curtidas": 4,
@@ -401,20 +401,20 @@
       "engajamento": 5
     },
     {
-      "id": "1753378231566500_1675208384394026",
-      "titulo": "QUER O LINK? Comente \"QUERO\" ❤️\n\nNinho redutor\nSono do bebê\nNinho redutor para amarrar\nBerço do bebê\nNinho confortável e seguro\nNinho ajustá",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t51.82787-10/904864225_18485540449112114_8331628815332945646_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=9otphbe4mKYQ7kNvwHQ7UpW&_nc_oc=Adruh6INpSLU8DFOKEvucWHL9WmYnzRIY7rtcDPiMtFkf12o_eQHS3aBJXriTsmtLyo&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=9Fli5_N7d-u8lD7497Ulzg&_nc_tpa=Q5bMBQJtOpJrZdgWvnTO_jg8Gc8-GCLJMdlYUySVNLhq3AvVDDTqJxj_hjQ1ScDqF2O9Pv8SPrD1zwUl&oh=00_AQS07PzMTof9KBR9UQ_G3vr6j6sqYsg9JVmdCOyrq-QxpA&oe=6B0CD77C",
-      "link": "https://www.facebook.com/reel/1152582990587653/",
-      "publicado_em": "2026-11-24T20:00:18+0000",
-      "curtidas": 4,
-      "comentarios": 0,
+      "id": "1753378231566500_1675208244394040",
+      "titulo": "💛 Comente BF que eu te mando o link do grupo exclusivo da Black Friday no WhatsApp.\n\n#sonodobebe #rotinadobebe #recemnascido #maedeprimeira",
+      "thumb": "https://scontent-gru3-1.xx.fbcdn.net/v/t51.82787-10/904316006_18485607289112114_1570597336164482772_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=WV3-vagJmA8Q7kNvwGMp8OQ&_nc_oc=AdrXEQw53Us6Gcslp2bWxjjSKHaO_hcfAc10Mak9lu1G74AMa_YATraS5lNH9Xy2XaU&_nc_zt=23&_nc_ht=scontent-gru3-1.xx&edm=AKIiGfEEAAAA&_nc_gid=nBAehv1TMtA4DsIzcwcYDw&_nc_tpa=Q5bMBQLzuiWyLbYaVrtn00A7jQVEd2UfIJHGMkMZqo3YH4RY6McrWLqgH9Hcl5VkYfSZrIIir7Cg8TJ_&oh=00_AQRw30aOM4loHtS6Z0pv_Dhr-VJhvNMr9XpjWPsm2NSOfA&oe=6B0E0EC1",
+      "link": "https://www.facebook.com/reel/2344569586393626/",
+      "publicado_em": "2026-11-24T17:00:49+0000",
+      "curtidas": 2,
+      "comentarios": 2,
       "compartilhamentos": 0,
       "engajamento": 4
     },
     {
       "id": "1753378231566500_1675207711060760",
       "titulo": "👉 Comente LIVE para ter acesso à aula gratuita sobre autonomia de sono 👈\n\n#sonodobebe #rotinadobebe #recemnascido #maedeprimeiraviagem #ma",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t51.82787-10/902954500_18486253297112114_4376644745436544847_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=zTmjugcRgrcQ7kNvwEWALUG&_nc_oc=Adp_ur4WzEAECO_3ibh46eZhR0ksSBH4hQwAfVVqSvI_2nZqI0H32n1RoJ6seN-Ppms&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=q7NZiuNvfLODyRG8q8hpiQ&_nc_tpa=Q5bMBQKzWKQK2pCfTPDPLGyo_zmzEK-uPtJDAJyms3trHWDDDSK08JZGDzAAHIe68i1zd6UW8M1Yttox&oh=00_AQSNmRNlxLkIyd9DTiINVFnnq2EDIab-b6JbtANnspVnFw&oe=6B0CC902",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t51.82787-10/902954500_18486253297112114_4376644745436544847_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=zTmjugcRgrcQ7kNvwEWALUG&_nc_oc=Adp_ur4WzEAECO_3ibh46eZhR0ksSBH4hQwAfVVqSvI_2nZqI0H32n1RoJ6seN-Ppms&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=s0BjMXwRTCua8hyUFHOhkA&_nc_tpa=Q5bMBQKEXXcebtIzf-hiRSegKoMs9gSIDDAcC8nShkKYCi9p23g2XsVumovRKnGxTRkHs5XXGwLPNs9K&oh=00_AQTJGikkEpgkCUqXPm67vXORe1buwupd_V8ZPSUukz2GFA&oe=6B0E1A82",
       "link": "https://www.facebook.com/reel/2115711409150019/",
       "publicado_em": "2026-11-23T02:00:14+0000",
       "curtidas": 3,
@@ -425,7 +425,7 @@
     {
       "id": "1753378231566500_1675208041060727",
       "titulo": "👉 Comente AULA para ter acesso à aula gratuita de amamentação 👈\n\n#recemnascido #newborn #gestacao #maedeprimeiraviagem #amamentação #pega ",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t51.82787-10/902954501_18485819776112114_6940309855899862071_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=45kvMSjz8hQQ7kNvwEi4gqQ&_nc_oc=Adrnp1nf0_gtyFMKLdRp1DLwThHKzrvpsH5FwpsG0qF_dfeTvYPJXMOsqKrZxu6L0mY&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=9Fli5_N7d-u8lD7497Ulzg&_nc_tpa=Q5bMBQJ-NRgNeskdAG7HnPm1xRpgrfPpQOtWGei5Vx1XgnZvL7dBToYilJPMkPKX2j11foDVoiOgqlk-&oh=00_AQTBQ2sZ6mdPDhfbisSB-pkulE_dLDGJUErHErGhLHRbEg&oe=6B0CCA5A",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t51.82787-10/902954501_18485819776112114_6940309855899862071_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=45kvMSjz8hQQ7kNvwEi4gqQ&_nc_oc=Adrnp1nf0_gtyFMKLdRp1DLwThHKzrvpsH5FwpsG0qF_dfeTvYPJXMOsqKrZxu6L0mY&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=nBAehv1TMtA4DsIzcwcYDw&_nc_tpa=Q5bMBQKNh4gcpKihXbcTKcCjdQen3NrFd6a1xfpH-mrkr1y5AERfzthWnIsrzfdkgrBhqaT2d67vQ-mL&oh=00_AQSBKyp27ye2vp6JpcnRN_mK6tW44yIn-hO6fGpe9pqFdA&oe=6B0E1BDA",
       "link": "https://www.facebook.com/reel/2293951621152738/",
       "publicado_em": "2026-11-24T02:00:03+0000",
       "curtidas": 3,
@@ -436,7 +436,7 @@
     {
       "id": "1753378231566500_1675207651060766",
       "titulo": "Cria conteúdo e quer conhecer o programa? Comenta QUERO que eu te mando o link 👇\n\nHá dois anos eu recomendo produto de bebê aqui. E se você",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t51.82787-10/910059663_18486276466112114_5766802899938192260_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=mQQm0xsGLuEQ7kNvwEMmIxq&_nc_oc=AdpAeIt10JeXZ-abdS3TG5rz6xkAqfDDHvqE63Gi9DGiucYhw4CyVZBPLS3PtVEbMY8&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=q7NZiuNvfLODyRG8q8hpiQ&_nc_tpa=Q5bMBQJluaznFgyE6iVbD1gkzrevCTvJv3exoRs1EPKP0kbNhuIPTq8bNtxwFI3uyefqrC6D7W5_1dnk&oh=00_AQRlcnLsRpXIusxUJ6Y-tGLAxaCN0w3QrNarr0Chtx9RZg&oe=6B0CE266",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t51.82787-10/910059663_18486276466112114_5766802899938192260_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=mQQm0xsGLuEQ7kNvwEMmIxq&_nc_oc=AdpAeIt10JeXZ-abdS3TG5rz6xkAqfDDHvqE63Gi9DGiucYhw4CyVZBPLS3PtVEbMY8&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=s0BjMXwRTCua8hyUFHOhkA&_nc_tpa=Q5bMBQKG5udBGeOPqcxs0khLXRo3qspXy8zBtD8kvhditzP9WNfoiT2LTvaCPJzMxP8agatU8sc30Vty&oh=00_AQS6_-9geUXsqCc_3-6JOA85SbpuPRqYTCNboe2sOixdBg&oe=6B0E33E6",
       "link": "https://www.facebook.com/reel/1127059416624895/",
       "publicado_em": "2026-11-22T20:00:06+0000",
       "curtidas": 3,
@@ -447,7 +447,7 @@
     {
       "id": "1753378231566500_1675207344394130",
       "titulo": "💛 Comente BF que eu te mando o link do grupo exclusivo da Black Friday no WhatsApp.\n\n#recemnascido #newborn #gestacao #maedeprimeiraviagem ",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t51.82787-10/902954680_18486584671112114_1861519884803549586_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=Yfx4-KhqouAQ7kNvwGle6cj&_nc_oc=Adpo-ThG0xYFXobaH5bmMwkH3f0sLkVPuCvfqXTwhRe5vUouPqj8voq_yfpAcZw0cQU&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=HKs09u0yw_gy6j8gpCticg&_nc_tpa=Q5bMBQKElSQMnuiWn_hNjcWF6NL_w3uAJCaeSyULT2pnSl-Mx-fBF8SSXBWsLt5GE78GIOArE79ZWcaD&oh=00_AQQleUnCgzyp9QblFxACx2RbeTJMzs6nc-BMEGe59Y0_Sg&oe=6B0CE6CF",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t51.82787-10/902954680_18486584671112114_1861519884803549586_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=Yfx4-KhqouAQ7kNvwGle6cj&_nc_oc=Adpo-ThG0xYFXobaH5bmMwkH3f0sLkVPuCvfqXTwhRe5vUouPqj8voq_yfpAcZw0cQU&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=s0BjMXwRTCua8hyUFHOhkA&_nc_tpa=Q5bMBQKo_1V10cc1FRhlVUnBF2wKX7hhCxumekf6IyHCkbfDvqcnjk4A4JfYbf7tmjUWyAS5IwZ2jPJl&oh=00_AQTnW4dxlWf3faQ1KgziEAaYLtlmnFEMQSDIHXOAm7NyzA&oe=6B0E384F",
       "link": "https://www.facebook.com/reel/1165436242581960/",
       "publicado_em": "2026-11-22T02:00:10+0000",
       "curtidas": 3,
@@ -456,9 +456,31 @@
       "engajamento": 3
     },
     {
+      "id": "1753378231566500_1675208821060649",
+      "titulo": "👉 Comente GESTANTE para ter acesso à aula gratuita para gestantes 👈\n\n#recemnascido #newborn #bebe #maternidade #maedeprimeiraviagem #gesta",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t51.82787-10/902954860_18484982131112114_81830686944225778_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=fV4H5dYMXFwQ7kNvwFbz0vw&_nc_oc=Adoowf4VaThxejaIxlJ5JfQLKwHF9uzCjTD4enFPa7de2idlnd3nOs5TMmKvurVbBgI&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=J7f0FiokBeszfc8LN8ckIQ&_nc_tpa=Q5bMBQL7v1pDkpQ51HnKz-B2OcdRGJeA9QgQC7invhq4pxpfZLlKM0h2MabBEBmMgl4skfksNTLYJY9p&oh=00_AQS-OrznWCb49rNX7rauJIrYa4QqmJuPvbbEXvnCglxwEw&oe=6B0E432D",
+      "link": "https://www.facebook.com/reel/2170020967723189/",
+      "publicado_em": "2026-11-26T02:00:06+0000",
+      "curtidas": 2,
+      "comentarios": 0,
+      "compartilhamentos": 0,
+      "engajamento": 2
+    },
+    {
+      "id": "1753378231566500_1675208727727325",
+      "titulo": "Comente #AMA para receber o E-book Gratuito: Por que meu bebê parece não saciar no seio?\n\n#recemnascido #newborn #gestacao #maedeprimeiravia",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t51.82787-10/902954547_18485125396112114_4180758251091388249_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=Kn49EDuRKlMQ7kNvwHoE1BU&_nc_oc=AdrdaeEexqTbXfBC8w1TTmOHKf1aE2jnMtU-Mwc7kfp7_GMiBRvYguTnn7JLSm-ep7w&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=J7f0FiokBeszfc8LN8ckIQ&_nc_tpa=Q5bMBQLKwqCF4oyJvzPYunyctnQli4KXscKMg9gal70z8FbjaM4DePEIBJVI60t2HFJVEtznYr8cOZ7J&oh=00_AQTRMMIsuXpcRNg4BBnEpcOv2CQHy2waAOlDhFlobz6eYg&oe=6B0E1F00",
+      "link": "https://www.facebook.com/reel/1838359230810484/",
+      "publicado_em": "2026-11-25T20:00:06+0000",
+      "curtidas": 2,
+      "comentarios": 0,
+      "compartilhamentos": 0,
+      "engajamento": 2
+    },
+    {
       "id": "1753378231566500_1675207854394079",
       "titulo": "🤰 Comente MATERNITY e entra no grupo da Black Maternity no WhatsApp.\n\n#recemnascido #newborn #bebe #maternidade #maedeprimeiraviagem #gesta",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t51.71878-10/907603329_959179447042593_8721416153654973212_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=mQeF2CwFULwQ7kNvwE8_Wd-&_nc_oc=Adp8TqBODw1apeTIuFvRJnp-UXuwqkq31hBSEuG5ufP-B9kvzV6B17v2LQ-n6RfCdp8&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=q7NZiuNvfLODyRG8q8hpiQ&_nc_tpa=Q5bMBQL8UQG0cOIIHytMKL8-RBaz9WUkOs4AXT3Eoln6UtCor6-OIPXWxbsaqVOgaWjXSEzkZvdU0L6D&oh=00_AQRQdlcnVR2gS9kqB9HIFcMrxQC2qLe3phSocNQXmon8Sw&oe=6B0CBE24",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t51.71878-10/907603329_959179447042593_8721416153654973212_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=mQeF2CwFULwQ7kNvwE8_Wd-&_nc_oc=Adp8TqBODw1apeTIuFvRJnp-UXuwqkq31hBSEuG5ufP-B9kvzV6B17v2LQ-n6RfCdp8&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=nBAehv1TMtA4DsIzcwcYDw&_nc_tpa=Q5bMBQLZBW-SRUUFVBE7-xrx54DxD69y1NefYibtJ8vgEZ1W0uRyWH6UVwgc8lxfdBKhLXI6pG0VCdBy&oh=00_AQTEwvadrEKDPDSMaMvsV2-PBcKEAbkiK_RjOzZGb58l8w&oe=6B0E0FA4",
       "link": "https://www.facebook.com/reel/1171670878644251/",
       "publicado_em": "2026-11-23T17:00:33+0000",
       "curtidas": 2,
@@ -469,7 +491,7 @@
     {
       "id": "1753378231566500_1675208561060675",
       "titulo": "👉 Comente LIVE para ter acesso à aula gratuita sobre autonomia de sono 👈\n\n#sonodobebe #rotinadobebe #recemnascido #maedeprimeiraviagem #ma",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t51.82787-10/902954563_18485325070112114_7634560788133047679_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=uop7nGRNgnwQ7kNvwEjHTvd&_nc_oc=AdqPfsnvf-cnbrhFzZSWUq2KrEwGW9UA8WMC1Lv_U0ocCgc1kKADLR66w7Mu_ciVS1Y&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=9Fli5_N7d-u8lD7497Ulzg&_nc_tpa=Q5bMBQJ4yAcV5unvJtdmjgRAL-CJUDsdrDH_7WVvyuHB5vaNWYT6OeqGChOwpvtImf90PCq4oz78ob3y&oh=00_AQRvLWeWvTL-sS3iW72kONdZAJzhXD3v0gpneGXSZ2RwnQ&oe=6B0CEA13",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t51.82787-10/902954563_18485325070112114_7634560788133047679_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=uop7nGRNgnwQ7kNvwEjHTvd&_nc_oc=AdqPfsnvf-cnbrhFzZSWUq2KrEwGW9UA8WMC1Lv_U0ocCgc1kKADLR66w7Mu_ciVS1Y&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=J7f0FiokBeszfc8LN8ckIQ&_nc_tpa=Q5bMBQL2_moFUeSE158_-7Qlx2DADjV7mmEkmjN68kOmzUZTwe2j4M8pu4r2TTL2MADr_KGNl_ndg4Sk&oh=00_AQTOuC8RS2LWnqnpUJ_HCd-JRNrzNvftHXrEnCU545JkqA&oe=6B0E3B93",
       "link": "https://www.facebook.com/reel/1815104326361616/",
       "publicado_em": "2026-11-25T05:00:06+0000",
       "curtidas": 1,
@@ -478,20 +500,9 @@
       "engajamento": 1
     },
     {
-      "id": "1753378231566500_1675208244394040",
-      "titulo": "💛 Comente BF que eu te mando o link do grupo exclusivo da Black Friday no WhatsApp.\n\n#sonodobebe #rotinadobebe #recemnascido #maedeprimeira",
-      "thumb": "https://scontent-gru3-1.xx.fbcdn.net/v/t51.82787-10/904316006_18485607289112114_1570597336164482772_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=WmGxFkaIAO4Q7kNvwEiiLnz&_nc_oc=AdoHesgrqO8pb2YP1aILxs0-Y4aBkuTdKYb_rc1IOnOhY4xJHPRy53C7Hwtlr9KqUZc&_nc_zt=23&_nc_ht=scontent-gru3-1.xx&edm=AKIiGfEEAAAA&_nc_gid=9Fli5_N7d-u8lD7497Ulzg&_nc_tpa=Q5bMBQLiSTc4ayG33DkBMHqpywOo9tOag9ccnEBldpLHcTLcWBO4kaZbDFWVOIZKV9Nk-Wmrd98ds0jG&oh=00_AQSLNi2SBqqejF0eGwHK_InOU2idCtS1ILD8p6BWz_C1rA&oe=6B0CBD41",
-      "link": "https://www.facebook.com/reel/2344569586393626/",
-      "publicado_em": "2026-11-24T17:00:49+0000",
-      "curtidas": 1,
-      "comentarios": 0,
-      "compartilhamentos": 0,
-      "engajamento": 1
-    },
-    {
       "id": "1753378231566500_1675208181060713",
       "titulo": "Comente ENXOVAL e receba gratuitamente o e-book Enxoval Descomplicado ❤\n\n#recemnascido #newborn #bebe #maternidade #maedeprimeiraviagem #ges",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t51.82787-10/902954763_18485754946112114_2228581877968314404_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=TnKVi5tuQVUQ7kNvwFEVWkh&_nc_oc=AdoW9u8hT5SIDjRdIryew8JVbS728hj5n7QMxAC7wXe83NJy17P2Mv24yOWf2Uw3PZQ&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=9Fli5_N7d-u8lD7497Ulzg&_nc_tpa=Q5bMBQJALU7KpZRMICauVWDxfPSh_bLCQKvOcVw8xEQBRNpy5JHQKBYdZiI8e1J99ruWgRTM3bIxKXNY&oh=00_AQT631FQZ0eVP7F0iBKdnG6P9Z91FOxM2K796FKpD11GAg&oe=6B0CDD06",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t51.82787-10/902954763_18485754946112114_2228581877968314404_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=TvVlnIoE2-wQ7kNvwE6kFgj&_nc_oc=Adp7C6K-j4OjhP3ViX-suC5jd0Cl3GcYlNXogPupQrMl_FoNHsVLj9HLtgspcOSPzHk&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=nBAehv1TMtA4DsIzcwcYDw&_nc_tpa=Q5bMBQJoSvcIJIjZS9yo3M8rfjW_Z9Zc-YcqhYYVh3nW8WUjbn9RM252yI3KdwQf5F10PzTg08rRlRyQ&oh=00_AQQ-8gZxTN_BJizqfjaqJ0qjJtXucrfar9U_DLG511WT4A&oe=6B0E2E86",
       "link": "https://www.facebook.com/reel/1972521944156439/",
       "publicado_em": "2026-11-24T05:00:06+0000",
       "curtidas": 1,
@@ -502,7 +513,7 @@
     {
       "id": "1753378231566500_1652892153292316",
       "titulo": "QUER O LINK? Comente \"QUERO\" ❤️\n\nLixeira anti odor\nLixeira para quarto do bebê\nEnxoval do bebê\nFraldas do bebê\nLixeira sem cheiro\nFraldas su",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/884418226_2519037448593902_4494430610483761711_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=3GEJHLcCIdcQ7kNvwHsnps0&_nc_oc=Ado3S5v_PwwpdLoTKVSag9lfA7r5QexlRTEk9Q7R3THZFR1yRyQsuit22MsGA7iLCkA&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=WGkbXttWFE6xf0UOpxmNAQ&_nc_tpa=Q5bMBQJdl-EVahNMN9xTfqlfodgSbNbRYDPdRDenDSQh2atGYJi8TjZgk7K0g4wxUk96A6tx-FsjpqSC&oh=00_AQRtL_DDH7kft5mLuawA8Uukma0KfbTBXAhqw7KOjZda8A&oe=6B0CC9EE",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/884418226_2519037448593902_4494430610483761711_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=DffS0gHrhCIQ7kNvwGvjd5E&_nc_oc=AdoSKdDg0WpH0QjSxtUpLQ88rANKiE9pYtHVs12dIMFhNUPT02cYJQAQMmd8PFJalRg&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=rcxIVN7onFhk90kki7xA1Q&_nc_tpa=Q5bMBQLNnamkQEfzrngH79vYy1wac-DfivHr6ftMRFZVl6dg5Nx-n4N5AaffHxWroazRMb2QZltovFPO&oh=00_AQRLMnwAt_ZgegEX3L8XySbo5-lKuq_mPkghdKCo_SE_Rw&oe=6B0E1B6E",
       "link": "https://www.facebook.com/reel/2519037338593913/",
       "publicado_em": "2026-10-31T11:02:29+0000",
       "curtidas": 0,
@@ -511,9 +522,53 @@
       "engajamento": 1
     },
     {
+      "id": "1753378231566500_1681269810454550",
+      "titulo": "Comente #AMA para receber o E-book Gratuito: Por que meu bebê parece não saciar no seio?\n\nCompartilha essa informação importante com uma mam",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/903240091_1080822461640910_2746701688465943922_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=7CwPbyXyNc0Q7kNvwGU82eB&_nc_oc=AdodVRAvDy-5SX6acGE1iIIyI-eS2DVkmW54KLQ1N2jDZ203kuNnoDktWCCVudNGKrI&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=J7f0FiokBeszfc8LN8ckIQ&_nc_tpa=Q5bMBQKYOQeimp2nmKgrpagobZHZJIqBttA-EkHtiJ4mBp1jVdS0fbgMhyjsS2dKFrExBMGGKBlyX3t_&oh=00_AQQrxBpnylMLvw_14XE7-et_DZa2fI3lqGPqN1B-T8oeUg&oe=6B0E1A86",
+      "link": "https://www.facebook.com/reel/1080822234974266/",
+      "publicado_em": "2026-11-26T11:03:58+0000",
+      "curtidas": 0,
+      "comentarios": 0,
+      "compartilhamentos": 0,
+      "engajamento": 0
+    },
+    {
+      "id": "1753378231566500_1675208917727306",
+      "titulo": "QUER O LINK? Comente \"QUERO\" ❤️\n\nCartinhas de alto contraste\nBrinquedos para bebê\nBrinquedo recem nascido\nBrinquedo sensorial\nEstimula visão",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t51.82787-10/902954506_18484917169112114_5194021049580091026_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=NsN1vxmcKkwQ7kNvwEWcm27&_nc_oc=AdpaqDxtJJkJufn7mE50kBPDWyQpAXp0d3GeFMT3zVe-L3WjVYHDNvQKudBX4XpCprg&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=J7f0FiokBeszfc8LN8ckIQ&_nc_tpa=Q5bMBQIN_Mw7bf1VrIKpe6NHNdKekZDobv61_MYgNPji3IymYugdnh6gFVB26H9Bl-BcwYoiJrxcXkhA&oh=00_AQRBqWVfjcjxdNI6-jNKv5OkuTCIoa10iyrkb3WuM0mSQw&oe=6B0E3102",
+      "link": "https://www.facebook.com/reel/1107207345467800/",
+      "publicado_em": "2026-11-26T05:00:08+0000",
+      "curtidas": 0,
+      "comentarios": 0,
+      "compartilhamentos": 0,
+      "engajamento": 0
+    },
+    {
+      "id": "1753378231566500_1680467920534739",
+      "titulo": "👉 Comente GESTANTE para ter acesso à aula gratuita para gestantes 👈\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemnasc",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/905003913_2581184629026309_8683394663330169019_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=s70ccyP33VIQ7kNvwG1RW9x&_nc_oc=AdoBDv2Qd9kJpTjbNtyH868ub1VNMOY1CGO3K349QTmGyawPbrrb8yGcIx6w_HgcRmI&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=J7f0FiokBeszfc8LN8ckIQ&_nc_tpa=Q5bMBQL3Pn6uZr_i-A6k_OXGotXCdatB6t-6YETRSvcUoEYZedNbJuMjXqfiWglJvvow-H59rNB0mIg0&oh=00_AQSIzW-bA2s7n7zNmOkJDwauOZwBkqyrkUCZIFLE0naesw&oe=6B0E1C75",
+      "link": "https://www.facebook.com/reel/2581184469026325/",
+      "publicado_em": "2026-11-25T17:04:48+0000",
+      "curtidas": 0,
+      "comentarios": 0,
+      "compartilhamentos": 0,
+      "engajamento": 0
+    },
+    {
+      "id": "1753378231566500_1675208647727333",
+      "titulo": "💛 Comente BF que eu te mando o link do grupo exclusivo da Black Friday no WhatsApp.\n\n#recemnascido #newborn #gestacao #maedeprimeiraviagem ",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t51.82787-10/902954675_18485183779112114_8555746140659830738_n.jpg?_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=qW4PFZM85G0Q7kNvwGP5wDs&_nc_oc=AdpqoukGdXgYo3SazOdDb4NB1GZi6t1fSWeDlidFDZbSszYRYYDrDRduHjIrxMx3-Lc&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=J7f0FiokBeszfc8LN8ckIQ&_nc_tpa=Q5bMBQKo6rGsUEN6gpfjIXJxNWZFt3WxJlDv0dqnm93fS7cPz7rHCWJ6Jlay-7BIEknTIwqWd-SmybCx&oh=00_AQQ0tUj9wRb5U56r_DvFh61ekc5AbOEW8-62nRgyKWHc4Q&oe=6B0E2F1B",
+      "link": "https://www.facebook.com/reel/1973856807274728/",
+      "publicado_em": "2026-11-25T17:00:33+0000",
+      "curtidas": 0,
+      "comentarios": 0,
+      "compartilhamentos": 0,
+      "engajamento": 0
+    },
+    {
       "id": "1753378231566500_1680136233901241",
       "titulo": "QUER O LINK? Comente \"QUERO\" ❤️\n\n#publicidade\n#banhodobebê\n#rotinadobebê\n#maternidade\n#maedeprimeiraviagem\n#brinquedosdebebê\n#atividadespara",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/904569796_4750981961852537_255801605303955567_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=ujuP05MKcpcQ7kNvwGew7LD&_nc_oc=AdooyxaUhR231G6LnxkQAsGvW0xlDJs4NlNPLXnTkxqpIwMXZcy-ViTgIpL9F15H9q0&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=9Fli5_N7d-u8lD7497Ulzg&_nc_tpa=Q5bMBQIrldTpzCkXAJ1SOTIhUrT143DuJ2ryVtBEzgYYwOi51JUlJAtP1vdT1l7q3HLpTeodkBa-g-O0&oh=00_AQQRON_m8lVIk6GKenWJC9EUrgPlHahjzSCgAeuYc7T2JQ&oe=6B0CD939",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/904569796_4750981961852537_255801605303955567_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=UfZhsqLnhMcQ7kNvwGcKd7w&_nc_oc=AdrLG0B1F4Ye9-Ypsjx_wIR3EGSUCYv6E3EyXfVLaSlHvPWneyA0vkowRE3PKDnaDFY&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=J7f0FiokBeszfc8LN8ckIQ&_nc_tpa=Q5bMBQK7QuNPJVmAVlUAHFwpNcqp9DfDOH-QqZ2laVgxFOf2vTiYC13EZrIIaLzY0q_21HrYC1tymMpr&oh=00_AQSbWzvwqUGhyVum83ET2tZ_mUZYKEUpAbC9n9yYlUSNig&oe=6B0E2AB9",
       "link": "https://www.facebook.com/reel/4750981835185883/",
       "publicado_em": "2026-11-25T11:02:10+0000",
       "curtidas": 0,
@@ -524,7 +579,7 @@
     {
       "id": "1753378231566500_1675208461060685",
       "titulo": "👉 Comente GESTANTE para ter acesso à aula gratuita para gestantes 👈\n\n#recemnascido #newborn #bebe #maternidade #maedeprimeiraviagem #gesta",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t51.82787-10/902954727_18485382085112114_5592608767262606655_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=02Qqw4y30zkQ7kNvwFc51oK&_nc_oc=AdpAGfDt9ju83bNPns5PydSSvKapLMvWcbr3jYZXxdyihz2rBYepeSJiQ8Z-Vpj8s9o&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=9Fli5_N7d-u8lD7497Ulzg&_nc_tpa=Q5bMBQKIXaWyGeXGhsYJXXvkcMn7_3OJToaEtQGRmMzVwM5XwGPPcRZaYJkVwCikF0lSE6pIvY_CeOXE&oh=00_AQRXAtQ-VtvvvY2hWOXAtFsm0FQQtCsecngad9A9vL18nw&oe=6B0CC0A4",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t51.82787-10/902954727_18485382085112114_5592608767262606655_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=5fad0e&_nc_ohc=02Qqw4y30zkQ7kNvwFc51oK&_nc_oc=AdpAGfDt9ju83bNPns5PydSSvKapLMvWcbr3jYZXxdyihz2rBYepeSJiQ8Z-Vpj8s9o&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=J7f0FiokBeszfc8LN8ckIQ&_nc_tpa=Q5bMBQLx9yJxZ7QaO2iUcLinmfA3Yd-Og6HLSWt1q2M4bdX30TraJBkJ4fFqCsFV5d3faF0_LdlasWA3&oh=00_AQTlmfkkH5-ea1-vuRtwJ39zyYkq9Tz4VBF5kTI7WhQayg&oe=6B0E1224",
       "link": "https://www.facebook.com/reel/1616009293084380/",
       "publicado_em": "2026-11-25T02:00:10+0000",
       "curtidas": 0,
@@ -535,7 +590,7 @@
     {
       "id": "1753378231566500_1679342023980662",
       "titulo": "👉 Comente LIVE para ter acesso à aula gratuita sobre autonomia de sono 👈\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#sono",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/906475357_1634007107946790_7282160316375295666_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=wyE-nbPSMIQQ7kNvwGBgowF&_nc_oc=Adqs6o-3vIMnVm97mRwLqxpiGbMet2DNtC5MTY_U2Qlp0SSx55MU7xiNer-Bnz1ap1c&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=9Fli5_N7d-u8lD7497Ulzg&_nc_tpa=Q5bMBQKL8QhLBAlFIqATIQxhlO9RzHhR3GQTwNS70gcs7TZx8M9yz9CtNurpwuIzPowjy8WcYaax8awb&oh=00_AQSn7gE_RV7m0L7JZafR13J5Y_wPCw5IbIXq9drw5-UFOQ&oe=6B0CCEF1",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/906475357_1634007107946790_7282160316375295666_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=aAvQoEUwXtkQ7kNvwGMwe34&_nc_oc=Adr6icMZ3DlLiGSyvv91Ei6TM-ay3Or1T1XZZrIRLBYQtvq8rWi9i5wEGjW85USs1eE&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=nBAehv1TMtA4DsIzcwcYDw&_nc_tpa=Q5bMBQLzEoysp0LkOnWcePQriCGPqwIDngTLxHMpVtaZSXAYWcDvMj2JW_gGA0LsdR4NybxV0t5kXLpz&oh=00_AQSf5j6R2rlQ3wEQipiIHuvryRyFAO1X0g11zuX8RAfcfA&oe=6B0E2071",
       "link": "https://www.facebook.com/reel/1634006964613471/",
       "publicado_em": "2026-11-24T17:03:07+0000",
       "curtidas": 0,
@@ -546,7 +601,7 @@
     {
       "id": "1753378231566500_1678997094015155",
       "titulo": "Comente: CONSULTA para receber mais informações 🥰\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemnascido #newborn #gesta",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/902875472_1194203420199949_8905542636388141073_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=WFMrqZ03fBQQ7kNvwGuyEzD&_nc_oc=Adprfv3T9gjqcf2nRFeDGUD5xvQgcRacDA7xdMD6J6DU7ud4L7oVwqy2v-wUbOlxMJo&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=9Fli5_N7d-u8lD7497Ulzg&_nc_tpa=Q5bMBQJkJ_nGb39r4nbfGoHgWEEbWpCEHfzsF6vAMZSYfQ2wApgONTwmKkMwNMCjLFmuRv8fx3rUqjjM&oh=00_AQQBxqcLMy2VcbC-BUNQco0mY66vN5sPhcLw_4aSZ_kuWw&oe=6B0CD44B",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/902875472_1194203420199949_8905542636388141073_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=a39TEnvDBWQQ7kNvwGkw2hL&_nc_oc=AdoHxVFdDNvvkpGViWEUOHDss2H6rmoARyOsues4f7HxV0KngnDEVWxR1Odh7hLtFoI&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=nBAehv1TMtA4DsIzcwcYDw&_nc_tpa=Q5bMBQJHAVqqlJ4f0CLzDcZFEia-y0E0BFq1YQGY0hMtKHydKNjeckSKwiwvSeWsqpYQ1OzcRz5sxBFm&oh=00_AQRjjLTy8UbKE0gClRL01zTr452kWdl9MvJwPdqYU3o6Xg&oe=6B0E25CB",
       "link": "https://www.facebook.com/reel/1194203333533291/",
       "publicado_em": "2026-11-24T11:03:31+0000",
       "curtidas": 0,
@@ -557,7 +612,7 @@
     {
       "id": "1753378231566500_1678232437424954",
       "titulo": "🤰 Comente MATERNITY e entra no grupo da Black Maternity no WhatsApp.\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemnasc",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/902290965_2664039437353119_2419129243097261775_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=LF_6RPxCzUUQ7kNvwGd7NoJ&_nc_oc=AdqGIXjXdJl15hNp01L3UNpXIx9bIUDBw2g28BowkTQdwqpor0GvI7ntcdE9wYjQcmI&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=q7NZiuNvfLODyRG8q8hpiQ&_nc_tpa=Q5bMBQLeaX4wYTLmfJQnWdNmwZE1AM2oYwcpEVyvKphUMe-MwX8wRNkbb6N_nJQ3v6mZDDEhKV8jP7Bw&oh=00_AQQYsTeEKXZ4q0vVhQlOxwMiMxQUD7ojl6TAEG4XLpYw1A&oe=6B0CBF67",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/902290965_2664039437353119_2419129243097261775_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=LF_6RPxCzUUQ7kNvwGd7NoJ&_nc_oc=AdqGIXjXdJl15hNp01L3UNpXIx9bIUDBw2g28BowkTQdwqpor0GvI7ntcdE9wYjQcmI&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=nBAehv1TMtA4DsIzcwcYDw&_nc_tpa=Q5bMBQK9Mg1ozb0pZkHs48m2fypypTrjNVpNutqlrz8cR6QmlTAcDyHK_g6p-GOXH4CKKE4Tvls0cWRc&oh=00_AQR8oVpTpU0z5B_X9lV_0_LDawd0g-iSN7Y59AJXOwdBwQ&oe=6B0E10E7",
       "link": "https://www.facebook.com/reel/2664039304019799/",
       "publicado_em": "2026-11-23T17:05:11+0000",
       "curtidas": 0,
@@ -568,7 +623,7 @@
     {
       "id": "1753378231566500_1677910764123788",
       "titulo": "Comente aqui SONO25 e receba gratuitamente o e-book: O que ninguém te contou sobre o sono do bebê no berço ❤\n\nCompartilha essa informação im",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/902334826_981409021335436_6331029755945204279_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=5IzQe-1Ojo4Q7kNvwFqV3Qp&_nc_oc=Adq2otYKc7NoGCBqaCrpCPyGX9qZfRV6SA_PKMrNWyVhLAUsbZsf_WitB0qHcIJYVTc&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=q7NZiuNvfLODyRG8q8hpiQ&_nc_tpa=Q5bMBQI9Bi007Zm3rdWOOrxIaUMqv_VnY4TZHcsEozkvZi_4JLM6vRRim0nMFW6vrcuBlDEx9jBmOLF0&oh=00_AQQy_9XuZtMsIyEb7bb-JAk54Eiz92L4An8RgPGHk_sYmA&oe=6B0CCB52",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/902334826_981409021335436_6331029755945204279_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=5IzQe-1Ojo4Q7kNvwFqV3Qp&_nc_oc=Adq2otYKc7NoGCBqaCrpCPyGX9qZfRV6SA_PKMrNWyVhLAUsbZsf_WitB0qHcIJYVTc&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=nBAehv1TMtA4DsIzcwcYDw&_nc_tpa=Q5bMBQL7dzXNO7pEDodhZ1EdHeGXeycMDlEwk1O2eQOADikpw212PD5UpmvGpBs5kNaj2PDbqNphz59a&oh=00_AQQmlHOvx3dMNTR6INLoXxZ_NzU5qFM2g4FH3dCg886MCg&oe=6B0E1CD2",
       "link": "https://www.facebook.com/reel/981408938002111/",
       "publicado_em": "2026-11-23T11:03:05+0000",
       "curtidas": 0,
@@ -579,7 +634,7 @@
     {
       "id": "1753378231566500_1677164654198399",
       "titulo": "👉 Comente AULA para ter acesso à aula gratuita de amamentação 👈\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemnascido ",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/902252942_4686370674963706_423715003374530406_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=Bf80tGyQetcQ7kNvwGcOX3l&_nc_oc=Adow6MXLc2RBYx3eMazshHUHEM2FzGJcwlErpSCBBBKv_5tVx_W3xTzN7DS6KPsDvRk&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=q7NZiuNvfLODyRG8q8hpiQ&_nc_tpa=Q5bMBQItwRovO6MrkNhBjHOCC1E_s9Wli0ASiKBz56vZG8-lXAMfz0z34E_AJ9ale5tpy8i-vHaFauzU&oh=00_AQTFmDIp68gvGUmQNn4qvqbm_OaiOuJ02FvIoddXE-4DhQ&oe=6B0CF3E8",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/902252942_4686370674963706_423715003374530406_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=Bf80tGyQetcQ7kNvwGcOX3l&_nc_oc=Adow6MXLc2RBYx3eMazshHUHEM2FzGJcwlErpSCBBBKv_5tVx_W3xTzN7DS6KPsDvRk&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=s0BjMXwRTCua8hyUFHOhkA&_nc_tpa=Q5bMBQIAdBM4Nw3jMdOEwN0kzx09iFeF3sFeX93LJxxbScYK8VImQKUsFZLVWVh5K4Yw0iU79xP1PLH3&oh=00_AQTn_CPaLGl3FVPjMUbbJ2CK2MLM211h75iV8fc5NfjC3Q&oe=6B0E4568",
       "link": "https://www.facebook.com/reel/4686370458297061/",
       "publicado_em": "2026-11-22T17:04:18+0000",
       "curtidas": 0,
@@ -590,7 +645,7 @@
     {
       "id": "1753378231566500_1676844207563777",
       "titulo": "Comente ENXOVAL e receba gratuitamente o e-book Enxoval Descomplicado ❤\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemna",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/901335304_1700500448402410_1641993647150587364_n.jpg?_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=gyvemndgrXkQ7kNvwEw5krL&_nc_oc=AdotP-o0im-H7_IYojEUAVS7V2D3t4Pa4DNzPulilgHkV9Nysfb8ckcivpXlCun_NBE&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=q7NZiuNvfLODyRG8q8hpiQ&_nc_tpa=Q5bMBQL-UBVBFdoyvSRsxKEE03LF0x8LeQ3HtBVrdDSFKPZQ86sg42JxcJ_MoUO6K2J_M6De0C7nZjOm&oh=00_AQTwZ5VKnmKaviBAXvTSnaYg4IyxoOb_ncMJvt6BwoBWHw&oe=6B0CCD8F",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/901335304_1700500448402410_1641993647150587364_n.jpg?_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=gyvemndgrXkQ7kNvwEw5krL&_nc_oc=AdotP-o0im-H7_IYojEUAVS7V2D3t4Pa4DNzPulilgHkV9Nysfb8ckcivpXlCun_NBE&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=s0BjMXwRTCua8hyUFHOhkA&_nc_tpa=Q5bMBQIeDn8FYExzXOYz1JyuUfsC40ydAJ_wjN2ILzI7mSA_H3hFL850d304RO8887MoCifU4a0qx5An&oh=00_AQR8SRln_iHDmU1QvhZuJTO8R23u6LFfGwQ6gnlB78NEdg&oe=6B0E1F0F",
       "link": "https://www.facebook.com/reel/1700500361735752/",
       "publicado_em": "2026-11-22T11:03:48+0000",
       "curtidas": 0,
@@ -601,7 +656,7 @@
     {
       "id": "1753378231566500_1676077110973820",
       "titulo": "💛 Comente BF que eu te mando o link do grupo exclusivo da Black Friday no WhatsApp.\n\nCompartilha essa informação importante com uma mamãe \ud83d",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/896071039_1449399263443254_5499455335854155571_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=1QbrF00yfJgQ7kNvwG-hy2w&_nc_oc=AdrWM5MXw8MRHSBib-sz1jFyqpXQvovglM_Dpj-7VQevHu_7Q8IUsA_m34h7Yof5fEU&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=HKs09u0yw_gy6j8gpCticg&_nc_tpa=Q5bMBQLq5xgZNEqpZ4AydjMG_mMrzlSKxJcMf81mEKwhcHUuyZ0lPgS0PlqBwzDgjCGsjg8pHnQyQL7Y&oh=00_AQRS21memOmkDRyRm4v5f18viLs99SCCw9OIqoYvRLsCKg&oe=6B0CD1D1",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/896071039_1449399263443254_5499455335854155571_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=1QbrF00yfJgQ7kNvwG-hy2w&_nc_oc=AdrWM5MXw8MRHSBib-sz1jFyqpXQvovglM_Dpj-7VQevHu_7Q8IUsA_m34h7Yof5fEU&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=s0BjMXwRTCua8hyUFHOhkA&_nc_tpa=Q5bMBQJxVwZ9crRlgqAujSWVwyGcGcCK7s0G-VdLFi9OGFle98Mp-fpVUUy9rd0MLvHIcHu8sx0fMFKT&oh=00_AQR8Kt4gF5eX-Qf1qbZE1RmDdQD0fCzQra-fWMsDwD2wXw&oe=6B0E2351",
       "link": "https://www.facebook.com/reel/1449399136776600/",
       "publicado_em": "2026-11-21T17:03:03+0000",
       "curtidas": 0,
@@ -612,7 +667,7 @@
     {
       "id": "1753378231566500_1675761327672065",
       "titulo": "QUER O LINK? Comente \"QUERO\" ❤️\n\nAlmofada de ervas anti cólica para bebês\nAlívio para cólicas infantis\nAlmofada terapêutica para bebês\nAlmof",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/902792192_1611357346919390_2091303102918578812_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=4cuTLFZPErMQ7kNvwFoPFQ5&_nc_oc=AdrHflKcY9IbkuZcNMjmw3CKbt5LguBzHRbPXpcrTSEC2zhPGGXU9u69THxPw_t-X44&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=HKs09u0yw_gy6j8gpCticg&_nc_tpa=Q5bMBQLOWAdZafAdYi59gr9KU-No6r3HRrFk8pnoK-2DWVPSCMICQ24SPccnVtpoU8I9Kgw-wbYN1WWJ&oh=00_AQR4y-01btw1hPdiUK7S7gfWIOSmVdovA7CdPZvwohvL8A&oe=6B0CE51D",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/902792192_1611357346919390_2091303102918578812_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=4cuTLFZPErMQ7kNvwFoPFQ5&_nc_oc=AdrHflKcY9IbkuZcNMjmw3CKbt5LguBzHRbPXpcrTSEC2zhPGGXU9u69THxPw_t-X44&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=bRQmXhNdneA8C6qGSeeOhQ&_nc_tpa=Q5bMBQJ9nyywgak8d_2Tp4KbjoYgId03KUqMJkmTJ4sHmH5yPi2Izu07hruGfbz5b9z8U5dLzCIAjYon&oh=00_AQR11iocJcceOov5ewER4BBZeAtA4mXMfUSgAb1mTS3jMQ&oe=6B0E369D",
       "link": "https://www.facebook.com/reel/1611357173586074/",
       "publicado_em": "2026-11-21T11:04:34+0000",
       "curtidas": 0,
@@ -623,7 +678,7 @@
     {
       "id": "1753378231566500_1674992781082253",
       "titulo": "Comente ENXOVAL e receba gratuitamente o e-book Enxoval Descomplicado ❤\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemna",
-      "thumb": "https://scontent-gru3-1.xx.fbcdn.net/v/t15.5256-10/896226257_2209277646662989_8343915849373860324_n.jpg?_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=GLESDpnW7YwQ7kNvwF68DSr&_nc_oc=Adq2q46YNnJt2ASF2sZGMU1To9gM3ccJR2ia1UHiucMAZAIfD6cofb0daajmrgteaWA&_nc_zt=23&_nc_ht=scontent-gru3-1.xx&edm=AKIiGfEEAAAA&_nc_gid=HKs09u0yw_gy6j8gpCticg&_nc_tpa=Q5bMBQJ1fooMKLZROsBp07bTFASITLeyWLyRDfvsXsEoX8n3AakzQjZf7US2jHoFFpvpeFx3u_50G0qF&oh=00_AQQyadQ7NFoZvbMUIe16LZiupDFa5B6ivpob21bmQHHuJA&oe=6B0CEF3E",
+      "thumb": "https://scontent-gru3-1.xx.fbcdn.net/v/t15.5256-10/896226257_2209277646662989_8343915849373860324_n.jpg?_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=GLESDpnW7YwQ7kNvwF68DSr&_nc_oc=Adq2q46YNnJt2ASF2sZGMU1To9gM3ccJR2ia1UHiucMAZAIfD6cofb0daajmrgteaWA&_nc_zt=23&_nc_ht=scontent-gru3-1.xx&edm=AKIiGfEEAAAA&_nc_gid=bRQmXhNdneA8C6qGSeeOhQ&_nc_tpa=Q5bMBQIhWNI0h9eZ0FOVS3REvkrfLXw-IGC1xUnyxC495pY2TwjokTYGrCX__bckC-zVo3vH0hfVF0-u&oh=00_AQQcqyvkHN2SMNGdLRxBQmW2RfWL2IBh1TYT6c_xIKI-SQ&oe=6B0E40BE",
       "link": "https://www.facebook.com/reel/2209277513329669/",
       "publicado_em": "2026-11-20T17:04:05+0000",
       "curtidas": 0,
@@ -634,7 +689,7 @@
     {
       "id": "1753378231566500_1674671614447703",
       "titulo": "👉 Comente LIVE para ter acesso à aula gratuita sobre autonomia de sono 👈\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#sono",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/896683976_1168560579014063_1685916755082938307_n.jpg?_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=E7e2t75yS60Q7kNvwHoe_tg&_nc_oc=Adoxki-nIeF6WZfRAaP6oOvFNSX9Ra55UgTGVbSR0kyTTr6MAqyjvsvHsXPbyjVZjos&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=HKs09u0yw_gy6j8gpCticg&_nc_tpa=Q5bMBQIquVdBv24RXZpEUpiU92ns-JnKPJqxVGBgYvnquaREm-zUm2VPBH5gWbt6izd6Z2N7rH-6BMSs&oh=00_AQQm8R6BWFX32yV5hP-ITx_Pm6OrBWDd8mbo-cLFuQ6qIQ&oe=6B0CE3A4",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/896683976_1168560579014063_1685916755082938307_n.jpg?_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=E7e2t75yS60Q7kNvwHoe_tg&_nc_oc=Adoxki-nIeF6WZfRAaP6oOvFNSX9Ra55UgTGVbSR0kyTTr6MAqyjvsvHsXPbyjVZjos&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=bRQmXhNdneA8C6qGSeeOhQ&_nc_tpa=Q5bMBQLbdIRJwNqKE6_7sbJW5nBumAsbpXjuOwfX3rnMuSUkJY8EQAP0zwyH9lLWi5hRQEq806bKc3c6&oh=00_AQQLEWCRM1AjA6XBRlXZZG2TXLDD1khugGl9bMUIidPFAw&oe=6B0E3524",
       "link": "https://www.facebook.com/reel/1168560499014071/",
       "publicado_em": "2026-11-20T11:03:14+0000",
       "curtidas": 0,
@@ -645,7 +700,7 @@
     {
       "id": "1753378231566500_1673760991205432",
       "titulo": "💛 Comente BF que eu te mando o link do grupo exclusivo da Black Friday no WhatsApp.\n\nCompartilha essa informação importante com uma mamãe \ud83d",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/896643550_4469094813341427_721635603300048223_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=N4jXlRfB8UMQ7kNvwF9KF0x&_nc_oc=AdoBaCMGoCu-RGmeJ5GMnEBi-YpCtCTgsgFtFxP1PBqvHR84WuUC50_dRtgJbd6uXy8&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=HKs09u0yw_gy6j8gpCticg&_nc_tpa=Q5bMBQIpFMfy3YLoLKSbA8Ea2-nUJwrelmNLYHw5re9U-XF_yevg2WN5j9dJ-8m4G7Iq_AwQVrq9uqMj&oh=00_AQSqyHFjVk7rhDEpuEWjvs9KWI5ZeYxXsASyLiB-9yS4XA&oe=6B0CD980",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/896643550_4469094813341427_721635603300048223_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=N4jXlRfB8UMQ7kNvwF9KF0x&_nc_oc=AdoBaCMGoCu-RGmeJ5GMnEBi-YpCtCTgsgFtFxP1PBqvHR84WuUC50_dRtgJbd6uXy8&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=bRQmXhNdneA8C6qGSeeOhQ&_nc_tpa=Q5bMBQKCo8nqpI-rFRbJRsYjuz0hhsFpdcR0erWHSicqkEQDXUuXWcvytV1xfMjovCoMHRCN31Tn6Ny5&oh=00_AQRSYNWpxTduc6L6m5rNNxi10VNfBdL6p7b3x01O6wqDCw&oe=6B0E2B00",
       "link": "https://www.facebook.com/reel/4469094680008107/",
       "publicado_em": "2026-11-19T17:03:55+0000",
       "curtidas": 0,
@@ -656,7 +711,7 @@
     {
       "id": "1753378231566500_1673327414582123",
       "titulo": "Comente #AMA para receber o E-book Gratuito: Por que meu bebê parece não saciar no seio?\n\nCompartilha essa informação importante com uma mam",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/904136480_1138664545716629_8324956996359352350_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=xlwu1jLhDegQ7kNvwFxf1yo&_nc_oc=AdoMvawIKD3lXzrDHZTcHr_y7gOAOSf2xEB83lh9klcN28ty6L10rgM8M5u_B0lqtZY&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=HKs09u0yw_gy6j8gpCticg&_nc_tpa=Q5bMBQLN6WCZZUquMDJlst48PmIwKMc0CyuhHL-ZCYo0wt2BQXTg383L3AzznLS-Wqe7VwHekgjHB-RZ&oh=00_AQSLiNwn_ZbEIU2ud9Vxpg6gMIw85i0kf2P6PtpHw5DfxQ&oe=6B0CE2FF",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/904136480_1138664545716629_8324956996359352350_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=xlwu1jLhDegQ7kNvwFxf1yo&_nc_oc=AdoMvawIKD3lXzrDHZTcHr_y7gOAOSf2xEB83lh9klcN28ty6L10rgM8M5u_B0lqtZY&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=bRQmXhNdneA8C6qGSeeOhQ&_nc_tpa=Q5bMBQKnLNqXjFpciBOtVmuk9znAM3JqxQIEnxRv2XRafFXmf_Mig6d3h5gTrLXFEDFB7ks5KdOQ1eYK&oh=00_AQRtceMrjnJUHBCMBejPtWPCZ8Hu3pLV3HQSccanAweJxQ&oe=6B0E347F",
       "link": "https://www.facebook.com/reel/1138664405716643/",
       "publicado_em": "2026-11-19T11:03:53+0000",
       "curtidas": 0,
@@ -667,7 +722,7 @@
     {
       "id": "1753378231566500_1672214178026780",
       "titulo": "QUER O LINK? Comente \"QUERO\" ❤️\n\nBabá eletrônica\nSegurança do bebê\nBebê dormindo seguro\nSono do recém nascido\nBabá eletrônica para bebê\nEnxo",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/904479061_2218987345633604_215234878433946722_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=q79DD1ailnQQ7kNvwHW1QZ8&_nc_oc=AdqaoFn8EqhcybUbWxPPO96-KAqYmpmEXma-7F9Q-enSRDe_yxKZD4-I0OasNwx1B58&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=HKs09u0yw_gy6j8gpCticg&_nc_tpa=Q5bMBQI3BgTL1SUCtqyzE3miIuvltF3uKvf7w0ejaEQ8qk9kcP9acbsxbk5obdiFzQcwqNAOHlixieEB&oh=00_AQSSLg6i6Tt-baJ9px9m68ABfqtbGejNfgEDnPXmSrN_5w&oe=6B0CD179",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/904479061_2218987345633604_215234878433946722_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=q79DD1ailnQQ7kNvwHW1QZ8&_nc_oc=AdqaoFn8EqhcybUbWxPPO96-KAqYmpmEXma-7F9Q-enSRDe_yxKZD4-I0OasNwx1B58&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=bRQmXhNdneA8C6qGSeeOhQ&_nc_tpa=Q5bMBQJwJCY8m5a6GZxA0WGhKhcBu1bQGdlhm0aPLqqyqQRu_AQGX225CYrkgZ2JhqU3jPHOxhzJCq2_&oh=00_AQQdq4hE-he68nuifgRXTA9dpGq9F-gVapYyBm7ECG3TiQ&oe=6B0E22F9",
       "link": "https://www.facebook.com/reel/2218987228966949/",
       "publicado_em": "2026-11-18T11:03:21+0000",
       "curtidas": 0,
@@ -678,7 +733,7 @@
     {
       "id": "1753378231566500_1671524128095785",
       "titulo": "👉 Comente LIVE para ter acesso à aula gratuita sobre autonomia de sono 👈\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#sono",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/902253211_1660834245776413_708756456362739766_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=cxlqb5tAmUcQ7kNvwHOXQSL&_nc_oc=Adrd6kpr_UiH19HVCyvj0fxs-cQlDp5eXpYIViILwlqXGX8TWW3DNOmOImTb0oQCjXQ&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=-BFcqEBLBv6z4Z5PYke0oA&_nc_tpa=Q5bMBQIV1I3uT6onb7MmN2ZRBzdT_YAt7Y-6-SZAjOlJldtv6XZWyNTn7mdqGVq02BVkLuIWpuf4cnQE&oh=00_AQSo6i3Nlq9QFPUggS82a6kkqB4qmaft81seL0nKR86iyQ&oe=6B0CC056",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/902253211_1660834245776413_708756456362739766_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=cxlqb5tAmUcQ7kNvwHOXQSL&_nc_oc=Adrd6kpr_UiH19HVCyvj0fxs-cQlDp5eXpYIViILwlqXGX8TWW3DNOmOImTb0oQCjXQ&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=bRQmXhNdneA8C6qGSeeOhQ&_nc_tpa=Q5bMBQIruRf6_aJJ9LdUo7heMfCY__dmuAI9K_Ggbvp_A6vJfGa9wURXBFqiNs9jnGCBvUDmz3yu798Q&oh=00_AQSHF-gy1tB3nR8MKtmYRRmb2LQYB68H7N535D3m4bGc0g&oe=6B0E11D6",
       "link": "https://www.facebook.com/reel/1660834179109753/",
       "publicado_em": "2026-11-17T17:03:53+0000",
       "curtidas": 0,
@@ -689,7 +744,7 @@
     {
       "id": "1753378231566500_1671184328129765",
       "titulo": "Comente: CONSULTA para receber mais informações 🥰\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#sonodobebe #rotinadobebe #re",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/906373407_1659670735566866_1424040169528839009_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=omhP9vNE8ZkQ7kNvwF31gLd&_nc_oc=AdqFEOoNvUjSRHLogFbtFZxdlMBY5zgDcFfN4huDUjJSRvSvBYjuWyZmec7VPm3AFgM&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=-BFcqEBLBv6z4Z5PYke0oA&_nc_tpa=Q5bMBQLgxWEVWFz3MfqSQ_texoZXMhQ4E7vFpyR5AnXrjj8XWS6vEOb6z_mqFiesn8PCiTtqr49rm_Dq&oh=00_AQQ6iNAkgsfNqoxm8iouAGLFxOw2ujS0cDEuFz8Nb-AsPQ&oe=6B0CEDBC",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/906373407_1659670735566866_1424040169528839009_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=omhP9vNE8ZkQ7kNvwF31gLd&_nc_oc=AdqFEOoNvUjSRHLogFbtFZxdlMBY5zgDcFfN4huDUjJSRvSvBYjuWyZmec7VPm3AFgM&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=bRQmXhNdneA8C6qGSeeOhQ&_nc_tpa=Q5bMBQJ4o2teoZ06goffF4w_S4erRwBN_D7zAKu4rLwYgfa75XdPYA4ASkr8FlEW9rwgs2PRdwerwHB4&oh=00_AQTv6LY1emjPFQkh3ZT_WGmr7Mp2UmrgSBMVXFo5dvHviA&oe=6B0E3F3C",
       "link": "https://www.facebook.com/reel/1659670545566885/",
       "publicado_em": "2026-11-17T11:03:52+0000",
       "curtidas": 0,
@@ -700,7 +755,7 @@
     {
       "id": "1753378231566500_1670461708202027",
       "titulo": "🤰 Comente MATERNITY e entra no grupo da Black Maternity no WhatsApp.\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemnasc",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/907609935_1800411787926744_1586894610877590355_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=DluhQKLAIgIQ7kNvwHn0sdi&_nc_oc=AdrIcLCtBvN5oaUX5JOoJGwANFry3F-0BBkVCfYRqaGOhnFHxCQcCnmzTOXcJ7Aj5xA&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=-BFcqEBLBv6z4Z5PYke0oA&_nc_tpa=Q5bMBQKLLZd_me0dasmc6udeS3OKv6aeK0IuRefISqUQRMhqoGGeQGTcX9YJEW4T5_sOCs0LLt57wd-P&oh=00_AQRpVgjuAfGfTi6MueN5S5ZGATf4HjjtIdcl_TOsTaLoJQ&oe=6B0CDFC6",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/907609935_1800411787926744_1586894610877590355_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=DluhQKLAIgIQ7kNvwHn0sdi&_nc_oc=AdrIcLCtBvN5oaUX5JOoJGwANFry3F-0BBkVCfYRqaGOhnFHxCQcCnmzTOXcJ7Aj5xA&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=bRQmXhNdneA8C6qGSeeOhQ&_nc_tpa=Q5bMBQI2GNY9dNNRHsuSJ7qJlNOaCbfAmjyxXky8y9q05mNjbpg_YhhLEKTg7iEMpUCQxjIuidEy-CyW&oh=00_AQSLdYrD0tEhKUQcB7IPojxhx8LhYtYlOks51xbzZULtsw&oe=6B0E3146",
       "link": "https://www.facebook.com/reel/1800411684593421/",
       "publicado_em": "2026-11-16T17:04:40+0000",
       "curtidas": 0,
@@ -711,7 +766,7 @@
     {
       "id": "1753378231566500_1670139104900954",
       "titulo": "Comente aqui SONO25 e receba gratuitamente o e-book: O que ninguém te contou sobre o sono do bebê no berço ❤\n\nCompartilha essa informação im",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/895465773_1659987888954663_369950399912518714_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=kt3rc6JQ_kQQ7kNvwG44f21&_nc_oc=AdqIa3y2RJy4OSrT5oEPmfMh05_CdZYmIM4wksFXtejlFNg5xtbkmA1gzZ0Wh5K-IvI&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=-BFcqEBLBv6z4Z5PYke0oA&_nc_tpa=Q5bMBQI61m__uJsiRa2jTOV_cn2YvqVrrf3P9Ji25NGR2E49njj27tvYeGmkArLP_ThKYSD38908pDzt&oh=00_AQR6wZwml21GfAD2eOqC7bbrFAkwFRt6-IWltTRi43YTSA&oe=6B0CF0CC",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/895465773_1659987888954663_369950399912518714_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=LOWMPb8cP6wQ7kNvwFEuoYn&_nc_oc=AdpNhc4JtYiI19rb8HGcjViiMSJ0KxRS5EVRqO9P5ghT9DNmwBmtxODyJnhBqpnM53Y&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=bRQmXhNdneA8C6qGSeeOhQ&_nc_tpa=Q5bMBQJ3h47HaalI991yLs_LoGFeODpWuSJWEMubN_jIOh7eFlDDCKupwqYJQWIGsn6SfEtOaa2zKL1O&oh=00_AQRW90cySTlRdNvMzIP7xOTy1Huah2hfeO7e9jig2R1PVg&oe=6B0E424C",
       "link": "https://www.facebook.com/reel/1659987712288014/",
       "publicado_em": "2026-11-16T11:03:15+0000",
       "curtidas": 0,
@@ -722,7 +777,7 @@
     {
       "id": "1753378231566500_1669435378304660",
       "titulo": "👉 Comente AULA para ter acesso à aula gratuita de amamentação 👈\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemnascido ",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/899778032_1459402269639178_3023537243448157957_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=z9Yx02h_f10Q7kNvwHHSMi-&_nc_oc=AdprGav9NEjByItvYCxYK-RFQo636omR8cbKSyb_5PsYhjb_h41M9ngID-rMyHOPGxc&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=-BFcqEBLBv6z4Z5PYke0oA&_nc_tpa=Q5bMBQImSDRwcVkI-ihfh5C60YQWXqjlrUefOTjugoRhhLp81sbdOkJc3-SlLDvqlif3Bb7Asqv5ZVsg&oh=00_AQSHDZsaHLmomrW0DFr348O0kyGB3SxAELVikJ_IGvg7Eg&oe=6B0CD597",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/899778032_1459402269639178_3023537243448157957_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=z9Yx02h_f10Q7kNvwHHSMi-&_nc_oc=AdprGav9NEjByItvYCxYK-RFQo636omR8cbKSyb_5PsYhjb_h41M9ngID-rMyHOPGxc&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=xIrOPnEDbo6aOycjGsxq7w&_nc_tpa=Q5bMBQJ_u-IN8T0fXkgjyu9U5wWETUQk1JFBmLsjfV9FXd4Wpc-TbmZ8aPZ2pKaLKbQ7GnAxUpBAJSrs&oh=00_AQQkx2zEG_htKNCVPK5j6psF_LgD7HIZkmQbjR-zXci3LQ&oe=6B0E2717",
       "link": "https://www.facebook.com/reel/1459402192972519/",
       "publicado_em": "2026-11-15T17:03:35+0000",
       "curtidas": 0,
@@ -733,7 +788,7 @@
     {
       "id": "1753378231566500_1669089081672623",
       "titulo": "Comente ENXOVAL e receba gratuitamente o e-book Enxoval Descomplicado ❤\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemna",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/895465854_984012028105771_5210967276005140520_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=5q6O-bxiWMUQ7kNvwFhBdzh&_nc_oc=AdoodwMZgXLEuCviCu75wko08qNfzFBid5UaCp773_qH0RFpl-j6pJKsvLyAr9Sx0kA&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=-BFcqEBLBv6z4Z5PYke0oA&_nc_tpa=Q5bMBQJpT9bxlvVZp-PMxAQegxEEt2RykByGsOaZLv7TT1AGUrJZOSHHqTZh2l93Ia-NW-pu83nLhu9E&oh=00_AQTisvVKJaet8QMwd-KQOp52WbqeJLqKmKafIzB0lzfOKw&oe=6B0CDDDA",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/895465854_984012028105771_5210967276005140520_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=5q6O-bxiWMUQ7kNvwFhBdzh&_nc_oc=AdoodwMZgXLEuCviCu75wko08qNfzFBid5UaCp773_qH0RFpl-j6pJKsvLyAr9Sx0kA&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=xIrOPnEDbo6aOycjGsxq7w&_nc_tpa=Q5bMBQL1i45U2YTxe-gFf_7PFark4fB3LkhpOiBXE2hnEK25p12DZlUKmw_KUjpJ9qmFPt1_6QyBAKza&oh=00_AQT3JwLLQ608EMbEbnxw6rTcKFJbCPd_WqxuuSJ5UicBWg&oe=6B0E2F5A",
       "link": "https://www.facebook.com/reel/984011938105780/",
       "publicado_em": "2026-11-15T11:03:26+0000",
       "curtidas": 0,
@@ -744,7 +799,7 @@
     {
       "id": "1753378231566500_1668218988426299",
       "titulo": "💛 Comente BF que eu te mando o link do grupo exclusivo da Black Friday no WhatsApp.\n\nCompartilha essa informação importante com uma mamãe \ud83d",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/896715049_1730360818451011_624714526318766048_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=7fLNYFgY1xIQ7kNvwHJS92u&_nc_oc=AdoaJCrZ0du8kiwPDQpnFFG2u9BVxa9GRLVuBgoWNAb-RTFBUg0d0XZIxvBGCeyqN5E&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=-BFcqEBLBv6z4Z5PYke0oA&_nc_tpa=Q5bMBQJHIRBImFtK6w1i4JzH_mH84sx1hPR2xoghEJmw3lnhLVQ-V5uAEv3BS0IdjpdsqJeojHQySl9I&oh=00_AQTXRYbj3FRiLWJp3V1ynCNAAx8ja2rAy2pNOaMYANtK-A&oe=6B0CE907",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/896715049_1730360818451011_624714526318766048_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=lUDE4qVLnawQ7kNvwFFM9dY&_nc_oc=Adpyt9EJtHgsc3lY-VBzhKjGWEGxkuTy_MON9MAzf76jtkPzBp2VDaxynLZ8099PTqM&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=xIrOPnEDbo6aOycjGsxq7w&_nc_tpa=Q5bMBQIeAm7fguRvGRoUK7Hor5-ywF8vfgEUoqbsrEtHvzadArZiN16sud5_b_aIAz4cJWmmEPgUCevB&oh=00_AQQ6eogwronzy19UaIIneGM00do9KB-IGltTuTGD1ySMyg&oe=6B0E3A87",
       "link": "https://www.facebook.com/reel/1730360748451018/",
       "publicado_em": "2026-11-14T17:03:27+0000",
       "curtidas": 0,
@@ -755,7 +810,7 @@
     {
       "id": "1753378231566500_1667881718460026",
       "titulo": "QUER O LINK? Comente \"QUERO\" ❤️\n\nNinho redutor\nSono do bebê\nNinho redutor para amarrar\nBerço do bebê\nNinho confortável e seguro\nNinho ajustá",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/901220026_967135969469650_2078316221730150044_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=PkVOsQ1nadMQ7kNvwF36e6k&_nc_oc=AdqnpULyeLWL7CJWaCa6LHElsiRsaHo5x4ylzV_LN9mvdMpCnjUqSO1UwxautMxGXWs&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=-BFcqEBLBv6z4Z5PYke0oA&_nc_tpa=Q5bMBQJCrFlesW9zd1eMvcUJp0M00P5EWVaukASuwAZnm6GLPG1IxfTuFwbiClqvIpf7qWo7kv97_gSb&oh=00_AQSmJ8Q7wYrk2g3DjS2brPlJdLhSHtcB6HXX16qzYbQkyQ&oe=6B0CD3B6",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/901220026_967135969469650_2078316221730150044_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=KF7lVLPus5QQ7kNvwEUeMf1&_nc_oc=AdrlvI0Rb0OCVRKW_V5ceiEqpAnjXYYn3-0HzdrDgw0rKjYVho6M2YOxDrjmGF3o2h8&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=xIrOPnEDbo6aOycjGsxq7w&_nc_tpa=Q5bMBQKbiEOK8wRDRU0A4PsWA0tXSb14wZLxsgPyjFLUpa46-WqPsSXAGimjLW7GTBCXEW7FtlwejBSU&oh=00_AQQYmnGj6nsq6NlDrgMMDa_RhQRY8L74OInnSmWDWOltZA&oe=6B0E2536",
       "link": "https://www.facebook.com/reel/967135469469700/",
       "publicado_em": "2026-11-14T11:03:04+0000",
       "curtidas": 0,
@@ -766,7 +821,7 @@
     {
       "id": "1753378231566500_1667051171876414",
       "titulo": "👉 Comente GESTANTE para ter acesso à aula gratuita para gestantes 👈\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemnasc",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/903285849_1833485811230958_1173222260612868358_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=XX5D7F-KpKIQ7kNvwGpk14T&_nc_oc=AdoO9BGi1f4h4jWN3gQBkTtKY7VKOQ5M4imHAO7UHVvnKKr0rfKFPRz0fSjW0RxR_28&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=-BFcqEBLBv6z4Z5PYke0oA&_nc_tpa=Q5bMBQIlf6p9FnCBquHnfFmK86zyoCUDTTX5xVClSpl_0X4rT7QCnG3R-Irm73JG-0OuVUH5UOweWDVK&oh=00_AQTj7Z5r85nEF_zX6P_t442cTvj3HOjOubPOpq7zuKqQbQ&oe=6B0CE07D",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/903285849_1833485811230958_1173222260612868358_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=GuqdhsPNmOwQ7kNvwF9Pj_1&_nc_oc=AdpRgxYuAqZflsyCZXtFE34L1G84HKBLyhwpsT7DkH9PiO_geAxbVtwyxsr4qamMTZc&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=xIrOPnEDbo6aOycjGsxq7w&_nc_tpa=Q5bMBQJAawTQezBJn4WWNd7PIFe4SeOnSgNobZzeLDBO2sOeqV8r03tGoA8qZ6FQx7QcQkiWUcTIvTYc&oh=00_AQQ2XDjVvHjw_yyq_vN56syQjjYkJc6EZ1PReysY0QaLag&oe=6B0E31FD",
       "link": "https://www.facebook.com/reel/1833485694564303/",
       "publicado_em": "2026-11-13T17:03:54+0000",
       "curtidas": 0,
@@ -777,7 +832,7 @@
     {
       "id": "1753378231566500_1666705381910993",
       "titulo": "👉 Comente LIVE para ter acesso à aula gratuita sobre autonomia de sono 👈\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#sono",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/896271690_1146536634634746_3278669312680848747_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=SoRCZCMS5Z8Q7kNvwGtrwFQ&_nc_oc=Adp3q9kaIuVTl-e0nMfjuGg3BOXXGje9nhJx-EwqnBYTtzLqjxbcugpe6YR7utpRhoI&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=-BFcqEBLBv6z4Z5PYke0oA&_nc_tpa=Q5bMBQJKP3X6pDeespK9M7C1XvJlX8RfV2bcgCt2g-6dpezojfWxny7BN4U5Ly6fC33Unv284CV1z6rJ&oh=00_AQRYw_7-cYVeeUahbF46EtehmMysNue_PM3NBT4eQiD_OA&oe=6B0CC601",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/896271690_1146536634634746_3278669312680848747_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=SoRCZCMS5Z8Q7kNvwGtrwFQ&_nc_oc=Adp3q9kaIuVTl-e0nMfjuGg3BOXXGje9nhJx-EwqnBYTtzLqjxbcugpe6YR7utpRhoI&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=xIrOPnEDbo6aOycjGsxq7w&_nc_tpa=Q5bMBQJlfmv-aIRikE9uSsq3jJoS41V8RWdlOMyvmTT7Wq9kBGvyeAvXb5jN2usUT0kgS5q9QfP8vLAo&oh=00_AQQn0JletyESQRce85YOR-xIyMexGNQb_rpDvsGOgXopDw&oe=6B0E1781",
       "link": "https://www.facebook.com/reel/1146536521301424/",
       "publicado_em": "2026-11-13T11:03:00+0000",
       "curtidas": 0,
@@ -788,7 +843,7 @@
     {
       "id": "1753378231566500_1665871878661010",
       "titulo": "💛 Comente BF que eu te mando o link do grupo exclusivo da Black Friday no WhatsApp.\n\nCompartilha essa informação importante com uma mamãe \ud83d",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/895746509_2223410041547251_2135432460975553494_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=BAJFhHQGZAsQ7kNvwFzg0MN&_nc_oc=AdoFQhbfmHkPhuDeRyM6AanxhSQadP0JcUK7hPvOrqxBG0idgNnsr2wj_2h_06YJoFU&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=MLL6NLFzLYjRopSKMslY5w&_nc_tpa=Q5bMBQLIJ1mElu3IOqunlHm8qoc4iAcAw3ciAlyhjwx3Jq0DP04NaAfXi0_fzXFohDKWOOmFfVnNkzsP&oh=00_AQSCQ0IQDDb9Kzap-kudJ4f4BVzrbPNa_XXZkYbK_fa92w&oe=6B0CD77F",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/895746509_2223410041547251_2135432460975553494_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=Zx6x6JduH5AQ7kNvwEfSGUI&_nc_oc=AdqYYwxbsUCf8ForFIPg13u8x-SiBqZ5MXb1XG0iZFL0f6LxcoPlpddg4Hi26k75jr4&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=xIrOPnEDbo6aOycjGsxq7w&_nc_tpa=Q5bMBQJfaFQcrwq6XKZkwXYPS2efj8lFRJZ5DSuuflc22ko9VPWGbwE2DfND58aVCQ6THQKOieL43VYo&oh=00_AQQYuDsfsLKtTCX8GldzZOLwcecXZ5dJqB7mFPPNUR9bbA&oe=6B0E28FF",
       "link": "https://www.facebook.com/reel/2223409868213935/",
       "publicado_em": "2026-11-12T17:03:41+0000",
       "curtidas": 0,
@@ -799,7 +854,7 @@
     {
       "id": "1753378231566500_1665541182027413",
       "titulo": "Comente #AMA para receber o E-book Gratuito: Por que meu bebê parece não saciar no seio?\n\nCompartilha essa informação importante com uma mam",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/902290910_1605903497382913_5083501966676587838_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=jFeP-naajV4Q7kNvwF5KTxt&_nc_oc=AdopuO7t5pKhKcdN06Q7gjTcuUTFdrY5xdow5l4-5_k4EAG8uoxIkqzk-oa7JxMGULg&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=MLL6NLFzLYjRopSKMslY5w&_nc_tpa=Q5bMBQJMxAhjKdHo6MMydirXkmOZwamroPaMV2NfvQnNlW9YHwlNx9kgOzSxVy8NJrNCJ_H54vo6wG2P&oh=00_AQTLfuFQ8jdzixExGWCeG1XC3nAlasLbnMevJIS_hQQ7_g&oe=6B0CD1CA",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/902290910_1605903497382913_5083501966676587838_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=jFeP-naajV4Q7kNvwF5KTxt&_nc_oc=AdopuO7t5pKhKcdN06Q7gjTcuUTFdrY5xdow5l4-5_k4EAG8uoxIkqzk-oa7JxMGULg&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=xIrOPnEDbo6aOycjGsxq7w&_nc_tpa=Q5bMBQJQBVK87pdySYB_l4HdapLod8j7SeAy9iaD_u7M71g3-fiO3jRFOMJEfMIyCS_rSEJttlY4feZq&oh=00_AQQURb1e9ZDfMHLh_PmhT2kkOXtU5ZBpPl4OZj66R1Pnlw&oe=6B0E234A",
       "link": "https://www.facebook.com/reel/1605903400716256/",
       "publicado_em": "2026-11-12T11:03:51+0000",
       "curtidas": 0,
@@ -810,7 +865,7 @@
     {
       "id": "1753378231566500_1664780465436818",
       "titulo": "👉 Comente GESTANTE para ter acesso à aula gratuita para gestantes 👈\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemnasc",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/899717808_1070153976079777_6543498832840470954_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=aTTuX830S5wQ7kNvwGW1K7z&_nc_oc=AdrZ8Y28GrkltVb57Oow1TJ7bdPDbzd0-5-2n0XFFh-M-3iBHPBpK9s15XMKOSG9_E4&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=MLL6NLFzLYjRopSKMslY5w&_nc_tpa=Q5bMBQJIQjV3EX2HRFn7K1BhHRhgkMwkTrkNjFmy9pMgvscyDQkH3aSfwskaO2vpZdaTFlALPx-DWl4z&oh=00_AQQImCc46hJUWshjuaAxzc86MEznr-OEVPe0O3QsKLoumA&oe=6B0CEFD8",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/899717808_1070153976079777_6543498832840470954_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=xC2dMGWK2HQQ7kNvwEf-F5R&_nc_oc=AdoSn2Ja68j9U70V7zz7pIKufWKmQgocM0OVs8acCIZjRDxcFBwUjwcEmcX4mlBf0Qs&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=xIrOPnEDbo6aOycjGsxq7w&_nc_tpa=Q5bMBQKLYYGwSZz0HJPHDyP1mf_uux6UWC6CQAo3PwzAQ6b_oSZjEk-8w0N3cwMy8wvLIUH1vmlDggGb&oh=00_AQQlPzXTWJxPr11SeQxbVLz9gda6n_FrUNAUBw06e4T3GA&oe=6B0E4158",
       "link": "https://www.facebook.com/reel/1070153896079785/",
       "publicado_em": "2026-11-11T17:04:00+0000",
       "curtidas": 0,
@@ -821,7 +876,7 @@
     {
       "id": "1753378231566500_1664460848802113",
       "titulo": "QUER O LINK? Comente \"QUERO\" ❤️\n\nCartinhas de alto contraste\nBrinquedos para bebê\nBrinquedo recem nascido\nBrinquedo sensorial\nEstimula visão",
-      "thumb": "https://scontent-gru3-1.xx.fbcdn.net/v/t15.5256-10/899468350_1902027831148141_121042483797184876_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=uqHbhvDfpIgQ7kNvwE9-vBK&_nc_oc=Adq5U6L5gARiYYsegkVLNct_Pk55rHiW0vrDV2Gz6uzEBvB2Q0813zegtsjqxqFgcn4&_nc_zt=23&_nc_ht=scontent-gru3-1.xx&edm=AKIiGfEEAAAA&_nc_gid=MLL6NLFzLYjRopSKMslY5w&_nc_tpa=Q5bMBQJi25ohV_f0HoFrO7IrFjfU-qOo7Qdbzoabo_xeHrUTNjzkeICydjJujumUYUbzfTCyhqtYWg4q&oh=00_AQTPecIlVAVxncdQyhBcl4keqgEuuHFttL2quc87iVZtow&oe=6B0CE37A",
+      "thumb": "https://scontent-gru3-1.xx.fbcdn.net/v/t15.5256-10/899468350_1902027831148141_121042483797184876_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=uqHbhvDfpIgQ7kNvwE9-vBK&_nc_oc=Adq5U6L5gARiYYsegkVLNct_Pk55rHiW0vrDV2Gz6uzEBvB2Q0813zegtsjqxqFgcn4&_nc_zt=23&_nc_ht=scontent-gru3-1.xx&edm=AKIiGfEEAAAA&_nc_gid=xIrOPnEDbo6aOycjGsxq7w&_nc_tpa=Q5bMBQLXtaJ3AZU9nDn_5EipGPZq3IuQrwNuCjdBGInu5xrlaJhlKWwLb1dLIPIcRv9LpaljepXU5rds&oh=00_AQRhIDio6uGU0xcqyLExZI2lVEyX5DceleRdActsp_0__g&oe=6B0E34FA",
       "link": "https://www.facebook.com/reel/1902027771148147/",
       "publicado_em": "2026-11-11T11:02:15+0000",
       "curtidas": 0,
@@ -832,7 +887,7 @@
     {
       "id": "1753378231566500_1663693588878839",
       "titulo": "👉 Comente LIVE para ter acesso à aula gratuita sobre autonomia de sono 👈\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#sono",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/899741188_1617860870005649_4098561553987471625_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=AEJ8_dV_3qkQ7kNvwFoRTQ_&_nc_oc=AdpaLtRwDwVKGoKQz6GtAFroUt6mWEuviSNGYrVYB_1viM3Fdmaj0EKbj2_OgTi0AEM&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=MLL6NLFzLYjRopSKMslY5w&_nc_tpa=Q5bMBQIPQDFN-ElUW2w1jC2_KA8w_WYBHZyJYs_H0OtKdEOF9hkn3SIsVXGf4VgC6sAS2YAetdvBhKjM&oh=00_AQRLvq7Qw_c8vkPWX5toW1VaTtoa45xz6Clk86k3aj9NCg&oe=6B0CCADB",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/899741188_1617860870005649_4098561553987471625_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=Ev11TqDfanIQ7kNvwGy4eC8&_nc_oc=Adr3gYx95-Nmmlz_KQfO34qCtCtiD0WC4OuZRTvaUudYFzP_F6czwgu7N2NTXwpz-CE&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=nxgYbrymDKzPQU1Xw1KpXg&_nc_tpa=Q5bMBQLLdpKnslHLE9EtMPeJbF97VJ0YbWwkb4oCNccK9gYM-O4H0goGNDdswyduWmcDOmIsrfz3vvfY&oh=00_AQQ6QsFzbX8ASBbNHLXcJ89u_6LoBYWYfD31dZP6ikn0Ww&oe=6B0E1C5B",
       "link": "https://www.facebook.com/reel/1617860746672328/",
       "publicado_em": "2026-11-10T17:04:49+0000",
       "curtidas": 0,
@@ -843,7 +898,7 @@
     {
       "id": "1753378231566500_1663376765577188",
       "titulo": "Comente: CONSULTA para receber mais informações 🥰\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemnascido #newborn #gesta",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/896136381_1801650324440084_1528581031301665851_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=Go4X8PAacTkQ7kNvwFSYd4C&_nc_oc=AdpN-JeOvK3ZfOwaayJXpSIlE0u28W8KGCcX6L4kZ0EmUs7cajIxZ_kmbsPaCD-H8lY&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=MLL6NLFzLYjRopSKMslY5w&_nc_tpa=Q5bMBQJyjri9vHszQmOiWChB7enKf9HqB7LaOL7iBVpQWgYz4K5pc95btAUzb0ycJwbiAj_IU1Z4rq3d&oh=00_AQS3YClTIY21KlS1UTXkO_ANbMXe-3Wu35SoL-PXiDCgVA&oe=6B0CDEDE",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/896136381_1801650324440084_1528581031301665851_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=45EeejdU8BIQ7kNvwGxH2st&_nc_oc=AdoNg7Yc9bNrHz42qqlY3Y7i-2d9roB_d65_eri-9WKiIQvVVp5-UXMu5muPWOMgIHI&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=nxgYbrymDKzPQU1Xw1KpXg&_nc_tpa=Q5bMBQI0xtlQpRbfuoa_mKQTQl-ywUuzTBynH4ERMwKktWUcoddNBf-NLM-AG3_F00G3hvSiVV-rFi68&oh=00_AQSR_JwN4kSBoZPYTKSyYtgwUULUsZUjvGoEodYcVET8aQ&oe=6B0E305E",
       "link": "https://www.facebook.com/reel/1801650221106761/",
       "publicado_em": "2026-11-10T11:03:54+0000",
       "curtidas": 0,
@@ -854,7 +909,7 @@
     {
       "id": "1753378231566500_1662643915650473",
       "titulo": "🤰 Comente MATERNITY e entra no grupo da Black Maternity no WhatsApp.\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemnasc",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/901478313_1766151288017493_3432640619938093718_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=k6MtO6ZD8LQQ7kNvwEzegEB&_nc_oc=AdqV-Tnw0sr8BfewhsM764_7xVd8hYhW3ia4TIUfpGZDsIrvssizwURTjthtnHf5zU4&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=MLL6NLFzLYjRopSKMslY5w&_nc_tpa=Q5bMBQJ16EwppYgqw7Pd9N2dMNj3wkveGil5jnYAdusD6SJoo5lAdAU0C0usmyOL7v1MYOV2rYaYNRcB&oh=00_AQTK9mB-WNB-BzQTdumF9GMn4SDaTpgLsbxvNjgoKgFMdA&oe=6B0CCD61",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/901478313_1766151288017493_3432640619938093718_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=k6MtO6ZD8LQQ7kNvwEzegEB&_nc_oc=AdqV-Tnw0sr8BfewhsM764_7xVd8hYhW3ia4TIUfpGZDsIrvssizwURTjthtnHf5zU4&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=nxgYbrymDKzPQU1Xw1KpXg&_nc_tpa=Q5bMBQI8n9Idab5kHMvZqjRCv7aFvNF7ISfllZAfrWnNAR1ictVWULt2HIi3PvKGRBfKs-1uHLUUM1O-&oh=00_AQRiV7BNH5WuyP3f0-BcwgYcuudTINcM3IOiBj3CpPPNbQ&oe=6B0E1EE1",
       "link": "https://www.facebook.com/reel/1766151194684169/",
       "publicado_em": "2026-11-09T17:04:28+0000",
       "curtidas": 0,
@@ -865,7 +920,7 @@
     {
       "id": "1753378231566500_1662347935680071",
       "titulo": "Comente aqui SONO25 e receba gratuitamente o e-book: O que ninguém te contou sobre o sono do bebê no berço ❤\n\nCompartilha essa informação im",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/897572148_1352862140138125_8602155143881877281_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=n9I-HdXl1gUQ7kNvwFiRijU&_nc_oc=AdpeUCT8e2r96o_JBnujnC9qdqK6mG3caWFObQl578KS_ix5LQvPUinYsb8W9qqGy-c&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=MLL6NLFzLYjRopSKMslY5w&_nc_tpa=Q5bMBQIL5CoaE4grFAZrbP9N4KHJjynJaZohgopqPz3yvWCXpY6jRAGs-YQsEpjGPN34lbNcffaq8fC1&oh=00_AQRSH-khXK8PCW9BCQrcdMo_cVvmm6wwXHdE6Yy9udzWaw&oe=6B0CC691",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/897572148_1352862140138125_8602155143881877281_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=3WJQ3CsHeQUQ7kNvwFAzc1I&_nc_oc=Ado2omM_vJ9Uj6873tnBjH_lLwsM0Iehlxezq7jYEkCKcuS2B5GIjHXXG7aLzZ0fVlE&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=nxgYbrymDKzPQU1Xw1KpXg&_nc_tpa=Q5bMBQLorbM9d_hfKi8sNDjVCfg68ZlQthYQ3qXvUnd55LbJTB7fZuEGBVEurr9W_T-vqmO6lgFiSqm7&oh=00_AQTxnwkbUsqTFzlr_BrmDE1CzEwNFtdI_j-1GEGRPxDTNw&oe=6B0E1811",
       "link": "https://www.facebook.com/reel/1352862063471466/",
       "publicado_em": "2026-11-09T11:03:54+0000",
       "curtidas": 0,
@@ -876,7 +931,7 @@
     {
       "id": "1753378231566500_1661552649092933",
       "titulo": "👉 Comente AULA para ter acesso à aula gratuita de amamentação 👈\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemnascido ",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/895342548_1135012369381284_9110279367425161150_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=P8UTs9_X6vcQ7kNvwH4xHKO&_nc_oc=AdpKln4kGL364pkzOvX07_CcJv4kt4K_sO8wNxJ3V1qdbM9D4ceVcBbmiY260IcT77A&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=MLL6NLFzLYjRopSKMslY5w&_nc_tpa=Q5bMBQLTdVDkmoTl2IZwngFuyV5MYQlqDF_R9efCD9kqyQ_M7hS2XqxTt7qkHwEw9rYvpKXS-QQBKFQc&oh=00_AQQh3-ZV8z0qlC4xp9pTV9e61ULXMz1cRUrGdakda207Ng&oe=6B0CD501",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/895342548_1135012369381284_9110279367425161150_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=P8UTs9_X6vcQ7kNvwH4xHKO&_nc_oc=AdpKln4kGL364pkzOvX07_CcJv4kt4K_sO8wNxJ3V1qdbM9D4ceVcBbmiY260IcT77A&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=nxgYbrymDKzPQU1Xw1KpXg&_nc_tpa=Q5bMBQJqDT-lOPZqPzLKatcE-IRViC3ynGvBejuoXg5v8uB0VFZDXOlSmOENw5Lv-fMBhoE7iUw1omWV&oh=00_AQTKHlNAjxb4F3P-hVH1PgMG7XgpfeKWxdD6b-SQ6iWj7g&oe=6B0E2681",
       "link": "https://www.facebook.com/reel/1135012242714630/",
       "publicado_em": "2026-11-08T17:04:23+0000",
       "curtidas": 0,
@@ -887,7 +942,7 @@
     {
       "id": "1753378231566500_1661228909125307",
       "titulo": "Comente ENXOVAL e receba gratuitamente o e-book Enxoval Descomplicado ❤\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemna",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/895912353_1654641719452267_7979752285873022589_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=Ovjc2dTCCYIQ7kNvwHVqCQV&_nc_oc=Adoc4SxEmCgTs3NenpzSiDCXjh5s3efcpTnpFRFufO8tBTH8I8eqsxFGQ7eDOUHru9U&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=MLL6NLFzLYjRopSKMslY5w&_nc_tpa=Q5bMBQLriTMnu_U_RmuzN04g4oCXtp2XNRt_qcjn8T76oSDjxmvr_d6bPQJ4Zm74lKFBVw1QDxSgleoW&oh=00_AQTMdinY8hjcy0JdqKpBsRjRPlP_4fYxfIz9ld_7aiOxtQ&oe=6B0CF0AE",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/895912353_1654641719452267_7979752285873022589_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=Q0LWr0QdyVcQ7kNvwHoYugq&_nc_oc=Adqat4AfC6bD_nRkYviQhLXS8BkPh6e2fK8eJxR3_29joK5oN14cPcNyWh8qxbEiGe4&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=nxgYbrymDKzPQU1Xw1KpXg&_nc_tpa=Q5bMBQLV6enTnj03z-XFHqul3zl5taKelhXdKV8ctkRIzxYUIYyvpo4WY4CoYo3KnTyIz1GCKihkXy8C&oh=00_AQRI2p3IU0H4E2b9F8DhDMJZi_qPyKOHzNsNVU-t6oTjxg&oe=6B0E422E",
       "link": "https://www.facebook.com/reel/1654641626118943/",
       "publicado_em": "2026-11-08T11:02:41+0000",
       "curtidas": 0,
@@ -898,7 +953,7 @@
     {
       "id": "1753378231566500_1660166722564859",
       "titulo": "QUER O LINK? Comente \"QUERO\" ❤️\n\nRuído branco\nMáquina de ruído branco\nSons calmantes para bebê\nAparelho de luz noturna\nMáquina de som\nAparel",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/892964159_29958896510363786_2773339559812864193_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=XgeNfhiWtFkQ7kNvwEOkTup&_nc_oc=AdoEPd3dTWYRIRSvElMAdt_9ppgNEm7BmTp15NeXmWAhy8awhxf5FCcvnKPPqicpnJ0&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=1xSKkQEhyumPVaLuQUO0xw&_nc_tpa=Q5bMBQLbMG8uqYiOsUvazF6lXlWzgOii_ip6f3bSnuSGDltJXfE05qi3L_OraOS04hSjE1qS5Tg_heGG&oh=00_AQSGITj6N28Zs6AacbQvRdnItR0BY6fevOw_E_wf4bEi-A&oe=6B0CCD14",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/892964159_29958896510363786_2773339559812864193_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=XgeNfhiWtFkQ7kNvwEOkTup&_nc_oc=AdoEPd3dTWYRIRSvElMAdt_9ppgNEm7BmTp15NeXmWAhy8awhxf5FCcvnKPPqicpnJ0&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=nxgYbrymDKzPQU1Xw1KpXg&_nc_tpa=Q5bMBQLqlGrxyixBBrJhrQC2qZtqH8ngkVQoFRYpvicqEz4Hwzzg10iiSmoAbx-MWgx78zI6DObqh_3a&oh=00_AQT6qC2yiux92KjKouO9RdJ7-Zzy5A70DKZibUv6kF6nXg&oe=6B0E1E94",
       "link": "https://www.facebook.com/reel/29958894873697283/",
       "publicado_em": "2026-11-07T11:04:22+0000",
       "curtidas": 0,
@@ -909,7 +964,7 @@
     {
       "id": "1753378231566500_1659422789305919",
       "titulo": "Comente ENXOVAL e receba gratuitamente o e-book Enxoval Descomplicado ❤\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemna",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/892260945_1468388451921459_2631530094268166906_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=chuQTdMkz4YQ7kNvwF6Uqpi&_nc_oc=AdpqKTcp5AJ9pxxZm7Vq6NT9F3THkh4Bez6LhmDDQGZd7OjSlTr7bac3uycL-CLzg_U&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=1xSKkQEhyumPVaLuQUO0xw&_nc_tpa=Q5bMBQIH21JtJVeSK-S-R8KIIGxtsISEGuC0eh7k2MxX7DwPQQSdgzkPHLVaphWULAH04siSFL-_d46U&oh=00_AQS1S7yOfOydcdHwH7pl0Nrnr_7lxlpsyNPyOiFt4S0_6g&oe=6B0CD86E",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/892260945_1468388451921459_2631530094268166906_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=chuQTdMkz4YQ7kNvwF6Uqpi&_nc_oc=AdpqKTcp5AJ9pxxZm7Vq6NT9F3THkh4Bez6LhmDDQGZd7OjSlTr7bac3uycL-CLzg_U&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=nxgYbrymDKzPQU1Xw1KpXg&_nc_tpa=Q5bMBQJh-UqdVD2lWC7659HrXUh-o0exH94ABFxNmAlbSCNFx0hCoCEWGgBdNCI3q0UhSLpJqO-nHNlf&oh=00_AQRmlskkK9ZPi-x1euJrP7BmMO7skUhDX-lGFezt7sXDvQ&oe=6B0E29EE",
       "link": "https://www.facebook.com/reel/1468388395254798/",
       "publicado_em": "2026-11-06T17:03:08+0000",
       "curtidas": 0,
@@ -920,7 +975,7 @@
     {
       "id": "1753378231566500_1659121062669425",
       "titulo": "👉 Comente LIVE para ter acesso à aula gratuita sobre autonomia de sono 👈\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#sono",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/894089354_1314356984108510_8637454087805373293_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=751TbqSW8PUQ7kNvwHvct46&_nc_oc=AdpuQo8n96-D1kCf6vnc8Cd5IUfwLJM0dscHPqVWzYwTHz5L60X29o5WL8Xku8jFN0k&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=1xSKkQEhyumPVaLuQUO0xw&_nc_tpa=Q5bMBQIE5Kl1xw1XMnkmFAe-JeXkfGyJ_vy1Jn-KDHliGDEn3xJlxwRkkAWcVSCZxOwoVh2jsGvgvDX4&oh=00_AQQHw4uv2fGVTOd7NDzfpUOYNwAQFl_r2UhVk4glsiyjYA&oe=6B0CBF47",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/894089354_1314356984108510_8637454087805373293_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=751TbqSW8PUQ7kNvwHvct46&_nc_oc=AdpuQo8n96-D1kCf6vnc8Cd5IUfwLJM0dscHPqVWzYwTHz5L60X29o5WL8Xku8jFN0k&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=nxgYbrymDKzPQU1Xw1KpXg&_nc_tpa=Q5bMBQIDI3wqYHX14xP6BgG6iT2DJJbBOpX7jyc386HuxKh2rb7fJvEMZFlcE2AKPj5hnhEyPUkiSF2T&oh=00_AQS8Tvcx4ySk65IJMxYFnSdVVpPQIBxVVdDqG5h8zbFkqw&oe=6B0E10C7",
       "link": "https://www.facebook.com/reel/1314356847441857/",
       "publicado_em": "2026-11-06T11:03:32+0000",
       "curtidas": 0,
@@ -931,7 +986,7 @@
     {
       "id": "1753378231566500_1658366892744842",
       "titulo": "💛 Comente BF que eu te mando o link do grupo exclusivo da Black Friday no WhatsApp.\n\nCompartilha essa informação importante com uma mamãe \ud83d",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/890359057_1949198402710849_5892851059149027157_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=9VPG_LiFdugQ7kNvwFHNPVh&_nc_oc=AdqbWbu6ax315ezujC7Aerru1KRgyS7BabL_ZvMb22lga5AqR9xBKZ8DIoVZ_RYvb2I&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=1xSKkQEhyumPVaLuQUO0xw&_nc_tpa=Q5bMBQKH6GehJnvqrMG2zGV7qFPttt8ip-QQJwSDwCR0JjL_bwOoGHJA9FxKpPrW8--aV0JE7XTWYPwB&oh=00_AQRMMOW4bYCmGJtLdk7dnRxIYutqgV8FNXUJUnuYX9hBGQ&oe=6B0CCFB1",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/890359057_1949198402710849_5892851059149027157_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=ABxn90X66DwQ7kNvwEzsdkb&_nc_oc=AdpNnRiDZaOBdCvQnemXB-0OhiDxIgtdTWzRuXBvJYlBw1x81QRMOSC1X0pL5R2QDqA&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=nxgYbrymDKzPQU1Xw1KpXg&_nc_tpa=Q5bMBQKo0DwSvENqKNT9Ul65D1xenTkcIyo1FZ84rNQGESRNq0kBlRWvPSlxNDfFmLzgI_j0s2LuDH-S&oh=00_AQTEafYWx9KWzeQVoJDFVrS4Kbd_Z0zmEfYsOA48MjdjtQ&oe=6B0E2131",
       "link": "https://www.facebook.com/reel/1949198196044203/",
       "publicado_em": "2026-11-05T17:03:14+0000",
       "curtidas": 0,
@@ -942,7 +997,7 @@
     {
       "id": "1753378231566500_1658055376109327",
       "titulo": "Comente #AMA para receber o E-book Gratuito: Por que meu bebê parece não saciar no seio?\n\nCompartilha essa informação importante com uma mam",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/890559614_3393596847608524_6879662501635817920_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=7BvyqT0CK_YQ7kNvwEsrYbR&_nc_oc=Adoc74E32sNmM5kdIIvI96UMk6IwztijbzenltaVzNu4glzC4AHKCO4VoAq-G0-Nq8g&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=1xSKkQEhyumPVaLuQUO0xw&_nc_tpa=Q5bMBQKJ8JdTv-hjLN_y3aH3h7aY83wR2_2MaGp4AzhUFmsn1VPdx-XXcpbuAmkNenK5cbkIPlPg6IUp&oh=00_AQT_ciZcKoYi2zZgCs9XKiX3roIqxbc0pw_R64RSWJrYIw&oe=6B0CDB18",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/890559614_3393596847608524_6879662501635817920_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=7BvyqT0CK_YQ7kNvwEsrYbR&_nc_oc=Adoc74E32sNmM5kdIIvI96UMk6IwztijbzenltaVzNu4glzC4AHKCO4VoAq-G0-Nq8g&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=rcxIVN7onFhk90kki7xA1Q&_nc_tpa=Q5bMBQLFQQDNDcluxdZ9dW-FIID219z-POhErwgKj_akD1DbqeGu05OMZewJfOYzAr912j-eZC3_Xh8q&oh=00_AQSoYstPAXvYtofArI9JOOuJsQp8FSo-hSC6tBgy6BhnWw&oe=6B0E2C98",
       "link": "https://www.facebook.com/reel/3393596760941866/",
       "publicado_em": "2026-11-05T11:04:06+0000",
       "curtidas": 0,
@@ -953,7 +1008,7 @@
     {
       "id": "1753378231566500_1657015556213309",
       "titulo": "QUER O LINK? Comente \"QUERO\" ❤️\n\nAspirador nasal\nLimpeza nariz do bebê\nHigiene do bebê\nAspirador nasal elétrico\nLimpeza de secreção bebê\nCui",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/882258746_3843168095822971_5882423951893030642_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=98fq2eAIp3sQ7kNvwEjtuTp&_nc_oc=AdoNWgvRwHlM7mQqYgzBJAA-_IG2vN052VwMxWK1YYCf3UMwVNIqUTnu0Ephp1HRcOM&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=1xSKkQEhyumPVaLuQUO0xw&_nc_tpa=Q5bMBQKV9O2ryeym9M1Jx_b1aWPdXf8HgPu4dXSvt8v7pu3Eq6ZtwW5DLe4zKhvKo72iW4hpfqgJJFeu&oh=00_AQSREk8ZKVblKih5ds93JjhBYZTvKBd4O095K8F83H1lSw&oe=6B0CDE72",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/882258746_3843168095822971_5882423951893030642_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=98fq2eAIp3sQ7kNvwEjtuTp&_nc_oc=AdoNWgvRwHlM7mQqYgzBJAA-_IG2vN052VwMxWK1YYCf3UMwVNIqUTnu0Ephp1HRcOM&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=rcxIVN7onFhk90kki7xA1Q&_nc_tpa=Q5bMBQIzZ0Pk3GOgCcx2ohbGXxFGlCnR0LIRwumyXAHTr0nZhzbLvN3sn3_xYoxFcdOYxGV2xxOLbCmH&oh=00_AQS_-0xpmZcYx0CClO2W7Uz34hp1hPlmp3Lpu4A6rPi_bQ&oe=6B0E2FF2",
       "link": "https://www.facebook.com/reel/3843167932489654/",
       "publicado_em": "2026-11-04T11:04:00+0000",
       "curtidas": 0,
@@ -964,7 +1019,7 @@
     {
       "id": "1753378231566500_1656278329620365",
       "titulo": "👉 Comente LIVE para ter acesso à aula gratuita sobre autonomia de sono 👈\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#sono",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/887452991_1675958204118439_1953754535889894009_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=IuHZ5Q3CxnQQ7kNvwFK8-04&_nc_oc=AdpyIQWhRagfyMnulpKlmhpOBYpg-BOxJlDcadxsrte7NNzJkjHqRZe398YD6SKy9yE&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=1xSKkQEhyumPVaLuQUO0xw&_nc_tpa=Q5bMBQLpldHFTLfHiQQs3fSzSpZ_c7fzlJMxxd0S4llTfkbzk6aDPwEWeCgjBlzDCtw28lmd_oUEE09a&oh=00_AQQ--eA41D5Jy_IuMAEC2XlxMzrFlMJaF9RTr8w132Zumw&oe=6B0CCE1D",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/887452991_1675958204118439_1953754535889894009_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=oA8R73-Rc6cQ7kNvwGDgU6Y&_nc_oc=Adozx9fOCGS5TKJ2oM7FamV23H5CbkG_45ygjpRKRYJq5C9fYytkOipOqZFN6ySHVws&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=rcxIVN7onFhk90kki7xA1Q&_nc_tpa=Q5bMBQKpUcX3ELXCegKdX-DUSgGuHjj-gKig2EzrMqvVL_EG4iv0R80HQPVeZIwMA86uxLGbE7rYrvza&oh=00_AQSXisVwTx3JGJTA4ZwIp5lVKmf0mt1v0YKeR4MjRI_HUw&oe=6B0E1F9D",
       "link": "https://www.facebook.com/reel/1675958047451788/",
       "publicado_em": "2026-11-03T17:03:08+0000",
       "curtidas": 0,
@@ -975,7 +1030,7 @@
     {
       "id": "1753378231566500_1655981209650077",
       "titulo": "Comente: CONSULTA para receber mais informações 🥰\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#sonodobebe #rotinadobebe #re",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/885295240_1106540555323101_4826786157093728436_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=MAZGka8Uu_gQ7kNvwHIMavA&_nc_oc=AdomKzu7bGhYiMGB8i2fzujY98JH2oPaFffDHiPwVRYE3FYDyKlrn2IA6bMt2p0p9tg&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=1xSKkQEhyumPVaLuQUO0xw&_nc_tpa=Q5bMBQIhYEp5Q0FiegE2-w373uWSBTvClwj4DR2zYCzl5mRNzX2Q09Gfne2eOpGbNxfatlGgNVS5-KOB&oh=00_AQTpnp9KJ62EGgLJNhQTbHAfbC6L7oBvV-U1MsFXFA_9JA&oe=6B0CEF6C",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/885295240_1106540555323101_4826786157093728436_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=MAZGka8Uu_gQ7kNvwHIMavA&_nc_oc=AdomKzu7bGhYiMGB8i2fzujY98JH2oPaFffDHiPwVRYE3FYDyKlrn2IA6bMt2p0p9tg&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=rcxIVN7onFhk90kki7xA1Q&_nc_tpa=Q5bMBQLNzW8YwgQ6KEl3drKECnrzoyA2re1EapzXaP-lIrARBbtWddejdr4wla8BYToyTvLWTkBbn__g&oh=00_AQSlvK5UTGTNDKQuJu7uLQx3uyyGjUPrJoU5zpbiZTRlQQ&oe=6B0E40EC",
       "link": "https://www.facebook.com/reel/1106540478656442/",
       "publicado_em": "2026-11-03T11:03:50+0000",
       "curtidas": 0,
@@ -986,7 +1041,7 @@
     {
       "id": "1753378231566500_1655259926388872",
       "titulo": "🤰 Comente MATERNITY e entra no grupo da Black Maternity no WhatsApp.\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemnasc",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/883629904_2240396446893422_8165164811510712580_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=3JFaFTb9x6gQ7kNvwHogM0b&_nc_oc=AdrZs81n6iXIbLkEVA3gta-_XkajzCYacTT8-98IWPKOqjZ55m5kd5vXrNQW5l4aNFU&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=1xSKkQEhyumPVaLuQUO0xw&_nc_tpa=Q5bMBQJH4iM5p5iGG0iPiIiA8YsPvciwSzQTalGvJT93njweKtygRQXt-drCmDkZYpLgrrXAp9tTGnAW&oh=00_AQRYBJnENt229i4Zz7GlCVlEKAaop15oQMdi0GZsxWZNcw&oe=6B0CE089",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/883629904_2240396446893422_8165164811510712580_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=3JFaFTb9x6gQ7kNvwHogM0b&_nc_oc=AdrZs81n6iXIbLkEVA3gta-_XkajzCYacTT8-98IWPKOqjZ55m5kd5vXrNQW5l4aNFU&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=rcxIVN7onFhk90kki7xA1Q&_nc_tpa=Q5bMBQLGA6lSlml-gDCHXccmytzvxBuwne8LrBei3cYNmAYh46RDizfeSEUNCSriL4krRbnjc-ygfn-h&oh=00_AQQLROJjBciybWmt2FkvDeCjDg_GZuZeauCT9P5IW1A_Dg&oe=6B0E3209",
       "link": "https://www.facebook.com/reel/2240396273560106/",
       "publicado_em": "2026-11-02T17:04:53+0000",
       "curtidas": 0,
@@ -997,7 +1052,7 @@
     {
       "id": "1753378231566500_1654969393084592",
       "titulo": "Comente aqui SONO25 e receba gratuitamente o e-book: O que ninguém te contou sobre o sono do bebê no berço ❤\n\nCompartilha essa informação im",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/886527742_2144488092807785_7130878372224537643_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=KT55ULFMqIUQ7kNvwEo6ydL&_nc_oc=AdreaPJdOx0SxEkQrK5AxzhuBQa7J1gfKU0eCKTgpoYwKDDAgTVkBCh_WuCpWcerVnQ&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=1xSKkQEhyumPVaLuQUO0xw&_nc_tpa=Q5bMBQKkldP9uC-BtZ3EPjRp_GBxFX8VyiJnGvacFFh9ELAM-FyGXOXzWgegsyEnpYyh39TKRymc_snN&oh=00_AQR022jbotZDYVKVTD1Elwu8KfZegSFpZ67_E6p1f2hRAw&oe=6B0CD5B9",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/886527742_2144488092807785_7130878372224537643_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=KT55ULFMqIUQ7kNvwEo6ydL&_nc_oc=AdreaPJdOx0SxEkQrK5AxzhuBQa7J1gfKU0eCKTgpoYwKDDAgTVkBCh_WuCpWcerVnQ&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=rcxIVN7onFhk90kki7xA1Q&_nc_tpa=Q5bMBQLFrzesANiHY9i7TXohkgcrlWICwwKjKQV9CMrhPegssm-jbMD5xuffALbjI2UN_Rd1EwV6IBV7&oh=00_AQQP_bHPfFZoRyxcZ_y1DMw4iBIh3hRZiiDPatPzbsQxBA&oe=6B0E2739",
       "link": "https://www.facebook.com/reel/2144487942807800/",
       "publicado_em": "2026-11-02T11:02:33+0000",
       "curtidas": 0,
@@ -1008,7 +1063,7 @@
     {
       "id": "1753378231566500_1654260913155440",
       "titulo": "👉 Comente AULA para ter acesso à aula gratuita de amamentação 👈\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemnascido ",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/883482097_2276287206643634_4232086611807126201_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=EL2nTJNBVHYQ7kNvwF9-f5W&_nc_oc=Adrr1tZWgqwCxaY3-uXkaC791JwLiVQ-B16FODJpmr-Och2RrkjS-zjwARjro1BTk28&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=WGkbXttWFE6xf0UOpxmNAQ&_nc_tpa=Q5bMBQJuHWX75fPTsLXSrBVpD91HOvIDAAh-OeMlA1R0Y0KshOCF7iJPJYpHBpnEd0G3u5GCEdKMq43u&oh=00_AQTbcEgyjy3Fm_BL4t9Enp-soB-GkA0mfyDI2fbpoWPLCA&oe=6B0CC97D",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/883482097_2276287206643634_4232086611807126201_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=EL2nTJNBVHYQ7kNvwF9-f5W&_nc_oc=Adrr1tZWgqwCxaY3-uXkaC791JwLiVQ-B16FODJpmr-Och2RrkjS-zjwARjro1BTk28&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=rcxIVN7onFhk90kki7xA1Q&_nc_tpa=Q5bMBQJHd9SyRD-ThsVY6LqBDSYUovPpPyr9DVpJdoNhVl5ERBHSWuMcm0HBJL-mN0g50-8qGt5H0h53&oh=00_AQTTRYv6Ci1UUOv6iegj13rdrkMvl0naujUcTnNRzKpKvA&oe=6B0E1AFD",
       "link": "https://www.facebook.com/reel/2276287089976979/",
       "publicado_em": "2026-11-01T17:03:52+0000",
       "curtidas": 0,
@@ -1019,7 +1074,7 @@
     {
       "id": "1753378231566500_1653943856520479",
       "titulo": "Comente ENXOVAL e receba gratuitamente o e-book Enxoval Descomplicado ❤\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemna",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/883481757_1872003990643521_4117613637766933243_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=hzhFUGGiQXUQ7kNvwEf8sgM&_nc_oc=AdqGLLIQLdjNaP_Bz-it8zLDYCQyhWb-F28CgAHCaXYgciotRmKUNEdpYUFbLEJY5Yo&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=WGkbXttWFE6xf0UOpxmNAQ&_nc_tpa=Q5bMBQJAaKKeGpKJM9GcGFQuk-HZGOzffV2ibmEcDfBFfgA0MPqY7wML8WtpnDnAeY5xTdrgm7wVJAj4&oh=00_AQTRjdu2JoyBOn4PF_dxVLnCNGRbBv-5jBkxzGy1cER56Q&oe=6B0CDEA4",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/883481757_1872003990643521_4117613637766933243_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=hzhFUGGiQXUQ7kNvwEf8sgM&_nc_oc=AdqGLLIQLdjNaP_Bz-it8zLDYCQyhWb-F28CgAHCaXYgciotRmKUNEdpYUFbLEJY5Yo&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=rcxIVN7onFhk90kki7xA1Q&_nc_tpa=Q5bMBQK5MNITxxqPvhTSrf6agA-YyoFSAZi0e0Rv9gXgXWemb7zJRaLCqam-RKIUax34k1EVm-VWH6zT&oh=00_AQTClJXhcNhh9UJRVqcIPQq74KNHzjhFTlueGa1aSB22yw&oe=6B0E3024",
       "link": "https://www.facebook.com/reel/1872003887310198/",
       "publicado_em": "2026-11-01T11:03:42+0000",
       "curtidas": 0,
@@ -1030,7 +1085,7 @@
     {
       "id": "1753378231566500_1650795836835281",
       "titulo": "Comente #AMA para receber o E-book Gratuito: Por que meu bebê parece não saciar no seio?\n\nCompartilha essa informação importante com uma mam",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/877029668_4670629596516302_179645811561513297_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=OghiHf4I2SsQ7kNvwFfPXJK&_nc_oc=AdrE_IkEWFqhWbYOjlEVI_Rp4hJFuh41AKGBC3cyRZ0mvED8mGfu3GdqUZSEQxs259w&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=WGkbXttWFE6xf0UOpxmNAQ&_nc_tpa=Q5bMBQLGWySVTfz7hHomJdQij7U3x4LjJGIGGi7uKcNcCOj3-wtq-zdt1Kcs5Jk2O-v_VPlMfeoT2FVL&oh=00_AQSWtecXE0SeOdagKKeJHY_xGUMR9inTkOtz_Zq_jTreww&oe=6B0CDF0A",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/877029668_4670629596516302_179645811561513297_n.jpg?_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=OghiHf4I2SsQ7kNvwFfPXJK&_nc_oc=AdrE_IkEWFqhWbYOjlEVI_Rp4hJFuh41AKGBC3cyRZ0mvED8mGfu3GdqUZSEQxs259w&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=rcxIVN7onFhk90kki7xA1Q&_nc_tpa=Q5bMBQIMnfRjgC2Yu3V8GXxMm-wmDngCZrSCycFBEsh5QpTg_OFkm8bnz-d0RqE1O7iHO4Bm0p9SFLrE&oh=00_AQSULWNVMIPMrNCRZsv0a4XhPdXeSwkUPiY4Wbl8ZZelJQ&oe=6B0E308A",
       "link": "https://www.facebook.com/reel/4670629373182991/",
       "publicado_em": "2026-10-29T11:03:45+0000",
       "curtidas": 0,
@@ -1041,7 +1096,7 @@
     {
       "id": "1753378231566500_1649764903605041",
       "titulo": "QUER O LINK? Comente \"QUERO\" ❤️\n\nLixador de unhas elétrico para bebê\nKit de unhas para bebê\nLixa segura para recém-nascido\nCuidados com o be",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/869426955_1427928588843573_7632846985339982351_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=483CWUjxqlkQ7kNvwHSv3CY&_nc_oc=AdpJnlsrcTvzn3hNhLyqBau1O9LMwh8igvxF7fFn1m2FQrFqigoE94eHyu1AfI5idfc&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=WGkbXttWFE6xf0UOpxmNAQ&_nc_tpa=Q5bMBQKVi5ML0WOKkauLWE5guoz31KMeu76X_vJGxDTdcrS05sSGCK2qPvZ4Mx-CWMxGNaLnV-LxqB94&oh=00_AQSdQRmXtAAhsHON19o2ueQsMyAkYJz-bSqR0chEkhqb4g&oe=6B0CF2DE",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/869426955_1427928588843573_7632846985339982351_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=483CWUjxqlkQ7kNvwHSv3CY&_nc_oc=AdpJnlsrcTvzn3hNhLyqBau1O9LMwh8igvxF7fFn1m2FQrFqigoE94eHyu1AfI5idfc&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=cbX4BH9gdF8lg3n9M_poWw&_nc_tpa=Q5bMBQIWGPy5CwkudaSl0luuRVPPoGNiZjIjmYoxPUDtHjStV9rwVNyNL8BpcAMw0V89doj0RRfEtCgs&oh=00_AQRXtYHEyMBxjNknrADRyYAUarEH_h1jsf73cLQnNch6Aw&oe=6B0E445E",
       "link": "https://www.facebook.com/reel/1427928502176915/",
       "publicado_em": "2026-10-28T11:02:04+0000",
       "curtidas": 0,
@@ -1052,7 +1107,7 @@
     {
       "id": "1753378231566500_1647756493805882",
       "titulo": "Comente aqui SONO25 e receba gratuitamente o e-book: Meu bebê não dorme no berço ❤\n\nCompartilha essa informação importante com uma mamãe 😍❤",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/865792146_1741103516968230_6926293957878449313_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=0J4KqyLGcsAQ7kNvwGJJBl_&_nc_oc=AdpUQg2LnfTjhoPPV0mNKX-wXSXkYUCBAqtxKfAaOXnJTeO88GFa1dR6eURD6YsdogU&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=WGkbXttWFE6xf0UOpxmNAQ&_nc_tpa=Q5bMBQIfIUXTwAfdIMLIpzq5rBzCeycnBVBu1pvFJhmVdl__HPYegR8lhVwxpVMtQ0_TsZHHy7uYyiL1&oh=00_AQTl1_HvtcjGRNqbUp3d2FnpEV-pf3l1Qu5qeX7yuMRuJA&oe=6B0CED81",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/865792146_1741103516968230_6926293957878449313_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=0J4KqyLGcsAQ7kNvwGJJBl_&_nc_oc=AdpUQg2LnfTjhoPPV0mNKX-wXSXkYUCBAqtxKfAaOXnJTeO88GFa1dR6eURD6YsdogU&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=cbX4BH9gdF8lg3n9M_poWw&_nc_tpa=Q5bMBQKYBOjQu20l4jPEbhAoWVmzkAklF3DcFsyJnU2HIXWCPSG2fircxAt2AS0ri3YqJ8i2rvxUGSPd&oh=00_AQRQWo6mcal9Lu405jbyOeTUUB5tsuvgy4Ms8TtLvHgnlA&oe=6B0E3F01",
       "link": "https://www.facebook.com/reel/1741103436968238/",
       "publicado_em": "2026-10-26T11:03:39+0000",
       "curtidas": 0,
@@ -1063,7 +1118,7 @@
     {
       "id": "1753378231566500_1645817203999811",
       "titulo": "QUER O LINK? Comente \"QUERO\" ❤️\n\n#publicidade\n#banhodobebê\n#rotinadobebê\n#maternidade\n#maedeprimeiraviagem\n#brinquedosdebebê\n#atividadespara",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/866499349_1080509278135994_9045149144846500545_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=r744r0sdGnYQ7kNvwFINxew&_nc_oc=Adp4zigkfzkuceGKInUJgJRKjaZ-yFMbaf2AS60pmrjxQ2JITpRnnVnlkSK7zra5LU8&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=WGkbXttWFE6xf0UOpxmNAQ&_nc_tpa=Q5bMBQIiRex3KAHEDQsDEaU3u-K0izfBuUW2IS0qiSh9wm_fOkFzL1dTlz-vAHLjIlCTlVeXWsNc_8Mb&oh=00_AQS9VLACQtL_NaXrdV3ZbST02W765r73WKlN5Gu6ORYd3w&oe=6B0CC638",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/866499349_1080509278135994_9045149144846500545_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=r744r0sdGnYQ7kNvwFINxew&_nc_oc=Adp4zigkfzkuceGKInUJgJRKjaZ-yFMbaf2AS60pmrjxQ2JITpRnnVnlkSK7zra5LU8&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=cbX4BH9gdF8lg3n9M_poWw&_nc_tpa=Q5bMBQKdDwpEyPBCEJjOtpO1FD34Yat-F7UcQjicHJLtfOffjwTxZl8KNVNEFe0DQ3XyC3F5N5utAZyW&oh=00_AQSyDOcktBU43Sh4CMFJUCvFsdH6jbo3RL4yok_pKOu2_A&oe=6B0E17B8",
       "link": "https://www.facebook.com/reel/1080509181469337/",
       "publicado_em": "2026-10-24T11:02:46+0000",
       "curtidas": 0,
@@ -1074,7 +1129,7 @@
     {
       "id": "1753378231566500_1644862474095284",
       "titulo": "👉 Comente AULA para ter acesso à aula gratuita sobre autonomia de sono 👈\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#sono",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/860551990_1749430099469223_4195438579793106511_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=XVab6kTphbkQ7kNvwHpfG3F&_nc_oc=Adq40vYzKQ8Cytph8TpCo2XnK6I-HRunNv23NG14C3AnR713QwgeKIj6Ul4NZSedc9s&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=WGkbXttWFE6xf0UOpxmNAQ&_nc_tpa=Q5bMBQIPvH8Vli3w57TgMWALdWyNE6D5dZXTaNTmMf5O9-xCVFNvKaK-OAU_RY-VoMMorY0S0tNpEUOm&oh=00_AQRf-dAtQ7b413RACi7gi7scTQeDLE5ypnIyCVbpFSN8iw&oe=6B0CCCCD",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/860551990_1749430099469223_4195438579793106511_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=XVab6kTphbkQ7kNvwHpfG3F&_nc_oc=Adq40vYzKQ8Cytph8TpCo2XnK6I-HRunNv23NG14C3AnR713QwgeKIj6Ul4NZSedc9s&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=cbX4BH9gdF8lg3n9M_poWw&_nc_tpa=Q5bMBQJ423pgtc3FRxK_GmVis_bgSXUVXG5qkGPeCSbxycuLAKuigYZ90jHDAnkPYZCD9NgpQvTXwQrt&oh=00_AQQLZu5v1gvtcLMD822iYmsfcxPPZSp0fPwvnf1WHSmvhQ&oe=6B0E1E4D",
       "link": "https://www.facebook.com/reel/1749429969469236/",
       "publicado_em": "2026-10-23T11:03:28+0000",
       "curtidas": 0,
@@ -1085,7 +1140,7 @@
     {
       "id": "1753378231566500_1643916164189915",
       "titulo": "Comente #AMA para receber o E-book Gratuito: Por que meu bebê parece não saciar no seio?\n\nCompartilha essa informação importante com uma mam",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/863569451_3683542455137841_4615578163991807472_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=u_LmaMUE-sgQ7kNvwGmoF-9&_nc_oc=AdpQfQ5_nvgdkAtwMLu9XNwxIsp4HXElm973qvdkzeeE-UxOt29jtAFkpsrDl2eBAOs&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=WGkbXttWFE6xf0UOpxmNAQ&_nc_tpa=Q5bMBQJ_krlQZ8dFRvTp0UtK62i0KHWme918fkCtqj5_eOPTEuVM1zQ2SdgegFD0CxK98i4SH2xOilYG&oh=00_AQS6yfx6a0ayM8OIaUi1rHEfeB-n29vWFrXpC5hZwkbFsA&oe=6B0CBFDB",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/863569451_3683542455137841_4615578163991807472_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=u_LmaMUE-sgQ7kNvwGmoF-9&_nc_oc=AdpQfQ5_nvgdkAtwMLu9XNwxIsp4HXElm973qvdkzeeE-UxOt29jtAFkpsrDl2eBAOs&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=cbX4BH9gdF8lg3n9M_poWw&_nc_tpa=Q5bMBQLP16KqzxZkNgzueUnqpfbznF2RfLV68dXaAbrB73X69y0-2nFYC4nkFUdVn45lXceyxvgsjgVj&oh=00_AQRO1O_gXI9b5gsLd95mc7x1t1WbZ7J2dmTRgQFzipnGHA&oe=6B0E115B",
       "link": "https://www.facebook.com/reel/3683542265137860/",
       "publicado_em": "2026-10-22T11:02:37+0000",
       "curtidas": 0,
@@ -1096,7 +1151,7 @@
     {
       "id": "1753378231566500_1643301477584717",
       "titulo": "QUER O LINK? Comente \"QUERO\" ❤️\n\nAlmofada de ervas anti cólica para bebês\nAlívio para cólicas infantis\nAlmofada terapêutica para bebês\nAlmof",
-      "thumb": "https://scontent-gru3-1.xx.fbcdn.net/v/t15.5256-10/858568723_1538139451665611_2731424984892627061_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=3LhbkzuavoYQ7kNvwEcoFA2&_nc_oc=AdoiAF3JebfQ8ZBiG0d7_sIz1Rb6Ha3ZI-kDB-HvxP5xJKqJNVReDUZS6Woy6Dxx37g&_nc_zt=23&_nc_ht=scontent-gru3-1.xx&edm=AKIiGfEEAAAA&_nc_gid=WGkbXttWFE6xf0UOpxmNAQ&_nc_tpa=Q5bMBQKWkNGUAq3YNeobhjg5BOrELYkzDz578jVY722EPtq_AmJ16sgePckOexZL3UJqonO3gf_717Lu&oh=00_AQTgDFiO62H0LkDxYgLUMJqeyLsyHVXieboH0aKXKw-nmg&oe=6B0CCDE6",
+      "thumb": "https://scontent-gru3-1.xx.fbcdn.net/v/t15.5256-10/858568723_1538139451665611_2731424984892627061_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=3LhbkzuavoYQ7kNvwEcoFA2&_nc_oc=AdoiAF3JebfQ8ZBiG0d7_sIz1Rb6Ha3ZI-kDB-HvxP5xJKqJNVReDUZS6Woy6Dxx37g&_nc_zt=23&_nc_ht=scontent-gru3-1.xx&edm=AKIiGfEEAAAA&_nc_gid=cbX4BH9gdF8lg3n9M_poWw&_nc_tpa=Q5bMBQKVhk3mKmsCIrRO5kupTXABZO1AKhEeHCstRmqr8AKHpRzXxTubnlrQNOzgMBAq--Jm74rg6ZZa&oh=00_AQTBR6qgbpa1MlM-lFcJi5Hk5E8p4yBIf1AXdZpfji2zbA&oe=6B0E1F66",
       "link": "https://www.facebook.com/reel/1538139341665622/",
       "publicado_em": "2026-10-21T18:12:35+0000",
       "curtidas": 0,
@@ -1107,7 +1162,7 @@
     {
       "id": "1753378231566500_1642003297714535",
       "titulo": "Comente: CONSULTA para receber mais informações 🥰\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#recemnascido #newborn #gesta",
-      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/858213901_1682116513508906_7992773280386915234_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=eYyM8g0GPawQ7kNvwFzbw6-&_nc_oc=Adr1rcoFtF2IHDXj3GRRK0UW_HlsVrFiHQuTcUk4e5KgZCI8KIcrFV8P5kNScY5VlIs&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=yGZR5LotoQQktpB6cXKIsw&_nc_tpa=Q5bMBQLWoLF04NgY5xuXma4YlusMseVKR3YkZ-7HYD52izdWne7UEjcffLSngsDEKnxU4ZBg94GptGTE&oh=00_AQRjk74iNqVqHykEVpRZ9PtnC_m1S1PQg0DOUsgvfYMf0A&oe=6B0CDCCA",
+      "thumb": "https://scontent-gru1-2.xx.fbcdn.net/v/t15.5256-10/858213901_1682116513508906_7992773280386915234_n.jpg?_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=dfh2S4o2Hc4Q7kNvwGGgSkT&_nc_oc=AdqXzpMA8wFK9KYm_dz0Q-k3EAGNrybXiOfH6dZOPIRPT4ktO-qwz2LnIYzycMkxPpQ&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&edm=AKIiGfEEAAAA&_nc_gid=cbX4BH9gdF8lg3n9M_poWw&_nc_tpa=Q5bMBQL3cuQF-Nd5bJwIrAnNP_lboliCtrDwLjNdMxknTLiu5_XMnm0B2yM4f3S7RkxW2DS3CRV6_USE&oh=00_AQR0TO8yAMDMo4zlRbF8dt1nJcRs4hYVofA214PwVNtrCA&oe=6B0E2E4A",
       "link": "https://www.facebook.com/reel/1682116363508921/",
       "publicado_em": "2026-10-20T11:02:31+0000",
       "curtidas": 0,
@@ -1118,7 +1173,7 @@
     {
       "id": "1753378231566500_1641035591144639",
       "titulo": "Comente aqui SONO25 e receba gratuitamente o e-book: Meu bebê não dorme no berço ❤\n\nCompartilha essa informação importante com uma mamãe 😍❤",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/856144677_1458488906155597_956833705786569648_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=3otpmkATuvUQ7kNvwHGXgEU&_nc_oc=Adon-lc9A2V-zbFp-rT79W8ZqlIPldtsia0KvQOF4iy538HZbIm-gUxOb_BfSh7gv88&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=yGZR5LotoQQktpB6cXKIsw&_nc_tpa=Q5bMBQLOkF5DEm-3LDzgis4BLACg0J76I3Y9erc_n8-F2psciXm3OOoAiwOfB4mVYoeIVgZCzs94rtnH&oh=00_AQR8_7u1t7DP0-QSiA6uNjXmPJkoof5Bg7GgnAab0GC9TA&oe=6B0CEF83",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/856144677_1458488906155597_956833705786569648_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=gxtR1RRC3mYQ7kNvwHcRlrv&_nc_oc=AdqJo5XY7LO3DLsQHdp7z7vN2hJUwRe8NUFfW_hjmN3C2chgAdNwnB-kVqdVW8wP03E&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=cbX4BH9gdF8lg3n9M_poWw&_nc_tpa=Q5bMBQKTgkyL_fVG6N_ajYcFdf1s6OrXE9NRhjOqeK8xEdC1BNJfx5bDoxDG4orQZsZL0wGidy2BuI_c&oh=00_AQSsk430sP02LFG4_xLZ538IyHDn9LoFoLYaHuLyomI0mg&oe=6B0E4103",
       "link": "https://www.facebook.com/reel/1458488799488941/",
       "publicado_em": "2026-10-19T11:03:18+0000",
       "curtidas": 0,
@@ -1129,7 +1184,7 @@
     {
       "id": "1753378231566500_1638164274765104",
       "titulo": "👉 Comente AULA para ter acesso à aula gratuita sobre autonomia de sono 👈\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#sono",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/850839008_1440356547441165_3198944413249558670_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=kAc2L6tBd8sQ7kNvwF9fNS5&_nc_oc=AdrI_XWLYbgHjniG6x4amPxCajNPox5xJlhE1zwhDN82Sju1xtB32QNtqTO1zCegnyw&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=yGZR5LotoQQktpB6cXKIsw&_nc_tpa=Q5bMBQLJosf76r-Gns9NXxyXEPROWWExhW5xl5yXCaADn-ttQpgWGs3oi7pJYmXo0AUGnywFk6pKWFDC&oh=00_AQShr2sVBklXfwDLXxZn0Q7RxV7mq4hNgwn0Nam6wbDEGg&oe=6B0CEB86",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/850839008_1440356547441165_3198944413249558670_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=vLitF6o7L80Q7kNvwETPNyY&_nc_oc=AdqcpnZ-APq3l4bcZh2vUJbjjcSJseHOs6WA4gA2qo5n8CdXGY4cn5xsEq0cU_hqrH0&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=cbX4BH9gdF8lg3n9M_poWw&_nc_tpa=Q5bMBQICWdpyLlSu-dTUzKLLGjalDPJFFhN-sQI3u2BTyTFXJKrelvbxXPMS5whX2_v88nmgqDCdRHpk&oh=00_AQQQEUKD32QlPiVoB1C5ijewj_hNCW7LzSAbOR_mhkD4IA&oe=6B0E3D06",
       "link": "https://www.facebook.com/reel/1440356460774507/",
       "publicado_em": "2026-10-16T11:04:16+0000",
       "curtidas": 0,
@@ -1140,7 +1195,7 @@
     {
       "id": "1753378231566500_1637203301527868",
       "titulo": "Comente #AMA para receber o E-book Gratuito: Por que meu bebê parece não saciar no seio?\n\nCompartilha essa informação importante com uma mam",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/849273056_4300646326900634_6437633398452697030_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=Fcq4Nj2VRkUQ7kNvwGv8WJX&_nc_oc=AdpNBTpokXghkhWyoCtas5rKvRYHdmwVfIpwAQR_OEDRNel5GCgWyB8V3HdFVumaNp8&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=yGZR5LotoQQktpB6cXKIsw&_nc_tpa=Q5bMBQITEeNVATggcK92ZAg-snb14iDBh7_QMF6ITPCyxPxl6NW94mMYmLvnOAIqqnD5kcTVldk2d1qN&oh=00_AQSh64gTvzwcdWnDJ5X2pSAxksjKjQfC0fNaSegUnqUB0Q&oe=6B0CCB9E",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/849273056_4300646326900634_6437633398452697030_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=pYYuOakI-PIQ7kNvwGHVaOf&_nc_oc=Adok4hVBmrYplopgyRW4S3ueAjZoQuCBs29fXgOo5F-s-zJU-bCLouVp2E6FbmkCcGw&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=cbX4BH9gdF8lg3n9M_poWw&_nc_tpa=Q5bMBQKBpPN0b083ItwscPv05dqoXzeiP1GX2X7xCxV2-kQT6_DIZgFCYJ27sFrwZo5DfBsvqouEulnB&oh=00_AQQDvKSkpAOD3zb8I_ffpcIGCC0UnkagTqEIVeSNdOl-WQ&oe=6B0E1D1E",
       "link": "https://www.facebook.com/reel/4300646133567320/",
       "publicado_em": "2026-10-15T11:02:34+0000",
       "curtidas": 0,
@@ -1151,7 +1206,7 @@
     {
       "id": "1753378231566500_1635236845057847",
       "titulo": "Comente: CONSULTA para receber mais informações 🥰\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#sonodobebe #rotinadobebe #re",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/846569609_1116568047559905_7333703187454803000_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=TrFTld6UF4AQ7kNvwEhwdeO&_nc_oc=Adq6_azr68WsbwvRJJ7hd7b4vyO_hnuvrZRM_HoRt0YxbFwKCzG1FZakamy_Nym26ho&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=yGZR5LotoQQktpB6cXKIsw&_nc_tpa=Q5bMBQIfft-zB4tuVfXk88-wexr-3bQ_wtPVtXgwW43GlRTytQ3VPlqbP4fw7P82l6LrKCJ1qqPR-rhg&oh=00_AQTkspwq9AIL-IcOdMQYPozaAm9PhgmciwGDeXwVVvFYew&oe=6B0CD4CC",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/846569609_1116568047559905_7333703187454803000_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=TrFTld6UF4AQ7kNvwEhwdeO&_nc_oc=Adq6_azr68WsbwvRJJ7hd7b4vyO_hnuvrZRM_HoRt0YxbFwKCzG1FZakamy_Nym26ho&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=AkICjZw7hW3GsKuj1_IXHw&_nc_tpa=Q5bMBQKyzWUn5Z9pWCNzMupEBLwpm7Pub_2XgZUeQ1OOfb23smN1_iPZ5_XOh6t9XbsfnpeYyWv92RVg&oh=00_AQQ2IRIqGprpzcvcGXnQUHfSi6CxEexWVyM2a3nSZVBzqA&oe=6B0E264C",
       "link": "https://www.facebook.com/reel/1116567914226585/",
       "publicado_em": "2026-10-13T11:03:19+0000",
       "curtidas": 0,
@@ -1162,7 +1217,7 @@
     {
       "id": "1753378231566500_1634235788491286",
       "titulo": "Comente aqui SONO25 e receba gratuitamente o e-book: Meu bebê não dorme no berço ❤\n\nCompartilha essa informação importante com uma mamãe 😍❤",
-      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/843191806_1444700264511356_3213439518517112160_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=fyoK11S46eoQ7kNvwF1URQt&_nc_oc=AdqTMWH-f0XaVbLBawFha6htcYMhwFs9hgsnC2oasbOgWQzHwXhepRDBvMIYdCVmOI4&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=yGZR5LotoQQktpB6cXKIsw&_nc_tpa=Q5bMBQKQ8pRBMEUoi42GQEvwHEaOQqShTafzgNFqiADMsnC4ndXGfJjtQFuZ7EBlAZTfHuzXpbxbouUn&oh=00_AQTeSLxoryXvTq2_7MPBqUOCVBkTIMwRTC2k2i5Lm6OJbA&oe=6B0CD1D8",
+      "thumb": "https://scontent-gru2-2.xx.fbcdn.net/v/t15.5256-10/843191806_1444700264511356_3213439518517112160_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=fyoK11S46eoQ7kNvwF1URQt&_nc_oc=AdqTMWH-f0XaVbLBawFha6htcYMhwFs9hgsnC2oasbOgWQzHwXhepRDBvMIYdCVmOI4&_nc_zt=23&_nc_ht=scontent-gru2-2.xx&edm=AKIiGfEEAAAA&_nc_gid=AkICjZw7hW3GsKuj1_IXHw&_nc_tpa=Q5bMBQLirDCxcD1qDog6g6d5mdMaRXCjrpsyo1GEvsxAAOne5pVqa6Bdx6grIGn1VlhxnmDzzGgd7msS&oh=00_AQRZMk8hC5PDk6nDbk81YDC9o7HJNov38wLHnFsEI9sDmA&oe=6B0E2358",
       "link": "https://www.facebook.com/reel/1444700154511367/",
       "publicado_em": "2026-10-12T11:04:09+0000",
       "curtidas": 0,
@@ -1173,7 +1228,7 @@
     {
       "id": "1753378231566500_1632285645352967",
       "titulo": "QUER O LINK? Comente \"QUERO\" ❤️\n\nCartinhas de alto contraste\nBrinquedos para bebê\nBrinquedo recem nascido\nBrinquedo sensorial\nEstimula visão",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/843980971_1431500619115140_1632832511435781667_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=dWN6xkqlaNcQ7kNvwF-Roug&_nc_oc=AdoXY4VbnwjErR7qRAW_c7Q3pBFTfnwDLgN3hq831VGGmpmvcJFoh7IEWauYOMIcFvs&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=M9CIXcksWx78ED40AUtfwQ&_nc_tpa=Q5bMBQImz65hASCN3GRMPdKdRRkJgD1Y8isepZwLvSGmnmwLMj1Oj2vl0qrP-Cp_adMOuqVdeGZ9082Q&oh=00_AQTODqs4ahV1pKM6-1QFSV_6qwnE9FFX_RNv4RXi3_9xfw&oe=6B0CC111",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/843980971_1431500619115140_1632832511435781667_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=JSQ0Bqm9X-YQ7kNvwGSeJM6&_nc_oc=AdqlUMpLm2kBA6h-q72rn5ZLfsypyfQL_gnWdy0hmLHHdjINfj0qdsrxGDk4jcplWd8&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=AkICjZw7hW3GsKuj1_IXHw&_nc_tpa=Q5bMBQKnSD-_VP3Sov46m-7Hc2c9RzkheYQwhB4SSjtZ-iskSzHEM6vgEHVnD2qA_GfFbGiz8_NzPxmc&oh=00_AQQLlK52hfyssc9O-b1AmX0ustEKXleXSmORikC8OL8kOQ&oe=6B0E1291",
       "link": "https://www.facebook.com/reel/1431500529115149/",
       "publicado_em": "2026-10-10T11:03:11+0000",
       "curtidas": 0,
@@ -1184,7 +1239,7 @@
     {
       "id": "1753378231566500_1631350688779796",
       "titulo": "👉 Comente AULA para ter acesso à aula gratuita sobre autonomia de sono 👈\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#sono",
-      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/840664407_3497825060397368_907567771824185033_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=k2PNNkIvdUQQ7kNvwHkVrkJ&_nc_oc=Ado7KDa1A9Rv7HVk6rWnD0ovt9fzUZbqkRxN3v9L35lyRvCToD5sY8kGjHMDyZpbKZY&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=M9CIXcksWx78ED40AUtfwQ&_nc_tpa=Q5bMBQLjTh9TYnAPVaqY8m50EU9o9UalaB76RCOBSJxJIzWgPNzN4Jpv2_mhvHNN-4tMlsvQhlUGUbvp&oh=00_AQR-GEaK0FBVg4Irjt9yM7a-9-FLolLNLv-FO00NwGAg7Q&oe=6B0CBEBA",
+      "thumb": "https://scontent-gru1-1.xx.fbcdn.net/v/t15.5256-10/840664407_3497825060397368_907567771824185033_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=k2PNNkIvdUQQ7kNvwHkVrkJ&_nc_oc=Ado7KDa1A9Rv7HVk6rWnD0ovt9fzUZbqkRxN3v9L35lyRvCToD5sY8kGjHMDyZpbKZY&_nc_zt=23&_nc_ht=scontent-gru1-1.xx&edm=AKIiGfEEAAAA&_nc_gid=AkICjZw7hW3GsKuj1_IXHw&_nc_tpa=Q5bMBQKveOc67S9aBGhUGoHi2yBIjz26hGlCdVFep7wNIj9JeeTW5anMxZpI_oJBibWHF6NsoCnBaUul&oh=00_AQT7Vv1nOm1GuQKkTCkviqwJeRJGzf1asQ8GXopkmagFHw&oe=6B0E103A",
       "link": "https://www.facebook.com/reel/3497824840397390/",
       "publicado_em": "2026-10-09T11:03:21+0000",
       "curtidas": 0,
@@ -1195,7 +1250,7 @@
     {
       "id": "1753378231566500_1628729849041880",
       "titulo": "Comente: CONSULTA para receber mais informações 🥰\n\nCompartilha essa informação importante com uma mamãe 😍❤️\n\n#sonodobebe #rotinadobebe #re",
-      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/839243015_2086337882272952_6860648097769598030_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=VxbNC6D3odYQ7kNvwHDResS&_nc_oc=Adoca1Z0hvKj6fJ1nihxd11cZnhNtESoA7C-r1coVF3jnlY_4isiXu_JNEBIkEwNYYA&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=M9CIXcksWx78ED40AUtfwQ&_nc_tpa=Q5bMBQIaBOj2vAyd4t1Dw5A6XPipxqy21ImmiDnCp7-EBA-lw7AfxsolkJPH1xxLpBL2kVaIpiC6wrsG&oh=00_AQR8gy8z5ibm4Oibp_77gBtGpVSufvkj2BDXaFIpIj3GQw&oe=6B0CE754",
+      "thumb": "https://scontent-gru2-1.xx.fbcdn.net/v/t15.5256-10/839243015_2086337882272952_6860648097769598030_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=d2b52d&_nc_ohc=VxbNC6D3odYQ7kNvwHDResS&_nc_oc=Adoca1Z0hvKj6fJ1nihxd11cZnhNtESoA7C-r1coVF3jnlY_4isiXu_JNEBIkEwNYYA&_nc_zt=23&_nc_ht=scontent-gru2-1.xx&edm=AKIiGfEEAAAA&_nc_gid=AkICjZw7hW3GsKuj1_IXHw&_nc_tpa=Q5bMBQJbQ-iGefLpP_5boT3irWOy7L_qhRxKWrMh0KlAlKt79VABnc0f1gpVnURc3g6gAJsyfkyZQA4v&oh=00_AQRAg-9wnGrCLKJ9qau7fyHqcpI5JI16aw5D2ZmzoiWEqg&oe=6B0E38D4",
       "link": "https://www.facebook.com/reel/2086337778939629/",
       "publicado_em": "2026-10-06T14:02:34+0000",
       "curtidas": 0,
